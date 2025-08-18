@@ -1,9 +1,10 @@
 # Systems Thinking for Technologists
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](docs/license.md)
 [![MkDocs](https://img.shields.io/badge/powered_by-MkDocs-blue)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/theme-Material_for_MkDocs-blue)](https://squidfunk.github.io/mkdocs-material/)
 [![GitHub Pages](https://img.shields.io/badge/hosted_on-GitHub_Pages-blue)](https://pages.github.com/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](docs/license.md)
+
 
 A comprehensive guide on using systems thinking to promote enterprise knowledge graphs and break down organizational silos. This interactive documentation site includes educational content, simulations, and AI prompts to help IT professionals apply systems thinking concepts.
 
