@@ -1,4 +1,6 @@
-# Agent Loom Diagram
+# Intelligent Agent Causal Loop Diagrams
+
+Here are several versions of causal loop diagrams that illustrate the role that intelligent agents are having in the growth in the acceleration of AI capabilities.
 
 - [Run the Agent CLD v1](causal-loop-diagram.html)
 - [Run the Agent CLD v2](./agents-cld-v2.html)
