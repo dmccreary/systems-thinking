@@ -3,7 +3,7 @@
 [![MkDocs](https://img.shields.io/badge/powered_by-MkDocs-blue)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/theme-Material_for_MkDocs-blue)](https://squidfunk.github.io/mkdocs-material/)
 [![GitHub Pages](https://img.shields.io/badge/hosted_on-GitHub_Pages-blue)](https://pages.github.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](docs/license.md)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](docs/license.md)
 
 A comprehensive guide on using systems thinking to promote enterprise knowledge graphs and break down organizational silos. This interactive documentation site includes educational content, simulations, and AI prompts to help IT professionals apply systems thinking concepts.
 
@@ -95,7 +95,7 @@ Special thanks to the p5.js team at NYU for creating such an accessible platform
 
 ## License
 
-This project is licensed under the MIT License - see the [license.md](docs/license.md) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License - see the [license.md](docs/license.md) file for details.
 
 ## Contributing
 
