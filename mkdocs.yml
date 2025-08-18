@@ -32,7 +32,7 @@ nav:
     - Introduction: cmm-strategies/index.md
     - Microstrategies: cmm-strategies/microstrategies.md
     - Silo Busting Microstrategies: cmm-strategies/silo-busting-microstrategies.md
-  - Simulations:
+  - MicroSims:
     - Introduction: sims/index.md
     - High School Simulations: sims/high-school.md
     - Tragedy of the Commons: sims/toc/index.md
