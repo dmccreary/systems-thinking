@@ -1,4 +1,11 @@
-site_name: 'Systems Thinking for Technologists'
+site_name: 'Systems Thinking'
+site_description: 'This is an intelligent textbook for teaching Systems Thinking to high school students and executives.'
+site_author: 'Dan McCreary'
+repo_name: 'GitHub Repo'
+site_url: 'https://dmccreary.github.io/systems-thinking/'
+repo_url: 'https://github.com/dmccreary/systems-thinking'
+edit_uri: 'blob/master/docs'
+
 nav:
   - Home: index.md
   - Table of Contents: table-of-contents.md
