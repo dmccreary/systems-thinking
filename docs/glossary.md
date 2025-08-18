@@ -17,8 +17,8 @@ Archetypes unify disciplines that have often been taught as separate things – 
 
 Archetypes are to systems what Patterns are to software.
 
-* See Also: [Tragedy of The Commons](#tragedy-of-the-commens)
-* Seel Also: [The AI Flywheel](#ai-flywheel)
+* See Also: [Tragedy of The Commons](#tragedy-of-the-commons)
+* See Also: [The AI Flywheel](#ai-flywheel)
 
 #### Balancing Loop
 A type of cause and effect interactions that counter a change with a push in the opposite direction.
@@ -29,7 +29,7 @@ A type of cause and effect interactions that counter a change with a push in the
 
 A standardized official approved way to represent data on-the-wire as it moves between computer systems.
 
-The process of converting non-standardized representations of data is to perform [Schema Matching](#schema-matching) and [Schema Mapping](#schema-mapping).
+The process of converting non-standardized representations of data is to perform Schema Matching and Schema Mapping.
 
 #### Causal Loop Diagrams
 Diagrams that show the dynamic relationship of sub-components of Systems where changes in the state of any component have causal impacts on other components of the system.
@@ -82,6 +82,12 @@ A systems diagram where material or information flows up and down a tree-like st
 A type of causal graph that shows how individuals or groups impact each other's thinking.
 ![Influence Diagram](img/influence-diagram.png)
 #### Knowledge Representation
+
+The field of artificial intelligence (AI) dedicated to representing information about the world in a form that a computer system can utilize to solve complex tasks.
+
+#### Metadata Registry
+
+A system that stores, manages, and provides access to metadata definitions and standards, facilitating shared understanding of data elements across different systems and organizations.
 
 #### ISO Definition
 A term definition that conforms to ISO/IEC 11179 metadata registry guidelines.
@@ -170,7 +176,7 @@ The interdisciplinary study of systems.
 
 #### Tragedy of the Commons
 
-![](img/tragedy-of-the-commons.png)
+![](img/tragedy-of-the-commons-diagram.png)
 
 #### Unintended Consequences
 Outcomes of a purposeful action that are not intended or foreseen.

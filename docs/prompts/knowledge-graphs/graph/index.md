@@ -28,8 +28,6 @@ var options = {
 
 ## Left to Right Layout
 
-[HTML Page for Dependency Graph](./lr-layout.html)
-
 ```js
 var options = {
 layout: {
@@ -111,7 +109,6 @@ Here are 11 categories of the concepts
 
 [Category Colors Demo](./category-colors.html)
 
-[Cat Colors V3 DEBUG](./cat-colors-3.html)
 
 ## Reference
 

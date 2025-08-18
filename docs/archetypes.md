@@ -1,6 +1,6 @@
 # Archetypes
 
-In software engineering we use the concept of design patterns to create a name of a recurring solution to problems.  In Systems Thinking we use the term [archetype](glossary#archetype) to describe a ideal example that illustrates a systems thinking concept.
+In software engineering we use the concept of design patterns to create a name of a recurring solution to problems.  In Systems Thinking we use the term [archetype](glossary.md#archetype) to describe a ideal example that illustrates a systems thinking concept.
 
 If you would like to contribute a new Archetype please do the following:
 

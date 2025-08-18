@@ -17,11 +17,11 @@ Whenever we see a quadratic cost curve we want to understand how to avoid quickl
 
 ## Costs of Establishing Shared Meaning
 
-The problem with implementing hub-and-spoke systems is that it only works if the writer and the reader have a shared meaning.  There are always costs to create systems that promote shared meaning.   In general, we call these systems [Metadata Registries](../glossary#metadata-registry). This is the place where people come together to set standards on how data is communicated on a data-element by data-element level.
+The problem with implementing hub-and-spoke systems is that it only works if the writer and the reader have a shared meaning.  There are always costs to create systems that promote shared meaning.   In general, we call these systems [Metadata Registries](../glossary.md#metadata-registry). This is the place where people come together to set standards on how data is communicated on a data-element by data-element level.
 
 ## Data Element Matching
 
-In order to keep our costs low, we need to build systems that do metadata matching. For example, we might want to match all the data elements from a new system with the data elements in an data standard we agree on.  This internally agreed-upon representation of data is called the [Canonical Schema](../glossary#canonical-schema)
+In order to keep our costs low, we need to build systems that do metadata matching. For example, we might want to match all the data elements from a new system with the data elements in an data standard we agree on.  This internally agreed-upon representation of data is called the [Canonical Schema](../glossary.md#canonical-schema)
 
 ![](../img/data-element-match.png)
 

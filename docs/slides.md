@@ -16,7 +16,7 @@ The slides don't really capture the workshop activities for the participants.
 
 ## MACC Conferences
 
-[MACC Conference Graph Systems Thinking](slides/McCreary-MACC-2021-Data-Dan-McCreary-Graph-Systems-Thinking.pdf)
+[MACC Conference Graph Systems Thinking](https://github.com/dmccreary/systems-thinking/raw/main/slides/McCreary-MACC-2021-Data-Dan-McCreary-Graph-Systems-Thinking.pdf)
 - Presented November 4th, 2021
 
 ## Optum Architecture Conference
