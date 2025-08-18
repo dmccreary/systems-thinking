@@ -1,22 +1,27 @@
-# Systems Thinking for Technologists
+# Systems Thinking for All
 
 ![](img/cover.png)
 
-Welcome to our website.  The goal of this website
-is to promote systems thinking for IT professionals.
-Whenever there are shared IT resources questions come
-up as to how we can fairly allocate these resources.
-Systems Thinking provides a great framework to do this.
+Welcome to our website for systems thinkers!  The goal of this website
+is to promote high quality systems thinking skills for a broad audience.
 
-We have also been asked to apply Systems Thinking
+## Updated for AI Tools
+
+Our 2023 release introduced a curated set of generative AI prompts.
+We now feature a large collection of generative AI prompts
+that help you use generative AI tools to create high-quality examples
+of good systems thinking practices in your own context.
+
+Whenever you are confronted with difficult problems we
+have concrete examples of systems thinking to help you
+achieve your goals.
+
+We have also been asked to apply systems thinking
 to break down organizational silos and share
 data across business areas.  You will find
 many resources on these topics as well
 as how to accelerate the adoption of
 Enterprise Knowledge Graphs (EKGs) in your organization.
-
-It 2023 we also started adding sample GenAI prompts
-to help teams use GenAI to promote Systems Thinking.
 
 Please let me know if you have any questions or
 feedback on this website.

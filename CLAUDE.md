@@ -44,8 +44,8 @@ The site includes several JavaScript-based simulations using libraries like vis.
 - Built with MkDocs using Material theme
 - Custom theme directory for footer and styling overrides
 - Markdown extensions: admonition, pymdownx.details, pymdownx.superfences, attr_list, md_in_html
-- Repository: https://github.com/dmccreary/graph-systems-thinking
-- Deployment: GitHub Pages at https://dmccreary.github.io/graph-systems-thinking/
+- Repository: https://github.com/dmccreary/systems-thinking
+- Deployment: GitHub Pages at https://dmccreary.github.io/systems-thinking/
 
 ## File Conventions
 - All content files are in Markdown format

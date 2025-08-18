@@ -14,7 +14,7 @@ support before it becomes overgrazed?
 
 Creating a simulation of the "Tragedy of the Commons" is a great way to help students understand the consequences of individual actions on shared resources. The "Tragedy of the Commons" refers to a situation in a shared-resource system where individual users, acting independently according to their own self-interest, behave contrary to the common good of all users by depleting or spoiling the shared resource.
 
-The Tragedy of the Commons is a key [Archetype](https://dmccreary.github.io/graph-systems-thinking/archetypes/commons/) that I use when I teach my systems thinking classes.  It is a compelling metaphor whenever there are shared resources in an organization.
+The Tragedy of the Commons is a key [Archetype](https://dmccreary.github.io/systems-thinking/archetypes/commons/) that I use when I teach my systems thinking classes.  It is a compelling metaphor whenever there are shared resources in an organization.
 
 We also use the Tragedy of the Commons metaphor to help organizations break down data silos and share data, information and knowledge.
 

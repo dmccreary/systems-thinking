@@ -1,4 +1,4 @@
-# Systems Thinking for Technologists
+# Systems Thinking for All Course
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](docs/license.md)
 [![MkDocs](https://img.shields.io/badge/powered_by-MkDocs-blue)](https://www.mkdocs.org/)
@@ -6,9 +6,9 @@
 [![GitHub Pages](https://img.shields.io/badge/hosted_on-GitHub_Pages-blue)](https://pages.github.com/)
 
 
-A comprehensive guide on using systems thinking to promote enterprise knowledge graphs and break down organizational silos. This interactive documentation site includes educational content, simulations, and AI prompts to help IT professionals apply systems thinking concepts.
+A comprehensive set of resources for teaching systems thinking to a wide variety of audiences from high-school students to business executives. This version also has extensive use of causal loop graph diagrams and examples from areas like business, education, and healthcare.  We also have extensive content on how break down organizational silos. This interactive documentation site includes educational content, simulations, and AI prompts to help both students and professionals apply systems thinking concepts.
 
-**📖 [View Documentation](https://dmccreary.github.io/graph-systems-thinking/)**
+**📖 [View Documentation](https://dmccreary.github.io/systems-thinking/)**
 
 ## Features
 
@@ -30,8 +30,8 @@ A comprehensive guide on using systems thinking to promote enterprise knowledge 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/dmccreary/graph-systems-thinking.git
-   cd graph-systems-thinking
+   git clone https://github.com/dmccreary/systems-thinking.git
+   cd systems-thinking
    ```
 
 2. Create and activate a virtual environment:

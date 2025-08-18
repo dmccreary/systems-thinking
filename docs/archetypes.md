@@ -5,7 +5,7 @@ In software engineering we use the concept of design patterns to create a name o
 If you would like to contribute a new Archetype please do the following:
 
 1. Check to see if we don't already have it in our list
-2. Write up a short description and add it to our [issues](https://github.com/dmccreary/graph-systems-thinking/issues) list.  If you have a [Causal Loop Diagram](https://en.wikipedia.org/wiki/Causal_loop_diagram) for your new archetype please leave a link to the drawing.
+2. Write up a short description and add it to our [issues](https://github.com/dmccreary/systems-thinking/issues) list.  If you have a [Causal Loop Diagram](https://en.wikipedia.org/wiki/Causal_loop_diagram) for your new archetype please leave a link to the drawing.
 3. We will assign an editor to add your diagram to our master list of archetypes.
 
 Note our use of [Creative Commons Attribution NonCommercial ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) for all content on this web site.

@@ -1,5 +1,5 @@
-site_name: 'Systems Thinking'
-site_description: 'This is an intelligent textbook for teaching Systems Thinking to high school students and executives.'
+site_name: 'Systems Thinking for All'
+site_description: 'This is an intelligent textbook has many interactive resources for teaching systems thinking to a wide audience from high school students to business executives.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/systems-thinking/'
@@ -65,7 +65,7 @@ nav:
 site_description: 'Book on Graphs and Systems Thinking'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
-repo_url: 'https://github.com/dmccreary/graph-systems-thinking'
+repo_url: 'https://github.com/dmccreary/systems-thinking'
 
 edit_uri: 'blob/master/docs'
 theme:
