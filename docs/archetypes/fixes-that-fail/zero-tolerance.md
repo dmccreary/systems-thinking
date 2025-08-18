@@ -45,6 +45,7 @@ The rigid discipline system creates worse behavioral outcomes:
 
 ## The Vicious Cycle
 Facing continued behavioral problems, administrators often respond with:
+
 - **Even stricter zero tolerance rules** covering more minor infractions
 - **Increased security measures** like metal detectors and police presence
 - **Mandatory reporting requirements** that criminalize normal childhood behavior

@@ -9,6 +9,7 @@ A company faces declining profits and pressure from shareholders to improve fina
 Management decides to **lay off 15-20% of the workforce** to immediately reduce labor costs and boost quarterly earnings.
 
 ## Initial Success
+
 - **Immediate cost savings** show up on the next quarter's financial statements
 - **Stock price increases** as investors respond positively to "decisive action"
 - **Executive bonuses** are awarded for meeting profit targets
@@ -35,6 +36,7 @@ The workforce reduction creates a downward spiral:
 
 ## The Vicious Cycle
 Now facing **worse financial performance than before**, management often responds with:
+
 - **Another round of layoffs**
 - **Hiring expensive consultants** to fix operational problems
 - **Emergency hiring** at premium wages to fill critical gaps

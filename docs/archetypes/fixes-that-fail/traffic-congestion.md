@@ -10,6 +10,7 @@ A city experiences increasing traffic congestion during rush hours, leading to c
 City planners decide to **add more highway lanes** to increase road capacity and reduce congestion.
 
 ## Initial Success
+
 For a few months after completion, traffic flows more smoothly and commute times decrease. Politicians celebrate the successful infrastructure investment.
 
 ## The Unintended Consequences

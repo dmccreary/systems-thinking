@@ -40,6 +40,7 @@ The AI avoidance creates profound educational obsolescence:
 ## The Vicious Cycle
 
 Facing evidence of student unpreparedness for modern work and college environments, the district responds with:
+
 - **Stricter enforcement** of AI detection and punishment policies
 - **More intensive traditional skill drilling** to compensate for perceived deficits
 - **Eliminating technology integration** in other subjects to avoid AI contamination

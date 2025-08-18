@@ -9,6 +9,7 @@ A school district faces complaints from parent groups about books in school libr
 The district implements **sweeping book removal policies** - banning hundreds of titles based on challenge lists, removing books with LGBTQ+ characters, racial themes, or mature content, and creating restricted approval processes for all new library acquisitions.
 
 ## Initial Success
+
 - **Parent complaints immediately decrease** with visible action on controversial titles
 - **Community tension appears to calm** as vocal groups feel heard
 - **Administrative burden reduces** with simplified, restrictive selection criteria
@@ -38,6 +39,7 @@ The censorship approach creates broader educational and social dysfunction:
 
 ## The Vicious Cycle
 Facing continued educational challenges and new controversies, the district responds with:
+
 - **Expanding banned book lists** to include more titles deemed potentially controversial
 - **Creating parent review committees** that further restrict available literature
 - **Implementing digital monitoring systems** to track student reading choices

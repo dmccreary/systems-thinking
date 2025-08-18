@@ -44,6 +44,7 @@ The AI avoidance creates cascading educational crises:
 ## The Vicious Cycle
 
 Facing teacher shortages and declining performance, the district responds with:
+
 - **Emergency hiring of less qualified teachers** willing to work without modern training
 - **Increased spending on substitute teachers** to cover departing educators
 - **More restrictive technology policies** to avoid areas where teachers feel unprepared

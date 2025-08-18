@@ -10,6 +10,7 @@ After a terrorist attack involving weapons smuggled onto aircraft, public fear o
 Transportation authorities implement **highly visible security measures** at airports: removing shoes, restricting liquids to tiny containers, confiscating nail clippers, extensive pat-downs, and long security lines.
 
 ## Initial Success
+
 - **Public perception of safety improves** seeing "tough" security measures
 - **Political leaders appear decisive** and responsive to threats
 - **Media coverage is positive** about enhanced security protocols
@@ -37,6 +38,7 @@ The focus on visible security creates new vulnerabilities:
 
 ## The Vicious Cycle
 When new threats emerge, the system responds with:
+
 - **More theatrical measures** (body scanners, enhanced pat-downs)
 - **Additional restrictions** on passenger behavior and belongings
 - **Expanded security perimeters** that create new bottlenecks

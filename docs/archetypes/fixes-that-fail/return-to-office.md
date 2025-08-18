@@ -9,6 +9,7 @@ After years of remote work, company executives notice declining employee engagem
 Leadership mandates that **all employees must return to the office full-time**, eliminating work-from-home options and requiring physical presence to "restore company culture" and improve collaboration.
 
 ## Initial Success
+
 - **Office buildings are full again** with visible activity and energy
 - **Executives feel more in control** seeing employees at their desks
 - **Some spontaneous conversations resume** around coffee machines and hallways
@@ -38,6 +39,7 @@ The forced return creates a talent and morale crisis:
 
 ## The Vicious Cycle
 Facing talent exodus and declining performance, management often responds with:
+
 - **Higher salaries and bonuses** to compensate for inflexibility, increasing costs
 - **Stricter attendance monitoring** that further damages trust and culture
 - **Team-building activities** and perks to artificially recreate engagement

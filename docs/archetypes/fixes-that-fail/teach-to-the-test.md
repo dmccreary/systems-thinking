@@ -10,6 +10,7 @@ A school district faces mounting pressure from state accountability measures, sh
 The district mandates **"teaching to the test"** - restructuring curriculum to focus intensively on test preparation, eliminating subjects not tested, and spending months drilling students on test-taking strategies and practice exams.
 
 ## Initial Success
+
 - **Test scores increase** in the targeted subjects (math and reading)
 - **State rankings improve** and the district avoids sanctions
 - **Media coverage becomes positive** about the "turnaround" success
@@ -39,6 +40,7 @@ The test-focused approach creates educationally impoverished students:
 
 ## The Vicious Cycle
 When college readiness or workplace preparation issues surface, the system responds with:
+
 - **More intensive test preparation** starting in earlier grades
 - **Additional practice tests** consuming even more instructional time
 - **Punishing teachers** whose students don't show continuous score improvement

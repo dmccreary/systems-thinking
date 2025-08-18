@@ -9,6 +9,7 @@ A company struggles with poor communication between departments, slow decision-m
 Management decides to **eliminate private offices and cubicles**, creating a large **open office space** where everyone sits together at shared tables, believing this will naturally increase collaboration and communication.
 
 ## Initial Success
+
 - **Real estate costs decrease significantly** with more efficient space utilization
 - **Physical barriers are removed** between departments and hierarchy levels
 - **Informal conversations increase** as people overhear discussions
@@ -38,6 +39,7 @@ The open office creates a productivity and well-being crisis:
 
 ## The Vicious Cycle
 Facing productivity problems, management often responds with:
+
 - **More rules about noise levels** that further restrict natural interaction
 - **Installing "phone booths"** and quiet zones that recreate the privacy they eliminated
 - **Implementing "focus time" policies** where collaboration is discouraged during certain hours

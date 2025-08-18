@@ -38,6 +38,7 @@ The pain relief strategy creates escalating complications:
 
 ## The Vicious Cycle
 Facing **worse pain and new problems**, the system often responds with:
+
 - **Increased dosages** or stronger opioids
 - **Additional medications** to treat side effects
 - **Doctor shopping** when physicians become reluctant to prescribe
