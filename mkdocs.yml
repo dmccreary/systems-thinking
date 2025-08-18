@@ -85,6 +85,7 @@ nav:
   - What They Are Saying: what-they-are-saying.md
   - Colophon: colophon.md
   - References: references.md
+  - License: license.md
   - Contact: contact.md
 
 site_description: 'Book on Graphs and Systems Thinking'
