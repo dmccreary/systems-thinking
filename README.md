@@ -1,20 +1,102 @@
-# Graph and Systems Thinking
-How to use Systems Thinking to promote enterprise knowledge graphs.
+# Systems Thinking for Technologists
 
-The documentation site is [here](https://dmccreary.github.io/graph-systems-thinking/)
+[![MkDocs](https://img.shields.io/badge/powered_by-MkDocs-blue)](https://www.mkdocs.org/)
+[![Material for MkDocs](https://img.shields.io/badge/theme-Material_for_MkDocs-blue)](https://squidfunk.github.io/mkdocs-material/)
+[![GitHub Pages](https://img.shields.io/badge/hosted_on-GitHub_Pages-blue)](https://pages.github.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](docs/license.md)
+
+A comprehensive guide on using systems thinking to promote enterprise knowledge graphs and break down organizational silos. This interactive documentation site includes educational content, simulations, and AI prompts to help IT professionals apply systems thinking concepts.
+
+**📖 [View Documentation](https://dmccreary.github.io/graph-systems-thinking/)**
+
+## Features
+
+- Interactive simulations using p5.js and vis.js
+- Causal loop diagram generators
+- Systems thinking archetypes and patterns
+- AI prompts for knowledge graph development
+- Capability maturity model strategies
+- Real-world case studies and examples
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.x
+- Virtual environment tool (conda, venv, etc.)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dmccreary/graph-systems-thinking.git
+   cd graph-systems-thinking
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   python3 -m venv mkdocs-env
+   source mkdocs-env/bin/activate  # On Windows: mkdocs-env\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip3 install mkdocs mkdocs-material
+   ```
+
+4. Start the development server:
+   ```bash
+   mkdocs serve
+   ```
+
+5. Open your browser to http://localhost:8000
+
+### Building for Production
+
+```bash
+mkdocs build
+```
+
+### Generate E-book
+
+```bash
+./docs/mk-ebook.sh
+```
+Output will be available at `/tmp/full-book.epub`
+
+## Project Structure
+
+```
+├── docs/                    # Main content directory
+│   ├── intro/              # Introduction chapters (1-5)
+│   ├── archetypes/         # Systems thinking patterns
+│   ├── sims/               # Interactive simulations
+│   ├── prompts/            # GenAI prompts
+│   └── cmm-strategies/     # Maturity model strategies
+├── theme/                  # Custom theme overrides
+└── mkdocs.yml             # Site configuration
+```
 
 ## Author
-* [Dan McCreary](https://www.linkedin.com/in/danmccreary)
 
-## Installation
+**Dan McCreary** - [LinkedIn](https://www.linkedin.com/in/danmccreary)
 
-This book can be built using the [mkdocs](https://www.mkdocs.org/) system.  Because it is a private repo you must build it locally.
+## Acknowledgments
 
-### Steps to Build and Test a Local Site
-1. install conda or other virtual environment tool
-2. create a virtual environment called 'mkdocs' using Python3
-3. run ```pip3 install mkdocs mkdocs-material```
-4. run ```mkdocs serve```
-5. Put ```http://localhost:8000``` in your browser
+This project builds upon the work of many open source projects and communities:
 
-See the [CoderDojoTC Authoring Guide](https://www.coderdojotc.org/CoderDojoTC/content-authoring-guide/) for details.
+- **[p5.js](https://p5js.org/)** - Creative coding library developed by the Processing Foundation and NYU's Interactive Telecommunications Program
+- **[MkDocs](https://www.mkdocs.org/)** - Fast, simple static site generator
+- **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)** - Beautiful documentation theme
+- **[vis.js](https://visjs.org/)** - Dynamic visualization library for networks and graphs
+- **[GitHub Pages](https://pages.github.com/)** - Free hosting for open source projects
+
+Special thanks to the p5.js team at NYU for creating such an accessible platform for creative coding and interactive visualizations.
+
+## License
+
+This project is licensed under the MIT License - see the [license.md](docs/license.md) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
