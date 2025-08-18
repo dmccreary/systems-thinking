@@ -1,0 +1,79 @@
+{
+  "archetypes": [
+    {
+      "filename": "banning-ai",
+      "title": "banning ai",
+      "system_structure": "**AI Cheating Concerns** → **Complete AI Ban** → **Traditional Work Increase** → **Digital Illiteracy & Unpreparedness** → **Worse Real-World Readiness** → **Stricter AI Prohibition**"
+    }    ,
+    {
+      "filename": "banning-books",
+      "title": "banning books",
+      "system_structure": "**Community Concerns About Content** → **Book Banning Policies** → **Reduced Complaints** → **Diminished Learning & Engagement** → **Worse Educational Outcomes** → **More Restrictive Censorship**"
+    }    ,
+    {
+      "filename": "cutting-ai-training",
+      "title": "cutting ai training",
+      "system_structure": "**Budget Constraints** → **Cut AI Training Funding** → **Maintained Traditional Programs** → **Teacher Obsolescence & Exodus** → **Higher Costs & Worse Outcomes** → **More Training Budget Cuts**"
+    }    ,
+    {
+      "filename": "cutting-coding",
+      "title": "cutting coding",
+      "system_structure": "**Poor Basic Digital Skills** → **Eliminate Programming Education** → **Improved Application Proficiency** → **Reduced Computational Thinking & Creativity** → **Worse Problem-Solving & Innovation** → **More Basic Application Focus**"
+    }    ,
+    {
+      "filename": "cutting-stem",
+      "title": "cutting stem",
+      "system_structure": "**Poor Basic Skills Performance** → **Eliminate STEM Programs** → **More Time for Basics** → **Reduced Engagement & Applied Learning** → **Worse Overall Academic Performance** → **More STEM Elimination**"
+    }    ,
+    {
+      "filename": "edu-ai-training",
+      "title": "edu ai training",
+      "system_structure": "**Budget Constraints** → **Cut AI Training Funding** → **Maintained Traditional Programs** → **Teacher Obsolescence & Exodus** → **Higher Costs & Worse Outcomes** → **More Training Budget Cuts**"
+    }    ,
+    {
+      "filename": "grade-inflation",
+      "title": "grade inflation",
+      "system_structure": "**Low Academic Performance** → **Grade Inflation** → **Apparent Improvement** → **Reduced Learning & Preparation** → **Worse Real Performance** → **More Grade Inflation**"
+    }    ,
+    {
+      "filename": "layoffs",
+      "title": "layoffs",
+      "system_structure": "**Financial Pressure** → **Workforce Reduction** → **Temporary Cost Savings** → **Operational Degradation** → **Worse Financial Performance** → **More Pressure for Cuts**"
+    }    ,
+    {
+      "filename": "open-offices",
+      "title": "open offices",
+      "system_structure": "**Poor Collaboration** → **Open Office Design** → **Apparent Connectivity** → **Reduced Productivity & Actual Communication** → **Worse Collaboration** → **More Open Office \"Solutions\"**"
+    }    ,
+    {
+      "filename": "painkillers",
+      "title": "painkillers",
+      "system_structure": "**Chronic Pain** → **Opioid Prescription** → **Temporary Relief** → **Dependence & Tolerance** → **Worse Pain & New Problems** → **Higher Doses/Stronger Drugs**"
+    }    ,
+    {
+      "filename": "return-to-office",
+      "title": "return to office",
+      "system_structure": "**Weak Company Culture** → **Forced Office Return** → **Apparent In-Person Engagement** → **Talent Loss & Decreased Morale** → **Weaker Culture & Performance** → **More Rigid Office Requirements**"
+    }    ,
+    {
+      "filename": "security-theater",
+      "title": "security theater",
+      "system_structure": "**Security Threat** → **Visible Security Theater** → **Public Reassurance** → **Misallocated Resources & New Vulnerabilities** → **Greater Insecurity** → **More Theater**"
+    }    ,
+    {
+      "filename": "teach-to-the-test",
+      "title": "teach to the test",
+      "system_structure": "**Poor Test Performance** → **Teaching to the Test** → **Higher Test Scores** → **Narrow Education & Skill Gaps** → **Worse Real Educational Outcomes** → **More Intensive Test Focus**"
+    }    ,
+    {
+      "filename": "traffic-congestion",
+      "title": "traffic congestion",
+      "system_structure": "**Problem Symptom** → **Quick Fix** → **Temporary Relief** → **Unintended Consequences** → **Worse Original Problem** This creates a reinforcing loop where each \"fix\" (adding more lanes) makes the fundamental problem worse, requiring ever-larger infrastructure investments that become increasingly expensive and disruptive."
+    }    ,
+    {
+      "filename": "zero-tolerance",
+      "title": "zero tolerance",
+      "system_structure": "**Behavioral Problems** → **Zero Tolerance Policies** → **Apparent Safety/Order** → **Student Disengagement & Worse Behavior** → **More Serious Problems** → **Stricter Zero Tolerance**"
+    }
+  ]
+}

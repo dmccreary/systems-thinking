@@ -9,6 +9,7 @@ A school district faces concerns about students using ChatGPT and other AI tools
 The district implements a **complete ban on AI tools** - blocking access on school networks, prohibiting AI use in assignments, and implementing strict plagiarism detection software to catch AI-generated work, focusing on "preserving authentic student learning."
 
 ## Initial Success
+
 - **Traditional assignment submissions increase** as students can't rely on AI assistance
 - **Teachers feel more control** over ensuring work is genuinely student-produced
 - **Academic integrity concerns appear resolved** with clear anti-AI policies
@@ -37,6 +38,7 @@ The AI avoidance creates profound educational obsolescence:
 - **Economic opportunities diminish** as other districts prepare AI-literate graduates
 
 ## The Vicious Cycle
+
 Facing evidence of student unpreparedness for modern work and college environments, the district responds with:
 - **Stricter enforcement** of AI detection and punishment policies
 - **More intensive traditional skill drilling** to compensate for perceived deficits
@@ -49,7 +51,9 @@ Facing evidence of student unpreparedness for modern work and college environmen
 **AI Cheating Concerns** → **Complete AI Ban** → **Traditional Work Increase** → **Digital Illiteracy & Unpreparedness** → **Worse Real-World Readiness** → **Stricter AI Prohibition**
 
 ## The Root Cause Solution
+
 Genuinely preparing students for an AI-integrated world might involve:
+
 - Teaching responsible AI use as a collaboration tool rather than a replacement for thinking
 - Developing critical evaluation skills for AI-generated content and outputs
 - Creating assignments that require AI literacy - prompting, refining, and fact-checking
