@@ -67,6 +67,7 @@ nav:
     - Tragedy of the Commons: sims/toc/index.md
     - Agent CLD: sims/agent-cld/index.md
     - CMM Simulation: sims/cmm/index.md
+    - CLD Viewer: sims/cld-viewer/index.md
     - Template: sims/template/index.md
   - Prompts:
     - Knowledge Graphs:
