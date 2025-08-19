@@ -110,6 +110,25 @@ A factor in a system that limits it ability to perform.
 
 #### Linear Relationship
 
+#### Negative Externality
+
+A cost or harm imposed on third parties who are not directly involved in an economic transaction or 
+decision. 
+
+Negative externalities occur when an individual or organization's actions create costs 
+that are borne by others without compensation, leading to market failures where the true 
+social cost exceeds the private cost paid by the decision-maker.
+
+Negative externalities are a key driver of the [Tragedy of the Commons](#tragedy-of-the-commons) 
+archetype because they create a systematic disconnect between individual incentives and collective outcomes.
+
+**Example:**  When a commercial fishing operation increases their catch in a shared lake, 
+they receive 100% of the revenue from the additional fish they sell, but the cost of depleting 
+the fish population is shared among all fishers using the lake. 
+The fishing operation doesn't pay for the reduced catches that other fishers will 
+experience due to the smaller fish population, nor do they compensate future 
+generations who will inherit a degraded ecosystem. This externalized cost 
+encourages overfishing because each individual fisher bears only a small fraction of the true cost of their fishing activity.
 
 #### Nonlinear
 In the field of systems dynamics, nonlinear refers to the fact that a small change in one component may result is a large changes in related component.
