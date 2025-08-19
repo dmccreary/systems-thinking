@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tragedy of the Commons MicroSim</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .control-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .control-button:hover {
+            background-color: #0056b3;
+        }
+        .control-button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        .reset-button {
+            background-color: #28a745;
+        }
+        .reset-button:hover {
+            background-color: #1e7e34;
+        }
+        .status {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .status-item {
+            text-align: center;
+        }
+        .status-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #495057;
+        }
+        .status-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        .description {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .phase-indicator {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .phase-growth {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .phase-peak {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .phase-decline {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐄 Tragedy of the Commons MicroSim</h1>
+            <p>Watch as individual rational decisions lead to collective disaster</p>
+        </div>
+
+        <div class="controls">
+            <button id="playPause" class="control-button">▶️ Start</button>
+            <button id="reset" class="control-button reset-button">🔄 Reset</button>
+            <button id="addFarmer" class="control-button">👨‍🌾 Add Farmer</button>
+            <label for="speed">Speed: </label>
+            <input type="range" id="speed" min="0.5" max="3" value="1" step="0.5">
+            <span id="speedValue">1x</span>
+        </div>
+
+        <div id="simulation-container"></div>
+
+        <div class="status">
+            <div class="status-item">
+                <div class="status-value" id="cowCount">0</div>
+                <div class="status-label">Total Cows</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="grassHealth">100%</div>
+                <div class="status-label">Grass Health</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="farmerCount">0</div>
+                <div class="status-label">Farmers</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="totalProfit">$0</div>
+                <div class="status-label">Total Profit</div>
+            </div>
+        </div>
+
+        <div id="phaseIndicator" class="phase-indicator phase-growth">
+            📈 Growth Phase: Farmers are adding cows to profitable pasture
+        </div>
+
+        <div class="description">
+            <h3>How it Works:</h3>
+            <p><strong>The Setup:</strong> Multiple farmers share a common pasture. Each farmer wants to maximize their individual profit by adding more cows.</p>
+            <p><strong>The Logic:</strong> Each farmer gets 100% of the benefit from their cows, but the cost of overgrazing is shared among all farmers.</p>
+            <p><strong>The Tragedy:</strong> What's rational for individuals becomes irrational for the group - the pasture gets destroyed.</p>
+            <p><strong>Watch for:</strong> The point where individual gain turns into collective loss.</p>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let simulation;
+        let isRunning = false;
+        let farmers = [];
+        let grassHealth = 100;
+        let time = 0;
+        let speedMultiplier = 1;
+        let canvas;
+        
+        // Simulation parameters
+        const CANVAS_WIDTH = 800;
+        const CANVAS_HEIGHT = 400;
+        const MAX_COWS_PER_FARMER = 20;
+        const GRASS_REGENERATION_RATE = 0.5;
+        const OVERGRAZE_THRESHOLD = 50; // Total cows that can be sustained
+        const COW_PROFIT_PER_UNIT = 10;
+        
+        class Farmer {
+            constructor(x, y, color, id) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.id = id;
+                this.cows = [];
+                this.profit = 0;
+                this.addCowTimer = 0;
+                this.addCowInterval = random(60, 120); // Frames between adding cows
+            }
+            
+            update() {
+                if (!isRunning) return;
+                
+                this.addCowTimer += speedMultiplier;
+                
+                // Decide whether to add a cow based on current profitability
+                if (this.addCowTimer >= this.addCowInterval && this.cows.length < MAX_COWS_PER_FARMER) {
+                    const expectedProfit = this.calculateExpectedProfit();
+                    const grassFactor = grassHealth / 100;
+                    
+                    // Farmers add cows when they expect profit and grass looks good
+                    if (expectedProfit > 0 && grassFactor > 0.3) {
+                        this.addCow();
+                        this.addCowTimer = 0;
+                        this.addCowInterval = random(30, 150); // Vary timing
+                    }
+                }
+                
+                // Update cows
+                this.cows.forEach(cow => cow.update());
+                
+                // Calculate profit based on grass health
+                const grassFactor = Math.max(0, grassHealth / 100);
+                this.profit += this.cows.length * COW_PROFIT_PER_UNIT * grassFactor * speedMultiplier / 60;
+            }
+            
+            addCow() {
+                if (this.cows.length < MAX_COWS_PER_FARMER) {
+                    const angle = random(TWO_PI);
+                    const distance = random(20, 60);
+                    const cowX = this.x + cos(angle) * distance;
+                    const cowY = this.y + sin(angle) * distance;
+                    this.cows.push(new Cow(cowX, cowY, this.color));
+                }
+            }
+            
+            calculateExpectedProfit() {
+                const grassFactor = grassHealth / 100;
+                return COW_PROFIT_PER_UNIT * grassFactor - 2; // Cost factor
+            }
+            
+            draw() {
+                // Draw farmer
+                fill(this.color);
+                stroke(0);
+                strokeWeight(2);
+                ellipse(this.x, this.y, 30, 30);
+                
+                // Draw farmer icon
+                fill(255);
+                textAlign(CENTER, CENTER);
+                textSize(16);
+                text("👨‍🌾", this.x, this.y);
+                
+                // Draw cows
+                this.cows.forEach(cow => cow.draw());
+                
+                // Draw farmer label
+                fill(0);
+                textAlign(CENTER, TOP);
+                textSize(12);
+                text(`F${this.id}: ${this.cows.length} cows`, this.x, this.y + 20);
+                text(`$${Math.round(this.profit)}`, this.x, this.y + 35);
+            }
+        }
+        
+        class Cow {
+            constructor(x, y, farmerColor) {
+                this.x = x;
+                this.y = y;
+                this.farmerColor = farmerColor;
+                this.wanderAngle = random(TWO_PI);
+                this.size = random(8, 12);
+            }
+            
+            update() {
+                if (!isRunning) return;
+                
+                // Simple wandering behavior
+                this.wanderAngle += random(-0.1, 0.1);
+                this.x += cos(this.wanderAngle) * 0.5 * speedMultiplier;
+                this.y += sin(this.wanderAngle) * 0.5 * speedMultiplier;
+                
+                // Keep cows in bounds
+                this.x = constrain(this.x, 50, CANVAS_WIDTH - 50);
+                this.y = constrain(this.y, 50, CANVAS_HEIGHT - 50);
+            }
+            
+            draw() {
+                fill(255);
+                stroke(this.farmerColor);
+                strokeWeight(2);
+                ellipse(this.x, this.y, this.size, this.size);
+                
+                // Draw cow spots
+                fill(this.farmerColor);
+                noStroke();
+                ellipse(this.x - 2, this.y - 1, 2, 2);
+                ellipse(this.x + 1, this.y + 1, 2, 2);
+            }
+        }
+        
+        function setup() {
+            canvas = createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+            canvas.parent('simulation-container');
+            
+            // Initialize with a few farmers
+            initializeSimulation();
+            
+            // Set up event listeners
+            setupControls();
+        }
+        
+        function initializeSimulation() {
+            farmers = [];
+            grassHealth = 100;
+            time = 0;
+            
+            // Add initial farmers
+            const colors = [color(255, 100, 100), color(100, 255, 100), color(100, 100, 255), color(255, 255, 100)];
+            for (let i = 0; i < 3; i++) {
+                const x = random(100, CANVAS_WIDTH - 100);
+                const y = random(100, CANVAS_HEIGHT - 100);
+                farmers.push(new Farmer(x, y, colors[i % colors.length], i + 1));
+            }
+        }
+        
+        function draw() {
+            background(135, 206, 235); // Sky blue
+            
+            // Draw grass background
+            drawGrass();
+            
+            // Update simulation
+            if (isRunning) {
+                updateSimulation();
+            }
+            
+            // Draw farmers and cows
+            farmers.forEach(farmer => {
+                farmer.update();
+                farmer.draw();
+            });
+            
+            // Update display
+            updateDisplay();
+            
+            // Draw pause indicator
+            if (!isRunning) {
+                drawPauseIndicator();
+            }
+        }
+        
+        function drawGrass() {
+            // Draw grass based on health
+            const grassColor = lerpColor(color(139, 69, 19), color(34, 139, 34), grassHealth / 100);
+            fill(grassColor);
+            noStroke();
+            rect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            
+            // Add grass texture when healthy
+            if (grassHealth > 30) {
+                stroke(34, 139, 34, 150);
+                strokeWeight(1);
+                for (let i = 0; i < grassHealth * 2; i++) {
+                    const x = random(CANVAS_WIDTH);
+                    const y = random(CANVAS_HEIGHT);
+                    line(x, y, x, y - random(5, 15));
+                }
+            }
+        }
+        
+        function updateSimulation() {
+            time += speedMultiplier;
+            
+            // Calculate total cows
+            const totalCows = farmers.reduce((sum, farmer) => sum + farmer.cows.length, 0);
+            
+            // Update grass health based on grazing pressure
+            const grazingPressure = totalCows / OVERGRAZE_THRESHOLD;
+            if (grazingPressure > 1) {
+                // Overgrazing - grass health decreases
+                grassHealth -= (grazingPressure - 1) * 2 * speedMultiplier;
+            } else {
+                // Natural regeneration
+                grassHealth += GRASS_REGENERATION_RATE * speedMultiplier;
+            }
+            
+            grassHealth = constrain(grassHealth, 0, 100);
+        }
+        
+        function updateDisplay() {
+            const totalCows = farmers.reduce((sum, farmer) => sum + farmer.cows.length, 0);
+            const totalProfit = farmers.reduce((sum, farmer) => sum + farmer.profit, 0);
+            
+            document.getElementById('cowCount').textContent = totalCows;
+            document.getElementById('grassHealth').textContent = Math.round(grassHealth) + '%';
+            document.getElementById('farmerCount').textContent = farmers.length;
+            document.getElementById('totalProfit').textContent = '$' + Math.round(totalProfit);
+            
+            // Update phase indicator
+            updatePhaseIndicator(totalCows);
+        }
+        
+        function updatePhaseIndicator(totalCows) {
+            const indicator = document.getElementById('phaseIndicator');
+            
+            if (grassHealth > 70 && totalCows < OVERGRAZE_THRESHOLD) {
+                indicator.className = 'phase-indicator phase-growth';
+                indicator.textContent = '📈 Growth Phase: Farmers are adding cows to profitable pasture';
+            } else if (grassHealth > 30 && totalCows >= OVERGRAZE_THRESHOLD) {
+                indicator.className = 'phase-indicator phase-peak';
+                indicator.textContent = '⚠️ Peak Phase: Approaching carrying capacity - tragedy imminent';
+            } else {
+                indicator.className = 'phase-indicator phase-decline';
+                indicator.textContent = '📉 Tragedy Phase: Overgrazing has damaged the commons';
+            }
+        }
+        
+        function drawPauseIndicator() {
+            fill(0, 0, 0, 100);
+            rect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            
+            fill(255);
+            textAlign(CENTER, CENTER);
+            textSize(48);
+            text("⏸️", CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 30);
+            textSize(24);
+            text("Simulation Paused", CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 20);
+            textSize(16);
+            text("Click Start to begin", CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 50);
+        }
+        
+        function setupControls() {
+            // Play/Pause button
+            document.getElementById('playPause').addEventListener('click', function() {
+                isRunning = !isRunning;
+                this.textContent = isRunning ? '⏸️ Pause' : '▶️ Start';
+            });
+            
+            // Reset button
+            document.getElementById('reset').addEventListener('click', function() {
+                isRunning = false;
+                document.getElementById('playPause').textContent = '▶️ Start';
+                initializeSimulation();
+            });
+            
+            // Add farmer button
+            document.getElementById('addFarmer').addEventListener('click', function() {
+                if (farmers.length < 8) {
+                    const colors = [
+                        color(255, 100, 100), color(100, 255, 100), color(100, 100, 255), 
+                        color(255, 255, 100), color(255, 100, 255), color(100, 255, 255),
+                        color(255, 150, 100), color(150, 100, 255)
+                    ];
+                    const x = random(100, CANVAS_WIDTH - 100);
+                    const y = random(100, CANVAS_HEIGHT - 100);
+                    farmers.push(new Farmer(x, y, colors[farmers.length % colors.length], farmers.length + 1));
+                }
+            });
+            
+            // Speed control
+            document.getElementById('speed').addEventListener('input', function() {
+                speedMultiplier = parseFloat(this.value);
+                document.getElementById('speedValue').textContent = speedMultiplier + 'x';
+            });
+        }
+        
+        // Prevent the canvas from stealing focus
+        function mousePressed() {
+            if (mouseX >= 0 && mouseX <= CANVAS_WIDTH && mouseY >= 0 && mouseY <= CANVAS_HEIGHT) {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
