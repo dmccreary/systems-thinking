@@ -10,7 +10,7 @@ challenges where individual incentives conflict with group benefits.
 
 ## Introduction
 
-![](./fig-01-girl-fishing.png)
+![happy girl fishing](./fig-01-girl-fishing.png)
 
 Imagine you're at your favorite fishing spot on a beautiful lake. 
 The fishing is so good that you catch your limit every time you visit.
@@ -20,7 +20,7 @@ fishing on the lake.
 But over the months, you notice something troubling: the fish are getting smaller, 
 and it's taking longer to catch anything. Other anglers are reporting the same problem.
 
-![](./fig-02-girl-fishing-sad.png)
+![Sad girl fishing](./fig-02-girl-fishing-sad.png)
 
 What's happening to this once-abundant lake?
 Perhaps there are too many people catching fish on a small lake.
@@ -48,8 +48,7 @@ Here's the basic pattern:
 - Over time, the resource becomes depleted or degraded
 - Everyone ends up worse off than when they started
 
-**[Suggest Figure: Simple diagram showing multiple users accessing a 
-shared resource pool that gradually shrinks]**
+![Figure 3 - fishing around the lake](fig-03-fishing-around-lake.png)
 
 ## The Structure Behind the Pattern
 
