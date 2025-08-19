@@ -12,24 +12,24 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/systems-thinking/prompts/cld/cld-viewer/vis-js-viewer/">
+        <link rel="canonical" href="https://dmccreary.github.io/systems-thinking/prompts/cld/cld-viewer/">
       
       
       
       
-      <link rel="icon" href="../../../../img/favicon.png">
+      <link rel="icon" href="../../../img/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Vis js viewer - Systems Thinking for All</title>
+        <title>Simple Causal Loop Viewer Using Vis.js - Systems Thinking for All</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#simple-causal-loop-viewer-using-visjs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Systems Thinking for All" class="md-header__button md-logo" aria-label="Systems Thinking for All" data-md-component="logo">
+    <a href="../../.." title="Systems Thinking for All" class="md-header__button md-logo" aria-label="Systems Thinking for All" data-md-component="logo">
       
-  <img src="../../../../img/logo.png" alt="logo">
+  <img src="../../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vis js viewer
+              Simple Causal Loop Viewer Using Vis.js
             
           </span>
         </div>
@@ -194,9 +199,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Systems Thinking for All" class="md-nav__button md-logo" aria-label="Systems Thinking for All" data-md-component="logo">
+    <a href="../../.." title="Systems Thinking for All" class="md-nav__button md-logo" aria-label="Systems Thinking for All" data-md-component="logo">
       
-  <img src="../../../../img/logo.png" alt="logo">
+  <img src="../../../img/logo.png" alt="logo">
 
     </a>
     Systems Thinking for All
@@ -223,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -245,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../table-of-contents/" class="md-nav__link">
+      <a href="../../../table-of-contents/" class="md-nav__link">
         
   
   
@@ -305,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/forward/" class="md-nav__link">
+      <a href="../../../intro/forward/" class="md-nav__link">
         
   
   
@@ -328,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/preface/" class="md-nav__link">
+      <a href="../../../intro/preface/" class="md-nav__link">
         
   
   
@@ -351,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/acknowledgements/" class="md-nav__link">
+      <a href="../../../intro/acknowledgements/" class="md-nav__link">
         
   
   
@@ -374,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/about-this-book/" class="md-nav__link">
+      <a href="../../../intro/about-this-book/" class="md-nav__link">
         
   
   
@@ -397,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/about-the-authors/" class="md-nav__link">
+      <a href="../../../intro/about-the-authors/" class="md-nav__link">
         
   
   
@@ -420,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/ch-01-intro/" class="md-nav__link">
+      <a href="../../../intro/ch-01-intro/" class="md-nav__link">
         
   
   
@@ -443,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/ch-02-graph/" class="md-nav__link">
+      <a href="../../../intro/ch-02-graph/" class="md-nav__link">
         
   
   
@@ -466,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/ch-03-systems/" class="md-nav__link">
+      <a href="../../../intro/ch-03-systems/" class="md-nav__link">
         
   
   
@@ -489,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/ch-04-systems-graph/" class="md-nav__link">
+      <a href="../../../intro/ch-04-systems-graph/" class="md-nav__link">
         
   
   
@@ -512,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/ch-05-emergence/" class="md-nav__link">
+      <a href="../../../intro/ch-05-emergence/" class="md-nav__link">
         
   
   
@@ -580,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/ch-05-totc/" class="md-nav__link">
+      <a href="../../../archetypes/ch-05-totc/" class="md-nav__link">
         
   
   
@@ -603,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/" class="md-nav__link">
+      <a href="../../../archetypes/" class="md-nav__link">
         
   
   
@@ -626,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/intro-archetypes/" class="md-nav__link">
+      <a href="../../../archetypes/intro-archetypes/" class="md-nav__link">
         
   
   
@@ -649,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/commons/" class="md-nav__link">
+      <a href="../../../archetypes/commons/" class="md-nav__link">
         
   
   
@@ -672,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/tragedy-of-the-commons/" class="md-nav__link">
+      <a href="../../../archetypes/tragedy-of-the-commons/" class="md-nav__link">
         
   
   
@@ -695,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/ai-flywheel/" class="md-nav__link">
+      <a href="../../../archetypes/ai-flywheel/" class="md-nav__link">
         
   
   
@@ -718,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/concept-standards/" class="md-nav__link">
+      <a href="../../../archetypes/concept-standards/" class="md-nav__link">
         
   
   
@@ -741,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/search-and-reuse/" class="md-nav__link">
+      <a href="../../../archetypes/search-and-reuse/" class="md-nav__link">
         
   
   
@@ -802,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/" class="md-nav__link">
         
   
   
@@ -825,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/banning-ai/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/banning-ai.md" class="md-nav__link">
         
   
   
@@ -848,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/banning-books.md" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/banning-books/" class="md-nav__link">
         
   
   
@@ -871,30 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/cutting-ai-training/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cutting AI Training
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/cutting-coding/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/cutting-coding/" class="md-nav__link">
         
   
   
@@ -917,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/cutting-stem/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/cutting-stem/" class="md-nav__link">
         
   
   
@@ -940,12 +922,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/edu-ai-training.md" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/edu-ai-training/index.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Education AI Training
+    Cutting AI Training
     
   </span>
   
@@ -963,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/grade-inflation/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/grade-inflation/" class="md-nav__link">
         
   
   
@@ -986,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/layoffs/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/layoffs/" class="md-nav__link">
         
   
   
@@ -1009,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/open-offices/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/open-offices/" class="md-nav__link">
         
   
   
@@ -1032,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/painkillers/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/painkillers/" class="md-nav__link">
         
   
   
@@ -1055,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/return-to-office/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/return-to-office/" class="md-nav__link">
         
   
   
@@ -1078,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/security-theater/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/security-theater/" class="md-nav__link">
         
   
   
@@ -1101,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/teach-to-the-test/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/teach-to-the-test/" class="md-nav__link">
         
   
   
@@ -1124,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/traffic-congestion/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/traffic-congestion/" class="md-nav__link">
         
   
   
@@ -1147,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/fixes-that-fail/zero-tolerance/" class="md-nav__link">
+      <a href="../../../archetypes/fixes-that-fail/zero-tolerance/" class="md-nav__link">
         
   
   
@@ -1216,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/limits-to-growth/" class="md-nav__link">
+      <a href="../../../archetypes/limits-to-growth/" class="md-nav__link">
         
   
   
@@ -1292,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../cmm-strategies/" class="md-nav__link">
+      <a href="../../../cmm-strategies/" class="md-nav__link">
         
   
   
@@ -1315,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../cmm-strategies/microstrategies/" class="md-nav__link">
+      <a href="../../../cmm-strategies/microstrategies/" class="md-nav__link">
         
   
   
@@ -1338,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../cmm-strategies/silo-busting-microstrategies/" class="md-nav__link">
+      <a href="../../../cmm-strategies/silo-busting-microstrategies/" class="md-nav__link">
         
   
   
@@ -1406,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/" class="md-nav__link">
+      <a href="../../../sims/" class="md-nav__link">
         
   
   
@@ -1429,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/high-school/" class="md-nav__link">
+      <a href="../../../sims/high-school/" class="md-nav__link">
         
   
   
@@ -1452,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/toc/" class="md-nav__link">
+      <a href="../../../sims/toc/" class="md-nav__link">
         
   
   
@@ -1475,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/agent-cld/" class="md-nav__link">
+      <a href="../../../sims/agent-cld/" class="md-nav__link">
         
   
   
@@ -1498,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/cmm/" class="md-nav__link">
+      <a href="../../../sims/cmm/" class="md-nav__link">
         
   
   
@@ -1521,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/cld-viewer/" class="md-nav__link">
+      <a href="../../../sims/cld-viewer/" class="md-nav__link">
         
   
   
@@ -1544,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../sims/template/" class="md-nav__link">
+      <a href="../../../sims/template/" class="md-nav__link">
         
   
   
@@ -1650,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../knowledge-graphs/concept-enumeration/" class="md-nav__link">
+      <a href="../../knowledge-graphs/concept-enumeration/" class="md-nav__link">
         
   
   
@@ -1673,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../knowledge-graphs/concept-dependency/" class="md-nav__link">
+      <a href="../../knowledge-graphs/concept-dependency/" class="md-nav__link">
         
   
   
@@ -1696,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../knowledge-graphs/concept-taxonomy/" class="md-nav__link">
+      <a href="../../knowledge-graphs/concept-taxonomy/" class="md-nav__link">
         
   
   
@@ -1719,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../knowledge-graphs/graph/" class="md-nav__link">
+      <a href="../../knowledge-graphs/graph/" class="md-nav__link">
         
   
   
@@ -1750,7 +1732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../enumerating-archetypes/" class="md-nav__link">
+      <a href="../../enumerating-archetypes/" class="md-nav__link">
         
   
   
@@ -1773,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1834,7 +1816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../archetype-examples/" class="md-nav__link">
+      <a href="../../archetype-examples/" class="md-nav__link">
         
   
   
@@ -1857,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../archetype-examples/fixes-that-fail/" class="md-nav__link">
+      <a href="../../archetype-examples/fixes-that-fail/" class="md-nav__link">
         
   
   
@@ -1895,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archetypes/" class="md-nav__link">
+      <a href="../../../archetypes/" class="md-nav__link">
         
   
   
@@ -1917,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../slides/" class="md-nav__link">
+      <a href="../../../slides/" class="md-nav__link">
         
   
   
@@ -1939,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../glossary/" class="md-nav__link">
+      <a href="../../../glossary/" class="md-nav__link">
         
   
   
@@ -1961,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../what-they-are-saying/" class="md-nav__link">
+      <a href="../../../what-they-are-saying/" class="md-nav__link">
         
   
   
@@ -1983,7 +1965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../colophon/" class="md-nav__link">
+      <a href="../../../colophon/" class="md-nav__link">
         
   
   
@@ -2005,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../references/" class="md-nav__link">
+      <a href="../../../references/" class="md-nav__link">
         
   
   
@@ -2027,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../license/" class="md-nav__link">
+      <a href="../../../license/" class="md-nav__link">
         
   
   
@@ -2049,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   
@@ -2081,6 +2063,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2099,8 +2083,9 @@
   
 
 
-  <h1>Vis js viewer</h1>
-
+<h1 id="simple-causal-loop-viewer-using-visjs">Simple Causal Loop Viewer Using Vis.js</h1>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
 <p>Please create a JavaScript program that will read a Causal Loop Diagram (CLD) JSON file and render it using the vis.js library.</p>
 <p>You can find out about the structure of  JSON schema for the CLD in the file cld-schema.json in the Files area.  You can find two examples of the CLD files here:</p>
 <p>banning-books-cld.json
@@ -2111,6 +2096,7 @@ nodes
 edges
 loops</p>
 <p>Have the JavaScript program read in the JSON elements needed and display the causal loop diagram.  Place the title at the top if the diagram and centered.  Use your best judgement about the correct placement algorithm to use.  Allow the user to click on a node or edge and see the details below the drawing area.</p>
+</div>
 
 
 
@@ -2156,12 +2142,12 @@ loops</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../../../../js/extra.js"></script>
+        <script src="../../../js/extra.js"></script>
       
     
   </body>

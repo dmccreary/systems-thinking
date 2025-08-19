@@ -93,14 +93,6 @@
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/banning-ai/</loc>
-         <lastmod>2025-08-19</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/cutting-ai-training/</loc>
-         <lastmod>2025-08-19</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/cutting-coding/</loc>
          <lastmod>2025-08-19</lastmod>
     </url>
@@ -145,6 +137,10 @@
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/banning-ai/</loc>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/banning-books/</loc>
          <lastmod>2025-08-19</lastmod>
     </url>
@@ -153,11 +149,11 @@
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/edu-ai-training/cld-generation/</loc>
+         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/cutting-ai-training/</loc>
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/edu-ai-training/edu-ai-training/</loc>
+         <loc>https://dmccreary.github.io/systems-thinking/archetypes/fixes-that-fail/cutting-ai-training/cld-generation/</loc>
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
@@ -249,7 +245,11 @@
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/prompts/cld/cld-viewer/vis-js-viewer/</loc>
+         <loc>https://dmccreary.github.io/systems-thinking/prompts/cld/cld-viewer/</loc>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/systems-thinking/prompts/cld/cld-viewer-v1/</loc>
          <lastmod>2025-08-19</lastmod>
     </url>
     <url>
