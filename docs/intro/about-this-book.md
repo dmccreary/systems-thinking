@@ -21,6 +21,7 @@ There is no programming or math background required for this book, although fami
 We value storytelling and the use of metaphors to help us communicate with non-technical staff.
 
 ## Book Structure
+
 The book is broken down into three parts.
 
 ### Part 1: Introduction
