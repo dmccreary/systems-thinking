@@ -55,7 +55,7 @@ nav:
       - Zero Tolerance: archetypes/fixes-that-fail/zero-tolerance.md
     
     - Limits to Growth:
-      - Overview: archetypes/limits-to-growth/index.md
+      - Introduction: archetypes/limits-to-growth/index.md
       - Antibiotic Effectiveness: archetypes/limits-to-growth/antibiotic-effectiveness.md
       - Bacteria Growth: archetypes/limits-to-growth/bacteria.md
       - Business Expansion: archetypes/limits-to-growth/business-expansion.md
