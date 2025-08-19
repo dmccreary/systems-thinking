@@ -22,10 +22,13 @@ nav:
     - Ch 3 Systems Thinking: intro/ch-03-systems.md
     - Ch 4 Graph Systems Thinking: intro/ch-04-systems-graph.md
     - Ch 5 Emergence: intro/ch-05-emergence.md
+    - Ch 6 Complex Adaptive Systems: intro/ch-06-cas.md
 
   - Part 2 Archetypes:
-    - Introduction: archetypes/ch-05-totc.md
-    - Archetypes Overview: archetypes/index.md
+    - Introduction: archetypes/index.md
+    - Tragedy of the Commons: 
+      - Intro: archetypes/index.md
+      - Old Version: ch-05-toc.md
     - Introduction to Archetypes: archetypes/intro-archetypes.md
     - Tragedy of the Commons: archetypes/commons.md
     - Alternative Tragedy of Commons: archetypes/tragedy-of-the-commons.md
