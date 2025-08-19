@@ -5,6 +5,8 @@
 [Run the Tragedy of the Commons MicroSim](toc.html){ .md-button .md-button--primary }
 [Edit the MicroSim](https://editor.p5js.org/dmccreary/sketches/2NYEIUklI)
 
+[](./toc-v2.html)
+
 ## About this MicroSim
 
 This MicroSim teaches us the story of the Tragedy of
