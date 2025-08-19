@@ -1,0 +1,557 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Causal Loop Diagram Schema",
+  "description": "JSON Schema for representing interactive Causal Loop Diagrams for educational purposes",
+  "type": "object",
+  "required": ["metadata", "nodes", "edges"],
+  "additionalProperties": false,
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["id", "title", "archetype"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$",
+          "maxLength": 50,
+          "description": "Unique identifier for the CLD"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Human-readable title of the CLD"
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "fixes-that-fail",
+            "limits-to-growth",
+            "shifting-the-burden",
+            "tragedy-of-commons",
+            "success-to-successful",
+            "accidental-adversaries",
+            "growth-and-underinvestment"
+          ],
+          "description": "Systems thinking archetype this CLD represents"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Overview description of the system being modeled"
+        },
+        "learning_objectives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "maxItems": 10,
+          "description": "Educational objectives for students exploring this CLD"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of this CLD"
+        },
+        "created_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when CLD was created"
+        },
+        "updated_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when CLD was last updated"
+        },
+        "author": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Author or creator of this CLD"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "maxItems": 20,
+          "uniqueItems": true,
+          "description": "Tags for categorizing and searching CLDs"
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 50,
+      "uniqueItems": true,
+      "description": "System components (stocks, variables, conditions)",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "position"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "Unique identifier for the node"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "description": "Display text for the node"
+          },
+          "position": {
+            "type": "object",
+            "required": ["x", "y"],
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 2000,
+                "description": "X coordinate for node placement"
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 2000,
+                "description": "Y coordinate for node placement"
+              }
+            }
+          },
+          "type": {
+            "type": "string",
+            "enum": ["stock", "variable", "condition", "outcome"],
+            "default": "variable",
+            "description": "Type of system component this node represents"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Detailed explanation of this system component"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "maxItems": 5,
+            "description": "Real-world examples of this component"
+          },
+          "measurement": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "How this component could be measured or quantified"
+          },
+          "style": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "color": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$",
+                "description": "Hex color code for node styling"
+              },
+              "shape": {
+                "type": "string",
+                "enum": ["rectangle", "ellipse", "cloud"],
+                "default": "rectangle"
+              },
+              "size": {
+                "type": "string",
+                "enum": ["small", "medium", "large"],
+                "default": "medium"
+              }
+            }
+          },
+          "is_leverage_point": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether this node represents a high-leverage intervention point"
+          },
+          "leverage_description": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "Explanation of why this is a leverage point and how to use it"
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "description": "Causal relationships between nodes",
+      "items": {
+        "type": "object",
+        "required": ["id", "source", "target", "polarity"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "Unique identifier for the edge"
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "ID of the source node"
+          },
+          "target": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "ID of the target node"
+          },
+          "polarity": {
+            "type": "string",
+            "enum": ["positive", "negative"],
+            "description": "Whether the causal relationship is same direction (+) or opposite (-)"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Optional label describing the causal relationship"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 400,
+            "description": "Detailed explanation of how source affects target"
+          },
+          "strength": {
+            "type": "string",
+            "enum": ["weak", "moderate", "strong"],
+            "default": "moderate",
+            "description": "Strength of the causal relationship"
+          },
+          "delay": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "present": {
+                "type": "boolean",
+                "default": false,
+                "description": "Whether there is a significant delay in this relationship"
+              },
+              "duration": {
+                "type": "string",
+                "maxLength": 50,
+                "description": "Approximate time for effect to manifest (e.g., '6 months', 'years')"
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 200,
+                "description": "Explanation of the delay and its implications"
+              }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "maxItems": 5,
+            "description": "Evidence or examples supporting this causal relationship"
+          },
+          "style": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "color": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$",
+                "description": "Hex color code for edge styling"
+              },
+              "thickness": {
+                "type": "string",
+                "enum": ["thin", "medium", "thick"],
+                "default": "medium"
+              },
+              "style": {
+                "type": "string",
+                "enum": ["solid", "dashed", "dotted"],
+                "default": "solid"
+              }
+            }
+          }
+        }
+      }
+    },
+    "loops": {
+      "type": "array",
+      "maxItems": 20,
+      "description": "Feedback loops identified in the system",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "path"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "Unique identifier for the loop"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["reinforcing", "balancing"],
+            "description": "Type of feedback loop (R for reinforcing, B for balancing)"
+          },
+          "path": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "description": "Ordered array of node IDs that form the loop"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Short descriptive name for the loop"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Explanation of how this feedback loop operates"
+          },
+          "behavior_pattern": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "The behavioral pattern this loop tends to produce"
+          },
+          "dominance_conditions": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "Conditions under which this loop becomes dominant"
+          },
+          "position": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 2000,
+                "description": "X coordinate for loop symbol placement"
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 2000,
+                "description": "Y coordinate for loop symbol placement"
+              }
+            },
+            "description": "Position for displaying the R/B loop symbol"
+          },
+          "is_primary": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether this is a primary loop in the archetype"
+          }
+        }
+      }
+    },
+    "leverage_points": {
+      "type": "array",
+      "maxItems": 10,
+      "description": "Specific intervention points in the system",
+      "items": {
+        "type": "object",
+        "required": ["id", "target_type", "target_id", "leverage_level"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "Unique identifier for the leverage point"
+          },
+          "target_type": {
+            "type": "string",
+            "enum": ["node", "edge", "loop", "system"],
+            "description": "What type of system element this leverage point targets"
+          },
+          "target_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "ID of the specific element being targeted"
+          },
+          "leverage_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12,
+            "description": "Meadows' leverage level (1=lowest, 12=highest)"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Short title for this leverage point"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 600,
+            "description": "Detailed explanation of this intervention point"
+          },
+          "intervention_strategies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "maxItems": 5,
+            "description": "Specific strategies for intervening at this point"
+          },
+          "expected_impact": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "What changes would result from intervention here"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["low", "moderate", "high", "very-high"],
+            "description": "Difficulty level of implementing changes at this point"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "maxItems": 3,
+            "description": "Real-world examples of interventions at this leverage point"
+          }
+        }
+      }
+    },
+    "scenarios": {
+      "type": "array",
+      "maxItems": 10,
+      "description": "What-if scenarios for exploring system behavior",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "changes"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "maxLength": 50,
+            "description": "Unique identifier for the scenario"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Short title for the scenario"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Description of what changes in this scenario"
+          },
+          "changes": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "required": ["target_type", "target_id", "change_description"],
+              "properties": {
+                "target_type": {
+                  "type": "string",
+                  "enum": ["node", "edge"]
+                },
+                "target_id": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9_-]+$"
+                },
+                "change_description": {
+                  "type": "string",
+                  "maxLength": 200
+                }
+              }
+            }
+          },
+          "predicted_outcomes": {
+            "type": "string",
+            "maxLength": 400,
+            "description": "Expected results of this scenario"
+          }
+        }
+      }
+    },
+    "educational_content": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "discussion_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "maxItems": 15,
+          "description": "Questions to guide student exploration and discussion"
+        },
+        "key_insights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 250
+          },
+          "maxItems": 10,
+          "description": "Important insights students should discover"
+        },
+        "common_misconceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["misconception", "correction"],
+            "properties": {
+              "misconception": {
+                "type": "string",
+                "maxLength": 200
+              },
+              "correction": {
+                "type": "string",
+                "maxLength": 300
+              }
+            }
+          },
+          "maxItems": 5,
+          "description": "Common misunderstandings and their corrections"
+        },
+        "extension_activities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "maxItems": 5,
+          "description": "Additional activities for deeper exploration"
+        },
+        "related_concepts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "maxItems": 10,
+          "description": "Related systems thinking concepts to explore"
+        }
+      }
+    }
+  }
+}

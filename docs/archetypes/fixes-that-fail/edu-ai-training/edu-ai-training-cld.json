@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "id": "ai-training-budget-cuts",
+    "title": "Cutting AI Training Budgets to Preserve Traditional Education Funding",
+    "archetype": "fixes-that-fail",
+    "description": "A school district cuts AI literacy training funding to preserve traditional professional development programs, leading to teacher obsolescence, higher turnover costs, and worse educational outcomes.",
+    "learning_objectives": [
+      "Understand how short-term budget decisions can create long-term costs",
+      "Recognize the importance of investing in emerging competencies",
+      "Identify feedback loops between teacher competency and organizational costs",
+      "Explore the relationship between teacher retention and training investment"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-01-18T00:00:00Z",
+    "updated_date": "2025-01-18T00:00:00Z",
+    "author": "Systems Thinking Educational Team",
+    "tags": ["education", "budget", "technology", "professional-development", "teacher-retention", "fixes-that-fail"]
+  },
+  "nodes": [
+    {
+      "id": "budget_pressure",
+      "label": "Budget Pressure",
+      "position": {"x": 100, "y": 200},
+      "type": "condition",
+      "description": "Financial constraints forcing difficult choices about professional development spending",
+      "examples": ["State funding cuts", "Economic downturn", "Competing budget priorities"],
+      "measurement": "Budget deficit percentage, competing funding requests"
+    },
+    {
+      "id": "ai_training_cuts",
+      "label": "AI Training Budget Cuts",
+      "position": {"x": 300, "y": 100},
+      "type": "variable",
+      "description": "Decision to eliminate or reduce AI literacy training for teachers",
+      "examples": ["Cancelled AI workshops", "Reduced tech training hours", "Eliminated AI coaching positions"],
+      "measurement": "AI training budget allocation, training hours provided"
+    },
+    {
+      "id": "traditional_program_funding",
+      "label": "Traditional Program Funding",
+      "position": {"x": 500, "y": 200},
+      "type": "variable",
+      "description": "Maintained or increased funding for established professional development programs",
+      "examples": ["Literacy coaching", "Math intervention training", "Classroom management workshops"],
+      "measurement": "Traditional PD budget allocation, program participation rates"
+    },
+    {
+      "id": "teacher_ai_competency",
+      "label": "Teacher AI Competency",
+      "position": {"x": 300, "y": 300},
+      "type": "stock",
+      "description": "Teachers' ability to effectively use and integrate AI tools in education",
+      "examples": ["Understanding ChatGPT for lesson planning", "AI detection skills", "Ethical AI use knowledge"],
+      "measurement": "AI competency assessments, tool usage surveys"
+    },
+    {
+      "id": "teacher_confidence",
+      "label": "Teacher Professional Confidence",
+      "position": {"x": 500, "y": 400},
+      "type": "variable",
+      "description": "Teachers' confidence in their ability to handle modern educational challenges",
+      "examples": ["Feeling prepared for student questions", "Confidence with technology", "Professional self-efficacy"],
+      "measurement": "Teacher confidence surveys, stress assessments"
+    },
+    {
+      "id": "teacher_retention",
+      "label": "Teacher Retention Rate",
+      "position": {"x": 700, "y": 300},
+      "type": "stock",
+      "description": "Percentage of teachers remaining in the district year-over-year",
+      "examples": ["Annual retention rates", "Exit interview data", "Transfer requests"],
+      "measurement": "Annual retention percentage, turnover costs"
+    },
+    {
+      "id": "recruitment_difficulty",
+      "label": "Teacher Recruitment Difficulty",
+      "position": {"x": 900, "y": 200},
+      "type": "variable",
+      "description": "Difficulty attracting qualified teachers to the district",
+      "examples": ["Unfilled positions", "Lower quality applicants", "Longer hiring timelines"],
+      "measurement": "Time to fill positions, applicant quality scores"
+    },
+    {
+      "id": "staffing_costs",
+      "label": "Total Staffing Costs",
+      "position": {"x": 900, "y": 400},
+      "type": "stock",
+      "description": "Total cost of recruiting, hiring, and retaining teaching staff",
+      "examples": ["Recruitment expenses", "Higher salaries for retention", "Substitute teacher costs"],
+      "measurement": "Annual staffing budget, cost per teacher hired"
+    },
+    {
+      "id": "educational_quality",
+      "label": "Educational Quality",
+      "position": {"x": 700, "y": 500},
+      "type": "outcome",
+      "description": "Overall quality of education provided to students",
+      "examples": ["Student engagement", "Learning outcomes", "Innovation in teaching"],
+      "measurement": "Student achievement scores, engagement surveys"
+    },
+    {
+      "id": "district_reputation",
+      "label": "District Reputation",
+      "position": {"x": 500, "y": 600},
+      "type": "variable",
+      "description": "Public perception of the district's educational quality and innovation",
+      "examples": ["Parent satisfaction", "Community support", "Media coverage"],
+      "measurement": "Reputation surveys, enrollment trends"
+    },
+    {
+      "id": "budget_available",
+      "label": "Available Budget",
+      "position": {"x": 100, "y": 500},
+      "type": "stock",
+      "description": "Financial resources available for educational programs and staff",
+      "examples": ["General fund balance", "Grant funding", "Tax revenue"],
+      "measurement": "Total budget allocation, fund balance"
+    }
+  ],
+  "edges": [
+    {
+      "id": "budget_to_cuts",
+      "source": "budget_pressure",
+      "target": "ai_training_cuts",
+      "polarity": "positive",
+      "description": "Higher budget pressure leads to more AI training cuts",
+      "strength": "strong"
+    },
+    {
+      "id": "cuts_to_competency",
+      "source": "ai_training_cuts",
+      "target": "teacher_ai_competency",
+      "polarity": "negative",
+      "description": "Cutting AI training reduces teacher AI competency",
+      "strength": "strong"
+    },
+    {
+      "id": "cuts_to_traditional",
+      "source": "ai_training_cuts",
+      "target": "traditional_program_funding",
+      "polarity": "positive",
+      "description": "AI training cuts free up funds for traditional programs",
+      "strength": "moderate"
+    },
+    {
+      "id": "competency_to_confidence",
+      "source": "teacher_ai_competency",
+      "target": "teacher_confidence",
+      "polarity": "positive",
+      "description": "Higher AI competency increases teacher confidence in modern challenges",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "3-6 months",
+        "description": "Confidence builds gradually as teachers apply new skills"
+      }
+    },
+    {
+      "id": "confidence_to_retention",
+      "source": "teacher_confidence",
+      "target": "teacher_retention",
+      "polarity": "positive",
+      "description": "More confident teachers are more likely to stay in the profession",
+      "strength": "strong"
+    },
+    {
+      "id": "retention_to_recruitment",
+      "source": "teacher_retention",
+      "target": "recruitment_difficulty",
+      "polarity": "negative",
+      "description": "Higher retention reduces need for recruitment and improves district reputation",
+      "strength": "moderate"
+    },
+    {
+      "id": "recruitment_to_costs",
+      "source": "recruitment_difficulty",
+      "target": "staffing_costs",
+      "polarity": "positive",
+      "description": "Harder recruitment increases costs through higher salaries and longer searches",
+      "strength": "strong"
+    },
+    {
+      "id": "retention_to_costs",
+      "source": "teacher_retention",
+      "target": "staffing_costs",
+      "polarity": "negative",
+      "description": "Higher retention reduces turnover and recruitment costs",
+      "strength": "strong"
+    },
+    {
+      "id": "competency_to_quality",
+      "source": "teacher_ai_competency",
+      "target": "educational_quality",
+      "polarity": "positive",
+      "description": "Teachers with AI skills can provide more innovative and effective education",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "6-12 months",
+        "description": "Educational improvements take time to manifest and measure"
+      }
+    },
+    {
+      "id": "retention_to_quality",
+      "source": "teacher_retention",
+      "target": "educational_quality",
+      "polarity": "positive",
+      "description": "Stable teaching staff provides more consistent, quality education",
+      "strength": "moderate"
+    },
+    {
+      "id": "quality_to_reputation",
+      "source": "educational_quality",
+      "target": "district_reputation",
+      "polarity": "positive",
+      "description": "Higher educational quality improves district reputation",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "1-2 years",
+        "description": "Reputation changes slowly based on sustained performance"
+      }
+    },
+    {
+      "id": "reputation_to_budget",
+      "source": "district_reputation",
+      "target": "budget_available",
+      "polarity": "positive",
+      "description": "Better reputation can lead to increased community support and funding",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "2-3 years",
+        "description": "Budget impacts from reputation changes take time through political processes"
+      }
+    },
+    {
+      "id": "costs_to_pressure",
+      "source": "staffing_costs",
+      "target": "budget_pressure",
+      "polarity": "positive",
+      "description": "Higher staffing costs increase overall budget pressure",
+      "strength": "strong"
+    },
+    {
+      "id": "budget_to_pressure",
+      "source": "budget_available",
+      "target": "budget_pressure",
+      "polarity": "negative",
+      "description": "More available budget reduces budget pressure",
+      "strength": "strong"
+    }
+  ],
+  "loops": [
+    {
+      "id": "fixes_that_fail_loop",
+      "type": "reinforcing",
+      "path": ["budget_pressure", "ai_training_cuts", "teacher_ai_competency", "teacher_confidence", "teacher_retention", "staffing_costs", "budget_pressure"],
+      "label": "Fixes That Fail Loop",
+      "description": "Cutting AI training to save money ultimately increases costs through teacher turnover",
+      "behavior_pattern": "Short-term cost savings lead to long-term cost increases",
+      "position": {"x": 400, "y": 350},
+      "is_primary": true
+    },
+    {
+      "id": "quality_reputation_loop",
+      "type": "reinforcing",
+      "path": ["teacher_ai_competency", "educational_quality", "district_reputation", "budget_available", "budget_pressure", "ai_training_cuts", "teacher_ai_competency"],
+      "label": "Quality-Reputation Loop",
+      "description": "AI competency drives educational quality, which improves reputation and funding",
+      "behavior_pattern": "Investment in competency creates virtuous cycle of improvement",
+      "position": {"x": 450, "y": 450},
+      "is_primary": false
+    },
+    {
+      "id": "retention_cost_loop",
+      "type": "balancing",
+      "path": ["teacher_retention", "staffing_costs", "budget_pressure", "ai_training_cuts", "teacher_ai_competency", "teacher_confidence", "teacher_retention"],
+      "label": "Retention-Cost Balancing Loop",
+      "description": "Higher retention reduces costs, which could allow for better training investment",
+      "behavior_pattern": "System seeks equilibrium between retention and costs",
+      "position": {"x": 600, "y": 350},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "ai_competency_investment",
+      "target_type": "node",
+      "target_id": "teacher_ai_competency",
+      "leverage_level": 6,
+      "title": "Invest in AI Teacher Competency",
+      "description": "Direct investment in building teacher AI skills addresses the root capability gap",
+      "intervention_strategies": [
+        "Mandatory AI literacy training for all teachers",
+        "Ongoing coaching and support programs",
+        "Peer mentoring networks for AI integration"
+      ],
+      "expected_impact": "Improved teacher confidence, retention, and educational quality",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "budget_allocation_paradigm",
+      "target_type": "system",
+      "target_id": "budget_pressure",
+      "leverage_level": 8,
+      "title": "Shift Budget Allocation Paradigm",
+      "description": "Change the mental model from viewing AI training as optional to seeing it as essential infrastructure",
+      "intervention_strategies": [
+        "Reframe AI training as basic professional competency",
+        "Integrate AI skills into traditional PD programs",
+        "Calculate ROI of AI training through retention metrics"
+      ],
+      "expected_impact": "Fundamental shift in how training investments are prioritized",
+      "difficulty": "high"
+    },
+    {
+      "id": "delay_awareness",
+      "target_type": "edge",
+      "target_id": "competency_to_confidence",
+      "leverage_level": 4,
+      "title": "Address Feedback Delays",
+      "description": "Help decision-makers understand the delayed impact of training cuts",
+      "intervention_strategies": [
+        "Create dashboards showing leading indicators",
+        "Implement early warning systems for teacher confidence",
+        "Regular pulse surveys on teacher preparedness"
+      ],
+      "expected_impact": "Better timing of interventions before problems become severe",
+      "difficulty": "low"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continue_cuts",
+      "title": "Continue AI Training Cuts",
+      "description": "District maintains policy of cutting AI training to fund traditional programs",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "ai_training_cuts",
+          "change_description": "AI training budget reduced to zero"
+        }
+      ],
+      "predicted_outcomes": "Accelerated teacher exodus, higher recruitment costs, declining educational quality"
+    },
+    {
+      "id": "blended_approach",
+      "title": "Blended Training Investment",
+      "description": "District integrates AI skills into traditional professional development programs",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "traditional_program_funding",
+          "change_description": "Traditional programs redesigned to include AI components"
+        },
+        {
+          "target_type": "node",
+          "target_id": "teacher_ai_competency",
+          "change_description": "AI skills developed through integrated approach"
+        }
+      ],
+      "predicted_outcomes": "Improved teacher competency without additional budget pressure"
+    },
+    {
+      "id": "strategic_investment",
+      "title": "Strategic AI Investment",
+      "description": "District makes deliberate investment in AI training despite budget pressure",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "ai_training_cuts",
+          "change_description": "AI training budget increased despite constraints"
+        }
+      ],
+      "predicted_outcomes": "Short-term budget stress followed by improved retention and long-term cost savings"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why might cutting AI training seem like a reasonable budget decision in the short term?",
+      "What are the hidden costs of having teachers who lack modern technological competencies?",
+      "How do feedback delays make it difficult to see the true cost of training cuts?",
+      "What would you do if you were a school board member facing this budget dilemma?",
+      "How might the district measure the ROI of AI training investment?",
+      "What are alternative ways to provide AI training without major budget increases?"
+    ],
+    "key_insights": [
+      "Short-term budget savings can create much larger long-term costs",
+      "Teacher competency gaps lead to confidence issues and retention problems",
+      "Recruitment and retention costs often exceed training investment costs",
+      "Feedback delays make it hard to connect training cuts to later problems",
+      "Investment in emerging competencies is infrastructure, not luxury spending"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Teachers can learn AI skills on their own without formal training",
+        "correction": "Professional development provides structured learning, peer support, and institutional integration that self-learning cannot match"
+      },
+      {
+        "misconception": "Traditional programs are more important than AI training",
+        "correction": "Both are important; AI skills enhance rather than replace traditional teaching competencies"
+      },
+      {
+        "misconception": "Cutting training saves money",
+        "correction": "Training cuts often increase total costs through turnover, recruitment, and reduced effectiveness"
+      }
+    ],
+    "extension_activities": [
+      "Calculate the real cost of teacher turnover in your local district",
+      "Interview teachers about their confidence with educational technology",
+      "Research how other districts have integrated AI training into existing programs",
+      "Create a business case for AI training investment using systems thinking"
+    ],
+    "related_concepts": [
+      "Tragedy of the Commons",
+      "Shifting the Burden",
+      "Growth and Underinvestment",
+      "Systems Archetypes",
+      "Leverage Points",
+      "Feedback Delays"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+#!/bin/bash
+
+# validate-cld - Shell wrapper for CLD JSON validator
+# 
+# This script provides a convenient command-line interface for validating
+# Causal Loop Diagram JSON files against the CLD schema.
+#
+# Usage:
+#   validate-cld [FILE...]         # Validate specific files
+#   validate-cld                   # Validate all *cld.json files in current directory
+#
+# Examples:
+#   validate-cld my-diagram-cld.json
+#   validate-cld *.json
+#   validate-cld file1-cld.json file2-cld.json
+#   validate-cld                   # Validates all *cld.json in current dir
+
+# Configuration
+SCRIPT_NAME="cld_validator.py"
+SCRIPT_LOCATIONS=(
+    "$HOME/bin/$SCRIPT_NAME"
+    "$HOME/.local/bin/$SCRIPT_NAME"
+    "$HOME/scripts/$SCRIPT_NAME"
+    "./$SCRIPT_NAME"
+    "$(dirname "$0")/$SCRIPT_NAME"
+)
+
+# Function to find the Python validator script
+find_validator_script() {
+    for location in "${SCRIPT_LOCATIONS[@]}"; do
+        if [[ -f "$location" && -r "$location" ]]; then
+            echo "$location"
+            return 0
+        fi
+    done
+    return 1
+}
+
+# Function to check if Python and required modules are available
+check_dependencies() {
+    if ! command -v python3 >/dev/null 2>&1; then
+        echo "Error: python3 is not installed or not in PATH" >&2
+        echo "Please install Python 3 to use this validator" >&2
+        return 1
+    fi
+    
+    if ! python3 -c "import jsonschema" >/dev/null 2>&1; then
+        echo "Error: jsonschema module is not installed" >&2
+        echo "Please install it with: pip install jsonschema" >&2
+        return 1
+    fi
+    
+    return 0
+}
+
+# Function to check if schema file exists
+check_schema() {
+    local schema_path="$HOME/.schemas/cld-schema.json"
+    if [[ ! -f "$schema_path" ]]; then
+        echo "Error: Schema file not found at $schema_path" >&2
+        echo "Please ensure the cld-schema.json file is in ~/.schemas/" >&2
+        echo "" >&2
+        echo "You can create the directory and copy the schema with:" >&2
+        echo "  mkdir -p ~/.schemas" >&2
+        echo "  cp cld-schema.json ~/.schemas/" >&2
+        return 1
+    fi
+    return 0
+}
+
+# Function to show help
+show_help() {
+    cat << EOF
+validate-cld - Validate Causal Loop Diagram JSON files
+
+Usage:
+  validate-cld [FILE...]         Validate specific CLD JSON files
+  validate-cld                   Validate all *cld.json files in current directory
+  validate-cld -h, --help       Show this help message
+
+Examples:
+  validate-cld my-diagram-cld.json
+  validate-cld *.json
+  validate-cld file1-cld.json file2-cld.json
+  validate-cld                   # Validates all *cld.json files in current directory
+
+Requirements:
+  - Python 3 with jsonschema module (pip install jsonschema)
+  - CLD schema file at ~/.schemas/cld-schema.json
+  - CLD validator script (cld_validator.py) in a discoverable location
+
+Exit codes:
+  0 - All files are valid
+  1 - One or more files are invalid or an error occurred
+EOF
+}
+
+# Main execution
+main() {
+    # Handle help flags
+    case "${1:-}" in
+        -h|--help|help)
+            show_help
+            exit 0
+            ;;
+    esac
+    
+    # Check dependencies
+    if ! check_dependencies; then
+        exit 1
+    fi
+    
+    # Check schema file
+    if ! check_schema; then
+        exit 1
+    fi
+    
+    # Find the validator script
+    validator_script=$(find_validator_script)
+    if [[ $? -ne 0 ]]; then
+        echo "Error: Could not find cld_validator.py script" >&2
+        echo "Searched in the following locations:" >&2
+        printf "  %s\n" "${SCRIPT_LOCATIONS[@]}" >&2
+        echo "" >&2
+        echo "Please ensure the cld_validator.py script is in one of these locations" >&2
+        exit 1
+    fi
+    
+    # Execute the Python validator with all arguments
+    exec python3 "$validator_script" "$@"
+}
+
+# Run main function with all arguments
+main "$@"
