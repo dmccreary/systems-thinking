@@ -44,7 +44,6 @@ nav:
       - Cutting AI Training: 
           - Intro: archetypes/fixes-that-fail/edu-ai-training/index.md
           - Causal Diagram: archetypes/fixes-that-fail/cutting-ai-training/cld-generation.md
-
       - Grade Inflation: archetypes/fixes-that-fail/grade-inflation.md
       - Layoffs: archetypes/fixes-that-fail/layoffs.md
       - Open Offices: archetypes/fixes-that-fail/open-offices.md
@@ -54,8 +53,20 @@ nav:
       - Teach to Test: archetypes/fixes-that-fail/teach-to-the-test.md
       - Traffic Congestion: archetypes/fixes-that-fail/traffic-congestion.md
       - Zero Tolerance: archetypes/fixes-that-fail/zero-tolerance.md
+    
     - Limits to Growth:
       - Overview: archetypes/limits-to-growth/index.md
+      - Antibiotic Effectiveness: archetypes/limits-to-growth/antibiotic-effectiveness.md
+      - Bacteria Growth: archetypes/limits-to-growth/bacteria.md
+      - Business Expansion: archetypes/limits-to-growth/business-expansion.md
+      - Gaming Skills: archetypes/limits-to-growth/gaming-skills.md
+      - Humans on Earth: archetypes/limits-to-growth/humans-on-earth.md
+      - Intensive Agriculture: archetypes/limits-to-growth/intensive-agricultuer.md
+      - LLMs: archetypes/limits-to-growth/llms.md
+      - Moore's Law: archetypes/limits-to-growth/moores-law.md
+      - Social Media: archetypes/limits-to-growth/social-media.md
+      - Steam Engines: archetypes/limits-to-growth/steam-engines.md
+      - Student Activity Overcommitment: archetypes/limits-to-growth/student-activity-overcommittment.md
   # - Render Tests:
   #  - render-tests/mermaid-test.md
   #  - render-tests/state-diagram.md

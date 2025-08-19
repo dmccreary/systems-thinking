@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "id": "ai-training",
+    "title": "Cutting AI Training Budgets to Preserve Traditional Education Funding",
+    "archetype": "fixes-that-fail",
+    "description": "A systems analysis of how cutting AI training budgets to maintain traditional professional development can lead to higher costs through teacher turnover.",
+    "author": "Systems Thinking Educational Team",
+    "version": "1.0.0",
+    "created_date": "2024-01-15T10:00:00Z",
+    "updated_date": "2024-01-15T10:00:00Z",
+    "tags": ["education", "AI", "professional-development", "teacher-retention", "fixes-that-fail"]
+  },
+  "nodes": [
+    {
+      "id": "budget_pressure",
+      "label": "Budget Pressure",
+      "position": {"x": 100, "y": 200},
+      "type": "condition",
+      "description": "Financial constraints forcing difficult choices about professional development spending",
+      "measurement": "Budget deficit percentage, funding cuts",
+      "examples": ["State funding cuts", "Property tax revenue decline", "Federal grant reductions"]
+    },
+    {
+      "id": "ai_training_cuts",
+      "label": "AI Training Budget Cuts",
+      "position": {"x": 300, "y": 100},
+      "type": "variable",
+      "description": "Decision to eliminate or reduce AI literacy training for teachers",
+      "measurement": "Dollar amount cut from AI training programs",
+      "examples": ["Cancelled AI workshops", "Reduced technology training", "Eliminated digital literacy programs"]
+    },
+    {
+      "id": "traditional_program_funding",
+      "label": "Traditional Program Funding",
+      "position": {"x": 500, "y": 200},
+      "type": "variable",
+      "description": "Maintained or increased funding for established professional development programs",
+      "measurement": "Funding allocation to traditional PD programs"
+    },
+    {
+      "id": "teacher_ai_competency",
+      "label": "Teacher AI Competency",
+      "position": {"x": 300, "y": 300},
+      "type": "stock",
+      "description": "Teachers' ability to effectively use and integrate AI tools in education",
+      "measurement": "AI literacy assessment scores, tool usage metrics",
+      "examples": ["ChatGPT for lesson planning", "AI grading tools", "Personalized learning platforms"]
+    },
+    {
+      "id": "teacher_confidence",
+      "label": "Teacher Professional Confidence",
+      "position": {"x": 500, "y": 400},
+      "type": "condition",
+      "description": "Teachers' confidence in their ability to handle modern educational challenges",
+      "measurement": "Survey scores on professional confidence",
+      "examples": ["Confidence with technology", "Ability to engage students", "Preparedness for future challenges"]
+    },
+    {
+      "id": "teacher_retention",
+      "label": "Teacher Retention Rate",
+      "position": {"x": 700, "y": 300},
+      "type": "outcome",
+      "description": "Percentage of teachers remaining in the district year-over-year",
+      "measurement": "Annual teacher retention percentage",
+      "examples": ["Teachers staying vs. leaving", "Career satisfaction surveys", "Exit interview data"]
+    },
+    {
+      "id": "staffing_costs",
+      "label": "Total Staffing Costs",
+      "position": {"x": 900, "y": 400},
+      "type": "stock",
+      "description": "Total cost of recruiting, hiring, and retaining teaching staff",
+      "measurement": "Annual staffing budget in dollars",
+      "examples": ["Recruitment costs", "Training new hires", "Substitute teacher costs"]
+    }
+  ],
+  "edges": [
+    {
+      "id": "budget_to_cuts",
+      "source": "budget_pressure",
+      "target": "ai_training_cuts",
+      "polarity": "positive",
+      "description": "Higher budget pressure leads to more AI training cuts",
+      "strength": "strong"
+    },
+    {
+      "id": "cuts_to_competency",
+      "source": "ai_training_cuts",
+      "target": "teacher_ai_competency",
+      "polarity": "negative",
+      "description": "Cutting AI training reduces teacher AI competency",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "3-6 months",
+        "description": "Takes time for reduced training to impact competency levels"
+      }
+    },
+    {
+      "id": "competency_to_confidence",
+      "source": "teacher_ai_competency",
+      "target": "teacher_confidence",
+      "polarity": "positive",
+      "description": "Higher AI competency increases teacher confidence in modern challenges",
+      "strength": "moderate"
+    },
+    {
+      "id": "confidence_to_retention",
+      "source": "teacher_confidence",
+      "target": "teacher_retention",
+      "polarity": "positive",
+      "description": "More confident teachers are more likely to stay in the profession",
+      "strength": "strong"
+    },
+    {
+      "id": "retention_to_costs",
+      "source": "teacher_retention",
+      "target": "staffing_costs",
+      "polarity": "negative",
+      "description": "Higher retention reduces turnover and recruitment costs",
+      "strength": "strong"
+    },
+    {
+      "id": "costs_to_pressure",
+      "source": "staffing_costs",
+      "target": "budget_pressure",
+      "polarity": "positive",
+      "description": "Higher staffing costs increase overall budget pressure",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "1 year",
+        "description": "Budget impacts show up in next fiscal year planning"
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "fixes_that_fail_loop",
+      "type": "reinforcing",
+      "path": ["budget_pressure", "ai_training_cuts", "teacher_ai_competency", "teacher_confidence", "teacher_retention", "staffing_costs"],
+      "label": "Fixes That Fail Loop",
+      "description": "Cutting AI training to save money ultimately increases costs through teacher turnover",
+      "position": {"x": 400, "y": 350},
+      "is_primary": true,
+      "behavior_pattern": "Initial cost savings followed by escalating costs due to turnover",
+      "dominance_conditions": "When teacher retention becomes critical factor in budget"
+    }
+  ]
+}

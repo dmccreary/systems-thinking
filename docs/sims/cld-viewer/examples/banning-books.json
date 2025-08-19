@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "id": "banning-books",
+    "title": "Banning Books to Protect Students",
+    "archetype": "fixes-that-fail",
+    "description": "A systems thinking exploration of how book banning policies intended to protect students can create worse educational outcomes over time.",
+    "author": "Systems Thinking Educational Team",
+    "version": "1.0.0",
+    "created_date": "2024-01-15T10:00:00Z",
+    "updated_date": "2024-01-15T10:00:00Z",
+    "tags": ["education", "censorship", "policy", "fixes-that-fail"]
+  },
+  "nodes": [
+    {
+      "id": "community_concerns",
+      "label": "Community Concerns About Content",
+      "position": {"x": 100, "y": 100},
+      "type": "condition",
+      "description": "Parent groups and community members express concerns about books containing mature themes, controversial topics, or content deemed inappropriate",
+      "examples": ["Parent complaints about LGBTQ+ themes", "Concerns about historical racism depictions", "Religious objections to certain content"]
+    },
+    {
+      "id": "book_banning_policies",
+      "label": "Book Banning Policies",
+      "position": {"x": 400, "y": 100},
+      "type": "variable",
+      "description": "Sweeping book removal policies, restrictive approval processes, and preemptive censorship measures",
+      "examples": ["Banned book lists", "Parental review committees", "Preemptive content filtering"]
+    },
+    {
+      "id": "immediate_relief",
+      "label": "Immediate Relief",
+      "position": {"x": 700, "y": 100},
+      "type": "outcome",
+      "description": "Short-term reduction in complaints and community tension as visible action is taken",
+      "measurement": "Number of complaints received per month"
+    },
+    {
+      "id": "educational_degradation",
+      "label": "Educational Degradation",
+      "position": {"x": 700, "y": 400},
+      "type": "condition",
+      "description": "Diminished learning engagement, critical thinking opportunities, and intellectual development",
+      "examples": ["Reduced critical thinking exercises", "Limited exposure to diverse perspectives", "Self-censorship by teachers"]
+    },
+    {
+      "id": "worse_outcomes",
+      "label": "Worse Educational Outcomes",
+      "position": {"x": 400, "y": 400},
+      "type": "outcome",
+      "description": "Declining academic performance, reduced college readiness, and broader educational dysfunction",
+      "measurement": "Standardized test scores, college acceptance rates"
+    },
+    {
+      "id": "pressure_for_restrictions",
+      "label": "Pressure for More Restrictions",
+      "position": {"x": 100, "y": 400},
+      "type": "variable",
+      "description": "Increased pressure to implement even more restrictive censorship policies and expand banned book lists",
+      "examples": ["Calls for broader book bans", "Demands for teacher monitoring", "Pressure for curriculum restrictions"]
+    }
+  ],
+  "edges": [
+    {
+      "id": "concerns_to_policies",
+      "source": "community_concerns",
+      "target": "book_banning_policies",
+      "polarity": "positive",
+      "description": "Community concerns directly lead to implementation of book banning policies",
+      "strength": "strong"
+    },
+    {
+      "id": "policies_to_relief",
+      "source": "book_banning_policies",
+      "target": "immediate_relief",
+      "polarity": "positive",
+      "description": "Book banning policies provide immediate visible action that reduces complaints",
+      "strength": "strong"
+    },
+    {
+      "id": "policies_to_degradation",
+      "source": "book_banning_policies",
+      "target": "educational_degradation",
+      "polarity": "positive",
+      "description": "Restrictive policies diminish educational quality and student engagement",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "6-12 months",
+        "description": "Educational impacts take time to manifest as curriculum adjustments are made"
+      }
+    },
+    {
+      "id": "degradation_to_outcomes",
+      "source": "educational_degradation",
+      "target": "worse_outcomes",
+      "polarity": "positive",
+      "description": "Educational degradation leads to measurably worse academic and social outcomes",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "1-2 years",
+        "description": "Academic outcomes take time to show up in measurable data"
+      }
+    },
+    {
+      "id": "outcomes_to_pressure",
+      "source": "worse_outcomes",
+      "target": "pressure_for_restrictions",
+      "polarity": "positive",
+      "description": "Poor outcomes create pressure to implement even more restrictive policies",
+      "strength": "moderate"
+    },
+    {
+      "id": "pressure_to_policies",
+      "source": "pressure_for_restrictions",
+      "target": "book_banning_policies",
+      "polarity": "positive",
+      "description": "Pressure for more restrictions leads to expanded and more severe banning policies",
+      "strength": "strong"
+    }
+  ],
+  "loops": [
+    {
+      "id": "quick_fix_loop",
+      "type": "balancing",
+      "path": ["community_concerns", "book_banning_policies", "immediate_relief"],
+      "label": "Quick Fix Loop",
+      "description": "The initial balancing loop where book banning policies temporarily reduce community concerns",
+      "position": {"x": 400, "y": 60},
+      "is_primary": false
+    },
+    {
+      "id": "unintended_consequences_loop",
+      "type": "reinforcing",
+      "path": ["book_banning_policies", "educational_degradation", "worse_outcomes", "pressure_for_restrictions"],
+      "label": "Unintended Consequences Loop",
+      "description": "The reinforcing loop where banning policies create educational problems that generate pressure for even more restrictions",
+      "position": {"x": 500, "y": 300},
+      "is_primary": true,
+      "behavior_pattern": "Escalating restrictions with declining educational quality"
+    }
+  ]
+}
