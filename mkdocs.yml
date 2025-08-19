@@ -32,11 +32,10 @@ nav:
     - Fixes that Fail:
       - Overview: archetypes/fixes-that-fail/index.md
       - Banning AI: archetypes/fixes-that-fail/banning-ai.md
-      - Banning Books: archetypes/fixes-that-fail/banning-books.md
-      - Cutting AI Training: archetypes/fixes-that-fail/cutting-ai-training.md
+      - Banning Books: archetypes/fixes-that-fail/banning-books/index.md
       - Cutting Coding: archetypes/fixes-that-fail/cutting-coding.md
       - Cutting STEM: archetypes/fixes-that-fail/cutting-stem.md
-      - Education AI Training: archetypes/fixes-that-fail/edu-ai-training.md
+      - Cutting AI Training: archetypes/fixes-that-fail/edu-ai-training/index.md
       - Grade Inflation: archetypes/fixes-that-fail/grade-inflation.md
       - Layoffs: archetypes/fixes-that-fail/layoffs.md
       - Open Offices: archetypes/fixes-that-fail/open-offices.md
@@ -61,6 +60,7 @@ nav:
     - Introduction: cmm-strategies/index.md
     - Microstrategies: cmm-strategies/microstrategies.md
     - Silo Busting Microstrategies: cmm-strategies/silo-busting-microstrategies.md
+  
   - MicroSims:
     - Introduction: sims/index.md
     - High School Simulations: sims/high-school.md
@@ -69,6 +69,7 @@ nav:
     - CMM Simulation: sims/cmm/index.md
     - CLD Viewer: sims/cld-viewer/index.md
     - Template: sims/template/index.md
+  
   - Prompts:
     - Knowledge Graphs:
       - Concept Enumeration: prompts/knowledge-graphs/concept-enumeration.md

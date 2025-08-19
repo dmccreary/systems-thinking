@@ -1,4 +1,4 @@
-# Generating a CLD for EDU AI Training
+# Generating a CLD for Cutting AI Training
 
 !!! prompt
     I have placed the cld-schema.json file in the Files area. 
