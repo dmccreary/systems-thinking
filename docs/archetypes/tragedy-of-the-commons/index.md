@@ -48,7 +48,7 @@ Here's the basic pattern:
 - Over time, the resource becomes depleted or degraded
 - Everyone ends up worse off than when they started
 
-![Figure 3 - fishing around the lake](fig-03-fishing-around-lake.png)
+![Figure 3 - fishing around the lake](fig-03-fishing-around-lake.jpg)
 
 ## The Structure Behind the Pattern
 

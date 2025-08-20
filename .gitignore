@@ -4,3 +4,4 @@ build
 ~$*
 full-book.md
 .vscode/settings.json
+.cache

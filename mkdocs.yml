@@ -22,10 +22,13 @@ nav:
     - Ch 3 Systems Thinking: intro/ch-03-systems.md
     - Ch 4 Graph Systems Thinking: intro/ch-04-systems-graph.md
     - Ch 5 Emergence: intro/ch-05-emergence.md
+    - Ch 6 Complex Adaptive Systems: intro/ch-06-cas.md
 
   - Part 2 Archetypes:
-    - Introduction: archetypes/ch-05-totc.md
-    - Archetypes Overview: archetypes/index.md
+    - Introduction: archetypes/index.md
+    - Tragedy of the Commons: 
+      - Intro: archetypes/tragedy-of-the-commons/index.md
+      - Classic Story: archetypes/tragedy-of-the-commons/classic-toc.md
     - Introduction to Archetypes: archetypes/intro-archetypes.md
     - Tragedy of the Commons: archetypes/commons.md
     - Alternative Tragedy of Commons: archetypes/tragedy-of-the-commons.md
@@ -90,6 +93,10 @@ nav:
     - CLD Viewer: sims/cld-viewer/index.md
     - Template: sims/template/index.md
   
+  - Stories:
+    - Introduction: stories/index.md
+    - Tragedy of the Commons: stories/tragedy-of-the-commons/index.md
+    - Moore's Law: stories/moores-law/index.md
   - Prompts:
     - Knowledge Graphs:
       - Concept Enumeration: prompts/knowledge-graphs/concept-enumeration.md
@@ -126,11 +133,20 @@ theme:
   custom_dir: 'theme'
   include_sidebar: true
 markdown_extensions:
+  - meta
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.snippets
+  - pymdownx.emoji
+  - pymdownx.tilde
+  - pymdownx.tasklist
+  - pymdownx.tabbed
 # enable LaTeX equation rendering
 #  - pymdownx.arithmatex:
 #      generic: true
@@ -141,10 +157,11 @@ extra_javascript:
     # needed for mathjax to work
     # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
-    - search
-# I was trying to do the causal loop diagrams with Markup
-# It kind of works but slows down the build
-#    - mermaid2
-# markdown_extensions:
-#   - codehilite:
-#       linenums: true
+  - search
+  - social
+  - social_override
+extra:
+    analytics:
+      provider: google
+      # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
+      property: G-ZQMDCX1BVL

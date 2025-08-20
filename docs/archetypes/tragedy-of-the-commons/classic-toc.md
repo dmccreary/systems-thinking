@@ -1,6 +1,6 @@
 # Tragedy of the Commons
 
-![](img/../../img/totc-land.png)
+![](../../img/totc-land.png)
 
 
 ## Solutions Tragedy of the Commons
