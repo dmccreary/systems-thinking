@@ -1,9 +1,9 @@
 ---
 title: Moore's Law - The Rise and Limits of Silicon Progress
 description: A graphic novel about how Gordon Moore observed exponential growth of silicon chip density.
-image: /systems-thinking/stories/moores-law/cover.jpg
-og:image: /systems-thinking/stories/moores-law/cover.jpg
-twitter:image: /systems-thinking/stories/moores-law/cover.jpg
+image: /stories/moores-law/cover.jpg
+og:image: /stories/moores-law/cover.jpg
+twitter:image: /stories/moores-law/cover.jpg
 social:
    cards: false
 ---
