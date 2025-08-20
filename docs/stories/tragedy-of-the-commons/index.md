@@ -1,9 +1,9 @@
 ---
 title: The Tragedy of the Commons
 description: A graphic novel about Tragedy of the Commons.
-image: /stories/moores-law/cover.jpg
-og:image: /stories/moores-law/cover.jpg
-twitter:image: /stories/moores-law/cover.jpg
+image: /stories/tragedy-of-the-commons/cover.jpg
+og:image: /stories/tragedy-of-the-commons/cover.jpg
+twitter:image: /stories/tragedy-of-the-commons/cover.jpg
 social:
    cards: false
 ---
