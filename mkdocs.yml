@@ -132,11 +132,20 @@ theme:
   custom_dir: 'theme'
   include_sidebar: true
 markdown_extensions:
+  - meta
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.snippets
+  - pymdownx.emoji
+  - pymdownx.tilde
+  - pymdownx.tasklist
+  - pymdownx.tabbed
 # enable LaTeX equation rendering
 #  - pymdownx.arithmatex:
 #      generic: true
@@ -147,10 +156,11 @@ extra_javascript:
     # needed for mathjax to work
     # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
-    - search
-# I was trying to do the causal loop diagrams with Markup
-# It kind of works but slows down the build
-#    - mermaid2
-# markdown_extensions:
-#   - codehilite:
-#       linenums: true
+  - search
+  - social
+  - social_override
+extra:
+    analytics:
+      provider: google
+      # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
+      property: G-ZQMDCX1BVL
