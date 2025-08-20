@@ -1,4 +1,6 @@
 # The Tragedy of the Commons: A Graphic Novel
+
+![Cover Image](cover.jpg)
 *Based on William Forster Lloyd's 1833 Economic Theory*
 
 In the rolling hills of the English countryside, the village of Millhaven has thrived for generations around a precious common pasture. This is the story of how individual rational choices can lead to collective ruin—a tale that would echo through economic theory for centuries to come.

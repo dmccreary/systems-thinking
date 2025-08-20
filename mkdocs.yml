@@ -96,6 +96,7 @@ nav:
   - Stories:
     - Introduction: stories/index.md
     - Tragedy of the Commons: stories/tragedy-of-the-commons/index.md
+    - Moore's Law: stories/moores-law/index.md
   - Prompts:
     - Knowledge Graphs:
       - Concept Enumeration: prompts/knowledge-graphs/concept-enumeration.md

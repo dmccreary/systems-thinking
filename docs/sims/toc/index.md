@@ -1,6 +1,6 @@
 # Tragedy of The Commons MicroSim
 
-![Tragedy of the Commons MicroSim](toc.png){ width="500" }
+![Tragedy of the Commons MicroSim](toc.jpg){ width="500" }
 
 [Run the Tragedy of the Commons MicroSim](toc.html){ .md-button .md-button--primary }
 [Edit the MicroSim](https://editor.p5js.org/dmccreary/sketches/2NYEIUklI)
