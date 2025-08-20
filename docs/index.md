@@ -1,4 +1,12 @@
+---
+hide:
+  - title   # Hide the page title
+  - toc     # Hide the table of contents
 # Systems Thinking in the age of AI
+---
+<style>
+.md-content__inner h1 {display: none !important;}
+</style>
 
 ![](img/new-book-cover.png)
 
