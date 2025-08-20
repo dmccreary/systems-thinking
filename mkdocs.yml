@@ -118,7 +118,7 @@ repo_url: 'https://github.com/dmccreary/systems-thinking'
 edit_uri: 'blob/master/docs'
 theme:
   name: material
-  logo: img/logo.png
+  logo: img/new-logo.png
   favicon: img/favicon.png
   palette:
     primary: 'blue'
