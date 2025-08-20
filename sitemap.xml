@@ -65,6 +65,10 @@
          <lastmod>2025-08-20</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/systems-thinking/archetypes/ch-05-totc/</loc>
+         <lastmod>2025-08-20</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/systems-thinking/archetypes/commons/</loc>
          <lastmod>2025-08-20</lastmod>
     </url>
@@ -205,10 +209,6 @@
          <lastmod>2025-08-20</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/archetypes/tragedy-of-the-commons/classic-toc/</loc>
-         <lastmod>2025-08-20</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/systems-thinking/case-studies/ch-09/</loc>
          <lastmod>2025-08-20</lastmod>
     </url>
@@ -269,10 +269,6 @@
          <lastmod>2025-08-20</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/intro/ch-06-cas/</loc>
-         <lastmod>2025-08-20</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/systems-thinking/intro/cover/</loc>
          <lastmod>2025-08-20</lastmod>
     </url>
@@ -325,14 +321,6 @@
          <lastmod>2025-08-20</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/systems-thinking/prompts/stories/moores-law/</loc>
-         <lastmod>2025-08-20</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/systems-thinking/prompts/stories/tragedy-of-the-commons/</loc>
-         <lastmod>2025-08-20</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/systems-thinking/render-tests/influence-diagram/</loc>
          <lastmod>2025-08-20</lastmod>
     </url>
@@ -378,10 +366,6 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/systems-thinking/stories/moores-law/</loc>
-         <lastmod>2025-08-20</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/systems-thinking/stories/tragedy-of-the-commons/</loc>
          <lastmod>2025-08-20</lastmod>
     </url>
 </urlset>
