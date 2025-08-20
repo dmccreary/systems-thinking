@@ -6,7 +6,7 @@
 In the rolling hills of the English countryside, the village of Millhaven has thrived for generations around a precious common pasture. This is the story of how individual rational choices can lead to collective ruin—a tale that would echo through economic theory for centuries to come.
 
 ## Panel 1: The Village of Millhaven
-![](./image-01.png)
+![](./image-01,jpg)
 <details>
 <summary>The Peaceful Village</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -17,7 +17,7 @@ In this drawing, show a picturesque English village circa 1833 with stone cottag
 For generations, the farmers of Millhaven had shared the village common—a verdant pasture that provided grazing for all their cattle. The ancient agreement was simple: each family could graze their livestock on this shared land, and all had prospered under this arrangement.
 
 ## Panel 2: The Prosperous Farmers
-![](./image-02.png)
+![](./image-02,jpg)
 <details>
 <summary>Five Farming Families</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -28,7 +28,7 @@ In this drawing, show five distinct farming families standing before their respe
 Five farming families had used the common for decades: the Whitmores, Hartwells, Blackwoods, Greenes, and Ashtons. Each family grazed two or three cattle on the shared land, and the pasture easily supported all fifteen animals. The grass was thick, the cattle were fat, and the milk and beef provided comfortable livings for all.
 
 ## Panel 3: Farmer Whitmore's Temptation
-![](./image-03.png)
+![](./image-03,jpg)
 <details>
 <summary>The Fateful Calculation</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -39,7 +39,7 @@ In this drawing, show Farmer Whitmore standing in his farmyard, looking thoughtf
 One spring morning, Farmer Whitmore looked at his prize bull calf and made a calculation that would change everything. "If I add this young bull to the common," he reasoned, "I'll gain the full benefit of its milk and eventual sale. The cost of its grazing will be shared among all five families." The mathematics seemed irresistible: he would capture 100% of the benefit while bearing only 20% of the cost.
 
 ## Panel 4: The First Addition
-![](./image-04.png)
+![](./image-04,jpg)
 <details>
 <summary>Breaking the Balance</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -50,7 +50,7 @@ In this drawing, show Farmer Whitmore leading his new bull calf onto the common 
 Whitmore added his bull to the common. The other farmers noticed, of course, and grumbled quietly among themselves. But the pasture still seemed adequate, and no one wanted to cause a fuss. After all, one extra animal couldn't hurt much, could it?
 
 ## Panel 5: The Rational Response
-![](./image-05.png)
+![](./image-05,jpg)
 <details>
 <summary>Others Follow Suit</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -61,7 +61,7 @@ In this drawing, show Farmer Hartwell and Farmer Blackwood each leading addition
 But Farmer Hartwell soon reached the same conclusion. "If Whitmore can add a beast, so can I," he declared, leading his own additional cow to the common. Farmer Blackwood quickly followed suit, reasoning that he'd be foolish not to maximize his use of the shared resource. Each farmer's decision was perfectly rational from his individual perspective.
 
 ## Panel 6: The Escalation
-![](./image-06.png)
+![](./image-06,jpg)
 <details>
 <summary>The Spiral Begins</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -72,7 +72,7 @@ In this drawing, show all five farmers now bringing additional cattle to the com
 Widow Greene, not to be outdone by her neighbors, added her extra heifer. "I cannot afford to fall behind," she muttered. Finally, even cautious Farmer Ashton brought his additional ox, saying, "If everyone else is doing it, I must protect my family's interests." The common now hosted twenty animals instead of fifteen.
 
 ## Panel 7: The First Signs of Trouble
-![](./image-07.png)
+![](./image-07,jpg)
 <details>
 <summary>Quality Decline</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -83,7 +83,7 @@ In this drawing, show the farmers examining their cattle, which now appear notic
 By midsummer, the effects were undeniable. The grass grew thin and patchy. The cattle, now competing for insufficient forage, began to lose weight. What had once been a lush meadow now showed bare patches and muddy wallows where too many hooves had trampled the earth.
 
 ## Panel 8: The Desperate Logic
-![](./image-08.png)
+![](./image-08,jpg)
 <details>
 <summary>More Is the Only Answer</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -94,7 +94,7 @@ In this drawing, show the farmers in heated discussion, with some appearing anxi
 Faced with declining returns, each farmer reached a terrible conclusion. "If the pasture is deteriorating," Whitmore reasoned, "I must add even more cattle to maintain my income before the grass runs out entirely." This logic spread like a fever through the village. If the resource was becoming scarce, each farmer felt compelled to claim as much as possible before their neighbors did.
 
 ## Panel 9: The Vicious Cycle
-![](./image-09.png)
+![](./image-09,jpg)
 <details>
 <summary>Accelerating Destruction</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -105,7 +105,7 @@ In this drawing, show a chaotic scene of farmers driving large herds of cattle o
 The village descended into a desperate spiral. Each farmer added more and more cattle, hoping to extract what value remained before the others could claim it. The twenty animals became twenty-five, then thirty. The once-verdant common transformed into a wasteland of packed earth and scattered stones.
 
 ## Panel 10: Mutual Destruction
-![](./image-10.png)
+![](./image-10,jpg)
 <details>
 <summary>The Ruined Commons</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -116,7 +116,7 @@ In this drawing, show the complete devastation of the common—a barren, eroded 
 By autumn, the common was destroyed. Where lush grass once grew, only hard-packed earth remained. The cattle, now skeletal and weak, could barely find enough sustenance to survive. What had taken generations to build had been destroyed in a single season through the rational decisions of individual actors.
 
 ## Panel 11: The Reckoning
-![](./image-11.png)
+![](./image-11,jpg)
 <details>
 <summary>Counting the Cost</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
@@ -127,7 +127,7 @@ In this drawing, show the five farmers sitting around a table in one of their co
 The five families gathered to assess the damage. Each had acted rationally, seeking to maximize their individual benefit. Yet collectively, they had destroyed the very resource that had sustained them all. Their cattle were worthless, their milk production had ceased, and their families faced hardship that could have been easily avoided.
 
 ## Panel 12: The Lesson Learned
-![](./image-12.png)
+![](./image-12,jpg)
 <details>
 <summary>Economic Theory Born</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a color scheme and design style that reflects a book published in England in 1833. Work hard to make any characters consistent with prior images.
