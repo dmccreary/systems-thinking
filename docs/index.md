@@ -1,6 +1,6 @@
 # Systems Thinking for All
 
-![](img/cover.png)
+![](img/new-book-cover.png)
 
 Welcome to our website for systems thinkers!  The goal of this website
 is to promote high quality systems thinking skills for a broad audience.
