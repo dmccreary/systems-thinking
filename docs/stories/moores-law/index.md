@@ -160,7 +160,7 @@ In this drawing, show a boardroom scene in 2022 where executives are looking at 
 The exponentially rising costs create an economic wall that only the largest companies can scale. By 2022, fewer than five companies worldwide can afford to manufacture the most advanced chips. What began as an industry with hundreds of semiconductor companies has consolidated into a few giants due to the enormous capital requirements. Moore observes that economic limits may end his law before physical limits do.
 
 ## The Limits to Growth Pattern
-![](./image-13.png)
+![](./image-13.jpg)
 <details>
 <summary>Recognizing the Systems Archetype</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel.
