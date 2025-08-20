@@ -9,10 +9,10 @@ social:
 ---
 # Moore's Law: The Rise and Limits of Silicon Progress
 
-![](./cover,jpg)
+![](./cover.jpg)
 
 ## The Young Engineer
-![](./image-01,jpg)
+![](./image-01.jpg)
 <details>
 <summary>Gordon Moore Begins His Journey</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -23,7 +23,7 @@ In this drawing, show a young Gordon Moore in 1965, wearing a crisp white shirt 
 The year is 1965, and Gordon Moore is a young engineer working at Fairchild Semiconductor in California's emerging Silicon Valley. As he peers through his microscope at the intricate patterns etched into silicon wafers, Moore marvels at how these tiny transistors—switches no bigger than a few atoms—can control the flow of electricity. He's part of a revolution in miniaturization, but he doesn't yet know he's about to discover one of technology's most enduring principles.
 
 ## The Intel Co-Founder
-![](./image-02,jpg)
+![](./image-02.jpg)
 <details>
 <summary>Building Intel from the Ground Up</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -34,7 +34,7 @@ In this drawing, show Gordon Moore (now three years older) standing alongside Ro
 By 1968, Moore has co-founded Intel Corporation with Robert Noyce, leaving the security of established companies to pursue their vision of advanced semiconductor technology. Moore brings his deep understanding of transistor physics and manufacturing processes to the new venture. As Intel's head of research and development, he's intimately involved in designing each new generation of microprocessors, constantly pushing the boundaries of what's possible in silicon.
 
 ## The Pattern Emerges
-![](./image-03,jpg)
+![](./image-03.jpg)
 <details>
 <summary>Recognizing the Exponential Trend</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -45,7 +45,7 @@ In this drawing, show Moore in his office late at night in 1970, surrounded by t
 Working late one evening in 1970, Moore spreads technical specifications across his desk, documenting the progress of Intel's chip designs. As he plots the number of transistors on each successive chip generation, a remarkable pattern emerges. The growth isn't linear—it's exponential. Each new chip doesn't just add a few more transistors; it roughly doubles the count every eighteen to twenty-four months. This isn't just Intel's pattern; it's happening across the entire semiconductor industry.
 
 ## The Exponential Revelation
-![](./image-04,jpg)
+![](./image-04.jpg)
 <details>
 <summary>Understanding Exponential vs Linear Growth</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -56,7 +56,7 @@ In this drawing, create a split-panel effect showing Moore explaining the differ
 Moore realizes the profound implications of exponential versus linear growth. While linear growth adds the same amount each period, exponential growth multiplies—creating a "hockey stick" effect where progress seems slow at first, then accelerates dramatically. He understands that if this trend continues, computers will become exponentially more powerful while potentially becoming smaller and cheaper. This insight will prove to be one of the most accurate technological predictions in history.
 
 ## The Overlooked Paper
-![](./image-05,jpg)
+![](./image-05.jpg)
 <details>
 <summary>Publishing the Prediction</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -67,7 +67,7 @@ In this drawing, show Moore in 1975 submitting his paper to Electronics Magazine
 In 1975, Moore publishes his observation in Electronics Magazine, predicting that the number of transistors on computer chips will continue to double approximately every two years. The paper receives little initial attention—it appears to be just another technical analysis among many in the rapidly evolving semiconductor field. Few readers grasp that Moore has identified a fundamental driver of technological progress that will reshape civilization itself.
 
 ## The Industry Takes Notice
-![](./image-06,jpg)
+![](./image-06.jpg)
 <details>
 <summary>Engineering Teams Adopt the Timeline</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -78,7 +78,7 @@ In this drawing, show a 1980s engineering meeting at a semiconductor company (no
 By the early 1980s, semiconductor engineers across the industry begin using Moore's prediction as a roadmap for development. Engineering teams schedule their research and development cycles around Moore's timeline, treating it not just as an observation but as a goal to achieve. The prediction becomes a self-fulfilling prophecy as companies race to meet the exponential expectations, driving innovation at an unprecedented pace.
 
 ## The Digital Revolution
-![](./image-07,jpg)
+![](./image-07.jpg)
 <details>
 <summary>Computers Transform Society</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
@@ -89,7 +89,7 @@ In this drawing, show the transformation from 1985 to 1995 in a split scene. On 
 As Moore's Law drives exponential improvements in processing power, computers shrink from room-sized machines to desktop and eventually portable devices. The 1980s and 1990s witness the personal computer revolution, followed by laptops, and early mobile devices. Moore watches with fascination as his prediction enables technologies he never imagined—from computer graphics to the early internet. Each doubling of transistor density unlocks new possibilities.
 
 ## Moore Becomes Famous
-![](./image-08,jpg)
+![](./image-08.jpg)
 <details>
 <summary>Recognition and Acclaim</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel.
@@ -105,7 +105,7 @@ Make SURE to use a wide-landscape orientation!
 By the late 1990s, Moore has become a technology icon. His "law" is cited in business plans, academic papers, and technology roadmaps worldwide. What began as a simple observation has become the most famous prediction in technology history. Moore is invited to speak at conferences, receives prestigious awards, and sees his name become synonymous with technological progress. He's modest about his fame, often noting that he simply observed a trend rather than invented it.
 
 ## The Internet and Mobile Era
-![](./image-09,jpg)
+![](./image-09.jpg)
 <details>
 <summary>Exponential Growth Enables New Technologies</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. 
@@ -119,7 +119,7 @@ In this drawing, show the explosion of internet and mobile technologies from 200
 The 2000s and 2010s bring the internet revolution and smartphone era, all enabled by continued adherence to Moore's Law. Each new generation of processors enables faster internet connections, more sophisticated software, and eventually puts supercomputer-level power in everyone's pocket. Moore watches as his prediction enables social media, cloud computing, and artificial intelligence—technologies that seemed like science fiction when he first plotted his exponential curve.
 
 ## The Cost Curve Emerges
-![](./image-10,jpg)
+![](./image-10.jpg)
 <details>
 <summary>Manufacturing Becomes Exponentially Expensive</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. 
@@ -132,7 +132,7 @@ In this drawing, show a modern semiconductor fabrication facility (circa 2015) w
 Around 2015, Moore begins to notice a troubling secondary trend: while transistor density continues to grow exponentially, the cost of building the fabrication facilities to manufacture these advanced chips is also growing exponentially. State-of-the-art semiconductor fabs now cost over $10 billion to build, and each new generation requires even more expensive equipment and cleaner facilities. The economics of Moore's Law are becoming increasingly challenging.
 
 ## Physical Limits Approach
-![](./image-11,jpg)
+![](./image-11.jpg)
 <details>
 <summary>Approaching Atomic Scale</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel.
@@ -146,7 +146,7 @@ In this drawing, create a scientific visualization showing the scale of modern t
 By 2020, transistors have shrunk to just a few nanometers—approaching the scale of individual atoms. Moore realizes that his law is approaching fundamental physical limits. Quantum mechanical effects begin to dominate at these scales, making traditional transistor behavior unpredictable. The very atoms that make up silicon become relevant to circuit design. Physics itself is beginning to constrain further miniaturization.
 
 ## The Economic Wall
-![](./image-12,jpg)
+![](./image-12.jpg)
 <details>
 <summary>Only a Few Companies Can Afford Advanced Chips</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel.
@@ -160,7 +160,7 @@ In this drawing, show a boardroom scene in 2022 where executives are looking at 
 The exponentially rising costs create an economic wall that only the largest companies can scale. By 2022, fewer than five companies worldwide can afford to manufacture the most advanced chips. What began as an industry with hundreds of semiconductor companies has consolidated into a few giants due to the enormous capital requirements. Moore observes that economic limits may end his law before physical limits do.
 
 ## The Limits to Growth Pattern
-![](./image-13,jpg)
+![](./image-13.jpg)
 <details>
 <summary>Recognizing the Systems Archetype</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel.
@@ -178,7 +178,7 @@ atomic scale and economic limits due to exponentially rising costs.
 He recognizes that this pattern is natural and predictable, not a failure but an evolution.
 
 ## Legacy and Transformation
-![](./image-14,jpg)
+![](./image-14.jpg)
 <details>
 <summary>Moore's Law's Enduring Impact and Evolution</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel.
