@@ -1,3 +1,12 @@
+---
+title: The Tragedy of the Commons
+description: A graphic novel about Tragedy of the Commons.
+image: /systems-thinking/stories/moores-law/cover.jpg
+og:image: /systems-thinking/stories/moores-law/cover.jpg
+twitter:image: /systems-thinking/stories/moores-law/cover.jpg
+social:
+   cards: false
+---
 # The Tragedy of the Commons: A Graphic Novel
 
 ![Cover Image](cover.jpg)
