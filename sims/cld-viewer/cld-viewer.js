@@ -108,6 +108,7 @@ function loadCLD(data) {
             to: edge.target,
             label: edge.polarity === 'positive' ? '+' : '-',
             color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
+            title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
             originalData: edge
         }));
 
