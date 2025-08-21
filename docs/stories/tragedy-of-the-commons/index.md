@@ -45,7 +45,7 @@ Please generate a wide-landscape drawing in the style of a graphic novel. Use a 
 In this drawing, show Farmer Whitmore standing in his farmyard, looking thoughtfully at a new, healthy calf beside his existing cattle. His expression should show contemplation and slight cunning. In the background, show the common pasture still looking lush and green. Whitmore should be holding or looking at coins, representing the profit he calculates from adding another animal. His wife might be visible in the doorway of their cottage, perhaps looking concerned or questioning.
 </details>
 
-One spring morning, Farmer Whitmore looked at his prize bull calf and made a calculation that would change everything. "If I add this young bull to the common," he reasoned, "I'll gain the full benefit of its milk and eventual sale. The cost of its grazing will be shared among all five families." The mathematics seemed irresistible: he would capture 100% of the benefit while bearing only 20% of the cost.
+One spring morning, Farmer Whitmore looked at his prize bull calf and made a calculation that would change everything. "If I add this young bull to the common," he reasoned, "I'll gain the full benefit of its eventual sale as prime beef, and if I breed him with the village cows, I'll profit from his offspring as well. The cost of his grazing will be shared among all five families." The mathematics seemed irresistible: he would capture 100% of the benefit while bearing only 20% of the cost.
 
 ## Panel 4: The First Addition
 ![](./image-04.jpg)
