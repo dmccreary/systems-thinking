@@ -67,7 +67,7 @@ function initializeNetwork() {
                 roundness: 0.2
             },
             font: {
-                size: 12,
+                size: 48,
                 strokeWidth: 3,
                 strokeColor: 'white'
             }

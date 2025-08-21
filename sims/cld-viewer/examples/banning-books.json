@@ -38,7 +38,7 @@
     {
       "id": "educational_degradation",
       "label": "Educational Degradation",
-      "position": {"x": 700, "y": 400},
+      "position": {"x": 700, "y": 250},
       "type": "condition",
       "description": "Diminished learning engagement, critical thinking opportunities, and intellectual development",
       "examples": ["Reduced critical thinking exercises", "Limited exposure to diverse perspectives", "Self-censorship by teachers"]
@@ -54,7 +54,7 @@
     {
       "id": "pressure_for_restrictions",
       "label": "Pressure for More Restrictions",
-      "position": {"x": 100, "y": 400},
+      "position": {"x": 100, "y": 250},
       "type": "variable",
       "description": "Increased pressure to implement even more restrictive censorship policies and expand banned book lists",
       "examples": ["Calls for broader book bans", "Demands for teacher monitoring", "Pressure for curriculum restrictions"]
@@ -136,7 +136,7 @@
       "path": ["book_banning_policies", "educational_degradation", "worse_outcomes", "pressure_for_restrictions"],
       "label": "Unintended Consequences Loop",
       "description": "The reinforcing loop where banning policies create educational problems that generate pressure for even more restrictions",
-      "position": {"x": 500, "y": 300},
+      "position": {"x": 400, "y": 250},
       "is_primary": true,
       "behavior_pattern": "Escalating restrictions with declining educational quality"
     }
