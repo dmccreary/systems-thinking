@@ -150,9 +150,13 @@ The lesson was clear: some problems cannot be solved by
 individual action alone, no matter how rational. 
 They require collective wisdom, shared governance, and the courage to constrain individual desires for the greater good of all.
 
-## References
+## MicroSim
 
-# References for "The Tragedy of the Commons" Story
+You can explore more about the dynamics of the results of overgrazing a field by
+playing our [Tragedy of the Commons MicroSim](../../sims/toc/index.md).  In this simulation
+you can adjust the number of cows on a field to avoid overgrazing.
+
+## References
 
 1. [The Tragedy of the Commons](https://www.britannica.com/topic/tragedy-of-the-commons) - 2024 - Encyclopedia Britannica - Comprehensive overview of the economic concept with clear definitions and modern examples that help students understand how Lloyd's 1833 theory applies to current environmental and social issues.
 
