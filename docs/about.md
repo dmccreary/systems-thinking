@@ -74,7 +74,7 @@ These will be detailed stories of how teams have used systems thinking to promot
 ### Part 3: Advanced Concepts
 We will dive into advanced topics such as graph-based machine learning, cognitive bias and storytelling to promote good systems thinking best practices.
 
-## [Glossary](../glossary.md)
+## [Glossary](./glossary.md)
 
-## [References](../references.md)
+## [References](./references.md)
 
