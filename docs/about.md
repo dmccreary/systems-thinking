@@ -2,16 +2,26 @@
 
 ## Why Systems Thinking Matters More Than Ever
 
-Artificial Intelligence (AI) is transforming every part of our lives---from the way teenagers learn in school to how executives make billion-dollar decisions. But with this power comes complexity: unintended consequences, rapid feedback loops, and deeply interconnected systems that often behave in unpredictable ways. To thrive in this environment, one skill stands out as essential: **systems thinking**.
+Artificial Intelligence (AI) is transforming every part of our lives---from the way teenagers 
+learn in school to how executives make billion-dollar decisions. 
+But with this power comes complexity: unintended consequences, rapid feedback loops, 
+and deeply interconnected systems that often behave in unpredictable ways. 
+To thrive in this environment, one skill stands out as essential: **systems thinking**.
 
 **What is systems thinking?**
-Systems thinking is the ability to see the world not as isolated parts, but as interconnected wholes. It means recognizing patterns, feedback loops, and the hidden structures driving behavior. Where traditional thinking asks, "What caused this problem?" systems thinking asks, "What system created these conditions---and how might changes ripple through it?"
+Systems thinking is the ability to see the world not as isolated parts, but as interconnected wholes. 
+It means recognizing patterns, feedback loops, and the hidden structures driving behavior. 
+Where traditional thinking asks, "What caused this problem?" systems thinking asks, 
+"What system created these conditions---and how might changes ripple through it?"
 
 **Why it matters in the AI era:**
 
-1.  **AI is systemic by nature.** Algorithms interact with massive data ecosystems, influencing social media trends, financial markets, and even healthcare outcomes. A change in one part of the system---like a biased training dataset---can cascade into far-reaching consequences.
+1.  **AI is systemic by nature.** Algorithms interact with massive data ecosystems, 
+influencing social media trends, financial markets, and even healthcare outcomes. 
+A change in one part of the system---like a biased training dataset---can cascade into far-reaching consequences.
 
-2.  **Unintended consequences multiply.** Well-intentioned AI applications (for example, automated hiring tools) can reinforce inequality if we don't see the bigger system at play.
+2.  **Unintended consequences multiply.** Well-intentioned AI applications (for example, automated hiring tools) 
+can reinforce inequality if we don't see the bigger system at play.
 
 3.  **Adaptability is survival.** Both individuals and organizations need to anticipate how AI reshapes jobs, education, supply chains, and customer expectations---not in isolation, but as a living web of cause and effect.
 
