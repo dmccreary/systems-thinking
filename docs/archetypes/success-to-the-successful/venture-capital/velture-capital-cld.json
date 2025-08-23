@@ -317,3 +317,102 @@
         "Standardized due diligence processes that reduce bias"
       ],
       "expected_impact": "Reduces advantage of established entrepreneurs and increases opportunities for newcomers",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "diversity_focused_funds",
+      "target_type": "node",
+      "target_id": "constrained_resources",
+      "leverage_level": 5,
+      "title": "Create Diversity-Focused Investment Funds",
+      "description": "Establish dedicated funds that prioritize underrepresented entrepreneurs",
+      "intervention_strategies": [
+        "Funds specifically targeting women and minority entrepreneurs",
+        "Geographic diversity requirements for portfolio companies",
+        "Accelerator programs for first-time entrepreneurs"
+      ],
+      "expected_impact": "Provides alternative resource pathways for underrepresented groups",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "ecosystem_democratization",
+      "target_type": "system",
+      "target_id": "available_capital",
+      "leverage_level": 8,
+      "title": "Democratize Access to Capital",
+      "description": "Change the fundamental structure of how entrepreneurial capital is allocated",
+      "intervention_strategies": [
+        "Crowdfunding platforms that bypass traditional VC gatekeepers",
+        "Government programs supporting diverse entrepreneurs",
+        "Corporate venture programs with inclusion requirements"
+      ],
+      "expected_impact": "Fundamentally changes power dynamics in entrepreneurial ecosystem",
+      "difficulty": "high"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "status_quo",
+      "title": "Continue Current System",
+      "description": "Venture capital continues to flow primarily to entrepreneurs with established track records",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "track_record_to_access",
+          "change_description": "Track record remains primary determinant of investor access"
+        }
+      ],
+      "predicted_outcomes": "Increasing concentration of innovation among established players, reduced ecosystem diversity, potential loss of breakthrough innovations"
+    },
+    {
+      "id": "diversity_intervention",
+      "title": "Implement Diversity Initiatives",
+      "description": "Major VCs adopt programs specifically to increase diversity in their portfolios",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "newcomer_credibility",
+          "change_description": "Systematic programs increase credibility and support for diverse entrepreneurs"
+        }
+      ],
+      "predicted_outcomes": "Gradual increase in ecosystem diversity, more innovation from underrepresented groups, improved system innovation capacity"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why might investors rationally prefer entrepreneurs with proven track records?",
+      "How do network effects in venture capital amplify initial advantages?",
+      "What innovations might we miss when the same types of entrepreneurs get funded?",
+      "How might blind evaluation processes change venture capital outcomes?",
+      "What are the trade-offs between efficiency and equity in startup funding?"
+    ],
+    "key_insights": [
+      "Success to the successful creates two reinforcing loops that concentrate opportunities",
+      "Network effects in venture capital amplify advantages for established entrepreneurs",
+      "Resource competition means one group's access reduces another's opportunities",
+      "Innovation diversity suffers when funding is concentrated among similar entrepreneurs",
+      "Breaking these patterns requires structural changes to evaluation and allocation processes"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Successful entrepreneurs get more funding simply because they're better at business",
+        "correction": "While experience matters, systemic advantages in access to resources and networks significantly amplify initial differences in capability"
+      },
+      {
+        "misconception": "The venture capital market efficiently allocates capital to the best opportunities",
+        "correction": "Market efficiency is limited by information asymmetries and network effects that create barriers for newcomers with potentially superior opportunities"
+      }
+    ],
+    "extension_activities": [
+      "Research funding patterns in your local startup ecosystem",
+      "Interview entrepreneurs from different backgrounds about their funding experiences",
+      "Analyze the diversity of portfolios from major venture capital firms"
+    ],
+    "related_concepts": [
+      "Network Effects",
+      "Information Asymmetries",
+      "Path Dependence",
+      "Innovation Ecosystems"
+    ]
+  }
+}

@@ -1,0 +1,418 @@
+{
+  "metadata": {
+    "id": "research-funding-success",
+    "title": "Academic Research Funding Success to the Successful",
+    "archetype": "success-to-successful",
+    "description": "Academic research funding system where grants and resources flow primarily to already-successful researchers and institutions, creating barriers for early-career researchers and potentially limiting scientific innovation.",
+    "learning_objectives": [
+      "Understand how reputation-based funding creates research inequality",
+      "Identify barriers facing early-career researchers in securing funding",
+      "Recognize how citation-based metrics can reinforce existing advantages",
+      "Explore interventions to democratize research opportunities"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-23T00:00:00Z",
+    "updated_date": "2025-08-23T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["research", "academia", "funding", "success-to-successful", "scientific-innovation"]
+  },
+  "nodes": [
+    {
+      "id": "established_researcher_reputation",
+      "label": "Established Researcher Reputation",
+      "position": {"x": 200, "y": 100},
+      "type": "stock",
+      "description": "Academic standing based on publications, citations, awards, and institutional affiliations",
+      "examples": ["H-index scores", "Citation counts", "Award recognition", "Journal editorial positions"],
+      "measurement": "Citation metrics, publication records, award counts, institutional rankings"
+    },
+    {
+      "id": "prestigious_grant_access",
+      "label": "Access to Prestigious Grants",
+      "position": {"x": 500, "y": 100},
+      "type": "variable",
+      "description": "Ability to secure large, competitive research grants from major funding agencies",
+      "examples": ["NIH R01 grants", "NSF major awards", "European Research Council grants"],
+      "measurement": "Grant success rates, funding amount secured, agency prestige levels"
+    },
+    {
+      "id": "superior_research_resources",
+      "label": "Superior Research Resources",
+      "position": {"x": 800, "y": 100},
+      "type": "stock",
+      "description": "Access to expensive equipment, facilities, graduate students, and postdocs",
+      "examples": ["Advanced instrumentation", "Large research teams", "International collaborations"],
+      "measurement": "Equipment value, team size, facility access, collaboration networks"
+    },
+    {
+      "id": "high_impact_research_output",
+      "label": "High-Impact Research Output",
+      "position": {"x": 1100, "y": 100},
+      "type": "variable",
+      "description": "Ability to produce research that generates significant citations and recognition",
+      "examples": ["Nature/Science publications", "Breakthrough discoveries", "Policy influence"],
+      "measurement": "Publication impact factors, citation rates, media coverage"
+    },
+    {
+      "id": "early_career_credibility",
+      "label": "Early-Career Researcher Credibility",
+      "position": {"x": 200, "y": 400},
+      "type": "variable",
+      "description": "Limited academic reputation and recognition of researchers without established track records",
+      "examples": ["PhD completion", "Postdoc positions", "First publications"],
+      "measurement": "Publication count, citation history, institutional affiliations"
+    },
+    {
+      "id": "limited_funding_access",
+      "label": "Limited Funding Access",
+      "position": {"x": 500, "y": 400},
+      "type": "variable",
+      "description": "Difficulty securing competitive research funding due to lack of established reputation",
+      "examples": ["Small seed grants", "Internal funding only", "High rejection rates"],
+      "measurement": "Grant success rates, average funding amounts, funding source quality"
+    },
+    {
+      "id": "constrained_research_capacity",
+      "label": "Constrained Research Capacity",
+      "position": {"x": 800, "y": 400},
+      "type": "variable",
+      "description": "Limited access to advanced equipment, facilities, and research personnel",
+      "examples": ["Basic laboratory setups", "Solo research projects", "Limited collaborations"],
+      "measurement": "Equipment access, team size, facility limitations"
+    },
+    {
+      "id": "modest_research_impact",
+      "label": "Modest Research Impact",
+      "position": {"x": 1100, "y": 400},
+      "type": "variable",
+      "description": "Reduced ability to produce high-impact research due to resource constraints",
+      "examples": ["Lower-tier journal publications", "Limited citation impact", "Incremental advances"],
+      "measurement": "Publication venues, citation rates, research scope"
+    },
+    {
+      "id": "total_research_funding",
+      "label": "Total Available Research Funding",
+      "position": {"x": 650, "y": 250},
+      "type": "stock",
+      "description": "Fixed pool of research funding available from government agencies and foundations",
+      "examples": ["NIH budget", "NSF allocations", "Private foundation grants"],
+      "measurement": "Total research funding budgets, grant pool sizes"
+    },
+    {
+      "id": "scientific_innovation_concentration",
+      "label": "Scientific Innovation Concentration",
+      "position": {"x": 1100, "y": 250},
+      "type": "outcome",
+      "description": "Degree to which breakthrough research is concentrated among established researchers and institutions",
+      "examples": ["Elite institution dominance", "Repeat grant winner patterns", "Geographic concentration"],
+      "measurement": "Distribution of major discoveries, institutional funding concentration"
+    },
+    {
+      "id": "research_diversity",
+      "label": "Research Approach Diversity",
+      "position": {"x": 200, "y": 600},
+      "type": "variable",
+      "description": "Variety of research approaches, methodologies, and perspectives being pursued",
+      "examples": ["Interdisciplinary research", "Novel methodologies", "Diverse theoretical frameworks"],
+      "measurement": "Research topic diversity, methodological variety, collaboration patterns"
+    },
+    {
+      "id": "overall_scientific_progress",
+      "label": "Overall Scientific Progress",
+      "position": {"x": 650, "y": 600},
+      "type": "outcome",
+      "description": "Rate of scientific advancement and breakthrough discoveries across fields",
+      "examples": ["Breakthrough discoveries", "Paradigm shifts", "Technology advancement"],
+      "measurement": "Discovery rates, patent creation, scientific milestone achievement"
+    }
+  ],
+  "edges": [
+    {
+      "id": "reputation_to_grants",
+      "source": "established_researcher_reputation",
+      "target": "prestigious_grant_access",
+      "polarity": "positive",
+      "description": "Strong reputation provides access to competitive research grants",
+      "strength": "strong"
+    },
+    {
+      "id": "grants_to_resources",
+      "source": "prestigious_grant_access",
+      "target": "superior_research_resources",
+      "polarity": "positive",
+      "description": "Prestigious grants provide access to superior research resources",
+      "strength": "strong"
+    },
+    {
+      "id": "resources_to_output",
+      "source": "superior_research_resources",
+      "target": "high_impact_research_output",
+      "polarity": "positive",
+      "description": "Better resources enable higher-impact research output",
+      "strength": "strong"
+    },
+    {
+      "id": "output_to_reputation",
+      "source": "high_impact_research_output",
+      "target": "established_researcher_reputation",
+      "polarity": "positive",
+      "description": "High-impact research builds and reinforces academic reputation",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "2-5 years",
+        "description": "Building academic reputation through citations and recognition takes years"
+      }
+    },
+    {
+      "id": "early_career_to_funding",
+      "source": "early_career_credibility",
+      "target": "limited_funding_access",
+      "polarity": "negative",
+      "description": "Limited credibility results in difficulty accessing competitive funding",
+      "strength": "strong"
+    },
+    {
+      "id": "funding_to_capacity",
+      "source": "limited_funding_access",
+      "target": "constrained_research_capacity",
+      "polarity": "positive",
+      "description": "Limited funding constrains research capacity and resources",
+      "strength": "strong"
+    },
+    {
+      "id": "capacity_to_impact",
+      "source": "constrained_research_capacity",
+      "target": "modest_research_impact",
+      "polarity": "positive",
+      "description": "Resource constraints limit ability to produce high-impact research",
+      "strength": "strong"
+    },
+    {
+      "id": "impact_to_credibility",
+      "source": "modest_research_impact",
+      "target": "early_career_credibility",
+      "polarity": "positive",
+      "description": "Limited research impact reinforces perception of early-career researchers as unproven",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "3-7 years",
+        "description": "Academic career development and reputation building is a long process"
+      }
+    },
+    {
+      "id": "total_funding_to_prestigious",
+      "source": "total_research_funding",
+      "target": "superior_research_resources",
+      "polarity": "positive",
+      "description": "Available funding contributes to resources for established researchers",
+      "strength": "moderate"
+    },
+    {
+      "id": "total_funding_to_constrained",
+      "source": "total_research_funding",
+      "target": "constrained_research_capacity",
+      "polarity": "positive",
+      "description": "Available funding also supports early-career researchers, but less effectively",
+      "strength": "weak"
+    },
+    {
+      "id": "resource_competition",
+      "source": "superior_research_resources",
+      "target": "constrained_research_capacity",
+      "polarity": "negative",
+      "description": "More resources going to established researchers means fewer available for early-career researchers",
+      "strength": "moderate"
+    },
+    {
+      "id": "established_to_concentration",
+      "source": "established_researcher_reputation",
+      "target": "scientific_innovation_concentration",
+      "polarity": "positive",
+      "description": "Concentration of resources among established researchers increases innovation concentration",
+      "strength": "moderate"
+    },
+    {
+      "id": "funding_barriers_to_concentration",
+      "source": "limited_funding_access",
+      "target": "scientific_innovation_concentration",
+      "polarity": "positive",
+      "description": "Barriers for early-career researchers increase concentration of innovation",
+      "strength": "moderate"
+    },
+    {
+      "id": "concentration_to_diversity",
+      "source": "scientific_innovation_concentration",
+      "target": "research_diversity",
+      "polarity": "negative",
+      "description": "Higher concentration of resources reduces diversity of research approaches",
+      "strength": "moderate"
+    },
+    {
+      "id": "diversity_to_progress",
+      "source": "research_diversity",
+      "target": "overall_scientific_progress",
+      "polarity": "positive",
+      "description": "Greater research diversity enhances overall scientific progress",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "5-10 years",
+        "description": "Scientific breakthroughs from diverse approaches take years to manifest"
+      }
+    },
+    {
+      "id": "early_career_diversity",
+      "source": "early_career_credibility",
+      "target": "research_diversity",
+      "polarity": "positive",
+      "description": "Early-career researchers often bring fresh perspectives and diverse approaches",
+      "strength": "moderate"
+    }
+  ],
+  "loops": [
+    {
+      "id": "established_success_loop",
+      "type": "reinforcing",
+      "path": ["established_researcher_reputation", "prestigious_grant_access", "superior_research_resources", "high_impact_research_output", "established_researcher_reputation"],
+      "label": "Success Reinforcing Loop",
+      "description": "Established researchers receive more funding, enabling higher-impact research that further builds their reputation",
+      "behavior_pattern": "Accelerating advantage for established researchers",
+      "position": {"x": 650, "y": 150},
+      "is_primary": true
+    },
+    {
+      "id": "early_career_struggle_loop",
+      "type": "reinforcing",
+      "path": ["early_career_credibility", "limited_funding_access", "constrained_research_capacity", "modest_research_impact", "early_career_credibility"],
+      "label": "Early-Career Struggle Loop",
+      "description": "Early-career researchers face funding barriers that limit their research capacity and impact, reinforcing perceptions of limited credibility",
+      "behavior_pattern": "Persistent disadvantage for early-career researchers",
+      "position": {"x": 650, "y": 350},
+      "is_primary": true
+    },
+    {
+      "id": "diversity_innovation_loop",
+      "type": "balancing",
+      "path": ["scientific_innovation_concentration", "research_diversity", "early_career_credibility", "limited_funding_access", "scientific_innovation_concentration"],
+      "label": "Diversity-Innovation Loop",
+      "description": "Innovation concentration reduces research diversity, but diverse approaches can eventually enhance early-career researcher credibility",
+      "behavior_pattern": "System seeks balance between concentration and diversity",
+      "position": {"x": 450, "y": 450},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "new_investigator_programs",
+      "target_type": "edge",
+      "target_id": "early_career_to_funding",
+      "leverage_level": 5,
+      "title": "Expand New Investigator Programs",
+      "description": "Create dedicated funding streams specifically for early-career researchers",
+      "intervention_strategies": [
+        "Early-career researcher grant programs with dedicated budgets",
+        "Mentoring requirements that pair new researchers with established ones",
+        "Lower preliminary data requirements for first-time applicants"
+      ],
+      "expected_impact": "Provides alternative funding pathways that reduce barriers for early-career researchers",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "evaluation_criteria_reform",
+      "target_type": "edge",
+      "target_id": "reputation_to_grants",
+      "leverage_level": 6,
+      "title": "Reform Grant Evaluation Criteria",
+      "description": "Reduce emphasis on past reputation and increase focus on research potential and innovation",
+      "intervention_strategies": [
+        "Blind review processes that hide applicant identity and institution",
+        "Greater weight given to research proposal quality vs. track record",
+        "Alternative metrics beyond traditional citation counts"
+      ],
+      "expected_impact": "Levels playing field between established and early-career researchers",
+      "difficulty": "high"
+    },
+    {
+      "id": "funding_lottery_system",
+      "target_type": "system",
+      "target_id": "total_research_funding",
+      "leverage_level": 7,
+      "title": "Implement Partial Lottery Systems",
+      "description": "Use random selection for a portion of grants to introduce serendipity and reduce bias",
+      "intervention_strategies": [
+        "Lottery system for qualified proposals above a quality threshold",
+        "Random allocation for a percentage of total funding",
+        "Reduced emphasis on reviewer subjective preferences"
+      ],
+      "expected_impact": "Fundamentally changes how research funding is allocated, reducing systematic advantages",
+      "difficulty": "very-high"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continue_merit_based",
+      "title": "Continue Traditional Merit-Based System",
+      "description": "Research funding continues to flow primarily based on past performance and established reputation",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "reputation_to_grants",
+          "change_description": "Reputation-based funding allocation continues and intensifies"
+        }
+      ],
+      "predicted_outcomes": "Increasing concentration of research resources among established researchers, reduced innovation diversity, potential loss of breakthrough discoveries from fresh perspectives"
+    },
+    {
+      "id": "early_career_investment",
+      "title": "Major Investment in Early-Career Researchers",
+      "description": "Funding agencies dedicate significant resources specifically to supporting new investigators",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "early_career_credibility",
+          "change_description": "Systematic programs dramatically improve funding access for early-career researchers"
+        }
+      ],
+      "predicted_outcomes": "Greater research diversity, increased innovation from fresh perspectives, more balanced scientific ecosystem"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why might funding agencies rationally prefer to give grants to established researchers?",
+      "How do citation-based metrics potentially reinforce existing advantages in academia?",
+      "What innovative research might we miss when funding concentrates among established researchers?",
+      "How might lottery systems for research funding affect scientific progress?",
+      "What are the trade-offs between funding reliability and research diversity?"
+    ],
+    "key_insights": [
+      "Academic reputation creates self-reinforcing advantages in research funding",
+      "Resource constraints for early-career researchers can limit scientific innovation",
+      "Success to the successful patterns can reduce overall system performance in research",
+      "Long delays in academic reputation building make this pattern particularly persistent",
+      "Breaking these patterns requires structural changes to funding allocation processes"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Established researchers get more funding because they consistently do better research",
+        "correction": "While experience matters, systemic resource advantages significantly amplify differences in research capability and impact"
+      },
+      {
+        "misconception": "Merit-based funding systems automatically optimize scientific progress",
+        "correction": "Merit systems can create concentration that reduces innovation diversity and overall scientific advancement"
+      }
+    ],
+    "extension_activities": [
+      "Analyze funding patterns in your field of research interest",
+      "Interview early-career and established researchers about their funding experiences",
+      "Research alternative funding models used by different countries or agencies"
+    ],
+    "related_concepts": [
+      "Matthew Effect in Science",
+      "Path Dependence",
+      "Innovation Systems",
+      "Scientific Paradigms"
+    ]
+  }
+}

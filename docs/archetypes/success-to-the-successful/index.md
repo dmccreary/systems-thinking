@@ -1,5 +1,14 @@
 # Success to the Successful: Systems Thinking Examples
 
+1. [Educational Funding](#example-1-educational-funding-and-school-performance) - Performance-based resource allocation amplifying school differences
+2. [Venture Capital](#example-2-venture-capital-and-startup-success) - Network effects concentrating entrepreneurial opportunities
+3. [Research Funding](#example-3-research-funding-and-scientific-success) - Reputation-based grants creating academic inequality
+4. [Technology Platforms](#example-4-technology-platform-dominance) - Network effects creating winner-take-all platform dynamics
+5. [Healthcare Access](#example-5-healthcare-access-and-health-outcomes) - Health and economic status creating mutually reinforcing cycles
+6. [Wealth Inequality](#example-6-wealth-inequality) - Capital generating compound returns that amplify economic differences
+7. [Social Media Influence](#example-7-social-media-influencers) - Algorithmic amplification concentrating influence among established creators
+8. [Sports Development](#example-8-sport-development) - Early success providing access to superior training resources
+
 ## Understanding the Archetype
 
 **Success to the Successful** is a systems archetype where two or more competing players vie for limited resources. The more successful one player becomes, the more resources they receive, which makes them even more successful. Meanwhile, the less successful players receive fewer resources, making it increasingly difficult for them to compete.
@@ -214,6 +223,19 @@ Healthcare systems where better health outcomes enable access to better care, wh
 - **Community health programs** that address social determinants of health
 - **Preventive care incentives** that make early intervention accessible
 - **Health equity initiatives** that target resources toward disadvantaged communities
+
+## Example 6: Wealth Inequality
+
+Capital generating compound returns that amplify economic differences
+
+## Example 7: Social Media Influencers
+Algorithmic amplification concentrating influence among established creators
+---
+
+---
+
+## Example 8: Sport Development
+Early success providing access to superior training resources
 
 ---
 
