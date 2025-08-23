@@ -248,6 +248,11 @@ The archetype teaches us that:
 
 Moore's remarkable prediction held true for over 50 years, enabling the digital revolution. Its eventual limits don't diminish its importance—they demonstrate how understanding system patterns can help us navigate technological and economic transitions more effectively.
 
+## More to Explore
+
+You can try out our interactive infographic on Moore's Law [here](../../sims/moores-law/index.md).  Note that you can click the button at the top to show both
+the linear and log views of this exponential growth data.
+
 ## References
 
 1.  [Moore's Law's Next Step: 10 Nanometers](https://www.intel.com/content/www/us/en/newsroom/opinion/moores-law-next-step.html) - 2023 - Intel Newsroom - Intel's official explanation of how they continue pushing Moore's Law to smaller transistor sizes, written in accessible language for students interested in current semiconductor technology.

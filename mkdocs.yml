@@ -87,6 +87,7 @@ nav:
     - Introduction: sims/index.md
     - High School Simulations: sims/high-school.md
     - Tragedy of the Commons: sims/toc/index.md
+    - Moore's Law: sims/moores-law/index.md
     - Agent CLD: sims/agent-cld/index.md
     - CMM Simulation: sims/cmm/index.md
     - CLD Viewer: sims/cld-viewer/index.md
