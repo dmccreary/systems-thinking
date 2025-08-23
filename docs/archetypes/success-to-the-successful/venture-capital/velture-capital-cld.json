@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "id": "venture-capital-success",
+    "title": "Venture Capital Success to the Successful",
+    "archetype": "success-to-successful",
+    "description": "The venture capital ecosystem where successful entrepreneurs receive increasing access to funding, mentorship, and networks, while newcomers struggle to break into established circles, concentrating opportunities among proven players.",
+    "learning_objectives": [
+      "Understand how network effects amplify success in entrepreneurship",
+      "Identify barriers that prevent diverse participation in innovation",
+      "Recognize how reputation-based systems can create inequality",
+      "Explore interventions to democratize entrepreneurial opportunities"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-23T00:00:00Z",
+    "updated_date": "2025-08-23T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["entrepreneurship", "venture-capital", "innovation", "success-to-successful", "inequality"]
+  },
+  "nodes": [
+    {
+      "id": "successful_entrepreneur_track_record",
+      "label": "Successful Entrepreneur Track Record",
+      "position": {"x": 200, "y": 100},
+      "type": "stock",
+      "description": "Demonstrated history of successful startups, exits, and business achievements",
+      "examples": ["Previous IPOs", "Successful acquisitions", "Revenue milestones", "Industry recognition"],
+      "measurement": "Number of successful exits, total value created, industry awards"
+    },
+    {
+      "id": "access_to_top_investors",
+      "label": "Access to Top-Tier Investors",
+      "position": {"x": 500, "y": 100},
+      "type": "variable",
+      "description": "Ability to secure meetings and funding from prestigious venture capital firms",
+      "examples": ["Tier 1 VC meetings", "Partner-level introductions", "Fast-track due diligence"],
+      "measurement": "Quality of investor meetings, speed of funding process"
+    },
+    {
+      "id": "superior_resources",
+      "label": "Superior Resources and Networks",
+      "position": {"x": 800, "y": 100},
+      "type": "stock",
+      "description": "High-quality funding, mentorship, board members, and professional networks",
+      "examples": ["Experienced board members", "Strategic advisors", "Industry connections", "Follow-on funding"],
+      "measurement": "Board member quality, network size, funding amount and terms"
+    },
+    {
+      "id": "venture_success_probability",
+      "label": "Venture Success Probability",
+      "position": {"x": 1100, "y": 100},
+      "type": "variable",
+      "description": "Likelihood of achieving successful business outcomes with current venture",
+      "examples": ["Market penetration", "Revenue growth", "Product-market fit"],
+      "measurement": "Success metrics, milestone achievement, market traction"
+    },
+    {
+      "id": "newcomer_credibility",
+      "label": "First-Time Entrepreneur Credibility",
+      "position": {"x": 200, "y": 400},
+      "type": "variable",
+      "description": "Perceived legitimacy and trustworthiness of entrepreneurs without established track records",
+      "examples": ["Educational background", "Work experience", "Early traction"],
+      "measurement": "Investor meeting rates, due diligence depth, media coverage"
+    },
+    {
+      "id": "limited_investor_access",
+      "label": "Limited Investor Access",
+      "position": {"x": 500, "y": 400},
+      "type": "variable",
+      "description": "Difficulty securing meetings with quality investors and getting serious consideration",
+      "examples": ["Rejected pitch requests", "Lower-tier investor meetings", "Extended fundraising cycles"],
+      "measurement": "Investor response rates, meeting quality, time to secure funding"
+    },
+    {
+      "id": "constrained_resources",
+      "label": "Constrained Resources",
+      "position": {"x": 800, "y": 400},
+      "type": "variable",
+      "description": "Limited access to quality mentorship, networks, and favorable funding terms",
+      "examples": ["Higher cost of capital", "Limited advisor networks", "Fewer strategic partnerships"],
+      "measurement": "Funding terms, advisor quality, network connections"
+    },
+    {
+      "id": "reduced_success_probability",
+      "label": "Reduced Success Probability",
+      "position": {"x": 1100, "y": 400},
+      "type": "variable",
+      "description": "Lower likelihood of achieving successful outcomes due to resource constraints",
+      "examples": ["Slower growth", "Limited market access", "Higher failure rates"],
+      "measurement": "Success rates by entrepreneur type, time to milestones"
+    },
+    {
+      "id": "available_capital",
+      "label": "Available Venture Capital",
+      "position": {"x": 650, "y": 250},
+      "type": "stock",
+      "description": "Total pool of venture capital available for investment",
+      "examples": ["Fund sizes", "Investment capacity", "Market liquidity"],
+      "measurement": "Total VC funds under management, annual investment volume"
+    },
+    {
+      "id": "innovation_concentration",
+      "label": "Innovation Concentration",
+      "position": {"x": 1100, "y": 250},
+      "type": "outcome",
+      "description": "Degree to which innovation and economic opportunity is concentrated among established players",
+      "examples": ["Serial entrepreneur dominance", "Geographic concentration", "Demographic homogeneity"],
+      "measurement": "Repeat entrepreneur funding rates, diversity metrics, geographic distribution"
+    },
+    {
+      "id": "ecosystem_diversity",
+      "label": "Entrepreneurial Ecosystem Diversity",
+      "position": {"x": 200, "y": 600},
+      "type": "variable",
+      "description": "Representation of different backgrounds, perspectives, and approaches in entrepreneurship",
+      "examples": ["Gender diversity", "Racial diversity", "Geographic diversity", "Industry background variety"],
+      "measurement": "Demographic composition of funded entrepreneurs, background diversity"
+    },
+    {
+      "id": "system_innovation_capacity",
+      "label": "System Innovation Capacity",
+      "position": {"x": 650, "y": 600},
+      "type": "outcome",
+      "description": "Overall ability of the entrepreneurial ecosystem to generate breakthrough innovations",
+      "examples": ["Disruptive innovations", "New market creation", "Technology advancement"],
+      "measurement": "Innovation indices, patent creation, market disruption frequency"
+    }
+  ],
+  "edges": [
+    {
+      "id": "track_record_to_access",
+      "source": "successful_entrepreneur_track_record",
+      "target": "access_to_top_investors",
+      "polarity": "positive",
+      "description": "Proven track record provides access to top-tier venture capital firms",
+      "strength": "strong"
+    },
+    {
+      "id": "access_to_resources",
+      "source": "access_to_top_investors",
+      "target": "superior_resources",
+      "polarity": "positive",
+      "description": "Top investors provide superior resources, networks, and mentorship",
+      "strength": "strong"
+    },
+    {
+      "id": "resources_to_success_probability",
+      "source": "superior_resources",
+      "target": "venture_success_probability",
+      "polarity": "positive",
+      "description": "Better resources increase likelihood of venture success",
+      "strength": "strong"
+    },
+    {
+      "id": "success_to_track_record",
+      "source": "venture_success_probability",
+      "target": "successful_entrepreneur_track_record",
+      "polarity": "positive",
+      "description": "Higher success probability leads to actual successes that build track record",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "2-5 years",
+        "description": "Building a successful business and establishing track record takes years"
+      }
+    },
+    {
+      "id": "newcomer_credibility_to_access",
+      "source": "newcomer_credibility",
+      "target": "limited_investor_access",
+      "polarity": "negative",
+      "description": "Lower credibility results in limited access to quality investors",
+      "strength": "strong"
+    },
+    {
+      "id": "limited_access_to_resources",
+      "source": "limited_investor_access",
+      "target": "constrained_resources",
+      "polarity": "positive",
+      "description": "Limited investor access results in constrained resources and networks",
+      "strength": "strong"
+    },
+    {
+      "id": "constrained_resources_to_success",
+      "source": "constrained_resources",
+      "target": "reduced_success_probability",
+      "polarity": "positive",
+      "description": "Resource constraints reduce probability of venture success",
+      "strength": "strong"
+    },
+    {
+      "id": "reduced_success_to_credibility",
+      "source": "reduced_success_probability",
+      "target": "newcomer_credibility",
+      "polarity": "positive",
+      "description": "Lower success rates reinforce perception of limited credibility for newcomers",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "2-3 years",
+        "description": "Market perception changes based on observed success patterns over time"
+      }
+    },
+    {
+      "id": "capital_to_superior_resources",
+      "source": "available_capital",
+      "target": "superior_resources",
+      "polarity": "positive",
+      "description": "Available capital contributes to resources for successful entrepreneurs",
+      "strength": "moderate"
+    },
+    {
+      "id": "capital_to_constrained_resources",
+      "source": "available_capital",
+      "target": "constrained_resources",
+      "polarity": "negative",
+      "description": "Limited capital availability constrains resources for newcomers",
+      "strength": "moderate"
+    },
+    {
+      "id": "superior_resources_compete",
+      "source": "superior_resources",
+      "target": "constrained_resources",
+      "polarity": "negative",
+      "description": "More resources going to established entrepreneurs means fewer available for newcomers",
+      "strength": "moderate"
+    },
+    {
+      "id": "successful_concentration",
+      "source": "successful_entrepreneur_track_record",
+      "target": "innovation_concentration",
+      "polarity": "positive",
+      "description": "More resources flowing to established entrepreneurs increases innovation concentration",
+      "strength": "moderate"
+    },
+    {
+      "id": "newcomer_barriers_to_concentration",
+      "source": "limited_investor_access",
+      "target": "innovation_concentration",
+      "polarity": "positive",
+      "description": "Barriers for newcomers increase concentration among established players",
+      "strength": "moderate"
+    },
+    {
+      "id": "concentration_to_diversity",
+      "source": "innovation_concentration",
+      "target": "ecosystem_diversity",
+      "polarity": "negative",
+      "description": "Higher concentration reduces diversity in the entrepreneurial ecosystem",
+      "strength": "moderate"
+    },
+    {
+      "id": "diversity_to_innovation_capacity",
+      "source": "ecosystem_diversity",
+      "target": "system_innovation_capacity",
+      "polarity": "positive",
+      "description": "Greater diversity enhances overall system innovation capacity",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "3-5 years",
+        "description": "Innovation benefits from diversity emerge over multiple business cycles"
+      }
+    },
+    {
+      "id": "diversity_to_newcomer_credibility",
+      "source": "ecosystem_diversity",
+      "target": "newcomer_credibility",
+      "polarity": "positive",
+      "description": "More diverse ecosystem increases credibility and acceptance of newcomers",
+      "strength": "moderate"
+    }
+  ],
+  "loops": [
+    {
+      "id": "successful_entrepreneur_loop",
+      "type": "reinforcing",
+      "path": ["successful_entrepreneur_track_record", "access_to_top_investors", "superior_resources", "venture_success_probability", "successful_entrepreneur_track_record"],
+      "label": "Success Reinforcing Loop",
+      "description": "Successful entrepreneurs gain access to better resources, increasing their probability of continued success",
+      "behavior_pattern": "Accelerating advantage for established entrepreneurs",
+      "position": {"x": 650, "y": 150},
+      "is_primary": true
+    },
+    {
+      "id": "newcomer_struggle_loop",
+      "type": "reinforcing",
+      "path": ["newcomer_credibility", "limited_investor_access", "constrained_resources", "reduced_success_probability", "newcomer_credibility"],
+      "label": "Newcomer Struggle Loop",
+      "description": "First-time entrepreneurs face barriers that reduce their success probability, reinforcing perceptions of limited credibility",
+      "behavior_pattern": "Persistent disadvantage for newcomers and diverse entrepreneurs",
+      "position": {"x": 650, "y": 350},
+      "is_primary": true
+    },
+    {
+      "id": "innovation_diversity_loop",
+      "type": "balancing",
+      "path": ["innovation_concentration", "ecosystem_diversity", "newcomer_credibility", "limited_investor_access", "innovation_concentration"],
+      "label": "Diversity Balancing Loop",
+      "description": "Innovation concentration reduces diversity, but diverse ecosystems can improve newcomer credibility over time",
+      "behavior_pattern": "System seeks balance between concentration and diversity",
+      "position": {"x": 450, "y": 450},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "blind_evaluation",
+      "target_type": "edge",
+      "target_id": "track_record_to_access",
+      "leverage_level": 6,
+      "title": "Implement Blind Evaluation Processes",
+      "description": "Evaluate ventures based on business potential rather than entrepreneur track record",
+      "intervention_strategies": [
+        "Anonymous pitch processes that hide entrepreneur identity",
+        "Focus evaluation criteria on business model and market opportunity",
+        "Standardized due diligence processes that reduce bias"
+      ],
+      "expected_impact": "Reduces advantage of established entrepreneurs and increases opportunities for newcomers",
