@@ -60,11 +60,14 @@ my good friend [Arun Batchu](https://www.linkedin.com/in/arunbatchu/).
 Arun and I were always talking about the power of taking a deeper
 look not just about things but the connections between things.
 
-I have been teaching systems thinking courses arund 2015.
-However, my content was mostly focused around large PowerPoint slide decks.
+I have been teaching systems thinking courses in the fall of 2015.
+At the time these courses were small and customized to the needs of
+individual groups. Most of my work was teaching Systems Thinking to technologists.
+Many of the examples focused on the need for hidden enterprise data infrastructure such as metadata management and a robust data governance system that
+made data scientists more productive.
+However, my content was basic PowerPoint slide.
 
-Most of my work was teaching Systems Thinking to technologists.
-In 2017 I started to migrate my content to an on-line format
+In 2017 I started to migrate my systems thinking training content to an on-line formats
 and I started to roll out more formal classes to managers and executives
 at Optum and United Health Group.
 
@@ -74,6 +77,8 @@ not create high-quality causal loop diagrams, I was convinced
 that there was deep causal knowledge buried in LLMs.  Our
 jobs was to just figure out a way to get in out and make
 it useful to students of systems thinking.
+
+Finally in Feb. of 2021 I started sharing my systems thinking training content.  The online content was still incomplete, but I started getting positive feedback from a diverse audience.
 
 In 2022 I was asked to [deliver a workshop on Graph Systems Thinking](https://www.knowledgegraph.tech/blog/speakers/dan-mccreary/).
 This was one of my first chances to help other graph evangelists build a deeply holistic view of information in an organization.
