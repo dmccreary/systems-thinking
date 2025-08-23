@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "id": "healthcare-access-success",
+    "title": "Healthcare Access Success to the Successful",
+    "archetype": "success-to-successful",
+    "description": "Healthcare systems where better health outcomes enable access to better care, while poor health creates barriers to quality healthcare, creating reinforcing cycles of health inequality.",
+    "learning_objectives": [
+      "Understand how health disparities compound over time",
+      "Identify barriers that prevent equal healthcare access",
+      "Recognize how social determinants of health create inequality cycles",
+      "Explore interventions to break health inequality patterns"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-23T00:00:00Z",
+    "updated_date": "2025-08-23T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["healthcare", "health-equity", "success-to-successful", "social-determinants", "health-disparities"]
+  },
+  "nodes": [
+    {
+      "id": "good_health_status",
+      "label": "Good Health Status",
+      "position": {"x": 200, "y": 100},
+      "type": "stock",
+      "description": "Overall physical and mental health condition of individuals with good health outcomes",
+      "examples": ["Absence of chronic disease", "Good mental health", "Physical fitness", "Preventive care compliance"],
+      "measurement": "Health assessments, biomarkers, quality of life scores, disease absence"
+    },
+    {
+      "id": "economic_stability",
+      "label": "Economic Stability and Income",
+      "position": {"x": 500, "y": 100},
+      "type": "variable",
+      "description": "Financial resources and employment stability that good health enables",
+      "examples": ["Steady employment", "Higher income potential", "Reduced medical expenses", "Career advancement"],
+      "measurement": "Income levels, employment status, financial stability measures"
+    },
+    {
+      "id": "premium_healthcare_access",
+      "label": "Premium Healthcare Access",
+      "position": {"x": 800, "y": 100},
+      "type": "variable",
+      "description": "Access to high-quality healthcare services, insurance, and preventive care",
+      "examples": ["Comprehensive insurance coverage", "Specialist access", "Preventive screenings", "Quality facilities"],
+      "measurement": "Insurance quality, provider access, preventive care utilization"
+    },
+    {
+      "id": "health_maintenance",
+      "label": "Health Maintenance and Improvement",
+      "position": {"x": 1100, "y": 100},
+      "type": "variable",
+      "description": "Ability to maintain and improve health through quality care and healthy lifestyle",
+      "examples": ["Regular check-ups", "Early disease detection", "Effective treatment", "Healthy lifestyle choices"],
+      "measurement": "Preventive care rates, treatment outcomes, lifestyle factor scores"
+    },
+    {
+      "id": "poor_health_status",
+      "label": "Poor Health Status",
+      "position": {"x": 200, "y": 400},
+      "type": "stock",
+      "description": "Chronic illness, disability, or poor health outcomes that create ongoing challenges",
+      "examples": ["Chronic diseases", "Mental health conditions", "Disability", "Untreated conditions"],
+      "measurement": "Disease burden, disability measures, health-related quality of life"
+    },
+    {
+      "id": "economic_hardship",
+      "label": "Economic Hardship",
+      "position": {"x": 500, "y": 400},
+      "type": "variable",
+      "description": "Financial instability caused by poor health, including medical debt and lost income",
+      "examples": ["Medical bankruptcy", "Lost work days", "Reduced earning capacity", "Medical debt"],
+      "measurement": "Medical debt levels, income loss, employment gaps, bankruptcy rates"
+    },
+    {
+      "id": "limited_healthcare_access",
+      "label": "Limited Healthcare Access",
+      "position": {"x": 800, "y": 400},
+      "type": "variable",
+      "description": "Barriers to accessing quality healthcare due to financial, geographic, or systemic constraints",
+      "examples": ["No insurance", "High deductibles", "Limited provider networks", "Geographic barriers"],
+      "measurement": "Insurance coverage rates, access barriers, delayed care measures"
+    },
+    {
+      "id": "health_deterioration",
+      "label": "Health Deterioration",
+      "position": {"x": 1100, "y": 400},
+      "type": "variable",
+      "description": "Worsening health outcomes due to inadequate or delayed healthcare",
+      "examples": ["Untreated conditions", "Emergency-only care", "Delayed diagnoses", "Medication non-adherence"],
+      "measurement": "Emergency department usage, disease progression, treatment delays"
+    },
+    {
+      "id": "social_determinants",
+      "label": "Social Determinants of Health",
+      "position": {"x": 100, "y": 250},
+      "type": "condition",
+      "description": "Environmental and social factors that influence health outcomes",
+      "examples": ["Housing quality", "Food security", "Education", "Neighborhood safety"],
+      "measurement": "Housing conditions, food access, educational attainment, environmental factors"
+    },
+    {
+      "id": "health_system_resources",
+      "label": "Healthcare System Resources",
+      "position": {"x": 650, "y": 250},
+      "type": "stock",
+      "description": "Total healthcare capacity including providers, facilities, and funding",
+      "examples": ["Hospital beds", "Healthcare providers", "Funding allocation", "Medical equipment"],
+      "measurement": "Provider-to-patient ratios, facility capacity, healthcare spending"
+    },
+    {
+      "id": "health_inequality_gap",
+      "label": "Health Inequality Gap",
+      "position": {"x": 1300, "y": 250},
+      "type": "outcome",
+      "description": "Growing disparity in health outcomes between different population groups",
+      "examples": ["Life expectancy gaps", "Disease prevalence differences", "Access disparities"],
+      "measurement": "Health outcome gaps by demographics, access inequality measures"
+    },
+    {
+      "id": "public_health_costs",
+      "label": "Public Health System Costs",
+      "position": {"x": 500, "y": 600},
+      "type": "outcome",
+      "description": "Overall costs to society from poor health outcomes and healthcare inefficiencies",
+      "examples": ["Emergency department overuse", "Preventable hospitalizations", "Lost productivity"],
+      "measurement": "Healthcare spending, emergency care costs, productivity loss estimates"
+    },
+    {
+      "id": "community_health_resilience",
+      "label": "Community Health Resilience",
+      "position": {"x": 200, "y": 600},
+      "type": "variable",
+      "description": "Overall health and resilience of communities and populations",
+      "examples": ["Population health measures", "Disease prevention", "Health education"],
+      "measurement": "Population health indicators, disease prevention rates, health literacy"
+    }
+  ],
+  "edges": [
+    {
+      "id": "health_enables_work",
+      "source": "good_health_status",
+      "target": "economic_stability",
+      "polarity": "positive",
+      "description": "Good health enables consistent work and higher earning potential",
+      "strength": "strong"
+    },
+    {
+      "id": "income_enables_healthcare",
+      "source": "economic_stability",
+      "target": "premium_healthcare_access",
+      "polarity": "positive",
+      "description": "Economic stability provides access to quality healthcare and insurance",
+      "strength": "strong"
+    },
+    {
+      "id": "healthcare_maintains_health",
+      "source": "premium_healthcare_access",
+      "target": "health_maintenance",
+      "polarity": "positive",
+      "description": "Quality healthcare access enables health maintenance and improvement",
+      "strength": "strong"
+    },
+    {
+      "id": "maintenance_improves_health",
+      "source": "health_maintenance",
+      "target": "good_health_status",
+      "polarity": "positive",
+      "description": "Effective health maintenance sustains and improves overall health status",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "6 months - 2 years",
+        "description": "Health improvements from preventive care and treatment take time to manifest"
+      }
+    },
+    {
+      "id": "poor_health_impacts_work",
+      "source": "poor_health_status",
+      "target": "economic_hardship",
+      "polarity": "positive",
+      "description": "Poor health creates economic hardship through medical costs and lost income",
+      "strength": "strong"
+    },
+    {
+      "id": "hardship_limits_healthcare",
+      "source": "economic_hardship",
+      "target": "limited_healthcare_access",
+      "polarity": "positive",
+      "description": "Economic hardship creates barriers to accessing quality healthcare",
+      "strength": "strong"
+    },
+    {
+      "id": "limited_access_worsens_health",
+      "source": "limited_healthcare_access",
+      "target": "health_deterioration",
+      "polarity": "positive",
+      "description": "Limited healthcare access leads to worsening health outcomes",
+      "strength": "strong"
+    },
+    {
+      "id": "deterioration_worsens_status",
+      "source": "health_deterioration",
+      "target": "poor_health_status",
+      "polarity": "positive",
+      "description": "Health deterioration compounds existing poor health status",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "6 months - 5 years",
+        "description": "Health deterioration accelerates over time without proper care"
+      }
+    },
+    {
+      "id": "social_determinants_good_health",
+      "source": "social_determinants",
+      "target": "good_health_status",
+      "polarity": "positive",
+      "description": "Positive social determinants support good health outcomes",
+      "strength": "moderate"
+    },
+    {
+      "id": "social_determinants_poor_health",
+      "source": "social_determinants",
+      "target": "poor_health_status",
+      "polarity": "negative",
+      "description": "Negative social determinants contribute to poor health outcomes",
+      "strength": "moderate"
+    },
+    {
+      "id": "economic_stability_improves_determinants",
+      "source": "economic_stability",
+      "target": "social_determinants",
+      "polarity": "positive",
+      "description": "Economic stability enables access to better housing, food, and neighborhoods",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "1-3 years",
+        "description": "Improvements in social conditions take time to implement with economic stability"
+      }
+    },
+    {
+      "id": "hardship_worsens_determinants",
+      "source": "economic_hardship",
+      "target": "social_determinants",
+      "polarity": "negative",
+      "description": "Economic hardship forces choices that worsen social determinants of health",
+      "strength": "moderate"
+    },
+    {
+      "id": "premium_healthcare_from_resources",
+      "source": "health_system_resources",
+      "target": "premium_healthcare_access",
+      "polarity": "positive",
+      "description": "Healthcare system resources contribute to premium care availability",
+      "strength": "moderate"
+    },
+    {
+      "id": "limited_healthcare_from_resources",
+      "source": "health_system_resources",
+      "target": "limited_healthcare_access",
+      "polarity": "negative",
+      "description": "Limited system resources constrain healthcare access for disadvantaged populations",
+      "strength": "moderate"
+    },
+    {
+      "id": "resource_competition",
+      "source": "premium_healthcare_access",
+      "target": "limited_healthcare_access",
+      "polarity": "negative",
+      "description": "Resources flowing to premium care reduce availability for disadvantaged populations",
+      "strength": "moderate"
+    },
+    {
+      "id": "good_health_to_inequality",
+      "source": "good_health_status",
+      "target": "health_inequality_gap",
+      "polarity": "positive",
+      "description": "Improving health among advantaged groups increases inequality gap",
+      "strength": "moderate"
+    },
+    {
+      "id": "poor_health_to_inequality",
+      "source": "poor_health_status",
+      "target": "health_inequality_gap",
+      "polarity": "positive",
+      "description": "Worsening health among disadvantaged groups increases inequality gap",
+      "strength": "moderate"
+    },
+    {
+      "id": "poor_health_increases_costs",
+      "source": "poor_health_status",
+      "target": "public_health_costs",
+      "polarity": "positive",
+      "description": "Poor health outcomes increase overall healthcare system costs",
+      "strength": "strong"
+    },
+    {
+      "id": "limited_access_increases_costs",
+      "source": "limited_healthcare_access",
+      "target": "public_health_costs",
+      "polarity": "positive",
+      "description": "Limited access leads to expensive emergency care and preventable complications",
+      "strength": "strong"
+    },
+    {
+      "id": "good_health_builds_resilience",
+      "source": "good_health_status",
+      "target": "community_health_resilience",
+      "polarity": "positive",
+      "description": "Individual good health contributes to overall community health resilience",
+      "strength": "moderate"
+    },
+    {
+      "id": "poor_health_reduces_resilience",
+      "source": "poor_health_status",
+      "target": "community_health_resilience",
+      "polarity": "negative",
+      "description": "Widespread poor health reduces community resilience and health capacity",
+      "strength": "moderate"
+    }
+  ],
+  "loops": [
+    {
+      "id": "healthy_advantage_loop",
+      "type": "reinforcing",
+      "path": ["good_health_status", "economic_stability", "premium_healthcare_access", "health_maintenance", "good_health_status"],
+      "label": "Healthy Advantage Loop",
+      "description": "Good health enables economic stability, which provides access to quality healthcare that maintains good health",
+      "behavior_pattern": "Accelerating advantages for those with good health and resources",
+      "position": {"x": 650, "y": 150},
+      "is_primary": true
+    },
+    {
+      "id": "unhealthy_disadvantage_loop",
+      "type": "reinforcing",
+      "path": ["poor_health_status", "economic_hardship", "limited_healthcare_access", "health_deterioration", "poor_health_status"],
+      "label": "Health Disadvantage Loop",
+      "description": "Poor health creates economic hardship, limiting healthcare access and leading to further health deterioration",
+      "behavior_pattern": "Accelerating disadvantages for those with poor health and limited resources",
+      "position": {"x": 650, "y": 350},
+      "is_primary": true
+    },
+    {
+      "id": "social_determinants_loop",
+      "type": "reinforcing",
+      "path": ["economic_stability", "social_determinants", "good_health_status", "economic_stability"],
+      "label": "Social Determinants Loop",
+      "description": "Economic stability improves social determinants, which support better health, enabling continued economic stability",
+      "behavior_pattern": "Social and environmental factors amplify health advantages",
+      "position": {"x": 300, "y": 200},
+      "is_primary": false
+    },
+    {
+      "id": "system_cost_loop",
+      "type": "balancing",
+      "path": ["poor_health_status", "public_health_costs", "health_system_resources", "limited_healthcare_access", "poor_health_status"],
+      "label": "System Cost Loop",
+      "description": "Poor health increases system costs, but may also drive increased healthcare resources over time",
+      "behavior_pattern": "System responds to high costs by potentially increasing resources, but with delays",
+      "position": {"x": 650, "y": 500},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "universal_healthcare",
+      "target_type": "edge",
+      "target_id": "income_enables_healthcare",
+      "leverage_level": 8,
+      "title": "Implement Universal Healthcare Coverage",
+      "description": "Decouple healthcare access from economic status through universal coverage systems",
+      "intervention_strategies": [
+        "Single-payer healthcare system that covers all residents",
+        "Universal basic healthcare services regardless of ability to pay",
+        "Elimination of medical bankruptcy through comprehensive coverage"
+      ],
+      "expected_impact": "Breaks the connection between economic status and healthcare access, reducing health inequality",
+      "difficulty": "very-high"
+    },
+    {
+      "id": "social_determinants_investment",
+      "target_type": "node",
+      "target_id": "social_determinants",
+      "leverage_level": 6,
+      "title": "Invest in Social Determinants of Health",
+      "description": "Address root causes of health inequality through housing, education, and community development",
+      "intervention_strategies": [
+        "Affordable housing programs in healthy neighborhoods",
+        "Food security and nutrition assistance programs",
+        "Community health worker programs",
+        "Environmental health improvements in disadvantaged areas"
+      ],
+      "expected_impact": "Improves fundamental conditions that create health disparities",
+      "difficulty": "high"
+    },
+    {
+      "id": "preventive_care_focus",
+      "target_type": "system",
+      "target_id": "health_system_resources",
+      "leverage_level": 5,
+      "title": "Shift to Preventive Care Model",
+      "description": "Reorganize healthcare system to prioritize prevention and early intervention",
+      "intervention_strategies": [
+        "Community health programs targeting high-risk populations",
+        "Preventive care incentives and requirements",
+        "Mobile health clinics for underserved areas",
+        "Health education and literacy programs"
+      ],
+      "expected_impact": "Reduces health deterioration before it creates economic hardship",
+      "difficulty": "moderate"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "status_quo_continuation",
+      "title": "Continue Current Healthcare System",
+      "description": "Healthcare access continues to depend primarily on economic status and insurance coverage",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "income_enables_healthcare",
+          "change_description": "Economic barriers to healthcare access persist and potentially worsen"
+        }
+      ],
+      "predicted_outcomes": "Increasing health inequality, higher system costs, reduced community resilience, persistent health disparities"
+    },
+    {
+      "id": "universal_coverage_implementation",
+      "title": "Implement Universal Healthcare Coverage",
+      "description": "Society adopts universal healthcare system that provides coverage regardless of economic status",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "limited_healthcare_access",
+          "change_description": "Healthcare access barriers are dramatically reduced through universal coverage"
+        }
+      ],
+      "predicted_outcomes": "Reduced health inequality, improved population health, lower long-term system costs, increased community resilience"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "How do health outcomes both result from and contribute to economic inequality?",
+      "Why might emergency-only healthcare be more expensive than preventive care for society?",
+      "What role do social determinants play in creating health advantages and disadvantages?",
+      "How might universal healthcare coverage affect the reinforcing loops in this system?",
+      "What are the long-term costs to society of health inequality?"
+    ],
+    "key_insights": [
+      "Health and economic status create mutually reinforcing cycles of advantage and disadvantage",
+      "Social determinants of health amplify the effects of economic inequality on health outcomes",
+      "Healthcare systems that tie access to economic status create and perpetuate health disparities",
+      "Poor health outcomes create higher costs for individuals and society over time",
+      "Breaking health inequality cycles requires addressing both healthcare access and social determinants"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "People with poor health outcomes are primarily responsible for their health problems",
+        "correction": "Health outcomes are significantly influenced by systemic factors including access to care, social determinants, and economic resources that create advantages or barriers"
+      },
+      {
+        "misconception": "Providing healthcare to everyone would be too expensive for society",
+        "correction": "Universal healthcare systems often reduce overall costs by emphasizing prevention and reducing expensive emergency care and complications from untreated conditions"
+      },
+      {
+        "misconception": "Health inequality is primarily about individual lifestyle choices",
+        "correction": "While individual choices matter, systemic factors like access to healthy food, safe neighborhoods, quality healthcare, and economic stability have major impacts on health outcomes"
+      }
+    ],
+    "extension_activities": [
+      "Research health outcome disparities in your community or country",
+      "Interview healthcare workers about barriers their patients face in accessing care",
+      "Compare health outcomes and systems between countries with different healthcare models",
+      "Analyze the relationship between neighborhood characteristics and health outcomes in your area"
+    ],
+    "related_concepts": [
+      "Social Determinants of Health",
+      "Health Equity",
+      "Universal Healthcare",
+      "Preventive Medicine",
+      "Health Economics"
+    ]
+  }
+}

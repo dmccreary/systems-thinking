@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "id": "wealth-inequality-success",
+    "title": "Wealth Inequality Success to the Successful",
+    "archetype": "success-to-successful",
+    "description": "Economic system where existing wealth generates more wealth through investment returns and opportunities, while lack of capital creates barriers to wealth building, amplifying economic inequality over time.",
+    "learning_objectives": [
+      "Understand how capital generates compound returns that amplify wealth differences",
+      "Identify barriers that prevent wealth building for those without initial capital",
+      "Recognize how investment access and financial opportunities depend on existing wealth",
+      "Explore interventions to promote more equitable wealth distribution"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-23T00:00:00Z",
+    "updated_date": "2025-08-23T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["wealth-inequality", "economics", "success-to-successful", "capital", "investment"]
+  },
+  "nodes": [
+    {
+      "id": "existing_wealth",
+      "label": "Existing Wealth and Capital",
+      "position": {"x": 200, "y": 100},
+      "type": "stock",
+      "description": "Accumulated financial assets including savings, investments, and property",
+      "examples": ["Investment portfolios", "Real estate", "Business ownership", "Savings accounts"],
+      "measurement": "Net worth, investment value, asset holdings"
+    },
+    {
+      "id": "investment_opportunities",
+      "label": "Premium Investment Opportunities",
+      "position": {"x": 500, "y": 100},
+      "type": "variable",
+      "description": "Access to high-return investments requiring minimum capital thresholds",
+      "examples": ["Private equity", "Hedge funds", "Real estate investment", "Angel investing"],
+      "measurement": "Investment return rates, access to exclusive opportunities"
+    },
+    {
+      "id": "investment_returns",
+      "label": "Investment Returns and Income",
+      "position": {"x": 800, "y": 100},
+      "type": "variable",
+      "description": "Passive income and capital gains generated from investments",
+      "examples": ["Dividend income", "Capital appreciation", "Rental income", "Business profits"],
+      "measurement": "Annual return rates, passive income amounts"
+    },
+    {
+      "id": "wealth_accumulation",
+      "label": "Accelerated Wealth Accumulation",
+      "position": {"x": 1100, "y": 100},
+      "type": "variable",
+      "description": "Compound growth of wealth through reinvested returns and new opportunities",
+      "examples": ["Compound interest", "Reinvested gains", "Leveraged investments"],
+      "measurement": "Wealth growth rate, compound annual growth"
+    },
+    {
+      "id": "limited_capital",
+      "label": "Limited Capital and Savings",
+      "position": {"x": 200, "y": 400},
+      "type": "stock",
+      "description": "Minimal financial assets and savings for investment or wealth building",
+      "examples": ["Living paycheck to paycheck", "Emergency fund only", "No investment capital"],
+      "measurement": "Savings rate, available investment capital, liquid assets"
+    },
+    {
+      "id": "restricted_investment_access",
+      "label": "Restricted Investment Access",
+      "position": {"x": 500, "y": 400},
+      "type": "variable",
+      "description": "Limited access to wealth-building investments due to capital requirements",
+      "examples": ["High-fee mutual funds", "No private investment access", "Basic savings accounts"],
+      "measurement": "Available investment options, fee structures, return limitations"
+    },
+    {
+      "id": "modest_returns",
+      "label": "Modest Investment Returns",
+      "position": {"x": 800, "y": 400},
+      "type": "variable",
+      "description": "Lower returns from limited investment options with higher fees",
+      "examples": ["Savings account interest", "High-fee funds", "Conservative investments"],
+      "measurement": "Net return rates, fee impact on returns"
+    },
+    {
+      "id": "slow_wealth_building",
+      "label": "Slow Wealth Building",
+      "position": {"x": 1100, "y": 400},
+      "type": "variable",
+      "description": "Limited ability to build wealth due to low returns and consumption needs",
+      "examples": ["Gradual savings growth", "Inflation erosion", "Emergency spending"],
+      "measurement": "Wealth accumulation rate, real purchasing power growth"
+    },
+    {
+      "id": "economic_opportunities",
+      "label": "Economic Opportunities",
+      "position": {"x": 650, "y": 50},
+      "type": "variable",
+      "description": "Business and investment opportunities that require capital to pursue",
+      "examples": ["Business startups", "Real estate deals", "Educational investments"],
+      "measurement": "Opportunity availability, capital requirements for entry"
+    },
+    {
+      "id": "financial_education_access",
+      "label": "Financial Education and Advice Access",
+      "position": {"x": 350, "y": 200},
+      "type": "variable",
+      "description": "Access to financial expertise and wealth management services",
+      "examples": ["Financial advisors", "Tax optimization", "Estate planning"],
+      "measurement": "Advisory access, financial literacy, professional service usage"
+    },
+    {
+      "id": "wealth_inequality_gap",
+      "label": "Wealth Inequality Gap",
+      "position": {"x": 1300, "y": 250},
+      "type": "outcome",
+      "description": "Growing disparity in wealth distribution between rich and poor",
+      "examples": ["Gini coefficient", "Wealth concentration ratios", "Income distribution"],
+      "measurement": "Wealth distribution metrics, inequality indices"
+    },
+    {
+      "id": "economic_mobility",
+      "label": "Economic Mobility",
+      "position": {"x": 200, "y": 600},
+      "type": "outcome",
+      "description": "Ability for individuals to change their economic status over time",
+      "examples": ["Intergenerational mobility", "Career advancement", "Class transitions"],
+      "measurement": "Social mobility indices, income progression rates"
+    },
+    {
+      "id": "systemic_risk",
+      "label": "Systemic Economic Risk",
+      "position": {"x": 650, "y": 600},
+      "type": "outcome",
+      "description": "Risk to overall economic stability from extreme wealth concentration",
+      "examples": ["Financial instability", "Reduced consumer spending", "Political instability"],
+      "measurement": "Economic stability indicators, consumer confidence, political stability"
+    }
+  ],
+  "edges": [
+    {
+      "id": "wealth_enables_investments",
+      "source": "existing_wealth",
+      "target": "investment_opportunities",
+      "polarity": "positive",
+      "description": "Existing wealth provides access to premium investment opportunities with higher returns",
+      "strength": "strong"
+    },
+    {
+      "id": "opportunities_generate_returns",
+      "source": "investment_opportunities",
+      "target": "investment_returns",
+      "polarity": "positive",
+      "description": "Premium investment opportunities generate higher returns than basic options",
+      "strength": "strong"
+    },
+    {
+      "id": "returns_accelerate_accumulation",
+      "source": "investment_returns",
+      "target": "wealth_accumulation",
+      "polarity": "positive",
+      "description": "Investment returns enable accelerated wealth accumulation through compound growth",
+      "strength": "strong"
+    },
+    {
+      "id": "accumulation_builds_wealth",
+      "source": "wealth_accumulation",
+      "target": "existing_wealth",
+      "polarity": "positive",
+      "description": "Accelerated accumulation increases existing wealth stock",
+      "strength": "strong"
+    },
+    {
+      "id": "limited_capital_restricts_access",
+      "source": "limited_capital",
+      "target": "restricted_investment_access",
+      "polarity": "positive",
+      "description": "Limited capital restricts access to high-return investment opportunities",
+      "strength": "strong"
+    },
+    {
+      "id": "restricted_access_limits_returns",
+      "source": "restricted_investment_access",
+      "target": "modest_returns",
+      "polarity": "positive",
+      "description": "Restricted investment access results in lower returns from available options",
+      "strength": "strong"
+    },
+    {
+      "id": "modest_returns_slow_building",
+      "source": "modest_returns",
+      "target": "slow_wealth_building",
+      "polarity": "positive",
+      "description": "Modest returns result in slower wealth building compared to premium investments",
+      "strength": "strong"
+    },
+    {
+      "id": "slow_building_maintains_limited_capital",
+      "source": "slow_wealth_building",
+      "target": "limited_capital",
+      "polarity": "positive",
+      "description": "Slow wealth building maintains limited capital available for investment",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "5-10 years",
+        "description": "Wealth building effects compound slowly over many years"
+      }
+    },
+    {
+      "id": "wealth_creates_opportunities",
+      "source": "existing_wealth",
+      "target": "economic_opportunities",
+      "polarity": "positive",
+      "description": "Wealth creates access to business and economic opportunities requiring capital",
+      "strength": "moderate"
+    },
+    {
+      "id": "opportunities_enhance_investments",
+      "source": "economic_opportunities",
+      "target": "investment_opportunities",
+      "polarity": "positive",
+      "description": "Economic opportunities expand available investment options",
+      "strength": "moderate"
+    },
+    {
+      "id": "wealth_enables_education",
+      "source": "existing_wealth",
+      "target": "financial_education_access",
+      "polarity": "positive",
+      "description": "Wealth enables access to financial advisors and education",
+      "strength": "moderate"
+    },
+    {
+      "id": "education_improves_returns",
+      "source": "financial_education_access",
+      "target": "investment_returns",
+      "polarity": "positive",
+      "description": "Financial education and advice improve investment returns",
+      "strength": "moderate"
+    },
+    {
+      "id": "limited_capital_reduces_education",
+      "source": "limited_capital",
+      "target": "financial_education_access",
+      "polarity": "negative",
+      "description": "Limited capital reduces access to professional financial advice",
+      "strength": "moderate"
+    },
+    {
+      "id": "wealth_to_inequality",
+      "source": "existing_wealth",
+      "target": "wealth_inequality_gap",
+      "polarity": "positive",
+      "description": "Growing wealth among wealthy increases inequality gap",
+      "strength": "moderate"
+    },
+    {
+      "id": "limited_capital_to_inequality",
+      "source": "limited_capital",
+      "target": "wealth_inequality_gap",
+      "polarity": "positive",
+      "description": "Persistent limited capital among poor increases inequality gap",
+      "strength": "moderate"
+    },
+    {
+      "id": "inequality_reduces_mobility",
+      "source": "wealth_inequality_gap",
+      "target": "economic_mobility",
+      "polarity": "negative",
+      "description": "Greater wealth inequality reduces economic mobility opportunities",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "10-20 years",
+        "description": "Mobility effects become apparent over generational timescales"
+      }
+    },
+    {
+      "id": "limited_mobility_maintains_capital_limits",
+      "source": "economic_mobility",
+      "target": "limited_capital",
+      "polarity": "negative",
+      "description": "Reduced economic mobility maintains limited capital for disadvantaged groups",
+      "strength": "moderate"
+    },
+    {
+      "id": "inequality_creates_systemic_risk",
+      "source": "wealth_inequality_gap",
+      "target": "systemic_risk",
+      "polarity": "positive",
+      "description": "Extreme wealth inequality creates systemic economic and political risks",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "10-30 years",
+        "description": "Systemic risks from inequality build over long time periods"
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "wealth_compound_loop",
+      "type": "reinforcing",
+      "path": ["existing_wealth", "investment_opportunities", "investment_returns", "wealth_accumulation", "existing_wealth"],
+      "label": "Wealth Compounding Loop",
+      "description": "Existing wealth provides access to better investments that generate returns for accelerated wealth accumulation",
+      "behavior_pattern": "Exponential wealth growth for those with capital through compound returns",
+      "position": {"x": 650, "y": 150},
+      "is_primary": true
+    },
+    {
+      "id": "capital_constraint_loop",
+      "type": "reinforcing",
+      "path": ["limited_capital", "restricted_investment_access", "modest_returns", "slow_wealth_building", "limited_capital"],
+      "label": "Capital Constraint Loop",
+      "description": "Limited capital restricts investment access, resulting in low returns that maintain capital constraints",
+      "behavior_pattern": "Persistent wealth limitations for those without initial capital",
+      "position": {"x": 650, "y": 350},
+      "is_primary": true
+    },
+    {
+      "id": "opportunity_amplification_loop",
+      "type": "reinforcing",
+      "path": ["existing_wealth", "economic_opportunities", "investment_opportunities", "investment_returns", "wealth_accumulation", "existing_wealth"],
+      "label": "Opportunity Amplification Loop",
+      "description": "Wealth creates access to economic opportunities that expand investment options and returns",
+      "behavior_pattern": "Wealth creates access to exclusive opportunities that generate more wealth",
+      "position": {"x": 500, "y": 100},
+      "is_primary": false
+    },
+    {
+      "id": "mobility_constraint_loop",
+      "type": "reinforcing",
+      "path": ["wealth_inequality_gap", "economic_mobility", "limited_capital", "wealth_inequality_gap"],
+      "label": "Mobility Constraint Loop",
+      "description": "Wealth inequality reduces economic mobility, maintaining limited capital that perpetuates inequality",
+      "behavior_pattern": "Inequality becomes self-perpetuating by reducing mobility opportunities",
+      "position": {"x": 450, "y": 450},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "progressive_wealth_taxation",
+      "target_type": "edge",
+      "target_id": "accumulation_builds_wealth",
+      "leverage_level": 6,
+      "title": "Implement Progressive Wealth Taxation",
+      "description": "Tax wealth accumulation at higher rates to reduce compound advantages",
+      "intervention_strategies": [
+        "Progressive capital gains taxes that increase with wealth level",
+        "Wealth taxes on high net worth individuals",
+        "Estate taxes to prevent intergenerational wealth concentration"
+      ],
+      "expected_impact": "Reduces the rate at which wealth compounds for the wealthy",
+      "difficulty": "high"
+    },
+    {
+      "id": "democratize_investment_access",
+      "target_type": "edge",
+      "target_id": "limited_capital_restricts_access",
+      "leverage_level": 5,
+      "title": "Democratize Investment Access",
+      "description": "Reduce barriers to high-return investment opportunities for small investors",
+      "intervention_strategies": [
+        "Lower minimum investment thresholds for institutional investments",
+        "Public investment funds that pool small investor capital",
+        "Financial technology platforms that reduce investment barriers"
+      ],
+      "expected_impact": "Provides access to better investment returns for those with limited capital",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "universal_basic_assets",
+      "target_type": "system",
+      "target_id": "limited_capital",
+      "leverage_level": 8,
+      "title": "Create Universal Basic Assets Program",
+      "description": "Provide all citizens with basic investment capital to participate in wealth building",
+      "intervention_strategies": [
+        "Government-funded investment accounts for all citizens",
+        "Matched savings programs for low-income individuals",
+        "Universal child development accounts with government contributions"
+      ],
+      "expected_impact": "Fundamentally changes wealth distribution by providing everyone with investment capital",
+      "difficulty": "very-high"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "unrestricted_wealth_accumulation",
+      "title": "Continue Unrestricted Wealth Accumulation",
+      "description": "Current system continues with minimal restrictions on wealth concentration",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "wealth_enables_investments",
+          "change_description": "Wealth advantages in investment access continue to compound without restriction"
+        }
+      ],
+      "predicted_outcomes": "Accelerating wealth inequality, reduced economic mobility, increased systemic risk, potential social and political instability"
+    },
+    {
+      "id": "wealth_redistribution_policies",
+      "title": "Implement Wealth Redistribution Policies",
+      "description": "Society adopts progressive taxation and programs to redistribute wealth and opportunities",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "limited_capital",
+          "change_description": "Redistribution programs provide more people with investment capital"
+        }
+      ],
+      "predicted_outcomes": "Reduced wealth inequality, improved economic mobility, more stable economic system, broader participation in wealth building"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "How do compound returns amplify small initial differences in wealth over time?",
+      "Why might minimum investment requirements create barriers for wealth building?",
+      "What role does access to financial education play in perpetuating wealth inequality?",
+      "How might extreme wealth inequality create risks for overall economic stability?",
+      "What are the trade-offs between rewarding investment success and promoting equal opportunity?"
+    ],
+    "key_insights": [
+      "Compound returns create exponential wealth growth that amplifies initial advantages",
+      "Investment access barriers prevent those without capital from participating in wealth building",
+      "Wealth inequality becomes self-perpetuating by reducing economic mobility",
+      "Financial education and opportunities are often tied to existing wealth",
+      "Extreme inequality can create systemic risks to economic and political stability"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Wealth differences are primarily due to differences in work ethic and financial discipline",
+        "correction": "While personal behavior matters, systemic advantages in investment access and compound returns significantly amplify initial differences in wealth"
+      },
+      {
+        "misconception": "Everyone has equal access to wealth-building opportunities in market economies",
+        "correction": "Many high-return investment opportunities have minimum capital requirements that exclude those with limited resources"
+      }
+    ],
+    "extension_activities": [
+      "Calculate compound return differences over time between different investment options",
+      "Research minimum investment requirements for various investment vehicles",
+      "Analyze wealth inequality trends in different countries with different policies",
+      "Interview financial advisors about barriers faced by small investors"
+    ],
+    "related_concepts": [
+      "Compound Interest",
+      "Capital Markets",
+      "Progressive Taxation",
+      "Economic Mobility",
+      "Wealth Distribution"
+    ]
+  }
+}
