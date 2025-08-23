@@ -11,10 +11,53 @@ social:
 
 ![](./cover.jpg)
 
+<details>
+   <summary>Sample Narrative Prompt</summary>
+   Please generate a narrative that would be the basis of
+    a 14 panel graphic novel about Moore's Law.  Here is an outline of the story.
+    
+    1. Begin with how Gordon Moore began his career designing silicon chips in the 1960s.
+    2. Show how he was instrumental and an engineer design chips for Fairchild.
+    3. Include how he co-founded Intel.
+    4. Show how he noticed that the number of transistors on each chip continued
+    to increase in size.
+    5. Show how he noticed that this was not a simple linear growth curve but
+    an exponential growth curve.
+    6. Show how he published in paper on the topic and how little people took notice.
+    7. Show how by lowering the cost of electronics and increasing the power of electronics the demand for those products went up
+    8. Show how that over time he became more famous because this law became a 
+    guidepost of progress in electronics and computers
+    9. Show the physics of fabrication created new challenges for semiconductor manufacturing
+    10. How the cost of manufacturing plants also has seen exponential growth
+    11. Show how his law continued to hold until present day (2025), however the cost
+    of building these chips also has grown dramatically.
+    12. Discuss how this is an example of the Limits to Growth Archetype in Systems Thinking.
+
+    Your task is to tell the story and insert detailed descriptions of each of the 14 panels.  Your audience is high-school students.
+
+    Note that Gordon Moore pass away in 2014.
+
+    For each panel, use the following template:
+
+    ## Panel 1 Name
+    ```xml
+    ![](./image-01.png)
+    <details>
+    <summary>Name of Panel 1</summary>
+        Please generate a wide-landscape drawing in the style of a graphic novel.  
+        Use a color scheme and design style that reflects a book published 
+        in England in 1833.
+        Focus on making any characters consistent with characters in prior images.
+
+        In this drawing....
+    </detail>
+    ```
+</details>
+
 ## The Young Engineer
 ![](./image-01.jpg)
 <details>
-<summary>Gordon Moore Begins His Journey</summary>
+<summary>Sample Image Prompt: Gordon Moore Begins His Journey</summary>
 Please generate a wide-landscape drawing in the style of a graphic novel. Use a bright color scheme and design style that reflects a comic book of the 1960s. Work hard to make any characters consistent with prior images.
 
 In this drawing, show a young Gordon Moore in 1965, wearing a crisp white shirt and thin black tie, standing in a sterile laboratory at Fairchild Semiconductor. He's examining a silicon wafer under a microscope, with early integrated circuits visible on workbenches around him. The lab has a retro-futuristic 1960s aesthetic with analog equipment and oscilloscopes. Moore should appear thoughtful and curious, his brow slightly furrowed as he studies the tiny transistors etched into silicon. Include early computer equipment in the background and make the lighting clinical but warm, suggesting the dawn of the digital age.
