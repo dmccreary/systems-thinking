@@ -1,0 +1,397 @@
+{
+  "metadata": {
+    "id": "educational-funding-success",
+    "title": "Educational Funding Success to the Successful",
+    "archetype": "success-to-successful",
+    "description": "A school district allocates resources based on test performance, creating reinforcing loops where successful schools receive more resources while struggling schools receive less, amplifying initial advantages and disadvantages.",
+    "learning_objectives": [
+      "Understand how performance-based resource allocation can increase inequality",
+      "Identify reinforcing loops that amplify initial advantages",
+      "Recognize how well-intentioned policies can create unintended consequences",
+      "Explore systemic interventions to break inequality cycles"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-23T00:00:00Z",
+    "updated_date": "2025-08-23T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["education", "inequality", "resource-allocation", "success-to-successful", "school-funding"]
+  },
+  "nodes": [
+    {
+      "id": "high_school_performance",
+      "label": "High-Performing School Test Scores",
+      "position": {"x": 200, "y": 100},
+      "type": "variable",
+      "description": "Standardized test performance of already successful schools",
+      "examples": ["Above-average standardized scores", "High graduation rates", "College acceptance rates"],
+      "measurement": "Average test scores, graduation percentages"
+    },
+    {
+      "id": "high_school_resources",
+      "label": "Resources for High-Performing Schools",
+      "position": {"x": 500, "y": 100},
+      "type": "stock",
+      "description": "Funding, technology, and quality teachers allocated to successful schools",
+      "examples": ["Additional program funding", "Technology upgrades", "Experienced teachers"],
+      "measurement": "Budget allocation per student, teacher-student ratio, technology inventory"
+    },
+    {
+      "id": "high_school_capability",
+      "label": "High-Performing School Capability",
+      "position": {"x": 800, "y": 100},
+      "type": "variable",
+      "description": "Enhanced ability to provide quality education with superior resources",
+      "examples": ["Advanced placement courses", "Small class sizes", "Specialized programs"],
+      "measurement": "Course offerings, class sizes, program availability"
+    },
+    {
+      "id": "low_school_performance",
+      "label": "Low-Performing School Test Scores",
+      "position": {"x": 200, "y": 400},
+      "type": "variable",
+      "description": "Standardized test performance of struggling schools",
+      "examples": ["Below-average test scores", "Low graduation rates", "Limited college preparation"],
+      "measurement": "Average test scores, dropout rates"
+    },
+    {
+      "id": "low_school_resources",
+      "label": "Resources for Low-Performing Schools",
+      "position": {"x": 500, "y": 400},
+      "type": "stock",
+      "description": "Limited funding and resources allocated to struggling schools",
+      "examples": ["Budget cuts", "Aging technology", "Teacher turnover"],
+      "measurement": "Per-student funding, resource availability, teacher retention"
+    },
+    {
+      "id": "low_school_capability",
+      "label": "Low-Performing School Capability",
+      "position": {"x": 800, "y": 400},
+      "type": "variable",
+      "description": "Reduced ability to provide quality education due to resource constraints",
+      "examples": ["Larger class sizes", "Limited programs", "Insufficient materials"],
+      "measurement": "Class sizes, program cuts, resource shortages"
+    },
+    {
+      "id": "total_resources",
+      "label": "Total District Resources",
+      "position": {"x": 500, "y": 250},
+      "type": "stock",
+      "description": "Fixed pool of district funding and resources to be allocated",
+      "examples": ["District budget", "Federal/state funding", "Local tax revenue"],
+      "measurement": "Total district budget, funding per student"
+    },
+    {
+      "id": "inequality_gap",
+      "label": "Educational Inequality Gap",
+      "position": {"x": 1100, "y": 250},
+      "type": "outcome",
+      "description": "Growing disparity between high and low-performing schools",
+      "examples": ["Achievement gaps", "Resource disparities", "Opportunity differences"],
+      "measurement": "Performance gap between schools, resource allocation ratios"
+    },
+    {
+      "id": "community_segregation",
+      "label": "Community Segregation",
+      "position": {"x": 800, "y": 600},
+      "type": "condition",
+      "description": "Families moving to access better schools, increasing segregation",
+      "examples": ["Housing choices based on school quality", "Private school enrollment", "District transfers"],
+      "measurement": "Demographics by school, transfer rates, housing prices"
+    },
+    {
+      "id": "system_credibility",
+      "label": "Public Education System Credibility",
+      "position": {"x": 200, "y": 600},
+      "type": "variable",
+      "description": "Public trust in the fairness and effectiveness of the school system",
+      "examples": ["Community support", "Voter approval", "Public confidence"],
+      "measurement": "Satisfaction surveys, election results, community engagement"
+    }
+  ],
+  "edges": [
+    {
+      "id": "high_performance_to_resources",
+      "source": "high_school_performance",
+      "target": "high_school_resources",
+      "polarity": "positive",
+      "description": "Higher test scores lead to more resource allocation",
+      "strength": "strong"
+    },
+    {
+      "id": "high_resources_to_capability",
+      "source": "high_school_resources",
+      "target": "high_school_capability",
+      "polarity": "positive",
+      "description": "More resources enhance educational capability",
+      "strength": "strong"
+    },
+    {
+      "id": "high_capability_to_performance",
+      "source": "high_school_capability",
+      "target": "high_school_performance",
+      "polarity": "positive",
+      "description": "Enhanced capability improves test performance",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "1-2 years",
+        "description": "Educational improvements take time to show in test results"
+      }
+    },
+    {
+      "id": "low_performance_to_resources",
+      "source": "low_school_performance",
+      "target": "low_school_resources",
+      "polarity": "negative",
+      "description": "Lower test scores result in fewer resource allocation",
+      "strength": "strong"
+    },
+    {
+      "id": "low_resources_to_capability",
+      "source": "low_school_resources",
+      "target": "low_school_capability",
+      "polarity": "positive",
+      "description": "Fewer resources reduce educational capability",
+      "strength": "strong"
+    },
+    {
+      "id": "low_capability_to_performance",
+      "source": "low_school_capability",
+      "target": "low_school_performance",
+      "polarity": "positive",
+      "description": "Reduced capability worsens test performance",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "1-2 years",
+        "description": "Resource cuts take time to impact test results"
+      }
+    },
+    {
+      "id": "high_resources_from_total",
+      "source": "total_resources",
+      "target": "high_school_resources",
+      "polarity": "positive",
+      "description": "Total resources contribute to high-performing school allocation",
+      "strength": "moderate"
+    },
+    {
+      "id": "low_resources_from_total",
+      "source": "total_resources",
+      "target": "low_school_resources",
+      "polarity": "positive",
+      "description": "Total resources contribute to low-performing school allocation",
+      "strength": "moderate"
+    },
+    {
+      "id": "high_resources_competes_low",
+      "source": "high_school_resources",
+      "target": "low_school_resources",
+      "polarity": "negative",
+      "description": "More resources to high-performing schools means fewer for low-performing schools",
+      "strength": "moderate"
+    },
+    {
+      "id": "performance_gap_to_inequality",
+      "source": "high_school_performance",
+      "target": "inequality_gap",
+      "polarity": "positive",
+      "description": "Higher performance of successful schools increases inequality gap",
+      "strength": "moderate"
+    },
+    {
+      "id": "low_performance_gap_to_inequality",
+      "source": "low_school_performance",
+      "target": "inequality_gap",
+      "polarity": "negative",
+      "description": "Lower performance of struggling schools increases inequality gap",
+      "strength": "moderate"
+    },
+    {
+      "id": "inequality_to_segregation",
+      "source": "inequality_gap",
+      "target": "community_segregation",
+      "polarity": "positive",
+      "description": "Greater inequality drives families to move for better schools",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "2-5 years",
+        "description": "Family relocation decisions take time to implement"
+      }
+    },
+    {
+      "id": "segregation_to_high_performance",
+      "source": "community_segregation",
+      "target": "high_school_performance",
+      "polarity": "positive",
+      "description": "More affluent families in high-performing school areas boost performance",
+      "strength": "moderate"
+    },
+    {
+      "id": "segregation_to_low_performance",
+      "source": "community_segregation",
+      "target": "low_school_performance",
+      "polarity": "negative",
+      "description": "Loss of engaged families from struggling school areas hurts performance",
+      "strength": "moderate"
+    },
+    {
+      "id": "inequality_to_credibility",
+      "source": "inequality_gap",
+      "target": "system_credibility",
+      "polarity": "negative",
+      "description": "Growing inequality reduces public trust in the education system",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "3-5 years",
+        "description": "Public opinion changes slowly as patterns become apparent"
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "high_school_success_loop",
+      "type": "reinforcing",
+      "path": ["high_school_performance", "high_school_resources", "high_school_capability", "high_school_performance"],
+      "label": "Success Reinforcing Loop",
+      "description": "High-performing schools receive more resources, enhancing their capability and further improving performance",
+      "behavior_pattern": "Accelerating advantage for already successful schools",
+      "position": {"x": 500, "y": 150},
+      "is_primary": true
+    },
+    {
+      "id": "low_school_decline_loop",
+      "type": "reinforcing",
+      "path": ["low_school_performance", "low_school_resources", "low_school_capability", "low_school_performance"],
+      "label": "Failure Reinforcing Loop",
+      "description": "Low-performing schools receive fewer resources, reducing their capability and further worsening performance",
+      "behavior_pattern": "Accelerating decline for struggling schools",
+      "position": {"x": 500, "y": 350},
+      "is_primary": true
+    },
+    {
+      "id": "segregation_amplification_loop",
+      "type": "reinforcing",
+      "path": ["high_school_performance", "inequality_gap", "community_segregation", "high_school_performance"],
+      "label": "Segregation Amplification Loop",
+      "description": "Better school performance increases inequality, driving segregation that further improves high-performing schools",
+      "behavior_pattern": "Community segregation that amplifies school performance differences",
+      "position": {"x": 750, "y": 300},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "resource_equity",
+      "target_type": "system",
+      "target_id": "total_resources",
+      "leverage_level": 6,
+      "title": "Implement Resource Equity Policies",
+      "description": "Change resource allocation from performance-based to need-based or equity-based distribution",
+      "intervention_strategies": [
+        "Weighted funding formulas that give more resources to struggling schools",
+        "Baseline resource guarantees regardless of performance",
+        "Targeted investment in high-need schools"
+      ],
+      "expected_impact": "Breaks the reinforcing cycles by ensuring struggling schools get adequate resources",
+      "difficulty": "high"
+    },
+    {
+      "id": "performance_metrics",
+      "target_type": "node",
+      "target_id": "high_school_performance",
+      "leverage_level": 4,
+      "title": "Diversify Success Metrics",
+      "description": "Use multiple measures of school success beyond standardized test scores",
+      "intervention_strategies": [
+        "Include growth measures in addition to absolute performance",
+        "Measure school improvement and value-added metrics",
+        "Consider student engagement and well-being indicators"
+      ],
+      "expected_impact": "Reduces emphasis on single performance measure that creates inequality",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "collaborative_networks",
+      "target_type": "edge",
+      "target_id": "high_resources_competes_low",
+      "leverage_level": 5,
+      "title": "Create Collaborative School Networks",
+      "description": "Establish partnerships where successful schools share resources with struggling schools",
+      "intervention_strategies": [
+        "Teacher exchange programs between schools",
+        "Shared professional development across districts",
+        "Mentoring relationships between high and low-performing schools"
+      ],
+      "expected_impact": "Transforms competition into collaboration, sharing advantages",
+      "difficulty": "moderate"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continue_current_system",
+      "title": "Continue Performance-Based Allocation",
+      "description": "District maintains current policy of allocating resources based on test performance",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "high_performance_to_resources",
+          "change_description": "Performance-based allocation continues and intensifies"
+        }
+      ],
+      "predicted_outcomes": "Increasing inequality between schools, community segregation, and loss of public confidence in education system"
+    },
+    {
+      "id": "equity_intervention",
+      "title": "Implement Equity-Based Funding",
+      "description": "District changes to need-based resource allocation with extra support for struggling schools",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "low_school_resources",
+          "change_description": "Low-performing schools receive additional targeted resources"
+        }
+      ],
+      "predicted_outcomes": "Gradual improvement in struggling schools, reduced inequality gap, improved system credibility"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why does rewarding successful schools with more resources seem logical at first?",
+      "How do the reinforcing loops create a 'rich get richer' dynamic in education?",
+      "What role do delays play in making this problem difficult to recognize?",
+      "How might community segregation amplify educational inequality?",
+      "What would be the trade-offs of implementing equity-based funding?"
+    ],
+    "key_insights": [
+      "Performance-based resource allocation can increase rather than decrease inequality",
+      "Success to the successful creates two reinforcing loops that amplify initial differences",
+      "Resource competition makes one group's success come at another's expense",
+      "System-wide credibility suffers when inequality becomes too extreme",
+      "Breaking these patterns requires changing resource allocation rules"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Rewarding high performance with more resources always improves overall system performance",
+        "correction": "While this may improve top performers, it can systematically undermine struggling schools and reduce overall system effectiveness"
+      },
+      {
+        "misconception": "Schools that get more resources perform better simply because they work harder",
+        "correction": "Additional resources create genuine capability advantages that make better performance easier to achieve"
+      }
+    ],
+    "extension_activities": [
+      "Research your local school district's funding formula and resource allocation",
+      "Compare educational outcomes in districts with different funding approaches",
+      "Interview educators about how resource constraints affect their ability to serve students"
+    ],
+    "related_concepts": [
+      "Limits to Growth",
+      "Tragedy of the Commons",
+      "Shifting the Burden",
+      "Systems Leverage Points"
+    ]
+  }
+}
