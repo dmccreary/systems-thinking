@@ -25,16 +25,16 @@ Here is a summary of our examples of the Fixes that Fail archetype:
 
 ## Educational Examples
 
-1. [Grade Inflation](./grade-inflation.md)
-2. [Banning Books](./banning-books.md)
-2. [Cutting STEM](./cutting-stem.md)
-3. [AI Training](./edu-ai-training.md)
-4. [Banning AI](./banning-ai.md)
+1. [Grade Inflation](./grade-inflation/index.md)
+2. [Banning Books](./banning-books/index.md)
+2. [Cutting STEM](./cutting-stem/index.md)
+3. [AI Training](./edu-ai-training/index.md)
+4. [Banning AI](./banning-ai/index.md)
 
 ## General Business Examples
 
-1. [Corporate Layoffs](layoffs.md)
-2. [Mandated Return to Office](./return-to-office.md)
+1. [Corporate Layoffs](layoffs/index.md)
+2. [Mandated Return to Office](./return-to-office/index.md)
 
 ## Healthcare Examples
 
@@ -42,5 +42,5 @@ Here is a summary of our examples of the Fixes that Fail archetype:
 
 ## Government Examples
 
-1. [Traffic Congestion](./traffic-congestion.md)
-2. [Security Theater](./security-theater.md)
+1. [Traffic Congestion](./traffic-congestion/index.md)
+2. [Security Theater](./security-theater/index.md)
