@@ -31,7 +31,7 @@ nav:
     - Introduction to Archetypes: archetypes/intro-archetypes.md
     - Tragedy of the Commons: archetypes/commons.md
     - Alternative Tragedy of Commons: archetypes/tragedy-of-the-commons.md
-    - The AI Flywheel: archetypes/ai-flywheel.md
+    - The AI Flywheel: archetypes/success-to-the-successful/ai-flywheel/index.md
     - Concept Standards: archetypes/concept-standards.md
     - Search and Reuse: archetypes/search-and-reuse.md
 
@@ -69,6 +69,21 @@ nav:
       - Social Media: archetypes/limits-to-growth/social-media.md
       - Steam Engines: archetypes/limits-to-growth/steam-engines.md
       - Student Activity Overcommitment: archetypes/limits-to-growth/student-activity-overcommittment.md
+
+    - Success to the Successful:
+      - Introduction: archetypes/success-to-the-successful/index.md
+      - AI Flywheel: archetypes/success-to-the-successful/ai-flywheel/index.md
+      - Educational Funding: archetypes/success-to-the-successful/educational-funding.md
+      - Healthcare Access: archetypes/success-to-the-successful/healthcare-access.md
+      - Research Funding: archetypes/success-to-the-successful/research-funding.md
+      - Social Media: archetypes/success-to-the-successful/social-media.md
+      - Sports Development: archetypes/success-to-the-successful/sports-development.md
+      - Technology Platform: archetypes/success-to-the-successful/technology-platform.md
+      - Venture Capital: archetypes/success-to-the-successful/venture-capital.md
+      - Wealth Inequality: archetypes/success-to-the-successful/wealth-inequality.md
+      # - College Rankings: archetypes/success-to-the-successful/college-rankings.md
+      # - Political Polarization: archetypes/success-to-the-successful/political-polarization.md
+
   # - Render Tests:
   #  - render-tests/mermaid-test.md
   #  - render-tests/state-diagram.md
