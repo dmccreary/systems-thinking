@@ -25,6 +25,7 @@ nav:
 
   - Part 2 Archetypes:
     - Introduction: archetypes/index.md
+
     - Tragedy of the Commons: 
       - Intro: archetypes/tragedy-of-the-commons/index.md
       - Classic Story: archetypes/tragedy-of-the-commons/classic-toc.md
@@ -36,51 +37,51 @@ nav:
     - Search and Reuse: archetypes/search-and-reuse.md
 
     - Fixes that Fail:
-      - Overview: archetypes/fixes-that-fail/index.md
+      - Introduction: archetypes/fixes-that-fail/index.md
       - Banning AI: archetypes/fixes-that-fail/banning-ai/index.md
       - Banning Books:
-          - Intro: archetypes/fixes-that-fail/banning-books/index.md
+          - Introduction: archetypes/fixes-that-fail/banning-books/index.md
           - Causal Diagram: archetypes/fixes-that-fail/banning-books/cld-generation.md
-      - Cutting Coding: archetypes/fixes-that-fail/cutting-coding.md
-      - Cutting STEM: archetypes/fixes-that-fail/cutting-stem.md
+      - Cutting Coding: archetypes/fixes-that-fail/cutting-coding/index.md
+      - Cutting STEM: archetypes/fixes-that-fail/cutting-stem/index.md
       - Cutting AI Training: 
-          - Intro: archetypes/fixes-that-fail/edu-ai-training/index.md
+          - Introduction: archetypes/fixes-that-fail/edu-ai-training/index.md
           - Causal Diagram: archetypes/fixes-that-fail/cutting-ai-training/cld-generation.md
-      - Grade Inflation: archetypes/fixes-that-fail/grade-inflation.md
-      - Layoffs: archetypes/fixes-that-fail/layoffs.md
-      - Open Offices: archetypes/fixes-that-fail/open-offices.md
-      - Painkillers: archetypes/fixes-that-fail/painkillers.md
-      - Return to Office: archetypes/fixes-that-fail/return-to-office.md
-      - Security Theater: archetypes/fixes-that-fail/security-theater.md
-      - Teach to Test: archetypes/fixes-that-fail/teach-to-the-test.md
-      - Traffic Congestion: archetypes/fixes-that-fail/traffic-congestion.md
-      - Zero Tolerance: archetypes/fixes-that-fail/zero-tolerance.md
+      - Grade Inflation: archetypes/fixes-that-fail/grade-inflation/index.md
+      - Layoffs: archetypes/fixes-that-fail/layoffs/index.md
+      - Open Offices: archetypes/fixes-that-fail/open-offices/index.md
+      - Painkillers: archetypes/fixes-that-fail/painkillers/index.md
+      - Return to Office: archetypes/fixes-that-fail/return-to-office/index.md
+      - Security Theater: archetypes/fixes-that-fail/security-theater/index.md
+      - Teach to Test: archetypes/fixes-that-fail/teach-to-the-test/index.md
+      - Traffic Congestion: archetypes/fixes-that-fail/traffic-congestion/index.md
+      - Zero Tolerance: archetypes/fixes-that-fail/zero-tolerance/index.md
     
     - Limits to Growth:
       - Introduction: archetypes/limits-to-growth/index.md
-      - Antibiotic Effectiveness: archetypes/limits-to-growth/antibiotic-effectiveness.md
-      - Bacteria Growth: archetypes/limits-to-growth/bacteria.md
-      - Business Expansion: archetypes/limits-to-growth/business-expansion.md
-      - Gaming Skills: archetypes/limits-to-growth/gaming-skills.md
-      - Humans on Earth: archetypes/limits-to-growth/humans-on-earth.md
-      - Intensive Agriculture: archetypes/limits-to-growth/intensive-agricultuer.md
-      - LLMs: archetypes/limits-to-growth/llms.md
-      - Moore's Law: archetypes/limits-to-growth/moores-law.md
-      - Social Media: archetypes/limits-to-growth/social-media.md
-      - Steam Engines: archetypes/limits-to-growth/steam-engines.md
-      - Student Activity Overcommitment: archetypes/limits-to-growth/student-activity-overcommittment.md
+      - Antibiotic Effectiveness: archetypes/limits-to-growth/antibiotic-effectiveness/index.md
+      - Bacteria Growth: archetypes/limits-to-growth/bacteria/index.md
+      - Business Expansion: archetypes/limits-to-growth/business-expansion/index.md
+      - Gaming Skills: archetypes/limits-to-growth/gaming-skills/index.md
+      - Humans on Earth: archetypes/limits-to-growth/humans-on-earth/index.md
+      - Intensive Agriculture: archetypes/limits-to-growth/intensive-agriculture/index.md
+      - LLMs: archetypes/limits-to-growth/llms/index.md
+      - Moore's Law: archetypes/limits-to-growth/moores-law/index.md
+      - Social Media: archetypes/limits-to-growth/social-media/index.md
+      - Steam Engines: archetypes/limits-to-growth/steam-engines/index.md
+      - Student Activity Overcommitment: archetypes/limits-to-growth/student-activity-overcommittment/index.md
 
     - Success to the Successful:
-      - Introduction: archetypes/success-to-the-successful/index.md
-      - AI Flywheel: archetypes/success-to-the-successful/ai-flywheel/index.md
-      - Educational Funding: archetypes/success-to-the-successful/educational-funding.md
-      - Healthcare Access: archetypes/success-to-the-successful/healthcare-access.md
-      - Research Funding: archetypes/success-to-the-successful/research-funding.md
-      - Social Media: archetypes/success-to-the-successful/social-media.md
-      - Sports Development: archetypes/success-to-the-successful/sports-development.md
-      - Technology Platform: archetypes/success-to-the-successful/technology-platform.md
-      - Venture Capital: archetypes/success-to-the-successful/venture-capital.md
-      - Wealth Inequality: archetypes/success-to-the-successful/wealth-inequality.md
+      - Introduction:        archetypes/success-to-the-successful/index.md
+      - AI Flywheel:         archetypes/success-to-the-successful/ai-flywheel/index.md
+      - Educational Funding: archetypes/success-to-the-successful/educational-funding/index.md
+      - Healthcare Access:   archetypes/success-to-the-successful/healthcare-access/index.md
+      - Research Funding:    archetypes/success-to-the-successful/research-funding/index.md
+      - Social Media:        archetypes/success-to-the-successful/social-media/index.md
+      - Sports Development:  archetypes/success-to-the-successful/sports-development/index.md
+      - Technology Platform: archetypes/success-to-the-successful/technology-platform/index.md
+      - Venture Capital:     archetypes/success-to-the-successful/venture-capital/index.md
+      - Wealth Inequality:   archetypes/success-to-the-successful/wealth-inequality/index.md
       # - College Rankings: archetypes/success-to-the-successful/college-rankings.md
       # - Political Polarization: archetypes/success-to-the-successful/political-polarization.md
 
@@ -131,11 +132,6 @@ nav:
   - References: references.md
   - License: license.md
   - Contact: contact.md
-
-site_description: 'Book on Graphs and Systems Thinking'
-site_author: 'Dan McCreary'
-repo_name: 'GitHub Repo'
-repo_url: 'https://github.com/dmccreary/systems-thinking'
 
 edit_uri: 'blob/master/docs'
 theme:
