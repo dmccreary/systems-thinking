@@ -3,9 +3,17 @@ let cldData = null;
 let nodes, edges;
 
 async function loadExamplesList() {
+    // TODO: Change this to list all the files in the examples directory
+    // Only load files that end id the suffis "-cld.json"
+    // For now, hardcode the list
+    // You can add more examples by adding more JSON files to the examples directory
+    // and adding them to this list
     const examples = [
+        { id: 'ai-flywheel-v1', title: 'AI Flywheel V1' },
+        { id: 'ai-training', title: 'AI Training Example' },
         { id: 'banning-books', title: 'Book Banning Example' },
-        { id: 'ai-training', title: 'AI Training Example' }
+        { id: 'educational-funding', title: 'Educational Funding' },
+        { id: 'technology-platform', title: 'Technology Platform Growth'}
     ];
     return examples;
 }
