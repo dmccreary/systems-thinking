@@ -79,6 +79,11 @@
           "maxItems": 20,
           "uniqueItems": true,
           "description": "Tags for categorizing and searching CLDs"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 3000,
+          "description": "Additional notes or comments about the CLD"
         }
       }
     },
