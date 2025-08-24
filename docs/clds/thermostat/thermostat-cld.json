@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "id": "thermostat-balancing-loop",
+    "title": "Thermostat Temperature Control System",
+    "archetype": "limits-to-growth",
+    "description": "A simple thermostat system that maintains constant room temperature through a balancing feedback loop. The system automatically adjusts heating output based on the difference between actual and desired temperature.",
+    "learning_objectives": [
+      "Understand how balancing loops create goal-seeking behavior",
+      "Recognize the role of delays in feedback systems",
+      "Identify the components of a basic control system",
+      "Explore how negative feedback maintains system stability"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-24T00:00:00Z",
+    "updated_date": "2025-08-24T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["control-systems", "balancing-loop", "thermostat", "temperature", "feedback", "homeostasis"],
+    "notes": "Node Placement Strategy: The diagram uses a clockwise circular layout to clearly show the balancing loop flow. Starting from the top-left with Room Temperature (200,100), the flow moves clockwise: Temperature Gap at top-right (600,100), Thermostat Signal at bottom-right (600,400), Heater Output at bottom-left (200,400), and back to Room Temperature. The Desired Temperature setpoint is positioned centrally (400,50) as it influences but is not part of the main feedback loop. This circular arrangement makes it easy to trace the cause-and-effect relationships and visualize how the system self-regulates. The positioning emphasizes the cyclical nature of the feedback process and helps students understand how each element affects the next in sequence."
+  },
+  "nodes": [
+    {
+      "id": "room_temperature",
+      "label": "Room Temperature",
+      "position": {"x": 200, "y": 100},
+      "type": "variable",
+      "description": "The actual temperature measured in the room",
+      "examples": ["68°F", "20°C", "Ambient temperature"],
+      "measurement": "Temperature in degrees Fahrenheit or Celsius"
+    },
+    {
+      "id": "desired_temperature",
+      "label": "Desired Temperature Setpoint",
+      "position": {"x": 400, "y": 50},
+      "type": "condition",
+      "description": "The target temperature set by the user on the thermostat",
+      "examples": ["72°F setpoint", "22°C target", "Thermostat setting"],
+      "measurement": "Temperature setpoint in degrees"
+    },
+    {
+      "id": "temperature_gap",
+      "label": "Temperature Gap",
+      "position": {"x": 600, "y": 100},
+      "type": "variable",
+      "description": "The difference between desired temperature and actual room temperature",
+      "examples": ["4°F below setpoint", "Temperature deficit", "Heating need"],
+      "measurement": "Temperature difference in degrees"
+    },
+    {
+      "id": "thermostat_signal",
+      "label": "Thermostat Control Signal",
+      "position": {"x": 600, "y": 400},
+      "type": "variable",
+      "description": "The control signal sent from thermostat to heater based on temperature gap",
+      "examples": ["Heat ON command", "Power level setting", "Control voltage"],
+      "measurement": "Binary on/off signal or power level percentage"
+    },
+    {
+      "id": "heater_output",
+      "label": "Heater Heat Output",
+      "position": {"x": 200, "y": 400},
+      "type": "variable",
+      "description": "The amount of heat energy produced by the heating system",
+      "examples": ["BTUs per hour", "Kilowatts of heat", "Thermal energy"],
+      "measurement": "Heat output in BTUs/hour or kilowatts"
+    }
+  ],
+  "edges": [
+    {
+      "id": "setpoint_to_gap",
+      "source": "desired_temperature",
+      "target": "temperature_gap",
+      "polarity": "positive",
+      "label": "sets target for",
+      "description": "Higher desired temperature increases the temperature gap when room is cool",
+      "strength": "strong"
+    },
+    {
+      "id": "room_temp_to_gap",
+      "source": "room_temperature",
+      "target": "temperature_gap",
+      "polarity": "negative",
+      "label": "reduces",
+      "description": "Higher room temperature reduces the temperature gap below the setpoint",
+      "strength": "strong"
+    },
+    {
+      "id": "gap_to_signal",
+      "source": "temperature_gap",
+      "target": "thermostat_signal",
+      "polarity": "positive",
+      "label": "triggers",
+      "description": "Larger temperature gap triggers stronger thermostat control signal",
+      "strength": "strong"
+    },
+    {
+      "id": "signal_to_heater",
+      "source": "thermostat_signal",
+      "target": "heater_output",
+      "polarity": "positive",
+      "label": "controls",
+      "description": "Thermostat signal directly controls heater output level",
+      "strength": "strong"
+    },
+    {
+      "id": "heater_to_temp",
+      "source": "heater_output",
+      "target": "room_temperature",
+      "polarity": "positive",
+      "label": "increases",
+      "description": "Higher heater output increases room temperature",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "5-15 minutes",
+        "description": "Heat takes time to warm the room and be detected by thermostat sensor"
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "temperature_control_loop",
+      "type": "balancing",
+      "path": ["room_temperature", "temperature_gap", "thermostat_signal", "heater_output", "room_temperature"],
+      "label": "Temperature Control Loop",
+      "description": "The main balancing loop that maintains room temperature at the desired setpoint through automatic heating adjustments",
+      "behavior_pattern": "Goal-seeking behavior that stabilizes room temperature around the setpoint",
+      "dominance_conditions": "Always active when thermostat is functioning and there is a temperature gap",
+      "position": {"x": 400, "y": 250},
+      "is_primary": true
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "setpoint_adjustment",
+      "target_type": "node",
+      "target_id": "desired_temperature",
+      "leverage_level": 4,
+      "title": "Adjust Temperature Setpoint",
+      "description": "Changing the desired temperature setpoint directly affects the system's target goal",
+      "intervention_strategies": [
+        "Raise setpoint to increase heating",
+        "Lower setpoint to reduce heating",
+        "Use programmable scheduling for efficiency"
+      ],
+      "expected_impact": "Immediate change in system behavior toward new temperature goal",
+      "difficulty": "low",
+      "examples": ["Turning thermostat up in winter", "Programming night setback"]
+    },
+    {
+      "id": "sensor_calibration",
+      "target_type": "edge",
+      "target_id": "room_temp_to_gap",
+      "leverage_level": 3,
+      "title": "Calibrate Temperature Sensor",
+      "description": "Ensuring accurate temperature measurement improves system control precision",
+      "intervention_strategies": [
+        "Regular sensor calibration checks",
+        "Proper sensor placement away from heat sources",
+        "Upgrade to more accurate sensors"
+      ],
+      "expected_impact": "More precise temperature control and reduced temperature swings",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "system_delay_management",
+      "target_type": "edge",
+      "target_id": "heater_to_temp",
+      "leverage_level": 2,
+      "title": "Minimize System Delays",
+      "description": "Reducing delays in heating response improves system stability and efficiency",
+      "intervention_strategies": [
+        "Improve room insulation for faster response",
+        "Use faster-response heating elements",
+        "Optimize thermostat placement for better sensing"
+      ],
+      "expected_impact": "Reduced temperature overshoot and improved efficiency",
+      "difficulty": "high"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cold_startup",
+      "title": "Cold Room Startup",
+      "description": "System behavior when starting with room temperature significantly below setpoint",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "temperature_gap",
+          "change_description": "Large initial temperature gap of 10-15 degrees below setpoint"
+        }
+      ],
+      "predicted_outcomes": "Continuous heating until room temperature approaches setpoint, then cycling behavior as gap diminishes"
+    },
+    {
+      "id": "setpoint_change",
+      "title": "Setpoint Increase",
+      "description": "User raises thermostat setpoint during operation",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "desired_temperature",
+          "change_description": "Setpoint increased by 5 degrees"
+        }
+      ],
+      "predicted_outcomes": "Immediate increase in temperature gap triggers heating until new setpoint is reached"
+    },
+    {
+      "id": "external_heat_gain",
+      "title": "External Heat Source",
+      "description": "Additional heat source (sunlight, fireplace) affects room temperature",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "room_temperature",
+          "change_description": "External heat source adds warmth beyond heater output"
+        }
+      ],
+      "predicted_outcomes": "System reduces or stops heating as room temperature exceeds setpoint, demonstrating automatic adjustment"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why is this called a 'balancing' loop rather than a 'reinforcing' loop?",
+      "What would happen if there were no delay between heater output and temperature change?",
+      "How does the thermostat 'know' when to turn the heater on or off?",
+      "What role does the temperature gap play in system control?",
+      "How might delays in the system cause temperature overshoot?"
+    ],
+    "key_insights": [
+      "Balancing loops create goal-seeking behavior that maintains stability",
+      "Delays in feedback systems can cause oscillations or overshoot",
+      "The temperature gap acts as the driving force for system action",
+      "Negative feedback automatically corrects deviations from the goal",
+      "Simple control systems demonstrate fundamental systems principles"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "The thermostat directly controls room temperature",
+        "correction": "The thermostat controls the heater, which then affects room temperature through a delayed process"
+      },
+      {
+        "misconception": "Turning the thermostat higher makes the room heat up faster",
+        "correction": "The thermostat setpoint only determines the target temperature, not the heating rate"
+      },
+      {
+        "misconception": "The system should respond instantly to temperature changes",
+        "correction": "Delays are natural in physical systems and actually necessary for stable operation"
+      }
+    ],
+    "extension_activities": [
+      "Observe and record temperature cycles in your own home",
+      "Experiment with different thermostat settings and timing",
+      "Compare simple on/off thermostats with programmable ones",
+      "Research how smart thermostats improve on basic control systems"
+    ],
+    "related_concepts": [
+      "Homeostasis in biological systems",
+      "Control theory and cybernetics",
+      "Balancing loops in other systems",
+      "Delays and oscillations in feedback systems",
+      "Goal-seeking behavior"
+    ]
+  }
+}
