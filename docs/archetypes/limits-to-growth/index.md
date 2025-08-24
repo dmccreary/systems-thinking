@@ -8,35 +8,35 @@ resource management, and why systems can't grow indefinitely.
 
 ### Human Population on Planet Earth
 
-[Humans on Earth](humans-on-earth.md)
+[Humans on Earth](humans-on-earth/index.md)
 
 ### Bacterial colonies
 
-[Bacterial Colonies](./bacteria.md)
+[Bacterial Colonies](./bacteria/index.md)
 
 ### Moore's Law
 
-[Moore's Law](./moores-law.md)
+[Moore's Law](./moores-law/index.md)
 
 ### AI Capabilities
 
-[Large Language Models](./llms.md)
+[Large Language Models](./llms/index.md)
 
 ### Business Expansion
 
-[Business Expansion](./business-expansion.md)
+[Business Expansion](./business-expansion/index.md)
 
 ## Computer Gaming Skills
 
-[Computer Gaming Skills](./gaming-skills.md)
+[Computer Gaming Skills](./gaming-skills/index.md)
 
 ## Intensive Agriculture
 
-[Intensive Agriculture](./intensive-agricultuer.md)
+[Intensive Agriculture](./intensive-agricultuer/index.md)
 
 ## Social Media
 
-[Social Media](./social-media.md)
+[Social Media](./social-media/index.md)
 
 ## Other Examples
 
