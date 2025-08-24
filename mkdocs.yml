@@ -45,7 +45,7 @@ nav:
       - Cutting Coding: archetypes/fixes-that-fail/cutting-coding/index.md
       - Cutting STEM: archetypes/fixes-that-fail/cutting-stem/index.md
       - Cutting AI Training: 
-          - Introduction: archetypes/fixes-that-fail/edu-ai-training/index.md
+          - Introduction: archetypes/fixes-that-fail/cutting-ai-training/index.md
           - Causal Diagram: archetypes/fixes-that-fail/cutting-ai-training/cld-generation.md
       - Grade Inflation: archetypes/fixes-that-fail/grade-inflation/index.md
       - Layoffs: archetypes/fixes-that-fail/layoffs/index.md
@@ -74,7 +74,9 @@ nav:
     - Success to the Successful:
       - Introduction:        archetypes/success-to-the-successful/index.md
       - AI Flywheel:         archetypes/success-to-the-successful/ai-flywheel/index.md
-      - Educational Funding: archetypes/success-to-the-successful/educational-funding/index.md
+      - Educational Funding: 
+        - Introduction: archetypes/success-to-the-successful/educational-funding/index.md
+        - CLD Test Results: archetypes/success-to-the-successful/educational-funding/cld-test-results.md
       - Healthcare Access:   archetypes/success-to-the-successful/healthcare-access/index.md
       - Research Funding:    archetypes/success-to-the-successful/research-funding/index.md
       - Social Media:        archetypes/success-to-the-successful/social-media/index.md
@@ -94,6 +96,12 @@ nav:
   #- Pt 3 Case Studies:
   # - Part 3 Case Studies:
   #   - Chapter 9: case-studies/healthcare.md
+  - Causal Loop Diagrams:
+    - Introduction: clds/index.md
+    - Bank Balance: clds/bank-balance/index.md
+    - Theromstat: clds/thermostat/index.md
+ 
+  
   - Increasing Maturity:
     - Introduction: cmm-strategies/index.md
     - Microstrategies: cmm-strategies/microstrategies.md
