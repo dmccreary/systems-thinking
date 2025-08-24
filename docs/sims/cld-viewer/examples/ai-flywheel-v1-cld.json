@@ -3,7 +3,7 @@
     "id": "ai-flywheel-simple",
     "title": "AI Flywheel: Simple Four-Node Model",
     "archetype": "growth-and-underinvestment",
-    "description": "A simplified representation of the AI Flywheel showing how data feeds into models, which make predictions that generate feedback, creating more data in a continuous reinforcing loop.",
+    "description": "A simplified representation of the AI Flywheel with a single reinforcing loop centered at (300,300) showing how data feeds into models, which make predictions that generate feedback, creating more data in a continuous reinforcing loop.",
     "learning_objectives": [
       "Understand the basic AI Flywheel reinforcing loop structure",
       "Recognize how each component feeds into the next in sequence",
@@ -13,8 +13,9 @@
     "version": "1.0.0",
     "created_date": "2025-08-24T00:00:00Z",
     "updated_date": "2025-08-24T00:00:00Z",
-    "author": "Systems Thinking Education Team",
-    "tags": ["ai", "flywheel", "reinforcing-loop", "machine-learning", "feedback"]
+    "author": "Dan McCreary",
+    "tags": ["ai", "flywheel", "reinforcing-loop", "machine-learning", "feedback"],
+    "notes": "This CLD is designed for educational purposes to illustrate the fundamental components and interactions in an AI Flywheel system. It can be used in workshops, classrooms, or self-study to help learners grasp the concepts of feedback loops and system dynamics in AI applications."
   },
   "nodes": [
     {

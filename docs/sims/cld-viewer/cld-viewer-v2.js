@@ -72,10 +72,11 @@ function initializeNetwork() {
                 highlight: '#198754'
             },
             width: 2,
+            // Enhanced smooth curves for better circular appearance
             smooth: {
+                enabled: true,
                 type: 'curvedCW',
-                // changed from 0.3 to 0.5 to make curves more pronounced for two node loops
-                roundness: 0.5
+                roundness: 0.5  // Increased from 0.2 to 0.5 for more pronounced curves
             },
             font: {
                 size: 48,
@@ -113,15 +114,59 @@ function loadCLD(data) {
             originalData: node
         }));
 
-        const visEdges = data.edges.map(edge => ({
-            id: edge.id,
-            from: edge.source,
-            to: edge.target,
-            label: edge.polarity === 'positive' ? '+' : '-',
-            color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
-            title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
-            originalData: edge
-        }));
+        // Enhanced edge creation with better curve handling
+        const visEdges = data.edges.map((edge, index) => {
+            // Check if this edge is part of a two-node loop (common in simple CLDs)
+            const reverseEdge = data.edges.find(e => 
+                e.source === edge.target && e.target === edge.source
+            );
+            
+            let smoothSettings = {
+                enabled: true,
+                type: 'curvedCW',
+                roundness: 0.5
+            };
+            
+            // If there's a reverse edge, force one curve up and one curve down
+            if (reverseEdge) {
+                const isFirstEdge = data.edges.indexOf(edge) < data.edges.indexOf(reverseEdge);
+                
+                // Get node positions to determine best curve direction
+                const sourceNode = data.nodes.find(n => n.id === edge.source);
+                const targetNode = data.nodes.find(n => n.id === edge.target);
+                
+                // Determine if nodes are arranged horizontally or vertically
+                const isHorizontal = Math.abs(sourceNode.position.x - targetNode.position.x) > 
+                                   Math.abs(sourceNode.position.y - targetNode.position.y);
+                
+                if (isHorizontal) {
+                    // For horizontal layouts, first edge goes up, second goes down
+                    smoothSettings = {
+                        enabled: true,
+                        type: isFirstEdge ? 'curvedCW' : 'curvedCCW',
+                        roundness: 0.8
+                    };
+                } else {
+                    // For vertical layouts, alternate left/right curves
+                    smoothSettings = {
+                        enabled: true,
+                        type: isFirstEdge ? 'curvedCCW' : 'curvedCW',
+                        roundness: 0.8
+                    };
+                }
+            }
+
+            return {
+                id: edge.id,
+                from: edge.source,
+                to: edge.target,
+                label: edge.polarity === 'positive' ? '+' : '-',
+                color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
+                title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
+                originalData: edge,
+                smooth: smoothSettings
+            };
+        });
 
         if (data.loops) {
             data.loops.forEach(loop => {

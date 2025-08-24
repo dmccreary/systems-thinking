@@ -72,10 +72,11 @@ function initializeNetwork() {
                 highlight: '#198754'
             },
             width: 2,
+            // Enhanced smooth curves for better circular appearance
             smooth: {
+                enabled: true,
                 type: 'curvedCW',
-                // changed from 0.3 to 0.5 to make curves more pronounced for two node loops
-                roundness: 0.5
+                roundness: 0.5  // Increased from 0.2 to 0.5 for more pronounced curves
             },
             font: {
                 size: 48,
@@ -113,15 +114,51 @@ function loadCLD(data) {
             originalData: node
         }));
 
-        const visEdges = data.edges.map(edge => ({
-            id: edge.id,
-            from: edge.source,
-            to: edge.target,
-            label: edge.polarity === 'positive' ? '+' : '-',
-            color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
-            title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
-            originalData: edge
-        }));
+        // Enhanced edge creation with better curve handling
+        const visEdges = data.edges.map((edge, index) => {
+            // Check if this edge is part of a two-node loop (common in simple CLDs)
+            const reverseEdge = data.edges.find(e => 
+                e.source === edge.target && e.target === edge.source
+            );
+            
+            let smoothSettings = {
+                enabled: true,
+                type: 'curvedCW',
+                roundness: 0.5
+            };
+            
+            // If there's a reverse edge, force one curve up and one curve down
+            if (reverseEdge) {
+                const isFirstEdge = data.edges.indexOf(edge) < data.edges.indexOf(reverseEdge);
+                
+                if (isFirstEdge) {
+                    // First edge - curve upward
+                    smoothSettings = {
+                        enabled: true,
+                        type: 'curvedCW',
+                        roundness: 0.6
+                    };
+                } else {
+                    // Second edge - try horizontal approach to force different path
+                    smoothSettings = {
+                        enabled: true,
+                        type: 'horizontal',
+                        roundness: 0.6
+                    };
+                }
+            }
+
+            return {
+                id: edge.id,
+                from: edge.source,
+                to: edge.target,
+                label: edge.polarity === 'positive' ? '+' : '-',
+                color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
+                title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
+                originalData: edge,
+                smooth: smoothSettings
+            };
+        });
 
         if (data.loops) {
             data.loops.forEach(loop => {

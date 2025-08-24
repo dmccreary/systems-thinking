@@ -1,3 +1,3 @@
 # Causal Loop Diagram Viewer
 
-[Run the CLD Viewer Vis.js Program](main.html)
+[Run the CLD Viewer](main.html)

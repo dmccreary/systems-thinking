@@ -72,10 +72,11 @@ function initializeNetwork() {
                 highlight: '#198754'
             },
             width: 2,
+            // Enhanced smooth curves for better circular appearance
             smooth: {
+                enabled: true,
                 type: 'curvedCW',
-                // changed from 0.3 to 0.5 to make curves more pronounced for two node loops
-                roundness: 0.5
+                roundness: 0.5  // Increased from 0.2 to 0.5 for more pronounced curves
             },
             font: {
                 size: 48,
@@ -113,15 +114,68 @@ function loadCLD(data) {
             originalData: node
         }));
 
-        const visEdges = data.edges.map(edge => ({
-            id: edge.id,
-            from: edge.source,
-            to: edge.target,
-            label: edge.polarity === 'positive' ? '+' : '-',
-            color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
-            title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
-            originalData: edge
-        }));
+        // Enhanced edge creation with better curve handling
+        const visEdges = data.edges.map((edge, index) => {
+            // Check if this edge is part of a two-node loop (common in simple CLDs)
+            const reverseEdge = data.edges.find(e => 
+                e.source === edge.target && e.target === edge.source
+            );
+            
+            let smoothSettings = {
+                enabled: true,
+                type: 'curvedCW',
+                roundness: 0.5
+            };
+            
+            // If there's a reverse edge, create distinct curves by manipulating the edge differently
+            if (reverseEdge) {
+                const edges = data.edges;
+                const currentIndex = edges.indexOf(edge);
+                const reverseIndex = edges.indexOf(reverseEdge);
+                const isFirstEdge = currentIndex < reverseIndex;
+                
+                // For the first edge, use a large positive curve
+                // For the second edge, use a large negative curve to force opposite direction
+                if (isFirstEdge) {
+                    smoothSettings = {
+                        enabled: true,
+                        type: 'cubicBezier',
+                        roundness: 0.8
+                    };
+                } else {
+                    smoothSettings = {
+                        enabled: true,
+                        type: 'cubicBezier', 
+                        roundness: -0.8  // Large negative value to force downward curve
+                    };
+                }
+            }
+            
+            const baseEdge = {
+                id: edge.id,
+                from: edge.source,
+                to: edge.target,
+                label: edge.polarity === 'positive' ? '+' : '-',
+                color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
+                title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
+                originalData: edge,
+                smooth: smoothSettings
+            };
+            
+            // If vis.js still doesn't respect negative roundness, add a manual offset
+            if (reverseEdge && data.edges.indexOf(edge) >= data.edges.indexOf(reverseEdge)) {
+                // Force this edge to use a different visual approach
+                baseEdge.chosen = {
+                    edge: function(values, id, selected, hovering) {
+                        values.shadowSize = 0;
+                        values.shadowX = 0;
+                        values.shadowY = 15; // Offset to simulate lower curve
+                    }
+                };
+            }
+            
+            return baseEdge;
+        });
 
         if (data.loops) {
             data.loops.forEach(loop => {
