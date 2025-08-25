@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Causal Loop Diagram: Tragedy of the Commons</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                curve: 'basis'
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .mermaid {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #444;
+        }
+        ul {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Causal Loop Diagram: Tragedy of the Commons Archetype</h1>
+    <div class="description">
+        <p>This causal loop diagram (CLD) illustrates the "Tragedy of the Commons" systems archetype using Mermaid syntax. It depicts two actors (A and B) utilizing a shared resource, with reinforcing loops (R1 and R2) driving individual gains and a shared balancing loop (B) representing resource depletion, which ultimately reduces gains for all.</p>
+    </div>
+    <div class="mermaid">
+        graph LR
+            A["A's Activity"] -->|+| AR["Net Gains for A"]
+            AR -->|+| A
+            B["B's Activity"] -->|+| BR["Net Gains for B"]
+            BR -->|+| B
+            A -->|+| T["Total Activity"]
+            B -->|+| T
+            T -->|-| G["Gain per Activity"]
+            G -->|+| AR
+            G -->|+| BR
+
+            subgraph "R1 (Reinforcing Loop for A)"
+                A -- + --> AR -- + --> A
+            end
+
+            subgraph "R2 (Reinforcing Loop for B)"
+                B -- + --> BR -- + --> B
+            end
+
+            subgraph "B (Balancing Loop)"
+                A -- + --> T -- - --> G -- + --> AR -- + --> A
+            end
+    </div>
+    <div class="description">
+        <p><strong>Explanation:</strong></p>
+        <ul>
+            <li><strong>Reinforcing Loops (R1 and R2):</strong> Each actor increases their activity to gain more, creating a virtuous cycle for the individual.</li>
+            <li><strong>Balancing Loop (B):</strong> Total activity depletes the shared resource, reducing the gain per activity, which eventually limits gains for all, though individuals don't immediately feel the full impact.</li>
+            <li><strong>Polarities:</strong> '+' indicates a positive (same direction) causal relationship, '-' indicates a negative (opposite direction) relationship.</li>
+        </ul>
+        <p>This archetype demonstrates how rational individual actions can lead to collective ruin in shared resource systems, such as overfishing, deforestation, or pollution.</p>
+    </div>
+</body>
+</html>
