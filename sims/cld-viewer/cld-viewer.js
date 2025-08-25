@@ -74,8 +74,8 @@ function initializeNetwork() {
             width: 2,
             smooth: {
                 type: 'curvedCW',
-                // changed from 0.3 to 0.5 to make curves more pronounced for two node loops
-                roundness: 0.5
+                // changed from 0.3 to 0.4 to make curves more pronounced for two node loops
+                roundness: 0.4
             },
             font: {
                 size: 48,
@@ -123,6 +123,9 @@ function loadCLD(data) {
             originalData: edge
         }));
 
+        // Load Loops and annotation nodes
+        // Convert loops with R or B in them to special nodes at the center of the loop
+        // Note that the circle shape has a centering bug with the label
         if (data.loops) {
             data.loops.forEach(loop => {
                 if (loop.position) {
@@ -131,16 +134,19 @@ function loadCLD(data) {
                         label: loop.type === 'reinforcing' ? 'R' : 'B',
                         x: loop.position.x,
                         y: loop.position.y,
-                        shape: 'circle',
+                        shape: 'ellipse',
                         size: 30,
                         color: {
                             background: loop.type === 'reinforcing' ? '#dc3545' : '#28a745',
-                            border: '#000000'
+                            border: 'black'
                         },
                         font: {
                             color: 'white',
                             size: 16,
-                            face: 'Arial bold'
+                            face: 'Arial'
+                        },
+                        margin: {
+                            left: Math.round(30 * 0.1)
                         },
                         title: loop.description || '',
                         originalData: loop,
@@ -307,8 +313,30 @@ document.getElementById('file-input').addEventListener('change', function(event)
     }
 });
 
+function getURLParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+async function loadFileFromURL() {
+    const filename = getURLParameter('file');
+    if (filename) {
+        try {
+            // Remove .json extension if it was included in the URL parameter
+            const cleanFilename = filename.replace('.json', '');
+            const data = await loadCLDFromFile(cleanFilename);
+            loadCLD(data);
+        } catch (error) {
+            showError(`Failed to load file from URL parameter: ${error.message}`);
+        }
+    }
+}
+
 window.addEventListener('load', function() {
     initializeNetwork();
     initializeSampleButtons();
     showDefaultDetails();
+    
+    // Check for file parameter in URL and load it
+    loadFileFromURL();
 });
