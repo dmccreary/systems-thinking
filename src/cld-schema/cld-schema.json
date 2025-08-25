@@ -272,6 +272,26 @@
             "maxItems": 5,
             "description": "Evidence or examples supporting this causal relationship"
           },
+          "curve": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["curvedCW", "curvedCCW", "straight", "dynamic", "continuous"],
+                "default": "curvedCW",
+                "description": "Type of curve for the edge visualization"
+              },
+              "roundness": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 1.0,
+                "default": 0.4,
+                "description": "Curve intensity (0.0 = straight, 1.0 = maximum curve)"
+              }
+            },
+            "description": "Visual curve settings for edge display"
+          },
           "style": {
             "type": "object",
             "additionalProperties": false,
