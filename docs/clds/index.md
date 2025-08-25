@@ -7,3 +7,7 @@
 ## Thermostat
 
 [Go to the Thermostat Example](./thermostat/index.md)
+
+## CLD Viewer Tests
+
+[Run the Thermostat CLD Viewer](../sims/cld-viewer/main.html?file=thermostat-cld.json)

@@ -16,3 +16,12 @@
     loops
 
     Have the JavaScript program read in the JSON elements needed and display the causal loop diagram.  Place the title at the top if the diagram and centered.  Use your best judgement about the correct placement algorithm to use.  Allow the user to click on a node or edge and see the details below the drawing area.
+
+!!! prompt
+Please refactor the vis.js JavaScript program at sims/cld-viewer/main.html.
+All the JavaScript for that program is located at sims/cld-viewer/cld-viewer.js
+I want to be able to pass in a URL parameter to the main.html program that has the example name like this:
+
+/sims/cld-viewer/main.html?file=ai-flywheel-v1-cld.json
+
+The program would read the URL parameter `file` and open that file in the examples directory.

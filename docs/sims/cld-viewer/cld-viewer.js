@@ -74,8 +74,8 @@ function initializeNetwork() {
             width: 2,
             smooth: {
                 type: 'curvedCW',
-                // changed from 0.3 to 0.5 to make curves more pronounced for two node loops
-                roundness: 0.5
+                // changed from 0.3 to 0.4 to make curves more pronounced for two node loops
+                roundness: 0.4
             },
             font: {
                 size: 48,
@@ -135,7 +135,7 @@ function loadCLD(data) {
                         size: 30,
                         color: {
                             background: loop.type === 'reinforcing' ? '#dc3545' : '#28a745',
-                            border: '#000000'
+                            border: 'black'
                         },
                         font: {
                             color: 'white',
@@ -307,8 +307,30 @@ document.getElementById('file-input').addEventListener('change', function(event)
     }
 });
 
+function getURLParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+async function loadFileFromURL() {
+    const filename = getURLParameter('file');
+    if (filename) {
+        try {
+            // Remove .json extension if it was included in the URL parameter
+            const cleanFilename = filename.replace('.json', '');
+            const data = await loadCLDFromFile(cleanFilename);
+            loadCLD(data);
+        } catch (error) {
+            showError(`Failed to load file from URL parameter: ${error.message}`);
+        }
+    }
+}
+
 window.addEventListener('load', function() {
     initializeNetwork();
     initializeSampleButtons();
     showDefaultDetails();
+    
+    // Check for file parameter in URL and load it
+    loadFileFromURL();
 });

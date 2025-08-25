@@ -1,5 +1,7 @@
 # A Causal Loop Diagram for a Thermostat
 
+[Run the Thermostat CLD Viewer](../../sims/cld-viewer/main.html?file=thermostat-cld.json)
+
 Here is a causal loop diagram for a simple thermostat system that maintains constant room temperature.
 
 ## The Basic Thermostat Causal Loop Diagram
