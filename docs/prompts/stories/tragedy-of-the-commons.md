@@ -13,5 +13,5 @@
     <summary>Name of Panel 1</summary>
         Please generate a wide-landscape drawing in the style of a graphic novel.  Use a color scheme and design style that reflects a book published in England in 1833.  Work hard to make any characters consistent with prior images.
 
-    In this drawing....
+        In this drawing....
     </detail>

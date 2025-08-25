@@ -121,16 +121,18 @@ The book is broken down into three parts.
 
 ### Part 1: Introduction
 
-**Chapter 1: [Introduction](ch-01-intro.md)** - what was once too expensive is now affordable
+**Chapter 1: [Introduction](./intro/index.md)** - a high-level introduction to systems thinking
 **Chapter 2: [Graphs](ch-02-graph.md)** - Where are enterprise knowledge graphs as why are they central to future organizational strategy
 **Chapter 3: [Systems Thinking](ch-03-systems.md)** - What is Systems Thinking?  Why is a good tool for EKG analysis?
 **Chapter 4: [Graph and Systems Thinking](ch-04-systems-graph.md)** - Applying Systems Thinking to Graph Adoption 
 
-### Part 2: Case Studies
-These will be detailed stories of how teams have used systems thinking to promote graph adoption.
+### Part 2: Causal Loop Diagrams
 
-### Part 3: Advanced Concepts
-We will dive into advanced topics such as graph-based machine learning, cognitive bias and storytelling to promote good systems thinking best practices.
+### Part 3: Archetypes: Examples Systems Thinking
+
+[Systems Thinking Archetypes](./archetypes/index.md)
+
+Archetypes are typical examples we use when learning systems systems thinking.
 
 ## [Glossary](./glossary.md)
 
