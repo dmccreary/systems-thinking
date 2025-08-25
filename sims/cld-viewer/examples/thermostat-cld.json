@@ -30,7 +30,7 @@
     {
       "id": "desired_temperature",
       "label": "Desired Temperature Setpoint",
-      "position": {"x": 400, "y": 0},
+      "position": {"x": 400, "y": -50},
       "type": "condition",
       "description": "The target temperature set by the user on the thermostat",
       "examples": ["72°F setpoint", "22°C target", "Thermostat setting"],
@@ -48,7 +48,7 @@
     {
       "id": "thermostat_signal",
       "label": "Thermostat Control Signal",
-      "position": {"x": 600, "y": 400},
+      "position": {"x": 600, "y": 250},
       "type": "variable",
       "description": "The control signal sent from thermostat to heater based on temperature gap",
       "examples": ["Heat ON command", "Power level setting", "Control voltage"],
@@ -57,7 +57,7 @@
     {
       "id": "heater_output",
       "label": "Heater Heat Output",
-      "position": {"x": 200, "y": 400},
+      "position": {"x": 200, "y": 250},
       "type": "variable",
       "description": "The amount of heat energy produced by the heating system",
       "examples": ["BTUs per hour", "Kilowatts of heat", "Thermal energy"],
@@ -125,7 +125,7 @@
       "description": "The main balancing loop that maintains room temperature at the desired setpoint through automatic heating adjustments",
       "behavior_pattern": "Goal-seeking behavior that stabilizes room temperature around the setpoint",
       "dominance_conditions": "Always active when thermostat is functioning and there is a temperature gap",
-      "position": {"x": 400, "y": 250},
+      "position": {"x": 400, "y": 175},
       "is_primary": true
     }
   ],
