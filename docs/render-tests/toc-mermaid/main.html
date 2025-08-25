@@ -51,28 +51,39 @@
     <div class="description">
         <p>This causal loop diagram (CLD) illustrates the "Tragedy of the Commons" systems archetype using Mermaid syntax. It depicts two actors (A and B) utilizing a shared resource, with reinforcing loops (R1 and R2) driving individual gains and a shared balancing loop (B) representing resource depletion, which ultimately reduces gains for all.</p>
     </div>
+
     <div class="mermaid">
         graph LR
-            A["A's Activity"] -->|+| AR["Net Gains for A"]
-            AR -->|+| A
-            B["B's Activity"] -->|+| BR["Net Gains for B"]
-            BR -->|+| B
-            A -->|+| T["Total Activity"]
-            B -->|+| T
-            T -->|-| G["Gain per Activity"]
-            G -->|+| AR
-            G -->|+| BR
+            A -->|+| B
+            B -->|+| C
+            C -->|+| D
+            D -->|+| A
+    </div>
+    
+    <div class="mermaid">
+        graph LR
+            
+
+            
+
+            
 
             subgraph "R1 (Reinforcing Loop for A)"
-                A -- + --> AR -- + --> A
+                A["A's Activity"] -->|+| AR["Net Gains for A"]
+                AR -->|+| A
             end
 
             subgraph "R2 (Reinforcing Loop for B)"
-                B -- + --> BR -- + --> B
+                B["B's Activity"] -->|+| BR["Net Gains for B"]
+                BR -->|+| B
             end
 
             subgraph "B (Balancing Loop)"
-                A -- + --> T -- - --> G -- + --> AR -- + --> A
+                A -->|+| T["Total Activity"]
+                B -->|+| T
+                T -->|-| G["Gain per Individual Activity"]
+                G -->|+| AR
+                G -->|+| BR
             end
     </div>
     <div class="description">

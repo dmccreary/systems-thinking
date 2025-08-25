@@ -80,6 +80,11 @@
           "uniqueItems": true,
           "description": "Tags for categorizing and searching CLDs"
         },
+        "layout_strategy": {
+          "type": "string",
+          "maxLength": 3000,
+          "description": "How the nodes and edges be laid out visually."
+        },
         "notes": {
           "type": "string",
           "maxLength": 3000,

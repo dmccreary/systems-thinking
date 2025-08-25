@@ -13,6 +13,7 @@ async function loadExamplesList() {
         { id: 'ai-flywheel-v1-cld', title: 'AI Flywheel V1' },
         { id: 'thermostat-cld', title: 'Thermostat' },
         { id: 'population-cld', title: 'Population' },
+        { id: 'tragedy-of-the-commons-cld', title: 'Tragedy of the Commons' },
 
         { id: 'ai-training-cld', title: 'AI Training' },
         { id: 'banning-books-cld', title: 'Book Banning' },

@@ -141,6 +141,11 @@ nav:
       - Fixes that Fail: prompts/archetype-examples/fixes-that-fail.md
   - Archetypes: archetypes.md
   - Presentations: slides.md
+  - Diagram Render Testing:
+    - Introduction: render-tests/index.md
+    - Mermaid TOC: render-tests/toc-mermaid/index.md
+    - Mermaid Render Test: render-tests/mermaid-test.md
+    - VisJS Render Test: render-tests/vis-test.md
   - Glossary: glossary.md
   - What They Are Saying: what-they-are-saying.md
   - Colophon: colophon.md

@@ -1,5 +1,18 @@
 # Render Tests
 
+## Simple Graph Loop
+
+This demo uses the mermaid chart
+graph left-to-right rendering.
+
+```mermaid
+graph LR
+    A --> B
+    B --> C
+    C --> D
+    D --> A
+```
+
 
 ```mermaid
 graph LR

@@ -1,6 +1,6 @@
 # Tragedy of the Commons: When Individual Choices Create Collective Problems
 
-**Also known as:** The None for All Pattern
+**Also known as:** All for One and None for All
 
 Tragedy of the Commons is perhaps the most fundamental archetype we teach first
 when we introduce students to the field of systems thinking. 
