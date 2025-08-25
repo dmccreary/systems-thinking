@@ -1,5 +1,7 @@
 # Bank Balance
 
+[Run the Bank Balance CLD Viewer](../../sims/cld-viewer/main.html?file=bank-balance-cld.json)
+
 Here is a causal loop diagram for an interest-earning bank account using two nodes in a clockwise direction.
 
 ## Causal Loop Diagram: Interest-Earning Bank Account

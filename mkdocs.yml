@@ -23,6 +23,14 @@ nav:
     - Ch 5 Emergence: intro/ch-05-emergence.md
     - Ch 6 Complex Adaptive Systems: intro/ch-06-cas.md
 
+  - Causal Loop Diagrams:
+    - Introduction: clds/index.md
+    - Bank Balance: clds/bank-balance/index.md
+    - Population: clds/population/index.md
+    - Thermostat: clds/thermostat/index.md
+    - CLD Layout Rules for Vis: clds/cld-layout-rules-vis.md
+    - Image Test: clds/image-test/index.md
+
   - Part 2 Archetypes:
     - Introduction: archetypes/index.md
 
@@ -96,10 +104,7 @@ nav:
   #- Pt 3 Case Studies:
   # - Part 3 Case Studies:
   #   - Chapter 9: case-studies/healthcare.md
-  - Causal Loop Diagrams:
-    - Introduction: clds/index.md
-    - Bank Balance: clds/bank-balance/index.md
-    - Theromstat: clds/thermostat/index.md
+
  
   
   - Increasing Maturity:

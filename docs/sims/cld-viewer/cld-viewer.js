@@ -9,13 +9,15 @@ async function loadExamplesList() {
     // You can add more examples by adding more JSON files to the examples directory
     // and adding them to this list
     const examples = [
+        { id: 'bank-balance-cld', title: 'Bank Balance' },
         { id: 'ai-flywheel-v1-cld', title: 'AI Flywheel V1' },
-        { id: 'ai-training-cld', title: 'AI Training Example' },
-        { id: 'bank-balance-cld', title: 'Bank Balance Example' },
-        { id: 'banning-books-cld', title: 'Book Banning Example' },
+        { id: 'thermostat-cld', title: 'Thermostat' },
+        { id: 'population-cld', title: 'Population' },
+
+        { id: 'ai-training-cld', title: 'AI Training' },
+        { id: 'banning-books-cld', title: 'Book Banning' },
         { id: 'educational-funding-cld', title: 'Educational Funding' },
-        { id: 'technology-platform-cld', title: 'Technology Platform Growth'},
-        { id: 'thermostat-cld', title: 'Thermostat Example' }
+        { id: 'technology-platform-cld', title: 'Technology Platform Growth'}
     ];
     return examples;
 }
@@ -49,17 +51,17 @@ function initializeNetwork() {
             shape: 'box',
             margin: 10,
             font: {
-                size: 14,
+                size: 20,
                 face: 'Arial'
             },
             borderWidth: 2,
             shadow: true,
             color: {
-                background: '#E8F4FD',
-                border: '#4A90E2',
+                background: 'white',
+                border: 'dodgerblue',
                 highlight: {
-                    background: '#D1E7DD',
-                    border: '#198754'
+                    background: 'lightskyblue',
+                    border: 'darkblue'
                 }
             }
         },
@@ -68,8 +70,8 @@ function initializeNetwork() {
                 to: { enabled: true, scaleFactor: 1.2 }
             },
             color: {
-                color: '#848484',
-                highlight: '#198754'
+                color: 'gray',
+                highlight: 'blue'
             },
             width: 2,
             smooth: {

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Causal Loop Diagram – Bank Account</title>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <style>
+    html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    header { padding: 12px 16px; border-bottom: 1px solid #eee; }
+    h1 { margin: 0; font-size: 18px; font-weight: 600; }
+    #network { height: calc(100% - 56px); }
+    .legend { position: absolute; top: 8px; right: 12px; font-size: 12px; background: rgba(255,255,255,0.9); border: 1px solid #ddd; border-radius: 8px; padding: 6px 8px; }
+    .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; background: #2b7ce9; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Causal Loop Diagram: Bank Balance ↔ Interest Earned</h1>
+  </header>
+  <div id="network"></div>
+  
+  <div class="legend"><span class="dot"></span> Reinforcing loop (both +)</div>
+
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script>
+    // ---- Embedded center image (from your provided graphic) ----
+    const centerImageDataURI = "reinforcing-loop-cw.png";
+
+    // Fixed canvas size logic (works well for print/export); tweak as desired
+    const container = document.getElementById('network');
+
+    // Create nodes
+    const nodes = new vis.DataSet([
+      {
+        id: 'bank',
+        label: 'Bank\nBalance',
+        title: 'The amount of money in the bank account',
+        shape: 'box',
+        borderWidth: 2,
+        color: { background: 'white', border: 'black' },
+        font: { size: 18 },
+        x: -100, y: 0, fixed: { x: true, y: true }
+      },
+      {
+        id: 'interest',
+        label: 'Interest\nEarned',
+        title: 'The interest earned on the bank balance',
+        shape: 'box',
+        borderWidth: 2,
+        color: { background: 'white', border: 'black' },
+        font: { size: 18 },
+        x: 100, y: 0, fixed: { x: true, y: true }
+      },
+      {
+        id: 'centerImg',
+        label: '',
+        title: 'Reinforcing Loop',
+        shape: 'image',
+        image: centerImageDataURI,
+        size: 20,
+        x: 0, y: 0, fixed: { x: true, y: true },
+        physics: false,
+        shadow: false,
+        borderWidth: 0
+      }
+    ]);
+
+    // Create reinforcing edges (both positive). We curve around the center image.
+    const edges = new vis.DataSet([
+      {
+        from: 'bank', to: 'interest', label: '+',
+        title: 'A higher Bank Balance increases Interest Earned',
+      },
+      {
+        from: 'interest', to: 'bank', label: '+', font: {vadjust: 15},
+        title: 'Interest Earned increases Bank Balance',
+      }
+    ]);
+
+    const data = { nodes, edges };
+
+    const options = {
+      physics: false,
+      interaction: { dragNodes: false, hover: true },
+      nodes: {
+        shadow: { enabled: true, size: 6, x: 0, y: 2 },
+      },
+      edges: {
+        arrows: { to: { enabled: true, scaleFactor: 1.2 } },
+        smooth:  { enabled: true, type: 'curvedCW', roundness: 0.4 },
+        color: { color: 'gray', highlight: 'blue', hover: 'lightblue' },
+        width: 2,
+        font: { size: 24, vadjust: -15 }
+      },
+      layout: { improvedLayout: false }
+    };
+
+    const network = new vis.Network(container, data, options);
+
+    // Keep the view centered on first render
+    network.once('afterDrawing', function() {
+      network.moveTo({ position: { x: 0, y: 0 }, scale: 3.0, offset: { x: 0, y: 0 } });
+    });
+  </script>
+</body>
+</html>
