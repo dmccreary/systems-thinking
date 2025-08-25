@@ -188,10 +188,14 @@
       "strength": "strong"
     },
     {
-      "id": "overgrazing_to_farmer_a_income",
+      "id": "overgrazing_to_farmer_a_income_1",
       "source": "overgrazing_limit",
-      "target": "farmer_a_income",
+      "target": "farmer_a_cattle",
       "polarity": "negative",
+      "curve": {
+          "type": "curvedCCW",
+          "roundness": 0.4
+        },
       "description": "Overgrazing reduces pasture productivity, decreasing income for all farmers",
       "strength": "moderate",
       "delay": {
@@ -203,7 +207,7 @@
     {
       "id": "overgrazing_to_farmer_b_income",
       "source": "overgrazing_limit",
-      "target": "farmer_b_income",
+      "target": "farmer_b_cattle",
       "polarity": "negative",
       "description": "Overgrazing reduces pasture productivity, decreasing income for all farmers",
       "strength": "moderate",
@@ -222,7 +226,7 @@
       "label": "Farmer A Growth Loop",
       "description": "Farmer A's cattle generate income, which creates incentive to add more cattle, creating a reinforcing cycle of herd expansion",
       "behavior_pattern": "Individual optimization leads to continuous herd growth",
-      "position": {"x": -500, "y": -200},
+      "position": {"x": -450, "y": -200},
       "is_primary": true
     },
     {
@@ -232,7 +236,7 @@
       "label": "Farmer B Growth Loop",
       "description": "Farmer B's cattle generate income, which creates incentive to add more cattle, creating a reinforcing cycle of herd expansion",
       "behavior_pattern": "Individual optimization leads to continuous herd expansion",
-      "position": {"x": -500, "y": 200},
+      "position": {"x": -450, "y": 100},
       "is_primary": true
     },
     {
@@ -252,7 +256,7 @@
       "label": "Farmer B Commons Tragedy Loop",
       "description": "Farmer B's cattle contribute to overgrazing, which eventually reduces the income that drives expansion, but delays make this balancing effect too weak and too late",
       "behavior_pattern": "Long-term negative consequences that are too delayed to prevent short-term optimization",
-      "position": {"x": -100, "y": 150},
+      "position": {"x": -100, "y": 50},
       "is_primary": false
     }
   ],

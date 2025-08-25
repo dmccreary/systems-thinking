@@ -116,15 +116,27 @@ function loadCLD(data) {
             originalData: node
         }));
 
-        const visEdges = data.edges.map(edge => ({
-            id: edge.id,
-            from: edge.source,
-            to: edge.target,
-            label: edge.polarity === 'positive' ? '+' : '-',
-            color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
-            title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
-            originalData: edge
-        }));
+        const visEdges = data.edges.map(edge => {
+            const edgeConfig = {
+                id: edge.id,
+                from: edge.source,
+                to: edge.target,
+                label: edge.polarity === 'positive' ? '+' : '-',
+                color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
+                title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
+                originalData: edge
+            };
+
+            // Add custom curve direction if specified
+            if (edge.curve) {
+                edgeConfig.smooth = {
+                    type: edge.curve.type || 'curvedCW',
+                    roundness: edge.curve.roundness || 0.4
+                };
+            }
+
+            return edgeConfig;
+        });
 
         // Load Loops and annotation nodes
         // Convert loops with R or B in them to special nodes at the center of the loop
