@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vis.js - Centered Text in Circular Nodes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #mynetwork {
+            width: 800px;
+            height: 400px;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        .controls button {
+            margin: 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        .info {
+            background: aliceblue;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vis.js - Perfectly Centered Text in Circular Nodes</h1>
+    
+    <div class="info">
+        <strong>Key Settings for Perfect Text Centering:</strong>
+        <ul>
+            <li><code>font.align: 'middle'</code> - Centers text horizontally within the node</li>
+            <li><code>font.vadjust: 0</code> - Centers text vertically</li>
+            <li><code>font.multi: false</code> - Ensures single-line text rendering</li>
+            <li><code>shape: 'ellipse'</code> - Creates circular nodes but circle has a centering bug</li>
+            <li><code>margin: 0</code> - Removes any text padding</li>
+        </ul>
+    </div>
+
+
+    <div id="mynetwork"></div>
+
+    <script>
+        let network;
+        let nodes, edges;
+
+        function initializeNetwork() {
+            // Create nodes with perfectly centered text
+            nodes = new vis.DataSet([
+                {
+                    id: 1,
+                    label: 'R',
+                    x: -200,
+                    y: 0,
+                    shape: 'ellipse',
+                    size: 50,
+                    color: {
+                        background: '#ff6b6b',
+                        border: '#d63031'
+                    },
+                    font: {
+                        size: 24,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'center',  // Changed from 'center'
+                        vadjust: 0,
+                        multi: false,
+                        strokeWidth: 0
+                    },
+                    borderWidth: 3
+                },
+                {
+                    id: 2,
+                    label: 'B',
+                    x: 200,
+                    y: 0,
+                    shape: 'ellipse',
+                    size: 50,
+                    color: {
+                        background: '#4287f5',
+                        border: '#0066cc'
+                    },
+                    font: {
+                        size: 24,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'center',
+                        vadjust: 0,
+                        multi: false,
+                        strokeWidth: 0
+                    },
+                    borderWidth: 3
+                },
+                {
+                    id: 3,
+                    label: 'M',
+                    x: 0,
+                    y: -150,
+                    shape: 'ellipse',
+                    size: 40,
+                    color: {
+                        background: '#26de81',
+                        border: '#20bf6b'
+                    },
+                    font: {
+                        size: 18,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'middle',
+                        vadjust: 0,
+                        multi: false,
+                        strokeWidth: 0
+                    },
+                    borderWidth: 3
+                }
+            ])
+
+            edges = new vis.DataSet([
+                { from: 1, to: 3 },
+                { from: 2, to: 3 }
+            ]);
+
+            const container = document.getElementById('mynetwork');
+            const data = { nodes: nodes, edges: edges };
+
+            const options = {
+                physics: {
+                    enabled: false  // Disable physics to keep nodes in fixed positions
+                },
+                interaction: {
+                    dragNodes: true,
+                    dragView: true,
+                    zoomView: true
+                },
+                edges: {
+                    arrows: {
+                        to: { enabled: true, type: 'arrow' }
+                    },
+                    smooth: { type: 'continuous' }
+                }
+            };
+
+            network = new vis.Network(container, data, options);
+        }
+
+        function updateNodeText(text) {
+            // Update the first two nodes with the new text
+            nodes.update([
+                {
+                    id: 1,
+                    label: text,
+                    color: {
+                        background: text === 'R' ? '#ff6b6b' : '#4287f5',
+                        border: text === 'R' ? '#d63031' : '#0066cc'
+                    }
+                },
+                {
+                    id: 2,
+                    label: text,
+                    color: {
+                        background: text === 'B' ? '#4287f5' : '#ff6b6b',
+                        border: text === 'B' ? '#0066cc' : '#d63031'
+                    }
+                }
+            ]);
+        }
+
+        function updateNodeSize(size) {
+            // size is the diameter of the node
+            const fontSize = Math.round(size * 0.5); // Scale font size with node size
+            
+            nodes.update([
+                {
+                    id: 1,
+                    size: size,
+                    font: {
+                        size: fontSize,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'center',
+                        multi: false,
+                        strokeWidth: 0
+                    }
+                },
+                {
+                    id: 2,
+                    size: size,
+                    font: {
+                        size: fontSize,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'middle',
+                        multi: false,
+                        strokeWidth: 0
+                    }
+                },
+                {
+                    id: 3,
+                    size: size,
+                    font: {
+                        size: fontSize,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'middle',
+                        multi: false,
+                        strokeWidth: 0
+                    }
+                }
+            ]);
+        }
+
+        function resetNodes() {
+            nodes.update([
+                {
+                    id: 1,
+                    label: 'R',
+                    size: 50,
+                    color: {
+                        background: '#ff6b6b',
+                        border: '#d63031'
+                    },
+                    font: {
+                        size: 24,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'middle',
+                        vadjust: 0,
+                        multi: false,
+                        strokeWidth: 0
+                    }
+                },
+                {
+                    id: 2,
+                    label: 'B',
+                    size: 50,
+                    color: {
+                        background: '#4287f5',
+                        border: '#0066cc'
+                    },
+                    font: {
+                        size: 24,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'middle',
+                        vadjust: 0,
+                        multi: false,
+                        strokeWidth: 0
+                    }
+                },
+                {
+                    id: 3,
+                    label: 'M',
+                    size: 50,
+                    color: {
+                        background: 'green',
+                        border: 'black'
+                    },
+                    font: {
+                        size: 24,
+                        color: 'white',
+                        face: 'Arial',
+                        align: 'middle',
+                        vadjust: 0,
+                        multi: false,
+                        strokeWidth: 0
+                    }
+                }
+            ]);
+        }
+
+        // Initialize the network when the page loads
+        window.onload = function() {
+            initializeNetwork();
+        };
+    </script>
+</body>
+</html>

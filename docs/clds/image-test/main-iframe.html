@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Causal Loop Diagram - Bank Account</title>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <style>
+    html, body { height: 100%; 
+        margin: 0; 
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
+    }
+    #network { height: calc(100% - 56px); }
+</style>
+</head>
+<body>
+
+  <div id="network"></div>
+  
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script>
+    // ---- Embedded center image (from your provided graphic) ----
+    const centerImageDataURI = "reinforcing-loop-cw.png";
+
+    // Fixed canvas size logic (works well for print/export); tweak as desired
+    const container = document.getElementById('network');
+
+    // Create nodes
+    const nodes = new vis.DataSet([
+      {
+        id: 'bank',
+        label: 'Bank\nBalance',
+        title: 'The amount of money in the bank account',
+        shape: 'box',
+        borderWidth: 2,
+        color: { background: 'white', border: 'black' },
+        font: { size: 18 },
+        x: -100, y: 0, fixed: { x: true, y: true }
+      },
+      {
+        id: 'interest',
+        label: 'Interest\nEarned',
+        title: 'The interest earned on the bank balance',
+        shape: 'box',
+        borderWidth: 2,
+        color: { background: 'white', border: 'black' },
+        font: { size: 18 },
+        x: 100, y: 0, fixed: { x: true, y: true }
+      },
+      {
+        id: 'centerImg',
+        label: '',
+        title: 'Reinforcing Loop',
+        shape: 'image',
+        image: centerImageDataURI,
+        size: 20,
+        x: 0, y: 0, fixed: { x: true, y: true },
+        physics: false,
+        shadow: false,
+        borderWidth: 0
+      }
+    ]);
+
+    // Create reinforcing edges (both positive). We curve around the center image.
+    const edges = new vis.DataSet([
+      {
+        from: 'bank', to: 'interest', label: '+',
+        title: 'A higher Bank Balance increases Interest Earned',
+      },
+      {
+        from: 'interest', to: 'bank', label: '+', font: {vadjust: 15},
+        title: 'Interest Earned increases Bank Balance',
+      }
+    ]);
+
+    const data = { nodes, edges };
+
+    const options = {
+      physics: false,
+      interaction: { dragNodes: false, hover: true },
+      nodes: {
+        shadow: { enabled: true, size: 6, x: 0, y: 2 },
+      },
+      edges: {
+        arrows: { to: { enabled: true, scaleFactor: 1.2 } },
+        smooth:  { enabled: true, type: 'curvedCW', roundness: 0.4 },
+        color: { color: 'gray', highlight: 'blue', hover: 'lightblue' },
+        width: 2,
+        font: { size: 24, vadjust: -15 }
+      },
+      layout: { improvedLayout: false }
+    };
+
+    const network = new vis.Network(container, data, options);
+
+    // Keep the view centered on first render
+    network.once('afterDrawing', function() {
+      network.moveTo({ position: { x: 0, y: 0 }, scale: 3.0, offset: { x: 0, y: 0 } });
+    });
+  </script>
+</body>
+</html>

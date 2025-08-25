@@ -25,10 +25,12 @@ nav:
 
   - Causal Loop Diagrams:
     - Introduction: clds/index.md
+    - Vis Tutorial: clds/vis-tutorial/index.md
     - Bank Balance: clds/bank-balance/index.md
     - Population: clds/population/index.md
     - Thermostat: clds/thermostat/index.md
     - CLD Layout Rules for Vis: clds/cld-layout-rules-vis.md
+    - Center Test: clds/center-test/index.md
     - Image Test: clds/image-test/index.md
 
   - Part 2 Archetypes:
