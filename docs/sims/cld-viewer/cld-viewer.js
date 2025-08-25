@@ -123,6 +123,9 @@ function loadCLD(data) {
             originalData: edge
         }));
 
+        // Load Loops and annotation nodes
+        // Convert loops with R or B in them to special nodes at the center of the loop
+        // Note that the circle shape has a centering bug with the label
         if (data.loops) {
             data.loops.forEach(loop => {
                 if (loop.position) {
@@ -131,7 +134,7 @@ function loadCLD(data) {
                         label: loop.type === 'reinforcing' ? 'R' : 'B',
                         x: loop.position.x,
                         y: loop.position.y,
-                        shape: 'circle',
+                        shape: 'ellipse',
                         size: 30,
                         color: {
                             background: loop.type === 'reinforcing' ? '#dc3545' : '#28a745',
@@ -140,7 +143,10 @@ function loadCLD(data) {
                         font: {
                             color: 'white',
                             size: 16,
-                            face: 'Arial bold'
+                            face: 'Arial'
+                        },
+                        margin: {
+                            left: Math.round(30 * 0.1)
                         },
                         title: loop.description || '',
                         originalData: loop,
