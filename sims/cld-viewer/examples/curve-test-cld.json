@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "id": "curve-test-cld",
+    "title": "Curve Test",
+    "archetype": "none",
+    "description": "A causal loop diagram showing population dynamics with births creating reinforcing growth and deaths creating a balancing effect on population size.",
+    "learning_objectives": [
+      "Understand how birth rates create reinforcing population growth",
+      "Recognize how death rates create balancing effects on population",
+      "Identify the interaction between reinforcing and balancing loops",
+      "Explore factors that influence population growth dynamics"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-25T00:00:00Z",
+    "updated_date": "2025-08-25T00:00:00Z",
+    "author": "Dan McCreary",
+    "tags": ["test", "curve-test", "unit-test"],
+    "layout_strategy": "test curve edges for clockwise and counterclockwise curves",
+    "notes": "Testing."
+  },
+  "nodes": [
+    {
+      "id": "population",
+      "label": "Population",
+      "position": {"x": 300, "y": 100}
+    },
+    {
+      "id": "births",
+      "label": "Birth Rate",
+      "position": {"x": 100, "y": 100}},
+    {
+      "id": "deaths",
+      "label": "Death Rate",
+      "position": {"x": 500, "y": 100}
+    }
+  ],
+  "edges": [
+    {
+      "id": "population_to_births",
+      "source": "population",
+      "target": "births",
+      "polarity": "positive",
+      "label": "enables",
+      "curve": {
+          "type": "curvedCW",
+          "roundness": 0.4
+        },
+      "description": "Clockwise curved edge from population to births"
+    },
+    {
+      "id": "births_to_population",
+      "source": "births",
+      "target": "population",
+      "polarity": "positive",
+      "label": "increases",
+      "curve": {
+          "type": "curvedCW",
+          "roundness": 0.4
+        },
+      "description": "Counterclockwise curved edge from births to population"
+    },
+    {
+      "id": "population_to_deaths",
+      "source": "population",
+      "target": "deaths",
+      "polarity": "positive",
+      "label": "enables",
+      "curve": {
+          "type": "curvedCCW",
+          "roundness": 0.4
+        },
+      "description": "Counterclockwise curved edge from population to deaths"
+      
+    },
+    {
+      "id": "deaths_to_population",
+      "source": "deaths",
+      "target": "population",
+      "polarity": "negative",
+      "label": "decreases",
+      "curve": {
+          "type": "curvedCCW",
+          "roundness": 0.4
+        },
+      "description": "Counterclockwise curved edge from deaths to population"
+    }
+  ],
+  "loops": [
+    {
+      "id": "birth_reinforcing_loop",
+      "type": "reinforcing",
+      "path": ["population", "births", "population"],
+      "label": "Birth Growth Loop (R)",
+      "description": "Population growth creates more potential parents, leading to more births, which further increases population in a reinforcing cycle",
+      "behavior_pattern": "Exponential population growth when birth rates exceed death rates",
+      "dominance_conditions": "Dominant when birth rates are high and resources are abundant",
+      "position": {"x": 200, "y": 100},
+      "is_primary": true
+    },
+    {
+      "id": "death_balancing_loop",
+      "type": "balancing",
+      "path": ["population", "deaths", "population"],
+      "label": "Death Balancing Loop (B)",
+      "description": "Larger populations experience more deaths, which reduces population size, creating a natural balancing effect",
+      "behavior_pattern": "Population stabilization as deaths balance births",
+      "dominance_conditions": "Becomes more dominant as population approaches carrying capacity or when mortality factors increase",
+      "position": {"x": 400, "y": 100},
+      "is_primary": true
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "birth_rate_factors",
+      "target_type": "node",
+      "target_id": "births",
+      "leverage_level": 4,
+      "title": "Influence Birth Rate Factors",
+      "description": "Factors that influence birth rates can significantly impact population growth",
+      "intervention_strategies": [
+        "Education and family planning programs",
+        "Economic incentives or disincentives for larger families",
+        "Healthcare access affecting fertility and infant mortality"
+      ],
+      "expected_impact": "Can shift population from growth to stability or decline",
+      "difficulty": "moderate",
+      "examples": [
+        "China's one-child policy significantly reduced birth rates",
+        "Education of women correlates with lower birth rates"
+      ]
+    },
+    {
+      "id": "death_rate_factors",
+      "target_type": "node",
+      "target_id": "deaths",
+      "leverage_level": 4,
+      "title": "Influence Death Rate Factors",
+      "description": "Healthcare, nutrition, and safety improvements can significantly reduce death rates",
+      "intervention_strategies": [
+        "Improved healthcare systems and medical technology",
+        "Better nutrition and food security",
+        "Safety measures and disease prevention programs"
+      ],
+      "expected_impact": "Lower death rates can accelerate population growth",
+      "difficulty": "moderate",
+      "examples": [
+        "Vaccination programs dramatically reduced infant mortality",
+        "Sanitation improvements reduced deaths from disease"
+      ]
+    },
+    {
+      "id": "carrying_capacity",
+      "target_type": "system",
+      "target_id": "population",
+      "leverage_level": 6,
+      "title": "Address Carrying Capacity Limits",
+      "description": "Environmental and resource constraints that limit sustainable population size",
+      "intervention_strategies": [
+        "Sustainable resource management",
+        "Technology improvements increasing resource efficiency",
+        "Environmental protection and restoration"
+      ],
+      "expected_impact": "Determines long-term population sustainability",
+      "difficulty": "high",
+      "examples": [
+        "Agricultural innovations supporting larger populations",
+        "Urban planning managing population density"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "high_birth_low_death",
+      "title": "High Birth Rate, Low Death Rate",
+      "description": "Society experiences baby boom with improved healthcare reducing deaths",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "births",
+          "change_description": "Birth rate increases significantly due to economic prosperity"
+        },
+        {
+          "target_type": "node",
+          "target_id": "deaths",
+          "change_description": "Death rate decreases due to medical advances"
+        }
+      ],
+      "predicted_outcomes": "Rapid exponential population growth, with reinforcing loop dominating over balancing loop"
+    },
+    {
+      "id": "low_birth_high_death",
+      "title": "Low Birth Rate, High Death Rate",
+      "description": "Population faces declining birth rates and increased mortality",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "births",
+          "change_description": "Birth rate drops due to aging population and lifestyle changes"
+        },
+        {
+          "target_type": "node",
+          "target_id": "deaths",
+          "change_description": "Death rate increases due to aging demographics"
+        }
+      ],
+      "predicted_outcomes": "Population decline as balancing loop dominates, potential demographic crisis"
+    },
+    {
+      "id": "approaching_limits",
+      "title": "Approaching Resource Limits",
+      "description": "Population growth begins to strain available resources and environmental capacity",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "population_to_deaths",
+          "change_description": "Resource competition and environmental stress increase death rates"
+        }
+      ],
+      "predicted_outcomes": "Population growth slows as balancing loop strengthens, potential population stabilization or decline"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why does population growth create exponential rather than linear patterns?",
+      "How do the reinforcing and balancing loops interact to determine population growth?",
+      "What factors can shift the dominance between birth and death loops?",
+      "How do resource limits eventually constrain population growth?",
+      "What are the implications of an aging population on these feedback loops?"
+    ],
+    "key_insights": [
+      "Population dynamics involve competing reinforcing and balancing feedback loops",
+      "The reinforcing birth loop can create exponential growth under favorable conditions",
+      "The balancing death loop provides natural limits to unlimited growth",
+      "Long-term population sustainability depends on balancing these competing loops",
+      "External factors like healthcare, resources, and environment influence loop dominance"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Population growth is always linear and predictable",
+        "correction": "Population growth follows exponential patterns due to reinforcing feedback loops, making it nonlinear and potentially very rapid"
+      },
+      {
+        "misconception": "More people always means proportionally more births and deaths",
+        "correction": "While absolute numbers increase with population, rates can change due to demographic structure, age distribution, and social factors"
+      },
+      {
+        "misconception": "Population growth will naturally slow down without intervention",
+        "correction": "Without natural limits or human intervention, the reinforcing birth loop can drive continued exponential growth until resource constraints force a correction"
+      }
+    ],
+    "extension_activities": [
+      "Compare population growth patterns in different countries with varying birth and death rates",
+      "Model how improvements in healthcare affect the balance between birth and death loops",
+      "Investigate how demographic transitions occur as societies develop economically",
+      "Explore population dynamics in animal populations and ecosystems"
+    ],
+    "related_concepts": [
+      "Exponential Growth",
+      "Carrying Capacity",
+      "Demographic Transition",
+      "Sustainable Development",
+      "Resource Management"
+    ]
+  }
+}
