@@ -122,6 +122,7 @@ nav:
     - Agent CLD: sims/agent-cld/index.md
     - CMM Simulation: sims/cmm/index.md
     - CLD Viewer: sims/cld-viewer/index.md
+    - Population Simulator: sims/population-simulator/index.md
     - Template: sims/template/index.md
   
   - Stories:

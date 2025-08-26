@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Growth Simulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Population Growth Simulation</h1>
+        <p class="description">
+            Left panel shows a causal loop diagram demonstrating how population creates birth rate, 
+            which increases population in a reinforcing cycle. Right panel shows the resulting exponential growth over time.
+        </p>
+        <div id="sketch-container"></div>
+    </div>
+
+    <script>
+        // Global variables
+        let canvasWidth = 800;
+        let canvasHeight = 600;
+        let leftPanelWidth, rightPanelWidth;
+        let controlHeight = 100;
+        let chartHeight;
+        
+        // Simulation variables
+        let population = 100;
+        let initialPopulation = 100;
+        let birthRateSlider;
+        let startStopButton, resetButton;
+        let isRunning = false;
+        let time = 0;
+        let timeStep = 0.1;
+        
+        // Chart data
+        let populationHistory = [];
+        let maxTime = 50;
+        let maxPopulation = 500;
+        
+        // Animation variables
+        let pulseAnimation = 0;
+        
+        function setup() {
+            // Calculate responsive dimensions
+            let containerWidth = Math.min(windowWidth - 40, 1200);
+            canvasWidth = containerWidth;
+            canvasHeight = Math.max(400, Math.min(600, windowHeight * 0.7));
+            
+            leftPanelWidth = canvasWidth * 0.5;
+            rightPanelWidth = canvasWidth * 0.5;
+            chartHeight = canvasHeight - controlHeight;
+            
+            let canvas = createCanvas(canvasWidth, canvasHeight);
+            canvas.parent('sketch-container');
+            
+            setupControls();
+            reset();
+        }
+        
+        function setupControls() {
+            // Birth rate slider
+            birthRateSlider = createSlider(0, 0.5, 0.05, 0.01);
+            birthRateSlider.position(20, canvasHeight - 80);
+            birthRateSlider.size(150);
+            
+            // Start/Stop button
+            startStopButton = createButton('Start');
+            startStopButton.position(200, canvasHeight - 85);
+            startStopButton.size(80, 30);
+            startStopButton.mousePressed(toggleSimulation);
+            
+            // Reset button
+            resetButton = createButton('Reset');
+            resetButton.position(300, canvasHeight - 85);
+            resetButton.size(80, 30);
+            resetButton.mousePressed(reset);
+        }
+        
+        function draw() {
+            background(250);
+            
+            // Update simulation
+            if (isRunning) {
+                updateSimulation();
+            }
+            
+            // Update pulse animation
+            pulseAnimation += 0.1;
+            
+            // Draw panels
+            drawLeftPanel();
+            drawRightPanel();
+            drawControls();
+            
+            // Draw panel divider
+            stroke(200);
+            strokeWeight(2);
+            line(leftPanelWidth, 0, leftPanelWidth, chartHeight);
+        }
+        
+        function drawLeftPanel() {
+            push();
+            
+            // Panel background
+            fill(245);
+            noStroke();
+            rect(0, 0, leftPanelWidth, chartHeight);
+            
+            // Center the diagram
+            translate(leftPanelWidth / 2, chartHeight / 2);
+            
+            // Draw causal loop diagram
+            drawCausalLoopDiagram();
+            
+            pop();
+        }
+        
+        function drawCausalLoopDiagram() {
+            let nodeSize = 80;
+            let nodeSpacing = 150;
+            
+            // Population node (left)
+            let popX = -nodeSpacing / 2;
+            let popY = 0;
+            
+            // Birth Rate node (right)
+            let birthX = nodeSpacing / 2;
+            let birthY = 0;
+            
+            // Draw curved arrows
+            drawCurvedArrow(popX, popY, birthX, birthY, true, '+'); // Population to Birth Rate
+            drawCurvedArrow(birthX, birthY, popX, popY, false, '+'); // Birth Rate to Population
+            
+            // Draw reinforcing loop symbol
+            drawLoopSymbol(0, -50, 'R', true);
+            
+            // Draw nodes
+            drawNode(popX, popY, nodeSize, 'Population', population, isRunning);
+            drawNode(birthX, birthY, nodeSize, 'Birth Rate', birthRateSlider.value(), false);
+        }
+        
+        function drawNode(x, y, size, label, value, animate) {
+            push();
+            translate(x, y);
+            
+            // Node animation
+            let pulseScale = 1;
+            if (animate && isRunning) {
+                pulseScale = 1 + 0.1 * sin(pulseAnimation * 3);
+            }
+            scale(pulseScale);
+            
+            // Draw box
+            stroke(30, 144, 255); // DodgerBlue
+            strokeWeight(2);
+            fill(255);
+            rectMode(CENTER);
+            rect(0, 0, size, size * 0.6, 5);
+            
+            // Draw label
+            fill(0);
+            noStroke();
+            textAlign(CENTER, CENTER);
+            textSize(12);
+            text(label, 0, -8);
+            
+            // Draw value
+            textSize(10);
+            fill(100);
+            if (typeof value === 'number') {
+                text(value.toFixed(value < 1 ? 3 : 0), 0, 8);
+            } else {
+                text(value, 0, 8);
+            }
+            
+            pop();
+        }
+        
+        function drawCurvedArrow(x1, y1, x2, y2, curveUp, label) {
+            push();
+            
+            // Calculate curve control point
+            let midX = (x1 + x2) / 2;
+            let midY = (y1 + y2) / 2;
+            let curveOffset = curveUp ? -40 : 40;
+            let controlY = midY + curveOffset;
+            
+            // Draw curved line
+            stroke(128);
+            strokeWeight(2);
+            noFill();
+            bezier(x1, y1, midX, controlY, midX, controlY, x2, y2);
+            
+            // Draw arrowhead
+            let t = 0.9; // Position along curve for arrowhead
+            let arrowX = bezierPoint(x1, midX, midX, x2, t);
+            let arrowY = bezierPoint(y1, controlY, controlY, y2, t);
+            let tangentX = bezierTangent(x1, midX, midX, x2, t);
+            let tangentY = bezierTangent(y1, controlY, controlY, y2, t);
+            let angle = atan2(tangentY, tangentX);
+            
+            drawArrowhead(arrowX, arrowY, angle, 8);
+            
+            // Draw label
+            let labelT = 0.5;
+            let labelX = bezierPoint(x1, midX, midX, x2, labelT);
+            let labelY = bezierPoint(y1, controlY, controlY, y2, labelT);
+            
+            fill(255);
+            stroke(0);
+            strokeWeight(2);
+            ellipse(labelX, labelY, 20);
+            
+            fill(34, 139, 34); // Forest Green for positive
+            noStroke();
+            textAlign(CENTER, CENTER);
+            textSize(14);
+            textStyle(BOLD);
+            text(label, labelX, labelY);
+            
+            pop();
+        }
+        
+        function drawArrowhead(x, y, angle, size) {
+            push();
+            translate(x, y);
+            rotate(angle);
+            
+            fill(128);
+            noStroke();
+            triangle(0, 0, -size, -size/2, -size, size/2);
+            
+            pop();
+        }
+        
+        function drawLoopSymbol(x, y, label, clockwise) {
+            push();
+            translate(x, y);
+            
+            // Draw circular background
+            fill(220, 20, 60); // Crimson for reinforcing
+            stroke(0);
+            strokeWeight(1);
+            ellipse(0, 0, 30);
+            
+            // Draw R or B
+            fill(255);
+            noStroke();
+            textAlign(CENTER, CENTER);
+            textSize(16);
+            textStyle(BOLD);
+            text(label, 0, 0);
+            
+            // Draw circular arrow
+            stroke(0);
+            strokeWeight(2);
+            noFill();
+            let startAngle = clockwise ? 0 : PI;
+            let endAngle = clockwise ? TWO_PI * 0.8 : PI + TWO_PI * 0.8;
+            arc(0, 0, 40, 40, startAngle, endAngle);
+            
+            // Draw arrow tip
+            let tipAngle = clockwise ? TWO_PI * 0.8 : PI + TWO_PI * 0.8;
+            let tipX = cos(tipAngle) * 20;
+            let tipY = sin(tipAngle) * 20;
+            let arrowDir = clockwise ? tipAngle + PI/2 : tipAngle - PI/2;
+            drawArrowhead(tipX, tipY, arrowDir, 6);
+            
+            pop();
+        }
+        
+        function drawRightPanel() {
+            push();
+            translate(leftPanelWidth, 0);
+            
+            // Panel background
+            fill(250);
+            noStroke();
+            rect(0, 0, rightPanelWidth, chartHeight);
+            
+            // Chart margins
+            let margin = 50;
+            let chartWidth = rightPanelWidth - 2 * margin;
+            let actualChartHeight = chartHeight - 2 * margin;
+            
+            translate(margin, margin);
+            
+            // Draw chart
+            drawChart(chartWidth, actualChartHeight);
+            
+            pop();
+        }
+        
+        function drawChart(chartWidth, chartHeight) {
+            // Draw axes
+            stroke(0);
+            strokeWeight(2);
+            line(0, chartHeight, chartWidth, chartHeight); // X-axis
+            line(0, 0, 0, chartHeight); // Y-axis
+            
+            // Draw grid lines
+            stroke(230);
+            strokeWeight(1);
+            for (let i = 0; i <= 10; i++) {
+                let x = map(i, 0, 10, 0, chartWidth);
+                line(x, 0, x, chartHeight);
+                
+                let y = map(i, 0, 10, chartHeight, 0);
+                line(0, y, chartWidth, y);
+            }
+            
+            // Draw labels
+            fill(0);
+            noStroke();
+            textAlign(CENTER, TOP);
+            textSize(12);
+            text('Time', chartWidth / 2, chartHeight + 25);
+            
+            push();
+            translate(-25, chartHeight / 2);
+            rotate(-PI/2);
+            text('Population', 0, 0);
+            pop();
+            
+            // Draw axis numbers
+            textAlign(CENTER, TOP);
+            textSize(10);
+            for (let i = 0; i <= 5; i++) {
+                let x = map(i * 10, 0, maxTime, 0, chartWidth);
+                text(i * 10, x, chartHeight + 5);
+            }
+            
+            textAlign(RIGHT, CENTER);
+            for (let i = 0; i <= 5; i++) {
+                let y = map(i * 100, 0, maxPopulation, chartHeight, 0);
+                text(i * 100, -5, y);
+            }
+            
+            // Draw population curve
+            if (populationHistory.length > 1) {
+                stroke(30, 144, 255);
+                strokeWeight(3);
+                noFill();
+                beginShape();
+                for (let i = 0; i < populationHistory.length; i++) {
+                    let x = map(populationHistory[i].time, 0, maxTime, 0, chartWidth);
+                    let y = map(populationHistory[i].pop, 0, maxPopulation, chartHeight, 0);
+                    vertex(x, y);
+                }
+                endShape();
+                
+                // Draw current point
+                if (populationHistory.length > 0) {
+                    let lastPoint = populationHistory[populationHistory.length - 1];
+                    let currentX = map(lastPoint.time, 0, maxTime, 0, chartWidth);
+                    let currentY = map(lastPoint.pop, 0, maxPopulation, chartHeight, 0);
+                    
+                    fill(255, 0, 0);
+                    noStroke();
+                    ellipse(currentX, currentY, 8);
+                }
+            }
+        }
+        
+        function drawControls() {
+            // Control area background
+            fill(240);
+            noStroke();
+            rect(0, chartHeight, canvasWidth, controlHeight);
+            
+            // Labels
+            fill(0);
+            noStroke();
+            textAlign(LEFT, CENTER);
+            textSize(12);
+            text('Birth Rate: ' + birthRateSlider.value().toFixed(3), 20, canvasHeight - 60);
+            
+            textAlign(CENTER, CENTER);
+            text(`Population: ${population.toFixed(0)} | Time: ${time.toFixed(1)}`, 
+                 canvasWidth / 2, canvasHeight - 40);
+        }
+        
+        function updateSimulation() {
+            let birthRate = birthRateSlider.value();
+            let deltaPopulation = population * birthRate * timeStep;
+            population += deltaPopulation;
+            time += timeStep;
+            
+            // Store history for chart
+            populationHistory.push({time: time, pop: population});
+            
+            // Adjust scale if population grows too large
+            if (population > maxPopulation) {
+                maxPopulation = population * 1.2;
+            }
+            
+            // Reset if time gets too large
+            if (time > maxTime) {
+                maxTime = time * 1.2;
+            }
+        }
+        
+        function toggleSimulation() {
+            isRunning = !isRunning;
+            startStopButton.html(isRunning ? 'Stop' : 'Start');
+        }
+        
+        function reset() {
+            isRunning = false;
+            startStopButton.html('Start');
+            population = initialPopulation;
+            time = 0;
+            populationHistory = [];
+            maxPopulation = 500;
+            maxTime = 50;
+        }
+        
+        function windowResized() {
+            // Update canvas size
+            let containerWidth = Math.min(windowWidth - 40, 1200);
+            canvasWidth = containerWidth;
+            canvasHeight = Math.max(400, Math.min(600, windowHeight * 0.7));
+            
+            leftPanelWidth = canvasWidth * 0.5;
+            rightPanelWidth = canvasWidth * 0.5;
+            chartHeight = canvasHeight - controlHeight;
+            
+            resizeCanvas(canvasWidth, canvasHeight);
+            
+            // Reposition controls
+            birthRateSlider.position(20, canvasHeight - 80);
+            startStopButton.position(200, canvasHeight - 85);
+            resetButton.position(300, canvasHeight - 85);
+        }
+    </script>
+</body>
+</html>
