@@ -1,0 +1,483 @@
+{
+  "metadata": {
+    "id": "emergency-room-overuse",
+    "title": "Emergency Room Overuse vs. Comprehensive Healthcare Access",
+    "archetype": "shifting-the-burden",
+    "description": "Healthcare system where homeless and uninsured individuals rely on emergency rooms for basic healthcare needs, providing immediate symptom relief but preventing investment in preventive care and comprehensive support systems that would address root causes.",
+    "learning_objectives": [
+      "Understand how emergency-focused healthcare creates expensive, ineffective care patterns",
+      "Recognize how quick fixes can prevent comprehensive solutions in healthcare systems",
+      "Identify the role of payment systems and policies in reinforcing problematic care patterns",
+      "Explore how addressing social determinants can be more effective than expanding crisis capacity"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-08-26T00:00:00Z",
+    "updated_date": "2025-08-26T00:00:00Z",
+    "author": "Systems Thinking Education Team",
+    "tags": ["healthcare", "emergency-medicine", "homelessness", "shifting-the-burden", "healthcare-access", "social-determinants"]
+  },
+  "nodes": [
+    {
+      "id": "healthcare_needs_homeless",
+      "label": "Healthcare Needs of Homeless/Uninsured",
+      "position": {"x": 200, "y": 200},
+      "type": "condition",
+      "description": "Ongoing medical needs including chronic conditions, mental health issues, substance abuse, and basic healthcare requirements among homeless and uninsured populations",
+      "examples": ["Diabetes management", "Mental health crises", "Substance abuse complications", "Minor injuries", "Prescription refills"],
+      "measurement": "Number of individuals needing care, frequency of health problems, severity of conditions"
+    },
+    {
+      "id": "emergency_department_expansion",
+      "label": "Emergency Department Expansion",
+      "position": {"x": 600, "y": 100},
+      "type": "variable",
+      "description": "Increasing emergency department capacity, staff, and protocols to handle growing patient volume",
+      "examples": ["Additional ED staff", "Fast-track protocols", "Security measures", "Discharge procedures"],
+      "measurement": "ED staff levels, capacity expansion, protocol implementations"
+    },
+    {
+      "id": "immediate_symptom_relief",
+      "label": "Immediate Symptom Relief",
+      "position": {"x": 1000, "y": 200},
+      "type": "outcome",
+      "description": "Short-term resolution of presenting symptoms through emergency treatment",
+      "examples": ["Pain relief", "Crisis stabilization", "Acute infection treatment", "Emergency medication"],
+      "measurement": "Patient discharge rates, symptom resolution, immediate care provision"
+    },
+    {
+      "id": "comprehensive_care_capacity",
+      "label": "Comprehensive Care System Capacity",
+      "position": {"x": 600, "y": 400},
+      "type": "stock",
+      "description": "Healthcare system's ability to provide preventive care, primary care, and integrated social services",
+      "examples": ["Primary care clinics", "Community health workers", "Behavioral health programs", "Care coordination"],
+      "measurement": "Primary care availability, prevention program funding, integrated service capacity"
+    },
+    {
+      "id": "underlying_health_deterioration",
+      "label": "Underlying Health Deterioration",
+      "position": {"x": 200, "y": 500},
+      "type": "variable",
+      "description": "Worsening of chronic conditions and overall health due to lack of preventive and ongoing care",
+      "examples": ["Uncontrolled diabetes", "Medication non-adherence", "Mental health decline", "Substance abuse progression"],
+      "measurement": "Disease progression rates, medication adherence, health outcomes over time"
+    },
+    {
+      "id": "emergency_visit_frequency",
+      "label": "Emergency Visit Frequency",
+      "position": {"x": 400, "y": 50},
+      "type": "variable",
+      "description": "Rate at which homeless and uninsured individuals use emergency departments for healthcare needs",
+      "examples": ["Frequent flyer patients", "Repeat visits for same conditions", "Multiple monthly visits"],
+      "measurement": "Visit frequency per patient, repeat visit rates, total ED utilization"
+    },
+    {
+      "id": "healthcare_costs",
+      "label": "Healthcare System Costs",
+      "position": {"x": 800, "y": 50},
+      "type": "stock",
+      "description": "Total costs of providing healthcare services to vulnerable populations",
+      "examples": ["Emergency care expenses", "Uncompensated care costs", "Staff overtime", "Resource utilization"],
+      "measurement": "Cost per patient, uncompensated care totals, emergency department operating costs"
+    },
+    {
+      "id": "staff_burnout",
+      "label": "Healthcare Staff Burnout",
+      "position": {"x": 800, "y": 300},
+      "type": "variable",
+      "description": "Exhaustion and frustration among healthcare workers from providing inappropriate emergency care for chronic conditions",
+      "examples": ["High turnover rates", "Job dissatisfaction", "Moral distress", "Compassion fatigue"],
+      "measurement": "Turnover rates, job satisfaction surveys, burnout assessments"
+    },
+    {
+      "id": "resource_allocation_pressure",
+      "label": "Resource Allocation Pressure",
+      "position": {"x": 1000, "y": 400},
+      "type": "variable",
+      "description": "Financial and operational pressure to allocate resources toward emergency response rather than prevention",
+      "examples": ["Budget shifts to ED", "Hiring priority for emergency staff", "Capital investment in emergency capacity"],
+      "measurement": "Budget allocation percentages, staffing ratios, capital investment distribution"
+    },
+    {
+      "id": "community_health_outcomes",
+      "label": "Community Health Outcomes",
+      "position": {"x": 400, "y": 600},
+      "type": "outcome",
+      "description": "Overall health status and outcomes for homeless and uninsured populations in the community",
+      "examples": ["Life expectancy", "Disease prevalence", "Healthcare disparities", "Population health indicators"],
+      "measurement": "Health outcome metrics, life expectancy, disease rates, health equity measures"
+    },
+    {
+      "id": "social_determinants",
+      "label": "Social Determinants of Health",
+      "position": {"x": 50, "y": 350},
+      "type": "condition",
+      "description": "Underlying social conditions that drive health problems among homeless populations",
+      "examples": ["Housing instability", "Food insecurity", "Income poverty", "Social isolation"],
+      "measurement": "Housing status, income levels, food access, social support availability"
+    }
+  ],
+  "edges": [
+    {
+      "id": "healthcare_needs_to_ed_expansion",
+      "source": "healthcare_needs_homeless",
+      "target": "emergency_department_expansion",
+      "polarity": "positive",
+      "description": "Growing healthcare needs among homeless populations drive expansion of emergency department capacity",
+      "strength": "strong"
+    },
+    {
+      "id": "ed_expansion_to_symptom_relief",
+      "source": "emergency_department_expansion",
+      "target": "immediate_symptom_relief",
+      "polarity": "positive",
+      "description": "Expanded emergency capacity provides immediate symptom relief for presenting problems",
+      "strength": "strong"
+    },
+    {
+      "id": "symptom_relief_temporary_improvement",
+      "source": "immediate_symptom_relief",
+      "target": "healthcare_needs_homeless",
+      "polarity": "negative",
+      "description": "Immediate symptom relief temporarily reduces apparent healthcare needs",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "Hours to days",
+        "description": "Symptom relief is temporary and underlying conditions persist"
+      }
+    },
+    {
+      "id": "ed_expansion_reduces_comprehensive_care",
+      "source": "emergency_department_expansion",
+      "target": "comprehensive_care_capacity",
+      "polarity": "negative",
+      "description": "Resources allocated to emergency expansion reduce investment in comprehensive care systems",
+      "strength": "strong"
+    },
+    {
+      "id": "lack_comprehensive_care_deterioration",
+      "source": "comprehensive_care_capacity",
+      "target": "underlying_health_deterioration",
+      "polarity": "negative",
+      "description": "Lack of comprehensive care leads to deterioration of underlying health conditions",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "Weeks to months",
+        "description": "Health deterioration occurs gradually without preventive care"
+      }
+    },
+    {
+      "id": "health_deterioration_increases_needs",
+      "source": "underlying_health_deterioration",
+      "target": "healthcare_needs_homeless",
+      "polarity": "positive",
+      "description": "Deteriorating health conditions create more frequent and severe healthcare needs",
+      "strength": "strong"
+    },
+    {
+      "id": "healthcare_needs_to_visit_frequency",
+      "source": "healthcare_needs_homeless",
+      "target": "emergency_visit_frequency",
+      "polarity": "positive",
+      "description": "Greater healthcare needs lead to more frequent emergency department visits",
+      "strength": "strong"
+    },
+    {
+      "id": "visit_frequency_to_costs",
+      "source": "emergency_visit_frequency",
+      "target": "healthcare_costs",
+      "polarity": "positive",
+      "description": "Higher visit frequency increases overall healthcare system costs",
+      "strength": "strong"
+    },
+    {
+      "id": "costs_drive_ed_expansion",
+      "source": "healthcare_costs",
+      "target": "emergency_department_expansion",
+      "polarity": "positive",
+      "description": "Rising costs and patient volume justify further emergency department expansion",
+      "strength": "moderate"
+    },
+    {
+      "id": "visit_frequency_to_burnout",
+      "source": "emergency_visit_frequency",
+      "target": "staff_burnout",
+      "polarity": "positive",
+      "description": "High frequency of inappropriate ED visits contributes to staff burnout and frustration",
+      "strength": "moderate"
+    },
+    {
+      "id": "burnout_reduces_care_quality",
+      "source": "staff_burnout",
+      "target": "immediate_symptom_relief",
+      "polarity": "negative",
+      "description": "Staff burnout can reduce quality and effectiveness of emergency care provided",
+      "strength": "moderate"
+    },
+    {
+      "id": "costs_to_resource_pressure",
+      "source": "healthcare_costs",
+      "target": "resource_allocation_pressure",
+      "polarity": "positive",
+      "description": "High emergency care costs create pressure to allocate more resources to emergency response",
+      "strength": "strong"
+    },
+    {
+      "id": "resource_pressure_reduces_comprehensive",
+      "source": "resource_allocation_pressure",
+      "target": "comprehensive_care_capacity",
+      "polarity": "negative",
+      "description": "Pressure to fund emergency response reduces resources available for comprehensive care",
+      "strength": "strong"
+    },
+    {
+      "id": "health_deterioration_to_community_outcomes",
+      "source": "underlying_health_deterioration",
+      "target": "community_health_outcomes",
+      "polarity": "negative",
+      "description": "Individual health deterioration worsens overall community health outcomes",
+      "strength": "moderate"
+    },
+    {
+      "id": "social_determinants_to_healthcare_needs",
+      "source": "social_determinants",
+      "target": "healthcare_needs_homeless",
+      "polarity": "positive",
+      "description": "Poor social determinants create and exacerbate healthcare needs",
+      "strength": "strong"
+    },
+    {
+      "id": "social_determinants_to_health_deterioration",
+      "source": "social_determinants",
+      "target": "underlying_health_deterioration",
+      "polarity": "positive",
+      "description": "Poor social conditions directly contribute to health deterioration",
+      "strength": "moderate"
+    },
+    {
+      "id": "comprehensive_care_addresses_determinants",
+      "source": "comprehensive_care_capacity",
+      "target": "social_determinants",
+      "polarity": "positive",
+      "description": "Comprehensive care systems can help address social determinants of health",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "Months to years",
+        "description": "Addressing social determinants requires sustained comprehensive intervention"
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "emergency_response_quick_fix_loop",
+      "type": "balancing",
+      "path": ["healthcare_needs_homeless", "emergency_department_expansion", "immediate_symptom_relief", "healthcare_needs_homeless"],
+      "label": "Emergency Response Quick Fix Loop",
+      "description": "Healthcare needs drive emergency expansion, providing temporary symptom relief that temporarily reduces apparent needs",
+      "behavior_pattern": "Temporary problem resolution through symptomatic treatment that doesn't address root causes",
+      "dominance_conditions": "Dominant in short term (hours to days) when emergency care provides immediate relief",
+      "position": {"x": 600, "y": 200},
+      "is_primary": false
+    },
+    {
+      "id": "shifting_burden_main_loop",
+      "type": "reinforcing",
+      "path": ["emergency_department_expansion", "comprehensive_care_capacity", "underlying_health_deterioration", "healthcare_needs_homeless", "emergency_department_expansion"],
+      "label": "Shifting the Burden Main Loop",
+      "description": "Emergency expansion reduces comprehensive care investment, leading to health deterioration and more healthcare needs requiring emergency response",
+      "behavior_pattern": "Escalating reliance on emergency care as comprehensive care capacity deteriorates",
+      "dominance_conditions": "Becomes dominant after weeks to months as underlying health conditions worsen without preventive care",
+      "position": {"x": 500, "y": 300},
+      "is_primary": true
+    },
+    {
+      "id": "cost_escalation_loop",
+      "type": "reinforcing",
+      "path": ["emergency_visit_frequency", "healthcare_costs", "resource_allocation_pressure", "comprehensive_care_capacity", "underlying_health_deterioration", "healthcare_needs_homeless", "emergency_visit_frequency"],
+      "label": "Cost Escalation Loop",
+      "description": "High emergency visit frequency increases costs, pressuring resources toward emergency response, reducing comprehensive care, worsening health, and increasing visits",
+      "behavior_pattern": "Spiraling costs and visit frequency as system becomes trapped in emergency-only care",
+      "position": {"x": 700, "y": 250},
+      "is_primary": true
+    },
+    {
+      "id": "social_determinants_loop",
+      "type": "reinforcing",
+      "path": ["social_determinants", "healthcare_needs_homeless", "emergency_department_expansion", "comprehensive_care_capacity", "social_determinants"],
+      "label": "Social Determinants Reinforcing Loop",
+      "description": "Poor social determinants drive healthcare needs, leading to emergency focus that reduces comprehensive care capacity to address social determinants",
+      "behavior_pattern": "Social conditions worsen as healthcare system focuses on emergency response rather than root cause intervention",
+      "position": {"x": 300, "y": 350},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "comprehensive_care_investment",
+      "target_type": "node",
+      "target_id": "comprehensive_care_capacity",
+      "leverage_level": 6,
+      "title": "Invest in Comprehensive Care Systems",
+      "description": "Build primary care, behavioral health, and social service capacity specifically for homeless and uninsured populations",
+      "intervention_strategies": [
+        "Develop Federally Qualified Health Centers serving homeless populations",
+        "Create integrated behavioral health and primary care programs",
+        "Establish mobile health clinics and community health worker programs",
+        "Fund supportive housing with on-site medical care"
+      ],
+      "expected_impact": "Reduces emergency visits by 60-80% while improving health outcomes and reducing total costs",
+      "difficulty": "high",
+      "examples": [
+        "Seattle's Downtown Emergency Service Center reduced ER visits by 85%",
+        "Community health centers save $4-7 in emergency costs for every $1 invested"
+      ]
+    },
+    {
+      "id": "payment_system_reform",
+      "target_type": "edge",
+      "target_id": "costs_drive_ed_expansion",
+      "leverage_level": 8,
+      "title": "Reform Healthcare Payment Systems",
+      "description": "Change payment incentives to reward prevention and comprehensive care rather than emergency volume",
+      "intervention_strategies": [
+        "Capitated payments that reward population health outcomes",
+        "Medicaid waivers that fund supportive housing and social services",
+        "Value-based contracts that pay for emergency visit reduction",
+        "Community benefit requirements focused on prevention investment"
+      ],
+      "expected_impact": "Fundamentally changes financial incentives from crisis response to prevention",
+      "difficulty": "very-high",
+      "examples": [
+        "Oregon's Medicaid transformation focusing on social determinants",
+        "Hospital community benefit investments in prevention programs"
+      ]
+    },
+    {
+      "id": "social_determinants_intervention",
+      "target_type": "node",
+      "target_id": "social_determinants",
+      "leverage_level": 9,
+      "title": "Address Social Determinants of Health",
+      "description": "Tackle root causes including housing, food security, income stability, and social support",
+      "intervention_strategies": [
+        "Housing First programs with integrated healthcare",
+        "Income support and job training programs",
+        "Food security and nutrition assistance",
+        "Mental health and substance abuse treatment integration"
+      ],
+      "expected_impact": "Addresses fundamental causes of health problems, preventing need for both emergency and routine healthcare",
+      "difficulty": "very-high",
+      "examples": [
+        "Finland's Housing First approach virtually eliminated homelessness",
+        "Utah's Housing First program reduced emergency costs by 90%"
+      ]
+    },
+    {
+      "id": "care_integration_model",
+      "target_type": "system",
+      "target_id": "comprehensive_care_capacity",
+      "leverage_level": 7,
+      "title": "Implement Integrated Care Delivery Models",
+      "description": "Create coordinated care systems that combine medical, behavioral health, and social services",
+      "intervention_strategies": [
+        "Co-locate primary care, behavioral health, and social services",
+        "Implement shared electronic health records across service providers",
+        "Create care coordination teams with community health workers",
+        "Establish medical respite care for post-hospital recovery"
+      ],
+      "expected_impact": "Provides seamless care that addresses multiple needs simultaneously, reducing fragmentation",
+      "difficulty": "moderate",
+      "examples": [
+        "Boston Health Care for the Homeless integrated model",
+        "Camden Coalition's care coordination for super-utilizers"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continue_emergency_expansion",
+      "title": "Continue Emergency-Focused Approach",
+      "description": "Healthcare system continues expanding emergency capacity to meet growing demand from homeless populations",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "emergency_department_expansion",
+          "change_description": "Emergency departments continue expanding staff and capacity to handle volume"
+        }
+      ],
+      "predicted_outcomes": "Costs spiral upward, health outcomes worsen, staff burnout increases, and community health deteriorates despite massive emergency investment"
+    },
+    {
+      "id": "comprehensive_care_investment",
+      "title": "Invest in Comprehensive Care Systems",
+      "description": "Community invests in primary care, supportive housing, and integrated social services for homeless populations",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "comprehensive_care_capacity",
+          "change_description": "Significant investment in primary care clinics, supportive housing, and care coordination for homeless individuals"
+        }
+      ],
+      "predicted_outcomes": "Emergency visits decline 60-80%, health outcomes improve, total costs decrease, and community health indicators improve significantly"
+    },
+    {
+      "id": "balanced_approach",
+      "title": "Balanced Emergency Response and Prevention",
+      "description": "System maintains adequate emergency capacity while building comprehensive care systems",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "comprehensive_care_capacity",
+          "change_description": "Gradual investment in prevention while maintaining emergency capacity during transition"
+        }
+      ],
+      "predicted_outcomes": "Gradual reduction in emergency dependence as comprehensive care systems mature, leading to improved outcomes and cost savings over 2-3 years"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why does the healthcare system make emergency care more accessible than primary care for homeless individuals?",
+      "How do payment systems and legal requirements (like EMTALA) inadvertently create perverse incentives?",
+      "What would change if hospitals were paid based on community health improvement rather than service volume?",
+      "How might addressing housing and social needs be more cost-effective than expanding emergency capacity?",
+      "Why is it difficult for healthcare systems to invest in prevention when emergency needs are so visible and immediate?"
+    ],
+    "key_insights": [
+      "Emergency-focused care for chronic conditions costs 5-10 times more than preventive care while producing worse outcomes",
+      "Quick fixes that provide immediate symptom relief can prevent investment in root cause solutions",
+      "Healthcare systems can become addicted to crisis response, making sustainable care harder to achieve",
+      "Social determinants of health often drive healthcare needs more than medical factors alone",
+      "Breaking this cycle requires changing payment systems, not just adding services"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Emergency departments are the appropriate place for uninsured individuals to receive healthcare",
+        "correction": "Emergency departments are designed for acute, life-threatening conditions and are poorly equipped to manage chronic diseases, mental health, and social needs that drive most visits from homeless individuals"
+      },
+      {
+        "misconception": "Expanding emergency capacity will solve the problem of healthcare access for homeless populations",
+        "correction": "Emergency expansion treats symptoms but doesn't address underlying health conditions or social determinants, leading to more frequent, complex, and expensive crises over time"
+      },
+      {
+        "misconception": "Comprehensive care programs are too expensive compared to emergency care",
+        "correction": "Comprehensive care typically costs 20-50% of emergency-focused care while producing better health outcomes and addressing root causes"
+      }
+    ],
+    "extension_activities": [
+      "Research the costs of emergency visits vs. primary care in your local healthcare system",
+      "Interview healthcare workers about their experiences with frequent emergency department users",
+      "Analyze successful Housing First or comprehensive care programs and their impact on emergency utilization",
+      "Examine your local hospital's community benefit spending and how much goes to emergency care vs. prevention"
+    ],
+    "related_concepts": [
+      "Social Determinants of Health",
+      "Healthcare Access and Equity",
+      "Value-Based Healthcare",
+      "Population Health Management",
+      "Housing First Programs"
+    ]
+  }
+}
