@@ -1,9 +1,9 @@
 ---
 title: Population Simulator with Causal Loop Diagram
 description: A graphic novel about Tragedy of the Commons.
-image: /sims/population-simulator/population-simulator.jpg
-og:image: /sims/population-simulator/population-simulator.jpg
-twitter:image: /sims/population-simulator/population-simulator.jpg
+image: /sims/population-simulator/population-simulator.png
+og:image: /sims/population-simulator/population-simulator.png
+twitter:image: /sims/population-simulator/population-simulator.png
 hide:
    - toc
 social:
@@ -13,7 +13,7 @@ social:
 
 <iframe src="main.html" height="500px" scrolling="no"></iframe>
 
-Copy the following line into your HTML 
+To run this on your class website, just copy the following line into the HTML on your website. 
 ```html
 <iframe src="http://dmccreary.github.io/systems-thinking/sims/population-simulator/main.html" height="500px" scrolling="no"></iframe>
 ```
