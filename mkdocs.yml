@@ -32,6 +32,8 @@ nav:
     - CLD Layout Rules for Vis: clds/cld-layout-rules-vis.md
     - Center Test: clds/center-test/index.md
     - Image Test: clds/image-test/index.md
+    - Mermaid Test: clds/mermaid-test.md
+    - Tragedy of the Commons: clds/tragedy-of-the-commons/index.md
 
   - Part 2 Archetypes:
     - Introduction: archetypes/index.md
@@ -129,8 +131,10 @@ nav:
     - Introduction: stories/index.md
     - Tragedy of the Commons: stories/tragedy-of-the-commons/index.md
     - Moore's Law: stories/moores-law/index.md
+
   - Prompts:
-    - Knowledge Graphs:
+    - Introduction: prompts/index.md
+    - Learning Graph:
       - Concept Enumeration: prompts/knowledge-graphs/concept-enumeration.md
       - Concept Dependency: prompts/knowledge-graphs/concept-dependency.md
       - Concept Taxonomy: prompts/knowledge-graphs/concept-taxonomy.md
@@ -140,6 +144,18 @@ nav:
     - Archetype Examples:
       - Introduction: prompts/archetype-examples/index.md
       - Fixes that Fail: prompts/archetype-examples/fixes-that-fail.md
+    ## Add these
+    - prompts/archetype-examples/tragedy-of-the-commons-cld.md
+    - prompts/cld/vis-tutorial.md
+    - prompts/cld/cld-viewer/index.md
+    - prompts/cld/cld-viewer-v1/index.md
+    - prompts/microsims/population.md
+    - prompts/stories/moores-law.md
+    - prompts/stories/tragedy-of-the-commons.md
+    - render-tests/influence-diagram.md
+    - render-tests/state-diagram.md
+  
+  
   - Archetypes: archetypes.md
   - Presentations: slides.md
   - Diagram Render Testing:

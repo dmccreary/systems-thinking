@@ -316,6 +316,14 @@ function drawRightPanel() {
 }
 
 // draw only the lines and axis - no title
+// The drawChart function has been updated to dynamically calculate axis labels based on the current maxTime and
+//  maxPopulation values. The changes:
+//  1. Time axis (x-axis): Now calculates timeValue = (i * maxTime) / 5 instead of using fixed i * 10
+//  2. Population axis (y-axis): Now calculates popValue = (i * maxPopulation) / 5 instead of using fixed i * 100
+//  This ensures that as the simulation runs and data values exceed the original bounds, the axis labels will
+//  automatically update to show the correct scale ranges, making the chart readable at all times.
+
+
 function drawChart(xOffset, yOffset, chartWidth, chartHeight) {
   push();
   translate(xOffset, yOffset);
@@ -353,14 +361,16 @@ function drawChart(xOffset, yOffset, chartWidth, chartHeight) {
   textAlign(CENTER, TOP);
   textSize(10);
   for (let i = 0; i <= 5; i++) {
-    let x = map(i * 10, 0, maxTime, 0, chartWidth);
-    text(i * 10, x, chartHeight + 5);
+    let timeValue = (i * maxTime) / 5;
+    let x = map(timeValue, 0, maxTime, 0, chartWidth);
+    text(timeValue.toFixed(0), x, chartHeight + 5);
   }
 
   textAlign(RIGHT, CENTER);
   for (let i = 0; i <= 5; i++) {
-    let y = map(i * 100, 0, maxPopulation, chartHeight, 0);
-    text(i * 100, -5, y);
+    let popValue = (i * maxPopulation) / 5;
+    let y = map(popValue, 0, maxPopulation, chartHeight, 0);
+    text(popValue.toFixed(0), -5, y);
   }
 
   // Draw population curve
