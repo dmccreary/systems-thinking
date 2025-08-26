@@ -1,13 +1,15 @@
 ---
-title: The Tragedy of the Commons
+title: Population Simulator with Causal Loop Diagram
 description: A graphic novel about Tragedy of the Commons.
-image: /systems-thinking/stories/moores-law/cover.jpg
-og:image: /systems-thinking/stories/moores-law/cover.jpg
-twitter:image: /systems-thinking/stories/moores-law/cover.jpg
+image: /sims/population-simulator/population-simulator.jpg
+og:image: /sims/population-simulator/population-simulator.jpg
+twitter:image: /sims/population-simulator/population-simulator.jpg
 social:
    cards: false
 ---
-# Population Simulator
+# Population Simulator with Causal Loop Diagram
+
+<iframe src="main.html" height="400px" scrolling="no"></iframe>
 
 [Run the Population Simulator Demo](./main.html){ .md-button .md-button--primary }
 

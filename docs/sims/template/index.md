@@ -9,6 +9,8 @@ social:
 ---
 # MicroSim Template
 
+<iframe src="main.html" height="400px" scrolling="no"></iframe>
+
 [Link to Template Demo](./00-template.html){ .md-button .md-button--primary }
 
 ## About this MicroSim
