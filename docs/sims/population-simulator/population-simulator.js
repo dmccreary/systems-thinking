@@ -463,10 +463,8 @@ function reset() {
 
 function windowResized() {
   // Update canvas size
-  let containerWidth = Math.min(windowWidth - 40, 1200);
+  let containerWidth = windowWidth;
   canvasWidth = containerWidth;
-  // canvasHeight = Math.max(400, Math.min(600, windowHeight * 0.7));
-
   leftPanelWidth = canvasWidth * 0.5;
   rightPanelWidth = canvasWidth * 0.5;
 
