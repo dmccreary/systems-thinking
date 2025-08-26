@@ -10,7 +10,7 @@ let leftPanelWidth, rightPanelWidth;
 
 // Region Definitions
 // The height of the region at the bottom to place controls like sliders and buttons
-let controlHeight = 70;
+let controlHeight = 60;
 
 // the height above the control region
 let drawHeight = canvasHeight - controlHeight;
@@ -52,23 +52,23 @@ function setup() {
 
 function setupControls() {
   // vertical distance below drawingHeight to place conntrols
-  controls_y_offset = 20;
+  controls_y_offset = 10;
   
   // Birth rate slider
   birthRateSlider = createSlider(0, 0.2, 0.02, 0.01);
-  birthRateSlider.position(canvasWidth/2, drawHeight + controls_y_offset + 20);
+  birthRateSlider.position(170, drawHeight + controls_y_offset + 20);
   birthRateSlider.size(canvasWidth/2 - 30);
 
   // Start/Stop button
   startStopButton = createButton("Start");
-  startStopButton.position(20, drawHeight + controls_y_offset);
-  startStopButton.size(80, 30);
+  startStopButton.position(margin, drawHeight + controls_y_offset);
+  startStopButton.size(60, 20);
   startStopButton.mousePressed(toggleSimulation);
 
   // Reset button
   resetButton = createButton("Reset");
-  resetButton.position(120, drawHeight + controls_y_offset);
-  resetButton.size(80, 30);
+  resetButton.position(100, drawHeight + controls_y_offset);
+  resetButton.size(60, 20);
   resetButton.mousePressed(reset);
 }
 
@@ -411,18 +411,18 @@ function drawControls() {
   fill(0);
   noStroke();
   textAlign(LEFT, CENTER);
-  textSize(12);
+  textSize(14);
   text(
     "Birth Rate: " + birthRateSlider.value().toFixed(3),
-    canvasWidth/2,
-    canvasHeight - 40
+    170,
+    drawHeight + 20
   );
 
   textAlign(CENTER, CENTER);
   text(
     `Population: ${population.toFixed(0)} | Time: ${time.toFixed(1)}`,
     canvasWidth *.75,
-    canvasHeight - 60,
+    drawHeight + margin - 5,
   );
 }
 
@@ -472,8 +472,6 @@ function windowResized() {
 
   resizeCanvas(canvasWidth, canvasHeight);
 
-  // Reposition controls on resize?
-  birthRateSlider.position(canvasWidth/2, canvasHeight - 30);
-  // startStopButton.position(200, canvasHeight - 85);
-  // resetButton.position(300, canvasHeight - 85);
+  // Make the slider size change with canvas width
+  birthRateSlider.size(canvasWidth/2);
 }
