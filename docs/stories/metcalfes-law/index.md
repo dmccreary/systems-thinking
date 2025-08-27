@@ -1,4 +1,13 @@
-# The Network Pioneer: A Graphic Novel Story of Robert Metcalfe and the Birth of Ethernet
+---
+title: Moore's Law - The Rise and Limits of Silicon Progress
+description: A graphic novel about how Gordon Moore observed exponential growth of silicon chip density.
+image: /stories/metcalfes-law/cover.jpg
+og:image: /stories/metcalfes-law/cover.jpg
+twitter:image: /stories/mmetcalfess-law/cover.jpg
+social:
+   cards: false
+---
+# Metcalfe's Law: A Story of Robert Metcalfe and the Birth of Ethernet
 
 This is the story of how one engineer's vision created the foundation of our connected world, and how systems thinking principles shaped the battle between competing network technologies. Through the lens of Robert Metcalfe's journey, we'll explore Metcalfe's Law, network effects, and the "Success to the Successful" archetype that determined the winner in the early days of computer networking.
 
