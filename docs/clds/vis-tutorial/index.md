@@ -128,7 +128,109 @@ edges.update({ id: 'someNegativeLink', from: 'X', to: 'Y',
 
 * `smooth.type: 'curvedCW' | 'curvedCCW' | …` and `roundness` let you route edges around a center icon or avoid overlap. Defaults and tuning are documented in the edge options. ([visjs.github.io][5], [CRAN][6])
 
----
+Possible options for the smooth.type are: 
+'dynamic', 'continuous', 'discrete', 'diagonalCross', 'straightCross', 'horizontal', 'vertical', 'curvedCW', 'curvedCCW', 'cubicBezier'. 
+
+Take a look at this example to see what these look like and pick the one that you like best!
+
+
+[Edge Smooth Type Demo](https://visjs.github.io/vis-network/examples/network/edgeStyles/smooth.html)
+
+## Dynamic Smoothing Types
+
+One of vis.js greatest strengths is it large library of ways you can
+connect two nodes with an edge.  There are thee basic smoothing types (dynamic, continius and discrete), four Cross-Pattern Types (diagonal, straight, vertical and horizontal) and
+three curved types of smoothing types.  Only the curved types use the additional roundness parameter to change the curvature of the curves.
+
+### 'dynamic'
+
+-   **Behavior**: Automatically calculates smooth curves based on node positions and network layout
+-   **Use Case**: Best for networks where you want vis.js to handle curve calculations automatically
+-   **Visual**: Creates curved paths that avoid overlapping with nodes when possible
+
+Note that this is a computationally intensive task.
+
+### 'continuous'
+
+-   **Behavior**: Creates smooth, flowing curves using mathematical interpolation
+-   **Use Case**: Good for organic-looking networks where you want natural, flowing connections
+-   **Visual**: Produces gentle, continuous curves without sharp angles
+
+### 'discrete'
+
+-   **Behavior**: Creates curves with specific control points at discrete intervals
+-   **Use Case**: Useful when you need more predictable curve behavior with defined waypoints
+-   **Visual**: Curves that follow predetermined path segments
+
+## Cross-Pattern Types
+
+### 'diagonalCross'
+
+-   **Behavior**: Routes edges diagonally across the network space
+-   **Use Case**: Helpful for hierarchical layouts where you want diagonal connections
+-   **Visual**: Creates diagonal paths that can cross each other at angles
+
+### 'straightCross'
+
+-   **Behavior**: Uses straight lines that can intersect with other edges
+-   **Use Case**: When you want direct connections but allow edge crossings
+-   **Visual**: Simple straight lines between nodes, regardless of overlaps
+
+### 'horizontal'
+
+-   **Behavior**: Creates paths that prefer horizontal routing
+-   **Use Case**: Good for organizational charts or flowcharts with horizontal emphasis
+-   **Visual**: Edges route primarily along horizontal paths with vertical connectors
+
+### 'vertical'
+
+-   **Behavior**: Creates paths that prefer vertical routing
+-   **Use Case**: Useful for tree structures or hierarchies with vertical emphasis
+-   **Visual**: Edges route primarily along vertical paths with horizontal connectors
+
+## Curved Types
+
+### 'curvedCW' (Clockwise)
+
+-   **Behavior**: Creates curved edges that bend in a clockwise direction
+-   **Use Case**: **Perfect for causal loop diagrams** - this is what you want for your CLD viewer!
+-   **Visual**: Smooth curves that arc clockwise from source to target
+-   **Roundness Control**: Works with the `roundness` parameter to control curve intensity
+
+### 'curvedCCW' (Counter-Clockwise)
+
+-   **Behavior**: Creates curved edges that bend in a counter-clockwise direction
+-   **Use Case**: Alternative to curvedCW when you want curves in the opposite direction
+-   **Visual**: Smooth curves that arc counter-clockwise from source to target
+
+### 'cubicBezier'
+
+-   **Behavior**: Uses cubic Bezier curves with customizable control points
+-   **Use Case**: When you need precise control over curve shape and path
+-   **Visual**: Highly customizable curves using mathematical Bezier curve calculations
+
+## Recommendation for Causal Loop Diagrams
+
+For our CLD viewer, we recommend sticking with **'curvedCW'** as you're currently using, because:
+
+-   It creates clear visual separation between forward and reverse causal links
+-   The clockwise curve direction is conventional for systems thinking diagrams
+-   It works well with the `roundness` parameter to control curve intensity
+-   It handles two-node loops elegantly (which are common in CLDs)
+
+Your current configuration looks good:
+
+```js
+smooth:{type:'curvedCW',roundness:0.5} // Good for pronounced curves in two-node loops}
+```
+
+The `roundness: 0.5` value you're using creates nice, pronounced curves that make the causal relationships clear and visually appealing in your causal loop diagrams.
+
+### Smooth Type Demos
+
+* [Smooth Demo on Vis Network Examples](https://visjs.github.io/vis-network/examples/network/edgeStyles/smooth.html)
+* [Smooth Scale Demo with World Cut Data](https://visjs.github.io/vis-network/examples/network/edgeStyles/smoothWorldCup.html)
+* [Run the Smooth Types Demo](./smooth-types.html)
 
 ## Step 6: Depict CLD semantics with visual conventions
 
