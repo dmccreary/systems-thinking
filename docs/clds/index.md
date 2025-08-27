@@ -15,3 +15,11 @@
 ## Center Label In Circular Node Test
 
 [Run the Center Test](./center-test/main.html)
+
+## Edge Curve Direction Test
+
+[Run the Edge Curve Direction Test](./curve-direction-test/)
+
+## Tragedy of The Commons
+
+[Run the Tragedy of the Commons Test](./tragedy-of-the-commons/index.md)

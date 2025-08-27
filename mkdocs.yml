@@ -32,8 +32,7 @@ nav:
     - CLD Layout Rules for Vis: clds/cld-layout-rules-vis.md
     - Center Test: clds/center-test/index.md
     - Image Test: clds/image-test/index.md
-    - Mermaid Test: clds/mermaid-test.md
-    - Tragedy of the Commons: clds/tragedy-of-the-commons/index.md
+    - Curve Direction Test: clds/curve-direction-test/index.md
 
   - Part 2 Archetypes:
     - Introduction: archetypes/index.md
