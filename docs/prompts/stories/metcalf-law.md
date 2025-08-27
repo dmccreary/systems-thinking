@@ -28,3 +28,8 @@
     </details>
 
     [Book narrative for this section]
+
+    !!! prompt
+        Please generate 10 references for a high school student.  Use the following format:
+
+        1. [TITLE](URL) - date - publication_name  - description and relevance
