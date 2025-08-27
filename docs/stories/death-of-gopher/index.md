@@ -1,4 +1,5 @@
-# The Fall of Gopher: A Graphic Novel Story of How Legal Greed Killed a Protocol and Sparked the Open Web
+# The Death of Gopher: A Graphic Novel Story of How Lack of System Thinking Inspired the World-Wide Web
+![](./cover.png)
 
 This is the story of how one university's attempt to monetize their creation accidentally destroyed it, paving the way for the World Wide Web. Through the lens of the Gopher protocol's rise and fall, we'll explore the "Tragedy of the Commons" archetype, network effects, and how openness became the defining principle of the internet age.
 
