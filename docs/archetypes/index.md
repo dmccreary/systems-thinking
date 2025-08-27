@@ -1,3 +1,12 @@
+---
+title: Systems Thinking Archetypes
+description: A detailed analysis of the eight systems thinking archetypes with examples of each.
+image: /archetypes/archetypes-cover.png
+og:image: /archetypes/archetypes-cover.png
+twitter:image: /archetypes/archetypes-cover.png
+social:
+   cards: false
+---
 # Systems Thinking Archetypes
 
 We are using a classification system of archetypes that have the following eight categories.

@@ -27,6 +27,7 @@ Meanwhile: **Initial Struggles** → **Fewer Resources** → **Reduced Capabilit
 A school district allocates resources based on standardized test performance, with higher-performing schools receiving additional funding, technology, and experienced teachers.
 
 ### How It Works
+
 - **Schools with early success** (often in affluent neighborhoods) receive:
   - Additional funding for programs
   - Technology upgrades
@@ -42,6 +43,7 @@ A school district allocates resources based on standardized test performance, wi
   - Aging technology and facilities
 
 ### The Reinforcing Cycle
+
 1. High-performing schools get more resources
 2. Better resources attract better teachers and students
 3. Better teachers and students improve performance
@@ -49,25 +51,27 @@ A school district allocates resources based on standardized test performance, wi
 5. The cycle accelerates, creating growing inequality
 
 ### Long-term Consequences
+
 - **Successful schools** become elite institutions with excellent outcomes
 - **Struggling schools** spiral downward, unable to compete for resources
 - Community segregation increases as families move to access better schools
 - Overall system inequality grows despite good intentions to reward performance
 
 ### Breaking the Pattern
+
 - **Resource equity policies** that ensure baseline funding regardless of performance
 - **Targeted investment** in struggling schools to level the playing field
 - **Collaborative networks** where successful schools share resources with struggling ones
 - **Multiple success metrics** beyond standardized test scores
 
----
-
 ## Example 2: Venture Capital and Startup Success
 
 ### The System
+
 The venture capital ecosystem where successful entrepreneurs and companies receive increasing access to funding, mentorship, and networks.
 
 ### How It Works
+
 - **Successful entrepreneurs** gain access to:
   - Top-tier venture capital firms
   - Experienced advisors and board members
@@ -83,6 +87,7 @@ The venture capital ecosystem where successful entrepreneurs and companies recei
   - Greater scrutiny and skepticism
 
 ### The Reinforcing Cycle
+
 1. Early success attracts top-tier investors
 2. Top investors provide superior resources and networks
 3. Better resources increase probability of success
@@ -90,18 +95,18 @@ The venture capital ecosystem where successful entrepreneurs and companies recei
 5. The pattern compounds across multiple ventures
 
 ### Long-term Consequences
+
 - **Serial entrepreneurs** dominate funding and attention
 - **Diverse founders** struggle to break into established networks
 - Innovation becomes concentrated among familiar players
 - Economic opportunity becomes increasingly concentrated
 
 ### Breaking the Pattern
+
 - **Diversity-focused investment funds** that prioritize underrepresented founders
 - **Blind evaluation processes** that focus on ideas rather than track records
 - **Accelerator programs** that provide resources to early-stage entrepreneurs
 - **Geographic distribution** of investment beyond traditional hubs
-
----
 
 ## Example 3: Research Funding and Scientific Success
 
@@ -124,6 +129,7 @@ Academic research funding where grants and resources flow primarily to already-s
   - Difficulty building research teams
 
 ### The Reinforcing Cycle
+
 1. Successful research generates publications and citations
 2. High citation counts lead to more prestigious grants
 3. Better funding enables more ambitious research
@@ -131,18 +137,18 @@ Academic research funding where grants and resources flow primarily to already-s
 5. Enhanced reputation attracts even more funding and opportunities
 
 ### Long-term Consequences
+
 - **Research elite** controls major funding and direction of scientific fields
 - **Innovative young researchers** struggle to establish independent programs
 - Scientific progress becomes concentrated in established institutions
 - Breakthrough discoveries may be delayed by lack of diversity in funded research
 
 ### Breaking the Pattern
+
 - **New investigator programs** that provide dedicated funding for early-career researchers
 - **Lottery systems** for certain grants to introduce randomness
 - **Collaborative requirements** that encourage established researchers to partner with newcomers
 - **Alternative metrics** for evaluating research impact beyond traditional citations
-
----
 
 ## Example 4: Technology Platform Dominance
 
@@ -150,6 +156,7 @@ Academic research funding where grants and resources flow primarily to already-s
 Digital platforms where network effects create winner-take-all dynamics in technology markets.
 
 ### How It Works
+
 - **Dominant platforms** benefit from:
   - More users attracting more developers
   - More developers creating better experiences
@@ -165,6 +172,7 @@ Digital platforms where network effects create winner-take-all dynamics in techn
   - Reduced ability to innovate at competitive levels
 
 ### The Reinforcing Cycle
+
 1. Platform gains initial user base
 2. User base attracts developers and partners
 3. More content and features improve user experience
@@ -172,25 +180,27 @@ Digital platforms where network effects create winner-take-all dynamics in techn
 5. Larger network becomes increasingly valuable to both users and developers
 
 ### Long-term Consequences
+
 - **Single platforms** dominate entire market categories
 - **Innovation** becomes concentrated within dominant platforms
 - **Competition** becomes nearly impossible due to network effects
 - **Market concentration** reduces choice and potentially stifles innovation
 
 ### Breaking the Pattern
+
 - **Interoperability standards** that allow users to switch platforms more easily
 - **Data portability** requirements that reduce switching costs
 - **Antitrust enforcement** that prevents monopolistic practices
 - **Open-source alternatives** that don't concentrate power in single entities
 
----
-
 ## Example 5: Healthcare Access and Health Outcomes
 
 ### The System
+
 Healthcare systems where better health outcomes enable access to better care, while poor health creates barriers to quality healthcare.
 
 ### How It Works
+
 - **Healthy, wealthy individuals** gain:
   - Access to preventive care and early intervention
   - Health insurance with comprehensive coverage
@@ -206,6 +216,7 @@ Healthcare systems where better health outcomes enable access to better care, wh
   - Chronic conditions that worsen without proper care
 
 ### The Reinforcing Cycle
+
 1. Good health enables work and income stability
 2. Income provides access to quality healthcare and insurance
 3. Quality healthcare maintains and improves health
@@ -230,9 +241,8 @@ Capital generating compound returns that amplify economic differences
 
 ## Example 7: Social Media Influencers
 Algorithmic amplification concentrating influence among established creators
----
 
----
+[](./social-media/index.md)
 
 ## Example 8: Sport Development
 Early success providing access to superior training resources

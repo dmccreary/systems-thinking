@@ -82,7 +82,33 @@ nav:
       - Social Media: archetypes/limits-to-growth/social-media/index.md
       - Steam Engines: archetypes/limits-to-growth/steam-engines/index.md
       - Student Activity Overcommitment: archetypes/limits-to-growth/student-activity-overcommittment/index.md
+    - Shifting the Burden:
+      - Introduction: archetypes/shifting-the-burden/index.md
+      - College Cramming: archetypes/shifting-the-burden/college-cramming/index.md
+      - archetypes/shifting-the-burden/emergency-response/index.md
+      - archetypes/shifting-the-burden/er-overuse.md/index.md
+      - archetypes/shifting-the-burden/homework-help/index.md
+      - archetypes/shifting-the-burden/it-helpdesk/index.md
+      - archetypes/shifting-the-burden/pain-management/index.md
 
+      # - ADHD Medication: archetypes/shifting-the-burden/adhd-medication/index.md
+      - AI Homework Helper: archetypes/shifting-the-burden/ai-homework/index.md
+      # - AI in Software Development: archetypes/shifting-the-burden/ai-in-software-development/index.md
+      # - Credit Cards: archetypes/shifting-the-burden/credit-cards/index.md
+      # - Diabetes Management: archetypes/shifting-the-burden/diabetes-management/index.md
+      #- Employee Training: archetypes/shifting-the-burden/employee-training/index.md
+      #- Government Services: archetypes/shifting-the-burden/government-services/index.md
+      #- Handwashing: archetypes/shifting-the-burden/handwashing/index.md
+      #- Law Enforcement: archetypes/shifting-the-burden/law-enforcement/index.md
+      #- Mental Health: archetypes/shifting-the-burden/mental-health/index.md
+      #- Obesity: archetypes/shifting-the-burden/obesity/index.md
+      #- Poverty: archetypes/shifting-the-burden/poverty/index.md
+      #- Public Transportation: archetypes/shifting-the-burden/public-transportation/index.md
+      #- Smoking Cessation: archetypes/shifting-the-burden/smoking-cessation/index.md
+      #- Software Security: archetypes/shifting-the-burden/software-security/index.md
+      #- Student Cheating: archetypes/shifting-the-burden/student-cheating/index.md
+      #- Traffic Congestion: archetypes/shifting-the-burden/traffic-congestion/index.md
+      #- Tutoring: archetypes/shifting-the-burden/tutoring/index.md
     - Success to the Successful:
       - Introduction:        archetypes/success-to-the-successful/index.md
       - AI Flywheel:         archetypes/success-to-the-successful/ai-flywheel/index.md
