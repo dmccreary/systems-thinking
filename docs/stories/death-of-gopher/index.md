@@ -1,10 +1,10 @@
 # The Death of Gopher: A Graphic Novel Story of How Lack of System Thinking Inspired the World-Wide Web
-![](./cover.png)
+![](./cover.jpg)
 
 This is the story of how one university's attempt to monetize their creation accidentally destroyed it, paving the way for the World Wide Web. Through the lens of the Gopher protocol's rise and fall, we'll explore the "Tragedy of the Commons" archetype, network effects, and how openness became the defining principle of the internet age.
 
 ## The Information Revolution Begins
-![](./image-01.png)
+![](./image-01.jpg)
 <details>
    <summary>The Information Revolution Begins</summary>
 Panel 1:
@@ -17,7 +17,7 @@ In this panel, we see the University campus in 1991, with students and faculty w
 Our story begins at the University in 1991, when the internet existed but the World Wide Web was just a distant dream. Students and faculty struggled to find information scattered across different computer systems, each with its own arcane commands and interfaces. Mark McCahill, a systems programmer at the university's computer center, was frustrated by this chaos. He envisioned a simple, menu-driven system that would let anyone navigate through information as easily as walking through a library. Little did he know that his solution would demonstrate a fundamental principle of systems thinking: how the structure of ownership and control can determine whether an innovation thrives or dies.
 
 ## Birth of the Gopher
-![](./image-02.png)
+![](./image-02.jpg)
 <details>
    <summary>Birth of the Gopher</summary>
 Panel 2:
@@ -30,7 +30,7 @@ In this panel, Mark McCahill and his small team of programmers work intensively 
 Mark and his team at the University Computer Center developed Gopher in 1991. Named after both the university's mascot and the idea of "going for" information, Gopher was elegantly simple: users saw hierarchical menus they could navigate by pressing numbers or arrow keys. No complex commands, no confusing syntax - just point and click (or type a number) to burrow deeper into information systems. This simplicity was Gopher's greatest strength and embodied a key systems thinking principle: successful innovations often succeed not because they're the most sophisticated, but because they're the most accessible and easy to use.
 
 ## The Global Explosion
-![](./image-03.png)
+![](./image-03.jpg)
 <details>
    <summary>The Global Explosion</summary>
 Panel 3:
@@ -43,7 +43,7 @@ In this panel, we see a world map showing the rapid spread of Gopher servers acr
 By 1993, Gopher had exploded across the global academic community. Universities worldwide were setting up Gopher servers, creating a vast network of interconnected information systems. Students could navigate from their local library catalog to research databases at distant universities, to government documents, to archives of electronic texts. The network effect was in full swing - each new Gopher server made the entire system more valuable for everyone. This demonstrated another systems principle: open protocols can achieve rapid adoption because they allow anyone to participate without permission or payment. The academic community embraced Gopher because it embodied the collaborative spirit of scholarship.
 
 ## The Competitive Landscape
-![](./image-04.png)
+![](./image-04.jpg)
 <details>
    <summary>The Competitive Landscape</summary>
 Panel 4:
@@ -56,7 +56,7 @@ In this panel, we see a split-screen comparison showing different information sy
 In the early 1990s, several systems competed to organize internet information. Tim Berners-Lee at CERN had created the World Wide Web, but it was still primitive and hard to use. WAIS (Wide Area Information Server) offered full-text searching but was complex. Archie helped find files on FTP servers. But Gopher was winning the popularity contest - it was simple, fast, and didn't require special software beyond a basic terminal connection. This was a classic systems dynamic: multiple competing approaches to solving the same fundamental problem. The winner wouldn't necessarily be the most technically sophisticated, but the one that best matched the needs and capabilities of the user community.
 
 ## The Fatal Decision
-![](./image-05.png)
+![](./image-05.jpg)
 <details>
    <summary>The Fatal Decision</summary>
 Panel 5:
@@ -69,7 +69,7 @@ In this panel, we see a tense meeting in a University conference room. Universit
 In February 1993, the University made a fateful decision that would demonstrate the "Tragedy of the Commons" in reverse. Seeing Gopher's success, university lawyers and administrators decided they should profit from their creation. They announced that while educational and non-profit use would remain free, commercial organizations would need to pay licensing fees to use Gopher. Mark McCahill and his team were horrified - they understood that this would break the network effect that made Gopher valuable. This was a classic example of how attempting to capture value from a commons can destroy the commons itself.
 
 ## The Shock Waves Begin
-![](./image-06.png)
+![](./image-06.jpg)
 <details>
    <summary>The Shock Waves Begin</summary>
 Panel 6:
@@ -82,7 +82,7 @@ In this panel, we see multiple scenes of reaction across the internet community.
 The announcement sent shock waves through the internet community. System administrators who had spent months setting up Gopher servers suddenly faced the prospect of licensing fees. Commercial internet service providers worried about retroactive charges. More fundamentally, the decision shattered trust in the principle that internet protocols should be open and free for all to use. This wasn't just about Gopher - it was about the future of internet innovation. If a university could retroactively claim ownership of a widely-adopted protocol, what would prevent others from doing the same? The systems principle of "trust" as a foundation for network effects was being violated.
 
 ## The Great Migration
-![](./image-07.png)
+![](./image-07.jpg)
 <details>
    <summary>The Great Migration</summary>
 Panel 7:
@@ -95,7 +95,7 @@ In this panel, we see a dramatic visualization of the exodus from Gopher to the 
 Within months of the licensing announcement, the great migration began. Universities and organizations worldwide started shutting down their Gopher servers and switching to the World Wide Web. System administrators couldn't risk legal liability, and the uncertainty around Gopher's licensing made it untenable for long-term planning. This demonstrated another systems principle: when trust is broken in a network, participants will rapidly migrate to alternatives, even if those alternatives are initially inferior. The World Wide Web in 1993 was less mature than Gopher, but it was unambiguously open and free from proprietary claims.
 
 ## Tim Berners-Lee's Response
-![](./image-08.png)
+![](./image-08.jpg)
 <details>
    <summary>Tim Berners-Lee's Response</summary>
 Panel 8:
@@ -108,7 +108,7 @@ In this panel, we see Tim Berners-Lee at CERN making a historic decision. He sit
 Witnessing Gopher's downfall, Tim Berners-Lee made one of the most important decisions in internet history. At CERN in April 1993, he formally announced that the World Wide Web protocols - HTTP, HTML, and URLs - would remain free and open forever, with no licensing fees or proprietary claims. CERN agreed to put the web technologies in the public domain. This wasn't just a technical decision; it was a philosophical statement about how internet protocols should be governed. Tim understood that the network effect depended on trust, and trust depended on guaranteed openness. His response to Gopher's fate ensured that the Web would avoid the same tragic end.
 
 ## The Web's Explosive Growth
-![](./image-09.png)
+![](./image-09.jpg)
 <details>
    <summary>The Web's Explosive Growth</summary>
 Panel 9:
@@ -121,7 +121,7 @@ In this panel, we see the explosive growth of the World Wide Web from 1993-1995.
 With the guarantee of permanent openness, the World Wide Web exploded in growth. From 1993 to 1995, web servers grew from hundreds to hundreds of thousands, while Gopher servers steadily disappeared. The Web offered something Gopher couldn't - not just guaranteed freedom from licensing, but also richer content with images, formatting, and flexible hyperlinks. More importantly, businesses, universities, and individuals could invest in web infrastructure without fear that someone would later demand licensing fees. The network effect that had once favored Gopher now worked powerfully in favor of the Web, accelerated by the trust that came from guaranteed openness.
 
 ## The Final Collapse
-![](./image-10.png)
+![](./image-10.jpg)
 <details>
    <summary>The Final Collapse</summary>
 Panel 10:

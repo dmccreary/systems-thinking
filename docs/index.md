@@ -1,9 +1,9 @@
 ---
 title: Systems Thinking in the Age of AI
 description: A website dedicated to learning and teaching Systems Thinking in the age of AI
-image: /img/cover-wide-small.png
-og:image: /img/cover-wide-small.png
-twitter:image: /img/cover-wide-small.png
+image: /img/cover-wide-small.jpg
+og:image: /img/cover-wide-small.jpg
+twitter:image: /img/cover-wide-small.jpg
 social:
    cards: false
 ---
@@ -16,7 +16,7 @@ hide:
 .md-content__inner h1 {display: none !important;}
 </style>
 
-![](img/new-book-cover.png)
+![](img/new-book-cover.jpg)
 
 Welcome to our website for fans of systems thinking!  The goal of this website
 is to provide high quality AI-generated systems thinking resources for a broad 

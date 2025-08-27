@@ -3,7 +3,7 @@
 This is the story of how one engineer's vision created the foundation of our connected world, and how systems thinking principles shaped the battle between competing network technologies. Through the lens of Robert Metcalfe's journey, we'll explore Metcalfe's Law, network effects, and the "Success to the Successful" archetype that determined the winner in the early days of computer networking.
 
 ## The Young Engineer's Dream
-![](./image-01.png)
+![](./image-01.jpg)
 <details>
    <summary>The Young Engineer's Dream</summary>
 Panel 1:
@@ -16,7 +16,7 @@ In this panel, we see young Robert Metcalfe in 1973 at Harvard University, worki
 Our story begins in the early 1970s, when computers were isolated islands of computation. Robert "Bob" Metcalfe, a young electrical engineer and Harvard PhD candidate, was wrestling with a fundamental problem: how to make computers communicate with each other efficiently and reliably. Like many great innovations, Ethernet would emerge from a specific need - connecting the computers at Xerox's Palo Alto Research Center (PARC). But Bob didn't yet know that his solution would demonstrate one of the most powerful principles in systems thinking: that the value of a network grows exponentially with each new connection.
 
 ## Joining the Innovation Hub
-![](./image-02.png)
+![](./image-02.jpg)
 <details>
    <summary>Joining the Innovation Hub</summary>
 Panel 2:
@@ -29,7 +29,7 @@ In this panel, Bob Metcalfe walks through the entrance of Xerox PARC in Palo Alt
 In 1973, Bob joined Xerox PARC, the legendary research facility that was inventing the future of computing. PARC was developing revolutionary technologies: graphical user interfaces, laser printers, and personal computers. But there was a problem - all these amazing devices couldn't communicate with each other effectively. The existing networking solutions were expensive, unreliable, and couldn't scale. Bob saw an opportunity to create something better. This was a classic example of what systems thinkers call a "leverage point" - a place where a small change could produce big results across an entire system.
 
 ## The Eureka Moment
-![](./image-03.png)
+![](./image-03.jpg)
 <details>
    <summary>The Eureka Moment</summary>
 Panel 3:
@@ -42,7 +42,7 @@ In this panel, Bob sits at his desk surrounded by research papers, including one
 Bob's breakthrough came from studying the ALOHANET, a radio-based network in Hawaii where computers shared a single communication channel. He realized he could adapt this concept to wired networks: instead of expensive dedicated connections between every pair of computers, they could all share a single cable. Computers would "listen before speaking" to avoid collisions, and if two tried to talk at once, they would back off and try again. This elegant solution embodied systems thinking - rather than fighting the constraints of shared resources, he designed a protocol that worked with them.
 
 ## Building the First Network
-![](./image-04.png)
+![](./image-04.jpg)
 <details>
    <summary>Building the First Network</summary>
 Panel 4:
@@ -55,7 +55,7 @@ In this panel, Bob and his colleague David Boggs are in a lab setting, working t
 Working with colleague David Boggs, Bob built the first Ethernet in 1973-1974. They connected an Alto computer to a laser printer using a thick yellow coaxial cable, creating the first local area network that would scale. But the real magic wasn't just the connection - it was what systems thinkers call "emergent properties." When you connected two devices, you got one connection. But connect three devices, and suddenly you had three possible connections. Connect four, and you had six connections. The value wasn't growing linearly - it was growing exponentially.
 
 ## The Mathematical Revelation
-![](./image-05.png)
+![](./image-05.jpg)
 <details>
    <summary>The Mathematical Revelation</summary>
 Panel 5:
@@ -68,7 +68,7 @@ In this panel, Bob stands in front of a large whiteboard covered with mathematic
 As Bob watched Ethernet spread through PARC, he noticed something profound. Each new computer added to the network didn't just benefit itself - it made the entire network more valuable for everyone already connected. He formalized this observation into what would become known as Metcalfe's Law: the value of a network is proportional to the square of the number of connected users. This wasn't just about technology - it was a fundamental principle of systems thinking. The whole was greater than the sum of its parts, and the "network effect" created a powerful reinforcing loop where success attracted more success.
 
 ## Panel 6
-![](./image-06.png)
+![](./image-06.jpg)
 <details>
    <summary>The Standardization Challenge</summary>
 Panel 6:
@@ -81,7 +81,7 @@ In this panel, we see a conference room filled with engineers from different tec
 By the late 1970s, Bob faced a critical systems challenge. Ethernet was successful at Xerox, but to truly change the world, it needed to become an open standard that all companies could adopt. This meant convincing competitors to work together - a classic example of what systems thinkers call "shifting from competition to collaboration." Bob knew that the network effect only worked if networks could connect to each other. Incompatible networking standards would create isolated islands, limiting the value for everyone.
 
 ## Panel 7
-![](./image-07.png)
+![](./image-07.jpg)
 <details>
    <summary>The Standards Battle Begins</summary>
 Panel 7:
@@ -94,7 +94,7 @@ In this panel, we see a split-screen comparison showing two competing technologi
 The standardization process revealed a classic systems archetype: "Success to the Successful." Companies that were already successful in computing - like IBM - had advantages in promoting their preferred networking standards. IBM pushed Token Ring, a technology that guaranteed every computer fair access to the network by passing a special "token" around in a circle. It was technically elegant, but it was also more complex and expensive than Ethernet. This set up a fascinating systems dynamic: would the technically superior solution win, or would other factors determine the outcome?
 
 ## The Network Effect in Action
-![](./image-08.png)
+![](./image-08.jpg)
 <details>
    <summary>The Network Effect in Action</summary>
 Panel 8:
@@ -107,7 +107,7 @@ In this panel, we see a dynamic illustration of network growth. The scene shows 
 As the 1980s progressed, the network effect began working in Ethernet's favor. Early adopters found that Ethernet networks were easier and cheaper to install than Token Ring. More importantly, as more companies chose Ethernet, it became increasingly attractive for others to do the same - they wanted to connect to the growing network of Ethernet users. This created a powerful reinforcing loop: more users led to greater value, which attracted even more users. Systems thinkers recognize this as a "tipping point" phenomenon, where small initial advantages can snowball into decisive victories.
 
 ## Founding 3Com
-![](./image-09.png)
+![](./image-09.jpg)
 <details>
    <summary>Founding 3Com</summary>
 Panel 9:
@@ -120,7 +120,7 @@ In this panel, Bob stands in front of a small startup office with a "3Com" sign.
 In 1979, Bob left Xerox to found 3Com (Computer, Communication, and Compatibility), with the mission of making Ethernet universally accessible. This was a classic entrepreneurial bet on network effects and systems thinking. Bob understood that for Ethernet to achieve maximum value, it needed to be compatible with every type of computer, not just Xerox machines. 3Com would make the adapters, cables, and hubs that let any computer join the growing Ethernet ecosystem. This strategy demonstrated another systems principle: sometimes you create more value by giving up control and enabling others to participate.
 
 ## The Tipping Point
-![](./image-10.png)
+![](./image-10.jpg)
 <details>
    <summary>The Tipping Point</summary>
 Panel 10:
@@ -133,7 +133,7 @@ In this panel, we see a dramatic visualization of market share shift. A large sc
 By the late 1980s, Ethernet had reached a critical tipping point. Despite Token Ring's technical sophistication and IBM's market power, the network effect overwhelmed these advantages. Companies chose Ethernet because that's what everyone else was choosing. This created what systems thinkers call a "self-reinforcing loop" - success bred more success. IBM's "Success to the Successful" advantage was being overwhelmed by the more powerful network effect dynamic. The battle was essentially over, though it would take several more years for Token Ring to completely fade away.
 
 ## Internet Integration
-![](./image-11.png)
+![](./image-11.jpg)
 <details>
    <summary>Internet Integration</summary>
 Panel 11:
@@ -146,7 +146,7 @@ In this panel, we see a global view of the Earth with network connections spanni
 As the Internet began connecting local networks worldwide in the early 1990s, Ethernet found its perfect partner. Local Ethernet networks became the on-ramps to the information superhighway, connecting offices, schools, and homes to the global Internet. This represented the ultimate validation of Metcalfe's Law - the network's value exploded as it grew from connecting computers in a building, to connecting buildings in a city, to connecting cities worldwide. The systems thinking principle of "emergent properties" was on full display: the Internet became something entirely new and more powerful than the sum of its parts.
 
 ## The Exponential Revolution
-![](./image-12.png)
+![](./image-12.jpg)
 <details>
    <summary>The Exponential Revolution</summary>
 Panel 12:
@@ -159,7 +159,7 @@ In this panel, we see an older Bob Metcalfe (now with gray hair) speaking at a t
 By the late 1990s, the network effect had triggered a digital revolution. Email, the World Wide Web, e-commerce, and early social networks were transforming society. Bob, now in his 50s, watched in amazement as his mathematical insight about network value had become the foundation of the digital economy. Every new website, every new Internet user, every new connected device made the entire network more valuable for everyone else. The "Success to the Successful" archetype was now working in favor of Internet-connected businesses, creating entirely new industries and economic models.
 
 ## Legacy and Recognition
-![](./image-13.png)
+![](./image-13.jpg)
 <details>
    <summary>Legacy and Recognition</summary>
 Panel 13:
@@ -172,7 +172,7 @@ In this panel, we see an awards ceremony where Bob receives recognition for his 
 Bob Metcalfe received numerous honors for his contributions to networking, including the National Medal of Technology and induction into the Internet Hall of Fame. But perhaps more importantly, his work demonstrated fundamental principles of systems thinking that extend far beyond technology. The network effect applies to social networks, economic systems, and any situation where the value of participation increases with the number of participants. His victory over Token Ring showed how systems dynamics - not just technical superiority - determine which innovations succeed.
 
 ## The Connected Future
-![](./image-14.png)
+![](./image-14.jpg)
 <details>
    <summary>The Connected Future</summary>
 Panel 14:

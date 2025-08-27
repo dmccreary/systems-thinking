@@ -1,9 +1,9 @@
 ---
 title: Systems Thinking Archetypes
 description: A detailed analysis of the eight systems thinking archetypes with examples of each.
-image: /archetypes/archetypes-cover.png
-og:image: /archetypes/archetypes-cover.png
-twitter:image: /archetypes/archetypes-cover.png
+image: /archetypes/archetypes-cover.jpg
+og:image: /archetypes/archetypes-cover.jpg
+twitter:image: /archetypes/archetypes-cover.jpg
 social:
    cards: false
 ---
