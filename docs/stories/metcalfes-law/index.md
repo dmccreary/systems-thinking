@@ -1,9 +1,9 @@
 ---
-title: Moore's Law - The Rise and Limits of Silicon Progress
-description: A graphic novel about how Gordon Moore observed exponential growth of silicon chip density.
+title: Metcalfe's Law - What is the value of a network?
+description: A graphic novel about how Bob Metcalfe observed how the value of network grows with every connection.
 image: /stories/metcalfes-law/cover.jpg
 og:image: /stories/metcalfes-law/cover.jpg
-twitter:image: /stories/mmetcalfess-law/cover.jpg
+twitter:image: /stories/metcalfes-law/cover.jpg
 social:
    cards: false
 ---
