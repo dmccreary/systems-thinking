@@ -34,7 +34,7 @@ sometimes being smart individually can make us all collectively stupid.
 
 ## Metcalfe's Law
 
-![](./metcalfes-law/cover.png){width=400}
+![](./metcalfes-law/cover.jpg){width=400}
 
 The Network Pioneer: How One Engineer's Big Idea Connected the World
 
