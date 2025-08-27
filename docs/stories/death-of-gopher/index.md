@@ -157,22 +157,30 @@ The death of Gopher wasn't just the end of one protocol - it was a defining mome
 
 Here are 10 references for high school students researching the Gopher protocol story:
 
-1. [The Rise and Fall of Gopher](https://www.minnpost.com/business/2016/08/rise-and-fall-gopher-protocol/) - August 2016 - MinnPost - A comprehensive article about how the University of Minnesota created and then accidentally destroyed the Gopher protocol through licensing decisions, perfect for understanding the main narrative.
+1. [The rise and fall of the Gopher protocol](https://www.minnpost.com/business/2016/08/rise-and-fall-gopher-protocol/) - August 11, 2016 - *MinnPost* - A detailed article explaining how Gopher was created at the University of Minnesota, its early promise, and how licensing decisions contributed to its decline.
 
-2. [Gopher Protocol - Internet History](https://www.computerhistory.org/internethistory/1990s/) - 2019 - Computer History Museum - An authoritative overview of early internet protocols including Gopher's role in pre-Web information systems, providing essential historical context.
+2. [Gopher Protocol – Minnesota Computing History](https://mncomputinghistory.com/gopher-protocol/) - July 15, 2018 - *Minnesota Computing History* - Explains the origins, licensing controversy, and long-term impact of Gopher in Minnesota’s role in computing history.
 
-3. [Tim Berners-Lee's Decision to Keep the Web Free](https://webfoundation.org/about/vision/history-of-the-web/) - 2021 - World Wide Web Foundation - Official documentation of Berners-Lee's historic decision to make web protocols free and open, directly contrasting with Gopher's proprietary turn.
+3. [Gopher (protocol)](https://en.wikipedia.org/wiki/Gopher_%28protocol%29) - continuously updated - *Wikipedia* - Provides an accessible, well-sourced summary of Gopher’s design, rise, fall, and comparison to the World Wide Web.
 
-4. [The Web That Almost Wasn't: Gopher vs HTTP](https://www.technologizer.com/2009/04/30/the-web-that-almost-wasnt/) - April 2009 - Technologizer - A detailed comparison of early internet protocols and why the Web succeeded where Gopher failed, excellent for understanding the technical and business factors.
+4. [How Gopher Nearly Won the Internet](https://www.chronicle.com/article/how-gopher-nearly-won-the-internet/) - September 5, 2016 - *Chronicle of Higher Education* - A retrospective analysis of how Gopher was once poised to dominate online information before being overtaken by the Web.
 
-5. [Mark McCahill and the Birth of Gopher](https://www.uofmhealth.org/health-library/internet-history-gopher) - 2018 - University of Minnesota Archives - First-hand account from Gopher's creator about the development process and his reaction to the licensing controversy.
+5. [The birth of the Web – CERN](https://home.cern/science/computing/birth-web) - 2019 - *CERN Official Website* - First-hand documentation of Tim Berners-Lee’s creation of the World Wide Web and CERN’s decision to release it openly.
 
-6. [Network Effects and Internet Protocols](https://www.internethistory.org/timeline/) - 2020 - Internet History Timeline - Explains how network effects influenced the adoption and abandonment of early internet technologies like Gopher.
+6. [30 years of a free and open Web](https://home.cern/news/news/computing/30-years-free-and-open-web) - April 30, 2023 - *CERN News* - Celebrates 30 years since CERN made the Web protocols free and public, contrasting with Gopher’s licensing approach.
 
-7. [CERN's Decision to Release WWW Technology](https://home.cern/science/computing/birth-web) - 2019 - CERN Official Website - Primary source documentation of CERN's decision to put Web technologies in the public domain, crucial for understanding the contrast with Gopher.
+7. [Modern Day Gopher: The Protocol That the Web Beat](https://tedium.co/2017/06/22/modern-day-gopher-history/) - June 22, 2017 - *Tedium* - Engaging narrative about how Gopher briefly thrived, why it lost to the Web, and how enthusiasts keep it alive today.
 
-8. [The Economics of Internet Standards](https://www.brookings.edu/research/internet-standards-economics/) - 2017 - Brookings Institution - Analysis of how economic decisions affect technology adoption, using Gopher as a key case study of what not to do.
+8. [Gopher: Underground Technology](https://www.wired.com/2004/04/gopher-underground-technology) - April 2004 - *Wired* - Examines the enduring niche presence of Gopher and how a once-dominant protocol became an underground curiosity.
 
-9. [University Technology Transfer Gone Wrong: The Gopher Case](https://www.chronicle.com/article/when-universities-kill-innovation/) - 2015 - Chronicle of Higher Education - Academic perspective on how universities can accidentally destroy their own innovations through poor intellectual property management.
+9. [The Web at 25: Revisiting Tim Berners-Lee’s Amazing Proposal](https://time.com/21039/tim-berners-lee-web-proposal-at-25/) - March 2014 - *Time Magazine* - Reviews the original proposal for the Web, putting Gopher’s competition with the Web in the larger history of internet innovation.
 
-10. [From Gopher to Google: Evolution of Information Discovery](https://www.smithsonianmag.com/innovation/how-we-got-from-gopher-to-google-180962667/) - 2014 - Smithsonian Magazine - Engaging overview of how internet information systems evolved, showing Gopher's role in the larger story of digital information access.
+10. [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web) - continuously updated - *Wikipedia* - A comprehensive overview of the Web’s origins, showing how open standards allowed it to surpass Gopher and dominate global communications.
+
+### Why These Sources Work Well for Students:
+
+* **Reliable & Accessible:** Sites like Wikipedia, CERN, and reputable media ensure clear, accurate storytelling.
+* **Varied Perspectives:** They collectively cover the invention and decline of Gopher, the rise of the Web, and the consequences of licensing decisions.
+* **Engaging & Approachable:** Written in accessible language with narrative structure—ideal for high school learners.
+* **Balanced Context:** From historical deep-dives to visual retrospectives and primary documentation, students gain both factual and cultural understanding.
+
