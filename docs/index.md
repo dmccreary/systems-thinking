@@ -6,11 +6,9 @@ og:image: /img/cover-wide-small.jpg
 twitter:image: /img/cover-wide-small.jpg
 social:
    cards: false
----
 hide:
   - title   # Hide the page title
-  - toc     # Hide the table of contents
-# Systems Thinking in the age of AI
+  - toc     # Hide the table of contents---
 ---
 <style>
 .md-content__inner h1 {display: none !important;}
