@@ -77,7 +77,7 @@ In this panel, Bob stands in front of a large whiteboard covered with mathematic
 
 As Bob watched Ethernet spread through PARC, he noticed something profound. Each new computer added to the network didn't just benefit itself - it made the entire network more valuable for everyone already connected. He formalized this observation into what would become known as Metcalfe's Law: the value of a network is proportional to the square of the number of connected users. This wasn't just about technology - it was a fundamental principle of systems thinking. The whole was greater than the sum of its parts, and the "network effect" created a powerful reinforcing loop where success attracted more success.
 
-## Panel 6
+## The Standardization Challenge
 ![](./image-06.jpg)
 <details>
    <summary>The Standardization Challenge</summary>
@@ -90,7 +90,7 @@ In this panel, we see a conference room filled with engineers from different tec
 
 By the late 1970s, Bob faced a critical systems challenge. Ethernet was successful at Xerox, but to truly change the world, it needed to become an open standard that all companies could adopt. This meant convincing competitors to work together - a classic example of what systems thinkers call "shifting from competition to collaboration." Bob knew that the network effect only worked if networks could connect to each other. Incompatible networking standards would create isolated islands, limiting the value for everyone.
 
-## Panel 7
+## The Standards Battle Begins
 ![](./image-07.jpg)
 <details>
    <summary>The Standards Battle Begins</summary>
