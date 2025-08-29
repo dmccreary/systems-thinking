@@ -33,6 +33,7 @@ nav:
     - Center Test: clds/center-test/index.md
     - Image Test: clds/image-test/index.md
     - Curve Direction Test: clds/curve-direction-test/index.md
+    - Misinformation: clds/misinformation/index.md
 
   - Part 2 Archetypes:
     - Introduction: archetypes/index.md

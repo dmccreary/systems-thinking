@@ -14,6 +14,8 @@ async function loadExamplesList() {
         { id: 'thermostat-cld', title: 'Thermostat' },
         { id: 'population-cld', title: 'Population' },
         { id: 'tragedy-of-the-commons-cld', title: 'Tragedy of the Commons' },
+        { id: 'misinformation-cld', title: 'Misinformation to Undecided Voters' },
+
 
         { id: 'ai-training-cld', title: 'AI Training' },
         { id: 'banning-books-cld', title: 'Book Banning' },
@@ -112,7 +114,7 @@ function loadCLD(data) {
             label: wrapText(node.label, 20),
             x: node.position.x,
             y: node.position.y,
-            title: node.description || '',
+            title: node.description || `${node.label} (${node.type || 'variable'})`,
             originalData: node
         }));
 
@@ -123,7 +125,7 @@ function loadCLD(data) {
                 to: edge.target,
                 label: edge.polarity === 'positive' ? '+' : '-',
                 color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
-                title: edge.description || `${edge.polarity === 'positive' ? 'Positive' : 'Negative'} relationship`,
+                title: edge.description || `${edge.polarity === 'positive' ? 'Positive (+)' : 'Negative (-)'} relationship from ${edge.source} to ${edge.target}`,
                 originalData: edge
             };
 
@@ -163,7 +165,7 @@ function loadCLD(data) {
                         margin: {
                             left: Math.round(30 * 0.1)
                         },
-                        title: loop.description || '',
+                        title: loop.description || `${loop.type === 'reinforcing' ? 'Reinforcing' : 'Balancing'} Loop: ${loop.label || loop.id}`,
                         originalData: loop,
                         isLoop: true
                     });
