@@ -76,7 +76,7 @@
     {
       "id": "total_cattle",
       "label": "Total Cattle\nStock",
-      "position": {"x": -150, "y": -50},
+      "position": {"x": -200, "y": -50},
       "type": "stock",
       "description": "Combined grazing pressure from both farmers' cattle on the shared pasture",
       "examples": ["95 total head on pasture", "Combined grazing load", "Aggregate livestock pressure"],
@@ -155,6 +155,10 @@
       "source": "farmer_a_cattle",
       "target": "total_cattle",
       "polarity": "positive",
+      "curve": {
+          "type": "curvedCCW",
+          "roundness": 0.4
+        },
       "description": "Farmer A's cattle contribute to total grazing pressure",
       "strength": "strong"
     },
@@ -171,6 +175,9 @@
       "source": "total_cattle",
       "target": "pasture_health",
       "polarity": "negative",
+      "curve": {
+          "type": "horizontal"
+      },
       "description": "Higher total cattle count degrades pasture health through overgrazing",
       "strength": "strong",
       "delay": {
@@ -184,6 +191,9 @@
       "source": "pasture_health",
       "target": "overgrazing_limit",
       "polarity": "negative",
+      "curve": {
+          "type": "horizontal"
+      },
       "description": "Declining pasture health indicates approach to or exceeding of overgrazing limits",
       "strength": "strong"
     },
