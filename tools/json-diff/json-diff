@@ -1,0 +1,143 @@
+#!/bin/bash
+
+# JSON Diff Shell Wrapper Script
+# This script validates arguments and calls the Python json-diff.py tool
+
+set -e  # Exit on any error
+
+# Script configuration
+PYTHON_SCRIPT="$HOME/bin/json-diff.py"
+SCRIPT_NAME=$(basename "$0")
+
+# Function to show usage
+show_usage() {
+    echo "Usage: $SCRIPT_NAME [OPTIONS] file1.json file2.json"
+    echo ""
+    echo "Compare JSON files ignoring insignificant whitespace and formatting"
+    echo ""
+    echo "Options:"
+    echo "  --no-sort         Do not sort keys when normalizing JSON"
+    echo "  --structure-only  Show only structural differences (key-value changes)"
+    echo "  --indent N        Indentation level for normalized JSON (default: 2)"
+    echo "  -h, --help        Show this help message"
+    echo ""
+    echo "Examples:"
+    echo "  $SCRIPT_NAME file1.json file2.json"
+    echo "  $SCRIPT_NAME --no-sort file1.json file2.json"
+    echo "  $SCRIPT_NAME --structure-only file1.json file2.json"
+    echo "  $SCRIPT_NAME --indent 4 file1.json file2.json"
+}
+
+# Function to check if a file exists and is readable
+check_file() {
+    local file="$1"
+    if [[ ! -f "$file" ]]; then
+        echo "Error: File '$file' does not exist" >&2
+        exit 1
+    fi
+    if [[ ! -r "$file" ]]; then
+        echo "Error: File '$file' is not readable" >&2
+        exit 1
+    fi
+}
+
+# Function to validate JSON file extension (optional, can be disabled)
+check_json_extension() {
+    local file="$1"
+    if [[ ! "$file" =~ \.(json|JSON)$ ]]; then
+        echo "Warning: File '$file' does not have a .json extension" >&2
+    fi
+}
+
+# Check if Python script exists
+if [[ ! -f "$PYTHON_SCRIPT" ]]; then
+    echo "Error: Python script not found at $PYTHON_SCRIPT" >&2
+    echo "Please ensure json-diff.py is installed in ~/bin/" >&2
+    exit 1
+fi
+
+# Check if Python script is executable
+if [[ ! -x "$PYTHON_SCRIPT" ]]; then
+    echo "Error: Python script $PYTHON_SCRIPT is not executable" >&2
+    echo "Run: chmod +x $PYTHON_SCRIPT" >&2
+    exit 1
+fi
+
+# Check for help flag first
+for arg in "$@"; do
+    if [[ "$arg" == "-h" || "$arg" == "--help" ]]; then
+        show_usage
+        exit 0
+    fi
+done
+
+# Initialize variables for argument parsing
+declare -a python_args=()
+declare -a json_files=()
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --no-sort|--structure-only)
+            python_args+=("$1")
+            shift
+            ;;
+        --indent)
+            if [[ -z "$2" || "$2" =~ ^- ]]; then
+                echo "Error: --indent requires a numeric argument" >&2
+                exit 1
+            fi
+            if ! [[ "$2" =~ ^[0-9]+$ ]]; then
+                echo "Error: --indent argument must be a positive integer" >&2
+                exit 1
+            fi
+            python_args+=("$1" "$2")
+            shift 2
+            ;;
+        -*)
+            echo "Error: Unknown option '$1'" >&2
+            echo "Use -h or --help for usage information" >&2
+            exit 1
+            ;;
+        *)
+            json_files+=("$1")
+            shift
+            ;;
+    esac
+done
+
+# Validate that we have exactly 2 JSON files
+if [[ ${#json_files[@]} -ne 2 ]]; then
+    echo "Error: Exactly two JSON files must be provided" >&2
+    if [[ ${#json_files[@]} -eq 0 ]]; then
+        echo "No files provided" >&2
+    elif [[ ${#json_files[@]} -eq 1 ]]; then
+        echo "Only one file provided: ${json_files[0]}" >&2
+    else
+        echo "Too many files provided: ${json_files[*]}" >&2
+    fi
+    echo "" >&2
+    show_usage >&2
+    exit 1
+fi
+
+# Extract the two files
+file1="${json_files[0]}"
+file2="${json_files[1]}"
+
+# Validate files exist and are readable
+check_file "$file1"
+check_file "$file2"
+
+# Optional: warn about non-JSON extensions
+check_json_extension "$file1"
+check_json_extension "$file2"
+
+# Check if Python is available
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "Error: python3 is not available" >&2
+    exit 1
+fi
+
+# Execute the Python script with all arguments
+exec python3 "$PYTHON_SCRIPT" "${python_args[@]}" "$file1" "$file2"

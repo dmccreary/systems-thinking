@@ -463,6 +463,30 @@ function saveCurrentDiagram() {
         }
     });
     
+    // Update node and edge data from the current network state
+    const currentNodes = nodes.getIds();
+    const currentEdges = edges.getIds();
+    
+    // Update nodes with any changes made through editing
+    currentNodes.forEach(nodeId => {
+        const nodeData = nodes.get(nodeId);
+        const originalNode = cldData.nodes.find(n => n.id === nodeId);
+        if (originalNode && nodeData.originalData) {
+            // Preserve all original data including examples
+            Object.assign(originalNode, nodeData.originalData);
+        }
+    });
+    
+    // Update edges with any changes made through editing
+    currentEdges.forEach(edgeId => {
+        const edgeData = edges.get(edgeId);
+        const originalEdge = cldData.edges.find(e => e.id === edgeId);
+        if (originalEdge && edgeData.originalData) {
+            // Preserve all original data including examples
+            Object.assign(originalEdge, edgeData.originalData);
+        }
+    });
+    
     const dataStr = JSON.stringify(cldData, null, 2);
     const dataBlob = new Blob([dataStr], {type: 'application/json'});
     const url = URL.createObjectURL(dataBlob);
