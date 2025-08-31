@@ -1,12 +1,10 @@
 # Using Vis.js to Render Causal Loop Diagrams
 
+## Why Vis.js is Preferred for Drawing Causal Loop Diagrams with AI
 Vis.js is a powerful graph network visualization tool that has many
-easy-to-use options for fine control of directed arrow positioning between
+easy-to-use features and options for fine control of directed arrow positioning between
 nodes in a graph.  Because of these features it is often the preferred
 tool for automating the drawing of aesthetically pleasing causal loop diagram (CLD) layouts.
-Vis.js can be used with LLMs to automatically give you a reasonable layout of
-a first draft of a causal-loop diagram.  You can then use an editor to
-make the final changes.
 
 For example, here is a quick summary table of the many ways an edge can be configured to
 connect two nodes.
@@ -28,13 +26,31 @@ Note the three different edge types in our Tragedy of the Commons example:
 
 ![Tragedy of the Commons](toc-example.png)
 
-1. The upper left corner has the loop for Farmer A.  These use the curved counter clockwise `curvedCCW` edges.
-2. The lower left corner has the loop for Farmer B.  These use the curved clockwise `curvedCW` edges.
-3. The rightmost three edges are connected using the horizontal smooth types. 
-4. The balancing loops mix both clockwise and counter clockwise types.
+1. The upper left corner has the reinforcing loop for Farmer A.  These use the curved counter clockwise `curvedCCW` edges.
+2. The lower left corner has the reinforcing loop for Farmer B.  These use the curved clockwise `curvedCW` edges.
+3. The top balancing loop for Farmer A uses curved counter clockwise `curvedCCW` edges on the top edge of the loop.
+4. The lower balancing loop for Farmer B uses curved clockwise `curvedCW` edges on the bottom edge of the loop.
+5. The rightmost three edges are connected using two `horizontal` smooth types. 
+6. The use of both types of curves preserves a symmetry so that total cattle stock, pasture heath and overgrazing limit can be place in the vertical center if the diagram.  This symmetry shows how both Farmer A and Farmer B have similar dynamics.
 
+## Synergistic Use with LLMs
+
+Although LLMs are good at predicting the next word or token, they are not good at automatic layout.
+Unlike humans, they have a limited ability to evaluate the quality of a layout they generate.
+To get quality results using LLMs to generate high quality CLD layouts, we need to provide it guardrails.
+
+Vis.js can be used with LLMs to automatically give you a reasonable layout of
+a first draft of a causal-loop diagram.  You can then use an editor to
+make the final changes.
 
 When we use vis.js to render a CLD, we need to first understand how to configure vis.js
+
+## Using Vis.js With A Deterministic CLD Strategy
+
+When we specify a new CLD using text, we want to focus on **what** the CLD should show, not **how** it
+should draw it.  We can use vis.js in combination with a CLD JSON schema to help LLMs generate
+a CLD and have downstream tools help with placement and editing.  This deterministic approach
+also makes our CLDs easier to maintain, modify and customize.
 
 ## Network Graph Drawing Background
 
@@ -47,7 +63,7 @@ edited by hand.
 
 ## CLD Defaults
 
-Vis.js has hundreds of options it uses to render network graphs.  Our first
+Vis.js has hundreds of features and options it uses to render network graphs.  Our first
 task is to find sensible defaults for rendering high-quality CLD diagrams.
 
 Below is a crisp, step‑by‑step guide you can apply directly to your `main.html`. 
@@ -55,22 +71,86 @@ We’ll start from the default behaviors in vis‑network, then show how to over
 them at the **global** level (in `options`) and at the **per‑node / per‑edge** level. 
 I’ll also highlight how the `title` field turns into hover tooltips for quick, inline explanations of nodes and edges.
 
+## Step 1: Include the vis.js JavaScript library, CSS file and prepare the canvas
 
-## Step 1: Include the library and prepare the canvas
+### Vis.js Library Loading
 
-In your HTML head/body:
+In your HTML head/body you will want to include links to the main vis.js JavaScript library.  The example
+below uses the clouudflare.com references content distribution network.
+
+```html
+<head>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.css">
+ <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+</head>
+<body>
+  <div id="network" style="height: 600px"></div>
+</body>
+```
+
+Note that the `unpkg.com` link has no version number in the path.  This will always fetch the latest version.
+
+Here is the fixed version from `cloudflare.com `unpkg.com` link:
+
+```html
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+```
+
+You can use this if you have a fixed version to reference.
+
+### Preconnect
+
+To speed the initial load of the vis.js library, we suggest you use the HTML ```preconnect``` link:
 
 ```html
 <link rel="preconnect" href="https://unpkg.com" crossorigin>
-<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-
-<div id="network" style="height: 600px"></div>
 ```
 
-**Why:** the `Network` class renders into a container (`#network`).
-Docs home: vis‑network site. ([visjs.github.io][1])
+This line does the following:
 
----
+1. **DNS resolution:** Resolves unpkg.com domain early
+2. **TCP handshake:** Establishes connection before resources are needed
+3. **SSL negotiation:** Completes HTTPS setup in advance
+4. **Performance gain:** Can save 100-300ms on first request
+
+### CSS File
+
+The vis.min.css file is large and many of the rules are rarely used.
+
+Here are the CDN link size estimates:
+
+-   **Minified**: ~15-20KB
+-   **Gzipped**: ~4-6KB
+
+#### Tradeoffs of Including vis.css
+
+##### **Advantages:**
+
+-   **Essential functionality**: Required for tooltips/hovers to display properly
+-   **Small size**: Only ~4-6KB gzipped is very reasonable
+-   **Complete styling**: Handles all visual states (hover, selection, etc.)
+-   **Cross-browser compatibility**: Tested styling across different browsers
+-   **Professional appearance**: Consistent, polished look
+
+##### **Disadvantages:**
+
+-   **External dependency**: Another HTTP request (though small)
+-   **Unused styles**: May include CSS for vis.js features you're not using
+-   **CDN dependency**: Relies on external service availability
+-   **Version coupling**: CSS version must match JS version
+
+#### Impact Assessment
+
+For our CLD viewers, the CSS file is **definitely worth including** because:
+
+1.  **Critical functionality**: Without it, hover tooltips won't work properly
+2.  **Minimal cost**: 4-6KB gzipped is negligible in modern web context
+3.  **User experience**: Hover details are essential for educational CLDs
+4.  **Maintenance**: Much easier than recreating all the necessary styles
+
+See the [vis.js docs site](https://visjs.github.io)
 
 ## Step 2: Create data sets for nodes and edges
 
@@ -88,7 +168,7 @@ const edges = new vis.DataSet([
 const data = { nodes, edges };
 ```
 
-**Why:** vis uses `DataSet` for dynamic, mutable collections of nodes/edges. ([visjs.github.io][2], [CloudDefense.AI][3])
+Vis uses `DataSet` for dynamic, mutable collections of nodes/edges.
 
 
 ## Step 3: Start from clean global defaults in `options`
@@ -113,7 +193,6 @@ const options = {
 const network = new vis.Network(document.getElementById('network'), data, options);
 ```
 
-**Why (defaults & precedence):**
 
 * Node options go in `options.nodes`. These apply to **all** nodes, but any property defined **on a node itself** overrides the global value (same for edges). ([visjs.github.io][4])
 * Smooth/curved edges can be configured with `type` and `roundness`; static types like `curvedCW` are great when `physics:false`. ([visjs.github.io][5], [CRAN][6])

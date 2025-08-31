@@ -1,5 +1,13 @@
 # Simulations to Teach Systems Thinking
 
+## Causal Loop Diagram Viewer
+
+[Run the CLD Viewer](./cld-viewer/index.md)
+
+## Causal Loop Diagram Editor
+
+[Run the CLD Editor](./cld-editor/index.md)
+
 Using simulations to teach systems thinking through interactive simulations is a fantastic idea, as it not only makes learning more engaging but also provides a hands-on experience in understanding complex systems. Here are some simulation ideas that can help reinforce systems thinking:
 
 1. **Tragedy of the Commons**

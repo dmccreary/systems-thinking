@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "id": "curve-test-cld",
+    "title": "Curve Test",
+    "archetype": "none",
+    "description": "A causal loop diagram showing both clockwise and counter clockwise loops.",
+    "version": "1.0.1",
+    "created_date": "2025-08-25T00:00:00Z",
+    "updated_date": "2025-08-25T00:00:00Z",
+    "author": "Dan McCreary",
+    "tags": ["test", "curve-test", "unit-test"],
+    "layout_strategy": "Three nodes horizontal with test curve edges for clockwise on the left and counterclockwise curves on the right",
+    "notes": "Testing."
+  },
+  "nodes": [
+    {
+      "id": "population",
+      "label": "Population",
+      "position": {"x": 300, "y": 100}
+    },
+    {
+      "id": "births",
+      "label": "Birth Rate",
+      "position": {"x": 100, "y": 100}},
+    {
+      "id": "deaths",
+      "label": "Death Rate",
+      "position": {"x": 500, "y": 100}
+    }
+  ],
+  "edges": [
+    {
+      "id": "population_to_births",
+      "source": "population",
+      "target": "births",
+      "polarity": "positive",
+      "description": "Clockwise curved edge from population to births"
+    },
+    {
+      "id": "births_to_population",
+      "source": "births",
+      "target": "population",
+      "polarity": "positive",
+      "description": "Counterclockwise curved edge from births to population"
+    },
+    {
+      "id": "population_to_deaths",
+      "source": "population",
+      "target": "deaths",
+      "polarity": "negative",
+      "curve": {
+          "type": "curvedCCW"
+        },
+      "description": "Counterclockwise curved edge from population to deaths"
+      
+    },
+    {
+      "id": "deaths_to_population",
+      "source": "deaths",
+      "target": "population",
+      "polarity": "positive",
+      "curve": {
+          "type": "curvedCCW"
+        },
+      "description": "Counterclockwise curved edge from deaths to population"
+    }
+  ],
+  "loops": [
+    {
+      "id": "birth_reinforcing_loop",
+      "type": "reinforcing",
+      "position": {"x": 200, "y": 100},
+      "is_primary": true
+    },
+    {
+      "id": "death_balancing_loop",
+      "type": "balancing",
+      "position": {"x": 400, "y": 100},
+      "is_primary": true
+    }
+  ]
+}
