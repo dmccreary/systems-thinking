@@ -702,6 +702,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#network-graph-drawing-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Graph Drawing Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cld-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLD Defaults
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-1-include-the-library-and-prepare-the-canvas" class="md-nav__link">
     <span class="md-ellipsis">
       Step 1: Include the library and prepare the canvas
@@ -4043,6 +4061,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#network-graph-drawing-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Graph Drawing Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cld-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLD Defaults
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-1-include-the-library-and-prepare-the-canvas" class="md-nav__link">
     <span class="md-ellipsis">
       Step 1: Include the library and prepare the canvas
@@ -4334,7 +4370,105 @@
 
 
 <h1 id="using-visjs-to-render-causal-loop-diagrams">Using Vis.js to Render Causal Loop Diagrams</h1>
-<p>Using sensible defaults—and how to override them.</p>
+<p>Vis.js is a powerful graph network visualization tool that has many
+easy-to-use options for fine control of directed arrow positioning between
+nodes in a graph.  Because of these features it is often the preferred
+tool for automating the drawing of aesthetically pleasing causal loop diagram (CLD) layouts.
+Vis.js can be used with LLMs to automatically give you a reasonable layout of
+a first draft of a causal-loop diagram.  You can then use an editor to
+make the final changes.</p>
+<p>For example, here is a quick summary table of the many ways an edge can be configured to
+connect two nodes.</p>
+<table>
+<thead>
+<tr>
+<th>Smooth Type</th>
+<th>Description</th>
+<th>Routes Around Nodes</th>
+<th>Uses Roundness Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dynamic</td>
+<td>Automatically chooses the best smoothing algorithm based on the network structure</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>continuous</td>
+<td>Creates smooth curves that adapt continuously to node positions</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>discrete</td>
+<td>Uses predefined curve points that remain fixed regardless of node movement</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>diagonalCross</td>
+<td>Creates straight diagonal lines that cross through intermediate space</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>straightCross</td>
+<td>Draws completely straight lines directly between nodes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>horizontal</td>
+<td>Forces edges to follow horizontal then vertical paths in step-like patterns</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>vertical</td>
+<td>Forces edges to follow vertical then horizontal paths in step-like patterns</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>curvedCW</td>
+<td>Creates curved edges that bend in a clockwise direction</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>curvedCCW</td>
+<td>Creates curved edges that bend in a counter-clockwise direction</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>cubicBezier</td>
+<td>Uses cubic Bezier curves with customizable control points for precise curve shaping</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Note the three different edge types in our Tragedy of the Commons example:</p>
+<p><img alt="Tragedy of the Commons" src="toc-example.png" /></p>
+<ol>
+<li>The upper left corner has the loop for Farmer A.  These use the curved counter clockwise <code>curvedCCW</code> edges.</li>
+<li>The lower left corner has the loop for Farmer B.  These use the curved clockwise <code>curvedCW</code> edges.</li>
+<li>The rightmost three edges are connected using the horizontal smooth types. </li>
+<li>The balancing loops mix both clockwise and counter clockwise types.</li>
+</ol>
+<p>When we use vis.js to render a CLD, we need to first understand how to configure vis.js</p>
+<h2 id="network-graph-drawing-background">Network Graph Drawing Background</h2>
+<p>Network graph drawing libraries allow the user to specify a list of nodes and edges.  The Javascript
+libraries then can be used to either automatically place the nodes on the drawing canvas and
+connect them, or you can specify the exact location of the nodes on a X,Y coordinate grid.</p>
+<p>LLMs can also be used to "guess" the initial position of nodes.  However, they frequently need to be
+edited by hand.</p>
+<h2 id="cld-defaults">CLD Defaults</h2>
+<p>Vis.js has hundreds of options it uses to render network graphs.  Our first
+task is to find sensible defaults for rendering high-quality CLD diagrams.</p>
 <p>Below is a crisp, step‑by‑step guide you can apply directly to your <code>main.html</code>. 
 We’ll start from the default behaviors in vis‑network, then show how to override 
 them at the <strong>global</strong> level (in <code>options</code>) and at the <strong>per‑node / per‑edge</strong> level. 
