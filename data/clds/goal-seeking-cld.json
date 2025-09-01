@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "id": "goal-seeking-cld",
+    "title": "Goal Seeking Feedback Loop",
+    "archetype": "limits-to-growth",
+    "description": "A causal loop diagram showing how desires drive action, which leads to assessment and personal growth, creating a reinforcing cycle of goal-seeking behavior and self-improvement.",
+    "learning_objectives": [
+      "Understand how goal-seeking creates reinforcing feedback loops",
+      "Recognize the role of assessment and reflection in personal development",
+      "Identify how desires drive continuous action and growth",
+      "Explore the cyclical nature of motivation and achievement"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-09-01T00:00:00Z",
+    "updated_date": "2025-09-01T00:00:00Z",
+    "author": "Dan McCreary",
+    "tags": [
+      "goal-setting",
+      "motivation",
+      "personal-development",
+      "reinforcing-loop",
+      "self-improvement"
+    ],
+    "notes": "This CLD represents the fundamental goal-seeking loop where desires motivate action, which enables assessment, leading to personal growth that reinforces the cycle. The counterclockwise flow emphasizes the continuous nature of goal pursuit and self-development."
+  },
+  "nodes": [
+    {
+      "id": "desires",
+      "label": "Desires",
+      "type": "variable",
+      "description": "Things that are wanted, wished for, or aspired to, driving motivation and action",
+      "examples": ["Career advancement",
+        "Health and fitness goals",
+        "Learning new skills",
+        "Financial security",
+        "Relationship goals"],
+      "measurement": "Material positions, friendships, wealth, knowledge, desire intensity ratings, lift goals",
+      "position": {
+        "x": 307,
+        "y": 300
+      }
+    },
+    {
+      "id": "gap",
+      "label": "Gap",
+      "position": {
+        "x": 200,
+        "y": 300
+      },
+      "type": "condition",
+      "description": "A gap between current state and desired state that creates motivation to act",
+      "examples": [
+        "Feeling unfulfilled in career",
+        "Health issues",
+        "Lack of skills",
+        "Financial stress",
+        "Loneliness"
+      ],
+      "measurement": "gap analysis, satisfaction surveys, stress levels, skill assessments"
+    },
+    {
+      "id": "action",
+      "label": "Action",
+      "position": {
+        "x": 508,
+        "y": 207
+      },
+      "type": "variable",
+      "description": "Concrete steps, behaviors, and efforts taken to move toward desired outcomes",
+      "examples": [
+        "Studying for certification",
+        "Exercising regularly",
+        "Networking activities",
+        "Saving money",
+        "Practicing skills"
+      ],
+      "measurement": "Time invested, tasks completed, effort metrics, behavior tracking"
+    },
+    {
+      "id": "assessment",
+      "label": "Assessment",
+      "position": {
+        "x": 709,
+        "y": 304
+      },
+      "type": "variable",
+      "description": "Evaluation of progress, results, and outcomes from actions taken",
+      "examples": [
+        "Performance reviews",
+        "Progress measurements",
+        "Feedback collection",
+        "Results analysis",
+        "Self-reflection"
+      ],
+      "measurement": "Achievement metrics, progress indicators, feedback scores, milestone completion"
+    },
+    {
+      "id": "self",
+      "label": "Self (Personal Growth)",
+      "position": {
+        "x": 501,
+        "y": 394
+      },
+      "type": "stock",
+      "description": "Personal development, capabilities, confidence, and identity that accumulates through the goal-seeking process",
+      "examples": [
+        "Increased skills",
+        "Greater confidence",
+        "Enhanced identity",
+        "Improved capabilities",
+        "Expanded knowledge"
+      ],
+      "measurement": "Skill assessments, confidence measures, competency evaluations, personal growth indicators"
+    }
+    ],
+  "edges": [
+    {
+      "id": "desires_drive_action",
+      "source": "desires",
+      "target": "action",
+      "polarity": "positive",
+      "label": "motivates",
+      "description": "Strong desires and clear goals motivate taking concrete action toward achieving them",
+      "strength": "strong",
+      "evidence": [
+        "Goal-setting theory demonstrates link between clear goals and motivated behavior",
+        "Psychological research on motivation and goal pursuit",
+        "Personal development literature on desire as driver of action"
+      ]
+    },
+    {
+      "id": "action_enables_assessment",
+      "source": "action",
+      "target": "assessment",
+      "polarity": "positive",
+      "label": "produces results for",
+      "description": "Taking action creates results and outcomes that can be evaluated and assessed",
+      "strength": "strong",
+      "evidence": [
+        "Actions generate observable outcomes and measurable results",
+        "Performance management research on action-outcome relationships",
+        "Learning theory on feedback from active engagement"
+      ]
+    },
+    {
+      "id": "assessment_develops_self",
+      "source": "assessment",
+      "target": "self",
+      "polarity": "positive",
+      "label": "contributes to",
+      "description": "Assessing progress and results leads to learning, growth, and development of personal capabilities",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "weeks to months",
+        "description": "Personal growth and identity development take time to integrate from assessment insights"
+      },
+      "evidence": [
+        "Reflective learning research shows assessment drives development",
+        "Experiential learning cycle emphasizes reflection for growth",
+        "Psychological research on identity formation through experience"
+      ]
+    },
+    {
+      "id": "self_refines_desires",
+      "source": "self",
+      "target": "desires",
+      "polarity": "positive",
+      "label": "refines and expands",
+      "description": "Personal growth and expanded capabilities lead to refined, elevated, or new desires and goals",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "months to years",
+        "description": "Changes in self-concept and capabilities gradually influence goal formation and desire evolution"
+      },
+      "evidence": [
+        "Self-concept research shows personal growth influences goal setting",
+        "Developmental psychology on evolving aspirations with capability",
+        "Achievement motivation research on goal progression"
+      ]
+    },
+    {
+      "id": "edge_1756738626676",
+      "source": "node_1756738592806",
+      "target": "desires",
+      "polarity": "positive",
+      "description": "",
+      "strength": "moderate",
+      "curve": {
+        "type": "horizontal",
+        "roundness": 0.4
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "goal_seeking_loop",
+      "type": "reinforcing",
+      "path": [
+        "desires",
+        "action",
+        "assessment",
+        "self",
+        "desires"
+      ],
+      "label": "Goal Seeking Growth Loop",
+      "description": "Desires motivate action, which produces results for assessment, leading to personal growth that refines and expands desires, creating continuous development",
+      "behavior_pattern": "Continuous personal growth and goal achievement through iterative cycles of desire, action, assessment, and development",
+      "dominance_conditions": "Dominant when desires are clear, actions are consistent, assessment is honest, and growth is embraced",
+      "position": {
+        "x": 500,
+        "y": 300
+      },
+      "is_primary": true
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "desire_clarity",
+      "target_type": "node",
+      "target_id": "desires",
+      "leverage_level": 6,
+      "title": "Clarify and Align Desires",
+      "description": "Clear, specific, and personally meaningful goals significantly amplify the entire goal-seeking cycle",
+      "intervention_strategies": [
+        "Use SMART goal-setting frameworks to clarify desires",
+        "Regular reflection on personal values and priorities",
+        "Vision boarding and goal visualization techniques",
+        "Alignment exercises between short-term and long-term desires"
+      ],
+      "expected_impact": "Dramatically improves motivation, action consistency, and cycle effectiveness",
+      "difficulty": "moderate",
+      "examples": [
+        "Writing specific, measurable career objectives instead of vague aspirations",
+        "Identifying underlying values driving surface-level wants"
+      ]
+    },
+    {
+      "id": "assessment_quality",
+      "target_type": "edge",
+      "target_id": "assessment_develops_self",
+      "leverage_level": 5,
+      "title": "Improve Assessment and Reflection Practices",
+      "description": "High-quality assessment and reflection maximize learning and growth from actions taken",
+      "intervention_strategies": [
+        "Implement regular progress review sessions",
+        "Develop metrics and tracking systems for goal progress",
+        "Practice honest self-reflection and feedback seeking",
+        "Use structured reflection frameworks like after-action reviews"
+      ],
+      "expected_impact": "Accelerates personal development and improves future action effectiveness",
+      "difficulty": "moderate",
+      "examples": [
+        "Weekly goal progress reviews with specific metrics",
+        "360-degree feedback processes for comprehensive assessment"
+      ]
+    },
+    {
+      "id": "action_consistency",
+      "target_type": "node",
+      "target_id": "action",
+      "leverage_level": 4,
+      "title": "Build Consistent Action Habits",
+      "description": "Consistent, focused action creates reliable progress and meaningful results for assessment",
+      "intervention_strategies": [
+        "Break large goals into daily actionable steps",
+        "Create accountability systems and support structures",
+        "Develop routines and habits that support goal pursuit",
+        "Use implementation intentions (if-then planning)"
+      ],
+      "expected_impact": "Ensures steady progress and builds momentum in the goal-seeking cycle",
+      "difficulty": "high",
+      "examples": [
+        "Daily study habits for skill development goals",
+        "Regular exercise routines for fitness objectives"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "high_clarity_scenario",
+      "title": "Clear Desires with Strong Assessment",
+      "description": "Individual has very clear goals and practices regular, honest assessment of progress",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "desires",
+          "change_description": "Desires become highly specific, measurable, and personally meaningful"
+        },
+        {
+          "target_type": "node",
+          "target_id": "assessment",
+          "change_description": "Assessment becomes regular, honest, and comprehensive with clear metrics"
+        }
+      ],
+      "predicted_outcomes": "Accelerated personal growth, consistent achievement, and continuous goal evolution toward higher aspirations"
+    },
+    {
+      "id": "weak_assessment_scenario",
+      "title": "Poor Assessment and Reflection",
+      "description": "Individual takes action but fails to properly assess results or reflect on progress",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "assessment_develops_self",
+          "change_description": "Assessment becomes superficial or infrequent, limiting learning and growth"
+        }
+      ],
+      "predicted_outcomes": "Reduced personal development, repeated mistakes, and stagnation in goal achievement despite taking action"
+    },
+    {
+      "id": "action_paralysis_scenario",
+      "title": "Strong Desires but Limited Action",
+      "description": "Individual has clear desires but struggles to take consistent action",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "desires_drive_action",
+          "change_description": "Despite strong desires, action remains inconsistent or insufficient"
+        }
+      ],
+      "predicted_outcomes": "Frustration, limited progress, and potential weakening of desires over time due to lack of momentum"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "How do your personal desires and goals drive your daily actions?",
+      "What role does honest self-assessment play in achieving your goals?",
+      "How has pursuing goals changed who you are as a person?",
+      "Why might some people get stuck in this cycle while others accelerate?",
+      "What happens when desires are unclear or assessment is avoided?",
+      "How do successful goal achievements influence your future aspirations?"
+    ],
+    "key_insights": [
+      "Goal seeking creates a reinforcing feedback loop where success builds upon itself",
+      "Personal growth through the cycle leads to evolving and elevating desires",
+      "Assessment and reflection are critical for converting action into development",
+      "Clear desires significantly amplify the effectiveness of the entire cycle",
+      "Each completion of the cycle builds capabilities for future goal achievement"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Goal achievement is linear - you set a goal, work toward it, and either succeed or fail",
+        "correction": "Goal seeking is cyclical, with each cycle of action and assessment contributing to personal growth that influences future goals and capabilities"
+      },
+      {
+        "misconception": "Once you achieve a goal, the process is complete",
+        "correction": "Achieving goals typically leads to personal growth that generates new or evolved desires, continuing the cycle at a higher level"
+      },
+      {
+        "misconception": "Action is the most important part of goal achievement",
+        "correction": "While action is crucial, assessment and reflection are equally important for learning and growth that enable future success"
+      }
+    ],
+    "extension_activities": [
+      "Track your own goal-seeking cycle for a specific objective over several weeks",
+      "Interview successful people about how their goals have evolved as they've grown",
+      "Analyze a time when you abandoned a goal - where did the cycle break down?",
+      "Design an assessment system for measuring progress on a personal development goal"
+    ],
+    "related_concepts": [
+      "Growth Mindset",
+      "Experiential Learning Cycle",
+      "Self-Regulated Learning",
+      "Achievement Motivation",
+      "Personal Development Planning"
+    ]
+  }
+}

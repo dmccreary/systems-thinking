@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Causal Loop Diagram Schema",
-  "description": "JSON Schema for representing interactive Causal Loop Diagrams for educational purposes v0.2",
+  "description": "JSON Schema for representing interactive Causal Loop Diagrams for educational purposes",
   "type": "object",
   "required": ["metadata", "nodes", "edges"],
   "additionalProperties": false,
@@ -278,7 +278,7 @@
             "properties": {
               "type": {
                 "type": "string",
-                "enum": ["dynamic", "continuous", "discrete", "diagonalCross", "straightCross", "horizontal", "vertical", "curvedCW", "curvedCCW", "cubicBezier"],
+                "enum": ["curvedCW", "curvedCCW", "straight", "dynamic", "continuous"],
                 "default": "curvedCW",
                 "description": "Type of curve for the edge visualization"
               },
