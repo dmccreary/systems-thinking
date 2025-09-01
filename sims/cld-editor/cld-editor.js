@@ -44,7 +44,7 @@ function initializeNetwork() {
     const container = document.getElementById('network');
     const options = {
         manipulation: {
-            enabled: true,                // Enable the manipulation toolbar
+            enabled: true,               // Enable the manipulation toolbar
             initiallyActive: true,       // Start with toolbar shown
             addNode: true,               // Enable "Add Node" functionality
             addEdge: true,               // Enable "Add Edge" functionality
