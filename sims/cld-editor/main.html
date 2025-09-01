@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Causal Loop Diagram Editor</title>
+    <!-- Use vis.js v4 for compatibility with existing code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <!-- local CSS file -->
+    <link rel="stylesheet" type="text/css" href="cld-editor.css">
+
+</head>
+<body>
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <label class="file-input-wrapper">
+                <input type="file" id="file-input" accept=".json" />
+                Load CLD
+            </label>
+            <button id="save-btn">Save CLD</button>
+            <button id="new-btn">New</button>
+        </div>
+        <div class="toolbar-group">
+            <span id="diagram-title">Causal Loop Diagram Editor</span>
+        </div>
+    </div>
+
+    <!-- The main container div that holds both the network diagram to the left and the selected item inspector to the right-->
+    <div class="container">
+        <!-- the network graph will be rendered inside this div and takes up the left 70% of the screen -->
+        <div id="network"></div>
+        
+        <!-- the selected item editor should be placed to the right of the network canvas -->
+        <div id="selected-item-panel">
+            <h3>Edit Selected Item Properties</h3>
+            <div class="details-content" id="details-content">
+                Click on a node, edge, or loop symbol to see details here.
+                Note the "Save Changes" button below the details area.
+            </div>
+        </div>
+    </div>
+    <!-- local JavaScript file -->
+    <script src="cld-editor.js"></script>
+</body>
+</html>
