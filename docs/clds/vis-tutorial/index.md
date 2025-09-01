@@ -81,16 +81,16 @@ below uses the clouudflare.com references content distribution network.
 ```html
 <head>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.css">
- <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network@10.0.1/dist/vis-network.min.css">
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
   <div id="network" style="height: 600px"></div>
 </body>
 ```
 
-Note that the `unpkg.com` link has no version number in the path.  This will always fetch the latest version.
+Note that the `unpkg.com` link has a version number in the path.  You can check
+what latest version is by running [this program]().
 
 Here is the fixed version from `cloudflare.com `unpkg.com` link:
 
