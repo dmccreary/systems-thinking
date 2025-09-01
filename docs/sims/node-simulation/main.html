@@ -1,0 +1,51 @@
+<script type="importmap">
+  {
+    "imports": {
+      "simulation": "https://unpkg.com/simulation@7.0.0",
+      "chart.js": "https://unpkg.com/chart.js@3.9.1/dist/chart.esm.js"
+    }
+  }
+</script>
+
+<script type="module">
+
+import { Model } from "simulation";
+import { Chart, registerables } from 'chart.js';
+
+// Define the simulation model
+
+let m = new Model({
+    timeLength: 20
+});
+let people = m.Stock({
+  name: "People",
+  initial: 10000
+});
+let netGrowth = m.Flow(null, people, {
+  rate: "[People] * 0.10"
+});
+
+
+// Simulate the model
+
+let res = m.simulate();
+
+
+// Create the chart of population growth using Chart.js
+
+Chart.register(...registerables);
+new Chart(document.getElementById('chart').getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: res.times(),
+        datasets: [{
+            label: 'Population',
+            data: res.series(people),
+            borderColor: 'blue'
+        }]
+    }
+});
+
+</script>
+
+<canvas id="chart"></canvas>

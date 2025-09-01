@@ -152,6 +152,7 @@ nav:
     - Moore's Law: sims/moores-law/index.md
     - Agent CLD: sims/agent-cld/index.md
     - CMM Simulation: sims/cmm/index.md
+    - Node Simulation Test: sims/node-simulation/index.md
     
     - Population Simulator: sims/population-simulator/index.md
     - Template: sims/template/index.md
