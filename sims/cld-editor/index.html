@@ -2626,6 +2626,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CLD Editor
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2635,6 +2646,49 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#september-1st-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      September 1st, 2025
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2737,6 +2791,27 @@
   
   <span class="md-ellipsis">
     CMM Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node-simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node Simulation Test
   </span>
   
 
@@ -3754,6 +3829,38 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#september-1st-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      September 1st, 2025
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3772,6 +3879,58 @@
 
 <h1 id="cld-editor">CLD Editor</h1>
 <p><a href="main.html">Run the CLD Editor v1</a></p>
+<h2 id="update-history">Update History</h2>
+<h3 id="september-1st-2025">September 1st, 2025</h3>
+<p>Full Property Editing Features:</p>
+<p>Graph/Diagram Properties:
+  - Title, ID, archetype, description, author, version
+  - Automatic timestamp updates
+  - Loop management (add/edit/delete)</p>
+<p>Node Properties:
+  - ID, label, type (variable/stock/flow/condition/constant)
+  - Description, examples, measurement
+  - Color customization
+  - Full preservation of all data including examples</p>
+<p>Edge Properties:
+  - ID, polarity (positive/negative)
+  - Description, strength (weak/moderate/strong)
+  - Delay configuration (duration, description)
+  - Curve styling (type, roundness with slider)
+  - Source/target relationships</p>
+<p>Feedback Loop Properties:
+  - ID, label, type (reinforcing/balancing)
+  - Description, behavior pattern
+  - Path definition, primary loop designation
+  - Visual styling updates</p>
+<p>Interface Features:</p>
+<ul>
+<li>Toolbar with Load/Save/New buttons</li>
+<li>Right panel forms for all editing operations</li>
+<li>Real-time updates - changes reflect immediately in the diagram</li>
+<li>Data preservation - examples and all original properties maintained</li>
+<li>Delete functionality with confirmation prompts</li>
+<li>Add new loops functionality</li>
+</ul>
+<p>The editor now provides comprehensive CLD authoring capabilities with a professional HTML form interface for
+  editing all diagram elements.</p>
+<p>Position Update Implementation:</p>
+<ol>
+<li>Real-time updates during drag: The dragEnd event handler (lines 121-146) immediately updates positions in
+  cldData.loops when loop nodes are moved, distinguishing between loop nodes (loop_ prefix) and regular nodes.</li>
+<li>Save-time updates: The saveCurrentDiagram function (lines 657-665) updates all loop positions before saving
+  the file.</li>
+<li>Proper loop ID handling: The code correctly maps between vis.js node IDs (loop_123) and the original loop IDs
+   (123) in the data structure.</li>
+</ol>
+<p>Key Features:</p>
+<ul>
+<li>Immediate feedback: Positions update as soon as you stop dragging</li>
+<li>Data persistence: Both real-time dragging and file saving preserve positions</li>
+<li>Loop-specific logic: Handles the loop_ prefix correctly when mapping to original data</li>
+<li>Bidirectional sync: Changes flow from network → cldData.loops → saved file</li>
+</ul>
+<p>The loop nodes will now maintain their correct x,y coordinates when moved in the diagram and properly save their
+   positions in the exported CLD files.</p>
 
 
 
