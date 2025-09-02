@@ -187,7 +187,8 @@ nav:
     - Tragedy of the Commons: sims/toc/index.md
     - Moore's Law: sims/moores-law/index.md
     - Agent CLD: sims/agent-cld/index.md
-    - CMM Simulation: sims/cmm/index.md
+    - CMM Template: sims/cmm-template/index.md
+    - CMM for Systems Thinking: sims/cmm-for-systems-thinking/index.md
     - Node Simulation Test: sims/node-simulation/index.md
     
     - Population Simulator: sims/population-simulator/index.md
