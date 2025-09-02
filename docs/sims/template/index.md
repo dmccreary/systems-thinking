@@ -1,9 +1,11 @@
 ---
 title: The Tragedy of the Commons
 description: A graphic novel about Tragedy of the Commons.
-image: /systems-thinking/stories/moores-law/cover.jpg
-og:image: /systems-thinking/stories/moores-law/cover.jpg
-twitter:image: /systems-thinking/stories/moores-law/cover.jpg
+image: /sims/moores-law/cover.jpg
+og:image: /sims/moores-law/cover.jpg
+twitter:image: /sims/moores-law/cover.jpg
+hide:
+  - toc
 social:
    cards: false
 ---
@@ -11,7 +13,7 @@ social:
 
 <iframe src="main.html" height="400px" scrolling="no"></iframe>
 
-[Link to Template Demo](./00-template.html){ .md-button .md-button--primary }
+[Link to Run the Fullscreen Version](./main.html){ .md-button .md-button--primary }
 
 ## About this MicroSim
 

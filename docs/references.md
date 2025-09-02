@@ -181,6 +181,8 @@ At the 29th International Conference of the System Dynamics Society. Washington,
 
 [The Essence of Systems Thinking - Otto Scharmer](https://youtu.be/zjeDGG1VdfE?si=_5yVTF7KdRPtFh4c)
 
+[List of Systems Videos Created by Thwink](https://www.thwink.org/sustain/videos/DuelingLoops/01_Overview/Video.html) - some nice step-by-step walkthroughs of building a causal loop diagram for key archetypes.
+
 
 
 

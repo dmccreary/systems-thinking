@@ -11,19 +11,22 @@ nav:
   - About this Website: about.md
   - Table of Contents: table-of-contents.md
   - Part 1 Introduction:
-    - Introduction: intro/index.md
-    - Forward: intro/forward.md
-    - Preface: intro/preface.md
-    - Acknowledgements: intro/acknowledgements.md
-    - About the Author: intro/about-the-authors.md
-    - Ch 1 Introduction: intro/ch-01-intro.md
-    - Ch 2 Graphs: intro/ch-02-graph.md
-    - Ch 3 Systems Thinking: intro/ch-03-systems.md
-    - Ch 4 Graph Systems Thinking: intro/ch-04-systems-graph.md
-    - Ch 5 Emergence: intro/ch-05-emergence.md
-    - Ch 6 Complex Adaptive Systems: intro/ch-06-cas.md
+      - Ch 1 Introduction: 
+        - Introduction: intro/ch-01-intro.md
+        - Forward: intro/forward.md
+        - Preface: intro/preface.md
+        - Acknowledgements: intro/acknowledgements.md
+        - About the Author: intro/about-the-authors.md
+        - Acknowledgements: intro/acknowledgements.md
+        - About the Author: intro/about-the-authors.md
+      - Ch 2 Graphs: intro/ch-02-graph.md
+      - Ch 3 Systems Thinking: intro/ch-03-systems.md
+      - Ch 4 Graph Systems Thinking: intro/ch-04-systems-graph.md
+      - Ch 5 Emergence: intro/ch-05-emergence.md
+      - Ch 6 Meadows Hierarchy: intro/ch-06-meadows-hierarchy.md
+      - Ch 10 Complex Adaptive Systems: intro/ch-010-cas.md
 
-  - Causal Loop Diagrams:
+  - Part 2 Causal Loop Diagrams:
     - Introduction: clds/index.md
     - Vis Tutorial: clds/vis-tutorial/index.md
     - Bank Balance: clds/bank-balance/index.md
@@ -35,8 +38,9 @@ nav:
     - Curve Direction Test: clds/curve-direction-test/index.md
     - Misinformation: clds/misinformation/index.md
 
-  - Part 2 Archetypes:
+  - Part 3 Archetypes:
     - Introduction: archetypes/index.md
+    - Archetypes Overview: archetypes/archetypes-overview.md
 
     - Tragedy of the Commons: 
       - Intro: archetypes/tragedy-of-the-commons/index.md
@@ -85,14 +89,14 @@ nav:
     - Shifting the Burden:
       - Introduction: archetypes/shifting-the-burden/index.md
       - College Cramming: archetypes/shifting-the-burden/college-cramming/index.md
-      - archetypes/shifting-the-burden/emergency-response/index.md
-      - archetypes/shifting-the-burden/er-overuse.md/index.md
-      - archetypes/shifting-the-burden/homework-help/index.md
-      - archetypes/shifting-the-burden/it-helpdesk/index.md
-      - archetypes/shifting-the-burden/pain-management/index.md
+      - Emergency Response: archetypes/shifting-the-burden/emergency-response/index.md
+      - ER Overuse: archetypes/shifting-the-burden/er-overuse.md/index.md
+      - Homework Helper: archetypes/shifting-the-burden/homework-help/index.md
+      - IT Helpdesk: archetypes/shifting-the-burden/it-helpdesk/index.md
+      - Pain Management: archetypes/shifting-the-burden/pain-management/index.md
+      - AI Homework Helper: archetypes/shifting-the-burden/ai-homework/index.md
 
       # - ADHD Medication: archetypes/shifting-the-burden/adhd-medication/index.md
-      - AI Homework Helper: archetypes/shifting-the-burden/ai-homework/index.md
       # - AI in Software Development: archetypes/shifting-the-burden/ai-in-software-development/index.md
       # - Credit Cards: archetypes/shifting-the-burden/credit-cards/index.md
       # - Diabetes Management: archetypes/shifting-the-burden/diabetes-management/index.md
@@ -126,25 +130,46 @@ nav:
       # - College Rankings: archetypes/success-to-the-successful/college-rankings.md
       # - Political Polarization: archetypes/success-to-the-successful/political-polarization.md
 
-  # - Render Tests:
-  #  - render-tests/mermaid-test.md
-  #  - render-tests/state-diagram.md
-  #  - render-tests/influence-diagram.md
-  #  - Chapter X: concepts/graph.md
-  #  - Chapter X+1: concepts/graph.md
-  #- Pt 3 Case Studies:
-  # - Part 3 Case Studies:
-  #   - Chapter 9: case-studies/healthcare.md
+    - Drifting Goals:
+      - Introduction: archetypes/drifting-goals/index.md
+      #- AI Safety: archetypes/drifting-goals/ai-safety/index.md
+      #- Climate Change: archetypes/drifting-goals/climate-change/index.md
+      #- Education Standards: archetypes/drifting-goals/education-standards/index.md
+      #- Healthcare Quality: archetypes/drifting-goals/healthcare-quality/index.md
+      #- Law Enforcement: archetypes/drifting-goals/law-enforcement/index.md
+      #- Nutrition: archetypes/drifting-goals/nutrition/index.md
+      #- Public Health: archetypes/drifting-goals/public-health/index.md
+      #- Work-Life Balance: archetypes/drifting-goals/work-life-balance/index.md
 
- 
-  
-  - Increasing Maturity:
+    - Accidental Adversaries:
+      - Introduction: archetypes/accidental-adversaries/index.md
+      #- AI Regulation: archetypes/accidental-adversaries/ai-regulation/index.md
+      #- Antibiotic Resistance: archetypes/accidental-adversaries/antibiotic-resistance/index.md
+      #- Education Technology: archetypes/accidental-adversaries/education-technology/index.md
+      #- Financial Markets: archetypes/accidental-adversaries/financial-markets/index.md
+      #- Job Automation: archetypes/accidental-adversaries/job-automation/index.md
+      #- Social Media: archetypes/accidental-adversaries/social-media/index.md
+      #- Urban Sprawl: archetypes/accidental-adversaries/urban-sprawl/index.md  
+    
+    - Growth and Investment:
+      - Introduction: archetypes/growth-and-investment/index.md
+      - Bank Account: archetypes/growth-and-investment/bank-account/index.md
+      #- Education: archetypes/growth-and-investment/education/index.md
+      #- Infrastructure: archetypes/growth-and-investment/infrastructure/index.md
+      #- Personal Skills: archetypes/growth-and-investment/personal-skills/index.md
+      #- Research and Development: archetypes/growth-and-investment/research-and-development/index.md
+      #- Social Networks: archetypes/growth-and-investment/social-networks/index.md
+      #- Technology Adoption: archetypes/growth-and-investment/technology-adoption/index.md
+      #- Workforce Skills: archetypes/growth-and-investment/workforce-skills/index.md
+
+  - Building Systems Thinking Capabilities:
     - Introduction: cmm-strategies/index.md
     - Microstrategies: cmm-strategies/microstrategies.md
     - Silo Busting Microstrategies: cmm-strategies/silo-busting-microstrategies.md
   
   - MicroSims:
     - Introduction: sims/index.md
+    - CLD Creation Workflow: sims/cld-creation-workflow/index.md
     - CLD Viewer: sims/cld-viewer/index.md
     - CLD Editor: sims/cld-editor/index.md
     - High School Simulations: sims/high-school.md
@@ -158,13 +183,13 @@ nav:
     - Template: sims/template/index.md
   
   - Stories:
-    - Introduction: stories/index.md
+    - List of Stories: stories/index.md
     - Tragedy of the Commons: stories/tragedy-of-the-commons/index.md
     - Moore's Law: stories/moores-law/index.md
     - Death of Gopher: stories/death-of-gopher/index.md
     - Metcalfe's Law: stories/metcalfes-law/index.md
 
-  - Prompts:
+  - Sample Prompts:
     - Introduction: prompts/index.md
     - Learning Graph:
       - Concept Enumeration: prompts/knowledge-graphs/concept-enumeration.md
@@ -176,6 +201,7 @@ nav:
     - Archetype Examples:
       - Introduction: prompts/archetype-examples/index.md
       - Fixes that Fail: prompts/archetype-examples/fixes-that-fail.md
+    
     ## Add these
     - prompts/archetype-examples/tragedy-of-the-commons-cld.md
     - prompts/cld/vis-tutorial.md
@@ -188,7 +214,7 @@ nav:
     - render-tests/state-diagram.md
   
   
-  - Archetypes: archetypes.md
+
   - Presentations: slides.md
   - Diagram Render Testing:
     - Introduction: render-tests/index.md
@@ -201,6 +227,16 @@ nav:
   - References: references.md
   - License: license.md
   - Contact: contact.md
+
+  # - Render Tests:
+  #  - render-tests/mermaid-test.md
+  #  - render-tests/state-diagram.md
+  #  - render-tests/influence-diagram.md
+  #  - Chapter X: concepts/graph.md
+  #  - Chapter X+1: concepts/graph.md
+  #- Pt 3 Case Studies:
+  # - Part 3 Case Studies:
+  #   - Chapter 9: case-studies/healthcare.md
 
 theme:
   name: material
