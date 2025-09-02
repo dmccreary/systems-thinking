@@ -37,6 +37,15 @@ nav:
     - Image Test: clds/image-test/index.md
     - Curve Direction Test: clds/curve-direction-test/index.md
     - Misinformation: clds/misinformation/index.md
+    # - Render Tests:
+    #  - render-tests/mermaid-test.md
+    #  - render-tests/state-diagram.md
+    #  - render-tests/influence-diagram.md
+    #  - Chapter X: concepts/graph.md
+    #  - Chapter X+1: concepts/graph.md
+    #- Pt 3 Case Studies:
+    # - Part 3 Case Studies:
+    #   - Chapter 9: case-studies/healthcare.md
 
   - Part 3 Archetypes:
     - Introduction: archetypes/index.md
@@ -209,18 +218,9 @@ nav:
     - prompts/cld/cld-viewer-v1/index.md
     - prompts/microsims/population.md
     - prompts/stories/moores-law.md
-    - prompts/stories/tragedy-of-the-commons.md
-    - render-tests/influence-diagram.md
-    - render-tests/state-diagram.md
-  
-  
+    - prompts/stories/tragedy-of-the-commons.md  
 
   - Presentations: slides.md
-  - Diagram Render Testing:
-    - Introduction: render-tests/index.md
-    - Mermaid TOC: render-tests/toc-mermaid/index.md
-    - Mermaid Render Test: render-tests/mermaid-test.md
-    - VisJS Render Test: render-tests/vis-test.md
   - Glossary: glossary.md
   - What They Are Saying: what-they-are-saying.md
   - Colophon: colophon.md
@@ -228,15 +228,6 @@ nav:
   - License: license.md
   - Contact: contact.md
 
-  # - Render Tests:
-  #  - render-tests/mermaid-test.md
-  #  - render-tests/state-diagram.md
-  #  - render-tests/influence-diagram.md
-  #  - Chapter X: concepts/graph.md
-  #  - Chapter X+1: concepts/graph.md
-  #- Pt 3 Case Studies:
-  # - Part 3 Case Studies:
-  #   - Chapter 9: case-studies/healthcare.md
 
 theme:
   name: material
