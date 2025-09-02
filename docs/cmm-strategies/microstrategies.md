@@ -1,40 +1,41 @@
 # MicroStrategies for Promoting Systems Thinking
 
 ## Sample Prompt
-I work at a medium-sized company (10,000 employees) 
-that is at Capability Maturing Model (CMM) level 2
-(Repeatable) concerning our use of Systems Thinking. 
-We have a few staff members who are interested in
-systems thinking, but we would like to move to the
-next level of maturity (Defined).
+!!! prompt
+    I work at a medium-sized company (10,000 employees) 
+    that is at Capability Maturing Model (CMM) level 2
+    (Repeatable) concerning our use of Systems Thinking. 
+    We have a few staff members who are interested in
+    systems thinking, but we would like to move to the
+    next level of maturity (Defined).
 
-Our focus now is to have clearly defined and
-documented processes for getting our managers
-to break down silos using systems thinking
-and stop having managers only focus on the
-short-term profitability of their own business
-unit.
+    Our focus now is to have clearly defined and
+    documented processes for getting our managers
+    to break down silos using systems thinking
+    and stop having managers only focus on the
+    short-term profitability of their own business
+    unit.
 
-The Defined Level in CMM is characteristic of processes 
-that create sets of defined and documented standard
-peer-reviewed processes established and subject to some
-degree of improvement over time. These standard processes
-are in place. The processes may not have been systematically
-or repeatedly used - sufficient for the users to become
-competent or the process to be validated in a range of
-situations. This could be considered a developmental
-stage - with use in a wider range of conditions and
-user competence development the process can develop to
-the next level of maturity.
+    The Defined Level in CMM is characteristic of processes 
+    that create sets of defined and documented standard
+    peer-reviewed processes established and subject to some
+    degree of improvement over time. These standard processes
+    are in place. The processes may not have been systematically
+    or repeatedly used - sufficient for the users to become
+    competent or the process to be validated in a range of
+    situations. This could be considered a developmental
+    stage - with use in a wider range of conditions and
+    user competence development the process can develop to
+    the next level of maturity.
 
-A microstrategy is a small step that we can do to move 
-forward in a strategic direction. It can often be a 
-simple survey, a contest, a seminar, a presentation, 
-a laptop sticker, an award or recognition or a prize.
+    A microstrategy is a small step that we can do to move 
+    forward in a strategic direction. It can often be a 
+    simple survey, a contest, a seminar, a presentation, 
+    a laptop sticker, an award or recognition or a prize.
 
-Please list 20 microstrategies we can use to move
-from system thinking level 2 (repeatable) to
-system thinking level 3 (defined).
+    Please list 20 microstrategies we can use to move
+    from system thinking level 2 (repeatable) to
+    system thinking level 3 (defined).
 
 ## ChatGPT Response
 

@@ -52,14 +52,9 @@ nav:
     - Archetypes Overview: archetypes/archetypes-overview.md
 
     - Tragedy of the Commons: 
-      - Intro: archetypes/tragedy-of-the-commons/index.md
+      - Introduction: archetypes/tragedy-of-the-commons/index.md
       - Classic Story: archetypes/tragedy-of-the-commons/classic-toc.md
-    - Introduction to Archetypes: archetypes/intro-archetypes.md
-    - Tragedy of the Commons: archetypes/commons.md
-    - Alternative Tragedy of Commons: archetypes/tragedy-of-the-commons.md
-    - The AI Flywheel: archetypes/success-to-the-successful/ai-flywheel/index.md
-    - Concept Standards: archetypes/concept-standards.md
-    - Search and Reuse: archetypes/search-and-reuse.md
+      - Tragedy of the Commons: archetypes/tragedy-of-the-commons/commons.md
 
     - Fixes that Fail:
       - Introduction: archetypes/fixes-that-fail/index.md
@@ -171,8 +166,15 @@ nav:
       #- Technology Adoption: archetypes/growth-and-investment/technology-adoption/index.md
       #- Workforce Skills: archetypes/growth-and-investment/workforce-skills/index.md
 
+    - Technology Archetypes:
+      - Introduction: archetypes/tech/index.md
+      - The AI Flywheel: archetypes/success-to-the-successful/ai-flywheel/index.md
+      - Concept Standards: archetypes/concept-standards.md
+      - Search and Reuse: archetypes/search-and-reuse.md
+
   - Building Systems Thinking Capabilities:
     - Introduction: cmm-strategies/index.md
+    - Systems Thinking Capability Maturity Model: cmm-strategies/capability-maturity-model.md
     - Microstrategies: cmm-strategies/microstrategies.md
     - Silo Busting Microstrategies: cmm-strategies/silo-busting-microstrategies.md
   

@@ -6,7 +6,7 @@ This example originally came from the field of Economics.  The tragedy of the co
 
 A small village has many farmers near it.  Each farmer has their own private land.  However, there is a large shared pasture in the middle of the village.
 
-![](../img/commons.png)
+![](./commons.png)
 
 Individual farmers, who have open access to a shared pasture, act independently according to their self-interest and, contrary to the common good of all farmers, cause overgrazing of the shared pasture.  This overgrazing makes the pasture have no value to the entire community.
 
