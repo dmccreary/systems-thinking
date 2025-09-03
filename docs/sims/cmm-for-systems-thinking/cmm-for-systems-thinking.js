@@ -18,7 +18,7 @@ function setup() {
   // Calculate initial container width
   updateCanvasSize();
   // Create canvas using the current container width
-  // Always put the canvas in the main to be compatable with the p5.js editor
+  // Always put the canvas in the main to be compatible with the p5.js editor
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
@@ -162,7 +162,7 @@ function updateLayout() {
       y: sh * 3 + 2 * m + 20,
       w: stepUnit * 4,
       h: sh,
-      level: "Level 2 - Some Teams Aware of Systems Thining",
+      level: "Level 2 - Some Teams Aware of Systems Thinking",
       color: "#F39C12",
       tcolor: "white"
     },
@@ -171,7 +171,7 @@ function updateLayout() {
       y: sh * 2 + 2 * m + 20,
       w: stepUnit * 3,
       h: sh,
-      level: "Level 3 - Stragegic Impact Analysis",
+      level: "Level 3 - Strategic Impact Analysis",
       color: "#F1C40F",
       tcolor: "black"
     },
