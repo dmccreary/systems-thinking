@@ -168,9 +168,9 @@ nav:
 
     - Technology Archetypes:
       - Introduction: archetypes/tech/index.md
-      - The AI Flywheel: archetypes/success-to-the-successful/ai-flywheel/index.md
-      - Concept Standards: archetypes/concept-standards.md
-      - Search and Reuse: archetypes/search-and-reuse.md
+      - The AI Flywheel: archetypes/tech/ai-flywheel/index.md
+      - Communication Standards: archetypes/tech/communication-standards.md
+      - Search and Reuse: archetypes/tech/search-and-reuse.md
 
   - Building Systems Thinking Capabilities:
     - Introduction: cmm-strategies/index.md

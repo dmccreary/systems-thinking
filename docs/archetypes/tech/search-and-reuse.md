@@ -2,7 +2,7 @@
 
 *You can't reuse what you can't find.*
 
-![Search and Reuse](../img/search-and-reuse.png)
+![Search and Reuse](./search-and-reuse.png)
 
 Note that this archetype is written from the reusable code perspective, but it also applies to other reusable assets such as images, digital content, datasets and models use for machine learning.
 
