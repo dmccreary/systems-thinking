@@ -474,7 +474,5 @@ What's one concrete action you can take in the next two weeks to begin this deve
 - **Alumni follow-up surveys** about application in their organizations
 - **LinkedIn posts/articles** sharing insights from the lesson (optional)
 
----
-
 !!! Note
-  This lesson plan is designed to be adapted based on your specific context, student needs, and time constraints. The interactive infographic serves as the central organizing tool, but the real learning happens through application, reflection, and peer interaction.*
+   This lesson plan is designed to be adapted based on your specific context, student needs, and time constraints. The interactive infographic serves as the central organizing tool, but the real learning happens through application, reflection, and peer interaction.*

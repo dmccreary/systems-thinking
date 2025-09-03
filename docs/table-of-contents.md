@@ -8,7 +8,11 @@
 * [Chapter 2: Graph Databases](intro/ch-02-graph.md)
 * [Chapter 3: Systems Thinking](intro/ch-03-systems.md)
 * [Chapter 4: Title](intro/ch-04-systems-graph.md)
-
-## Part 2: Concepts
-
 * [Chapter 5: Emergence](intro/ch-05-emergence.md)
+
+## Part 2: Causal Loop Diagrams
+
+## Part 3: Archetypes
+
+Concepts
+
