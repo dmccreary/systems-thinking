@@ -178,6 +178,11 @@ function loadCLD(data) {
 
         network.setData({ nodes: nodes, edges: edges });
         
+        // Center the diagram with animation
+        network.fit({
+            animation: { duration: 500, easingFunction: "easeInOutQuad" }
+        });
+        
         showDefaultDetails();
         
     } catch (error) {
