@@ -44,3 +44,16 @@ Here is a summary of our examples of the Fixes that Fail archetype:
 
 1. [Traffic Congestion](./traffic-congestion/index.md)
 2. [Security Theater](./security-theater/index.md)
+
+## References
+
+!!! prompt
+    Please generate a causal loop diagram JSON file for the "Fixes that Fail" archetype.
+    Use the cld-schema.json for the structure of the file.
+    The diagram has two loops.  
+    Both loops contain only clockwise edges.
+    Both loops share nodes "Problem" on the left and "Fix" on the right.
+    The top loop is a balancing loop called "Short Term Fix".  It has "Problem" on the left and "Fix" on the right.
+    The bottom loop is a reinforcing loop.  
+    It has "Problem" on the left, "Fix" in the right and "Consequences" at the bottom of the loop.
+    The Consequences are unintended side effects that result from short term fixes.
