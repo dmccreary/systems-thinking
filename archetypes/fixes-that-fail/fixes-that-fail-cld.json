@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "id": "fixes-that-fail-generic",
+    "title": "Fixes that Fail - Generic Archetype",
+    "archetype": "fixes-that-fail",
+    "description": "A generic representation of the Fixes that Fail archetype, where short-term solutions create unintended consequences that worsen the original problem over time. This creates two overlapping feedback loops: a balancing loop that provides temporary relief and a reinforcing loop that creates escalating problems.",
+    "learning_objectives": [
+      "Understand the structure of the Fixes that Fail archetype",
+      "Recognize how short-term fixes can create long-term problems",
+      "Identify the difference between balancing and reinforcing loops",
+      "Explore how unintended consequences emerge from quick fixes",
+      "Learn to look for root causes rather than symptoms"
+    ],
+    "version": "1.0.1",
+    "created_date": "2025-01-18T00:00:00Z",
+    "updated_date": "2025-01-18T00:00:00Z",
+    "author": "Dan McCreary using Claude Sonnet 4.0",
+    "tags": ["fixes-that-fail", "archetype", "generic", "systems-thinking", "unintended-consequences"],
+    "layout_strategy": "The diagram uses a triangular layout with Problem on the left (300, 200), Fix on the right (700, 200), and Consequences at the bottom (500, 400). This creates clear visual separation between the two loops while showing their interconnection. The balancing loop (Short Term Fix) runs along the top between Problem and Fix, while the reinforcing loop (Unintended Consequences) includes all three nodes in a triangular pattern. Loop symbols are positioned to be clearly visible: the balancing loop symbol at (500, 150) and the reinforcing loop symbol at (500, 300).",
+    "notes": "This is a generic template for the Fixes that Fail archetype. It can be adapted for specific situations by changing node labels and descriptions while maintaining the same fundamental structure. The key insight is that the balancing loop dominates initially (providing quick relief) but the reinforcing loop becomes dominant over time as consequences accumulate."
+  },
+  "nodes": [
+    {
+      "id": "problem",
+      "label": "Problem",
+      "position": {"x": 300, "y": 200},
+      "type": "condition",
+      "description": "The original issue or challenge that triggers the need for action. This could be any type of problem requiring intervention.",
+      "examples": ["Performance issues", "Resource constraints", "Quality problems", "Compliance violations"],
+      "measurement": "Severity level, frequency of occurrence, impact assessment"
+    },
+    {
+      "id": "fix",
+      "label": "Quick Fix",
+      "position": {"x": 700, "y": 200},
+      "type": "variable",
+      "description": "The immediate solution or intervention applied to address the problem. Often chosen for speed and apparent effectiveness rather than long-term sustainability.",
+      "examples": ["Emergency measures", "Temporary workarounds", "Resource reallocation", "Policy changes"],
+      "measurement": "Implementation speed, resource investment, scope of intervention"
+    },
+    {
+      "id": "consequences",
+      "label": "Unintended Consequences",
+      "position": {"x": 500, "y": 400},
+      "type": "outcome",
+      "description": "The unforeseen negative side effects that emerge from the quick fix. These consequences often undermine the system's ability to solve the original problem.",
+      "examples": ["Resource depletion", "Skill degradation", "System dependencies", "New problems created"],
+      "measurement": "Severity of side effects, time to emergence, scope of impact"
+    }
+  ],
+  "edges": [
+    {
+      "id": "problem_to_fix",
+      "source": "problem",
+      "target": "fix",
+      "polarity": "positive",
+      "label": "triggers",
+      "description": "The presence and severity of the problem drives the implementation of quick fixes",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "fix_to_problem",
+      "source": "fix",
+      "target": "problem",
+      "polarity": "negative",
+      "label": "temporarily reduces",
+      "description": "The quick fix provides immediate relief by reducing the problem symptoms",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "immediate to days",
+        "description": "Quick fixes typically show immediate results, which is why they're attractive"
+      },
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "fix_to_consequences",
+      "source": "fix",
+      "target": "consequences",
+      "polarity": "positive",
+      "label": "creates",
+      "description": "The quick fix generates unintended consequences that weren't considered in the original solution",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "weeks to months",
+        "description": "Unintended consequences often take time to become apparent, making the connection to the fix difficult to see"
+      },
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.4
+      }
+    },
+    {
+      "id": "consequences_to_problem",
+      "source": "consequences",
+      "target": "problem",
+      "polarity": "positive",
+      "label": "worsens",
+      "description": "The unintended consequences make the original problem worse or create conditions that prevent sustainable solutions",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "months to years",
+        "description": "The impact of consequences on the original problem often emerges slowly, creating significant delays in recognizing the pattern"
+      },
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.4
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "short_term_fix_loop",
+      "type": "balancing",
+      "path": ["problem", "fix", "problem"],
+      "label": "Short Term Fix Loop",
+      "description": "The quick fix.  The balancing loop where problems trigger quick fixes that temporarily reduce the problem symptoms",
+      "behavior_pattern": "Provides immediate relief and temporary stability",
+      "dominance_conditions": "Dominant in the short term when quick fixes show immediate results",
+      "position": {"x": 500, "y": 200},
+      "is_primary": false
+    },
+    {
+      "id": "unintended_consequences_loop",
+      "type": "reinforcing",
+      "path": ["problem", "fix", "consequences", "problem"],
+      "label": "Unintended Consequences Loop",
+      "description": "The unintended consequences. The reinforcing loop where fixes create consequences that worsen the original problem, leading to more fixes and worse consequences",
+      "behavior_pattern": "Creates escalating problems and increasing dependence on quick fixes",
+      "dominance_conditions": "Becomes dominant over time as consequences accumulate and compound",
+      "position": {"x": 500, "y": 325},
+      "is_primary": true
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "root_cause_analysis",
+      "target_type": "system",
+      "target_id": "problem",
+      "leverage_level": 6,
+      "title": "Address Root Causes Instead of Symptoms",
+      "description": "Focus on understanding and addressing the fundamental causes of problems rather than just treating symptoms",
+      "intervention_strategies": [
+        "Invest time in thorough problem analysis before implementing solutions",
+        "Use root cause analysis techniques like 5 Whys or fishbone diagrams",
+        "Engage diverse stakeholders to understand different perspectives on the problem"
+      ],
+      "expected_impact": "Prevents the cycle from starting by solving problems at their source",
+      "difficulty": "high",
+      "examples": [
+        "Improving training programs instead of just fixing individual mistakes",
+        "Redesigning processes instead of adding more oversight"
+      ]
+    },
+    {
+      "id": "consequence_anticipation",
+      "target_type": "edge",
+      "target_id": "fix_to_consequences",
+      "leverage_level": 4,
+      "title": "Anticipate and Plan for Unintended Consequences",
+      "description": "Before implementing fixes, systematically consider what negative side effects might occur",
+      "intervention_strategies": [
+        "Use pre-mortem analysis to imagine how solutions might fail",
+        "Pilot test solutions on a small scale before full implementation",
+        "Create monitoring systems to detect early signs of unintended consequences"
+      ],
+      "expected_impact": "Reduces the severity of unintended consequences by preparing for them",
+      "difficulty": "moderate",
+      "examples": [
+        "Testing new policies in one department before organization-wide rollout",
+        "Including sunset clauses in temporary measures"
+      ]
+    },
+    {
+      "id": "delay_recognition",
+      "target_type": "edge",
+      "target_id": "consequences_to_problem",
+      "leverage_level": 3,
+      "title": "Create Systems to Detect Long-term Impacts",
+      "description": "Establish monitoring and feedback systems that can detect the delayed effects of interventions",
+      "intervention_strategies": [
+        "Set up long-term tracking metrics beyond immediate results",
+        "Create regular review cycles to assess intervention effectiveness",
+        "Establish early warning indicators for system degradation"
+      ],
+      "expected_impact": "Enables earlier detection of when fixes are creating problems",
+      "difficulty": "moderate",
+      "examples": [
+        "Tracking employee satisfaction after productivity interventions",
+        "Monitoring system reliability after quick performance fixes"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continued_quick_fixes",
+      "title": "Continue Using Quick Fixes",
+      "description": "The system continues to rely on quick fixes whenever problems arise, without addressing underlying causes",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "problem_to_fix",
+          "change_description": "Quick fix response becomes automatic and faster"
+        }
+      ],
+      "predicted_outcomes": "Escalating problems as consequences accumulate, increasing system instability, and growing dependence on fixes that create more problems than they solve"
+    },
+    {
+      "id": "root_cause_focus",
+      "title": "Shift to Root Cause Solutions",
+      "description": "The system changes approach to focus on identifying and addressing fundamental causes rather than symptoms",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "fix",
+          "change_description": "Solutions target root causes instead of symptoms"
+        }
+      ],
+      "predicted_outcomes": "Slower initial progress but sustainable improvements, reduced unintended consequences, and increased system resilience over time"
+    },
+    {
+      "id": "mixed_approach",
+      "title": "Balance Quick Fixes with Long-term Solutions",
+      "description": "The system uses quick fixes for immediate relief while simultaneously working on root cause solutions",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "fix_to_consequences",
+          "change_description": "Consequences are anticipated and mitigated through parallel long-term solutions"
+        }
+      ],
+      "predicted_outcomes": "Managed short-term stability while building long-term capabilities, reduced severity of unintended consequences"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why do quick fixes often seem more attractive than long-term solutions?",
+      "How do delays in feedback make it difficult to see the connection between fixes and consequences?",
+      "What role does organizational pressure play in promoting quick fixes over root cause solutions?",
+      "How can you distinguish between treating symptoms and addressing root causes?",
+      "What are some strategies for managing the tension between immediate relief and long-term solutions?"
+    ],
+    "key_insights": [
+      "Quick fixes create a balancing loop that provides temporary relief but may trigger a reinforcing loop of escalating problems",
+      "Unintended consequences often emerge with significant delays, making their connection to the original fix difficult to see",
+      "The short-term effectiveness of fixes can mask their long-term negative impacts",
+      "Systems thinking requires considering both immediate and delayed effects of interventions",
+      "Breaking the cycle requires shifting focus from symptoms to root causes"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "If a fix works immediately, it's a good solution",
+        "correction": "Immediate effectiveness doesn't guarantee long-term success; unintended consequences may emerge later"
+      },
+      {
+        "misconception": "Quick fixes are always bad and should never be used",
+        "correction": "Quick fixes can be appropriate for immediate relief if paired with long-term root cause solutions"
+      },
+      {
+        "misconception": "Unintended consequences are unpredictable and unavoidable",
+        "correction": "Many unintended consequences can be anticipated through systems thinking and careful analysis"
+      }
+    ],
+    "extension_activities": [
+      "Identify a 'Fixes that Fail' pattern in your personal or professional life",
+      "Practice root cause analysis using techniques like the 5 Whys method",
+      "Design a monitoring system to detect unintended consequences of a recent change",
+      "Compare the short-term and long-term costs of quick fixes versus root cause solutions"
+    ],
+    "related_concepts": [
+      "Root Cause Analysis",
+      "Systems Archetypes",
+      "Unintended Consequences",
+      "Feedback Delays",
+      "Symptomatic vs. Fundamental Solutions"
+    ]
+  }
+}

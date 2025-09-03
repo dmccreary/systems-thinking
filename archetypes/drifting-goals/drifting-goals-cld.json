@@ -10,10 +10,10 @@
       "Identify the role of pressure and difficulty in decision-making processes",
       "Explore how competing balancing loops can lead to unintended system behavior"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "created_date": "2025-01-18T00:00:00Z",
     "updated_date": "2025-01-18T00:00:00Z",
-    "author": "Systems Thinking Educational Team",
+    "author": "Dan McCreary using Claude Sonnet 4.0",
     "tags": ["drifting-goals", "shifting-burden", "performance-standards", "goal-setting", "organizational-behavior"],
     "layout_strategy": "The diagram uses a symmetric vertical layout with the shared 'Gap' node at the center (0,0). Two balancing loops are positioned above and below: the upper 'Lower the Goal' loop runs counterclockwise with Goal at (-100,-100) and Pressure to Lower Goal at (100,-100). The lower 'Take Corrective Action' loop runs clockwise with Actual at (-100,100) and Corrective Action at (100,100). This creates a clear visual separation between the two competing response mechanisms while emphasizing their shared connection through the central Gap node.",
     "notes": "This archetype is particularly common in organizational settings where performance standards compete with operational pressures. The upper loop represents the 'easy' solution of adjusting expectations, while the lower loop represents the more difficult but sustainable approach of improving actual performance. The tension between these loops often determines long-term organizational health and capability."
@@ -74,7 +74,7 @@
       "description": "Larger gaps create more pressure to lower goals as an easier alternative",
       "strength": "moderate",
       "curve": {
-        "type": "curvedCW",
+        "type": "curvedCCW",
         "roundness": 0.3
       }
     },
@@ -86,7 +86,7 @@
       "description": "Pressure to lower goals results in reduced performance standards",
       "strength": "strong",
       "curve": {
-        "type": "curvedCW",
+        "type": "curvedCCW",
         "roundness": 0.3
       }
     },
@@ -98,7 +98,7 @@
       "description": "Higher goals increase the gap between desired and actual performance",
       "strength": "strong",
       "curve": {
-        "type": "curvedCW",
+        "type": "curvedCCW",
         "roundness": 0.3
       }
     },
@@ -110,7 +110,7 @@
       "description": "Performance gaps trigger corrective actions to improve actual results",
       "strength": "moderate",
       "curve": {
-        "type": "curvedCCW",
+        "type": "curvedCW",
         "roundness": 0.3
       }
     },
@@ -127,7 +127,7 @@
         "description": "Performance improvements take time to implement and show results"
       },
       "curve": {
-        "type": "curvedCCW",
+        "type": "curvedCW",
         "roundness": 0.3
       }
     },
@@ -139,7 +139,7 @@
       "description": "Higher actual performance reduces the gap between goals and reality",
       "strength": "strong",
       "curve": {
-        "type": "curvedCCW",
+        "type": "curvedCW",
         "roundness": 0.3
       }
     }
@@ -153,7 +153,7 @@
       "description": "When gaps persist, pressure builds to lower goals rather than improve performance, providing quick relief but eroding standards",
       "behavior_pattern": "Gradual erosion of performance standards and expectations",
       "dominance_conditions": "Becomes dominant when corrective action is difficult, expensive, or slow to show results",
-      "position": {"x": 600, "y": 250},
+      "position": {"x": 600, "y": 225},
       "is_primary": true
     },
     {
@@ -164,7 +164,7 @@
       "description": "Performance gaps trigger corrective actions to improve actual results and close the gap",
       "behavior_pattern": "Sustainable performance improvement through capability building",
       "dominance_conditions": "Dominant when organization commits resources and accepts the time/effort required for real improvement",
-      "position": {"x": 600, "y": 350},
+      "position": {"x": 600, "y": 375},
       "is_primary": true
     }
   ],
