@@ -1,10 +1,24 @@
+/*
+    Causal Loop Diagram Viewer
+    This script uses the vis-network.js library to render causal loop diagrams (CLDs).
+    There are two options:
+    
+        1. default mode with no menus for embedding in an iframe
+        2. full menu mode with menus for selecting sample diagrams and loading local files with menu=true in the URL
+    
+        The mode is controlled by the URL parameter "menu". If menu=true, the full mode is shown.
+    Otherwise, the default mode is used.
+*/
+
+// Global variables
+
 let network = null;
 let cldData = null;
 let nodes, edges;
 
 async function loadExamplesList() {
     // TODO: Change this to list all the files in the examples directory
-    // Only load files that end id the suffis "-cld.json"
+    // Only load files that end id the suffix "-cld.json"
     // For now, hardcode the list
     // You can add more examples by adding more JSON files to the examples directory
     // and adding them to this list
@@ -178,6 +192,11 @@ function loadCLD(data) {
 
         network.setData({ nodes: nodes, edges: edges });
         
+        // Center the diagram with animation
+        network.fit({
+            animation: { duration: 500, easingFunction: "easeInOutQuad" }
+        });
+        
         showDefaultDetails();
         
     } catch (error) {
@@ -330,6 +349,9 @@ document.getElementById('file-input').addEventListener('change', function(event)
     }
 });
 
+// this gets all the URL parameters
+// file is the name of the file to load without the .json suffix
+// menu=true will show the menus (menus are hidden by default for iframe embedding)
 function getURLParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -349,10 +371,21 @@ async function loadFileFromURL() {
     }
 }
 
+function checkMenuParameter() {
+    const menu = getURLParameter('menu');
+    // Default to false - menus hidden unless explicitly set to true
+    if (menu !== 'true') {
+        document.body.classList.add('menu-hidden');
+    }
+}
+
 window.addEventListener('load', function() {
     initializeNetwork();
     initializeSampleButtons();
     showDefaultDetails();
+    
+    // Check for menu parameter to hide UI elements
+    checkMenuParameter();
     
     // Check for file parameter in URL and load it
     loadFileFromURL();

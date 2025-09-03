@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "id": "drifting-goals-cld",
+    "title": "Drifting Goals: The Gradual Erosion of Standards",
+    "archetype": "shifting-the-burden",
+    "description": "A system where performance gaps can be addressed either by improving actual performance or by lowering goals. When lowering goals becomes the easier option, standards gradually drift downward over time, creating a pattern of declining expectations.",
+    "learning_objectives": [
+      "Understand how systems can drift toward lower standards when corrective action is difficult",
+      "Recognize the difference between symptomatic relief and fundamental solutions",
+      "Identify the role of pressure and difficulty in decision-making processes",
+      "Explore how competing balancing loops can lead to unintended system behavior"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-01-18T00:00:00Z",
+    "updated_date": "2025-01-18T00:00:00Z",
+    "author": "Systems Thinking Educational Team",
+    "tags": ["drifting-goals", "shifting-burden", "performance-standards", "goal-setting", "organizational-behavior"],
+    "layout_strategy": "The diagram uses a symmetric vertical layout with the shared 'Gap' node at the center (0,0). Two balancing loops are positioned above and below: the upper 'Lower the Goal' loop runs counterclockwise with Goal at (-100,-100) and Pressure to Lower Goal at (100,-100). The lower 'Take Corrective Action' loop runs clockwise with Actual at (-100,100) and Corrective Action at (100,100). This creates a clear visual separation between the two competing response mechanisms while emphasizing their shared connection through the central Gap node.",
+    "notes": "This archetype is particularly common in organizational settings where performance standards compete with operational pressures. The upper loop represents the 'easy' solution of adjusting expectations, while the lower loop represents the more difficult but sustainable approach of improving actual performance. The tension between these loops often determines long-term organizational health and capability."
+  },
+  "nodes": [
+    {
+      "id": "gap",
+      "label": "Gap",
+      "position": {"x": 600, "y": 300},
+      "type": "variable",
+      "description": "The difference between desired goals and actual performance, creating pressure for system response",
+      "examples": ["Performance shortfall", "Budget variance", "Quality deficit", "Productivity gap"],
+      "measurement": "Percentage difference, absolute variance, performance metrics deviation"
+    },
+    {
+      "id": "goal",
+      "label": "Goal",
+      "position": {"x": 500, "y": 200},
+      "type": "variable",
+      "description": "The desired performance standard or target that the system aims to achieve",
+      "examples": ["Sales targets", "Quality standards", "Budget goals", "Performance expectations"],
+      "measurement": "Target values, benchmark standards, performance thresholds"
+    },
+    {
+      "id": "pressure_to_lower_goal",
+      "label": "Pressure to\nLower Goal",
+      "position": {"x": 700, "y": 200},
+      "type": "variable",
+      "description": "Organizational or psychological pressure to reduce goals when gaps persist",
+      "examples": ["Management pressure", "Stakeholder expectations", "Resource constraints", "Political pressure"],
+      "measurement": "Stakeholder feedback, pressure intensity, resistance levels"
+    },
+    {
+      "id": "actual",
+      "label": "Actual",
+      "position": {"x": 500, "y": 400},
+      "type": "variable",
+      "description": "The current level of actual performance being achieved by the system",
+      "examples": ["Current sales", "Actual quality levels", "Real productivity", "Present outcomes"],
+      "measurement": "Performance metrics, actual results, measured outcomes"
+    },
+    {
+      "id": "corrective_action",
+      "label": "Corrective\nAction",
+      "position": {"x": 700, "y": 400},
+      "type": "variable",
+      "description": "Efforts and resources invested to improve actual performance toward the goal",
+      "examples": ["Training programs", "Process improvements", "Resource investment", "Performance initiatives"],
+      "measurement": "Investment levels, effort intensity, improvement initiatives"
+    }
+  ],
+  "edges": [
+    {
+      "id": "gap_to_pressure",
+      "source": "gap",
+      "target": "pressure_to_lower_goal",
+      "polarity": "positive",
+      "description": "Larger gaps create more pressure to lower goals as an easier alternative",
+      "strength": "moderate",
+      "curve": {
+        "type": "curvedCCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "pressure_to_goal",
+      "source": "pressure_to_lower_goal",
+      "target": "goal",
+      "polarity": "negative",
+      "description": "Pressure to lower goals results in reduced performance standards",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "goal_to_gap",
+      "source": "goal",
+      "target": "gap",
+      "polarity": "positive",
+      "description": "Higher goals increase the gap between desired and actual performance",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "gap_to_corrective_action",
+      "source": "gap",
+      "target": "corrective_action",
+      "polarity": "positive",
+      "description": "Performance gaps trigger corrective actions to improve actual results",
+      "strength": "moderate",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "corrective_action_to_actual",
+      "source": "corrective_action",
+      "target": "actual",
+      "polarity": "positive",
+      "description": "Corrective actions improve actual performance levels",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "3-12 months",
+        "description": "Performance improvements take time to implement and show results"
+      },
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "actual_to_gap",
+      "source": "actual",
+      "target": "gap",
+      "polarity": "negative",
+      "description": "Higher actual performance reduces the gap between goals and reality",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "lower_goal_loop",
+      "type": "balancing",
+      "path": ["gap", "pressure_to_lower_goal", "goal", "gap"],
+      "label": "Lower the Goal",
+      "description": "When gaps persist, pressure builds to lower goals rather than improve performance, providing quick relief but eroding standards",
+      "behavior_pattern": "Gradual erosion of performance standards and expectations",
+      "dominance_conditions": "Becomes dominant when corrective action is difficult, expensive, or slow to show results",
+      "position": {"x": 600, "y": 225},
+      "is_primary": true
+    },
+    {
+      "id": "corrective_action_loop",
+      "type": "balancing",
+      "path": ["gap", "corrective_action", "actual", "gap"],
+      "label": "Take Corrective Action To Achieve Goal",
+      "description": "Performance gaps trigger corrective actions to improve actual results and close the gap",
+      "behavior_pattern": "Sustainable performance improvement through capability building",
+      "dominance_conditions": "Dominant when organization commits resources and accepts the time/effort required for real improvement",
+      "position": {"x": 600, "y": 375},
+      "is_primary": true
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "goal_setting_process",
+      "target_type": "edge",
+      "target_id": "pressure_to_goal",
+      "leverage_level": 6,
+      "title": "Strengthen Goal-Setting Discipline",
+      "description": "Implement processes that resist pressure to lower goals and maintain performance standards",
+      "intervention_strategies": [
+        "Establish goal review processes that require strong justification for changes",
+        "Create accountability mechanisms for maintaining standards",
+        "Separate goal-setting authority from operational pressure",
+        "Implement stakeholder review of goal modifications"
+      ],
+      "expected_impact": "Maintains performance standards and prevents gradual erosion of expectations",
+      "difficulty": "moderate",
+      "examples": [
+        "Board-level approval required for target changes",
+        "Annual goal-setting separate from quarterly reviews",
+        "External benchmarking to validate goal appropriateness"
+      ]
+    },
+    {
+      "id": "corrective_action_capability",
+      "target_type": "node",
+      "target_id": "corrective_action",
+      "leverage_level": 5,
+      "title": "Build Corrective Action Capability",
+      "description": "Invest in systems and capabilities that make performance improvement easier and more effective",
+      "intervention_strategies": [
+        "Develop systematic problem-solving capabilities",
+        "Invest in training and skill development programs",
+        "Create improvement methodologies and tools",
+        "Build organizational change management capacity"
+      ],
+      "expected_impact": "Makes the corrective action loop more attractive and effective than lowering goals",
+      "difficulty": "high",
+      "examples": [
+        "Lean Six Sigma programs",
+        "Continuous improvement culture",
+        "Performance coaching systems"
+      ]
+    },
+    {
+      "id": "delay_awareness",
+      "target_type": "edge",
+      "target_id": "corrective_action_to_actual",
+      "leverage_level": 4,
+      "title": "Manage Performance Improvement Delays",
+      "description": "Help stakeholders understand and tolerate the time required for real performance improvement",
+      "intervention_strategies": [
+        "Set realistic expectations about improvement timelines",
+        "Create interim milestones and progress indicators",
+        "Communicate the long-term costs of lowering standards",
+        "Celebrate incremental progress toward goals"
+      ],
+      "expected_impact": "Reduces pressure to abandon corrective action in favor of lowering goals",
+      "difficulty": "moderate",
+      "examples": [
+        "Staged improvement plans with interim targets",
+        "Progress dashboards showing improvement trajectory",
+        "Success story communication"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "goal_erosion_spiral",
+      "title": "Gradual Goal Erosion",
+      "description": "Organization consistently chooses to lower goals rather than invest in performance improvement",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "pressure_to_goal",
+          "change_description": "Pressure to lower goals becomes dominant response to performance gaps"
+        }
+      ],
+      "predicted_outcomes": "Gradual decline in organizational capability and performance standards, loss of competitive position, reduced stakeholder confidence"
+    },
+    {
+      "id": "performance_improvement_commitment",
+      "title": "Commit to Performance Improvement",
+      "description": "Organization makes sustained investment in corrective action despite short-term pressure",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "corrective_action",
+          "change_description": "Significant increase in resources and commitment to performance improvement"
+        }
+      ],
+      "predicted_outcomes": "Sustained performance improvement, maintained high standards, enhanced organizational capability and competitiveness"
+    },
+    {
+      "id": "balanced_approach",
+      "title": "Strategic Goal Adjustment with Improvement",
+      "description": "Organization occasionally adjusts goals strategically while maintaining strong corrective action",
+      "changes": [
+        {
+          "target_type": "system",
+          "target_id": "gap",
+          "change_description": "Balanced use of both loops with disciplined goal adjustment and strong improvement efforts"
+        }
+      ],
+      "predicted_outcomes": "Realistic goal-setting combined with continuous improvement, sustainable performance growth, maintained stakeholder confidence"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why might it be easier to lower goals than to improve actual performance?",
+      "What are the long-term consequences of consistently choosing to lower goals instead of taking corrective action?",
+      "How can organizations maintain performance standards while still being realistic about capabilities?",
+      "What role do delays in the corrective action loop play in making goal reduction more attractive?",
+      "How might stakeholder pressure influence which loop becomes dominant?",
+      "What organizational structures or processes could help prevent goal drift?"
+    ],
+    "key_insights": [
+      "Two competing balancing loops can lead to system behavior favoring the easier short-term solution",
+      "Delays in corrective action make lowering goals more attractive as an immediate solution",
+      "Goal drift is often gradual and may not be noticed until significant erosion has occurred",
+      "Maintaining performance standards requires deliberate organizational discipline and processes",
+      "The dominance of one loop over another can fundamentally change system behavior and outcomes"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Lowering goals is always bad and should never be done",
+        "correction": "Strategic goal adjustment can be appropriate, but it should be deliberate and balanced with improvement efforts, not a default response to performance gaps"
+      },
+      {
+        "misconception": "This archetype only applies to performance metrics and business goals",
+        "correction": "Drifting goals can occur in any system with standards - personal habits, educational expectations, safety requirements, or quality standards"
+      },
+      {
+        "misconception": "Once goals are set, they should never change regardless of circumstances",
+        "correction": "The key is having disciplined processes for goal review that resist casual erosion while allowing for legitimate strategic adjustments"
+      }
+    ],
+    "extension_activities": [
+      "Identify examples of drifting goals in your own life or organization",
+      "Analyze a case study where performance standards gradually declined over time",
+      "Design organizational processes that would prevent goal drift while allowing strategic flexibility",
+      "Compare the short-term and long-term costs of lowering goals versus investing in improvement",
+      "Interview managers about how they handle pressure to reduce performance targets"
+    ],
+    "related_concepts": [
+      "Shifting the Burden",
+      "Fixes that Fail",
+      "Performance Management",
+      "Organizational Learning",
+      "Systems Leverage Points",
+      "Balancing Loops"
+    ]
+  }
+}

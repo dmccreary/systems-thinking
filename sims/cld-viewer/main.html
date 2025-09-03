@@ -97,6 +97,7 @@
         #network {
             width: 100%;
             height: 600px;
+            background: aliceblue;
             border: 1px solid #e9ecef;
         }
         
@@ -150,16 +151,45 @@
             border-radius: 4px;
             margin: 10px 0;
         }
+
+        /* Styles for menu-hidden mode (iframe embedding) */
+        body.menu-hidden {
+            padding: 0;
+            background-color: white;
+        }
+        
+        body.menu-hidden .container {
+            max-width: none;
+            margin: 0;
+            background: white;
+            border-radius: 0;
+            box-shadow: none;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body.menu-hidden .header,
+        body.menu-hidden .controls,
+        body.menu-hidden .diagram-title,
+        body.menu-hidden .details-panel {
+            display: none;
+        }
+        
+        body.menu-hidden #network {
+            flex: 1;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header" id="header">
             <h1>Causal Loop Diagram Viewer v1</h1>
         </div>
         
-        <div class="controls">
-            
+        <div class="controls" id="controls">
             <div class="sample-buttons">
                 <!-- Example buttons will be populated by JavaScript -->
             </div>
@@ -169,13 +199,13 @@
             </div>
         </div>
 
-         <div class="diagram-title" id="diagram-title">
+        <div class="diagram-title" id="diagram-title">
             Load a CLD file to begin
         </div>
         
         <div id="network"></div>
         
-        <div class="details-panel">
+        <div class="details-panel" id="details-panel">
             <h3>Details</h3>
             <div class="details-content" id="details-content">
                 Click on a node, edge, or loop symbol to see details here.
