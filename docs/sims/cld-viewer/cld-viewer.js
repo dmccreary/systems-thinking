@@ -1,3 +1,17 @@
+/*
+    Causal Loop Diagram Viewer
+    This script uses the vis-network.js library to render causal loop diagrams (CLDs).
+    There are two options:
+    
+        1. default mode with no menus for embedding in an iframe
+        2. full menu mode with menus for selecting sample diagrams and loading local files with menu=true in the URL
+    
+        The mode is controlled by the URL parameter "menu". If menu=true, the full mode is shown.
+    Otherwise, the default mode is used.
+*/
+
+// Global variables
+
 let network = null;
 let cldData = null;
 let nodes, edges;
