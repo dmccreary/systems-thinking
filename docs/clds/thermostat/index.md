@@ -1,5 +1,8 @@
 # A Causal Loop Diagram for a Thermostat
 
+<iframe src="../../sims/cld-viewer/main.html?file=thermostat-cld.json" height=500 scrolling="no"> </iframe>
+
+
 ![](./thermostat-cld.png)
 
 [Run the Thermostat CLD Viewer](../../sims/cld-viewer/main.html?file=thermostat-cld.json)

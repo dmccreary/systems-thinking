@@ -1,5 +1,8 @@
 # Population Causal Loop Diagram
 
+<iframe src="../../sims/cld-viewer/main.html?file=population-cld.json" height=300 scrolling="no"> </iframe>
+
+
 ![Population CLD](population-cld.png)
 
 - The diagram shows the classic population dynamics with two competing feedback loops
