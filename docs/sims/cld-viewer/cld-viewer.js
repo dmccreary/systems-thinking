@@ -332,7 +332,7 @@ document.getElementById('file-input').addEventListener('change', function(event)
 
 // this gets all the URL parameters
 // file is the name of the file to load without the .json suffix
-// menu=false will hide the menus for a cleaner embedded view using an iframe
+// menu=true will show the menus (menus are hidden by default for iframe embedding)
 function getURLParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -354,7 +354,8 @@ async function loadFileFromURL() {
 
 function checkMenuParameter() {
     const menu = getURLParameter('menu');
-    if (menu === 'false') {
+    // Default to false - menus hidden unless explicitly set to true
+    if (menu !== 'true') {
         document.body.classList.add('menu-hidden');
     }
 }
