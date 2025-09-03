@@ -4,7 +4,7 @@ let nodes, edges;
 
 async function loadExamplesList() {
     // TODO: Change this to list all the files in the examples directory
-    // Only load files that end id the suffis "-cld.json"
+    // Only load files that end id the suffix "-cld.json"
     // For now, hardcode the list
     // You can add more examples by adding more JSON files to the examples directory
     // and adding them to this list
@@ -330,6 +330,9 @@ document.getElementById('file-input').addEventListener('change', function(event)
     }
 });
 
+// this gets all the URL parameters
+// file is the name of the file to load without the .json suffix
+// menu=false will hide the menus for a cleaner embedded view using an iframe
 function getURLParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -349,10 +352,20 @@ async function loadFileFromURL() {
     }
 }
 
+function checkMenuParameter() {
+    const menu = getURLParameter('menu');
+    if (menu === 'false') {
+        document.body.classList.add('menu-hidden');
+    }
+}
+
 window.addEventListener('load', function() {
     initializeNetwork();
     initializeSampleButtons();
     showDefaultDetails();
+    
+    // Check for menu parameter to hide UI elements
+    checkMenuParameter();
     
     // Check for file parameter in URL and load it
     loadFileFromURL();

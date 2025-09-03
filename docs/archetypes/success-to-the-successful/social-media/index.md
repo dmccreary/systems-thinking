@@ -1,6 +1,15 @@
-# Social Media CLD Test Results
+# Social Media CLD
 
-1. ❌ Test 1: Every node has >= 2 unique neighbors — FAIL
+Social Media Influence - Causal Loop Diagram
+An example of the Success to the Successful archetype
+
+## JSON File
+
+[JSON CLD File](social-media-cld.json)
+
+## Social Media CLD Test Results
+
+1. ❌ Test 1: Every node in a feedback loop has >= 2 unique neighbors — FAIL
     - Node 'platform_innovation' has only 1 unique neighbor(s): ['content_diversity']
 2. ✅ Test 2: Every edge connects two existing nodes — PASS
 3. ❌ Test 3: Every loop is a closed loop — FAIL
