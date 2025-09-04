@@ -1,3 +1,12 @@
+---
+title: Drifting Goals Archetypes
+description: How Good Intentions Can Lead to Lowered Standards
+image: /archetypes/drifting-goals/drifting-goals.png
+og:image: /archetypes/drifting-goals/drifting-goals.png
+twitter:image: /archetypes/drifting-goals/drifting-goals.png
+social:
+   cards: false
+---
 # Drifting Goals Archetypes
 
 The Slippery Slope: How Good Intentions Can Lead to Lowered Standards

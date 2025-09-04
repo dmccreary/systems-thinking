@@ -77,6 +77,9 @@ nav:
       - Traffic Congestion: archetypes/fixes-that-fail/traffic-congestion/index.md
       - Zero Tolerance: archetypes/fixes-that-fail/zero-tolerance/index.md
     
+    - Escalation:
+      - Introduction: archetypes/escalation/index.md
+
     - Limits to Growth:
       - Introduction: archetypes/limits-to-growth/index.md
       - Antibiotic Effectiveness: archetypes/limits-to-growth/antibiotic-effectiveness/index.md
@@ -90,6 +93,7 @@ nav:
       - Social Media: archetypes/limits-to-growth/social-media/index.md
       - Steam Engines: archetypes/limits-to-growth/steam-engines/index.md
       - Student Activity Overcommitment: archetypes/limits-to-growth/student-activity-overcommittment/index.md
+    
     - Shifting the Burden:
       - Introduction: archetypes/shifting-the-burden/index.md
       - College Cramming: archetypes/shifting-the-burden/college-cramming/index.md
@@ -122,8 +126,8 @@ nav:
       - Introduction:        archetypes/success-to-the-successful/index.md
       - AI Flywheel:         archetypes/success-to-the-successful/ai-flywheel/index.md
       - Educational Funding: 
-        - Introduction: archetypes/success-to-the-successful/educational-funding/index.md
-        - CLD Test Results: archetypes/success-to-the-successful/educational-funding/cld-test-results.md
+        - Introduction:      archetypes/success-to-the-successful/educational-funding/index.md
+        - CLD Test Results:  archetypes/success-to-the-successful/educational-funding/cld-test-results.md
       - Healthcare Access:   archetypes/success-to-the-successful/healthcare-access/index.md
       - Research Funding:    archetypes/success-to-the-successful/research-funding/index.md
       - Social Media:        archetypes/success-to-the-successful/social-media/index.md
@@ -137,8 +141,9 @@ nav:
       # - College Rankings: archetypes/success-to-the-successful/college-rankings.md
       # - Political Polarization: archetypes/success-to-the-successful/political-polarization.md
 
-    - Drifting Goals:
-      - Introduction: archetypes/drifting-goals/index.md
+      - Drifting Goals:
+        - Intro: archetypes/drifting-goals/index.md
+
       #- AI Safety: archetypes/drifting-goals/ai-safety/index.md
       #- Climate Change: archetypes/drifting-goals/climate-change/index.md
       #- Education Standards: archetypes/drifting-goals/education-standards/index.md

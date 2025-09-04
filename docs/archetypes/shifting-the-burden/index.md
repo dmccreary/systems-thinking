@@ -1,5 +1,8 @@
 # Shifting the Burden: Systems Archetype Examples
 
+<iframe src="../../sims/cld-viewer/main.html?file=shifting-the-burden-cld.json" height=400 scrolling="no"> </iframe>
+
+
 The "Shifting the Burden" archetype occurs when organizations or individuals rely on quick fixes to address problem symptoms, providing immediate relief but preventing investment in fundamental solutions that would address root causes. Over time, the quick fixes become addictive while the capacity to implement real solutions deteriorates, making the original problems worse and creating dependency on increasingly intensive interventions.
 
 ## IT Help Desk Overload
@@ -75,3 +78,37 @@ This archetype appears in virtually every domain of human activity:
 - **Technology**: Workarounds instead of fixing underlying system problems
 
 Understanding this pattern can help individuals, organizations, and societies make better choices about when to use quick fixes strategically versus when to invest in fundamental solutions that create lasting positive change.
+
+## Sample Prompt
+    Please generate a causal loop diagram JSON file for the "Shifting the Burden" archetype.
+    Use the JSON schema file cld-schema.json for the structure JSON of the file.
+
+    General Layout:
+    The diagram has three loops.
+    On the left side there are two balancing loops stacked vertically.
+    Both loops contain only clockwise edges.
+    Both balancing loops share nodes "Problem" in the middle of the left side.
+    On the right is a single Reinforcing loop going from the top left through "Side Effect" to the bottom of the left.
+
+    Center of the Diagram
+    The node "Problem" is located at the center at point (0,0).
+
+    Top Loop:
+    The top loop is a clockwise balancing loop called "Treat the Symptoms".  
+    It has the "Problem" node on lower part and a "Treat Symptom" symptom node at the top of the loop.
+    The edge "Treat Symptom" to "Problem" is negative.
+    The edge "Problem" to "Treat Symptom" is positive.
+
+    Bottom Loop:
+    The bottom loop is a balancing clockwise loop "Find and Fix Root Causes".  
+    It has the "Problem" node on the top a "Root Cause" node at the bottom.
+    The edge "Root Cause" to "Problem" is negative.
+    The edge "Problem" to "Root Cause" is positive.
+
+    Right Loop:
+    The right loop is a Reinforcing loop called "Side Effects".
+    It adds one new node on the right called the "Side Effect" node.
+    It starts at the "Treat Symptom" with a positive clockwise edge to "Side Effect".
+    The edge from the "Side Effect" to "Root Cause" is negative.
+
+

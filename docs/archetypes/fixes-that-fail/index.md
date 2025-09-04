@@ -1,5 +1,8 @@
 # Fixes that Fail
 
+<iframe src="../../sims/cld-viewer/main.html?file=fixes-that-fail-cld.json" height=400 scrolling="no"> </iframe>
+
+
 The **Fixes that Fail** is one of the best ways to understand how
 systems thinking can help us understand the long-term consequences
 of short-term thinking.
@@ -47,13 +50,21 @@ Here is a summary of our examples of the Fixes that Fail archetype:
 
 ## References
 
+[Wikipedia Page on Fixes That Fail](https://en.wikipedia.org/wiki/Fixes_that_fail)
+
 !!! prompt
     Please generate a causal loop diagram JSON file for the "Fixes that Fail" archetype.
     Use the cld-schema.json for the structure of the file.
+
+    General Layout:
     The diagram has two loops.  
     Both loops contain only clockwise edges.
     Both loops share nodes "Problem" on the left and "Fix" on the right.
+
+    Top Loop:
     The top loop is a balancing loop called "Short Term Fix".  It has "Problem" on the left and "Fix" on the right.
+
+    Bottom Loop:
     The bottom loop is a reinforcing loop.  
     It has "Problem" on the left, "Fix" in the right and "Consequences" at the bottom of the loop.
     The Consequences are unintended side effects that result from short term fixes.

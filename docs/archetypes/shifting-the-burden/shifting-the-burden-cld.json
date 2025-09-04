@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "id": "shifting-the-burden-archetype",
+    "title": "Shifting the Burden Systems Archetype",
+    "archetype": "shifting-the-burden",
+    "description": "A systems archetype showing how treating symptoms instead of root causes can create side effects that worsen the underlying problem, making symptom-focused solutions increasingly necessary while root cause solutions become harder to implement.",
+    "learning_objectives": [
+      "Understand the difference between symptom-focused and root cause solutions",
+      "Recognize how quick fixes can create unintended consequences",
+      "Identify the reinforcing dynamics that make organizations dependent on symptomatic solutions",
+      "Explore the importance of building capability to address root causes"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-09-03T00:00:00Z",
+    "updated_date": "2025-09-03T00:00:00Z",
+    "author": "Systems Thinking Educational Team",
+    "tags": ["shifting-the-burden", "symptom-treatment", "root-causes", "unintended-consequences", "organizational-learning"],
+    "layout_strategy": "Three-loop configuration with Problem node at center (600, 300). Top balancing loop 'Treat Symptoms' with Treat Symptom node at (600, 150). Bottom balancing loop 'Root Causes' with Root Cause node at (600, 450). Right reinforcing loop 'Side Effects' with Side Effect node at (900, 300). All loops use clockwise flow for visual consistency.",
+    "notes": "This archetype demonstrates the dangerous dynamic where organizations become addicted to quick fixes that provide temporary relief but undermine long-term problem-solving capability. The three-loop structure shows the competing dynamics between symptomatic relief and fundamental solutions."
+  },
+  "nodes": [
+    {
+      "id": "problem",
+      "label": "Problem Symptom",
+      "position": {"x": 600, "y": 300},
+      "type": "condition",
+      "description": "The visible manifestation of an underlying issue that demands attention and action",
+      "examples": ["Customer complaints", "Budget deficits", "Employee turnover", "Quality defects", "Performance gaps"],
+      "measurement": "Problem severity metrics, complaint volumes, performance indicators"
+    },
+    {
+      "id": "treat_symptom", 
+      "label": "Treat Symptom",
+      "position": {"x": 600, "y": 150},
+      "type": "variable",
+      "description": "Quick fixes and interventions that directly address the visible problem without tackling underlying causes",
+      "examples": ["Overtime to meet deadlines", "Price cuts to boost sales", "Hiring consultants", "Reorganizations", "Policy enforcement"],
+      "measurement": "Resources allocated to quick fixes, frequency of symptomatic interventions"
+    },
+    {
+      "id": "root_cause",
+      "label": "Root Cause Capability",
+      "position": {"x": 600, "y": 450}, 
+      "type": "stock",
+      "description": "Organizational capacity to identify and address the fundamental causes of problems",
+      "examples": ["Process improvement skills", "Systems thinking capability", "Learning culture", "Problem-solving expertise", "Change management ability"],
+      "measurement": "Root cause analysis frequency, fundamental solution success rates, organizational learning metrics"
+    },
+    {
+      "id": "side_effect",
+      "label": "Unintended Side Effects",
+      "position": {"x": 900, "y": 300},
+      "type": "condition", 
+      "description": "Negative consequences of symptomatic solutions that worsen the underlying system",
+      "examples": ["Skill atrophy from over-reliance on quick fixes", "Reduced learning", "Dependency on external help", "System degradation", "Cultural problems"],
+      "measurement": "Dependency indicators, capability decline measures, recurring problem frequency"
+    }
+  ],
+  "edges": [
+    {
+      "id": "problem_drives_symptom_treatment",
+      "source": "problem",
+      "target": "treat_symptom", 
+      "polarity": "positive",
+      "label": "triggers",
+      "description": "Problem symptoms create pressure to implement quick fixes and symptomatic solutions",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.5
+      }
+    },
+    {
+      "id": "symptom_treatment_reduces_problem",
+      "source": "treat_symptom",
+      "target": "problem",
+      "polarity": "negative", 
+      "label": "relieves",
+      "description": "Symptomatic treatments provide temporary relief from the visible problem",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "immediate to short-term",
+        "description": "Symptomatic solutions often provide quick relief but may be temporary"
+      },
+      "curve": {
+        "type": "curvedCW", 
+        "roundness": 0.5
+      }
+    },
+    {
+      "id": "problem_drives_root_cause_work",
+      "source": "problem", 
+      "target": "root_cause",
+      "polarity": "positive",
+      "label": "motivates",
+      "description": "Problems can motivate investment in root cause analysis and fundamental solutions",
+      "strength": "moderate",
+      "curve": {
+        "type": "curvedCCW",
+        "roundness": 0.5
+      }
+    },
+    {
+      "id": "root_cause_reduces_problem",
+      "source": "root_cause",
+      "target": "problem", 
+      "polarity": "negative",
+      "label": "eliminates",
+      "description": "Strong root cause capability addresses fundamental issues and prevents problem recurrence",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "medium to long-term",
+        "description": "Root cause solutions take longer to implement but provide lasting relief"
+      },
+      "curve": {
+        "type": "curvedCCW",
+        "roundness": 0.5
+      }
+    },
+    {
+      "id": "symptom_treatment_creates_side_effects",
+      "source": "treat_symptom",
+      "target": "side_effect",
+      "polarity": "positive",
+      "label": "generates", 
+      "description": "Repeated reliance on quick fixes creates unintended negative consequences",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "medium-term",
+        "description": "Side effects often emerge gradually as symptomatic solutions are repeatedly used"
+      }
+    },
+    {
+      "id": "side_effects_undermine_root_cause",
+      "source": "side_effect",
+      "target": "root_cause",
+      "polarity": "negative",
+      "label": "undermines",
+      "description": "Side effects erode organizational capability to address root causes effectively",
+      "strength": "strong", 
+      "delay": {
+        "present": true,
+        "duration": "long-term",
+        "description": "Capability erosion is a gradual process that compounds over time"
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "symptom_relief_loop",
+      "type": "balancing",
+      "path": ["problem", "treat_symptom", "problem"],
+      "label": "Quick Fix Loop",
+      "description": "Problem symptoms trigger symptomatic treatments that provide temporary relief, creating a balancing dynamic focused on immediate problem suppression",
+      "behavior_pattern": "Rapid symptomatic relief followed by potential problem recurrence",
+      "dominance_conditions": "Dominant when there is pressure for immediate results and limited time for deeper solutions",
+      "position": {"x": 600, "y": 225},
+      "is_primary": true
+    },
+    {
+      "id": "root_cause_loop", 
+      "type": "balancing",
+      "path": ["problem", "root_cause", "problem"],
+      "label": "Fundamental Solution Loop",
+      "description": "Problems motivate building root cause capability, which addresses fundamental issues and eliminates recurring problems",
+      "behavior_pattern": "Slower initial response but lasting problem resolution and system improvement",
+      "dominance_conditions": "Dominant when there is support for long-term thinking and investment in capability building",
+      "position": {"x": 600, "y": 375},
+      "is_primary": true
+    },
+    {
+      "id": "addiction_loop",
+      "type": "reinforcing", 
+      "path": ["treat_symptom", "side_effect", "root_cause", "problem", "treat_symptom"],
+      "label": "Quick Fix Addiction Loop", 
+      "description": "Symptomatic solutions create side effects that undermine root cause capability, making problems more likely to recur and increasing reliance on quick fixes",
+      "behavior_pattern": "Escalating dependence on symptomatic solutions with declining fundamental problem-solving capability",
+      "dominance_conditions": "Becomes dominant when quick fixes are repeatedly chosen over fundamental solutions",
+      "position": {"x": 750, "y": 300},
+      "is_primary": true
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "invest_in_root_cause_capability",
+      "target_type": "node",
+      "target_id": "root_cause", 
+      "leverage_level": 6,
+      "title": "Invest in Root Cause Capability Building",
+      "description": "Deliberately build organizational capacity for identifying and addressing fundamental causes rather than just treating symptoms",
+      "intervention_strategies": [
+        "Train staff in root cause analysis methodologies",
+        "Create time and resources for fundamental problem-solving", 
+        "Reward long-term solutions over quick fixes",
+        "Develop systems thinking skills across the organization"
+      ],
+      "expected_impact": "Breaks the addiction to quick fixes by building capability to address fundamental issues",
+      "difficulty": "high",
+      "examples": [
+        "Toyota's investment in employee problem-solving skills",
+        "3M's 15% time for innovation and improvement",
+        "Organizations that invest in process improvement capabilities"
+      ]
+    },
+    {
+      "id": "change_incentive_systems",
+      "target_type": "system",
+      "target_id": "problem",
+      "leverage_level": 7,
+      "title": "Align Incentives with Long-term Solutions",
+      "description": "Change reward systems to favor fundamental solutions over symptomatic quick fixes",
+      "intervention_strategies": [
+        "Measure and reward problem prevention, not just problem response",
+        "Create longer evaluation cycles that capture fundamental solution benefits",
+        "Recognize learning and capability building alongside immediate results",
+        "Make root cause analysis a required part of problem response"
+      ],
+      "expected_impact": "Shifts organizational behavior toward sustainable solutions by changing what gets rewarded",
+      "difficulty": "high",
+      "examples": [
+        "Performance metrics that include problem prevention",
+        "Promotion criteria that value systems improvement",
+        "Budget processes that fund capability building"
+      ]
+    },
+    {
+      "id": "create_learning_disciplines",
+      "target_type": "edge", 
+      "target_id": "side_effects_undermine_root_cause",
+      "leverage_level": 5,
+      "title": "Implement Learning Disciplines",
+      "description": "Create organizational practices that capture learning from both quick fixes and their side effects",
+      "intervention_strategies": [
+        "Conduct after-action reviews that examine both immediate results and side effects",
+        "Track the long-term consequences of symptomatic solutions",
+        "Create feedback loops that connect today's quick fixes to tomorrow's problems",
+        "Build early warning systems for side effect detection"
+      ],
+      "expected_impact": "Helps organization recognize and learn from the hidden costs of symptomatic solutions",
+      "difficulty": "moderate", 
+      "examples": [
+        "Military after-action review processes",
+        "Healthcare morbidity and mortality conferences",
+        "Project retrospectives that examine unintended consequences"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "quick_fix_addiction",
+      "title": "Escalating Quick Fix Dependence", 
+      "description": "Organization continues to rely primarily on symptomatic solutions without building root cause capability",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "treat_symptom",
+          "change_description": "Increased reliance on quick fixes and external solutions"
+        }
+      ],
+      "predicted_outcomes": "Progressive erosion of internal capability, increasing problem severity, greater dependence on expensive external fixes, and eventual system crisis"
+    },
+    {
+      "id": "capability_investment",
+      "title": "Strategic Investment in Root Cause Capability",
+      "description": "Organization makes deliberate investment in building fundamental problem-solving capabilities", 
+      "changes": [
+        {
+          "target_type": "node", 
+          "target_id": "root_cause",
+          "change_description": "Significant investment in training, processes, and culture for root cause analysis"
+        }
+      ],
+      "predicted_outcomes": "Gradual reduction in problem recurrence, improved organizational learning, reduced crisis management, and sustainable performance improvement"
+    },
+    {
+      "id": "balanced_approach",
+      "title": "Balanced Short-term and Long-term Strategy",
+      "description": "Organization uses quick fixes when necessary while simultaneously building capability for fundamental solutions",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "problem_drives_root_cause_work", 
+          "change_description": "Strong commitment to root cause work even when using symptomatic solutions"
+        }
+      ],
+      "predicted_outcomes": "Managed transition from symptom dependence to fundamental capability, with decreasing need for quick fixes over time"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why do organizations often prefer quick fixes over addressing root causes?",
+      "How do the side effects of symptomatic solutions create a reinforcing cycle?",
+      "What are the trade-offs between immediate problem relief and long-term capability building?",
+      "How can leaders recognize when they're shifting the burden rather than solving problems?",
+      "What organizational conditions make it more likely to invest in root cause solutions?",
+      "How do time pressures and performance metrics contribute to this archetype?"
+    ],
+    "key_insights": [
+      "Quick fixes can become addictive, creating dependence that undermines long-term capability",
+      "Symptomatic solutions often have hidden side effects that worsen underlying problems", 
+      "Root cause capability requires investment and doesn't provide immediate relief",
+      "The archetype shows three competing loops: two balancing and one reinforcing",
+      "Organizations can get trapped in cycles where they become less capable of fundamental problem-solving",
+      "Breaking this pattern requires changing incentives and building learning disciplines"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Quick fixes are always bad and should never be used",
+        "correction": "Quick fixes can be necessary for immediate relief, but they become problematic when they replace investment in root cause capability or when their side effects aren't recognized"
+      },
+      {
+        "misconception": "Root cause solutions are always better than symptomatic ones",
+        "correction": "Root cause solutions take time to develop and implement. Sometimes immediate symptomatic relief is necessary while building longer-term capabilities"
+      },
+      {
+        "misconception": "The side effects of quick fixes are usually obvious and immediate",
+        "correction": "Side effects often emerge gradually and may not be directly connected to the original symptomatic solution, making them hard to recognize"
+      }
+    ],
+    "extension_activities": [
+      "Identify examples of shifting the burden in your organization or community",
+      "Analyze a case where quick fixes led to worse problems over time", 
+      "Design an intervention strategy to build root cause capability in a specific situation",
+      "Create a measurement system that tracks both symptomatic relief and fundamental capability",
+      "Research organizations that have successfully broken free from quick fix addiction"
+    ],
+    "related_concepts": [
+      "Fixes that Fail", 
+      "Limits to Growth",
+      "Organizational Learning",
+      "Systems Leverage Points",
+      "Unintended Consequences",
+      "Problem-Solving Capability",
+      "Symptomatic vs Fundamental Solutions"
+    ]
+  }
+}

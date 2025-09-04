@@ -1,4 +1,16 @@
+---
+title: Limits to Growth
+description: Causal loop diagram for the limits to growth archetype
+image: /archetypes/limits-to-growth/limits-to-growth.png
+og:image: /archetypes/limits-to-growth/limits-to-growth.png
+twitter:image: /archetypes/limits-to-growth/limits-to-growth.png
+social:
+   cards: false
+---
 # Limits to Growth
+
+<iframe src="../../sims/cld-viewer/main.html?file=limits-to-growth-cld.json" height=250 scrolling="no"> </iframe>
+
 
 **Limits to Growth** shows us how exponential growth eventually encounters constraints, 
 leading to overshoot and collapse. This archetype is essential for understanding sustainability, 
@@ -121,4 +133,40 @@ Each of these examples follows the same basic pattern:
 4. **Diminishing returns** appear despite increased effort/investment
 5. **System limits** force transition to new approaches or face collapse
 
-Would you like me to develop any of these examples into a full "Limits to Growth" archetype illustration?
+## Sample Prompt
+
+!!! prompt
+    Please generate a new JSON file for the causal loop diagram for the "Limits to Growth" archetype.
+    Use the structure in the cld-schema.json to generate the JSON file.
+
+    Overall Layout:
+    The diagram has two loops placed side-by side with shared shared node labeled "Condition" in the center shared by both the loops.
+    There is a single node to the far upper right called "Limiting Condition".
+
+    Center Description:
+    The center of the causal loop diagram has a node called "Condition".  
+    It is placed at (0,0) on the canvas.
+
+    Left Loop:
+    The name of the left loop is called "Growth".
+    It is a Reinforcing loop with two clockwise positive edges (CW).
+    On the right of the Growth loop is the shared node labeled "Condition" at (0,0).
+    On the left side of the Growth loop is the node labeled "Growing Action".
+    Growth Action is located at (-200, 0).
+    The Reinforcing loop symbol is located at (-100,0).
+    Both edges in this loop are positive.
+
+    Right Loop:
+    The name of the right loop is called "Slowing".
+    It is a Reinforcing loop with two clockwise edges (CW).
+    On the left of the Slowing loop is the shared node labeled "Condition" at (0,0).
+    On the right of the Slowing loop is the shared node labeled "Slowing Action" at (200,0).
+    The Balancing loop symbol is located at (100,0).
+    The edge from "System Condition" to "lowing Action" is positive.
+    The edge from "Slowing Action" to "System Condition" is negative.
+    In the upper right corner is a node labeled "Limiting Condition" at (300, 100).
+    "Limiting Condition" connects to the "Slowing" loop at the "Slowing Action" via a clockwise edge.
+    
+    There are four total nodes in the diagram.
+    There are five edges in the diagram.  All of the edges are clockwise (CW).
+    There are no counter-clockwise edges (CCW) in this diagram.

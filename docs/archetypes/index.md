@@ -40,7 +40,7 @@ The short-term solution produces side effects that affect the fundamental soluti
 As this occurs, the system's attention shifts to the short-term solution or to the side effects.
 
 
-## **Drifting goals**---
+## Drifting goals
 As a gap between goal and actual performance is realized, the conscious decision is to lower the goal. The effect of this decision is a gradual decline in the system's performance.
 
 ## **Growth and underinvestment**---Growth approaches a limit potentially avoidable with investments in capacity. However, a decision is made to not invest, resulting in performance degradation, which results in a decline in demand validating the decision not to invest.
@@ -49,3 +49,6 @@ As a gap between goal and actual performance is realized, the conscious decision
 
 ## **Escalation**---Parties take mutually threatening actions, which escalate their retaliation attempting to "one-up" one another.
 
+## References
+
+[Wikipedia Page on System Archetypes](https://en.wikipedia.org/wiki/System_archetype)
