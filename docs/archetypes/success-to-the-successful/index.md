@@ -1,4 +1,8 @@
-# Success to the Successful: Systems Thinking Examples
+# Success to the Successful
+
+Also known as *Winner Takes All*.
+
+<iframe src="../../sims/cld-viewer/main.html?file=success-to-the-successful-cld.json" height=400 scrolling="no"> </iframe>
 
 1. [Educational Funding](#example-1-educational-funding-and-school-performance) - Performance-based resource allocation amplifying school differences
 2. [Venture Capital](#example-2-venture-capital-and-startup-success) - Network effects concentrating entrepreneurial opportunities
@@ -291,24 +295,24 @@ These examples demonstrate how understanding the "Success to the Successful" arc
   Use the JSON schema file cld-schema.json for the structure JSON of the file.
 
   General Layout:
-  The coordinate system places (0,0) in the upper left with x 
-  increasing to the right and y increasing as you go down the diagram.
-  This diagram has two balancing loops placed side by side.
-  The left loop is called the "Actor A" loop.
-  The right loop is called the "Actor B" loop.
-  The loops share a node in the center at (300,300) called "Results of A\nRelative to B".
+  The coordinate system places (0,0) in the upper left with x increasing to the right 
+  and y increasing as you go down the diagram.
 
-  Left Loop:
-  The left loop has three nodes and three clockwise (CW) arrows.
-  The balancing loop symbol is at (150, 300).
-  "Results of A\nRelative to B" is at the right of the left loop.
-  "Activity by A" is at the lower left of the loop (100,400).
-  "A's Results" is at the top of the loop at (150, 100).
+  This diagram has two reinforcing loops placed one on top of the other.
+  The top loop is called the "Actor A" loop.
+  The bottom loop is called the "Actor B" loop.
+  The loops share a node in the center at (300,300) called "Allocation to A\nInstead of B".
 
-  Right Loop:
-  The right loop has three nodes and three counter clockwise (CCW) arrows.
-  "Results of A\nRelative to B" is at the left edge of the right loop.
-  "Activity by B" is at the lower right of the loop (400,400).
-  "B's Results" is at the top of the loop at (350, 100).
+  Top Loop:
+  The top loop has three nodes and three positive counter clockwise (CCW) arrows.
+  The reinforcing loop "R" symbol is at (300, 150).
+  "Resources to A" is at the right of the top loop at (400, 150).
+  "Success of A" is at the left of the top loop (100, 100).
+
+  Bottom Loop:
+  The bottom loop has three nodes and three positive clockwise (CW) arrows.
+  The reinforcing loop "R" symbol is at (300, 450).
+  "Resources to B" is at the right of the bottom loop at (400, 450).
+  "Success of B" is at the left of the bottom loop (100, 450).
 
 
