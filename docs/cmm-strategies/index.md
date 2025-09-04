@@ -1,6 +1,8 @@
 # Capability Maturity Model for Systems Thinking
 
-![](../img/cmm-five-steps.png)
+<iframe src="../sims/cmm-for-systems-thinking/main.html" height="500px" scrolling="no"></iframe>
+
+[CMM in depth](./capabily-maturity-model.md)
 
 [Microstrategies](microstrategies.md)
 

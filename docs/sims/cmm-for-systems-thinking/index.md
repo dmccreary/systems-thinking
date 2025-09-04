@@ -13,6 +13,10 @@ social:
 
 <iframe src="main.html" height="500px" scrolling="no"></iframe>
 
+```html
+<iframe src="/sims/cmm-for-systems-thinking/main.html" height="500px" scrolling="no"></iframe>
+```
+
 [Link to CMM Demo](./main.html){ .md-button .md-button--primary }
 
 ## Lesson Plan for the Systems Thinking CMM Infographic
