@@ -1,4 +1,27 @@
-# Donella Meadows' Leverage Points Hierarchy
+# Chapter 8: Leverage Points and System Interventions
+
+### Learning Objectives:
+- Apply Donella Meadows' leverage points framework
+- Design effective interventions in AI systems
+- Understand the hierarchy of system change effectiveness
+
+### Key Topics:
+- 12 leverage points for system change
+- High-leverage interventions in AI systems
+- Paradigm shifts vs. parameter changes
+- System structure and rule changes
+
+### Interactive Activities:
+- Analyze leverage points in current AI systems
+- Design intervention strategies for system problems
+- Evaluate policy proposals through systems lens
+
+### Applications:
+- AI regulation and governance
+- Algorithmic transparency initiatives
+- Technology education reform
+
+Donella Meadows' Leverage Points Hierarchy
 
 **Donella Meadows' Leverage Points** is a framework that ranks twelve places to intervene in a system in order of increasing effectiveness. Developed by systems thinking pioneer Donella Meadows, this hierarchy helps identify where to focus efforts for maximum impact when trying to change complex systems.
 
