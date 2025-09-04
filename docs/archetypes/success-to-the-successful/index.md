@@ -274,8 +274,6 @@ While rewarding success seems fair and efficient, it can create systems that bec
 
 Understanding this archetype helps us design systems that maintain incentives for excellence while preventing excessive concentration of resources and opportunities.
 
----
-
 ## Questions for Reflection
 
 1. Can you identify examples of "Success to the Successful" in your own field or organization?
@@ -285,3 +283,32 @@ Understanding this archetype helps us design systems that maintain incentives fo
 5. How can we design systems that promote excellence while preventing excessive inequality?
 
 These examples demonstrate how understanding the "Success to the Successful" archetype can help us recognize and address systems that inadvertently create and amplify inequality, even when operated with good intentions.
+
+## Sample Prompt
+
+!!! prompt
+  Please generate a causal loop diagram JSON file for the "Success to the Successful" archetype.
+  Use the JSON schema file cld-schema.json for the structure JSON of the file.
+
+  General Layout:
+  The coordinate system places (0,0) in the upper left with x 
+  increasing to the right and y increasing as you go down the diagram.
+  This diagram has two balancing loops placed side by side.
+  The left loop is called the "Actor A" loop.
+  The right loop is called the "Actor B" loop.
+  The loops share a node in the center at (300,300) called "Results of A\nRelative to B".
+
+  Left Loop:
+  The left loop has three nodes and three clockwise (CW) arrows.
+  The balancing loop symbol is at (150, 300).
+  "Results of A\nRelative to B" is at the right of the left loop.
+  "Activity by A" is at the lower left of the loop (100,400).
+  "A's Results" is at the top of the loop at (150, 100).
+
+  Right Loop:
+  The right loop has three nodes and three counter clockwise (CCW) arrows.
+  "Results of A\nRelative to B" is at the left edge of the right loop.
+  "Activity by B" is at the lower right of the loop (400,400).
+  "B's Results" is at the top of the loop at (350, 100).
+
+

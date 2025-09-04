@@ -13,3 +13,11 @@ social:
 
 ## Overview
 
+## Sample Prompt
+
+!!! prompt
+   Please generate a causal loop diagram JSON file for 
+   the "XXX" archetype.
+    Use the JSON schema file cld-schema.json for the structure JSON of the file.
+
+
