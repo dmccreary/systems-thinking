@@ -24,7 +24,7 @@ async function loadExamplesList() {
     // and adding them to this list
     const examples = [
         { id: 'bank-balance-cld', title: 'Bank Balance' },
-        { id: 'ai-flywheel-v1-cld', title: 'AI Flywheel V1' },
+        { id: 'ai-flywheel-cld', title: 'AI Flywheel' },
         { id: 'thermostat-cld', title: 'Thermostat' },
         { id: 'population-cld', title: 'Population' },
         { id: 'tragedy-of-the-commons-cld', title: 'Tragedy of the Commons' },

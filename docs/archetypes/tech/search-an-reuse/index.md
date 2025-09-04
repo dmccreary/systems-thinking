@@ -2,7 +2,7 @@
 
 *You can't reuse what you can't find.*
 
-![Search and Reuse](./search-and-reuse.png)
+![Search and Reuse CLD](./search-and-reuse.png)
 
 Note that this archetype is written from the reusable code perspective, but it also applies to other reusable assets such as images, digital content, datasets and models use for machine learning.
 
@@ -41,5 +41,3 @@ In this demo, we show the power of using faceted search to narrow down the total
 2. Look at the count of models
 3. Go to the left side and select only English Language models.  Note the new count!  It is typically 1/100th of the total model count.
 4. Now add only the models training on Wikipedia - the model count is 1/10th of the prior value.
-
-![Search and Reuse](../img/huggingface-english-language-models.png)

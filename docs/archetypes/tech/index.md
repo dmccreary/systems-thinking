@@ -1,7 +1,9 @@
 # Technology Archetypes
 
-[AI Flywheel](ai-flywheel.md)
+[AI Flywheel](ai-flywheel/index.md)
 
-[Search and Reuse](search-and-reuse.md)
+[](ai-improvements/index.md)
 
-[Communication Standards](concept-standards.md)
+[Search and Reuse](search-and-reuse/index.md)
+
+[Communication Standards](communication-standards/index.md)

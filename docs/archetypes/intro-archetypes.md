@@ -1,8 +1,11 @@
-# Introductory Archetypes
+# Introductory Archetypes for Beginners
+
+Although this book contains hundreds of examples of systems thinking, you don't need
+to master all of them to be a good systems thinker.  If you are new to systems thinking
+we suggest the following starting examples.
 
 ## Core Foundation Archetypes
 
-### Tragedy of the Commons
 **Tragedy of the Commons** is perhaps the most fundamental archetype to teach first. It demonstrates how individual rational decisions can lead to collective irrationality and system collapse. This archetype helps students understand shared resource depletion, environmental issues, and organizational challenges where individual incentives conflict with group benefits.
 
 **Limits to Growth** shows students how exponential growth eventually encounters constraints, leading to overshoot and collapse. This archetype is essential for understanding sustainability, resource management, and why systems can't grow indefinitely.

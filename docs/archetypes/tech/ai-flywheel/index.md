@@ -1,3 +1,25 @@
+---
+title: AI Flywheel
+description: Causal loop diagram for the AI flywheel
+image: /archetypes/ai-flywheel/ai-flywheel.png
+og:image: /archetypes/ai-flywheel/ai-flywheel.png
+twitter:image: /archetypes/ai-flywheel/ai-flywheel.png
+social:
+   cards: false
+---
+# AI Flywheel
+
+<iframe src="../../../sims/cld-viewer/main.html?file=ai-flywheel-cld.json" height=400 scrolling="no"> </iframe>
+
+```html
+<iframe src="../../sims/cld-viewer/main.html?file=ai-flywheel-cld.json" height=400 scrolling="no"> </iframe>
+```
+
+[AI Flywheel JSON File](../../../sims/cld-viewer/examples/ai-flywheel-cld.json)
+
+[AI Flywheel JSON File V2](./ai-flywheel-v2-cld.json)
+
+
 # The AI Flywheel
  
 A positive feedback cycle where good predictions cause more use of a service which provide more feedback data to create better predictive models.
@@ -54,3 +76,5 @@ users are more likely to try the recommendation and give you more feedback.
 The AI Flywheel is a central tool that allows large companies with large amounts of data to 
 use this data to make free predictions to get even more data.  
 This makes it difficult for new-entrants to challenge incumbents players.
+
+

@@ -9,7 +9,7 @@ When we build systems, we need to think carefully about how they exchange data w
 
 ## Problems with Scale
 
-Point-to-Point systems work well for small organizations that only have a few systems that need to share information.  The problem is that for each new system added, there are many systems that need to connect to it.  The number of edges rises as the square of the number of systems that need to communicate.  This is often referred to as the linear vs. quadradic scaling law.
+Point-to-Point systems work well for small organizations that only have a few systems that need to share information.  The problem is that for each new system added, there are many systems that need to connect to it.  The number of edges rises as the square of the number of systems that need to communicate.  This is often referred to as the linear vs. quadratic scaling law.
 
 ![](./linear-and-quadradic.png)
 
@@ -26,3 +26,7 @@ In order to keep our costs low, we need to build systems that do metadata matchi
 ![](./data-element-match.png)
 
 ## Costs of Schema Matching and Mapping
+
+As smaller LLMs become more cost effective and finely turned on concept matching the job
+of creating data element mappers will drop.  It will be easier to move
+data into and out of systems that were never originally designed to work together.

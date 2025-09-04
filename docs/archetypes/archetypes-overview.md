@@ -1,6 +1,6 @@
 # Archetypes
 
-In software engineering we use the concept of design patterns to create a name of a recurring solution to problems.  In Systems Thinking we use the term [archetype](glossary.md#archetype) to describe a ideal example that illustrates a systems thinking concept.
+In many fields like software engineering we use the concept of design patterns to create a name of a recurring solution to problems.  In Systems Thinking we use the term [archetype](glossary.md#archetype) to describe a ideal example that illustrates a systems thinking concept.
 
 If you would like to contribute a new Archetype please do the following:
 
@@ -12,10 +12,7 @@ Note our use of [Creative Commons Attribution NonCommercial ShareAlike 4.0 Inter
 
 This license allows reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under identical terms.
 
-
-
 #### Network Effect
-
 
 #### Tragedy of the Commons
 A situation in economic science when individual users, who have open access to a resource unhampered by shared social structures or formal rules that govern access and use, act independently according to their own self-interest and, contrary to the common good of all users, cause depletion of the resource through their uncoordinated actions.
@@ -30,5 +27,6 @@ We summarize this archetype as "the more it is used, the less value it has".
 * Also known as: TotC
 
 #### The Slow Peak Hours Server
+
 This is a variation of the [Tragedy of the Commons](#tragedy-of-the-commons) where a central server becomes slower the mote it is used.  During peak hours, when there are most users using the server, the response time is slower.  This discourages teams from using shared data in decision making dashboards that need to render in real-time.
 
