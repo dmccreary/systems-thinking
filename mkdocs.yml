@@ -10,7 +10,7 @@ nav:
   - Home: index.md
   - About this Website: about.md
   - Table of Contents: table-of-contents.md
-  - chapters:
+  - Chapters:
     - Foundations: chapters/ch-01-foundations/index.md
     - The AI Flywheel: chapters/ch-02-ai-flywheel/index.md
     - Success to the Successful: chapters/ch-03-success-to-the-successful/index.md
