@@ -1,5 +1,14 @@
 # Glossary of Terms
 
+#### Accidental Advisories
+
+A systems thinking archetype where two or more parties with shared goals inadvertently work against each other's interests while trying to solve a common problem. 
+
+Each party takes actions that seem logical from their perspective, but these actions create unintended consequences that hurt the other party, leading to a cycle of escalating conflict despite their underlying alignment.
+
+* [Accidental Advisories Examples](./archetypes/accidental-adversaries/index.md)
+* See also: [Silo Busting](./chapters/ch-11-busting-silos/)
+
 #### AI Flywheel
 
 A system where machine learning models make predictions from data, get feedback from prediction and use that feedback as additional data to make better predictions.
@@ -9,19 +18,23 @@ A system where machine learning models make predictions from data, get feedback 
 The AI Flywheel is a central tool that allows large companies with large amounts of data to use this data to get even more data.  This makes it difficult for new-entrants.
 
 #### Archetype
-An ideal example of something.  In the field of Graph Systems Thinking we use the term **archetype** to describe a small and simple example that teaches one of the key concepts in Graph Systems Thinking.
 
-A small set of system structures that produce common behavioral patterns across many different fields.
+An ideal example of something.  In the field of Systems Thinking we use the term **archetype** to describe a small and simple example that teaches one of the key concepts in Graph Systems Thinking.
+
+In this course we cover the ten key archetypes that are used in teaching Systems Thinking.
 
 Archetypes unify disciplines that have often been taught as separate things – psychology, economics, biology, urban planning, technology, government systems, etc. – because they can be universally found in all systems.
 
-Archetypes are to systems what Patterns are to software.
+Archetypes are to systems thinking what Patterns are to software.
 
-* See Also: [Tragedy of The Commons](#tragedy-of-the-commons)
-* See Also: [The AI Flywheel](#ai-flywheel)
+* [Archetypes Appendix](./archetypes/index.md)
 
 #### Balancing Loop
+
 A type of cause and effect interactions that counter a change with a push in the opposite direction.
+
+Within Causal Loop Diagrams the symbol "B" is typically used to show a balancing loop.
+Older systems also use the icon of a balance scale. 
 
 * Also known as: Negative feedback
 
