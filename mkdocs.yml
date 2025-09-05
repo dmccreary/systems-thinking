@@ -10,23 +10,20 @@ nav:
   - Home: index.md
   - About this Website: about.md
   - Table of Contents: table-of-contents.md
-  - Part 1 Introduction:
-      - Ch 1 Introduction: 
-        - Introduction: intro/ch-01-intro.md
-        - Forward: intro/forward.md
-        - Preface: intro/preface.md
-        - Acknowledgements: intro/acknowledgements.md
-        - About the Author: intro/about-the-authors.md
-        - Acknowledgements: intro/acknowledgements.md
-        - About the Author: intro/about-the-authors.md
-      - Ch 2 Graphs: intro/ch-02-graph.md
-      - Ch 3 Systems Thinking: intro/ch-03-systems.md
-      - Ch 4 Graph Systems Thinking: intro/ch-04-systems-graph.md
-      - Ch 5 Emergence: intro/ch-05-emergence.md
-      - Ch 6 Meadows Hierarchy: intro/ch-06-meadows-hierarchy.md
-      - Ch 10 Complex Adaptive Systems: intro/ch-010-cas.md
-
-  - Part 2 Causal Loop Diagrams:
+  - chapters:
+    - Foundations: chapters/ch-01-foundations/index.md
+    - The AI Flywheel: chapters/ch-02-ai-flywheel/index.md
+    - Success to the Successful: chapters/ch-03-success-to-the-successful/index.md
+    - Fixes That Fail: chapters/ch-04-fixes-that-fail/index.md
+    - Limits to Growth: chapters/ch-05-limits-to-growth/index.md
+    - Tragedy of the Commons: chapters/ch-06-tragedy-of-the-commons/index.md
+    - Shifting the BUrden: chapters/ch-07-shifting-the-burden/index.md
+    - Leverage Points: chapters/ch-08-leverage-points/index.md
+    - Deigning Systems: chapters/ch-09-designing-systems/index.md
+    - Future Systems: chapters/ch-10-future-systems/index.md
+    - Emergence: chapters/ch-13-emergence.md
+    - Complex Adaptive Systems: chapters/ch-14-cas.md
+  - Appendix A - Causal Loop Diagrams:
     - Introduction: clds/index.md
     - Vis Tutorial: clds/vis-tutorial/index.md
     - Bank Balance: clds/bank-balance/index.md
@@ -47,7 +44,7 @@ nav:
     # - Part 3 Case Studies:
     #   - Chapter 9: case-studies/healthcare.md
 
-  - Part 3 Archetypes:
+  - Appendix B - Archetypes:
     - Introduction: archetypes/index.md
     - Archetypes Overview: archetypes/archetypes-overview.md
 
