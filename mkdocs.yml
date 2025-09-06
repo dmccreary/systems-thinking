@@ -60,6 +60,7 @@ nav:
       - Banning Books:
           - Introduction: archetypes/fixes-that-fail/banning-books/index.md
           - Causal Diagram: archetypes/fixes-that-fail/banning-books/cld-generation.md
+      - Ban the Box: archetypes/fixes-that-fail/ban-the-box/index.md
       - Cutting Coding: archetypes/fixes-that-fail/cutting-coding/index.md
       - Cutting STEM: archetypes/fixes-that-fail/cutting-stem/index.md
       - Cutting AI Training: 

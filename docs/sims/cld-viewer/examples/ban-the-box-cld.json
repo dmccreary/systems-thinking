@@ -1,0 +1,400 @@
+{
+  "metadata": {
+    "id": "ban-the-box-cld",
+    "title": "Ban the Box Employment Discrimination Fix That Fails",
+    "archetype": "fixes-that-fail",
+    "description": "A criminal justice reform policy that removes criminal history questions from job applications to reduce employment barriers, but inadvertently increases racial discrimination as employers use race as a proxy for criminal history, ultimately worsening employment outcomes for the very communities it intended to help.",
+    "learning_objectives": [
+      "Understand how addressing symptoms rather than root causes can backfire",
+      "Recognize how removing information can lead to harmful statistical discrimination",
+      "Identify the role of delays in masking unintended consequences",
+      "Explore how well-intentioned policies can harm their intended beneficiaries",
+      "Analyze the difference between explicit and implicit discrimination"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-01-18T00:00:00Z",
+    "updated_date": "2025-01-18T00:00:00Z",
+    "author": "Systems Thinking Educational Team",
+    "tags": ["criminal-justice", "employment", "discrimination", "policy", "fixes-that-fail", "unintended-consequences"],
+    "layout_strategy": "This CLD uses a horizontal flow layout to show the progression from problem through quick fix to unintended consequences. The original problem (employment_barriers) is positioned at the far left (100, 200). The quick fix (ban_the_box_policy) flows to the right center (400, 200). The initial success (reduced_screening) continues the flow (700, 200). The unintended consequences branch downward: statistical_discrimination (700, 400) and racial_profiling (1000, 400). The larger problem (worse_minority_employment) is positioned lower right (1000, 600), and the cycle completion (sophisticated_barriers) returns to the left (400, 600). The two primary loops are positioned to be clearly visible: the quick fix loop in the upper area around (550, 150) and the unintended consequences loop in the lower area around (700, 500).",
+    "notes": "This CLD demonstrates the classic 'Fixes that Fail' pattern where a policy intervention addresses a visible symptom but creates larger systemic problems. The key insight is that removing explicit information (criminal history) led to increased reliance on implicit proxies (race), making discrimination worse rather than better. The delays in this system are crucial - the benefits appeared immediately while the harms took years to detect through research."
+  },
+  "nodes": [
+    {
+      "id": "employment_barriers",
+      "label": "Employment Barriers for People with Records",
+      "position": {"x": 100, "y": 200},
+      "type": "condition",
+      "description": "Systemic barriers preventing people with criminal records from obtaining employment, including explicit screening and implicit bias",
+      "examples": ["Criminal history checkboxes", "Background check requirements", "Employer bias against ex-offenders", "Recidivism due to unemployment"],
+      "measurement": "Employment rates for formerly incarcerated individuals, callback rates for applicants with records"
+    },
+    {
+      "id": "ban_the_box_policy",
+      "label": "Ban the Box Policy",
+      "position": {"x": 400, "y": 200},
+      "type": "variable",
+      "description": "Fair-chance hiring laws that prohibit employers from asking about criminal history on initial job applications",
+      "examples": ["Removing criminal history checkbox", "Delaying background checks", "Fair chance hiring ordinances", "State and local BTB laws"],
+      "measurement": "Number of jurisdictions with BTB policies, employer compliance rates"
+    },
+    {
+      "id": "reduced_screening",
+      "label": "Reduced Criminal History Screening",
+      "position": {"x": 700, "y": 200},
+      "type": "outcome",
+      "description": "Immediate elimination of explicit criminal history questions from job applications and early hiring stages",
+      "examples": ["Higher application rates from people with records", "Increased callback rates", "More interviews for people with criminal history"],
+      "measurement": "Application and callback rates for people with criminal records"
+    },
+    {
+      "id": "statistical_discrimination",
+      "label": "Statistical Discrimination",
+      "position": {"x": 700, "y": 400},
+      "type": "variable",
+      "description": "Employers using demographic characteristics as proxies for criminal history when explicit information is unavailable",
+      "examples": ["Race-based assumptions about criminal history", "Age and skill-level stereotyping", "Neighborhood-based discrimination"],
+      "measurement": "Callback rate disparities by race, employer surveys on hiring assumptions"
+    },
+    {
+      "id": "racial_profiling",
+      "label": "Increased Racial Profiling in Hiring",
+      "position": {"x": 1000, "y": 400},
+      "type": "variable",
+      "description": "Employers systematically avoiding young men of color based on assumptions about criminal history",
+      "examples": ["45% callback gap vs. 7% pre-policy", "Employers assuming 50%+ of Black applicants have records", "Disproportionate screening of minority candidates"],
+      "measurement": "Racial callback rate disparities, audit study results, hiring pattern analysis"
+    },
+    {
+      "id": "worse_minority_employment",
+      "label": "Worse Employment Outcomes for Minorities",
+      "position": {"x": 1000, "y": 600},
+      "type": "outcome",
+      "description": "Significantly reduced employment opportunities for young men of color, including those without criminal records",
+      "examples": ["5.1% decrease for young Black men", "2.9% decrease for young Hispanic men", "Penalties for minorities without records"],
+      "measurement": "Employment rate changes by demographic group, longitudinal employment data"
+    },
+    {
+      "id": "sophisticated_barriers",
+      "label": "More Sophisticated Screening Barriers",
+      "position": {"x": 400, "y": 600},
+      "type": "variable",
+      "description": "Development of indirect methods to screen out suspected ex-offenders while maintaining legal compliance",
+      "examples": ["Extensive background information requirements", "Informal screening practices", "Geographic or network-based exclusions"],
+      "measurement": "Employer screening practice changes, alternative barrier implementation"
+    },
+    {
+      "id": "employer_bias",
+      "label": "Underlying Employer Bias",
+      "position": {"x": 100, "y": 500},
+      "type": "condition",
+      "description": "Fundamental racial bias and stereotypes about criminality that drive discriminatory hiring practices",
+      "examples": ["Racial stereotypes about crime", "Implicit bias in hiring", "Statistical discrimination mindset"],
+      "measurement": "Implicit bias tests, employer attitude surveys, discrimination complaint rates"
+    },
+    {
+      "id": "policy_credibility",
+      "label": "Criminal Justice Reform Credibility",
+      "position": {"x": 100, "y": 700},
+      "type": "variable",
+      "description": "Public and policymaker confidence in evidence-based criminal justice reform approaches",
+      "examples": ["Support for second-chance policies", "Research-based policy making", "Reform advocacy effectiveness"],
+      "measurement": "Policy adoption rates, public opinion polls, legislative support"
+    }
+  ],
+  "edges": [
+    {
+      "id": "barriers_to_policy",
+      "source": "employment_barriers",
+      "target": "ban_the_box_policy",
+      "polarity": "positive",
+      "description": "Employment barriers for people with records drive adoption of Ban the Box policies",
+      "strength": "strong"
+    },
+    {
+      "id": "policy_to_screening",
+      "source": "ban_the_box_policy",
+      "target": "reduced_screening",
+      "polarity": "positive",
+      "description": "Ban the Box policies directly reduce explicit criminal history screening",
+      "strength": "strong"
+    },
+    {
+      "id": "screening_to_discrimination",
+      "source": "reduced_screening",
+      "target": "statistical_discrimination",
+      "polarity": "positive",
+      "description": "Reduced explicit screening leads employers to use demographic proxies for criminal history",
+      "strength": "strong",
+      "delay": {
+        "present": true,
+        "duration": "6-18 months",
+        "description": "Employers gradually adapt their screening practices after policy implementation"
+      }
+    },
+    {
+      "id": "discrimination_to_profiling",
+      "source": "statistical_discrimination",
+      "target": "racial_profiling",
+      "polarity": "positive",
+      "description": "Statistical discrimination manifests as systematic racial profiling in hiring decisions",
+      "strength": "strong"
+    },
+    {
+      "id": "profiling_to_worse_outcomes",
+      "source": "racial_profiling",
+      "target": "worse_minority_employment",
+      "polarity": "positive",
+      "description": "Increased racial profiling directly worsens employment outcomes for minorities",
+      "strength": "strong"
+    },
+    {
+      "id": "worse_outcomes_to_barriers",
+      "source": "worse_minority_employment",
+      "target": "sophisticated_barriers",
+      "polarity": "positive",
+      "description": "Poor outcomes drive development of more sophisticated screening methods",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "1-3 years",
+        "description": "Employers develop new screening practices in response to policy constraints"
+      }
+    },
+    {
+      "id": "sophisticated_to_employment_barriers",
+      "source": "sophisticated_barriers",
+      "target": "employment_barriers",
+      "polarity": "positive",
+      "description": "More sophisticated barriers recreate employment obstacles for people with records",
+      "strength": "strong"
+    },
+    {
+      "id": "bias_enables_discrimination",
+      "source": "employer_bias",
+      "target": "statistical_discrimination",
+      "polarity": "positive",
+      "description": "Underlying racial bias enables and drives statistical discrimination practices",
+      "strength": "strong"
+    },
+    {
+      "id": "bias_drives_barriers",
+      "source": "employer_bias",
+      "target": "employment_barriers",
+      "polarity": "positive",
+      "description": "Employer bias is a fundamental driver of employment barriers for minorities and ex-offenders",
+      "strength": "strong"
+    },
+    {
+      "id": "worse_outcomes_hurt_credibility",
+      "source": "worse_minority_employment",
+      "target": "policy_credibility",
+      "polarity": "negative",
+      "description": "Poor outcomes for minorities undermine confidence in criminal justice reform policies",
+      "strength": "moderate",
+      "delay": {
+        "present": true,
+        "duration": "2-5 years",
+        "description": "Research documenting negative effects takes time to influence policy opinion"
+      }
+    },
+    {
+      "id": "credibility_affects_policy",
+      "source": "policy_credibility",
+      "target": "ban_the_box_policy",
+      "polarity": "positive",
+      "description": "Reform credibility influences continued support for and expansion of BTB policies",
+      "strength": "moderate"
+    }
+  ],
+  "loops": [
+    {
+      "id": "quick_fix_loop",
+      "type": "balancing",
+      "path": ["employment_barriers", "ban_the_box_policy", "reduced_screening"],
+      "label": "Quick Fix Loop",
+      "description": "The initial balancing loop where Ban the Box policies reduce explicit criminal history screening barriers",
+      "behavior_pattern": "Temporary reduction in employment barriers through policy intervention",
+      "dominance_conditions": "Dominant in the short term (0-2 years) when policy implementation is fresh",
+      "position": {"x": 550, "y": 150},
+      "is_primary": false
+    },
+    {
+      "id": "unintended_consequences_loop",
+      "type": "reinforcing",
+      "path": ["ban_the_box_policy", "reduced_screening", "statistical_discrimination", "racial_profiling", "worse_minority_employment", "sophisticated_barriers", "employment_barriers"],
+      "label": "Unintended Consequences Loop",
+      "description": "The reinforcing loop where BTB policies create statistical discrimination that worsens employment outcomes and generates new barriers",
+      "behavior_pattern": "Escalating discrimination and employment barriers through statistical profiling",
+      "dominance_conditions": "Becomes dominant after 1-3 years as employers adapt and research reveals negative effects",
+      "position": {"x": 700, "y": 500},
+      "is_primary": true
+    },
+    {
+      "id": "bias_amplification_loop",
+      "type": "reinforcing",
+      "path": ["employer_bias", "statistical_discrimination", "racial_profiling", "worse_minority_employment", "employment_barriers"],
+      "label": "Bias Amplification Loop",
+      "description": "Underlying bias drives discrimination that creates worse outcomes, reinforcing employment barriers",
+      "behavior_pattern": "Systemic bias creates self-reinforcing cycles of discrimination",
+      "dominance_conditions": "Operates continuously but becomes more visible when explicit information is removed",
+      "position": {"x": 400, "y": 450},
+      "is_primary": false
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "address_bias_directly",
+      "target_type": "node",
+      "target_id": "employer_bias",
+      "leverage_level": 9,
+      "title": "Address Underlying Racial Bias in Hiring",
+      "description": "Target the root cause of discrimination by directly addressing employer bias rather than just removing information",
+      "intervention_strategies": [
+        "Comprehensive anti-discrimination enforcement and auditing",
+        "Skills-based hiring practices that focus on job-relevant qualifications",
+        "Implicit bias training for hiring managers and recruiters",
+        "Structured interview processes that reduce subjective judgment"
+      ],
+      "expected_impact": "Reduces both explicit and statistical discrimination by addressing the fundamental bias driving both",
+      "difficulty": "very-high",
+      "examples": [
+        "Regular employment discrimination audits and enforcement",
+        "Blind resume screening processes",
+        "Objective skills testing and assessment"
+      ]
+    },
+    {
+      "id": "graduated_disclosure",
+      "target_type": "edge",
+      "target_id": "policy_to_screening",
+      "leverage_level": 6,
+      "title": "Implement Graduated Background Check Policies",
+      "description": "Rather than banning information entirely, create policies that consider job relevance, time elapsed, and rehabilitation",
+      "intervention_strategies": [
+        "Job-relevant criminal history screening that considers offense type and role requirements",
+        "Time-based policies that limit consideration of old offenses",
+        "Individualized assessment processes rather than blanket exclusions",
+        "Clear rehabilitation and mitigation factors in hiring decisions"
+      ],
+      "expected_impact": "Provides employers with legitimate information while protecting against discrimination",
+      "difficulty": "moderate",
+      "examples": [
+        "EEOC guidance on job-relevant criminal history screening",
+        "Clean slate policies that automatically seal old records",
+        "Industry-specific guidelines for background check relevance"
+      ]
+    },
+    {
+      "id": "break_reinforcing_loop",
+      "target_type": "edge",
+      "target_id": "worse_outcomes_to_barriers",
+      "leverage_level": 5,
+      "title": "Monitor and Intervene on Discriminatory Outcomes",
+      "description": "Actively track employment outcomes by race and intervene when policies create discriminatory effects",
+      "intervention_strategies": [
+        "Regular data collection on hiring outcomes by demographic group",
+        "Rapid policy adjustment when discrimination increases",
+        "Economic incentives for employers who hire people with records",
+        "Community-based job placement and support programs"
+      ],
+      "expected_impact": "Prevents the reinforcing cycle by catching and correcting discriminatory effects quickly",
+      "difficulty": "moderate",
+      "examples": [
+        "Employment discrimination monitoring dashboards",
+        "Tax credits for employers hiring people with records",
+        "Rapid policy modification based on outcome data"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "continue_current_approach",
+      "title": "Continue Current Ban the Box Implementation",
+      "description": "Maintain current BTB policies without addressing underlying bias or monitoring discriminatory outcomes",
+      "changes": [
+        {
+          "target_type": "edge",
+          "target_id": "policy_to_screening",
+          "change_description": "BTB policies continue to remove criminal history information without addressing statistical discrimination"
+        }
+      ],
+      "predicted_outcomes": "Continued increase in racial discrimination, worsening employment outcomes for minorities, and erosion of support for criminal justice reform"
+    },
+    {
+      "id": "comprehensive_reform",
+      "title": "Implement Comprehensive Anti-Discrimination Reform",
+      "description": "Combine BTB with robust anti-discrimination enforcement, bias training, and outcome monitoring",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "employer_bias",
+          "change_description": "Systematic efforts to reduce employer bias through training, enforcement, and accountability"
+        },
+        {
+          "target_type": "node",
+          "target_id": "statistical_discrimination",
+          "change_description": "Active monitoring and intervention to prevent statistical discrimination"
+        }
+      ],
+      "predicted_outcomes": "Reduced overall discrimination, improved employment outcomes for all groups, successful criminal justice reform"
+    },
+    {
+      "id": "policy_reversal",
+      "title": "Repeal Ban the Box Policies",
+      "description": "Return to allowing criminal history questions on applications based on research showing negative effects",
+      "changes": [
+        {
+          "target_type": "node",
+          "target_id": "ban_the_box_policy",
+          "change_description": "BTB policies are repealed, allowing employers to ask about criminal history on applications"
+        }
+      ],
+      "predicted_outcomes": "Return to explicit criminal history discrimination, continued barriers for people with records, missed opportunity to address underlying bias"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "Why did removing the criminal history question increase rather than decrease discrimination?",
+      "How do delays in this system make it difficult to recognize the policy's negative effects?",
+      "What's the difference between explicit discrimination and statistical discrimination?",
+      "How might addressing employer bias directly be more effective than removing information?",
+      "What role do research studies play in revealing unintended consequences of well-intentioned policies?",
+      "How could policymakers have anticipated and prevented these negative outcomes?"
+    ],
+    "key_insights": [
+      "Addressing symptoms rather than root causes can make problems worse",
+      "Removing information often leads people to substitute less accurate proxies",
+      "Well-intentioned policies can harm their intended beneficiaries through unintended pathways",
+      "System delays can mask harmful consequences until significant damage is done",
+      "Statistical discrimination can be worse than explicit discrimination because it's harder to detect and combat"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Removing discriminatory information automatically reduces discrimination",
+        "correction": "When legitimate information is removed, people often substitute with biased assumptions that can increase discrimination"
+      },
+      {
+        "misconception": "The problem with Ban the Box is that it helps people with criminal records",
+        "correction": "The main problem is that it increases discrimination against minorities without criminal records by encouraging racial profiling"
+      },
+      {
+        "misconception": "These studies prove that criminal justice reform doesn't work",
+        "correction": "The studies show that addressing symptoms without addressing root causes can backfire - comprehensive reform addressing bias directly may be more effective"
+      }
+    ],
+    "extension_activities": [
+      "Research employment discrimination audit studies to understand how statistical discrimination is measured",
+      "Compare Ban the Box outcomes with other information-limiting policies like credit check bans",
+      "Design alternative criminal justice employment policies that address bias while providing relevant information",
+      "Interview local employers about their hiring practices and attitudes toward people with criminal records"
+    ],
+    "related_concepts": [
+      "Statistical Discrimination",
+      "Information Asymmetries",
+      "Implicit Bias",
+      "Policy Evaluation",
+      "Criminal Justice Reform"
+    ]
+  }
+}
