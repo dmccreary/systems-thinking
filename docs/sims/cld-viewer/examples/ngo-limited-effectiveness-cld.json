@@ -31,7 +31,7 @@
     },
     {
       "id": "ngo_intervention",
-      "label": "NGO Intervention",
+      "label": "NGO\nIntervention",
       "position": {"x": 500, "y": 200},
       "type": "variable",
       "description": "External NGO programs and services designed to address immediate population needs",
