@@ -99,7 +99,8 @@ function initializeNetwork() {
             font: {
                 size: 48,
                 strokeWidth: 3,
-                strokeColor: 'white'
+                strokeColor: 'white',
+                align: 'middle'
             }
         }
     };
@@ -140,7 +141,14 @@ function loadCLD(data) {
                 label: edge.polarity === 'positive' ? '+' : '-',
                 color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
                 title: edge.description || `${edge.polarity === 'positive' ? 'Positive (+)' : 'Negative (-)'} relationship from ${edge.source} to ${edge.target}`,
-                originalData: edge
+                originalData: edge,
+            // Ensure the label appears in the middle of the edge, not at the arrow
+                font: {
+                    size: 48,
+                    strokeWidth: 2,
+                    strokeColor: 'white',
+                    align: 'middle'
+                },
             };
 
             // Add custom curve direction if specified
