@@ -1,7 +1,17 @@
+---
+title: The Fixes That Fail Systems Thinking Archetype
+description: A positive intent can often lead to negative outcomes when stakeholders don't understand systems.
+image: /archetypes/fixes-that-fail/fixes-that-fail.png
+og:image: /archetypes/fixes-that-fail/fixes-that-fail.png
+twitter:image: /archetypes/fixes-that-fail/fixes-that-fail.png
+social:
+   cards: false
+---
 # Fixes that Fail
 
 <iframe src="../../sims/cld-viewer/main.html?file=fixes-that-fail-cld.json" height=400 scrolling="no"> </iframe>
 
+*A positive intent can often lead to negative outcomes when stakeholders don't understand systems."
 
 The **Fixes that Fail** is one of the best ways to understand how
 systems thinking can help us understand the long-term consequences
