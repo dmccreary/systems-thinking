@@ -99,8 +99,7 @@ function initializeNetwork() {
             font: {
                 size: 48,
                 strokeWidth: 3,
-                strokeColor: 'white',
-                align: 'middle'
+                strokeColor: 'white'
             }
         }
     };
@@ -142,12 +141,11 @@ function loadCLD(data) {
                 color: edge.polarity === 'positive' ? '#28a745' : '#dc3545',
                 title: edge.description || `${edge.polarity === 'positive' ? 'Positive (+)' : 'Negative (-)'} relationship from ${edge.source} to ${edge.target}`,
                 originalData: edge,
-            // Ensure the label appears in the middle of the edge, not at the arrow
+            // Font configuration for edge labels
                 font: {
                     size: 48,
                     strokeWidth: 2,
-                    strokeColor: 'white',
-                    align: 'middle'
+                    strokeColor: 'white'
                 },
             };
 
