@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Label Placement Test</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        #network {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #e9ecef;
+            background: white;
+            margin: 20px auto;
+        }
+        
+        .info {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #495057;
+        }
+        
+        .description {
+            margin-bottom: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>Edge Label Placement Test</h1>
+        <div class="description">
+            This is a vis-network.js 10.0.1 test case showing the edge label placement issue in vis-network.js.
+            There are two nodes ("Bank" and "Bank Balance") with two clockwise curved edges between them,
+            each labeled with "+". The issue is that labels may not appear in the center of the curved edges.
+        </div>
+        <a href="edge-label-test.html">Go to fix</a>
+    </div>
+    
+    <div id="network"></div>
+    
+
+    <script>
+        // Create nodes
+        const nodes = new vis.DataSet([
+            {
+                id: 'bank',
+                label: 'Bank',
+                x: 200,
+                y: 200,
+                shape: 'box',
+                borderWidth: 2,
+            },
+            {
+                id: 'bank_balance',
+                label: 'Bank Balance',
+                x: 600,
+                y: 200,
+                shape: 'box',
+            }
+        ]);
+
+        // Create edges with clockwise curves
+        const edges = new vis.DataSet([
+            {
+                id: 'edge1',
+                from: 'bank',
+                to: 'bank_balance',
+                label: '+',
+                color: '#28a745',
+                width: 2,
+                smooth: {
+                    type: 'curvedCW',
+                    roundness: 0.3
+                },
+                font: {
+                    size: 48,
+                    strokeWidth: 3,
+                    strokeColor: 'white',
+                    align: 'middle'
+                },
+                arrows: {
+                    to: { enabled: true, scaleFactor: 1.2 }
+                }
+            },
+            {
+                id: 'edge2',
+                from: 'bank_balance',
+                to: 'bank',
+                label: '+',
+                color: '#28a745',
+                width: 2,
+                smooth: {
+                    type: 'curvedCW',
+                    roundness: 0.3
+                },
+                font: {
+                    size: 48,
+                    strokeWidth: 3,
+                    strokeColor: 'white',
+                    align: 'middle' // adding this to the second edge makes the edge label disappear
+                },
+                arrows: {
+                    to: { enabled: true, scaleFactor: 1.2 }
+                }
+            }
+        ]);
+
+        // Network options
+        const options = {
+            layout: {
+                improvedLayout: false
+            },
+            physics: {
+                enabled: false
+            },
+            interaction: {
+                selectConnectedEdges: false
+            }
+        };
+
+        // Create network
+        const container = document.getElementById('network');
+        const data = { nodes: nodes, edges: edges };
+        const network = new vis.Network(container, data, options);
+
+        // Add vis-network version info
+        const versionInfo = document.createElement('div');
+        versionInfo.style.cssText = 'position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-family: monospace;';
+        versionInfo.textContent = 'vis-network loading...';
+        document.body.appendChild(versionInfo);
+        
+        // Fetch version from package.json
+        fetch('https://unpkg.com/vis-network/package.json')
+            .then(response => response.json())
+            .then(packageData => {
+                versionInfo.textContent = `vis-network ${packageData.version}`;
+            })
+            .catch(error => {
+                console.error('Failed to fetch version:', error);
+                versionInfo.textContent = 'version unknown from the unpkg.com vis-network package.json';
+            });
+
+        // Fit the view to show all nodes
+        network.fit({
+            animation: { duration: 500, easingFunction: "easeInOutQuad" }
+        });
+    </script>
+</body>
+</html>
