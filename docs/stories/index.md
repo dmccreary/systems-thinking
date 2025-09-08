@@ -25,13 +25,13 @@ sometimes being smart individually can make us all collectively stupid.
 
 [Read the Tragedy of the Commons Story](./tragedy-of-the-commons/index.md)
 
-## The Amazing Fish Tank Adventure: A Systems Story for Grade School Students
+## The Fish Tank Adventure: A Systems Story for Grade School Students
 
 ![](./fish-tank/cover.png){width=400}
 
 This graphic novel that teaches fundamental systems thinking concepts through the story of Sunny, Bubbles, and Rainbow - three fish living in a first-grade classroom aquarium. When well-meaning student Tommy gives the fish too much food, the balanced ecosystem becomes cloudy and unhealthy, demonstrating how small changes can disrupt entire systems. Through teamwork and understanding, Ms. Garcia's class learns to restore balance by addressing root causes rather than symptoms, discovering how every part of their underwater neighborhood - fish, plants, water, and tiny helpful bacteria - works together in a circle of mutual support. Perfect for introducing young learners to concepts like feedback loops, unintended consequences, and the interconnectedness of living systems through an engaging story they can see, touch, and relate to in their own classroom.
 
-[Read the Amazing Fish Tank Adventure](./index.md)
+[Read the Fish Tank Adventure](./fish-story/index.md)
 
 ## Moore's Law
 The Geek Who Accidentally Predicted the Future

@@ -1,5 +1,5 @@
 ---
-title: The Amazing Fish Tank Adventure: A Story About Balance
+title: The Fish Tank Adventure - A Story About Balance
 description: A graphic novel story for grade school students about how a fish tank needs balance for the fish to be happy.
 image: /stories/fish-tank/cover.png
 og:image: /stories/fish-tank/cover.png
@@ -7,7 +7,7 @@ twitter:image: /stories/fish-tank/cover.png
 social:
    cards: false
 ---
-# The Amazing Fish Tank Adventure: A Story About Balance
+# The Fish Tank Adventure: A Story About Balance
 
 ## Panel 1: Meet Our Classroom Friend
 
