@@ -10,6 +10,7 @@ nav:
   - Home: index.md
   - About this Website: about.md
   - Table of Contents: table-of-contents.md
+  
   - Chapters:
     - Foundations: chapters/ch-01-foundations/index.md
     - The AI Flywheel: chapters/ch-02-ai-flywheel/index.md
@@ -24,6 +25,7 @@ nav:
     - Busting Silos: chapters/ch-11-busting-silos/index.md
     - Emergence: chapters/ch-13-emergence.md
     - Complex Adaptive Systems: chapters/ch-14-cas.md
+  
   - Appendix A - Causal Loop Diagrams:
     - Introduction: clds/index.md
     - Vis Tutorial: clds/vis-tutorial/index.md
@@ -35,6 +37,7 @@ nav:
     - Image Test: clds/image-test/index.md
     - Curve Direction Test: clds/curve-direction-test/index.md
     - Misinformation: clds/misinformation/index.md
+    - ReactFlow: clds/reactflow/index.md
     # - Render Tests:
     #  - render-tests/mermaid-test.md
     #  - render-tests/state-diagram.md
