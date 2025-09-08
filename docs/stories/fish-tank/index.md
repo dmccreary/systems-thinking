@@ -8,6 +8,7 @@ social:
    cards: false
 ---
 # The Fish Tank Adventure: A Story About Balance
+![Cover Page](cover.png)
 
 ## Panel 1: Meet Our Classroom Friend
 
