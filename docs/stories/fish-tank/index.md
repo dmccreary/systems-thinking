@@ -1,8 +1,8 @@
-# The Amazing Fish Tank Adventure: A Systems Story for First Graders
+# The Amazing Fish Tank Adventure: A Story About Balance
 
 ## Panel 1: Meet Our Classroom Friend
 
-![](./image-01.png)
+![](./image-01.jpg)
 <details>
 <summary>Meet Our Classroom Friends</summary>
 Panel 1:
@@ -15,7 +15,7 @@ Welcome to Mrs. Garcia's first-grade classroom! Meet our special underwater frie
 
 ## Panel 2: The Circle of Tank Friends
 
-![](./image-02.png)
+![](./image-02.jpg)
 <details>
 <summary>The Circle of Tank Friends</summary>
 Panel 2:
@@ -27,7 +27,7 @@ In this panel, we see a close-up view inside the fish tank showing the three fis
 Look closely at our fish tank! It's like a circle of friends where everyone has a special job. The fish breathe and swim around, making tiny bits of waste. The green plants are like underwater trees that clean the water and make fresh air for the fish. There are also tiny helpers called bacteria - so small you can't see them - that eat up the yucky stuff and keep everything clean. It's just like how you help your friends and they help you back!
 
 ## Panel 3: Feeding Time Goes Wrong
-![](./image-03.png)
+![](./image-03.jpg)
 <details>
 <summary>Feeding Time Goes Wrong</summary>
 Panel 3:
@@ -39,7 +39,7 @@ In this panel, we see a well-meaning student named Tommy enthusiastically pourin
 Oh no! Tommy wants to be extra nice to our fish friends, so he gives them lots and lots of food. He thinks more food means happier fish - just like how you might want extra cookies! But fish are different from people. They only need a tiny pinch of food, about the size of their eye. When there's too much food, it's like having a huge pile of sandwiches in your bedroom that you can't finish. The extra food starts to make the water messy and cloudy.
 
 ## Panel 4: The Water Gets Cloudy
-![](./image-04.png)
+![](./image-04.jpg)
 <details>
 <summary>The Water Gets Cloudy</summary>
 Panel 4:
@@ -51,7 +51,7 @@ In this panel, the fish tank water has become noticeably cloudy and murky. The t
 A few days later, something's not right in our fish tank! The water looks like chocolate milk instead of clear water. Our fish friends Sunny, Bubbles, and Rainbow are swimming very slowly and staying at the bottom. They look sad and tired. Even the green plants that usually stand up tall are drooping down like they're sleepy. All that extra food has made the water dirty, and now it's hard for everyone to breathe and stay healthy. It's like trying to breathe in a dusty room!
 
 ## Panel 5: Understanding What Went Wrong
-![](./image-05.png)
+![](./image-05.jpg)
 <details>
 <summary>Understanding What Went Wrong</summary>
 Panel 5:
@@ -63,7 +63,7 @@ In this panel, Ms. Garcia kneels down to the students' eye level next to the clo
 Ms. Garcia gathers everyone around to solve the mystery of our sad fish tank. She explains that when we put too much food in the tank, it's like the whole tank gets a tummy ache! The extra food that the fish can't eat starts to rot, just like when an apple gets old and brown. This makes the water dirty and hard to breathe in. The plants can't do their job of cleaning the water when there's too much mess. It's like trying to clean your room when there are toys everywhere - it's just too hard!
 
 ## Panel 6: The Rescue Mission Begins
-![](./image-06.png)
+![](./image-06.jpg)
 <details>
 <summary>The Rescue Mission Begins</summary>
 Panel 6:
@@ -75,7 +75,7 @@ In this panel, Ms. Garcia and the students are working together to help the fish
 Time for a fish tank rescue mission! Ms. Garcia and all the students become fish tank heroes. They carefully clean out all the extra food that's making the water yucky. It's like cleaning up spilled cereal from the floor so the kitchen can be nice again. They gently take out some of the dirty water and add fresh, clean water that's just the right temperature - not too hot and not too cold, just like a perfect bath for the fish. Everyone works together as a team to help their underwater friends.
 
 ## Panel 7: Learning the Right Amount
-![](./image-07.png)
+![](./image-07.jpg)
 <details>
 <summary>Learning the Right Amount</summary>
 Panel 7:
@@ -87,7 +87,7 @@ In this panel, Ms. Garcia is teaching the students about proper feeding. She hol
 Now comes the most important lesson! Ms. Garcia shows everyone how much food fish really need. She holds up a tiny pinch between her fingers - it's smaller than a pea! She explains that fish stomachs are tiny, about the size of their eye. Feeding them too much is like trying to eat a whole pizza when you only want one slice. Tommy learns that loving our fish means giving them just the right amount, not too much. Sometimes taking good care of someone means knowing when to stop, not when to give more.
 
 ## Panel 8: Adding More Plant Helpers
-![](./image-08.png)
+![](./image-08.jpg)
 <details>
 <summary>Adding More Plant Helpers</summary>
 Panel 8:
@@ -99,7 +99,7 @@ In this panel, Ms. Garcia and the students are gently adding more aquatic plants
 To help the tank get better faster, the class adds more green plant friends! These underwater plants are like tiny trees that work all day and night to clean the water and make fresh air for the fish. Just like how trees in the park help make the air fresh for us to breathe, these plants do the same job underwater. The more plant helpers they have, the cleaner and healthier the water becomes. It's like having more friends to help clean up the classroom - many hands make light work!
 
 ## Panel 9: Balance Returns
-![](./image-09.png)
+![](./image-09.jpg)
 <details>
 <summary>Balance Returns</summary>
 Panel 9:
@@ -111,7 +111,7 @@ In this panel, the fish tank looks beautiful and healthy again. The water is cry
 What a wonderful change! After a few days of careful care, the fish tank looks amazing again. The water is clear like a window, the plants stand up tall and green, and best of all - Sunny, Bubbles, and Rainbow are swimming all around their home! Their colors are bright again, and they're moving like they're dancing underwater. The tiny plant helpers are working perfectly, making bubbles of fresh air for the fish. Everything is balanced again, just like a perfectly organized classroom where everyone knows their job.
 
 ## Panel 10: The Happy Ecosystem
-![](./image-10.png)
+![](./image-10.jpg)
 <details>
 <summary>The Happy Ecosystem</summary>
 Panel 10:
@@ -158,3 +158,7 @@ These resources provide first-grade teachers with both theoretical understanding
 
 !!! Note
     We have verified that these links all work on September 8th, 2024.  
+
+## Prompt Example
+
+[First Grade Prompt Example](../../prompts/first-grade/fish-tank.md)

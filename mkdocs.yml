@@ -208,6 +208,7 @@ nav:
   - Stories:
     - List of Stories: stories/index.md
     - Tragedy of the Commons: stories/tragedy-of-the-commons/index.md
+    - Fish Tank Adventure: stories/fish-tank/index.md
     - Moore's Law: stories/moores-law/index.md
     - Death of Gopher: stories/death-of-gopher/index.md
     - Metcalfe's Law: stories/metcalfes-law/index.md
