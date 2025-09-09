@@ -1,5 +1,7 @@
 # The Matthew Effect - The Music Streaming War
 
+![](./cover.jpg)
+
 *How Small Advantages Snowball into Massive Success*
 
 ## Chapter 1: The Dream
@@ -7,7 +9,7 @@
 ![](./image-01.png)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 1:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -24,10 +26,10 @@ Both teens were brilliant. Both were passionate about music and technology. But 
 
 ## Chapter 2: The First Advantage
 
-![](./image-02.png)
+![](./image-02.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 2:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -44,10 +46,10 @@ Alex built his app, "VibeStream," using professional development software and be
 
 ## Chapter 3: The Network Effect Begins
 
-![](./image-03.png)
+![](./image-03.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 3:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -64,10 +66,10 @@ Maya used her scholarship money to buy a better computer and taught herself adva
 **The Matthew Effect Accelerates:** Alex's initial success attracted more resources, attention, and opportunities. This is the core of the Matthew Effect - success breeds more success through what systems thinkers call "reinforcing feedback loops." Each advantage Alex gained made it easier to gain the next advantage.
 
 ## Chapter 4: The Momentum Builds
-![](./image-04.png)
+![](./image-04.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 4:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -84,10 +86,10 @@ Maya's app had 500 loyal users, mostly independent artists and their fans. She w
 **Systems Insight:** This illustrates "cumulative advantage" - each success Alex achieved made the next success more likely. His growing user base attracted media attention, which attracted investors, which provided resources for faster growth, which attracted more media attention. Maya was caught in a different loop - limited resources meant slower growth, which made it harder to attract investment, which kept resources limited.
 
 ## Chapter 5: The Rich Get Richer
-![](./image-05.png)
+![](./image-05.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 5:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel. Make the characters consistent with the prior images
@@ -103,10 +105,10 @@ Maya's MoodTunes had grown to 50,000 users, with a passionate community of indep
 **The Network Effect in Full Swing:** Alex had achieved what economists call "network effects" - his app became more valuable to users as more users joined. This created a "winner-take-all" dynamic where the leading platform attracts users simply because it's the leading platform.
 
 ## Chapter 6: Two Different Endings?
-![](./image-06.png)
+![](./image-06.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 6:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.  Make the characters consistent with the prior images
@@ -121,10 +123,10 @@ Five years later, Alex sold VibeStream to a major tech company for $50 million. 
 Maya became a computer science teacher at an inner-city high school, where she taught students from backgrounds similar to her own. MoodTunes still operated as a small but beloved platform for independent artists. She used her experience to help her students understand both the technical and systemic challenges they would face in tech careers.
 
 ## Chapter 7: Understanding the System
-![](./image-07.png)
+![](./image-07.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 7:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -151,10 +153,10 @@ Here's how it works:
 5. **Winner-Take-All Dynamics:** Eventually, the gap becomes so large that the leading player dominates the entire market
 
 ## Chapter 8: The Matthew Effect Everywhere
-![](./image-08.png)
+![](./image-08.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 8:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -176,10 +178,10 @@ The Matthew Effect isn't limited to tech startups. It operates across many domai
 **Sports:** Young athletes whose families can afford professional coaching, elite clubs, and specialized training camps are more likely to be noticed by college scouts and offered scholarships.
 
 ## Chapter 9: Breaking the Cycle
-![](./image-09.png)
+![](./image-09.jpg)
 
 <details>
-   <summary>Show image prompt<summary>
+   <summary>Show prompt for this panel</summary>
 Panel 9:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -204,10 +206,10 @@ Understanding the Matthew Effect isn't about despair - it's about designing bett
 **Platform Regulation:** Changing the rules of winner-take-all markets to create more space for diverse participants.
 
 ## Chapter 10: Maya's Second Act
-![](./image-10.png)
+![](./image-10.jpg)
 
 <details>
-   <summary><summary>
+   <summary>Show prompt for this panel</summary>
 Panel 10:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
@@ -225,11 +227,11 @@ This time, Maya understood the system she was operating in. She partnered with o
 CodePath grew differently than VibeStream had - not through massive venture capital investments, but through careful community building and strategic partnerships. Maya had learned to work with the Matthew Effect rather than against it, finding ways to create advantages for people who typically didn't have them.
 
 ## Epilogue: The Systems Perspective
-![](./image-01.png)
+![](./image-11.jpg)
 
 <details>
-   <summary><summary>
-Panel 1:
+   <summary>Show prompt for this panel</summary>
+Panel 11:
 Please generate a drawing using a wide-landscape format that has a 16:9 width to height ratio.
 The drawing uses the style of a colorful graphic novel.
 The audience is high-school students.
