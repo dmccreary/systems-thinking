@@ -6,7 +6,7 @@
 
 ## Chapter 1: The Dream
 
-![](./image-01.png)
+![](./image-01.jpg)
 
 <details>
    <summary>Show prompt for this panel</summary>
