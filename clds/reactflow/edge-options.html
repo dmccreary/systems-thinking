@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Dynamics CLD with Controls</title>
+    
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- ReactFlow -->
+    <script src="https://unpkg.com/reactflow@11/dist/umd/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/reactflow@11/dist/style.css">
+    
+    <!-- Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            padding: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: flex;
+            height: 600px;
+        }
+        
+        .diagram-container {
+            flex: 1;
+            position: relative;
+        }
+        
+        .controls-panel {
+            width: 300px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 1px solid #e9ecef;
+            overflow-y: auto;
+        }
+        
+        .control-group {
+            margin-bottom: 20px;
+        }
+        
+        .control-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        
+        .control-group input[type="range"] {
+            width: 100%;
+            margin-bottom: 4px;
+        }
+        
+        .control-group .value {
+            font-size: 12px;
+            color: #6c757d;
+            text-align: right;
+        }
+        
+        .control-group select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .button-group button {
+            flex: 1;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        
+        @media (max-width: 968px) {
+            .main-content {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .controls-panel {
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #e9ecef;
+            }
+            
+            .diagram-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Population Dynamics CLD with Interactive Controls</h1>
+            <p>Explore how visual parameters affect the Causal Loop Diagram representation</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="diagram-container">
+                <div id="react-root" style="width: 100%; height: 100%;"></div>
+            </div>
+            
+            <div class="controls-panel">
+                <h3 style="margin-top: 0; margin-bottom: 20px; color: #495057;">Diagram Controls</h3>
+                
+                <div class="control-group">
+                    <label for="nodeSpacing">Node Spacing</label>
+                    <input type="range" id="nodeSpacing" min="100" max="300" value="150" step="10">
+                    <div class="value" id="nodeSpacingValue">150</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="nodeSize">Node Size</label>
+                    <input type="range" id="nodeSize" min="40" max="100" value="60" step="5">
+                    <div class="value" id="nodeSizeValue">60</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="edgeCurvature">Edge Curvature</label>
+                    <input type="range" id="edgeCurvature" min="0" max="100" value="50" step="5">
+                    <div class="value" id="edgeCurvatureValue">50</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="edgeThickness">Edge Thickness</label>
+                    <input type="range" id="edgeThickness" min="1" max="6" value="3" step="0.5">
+                    <div class="value" id="edgeThicknessValue">3</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="loopSize">Loop Indicator Size</label>
+                    <input type="range" id="loopSize" min="15" max="40" value="25" step="5">
+                    <div class="value" id="loopSizeValue">25</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="showAnimation">Animated Edges</label>
+                    <input type="checkbox" id="showAnimation" style="width: auto; margin-right: 8px;">
+                    <span style="font-size: 14px; color: #6c757d;">Show flow animation</span>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-primary" id="resetView">Reset View</button>
+                    <button class="btn-secondary" id="resetDefaults">Reset to Defaults</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/babel">
+        const { useState, useCallback, useEffect } = React;
+        
+        function waitForReactFlow() {
+            return new Promise((resolve) => {
+                if (window.ReactFlow) {
+                    resolve(window.ReactFlow);
+                    return;
+                }
+                
+                const checkInterval = setInterval(() => {
+                    if (window.ReactFlow) {
+                        clearInterval(checkInterval);
+                        resolve(window.ReactFlow);
+                    }
+                }, 100);
+                
+                setTimeout(() => {
+                    clearInterval(checkInterval);
+                    resolve(null);
+                }, 5000);
+            });
+        }
+        
+        waitForReactFlow().then((ReactFlowLib) => {
+            if (!ReactFlowLib) {
+                console.error('ReactFlow not found!');
+                document.getElementById('react-root').innerHTML = '<div style="padding: 20px; color: red;">ReactFlow library failed to load</div>';
+                return;
+            }
+            
+            const { ReactFlow, MiniMap, Controls, Background, useNodesState, useEdgesState, Handle, Position, BaseEdge, getBezierPath, getSmoothStepPath } = ReactFlowLib;
+
+            // Custom edge that responds to curvature slider
+            const CustomCurvedEdge = ({ 
+                id, 
+                sourceX, 
+                sourceY, 
+                targetX, 
+                targetY, 
+                sourcePosition, 
+                targetPosition, 
+                style = {}, 
+                markerEnd, 
+                label, 
+                labelStyle,
+                data = {}
+            }) => {
+                const curvature = data.curvature || 0;
+                
+                // Calculate control points for bezier curve based on handle positions
+                const midX = (sourceX + targetX) / 2;
+                const midY = (sourceY + targetY) / 2;
+                
+                let curveOffset = 0;
+                if (sourcePosition === Position.Top && targetPosition === Position.Top) {
+                    curveOffset = -curvature;
+                } else if (sourcePosition === Position.Bottom && targetPosition === Position.Bottom) {
+                    curveOffset = curvature;
+                }
+                
+                const path = `M ${sourceX},${sourceY} Q ${midX},${midY + curveOffset} ${targetX},${targetY}`;
+                
+                return (
+                    <>
+                        <BaseEdge path={path} markerEnd={markerEnd} style={style} />
+                        {label && (
+                            <div style={{
+                                position: 'absolute',
+                                transform: `translate(-50%, -50%) translate(${midX}px, ${midY + curveOffset * 0.5}px)`,
+                                ...labelStyle,
+                                borderRadius: '50%',
+                                padding: '4px 8px',
+                                pointerEvents: 'none'
+                            }}>
+                                {label}
+                            </div>
+                        )}
+                    </>
+                );
+            };
+
+            // Node component
+            const CLDNode = ({ data }) => {
+                const size = data.size || 60;
+                
+                return (
+                    <div style={{
+                        background: '#E8F4FD',
+                        border: '2px solid #4A90E2',
+                        borderRadius: '50%',
+                        padding: '10px',
+                        fontSize: `${size / 5}px`,
+                        fontWeight: '300',
+                        textAlign: 'center',
+                        width: `${size}px`,
+                        height: `${size}px`,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                    }}>
+                        <Handle 
+                            type="source" 
+                            position={Position.Top} 
+                            id="top"
+                            style={{ background: '#555', visibility: 'hidden' }} 
+                        />
+                        <Handle 
+                            type="target" 
+                            position={Position.Top} 
+                            id="top-target"
+                            style={{ background: '#555', visibility: 'hidden' }} 
+                        />
+                        <Handle 
+                            type="source" 
+                            position={Position.Bottom} 
+                            id="bottom"
+                            style={{ background: '#555', visibility: 'hidden' }} 
+                        />
+                        <Handle 
+                            type="target" 
+                            position={Position.Bottom} 
+                            id="bottom-target"
+                            style={{ background: '#555', visibility: 'hidden' }} 
+                        />
+                    
+                        <div style={{ fontWeight: 'bold', marginBottom: '2px', fontSize: `${size / 5}px` }}>
+                            {data.label}
+                        </div>
+                        <div style={{ fontSize: `${size / 7}px`, color: '#666', fontStyle: 'italic' }}>
+                            {data.type}
+                        </div>
+                    </div>
+                );
+            };
+
+            // Loop indicator component
+            const LoopIndicator = ({ data }) => {
+                const isReinforcing = data.loopType === 'reinforcing';
+                const size = data.size || 25;
+                
+                return (
+                    <div style={{
+                        background: isReinforcing ? '#dc3545' : '#28a745',
+                        color: 'white',
+                        borderRadius: '50%',
+                        width: `${size}px`,
+                        height: `${size}px`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: `${size * 0.6}px`,
+                        fontWeight: 'bold',
+                        border: '2px solid #000',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
+                    }}>
+                        {isReinforcing ? 'R' : 'B'}
+                    </div>
+                );
+            };
+
+            const nodeTypes = {
+                cldNode: CLDNode,
+                loopIndicator: LoopIndicator,
+            };
+            
+            const edgeTypes = {
+                custom: CustomCurvedEdge,
+            };
+
+            function PopulationCLD() {
+                const [nodeSpacing, setNodeSpacing] = useState(150);
+                const [nodeSize, setNodeSize] = useState(60);
+                const [edgeCurvature, setEdgeCurvature] = useState(50);
+                const [edgeThickness, setEdgeThickness] = useState(3);
+                const [loopSize, setLoopSize] = useState(25);
+                const [showAnimation, setShowAnimation] = useState(false);
+                const [reactFlowInstance, setReactFlowInstance] = useState(null);
+                
+                // Generate nodes
+                const generateNodes = useCallback(() => {
+                    const centerX = 300;
+                    const centerY = 300;
+                    
+                    return [
+                        {
+                            id: '1',
+                            type: 'cldNode',
+                            position: { x: centerX - nodeSpacing, y: centerY },
+                            data: { label: 'Births', type: 'flow', size: nodeSize },
+                        },    
+                        {
+                            id: '2',
+                            type: 'cldNode',
+                            position: { x: centerX, y: centerY },
+                            data: { label: 'Population', type: 'stock', size: nodeSize },
+                        },
+                        {
+                            id: '3',
+                            type: 'cldNode',
+                            position: { x: centerX + nodeSpacing, y: centerY },
+                            data: { label: 'Deaths', type: 'flow', size: nodeSize },
+                        },
+                        {
+                            id: 'loop1',
+                            type: 'loopIndicator',
+                            position: { x: centerX - nodeSpacing/2, y: centerY + 30 },
+                            data: { loopType: 'reinforcing', size: loopSize },
+                            draggable: false,
+                        },
+                        {
+                            id: 'loop2',
+                            type: 'loopIndicator',
+                            position: { x: centerX + nodeSpacing/2, y: centerY + 30 },
+                            data: { loopType: 'balancing', size: loopSize },
+                            draggable: false,
+                        },
+                    ];
+                }, [nodeSpacing, nodeSize, loopSize]);
+                
+                // Generate edges
+                const generateEdges = useCallback(() => {
+                    return [
+                        {
+                            id: 'e1',
+                            source: '2',
+                            target: '1',
+                            sourceHandle: 'top',
+                            targetHandle: 'top-target',
+                            type: 'custom',
+                            animated: showAnimation,
+                            style: { stroke: 'green', strokeWidth: edgeThickness },
+                            markerEnd: { type: 'arrowclosed', color: 'green' },
+                            label: '+',
+                            labelStyle: { background: '#28a745', color: 'white', fontWeight: 'bold' },
+                            data: { curvature: edgeCurvature }
+                        },
+                        {
+                            id: 'e2',
+                            source: '1',
+                            target: '2',
+                            sourceHandle: 'bottom',
+                            targetHandle: 'bottom-target',
+                            type: 'custom',
+                            animated: showAnimation,
+                            style: { stroke: 'green', strokeWidth: edgeThickness },
+                            markerEnd: { type: 'arrowclosed', color: 'green' },
+                            label: '+',
+                            labelStyle: { background: '#28a745', color: 'white', fontWeight: 'bold' },
+                            data: { curvature: edgeCurvature }
+                        },
+                        {
+                            id: 'e3',
+                            source: '2',
+                            target: '3',
+                            sourceHandle: 'top',
+                            targetHandle: 'top-target',
+                            type: 'custom',
+                            animated: showAnimation,
+                            style: { stroke: 'green', strokeWidth: edgeThickness },
+                            markerEnd: { type: 'arrowclosed', color: 'green' },
+                            label: '+',
+                            labelStyle: { background: '#28a745', color: 'white', fontWeight: 'bold' },
+                            data: { curvature: edgeCurvature }
+                        },
+                        {
+                            id: 'e4',
+                            source: '3',
+                            target: '2',
+                            sourceHandle: 'bottom',
+                            targetHandle: 'bottom-target',
+                            type: 'custom',
+                            animated: showAnimation,
+                            style: { stroke: 'red', strokeWidth: edgeThickness },
+                            markerEnd: { type: 'arrowclosed', color: 'red' },
+                            label: '−',
+                            labelStyle: { background: '#dc3545', color: 'white', fontWeight: 'bold' },
+                            data: { curvature: edgeCurvature }
+                        },
+                    ];
+                }, [edgeThickness, edgeCurvature, showAnimation]);
+                
+                const [nodes, setNodes, onNodesChange] = useNodesState(generateNodes());
+                const [edges, setEdges, onEdgesChange] = useEdgesState(generateEdges());
+                
+                // Update when settings change
+                useEffect(() => {
+                    setNodes(generateNodes());
+                    setEdges(generateEdges());
+                }, [nodeSpacing, nodeSize, edgeCurvature, edgeThickness, loopSize, showAnimation]);
+                
+                // Control handlers
+                useEffect(() => {
+                    const controls = [
+                        { id: 'nodeSpacing', setter: setNodeSpacing, parser: parseInt },
+                        { id: 'nodeSize', setter: setNodeSize, parser: parseInt },
+                        { id: 'edgeCurvature', setter: setEdgeCurvature, parser: parseInt },
+                        { id: 'edgeThickness', setter: setEdgeThickness, parser: parseFloat },
+                        { id: 'loopSize', setter: setLoopSize, parser: parseInt },
+                    ];
+                    
+                    const handlers = controls.map(({ id, setter, parser }) => {
+                        const input = document.getElementById(id);
+                        const valueDisplay = document.getElementById(id + 'Value');
+                        const handler = (e) => {
+                            const value = parser(e.target.value);
+                            setter(value);
+                            valueDisplay.textContent = value;
+                        };
+                        input.addEventListener('input', handler);
+                        return { input, handler };
+                    });
+                    
+                    const animationInput = document.getElementById('showAnimation');
+                    const animationHandler = (e) => setShowAnimation(e.target.checked);
+                    animationInput.addEventListener('change', animationHandler);
+                    
+                    const resetViewBtn = document.getElementById('resetView');
+                    const resetViewHandler = () => {
+                        if (reactFlowInstance) {
+                            reactFlowInstance.fitView({ padding: 0.1 });
+                        }
+                    };
+                    resetViewBtn.addEventListener('click', resetViewHandler);
+                    
+                    const resetDefaultsBtn = document.getElementById('resetDefaults');
+                    const resetDefaultsHandler = () => {
+                        const defaults = [
+                            { id: 'nodeSpacing', value: 150, setter: setNodeSpacing },
+                            { id: 'nodeSize', value: 60, setter: setNodeSize },
+                            { id: 'edgeCurvature', value: 50, setter: setEdgeCurvature },
+                            { id: 'edgeThickness', value: 3, setter: setEdgeThickness },
+                            { id: 'loopSize', value: 25, setter: setLoopSize },
+                        ];
+                        
+                        defaults.forEach(({ id, value, setter }) => {
+                            setter(value);
+                            document.getElementById(id).value = value;
+                            document.getElementById(id + 'Value').textContent = value;
+                        });
+                        
+                        setShowAnimation(false);
+                        document.getElementById('showAnimation').checked = false;
+                        
+                        if (reactFlowInstance) {
+                            reactFlowInstance.fitView({ padding: 0.1 });
+                        }
+                    };
+                    resetDefaultsBtn.addEventListener('click', resetDefaultsHandler);
+                    
+                    return () => {
+                        handlers.forEach(({ input, handler }) => {
+                            input.removeEventListener('input', handler);
+                        });
+                        animationInput.removeEventListener('change', animationHandler);
+                        resetViewBtn.removeEventListener('click', resetViewHandler);
+                        resetDefaultsBtn.removeEventListener('click', resetDefaultsHandler);
+                    };
+                }, [reactFlowInstance]);
+
+                return (
+                    <ReactFlow
+                        nodes={nodes}
+                        edges={edges}
+                        onNodesChange={onNodesChange}
+                        onEdgesChange={onEdgesChange}
+                        nodeTypes={nodeTypes}
+                        edgeTypes={edgeTypes}
+                        onInit={setReactFlowInstance}
+                        fitView
+                        attributionPosition="bottom-left"
+                    >
+                        <Controls />
+                        <MiniMap />
+                        <Background color="#aaa" gap={16} />
+                    </ReactFlow>
+                );
+            }
+
+            // Render the component
+            ReactDOM.render(<PopulationCLD />, document.getElementById('react-root'));
+        });
+    </script>
+</body>
+</html>

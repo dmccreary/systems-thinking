@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Dynamics Causal Loop Diagram</title>
+    
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- ReactFlow -->
+    <script src="https://unpkg.com/reactflow@11/dist/umd/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/reactflow@11/dist/style.css">
+    
+    <!-- Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            padding: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            padding: 16px 24px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .slider {
+            width: 200px;
+        }
+        
+        .diagram-container {
+            padding: 0;
+        }
+        
+        .footer {
+            padding: 20px 24px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .loop-explanation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 12px;
+        }
+        
+        .loop-item {
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .reinforcing {
+            background-color: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .balancing {
+            background-color: #d1ecf1;
+            border-left-color: #28a745;
+        }
+        
+        @media (max-width: 768px) {
+            .loop-explanation {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Population Dynamics Causal Loop Diagram</h1>
+            <p>Interactive Systems Thinking Visualization using ReactFlow</p>
+        </div>
+        
+        <div class="controls">
+            <div class="slider-container">
+                <label>Edge Smoothness:</label>
+                <input 
+                    type="range" 
+                    id="smoothness-slider" 
+                    class="slider" 
+                    min="0" 
+                    max="1" 
+                    step="0.1" 
+                    value="0.5"
+                />
+                <span id="smoothness-value">0.5</span>
+            </div>
+            <div class="slider-container">
+                <label>Edge Type:</label>
+                <select id="edge-type-select">
+                    <option value="default">Default</option>
+                    <option value="straight">Straight</option>
+                    <option value="step">Step</option>
+                    <option value="smoothstep" selected>Smooth Step</option>
+                    <option value="bezier">Bézier</option>
+                    <option value="simplebezier">Simple Bézier</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="diagram-container">
+            <div id="react-root"></div>
+        </div>
+        
+        <div class="footer">
+            <h3 style="margin: 0 0 12px 0; color: #495057;">Understanding the System</h3>
+            <p style="margin: 0 0 12px 0;">
+                This causal loop diagram illustrates the fundamental dynamics of population systems through two competing feedback loops:
+            </p>
+            
+            <div class="loop-explanation">
+                <div class="loop-item reinforcing">
+                    <strong>Reinforcing Loop (R)</strong><br>
+                    Population → Births → Population<br>
+                    <em>Drives exponential growth when unconstrained</em>
+                </div>
+                
+                <div class="loop-item balancing">
+                    <strong>Balancing Loop (B)</strong><br>
+                    Population → Deaths → Population<br>
+                    <em>Provides natural limits and stability</em>
+                </div>
+            </div>
+            
+            <p style="margin: 12px 0 0 0; font-style: italic;">
+                The interplay between these loops determines whether a population grows exponentially, 
+                reaches equilibrium, or declines over time. This demonstrates key systems thinking principles 
+                including feedback loops, delays, and non-linear behavior.
+            </p>
+        </div>
+    </div>
+
+    <script type="text/babel">
+        const { useState, useCallback, useEffect } = React;
+        
+        // Function to wait for ReactFlow to be available
+        function waitForReactFlow() {
+            return new Promise((resolve) => {
+                if (window.ReactFlow) {
+                    resolve(window.ReactFlow);
+                    return;
+                }
+                
+                const checkInterval = setInterval(() => {
+                    if (window.ReactFlow) {
+                        clearInterval(checkInterval);
+                        resolve(window.ReactFlow);
+                    }
+                }, 100);
+                
+                // Timeout after 5 seconds
+                setTimeout(() => {
+                    clearInterval(checkInterval);
+                    resolve(null);
+                }, 5000);
+            });
+        }
+        
+        // Wait for ReactFlow and then render
+        waitForReactFlow().then((ReactFlowLib) => {
+            if (!ReactFlowLib) {
+                console.error('ReactFlow not found!');
+                document.getElementById('react-root').innerHTML = '<div style="padding: 20px; color: red;">ReactFlow library failed to load</div>';
+                return;
+            }
+            
+            const { ReactFlow, MiniMap, Controls, Background, useNodesState, useEdgesState, Handle, Position } = ReactFlowLib;
+
+        // Custom node component for CLD circles
+        const CLDNode = ({ data }) => {
+            return (
+                <div style={{
+                    background: '#E8F4FD',
+                    border: '2px solid #4A90E2',
+                    borderRadius: '50%',
+                    padding: '10px',
+                    fontSize: '12px',
+                    fontWeight: '300',
+                    textAlign: 'center',
+                    width: '50px',
+                    height: '50px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                }}>
+                <Handle 
+                    type="source" 
+                    position={Position.Top} 
+                    id="top"
+                    style={{ background: '#555' }} 
+                />
+                <Handle 
+                    type="target" 
+                    position={Position.Top} 
+                    id="top-target"
+                    style={{ background: '#555' }} 
+                />
+                <Handle 
+                    type="source" 
+                    position={Position.Bottom} 
+                    id="bottom"
+                    style={{ background: '#555' }} 
+                />
+                <Handle 
+                    type="target" 
+                    position={Position.Bottom} 
+                    id="bottom-target"
+                    style={{ background: '#555' }} 
+                />
+            
+                    <div style={{ fontWeight: 'bold', marginBottom: '2px', fontSize: '11px' }}>
+                        {data.label}
+                    </div>
+                    <div style={{ fontSize: '8px', color: '#666', fontStyle: 'italic' }}>
+                        {data.type}
+                    </div>
+                </div>
+            );
+        };
+
+        // Custom loop indicator component
+        const LoopIndicator = ({ data }) => {
+            const isReinforcing = data.loopType === 'reinforcing';
+            
+            return (
+                <div style={{
+                    background: isReinforcing ? '#dc3545' : '#28a745',
+                    color: 'white',
+                    borderRadius: '50%',
+                    width: '20px',
+                    height: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                    border: '2px solid #000',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
+                }}>
+                
+                    {isReinforcing ? 'R' : 'B'}
+                </div>
+                
+            );
+        };
+
+        const nodeTypes = {
+            cldNode: CLDNode,
+            loopIndicator: LoopIndicator,
+        };
+
+        const initialNodes = [
+            {
+                id: '1',
+                type: 'cldNode',
+                position: { x: 100, y: 300 },
+                data: { 
+                    label: 'Births',
+                    type: 'flow'
+                },
+            },    
+            {
+                id: '2',
+                type: 'cldNode',
+                position: { x: 250, y: 300 },
+                data: { 
+                    label: 'Population',
+                    type: 'stock'
+                },
+            },
+            
+            {
+                id: '3',
+                type: 'cldNode',
+                position: { x: 400, y: 300 },
+                data: { 
+                    label: 'Deaths',
+                    type: 'flow'
+                },
+            },
+            // Loop indicators
+            {
+                id: 'loop1',
+                type: 'loopIndicator',
+                position: { x: 200, y: 325 },
+                data: { 
+                    loopType: 'reinforcing'
+                },
+                draggable: false,
+            },
+            {
+                id: 'loop2',
+                type: 'loopIndicator',
+                position: { x: 350, y: 325 },
+                data: { 
+                    loopType: 'balancing'
+                },
+                draggable: false,
+            },
+        ];
+
+        function PopulationCLD() {
+            const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+            const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+            const [smoothness, setSmoothness] = useState(0.5);
+            const [edgeType, setEdgeType] = useState('smoothstep');
+
+            // Function to create edges with current smoothness and type
+            const createEdges = useCallback((smoothnessValue, type) => {
+                return [
+                    // Reinforcing loop - Population to Births (top handles)
+                    {
+                        id: 'edge2-1-top',
+                        source: '2',
+                        target: '1',
+                        sourceHandle: 'top',
+                        targetHandle: 'top-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'green', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'green',
+                        },
+                        label: '+',
+                        labelStyle: { 
+                            background: '#28a745', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                    // Reinforcing loop - Births to Population (bottom handles)
+                    {
+                        id: 'edge1-2-bottom',
+                        source: '1',
+                        target: '2',
+                        sourceHandle: 'bottom',
+                        targetHandle: 'bottom-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'green', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'green',
+                        },
+                        label: '+',
+                        labelStyle: { 
+                            background: '#28a745', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                    // Balancing loop - Population to Deaths (top handles)
+                    {
+                        id: 'edge2-3-top',
+                        source: '2',
+                        target: '3',
+                        sourceHandle: 'top',
+                        targetHandle: 'top-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'green', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'green',
+                        },
+                        label: '+',
+                        labelStyle: { 
+                            background: '#28a745', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                    // Balancing loop - Deaths to Population (bottom handles) 
+                    {
+                        id: 'edge3-2-bottom',
+                        source: '3',
+                        target: '2',
+                        sourceHandle: 'bottom',
+                        targetHandle: 'bottom-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'red', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'red',
+                        },
+                        label: '−',
+                        labelStyle: { 
+                            background: '#dc3545', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                ];
+            }, []);
+
+            // Update edges when smoothness or type changes
+            useEffect(() => {
+                const newEdges = createEdges(smoothness, edgeType);
+                setEdges(newEdges);
+            }, [smoothness, edgeType, createEdges, setEdges]);
+
+            // Set up event listeners for controls
+            useEffect(() => {
+                const smoothnessSlider = document.getElementById('smoothness-slider');
+                const smoothnessValue = document.getElementById('smoothness-value');
+                const edgeTypeSelect = document.getElementById('edge-type-select');
+
+                const handleSmoothnessChange = (e) => {
+                    const value = parseFloat(e.target.value);
+                    setSmoothness(value);
+                    smoothnessValue.textContent = value.toFixed(1);
+                };
+
+                const handleEdgeTypeChange = (e) => {
+                    setEdgeType(e.target.value);
+                };
+
+                smoothnessSlider.addEventListener('input', handleSmoothnessChange);
+                edgeTypeSelect.addEventListener('change', handleEdgeTypeChange);
+
+                // Initialize
+                const initialEdges = createEdges(0.5, 'smoothstep');
+                setEdges(initialEdges);
+
+                return () => {
+                    smoothnessSlider.removeEventListener('input', handleSmoothnessChange);
+                    edgeTypeSelect.removeEventListener('change', handleEdgeTypeChange);
+                };
+            }, [createEdges, setEdges]);
+
+            return (
+                <div style={{ width: '100%', height: '600px' }}>
+                    <ReactFlow
+                        nodes={nodes}
+                        edges={edges}
+                        onNodesChange={onNodesChange}
+                        onEdgesChange={onEdgesChange}
+                        nodeTypes={nodeTypes}
+                        fitView
+                        attributionPosition="bottom-left"
+                        defaultEdgeOptions={{
+                            markerEnd: { type: 'arrowclosed' },
+                        }}
+                    >
+                        <Controls />
+                        <MiniMap 
+                            nodeStrokeColor={(n) => {
+                                if (n.style?.background) return n.style.background;
+                                return '#eee';
+                            }}
+                            nodeColor={(n) => {
+                                if (n.style?.background) return n.style.background;
+                                return '#fff';
+                            }}
+                            nodeBorderRadius={2}
+                        />
+                        <Background color="#aaa" gap={16} />
+                    </ReactFlow>
+                </div>
+            );
+        }
+
+        // Render the component
+        ReactDOM.render(<PopulationCLD />, document.getElementById('react-root'));
+        
+        }); // Close the waitForReactFlow promise
+    </script>
+</body>
+</html>
