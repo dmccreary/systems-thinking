@@ -1,6 +1,8 @@
-# About This Course
+# About This Website
 
-This course introduces systems thinking principles through the lens of artificial intelligence and modern technological systems. Students will learn to recognize patterns, feedback loops, and leverage points in complex AI-driven systems while developing practical skills for navigating our interconnected digital world.
+This website provides resources for teaching systems thinking to broad variety of audiences
+from 5th grade to executives.  It introduces systems thinking principles through the lens of artificial intelligence and modern technological systems. Students will learn to recognize patterns, feedback loops, and leverage points in complex AI-driven systems while developing practical skills for navigating our interconnected digital world.  For advanced students we also have content related
+to complex adaptive systems and simulations.
 
 ## Why Systems Thinking Matters More Than Ever
 
