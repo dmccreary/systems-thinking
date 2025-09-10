@@ -268,21 +268,22 @@
             {
                 id: '1',
                 type: 'cldNode',
+                position: { x: 100, y: 300 },
+                data: { 
+                    label: 'Births',
+                    type: 'flow'
+                },
+            },    
+            {
+                id: '2',
+                type: 'cldNode',
                 position: { x: 250, y: 300 },
                 data: { 
                     label: 'Population',
                     type: 'stock'
                 },
             },
-            {
-                id: '2',
-                type: 'cldNode',
-                position: { x: 100, y: 300 },
-                data: { 
-                    label: 'Births',
-                    type: 'flow'
-                },
-            },
+            
             {
                 id: '3',
                 type: 'cldNode',
@@ -316,18 +317,18 @@
         const initialEdges = [
             {
                 id: 'e1-2', // Population to Births (top arc)
-                source: '1',
-                target: '2',
+                source: '2',
+                target: '1',
                 sourceHandle: 'top',
-                targetHandle: 'bottom',
+                targetHandle: 'top',
                 animated: false,
                 style: { 
-                    stroke: '#28a745', 
+                    stroke: 'green', 
                     strokeWidth: 3,
                 },
                 markerEnd: {
                     type: 'arrowclosed',
-                    color: '#28a745',
+                    color: 'green',
                 },
                 label: '+',
                 labelStyle: { 
@@ -340,18 +341,18 @@
             },
             {
                 id: 'e2-1', // from Births to Population
-                source: '2',
-                target: '1',
-                sourceHandle: 'top',
+                source: '1',
+                target: '2',
+                sourceHandle: 'bottom',
                 targetHandle: 'bottom',
                 animated: true,
                 style: { 
-                    stroke: '#28a745', 
+                    stroke: 'green', 
                     strokeWidth: 3,
                 },
                 markerEnd: {
                     type: 'arrowclosed',
-                    color: '#28a745',
+                    color: 'green',
                 },
                 label: '+',
                 labelStyle: { 
@@ -364,13 +365,13 @@
             },
             {
                 id: 'e1-3', // from Population to Deaths
-                source: '1',
+                source: '2',
                 target: '3',
                 sourceHandle: 'top',
-                targetHandle: 'bottom',
+                targetHandle: 'top',
                 animated: false,
                 style: { 
-                    stroke: '#28a745', 
+                    stroke: 'green', 
                     strokeWidth: 3,
                 },
                 markerEnd: {
@@ -389,8 +390,8 @@
             {
                 id: 'e3-1', // from Deaths to Population
                 source: '3',
-                target: '1',
-                sourceHandle: 'top',
+                target: '2',
+                sourceHandle: 'bottom',
                 targetHandle: 'bottom',
                 animated: true,
                 style: { 
