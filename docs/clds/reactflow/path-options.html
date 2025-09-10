@@ -16,12 +16,6 @@
     <!-- Babel for JSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <script>
-        // Debug: Check what's available
-        console.log('window.ReactFlow:', window.ReactFlow);
-        console.log('window:', Object.keys(window).filter(k => k.includes('React')));
-    </script>
-    
     <style>
         body {
             margin: 0;
@@ -57,6 +51,25 @@
             margin: 0;
             font-size: 16px;
             opacity: 0.9;
+        }
+        
+        .controls {
+            padding: 16px 24px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .slider {
+            width: 200px;
         }
         
         .diagram-container {
@@ -102,6 +115,11 @@
             body {
                 padding: 10px;
             }
+            
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -110,6 +128,33 @@
         <div class="header">
             <h1>Population Dynamics Causal Loop Diagram</h1>
             <p>Interactive Systems Thinking Visualization using ReactFlow</p>
+        </div>
+        
+        <div class="controls">
+            <div class="slider-container">
+                <label>Edge Smoothness:</label>
+                <input 
+                    type="range" 
+                    id="smoothness-slider" 
+                    class="slider" 
+                    min="0" 
+                    max="1" 
+                    step="0.1" 
+                    value="0.5"
+                />
+                <span id="smoothness-value">0.5</span>
+            </div>
+            <div class="slider-container">
+                <label>Edge Type:</label>
+                <select id="edge-type-select">
+                    <option value="default">Default</option>
+                    <option value="straight">Straight</option>
+                    <option value="step">Step</option>
+                    <option value="smoothstep" selected>Smooth Step</option>
+                    <option value="bezier">Bézier</option>
+                    <option value="simplebezier">Simple Bézier</option>
+                </select>
+            </div>
         </div>
         
         <div class="diagram-container">
@@ -145,7 +190,7 @@
     </div>
 
     <script type="text/babel">
-        const { useState, useCallback } = React;
+        const { useState, useCallback, useEffect } = React;
         
         // Function to wait for ReactFlow to be available
         function waitForReactFlow() {
@@ -315,140 +360,196 @@
             },
         ];
 
-        const initialEdges = [
-            // Reinforcing loop - Population to Births (top handles)
-            {
-                id: 'edge2-1-top',
-                source: '2',
-                target: '1',
-                sourceHandle: 'top',
-                targetHandle: 'top-target',
-                animated: false,
-                style: { 
-                    stroke: 'green', 
-                    strokeWidth: 3,
-                    strokeLinecap: 'round',
-                    strokeLinejoin: 'round',
-                },
-                markerEnd: {
-                    type: 'arrowclosed',
-                    color: 'green',
-                },
-                label: '+',
-                labelStyle: { 
-                    background: '#28a745', 
-                    color: 'white', 
-                    fontWeight: 'bold',
-                    borderRadius: '50%',
-                    padding: '4px 8px'
-                },
-                type: 'bezier',
-                pathOptions: {
-                    offset: 5,
-                    borderRadius: 10,
-                },
-            },
-            // Reinforcing loop - Births to Population (bottom handles)
-            {
-                id: 'edge1-2-bottom',
-                source: '1',
-                target: '2',
-                sourceHandle: 'bottom',
-                targetHandle: 'bottom-target',
-                animated: false,
-                style: { 
-                    stroke: 'green', 
-                    strokeWidth: 3,
-                    strokeLinecap: 'round',
-                    strokeLinejoin: 'round',
-                },
-                markerEnd: {
-                    type: 'arrowclosed',
-                    color: 'green',
-                },
-                label: '+',
-                labelStyle: { 
-                    background: '#28a745', 
-                    color: 'white', 
-                    fontWeight: 'bold',
-                    borderRadius: '50%',
-                    padding: '4px 8px'
-                },
-                type: 'bezier',
-                pathOptions: {
-                    offset: 5,
-                    borderRadius: 10,
-                },
-            },
-            // Balancing loop - Population to Deaths (bottom handles)
-            {
-                id: 'edge2-3-top',
-                source: '2',
-                target: '3',
-                sourceHandle: 'top',
-                targetHandle: 'top-target',
-                animated: false,
-                style: { 
-                    stroke: 'green', 
-                    strokeWidth: 3,
-                    strokeLinecap: 'round',
-                    strokeLinejoin: 'round',
-                },
-                markerEnd: {
-                    type: 'arrowclosed',
-                    color: 'green',
-                },
-                label: '+',
-                labelStyle: { 
-                    background: '#28a745', 
-                    color: 'white', 
-                    fontWeight: 'bold',
-                    borderRadius: '50%',
-                    padding: '4px 8px'
-                },
-                type: 'bezier',
-                pathOptions: {
-                    offset: 5,
-                    borderRadius: 10,
-                },
-            },
-            // Balancing loop - Deaths to Population (bottom handles) 
-            {
-                id: 'edge3-2-bottom',
-                source: '3',
-                target: '2',
-                sourceHandle: 'bottom',
-                targetHandle: 'bottom-target',
-                animated: false,
-                style: { 
-                    stroke: 'red', 
-                    strokeWidth: 3,
-                    strokeLinecap: 'round',
-                    strokeLinejoin: 'round',
-                },
-                markerEnd: {
-                    type: 'arrowclosed',
-                    color: 'red',
-                },
-                label: '−',
-                labelStyle: { 
-                    background: '#dc3545', 
-                    color: 'white', 
-                    fontWeight: 'bold',
-                    borderRadius: '50%',
-                    padding: '4px 8px'
-                },
-                type: 'bezier',
-                pathOptions: {
-                    offset: 5,
-                    borderRadius: 10,
-                },
-            },
-        ];
-
         function PopulationCLD() {
             const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-            const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+            const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+            const [smoothness, setSmoothness] = useState(0.5);
+            const [edgeType, setEdgeType] = useState('smoothstep');
+
+            // Function to create edges with current smoothness and type
+            const createEdges = useCallback((smoothnessValue, type) => {
+                return [
+                    // Reinforcing loop - Population to Births (top handles)
+                    {
+                        id: 'edge2-1-top',
+                        source: '2',
+                        target: '1',
+                        sourceHandle: 'top',
+                        targetHandle: 'top-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'green', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'green',
+                        },
+                        label: '+',
+                        labelStyle: { 
+                            background: '#28a745', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                    // Reinforcing loop - Births to Population (bottom handles)
+                    {
+                        id: 'edge1-2-bottom',
+                        source: '1',
+                        target: '2',
+                        sourceHandle: 'bottom',
+                        targetHandle: 'bottom-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'green', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'green',
+                        },
+                        label: '+',
+                        labelStyle: { 
+                            background: '#28a745', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                    // Balancing loop - Population to Deaths (top handles)
+                    {
+                        id: 'edge2-3-top',
+                        source: '2',
+                        target: '3',
+                        sourceHandle: 'top',
+                        targetHandle: 'top-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'green', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'green',
+                        },
+                        label: '+',
+                        labelStyle: { 
+                            background: '#28a745', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                    // Balancing loop - Deaths to Population (bottom handles) 
+                    {
+                        id: 'edge3-2-bottom',
+                        source: '3',
+                        target: '2',
+                        sourceHandle: 'bottom',
+                        targetHandle: 'bottom-target',
+                        animated: false,
+                        style: { 
+                            stroke: 'red', 
+                            strokeWidth: 3,
+                            strokeLinecap: 'round',
+                            strokeLinejoin: 'round',
+                        },
+                        markerEnd: {
+                            type: 'arrowclosed',
+                            color: 'red',
+                        },
+                        label: '−',
+                        labelStyle: { 
+                            background: '#dc3545', 
+                            color: 'white', 
+                            fontWeight: 'bold',
+                            borderRadius: '50%',
+                            padding: '4px 8px'
+                        },
+                        type: type,
+                        ...(type === 'smoothstep' && {
+                            pathOptions: {
+                                borderRadius: smoothnessValue * 50,
+                            }
+                        }),
+                        ...(type.includes('bezier') && {
+                            curvature: smoothnessValue,
+                        }),
+                    },
+                ];
+            }, []);
+
+            // Update edges when smoothness or type changes
+            useEffect(() => {
+                const newEdges = createEdges(smoothness, edgeType);
+                setEdges(newEdges);
+            }, [smoothness, edgeType, createEdges, setEdges]);
+
+            // Set up event listeners for controls
+            useEffect(() => {
+                const smoothnessSlider = document.getElementById('smoothness-slider');
+                const smoothnessValue = document.getElementById('smoothness-value');
+                const edgeTypeSelect = document.getElementById('edge-type-select');
+
+                const handleSmoothnessChange = (e) => {
+                    const value = parseFloat(e.target.value);
+                    setSmoothness(value);
+                    smoothnessValue.textContent = value.toFixed(1);
+                };
+
+                const handleEdgeTypeChange = (e) => {
+                    setEdgeType(e.target.value);
+                };
+
+                smoothnessSlider.addEventListener('input', handleSmoothnessChange);
+                edgeTypeSelect.addEventListener('change', handleEdgeTypeChange);
+
+                // Initialize
+                const initialEdges = createEdges(0.5, 'smoothstep');
+                setEdges(initialEdges);
+
+                return () => {
+                    smoothnessSlider.removeEventListener('input', handleSmoothnessChange);
+                    edgeTypeSelect.removeEventListener('change', handleEdgeTypeChange);
+                };
+            }, [createEdges, setEdges]);
 
             return (
                 <div style={{ width: '100%', height: '600px' }}>
