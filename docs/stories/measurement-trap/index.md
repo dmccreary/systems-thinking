@@ -1,10 +1,10 @@
 # The Measurement Trap: A Tale of Numbers, Tests, and What Really Matters
-![](./cover.png)
+![](./cover.jpg)
 
 *A story about Peter Drucker's famous warning and why measuring the wrong things can lead us astray*
 
 ## Chapter 1: The New Principal's Discovery
-![](./image-01.png)
+![](./image-01.jpg)
 <details>
 <summary>Image: Principal Martinez walks through a hallway lined with test score charts and data displays</summary>
 
@@ -24,7 +24,7 @@ Maria nodded politely, but something felt wrong. In her twenty years of educatio
 But as she looked around at all those charts and numbers, a more troubling question emerged: *What if we're measuring the wrong things?*
 
 ## Chapter 2: The Test Score Obsession
-![](./image-02.png)
+![](./image-02.jpg)
 <details>
 <summary>Image: A classroom where students sit in rigid rows taking a standardized test</summary>
 Please generate a drawing using a colorful bright graph-novel style.
@@ -50,7 +50,7 @@ Maria finished the sentence in her head: *doesn't get managed.*
 She was witnessing Peter Drucker's maxim in action, but not in a good way. The school was meticulously managing test scores because that's what they measured. But in the process, they were ignoring – and therefore failing to develop – the very skills students would need most in life.
 
 ## Chapter 3: The Business Parallel
-![](./image-03.png)
+![](./image-03.jpg)
 <details>
 <summary>Chart: A comparison showing "What We Measure vs. What Actually Matters"</summary>
 Panel 3
@@ -74,7 +74,7 @@ David pulled out his phone and showed her a graph. "Look at this. We started mea
 The parallel was striking. In both education and business, the seductive simplicity of numbers was leading people to optimize for metrics rather than outcomes.
 
 ## Chapter 4: The Easy vs. The Important
-![](./image-04.png)
+![](./image-04.jpg)
 <details>
 <summary>Image: A balance scale with "Easy to Measure" on one side (heavily weighted down) and "Hard to Measure but Important" on the other side (up in the air)</summary>
 
@@ -99,7 +99,7 @@ Janet nodded thoughtfully. "It's like that old joke about the drunk looking for 
 She pulled up the school's data dashboard on her computer. "Look at this. We can tell you the exact percentage of students who scored 'proficient' in math, but we have no idea how many can solve real-world problems or explain their reasoning to others."
 
 ## Chapter 5: The Collaboration Crisis
-![](./image-05.png)
+![](./image-05.jpg)
 <details>
 <summary>Image: Two contrasting scenes - individual test-taking vs. collaborative problem-solving</summary>
 Panel 5
@@ -124,7 +124,7 @@ But when Maria checked the gradebook, she found that these collaborative skills 
 She remembered something her college professor had said: "In the real world, if you don't know something, you Google it or ask a colleague. On tests, that's called cheating."
 
 ## Chapter 6: The Resilience Paradox
-![](./image-06.png)
+![](./image-06.jpg)
 <details>
 <summary>Image: A student working through failure and iteration in a maker space or science lab</summary>
 Panel 6
@@ -149,7 +149,7 @@ However, when Maria checked how this would be reflected in the gradebook, she wa
 This was particularly troubling because research showed that resilience – the ability to bounce back from failure and keep trying – was one of the strongest predictors of long-term success. Yet their measurement system was not only failing to capture this critical skill, it was actually discouraging it.
 
 ## Chapter 7: The Parent Conference Revelation
-![](./image-07.png)
+![](./image-07.jpg)
 <details>
 <summary>Image: A parent-teacher conference with data charts on one side and student work portfolios on the other</summary>
 
@@ -174,7 +174,7 @@ The teacher, Ms. Johnson, looked uncomfortable. "Well, the test doesn't really m
 It was a fair question, and one that Maria found herself asking more and more. If the measurements weren't capturing what parents, teachers, and students themselves valued most, what was the point?
 
 ## Chapter 8: The Systems Thinking Solution
-![](./image-08.png)
+![](./image-08.jpg)
 <details>
 <summary>Diagram: A systems thinking view of education showing interconnected loops between different types of learning and assessment</summary>
 
@@ -197,7 +197,7 @@ The question was: how could they break free from the measurement trap?
 Maria remembered reading about companies that had solved similar problems. Some had started measuring "customer success" instead of just "customer satisfaction." Others tracked employee development and innovation, not just productivity metrics. They had learned to measure what mattered, even when it was harder to quantify.
 
 ## Chapter 9: Project-Based Learning in Action
-![](./image-09.png)
+![](./image-09.jpg)
 <details>
 <summary>Image: Students presenting a community problem-solving project to real community members</summary>
 
@@ -224,7 +224,7 @@ What amazed Maria most was how naturally students developed the skills that trad
 - **Creativity**: Solutions required innovative thinking and connecting ideas from different disciplines.
 
 ## Chapter 10: Measuring What Matters
-![](./image-10.png)
+![](./image-10.jpg)
 <details>
 <summary>Chart: A new assessment framework showing multiple ways to capture student growth</summary>
 
@@ -255,7 +255,7 @@ Maria worked with her teachers to develop new assessment tools:
 These approaches were harder to quantify than multiple-choice tests, but they provided a much richer and more accurate picture of student learning and development.
 
 ## Chapter 11: The Resistance
-![](./image-11a.png)
+![](./image-11.jpg)
 <details>
 <summary>Image: A tense school board meeting with community members, data charts, and opposing viewpoints</summary>
 
@@ -282,7 +282,7 @@ Maria understood their concerns. The measurement system, for all its flaws, prov
 She shared stories from the project-based learning pilot: students who had never succeeded on traditional tests but had shown remarkable leadership and problem-solving skills. Students who had struggled with anxiety during testing but thrived when working on meaningful, real-world challenges.
 
 ## Chapter 12: The Breakthrough Moment
-![](./image-12.png)
+![](./image-12.jpg)
 <details>
 <summary>Image: A local business leader observing students presenting their solutions and being visibly impressed</summary>
 Panel 12
@@ -305,7 +305,7 @@ Another business owner, Robert Kim, approached Maria afterward. "My company has 
 The community members who had been skeptical about moving away from test scores were suddenly seeing their children through different eyes. These weren't just "grades" or "data points" – they were young people developing real capabilities that would serve them throughout their lives.
 
 ## Chapter 13: The Ripple Effect
-![](./image-13.png)
+![](./image-13.jpg)
 <details>
 <summary>Image: A network diagram showing how authentic assessment practices spread to other schools and districts</summary>
 
@@ -328,7 +328,7 @@ David, Maria's friend from the marketing company, had been inspired by her succe
 The ripple effect was exactly what systems thinkers would predict: changing the measurement system changed behavior, which changed outcomes, which validated the new measurement approach, creating a positive reinforcing loop.
 
 ## Chapter 14: The New Dashboard
-![](./image-14.png)
+![](./image-14.jpg)
 <details>
 <summary>Chart: A redesigned school data dashboard showing holistic metrics alongside traditional ones</summary>
 Panel 14
@@ -358,7 +358,7 @@ The new dashboard included:
 The difference was remarkable. Instead of a narrow focus on a few standardized metrics, they now had a rich, multidimensional view of student development that actually predicted future success.
 
 ## Chapter 15: Lessons Learned
-![](./image-15.png)
+![](./image-15.jpg)
 <details>
 <summary>Image: Maria reflecting in her office, surrounded by both traditional data and examples of authentic student work</summary>
 
@@ -443,6 +443,7 @@ Because in the end, we don't just need better test scores. We need better thinke
 9. **Multiple Measures**: The new dashboard included academic growth, real-world skills, community engagement, and student voice. If you were designing a way to measure your own development as a person, what would you include beyond grades? How might you track growth in areas like empathy, leadership, or creative thinking?
 
 10. **Future Implications**: Imagine you're a parent 20 years from now choosing between two schools: one with the highest test scores in the district, and another with lower test scores but strong evidence of developing collaboration, creativity, and real-world problem-solving skills. Which would you choose for your child, and why? What does this reveal about what you truly value in education?
+
 ## References
 
 1. [What Gets Measured Gets Managed - Peter Drucker's Famous Quote](https://www.drucker.institute/what-gets-measured-gets-managed/) - 2019 - The Drucker Institute - Explores the origin and implications of Peter Drucker's famous maxim, explaining how measurement systems drive behavior in organizations and why choosing the right metrics is crucial for success.
