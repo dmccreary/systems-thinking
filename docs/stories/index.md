@@ -70,7 +70,7 @@ Follow Maya and Alex, two equally talented teenage coders with the same dream of
 [Go to the The Matthew Effect Story](./matthew-effect/index.md)
 
 ## The Measurement Trap
-![](./measurement-trap/index.md)
+![](./measurement-trap/cover.png)
 
 A Tale of Numbers, Tests, and What Really Matters** - When Principal Maria Martinez discovers her school obsessively tracking test scores while ignoring critical skills like collaboration, creativity, and resilience, she embarks on a journey to understand Peter Drucker's famous warning: "what gets measured gets managed." Through innovative project-based learning and authentic assessment methods, Maria demonstrates how schools and businesses fall into the trap of measuring what's easy rather than what's important. This engaging story explores the disconnect between standardized testing and real-world skills, showing how systems thinking can help us break free from the measurement trap and focus on developing the capabilities students truly need for success in life and work.
 
