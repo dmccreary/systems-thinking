@@ -1,3 +1,12 @@
+---
+title: The Measurement Trap - A Tale of Numbers, Tests, and What Really Matters
+description: A graphic novel about how a school understands the difference between what is easy to measure and what really matters in education.
+image: /stories/measurement-trap/cover.jpg
+og:image: /stories/measurement-trap/cover.jpg
+twitter:image: /stories/measurement-trap/cover.jpg
+social:
+   cards: false
+---
 # The Measurement Trap: A Tale of Numbers, Tests, and What Really Matters
 ![](./cover.jpg)
 
