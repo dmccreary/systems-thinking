@@ -203,13 +203,25 @@
                     type="source" 
                     position={Position.Top} 
                     id="top"
-                    style={{ background: 'purple' }} 
+                    style={{ background: '#555' }} 
+                />
+                <Handle 
+                    type="target" 
+                    position={Position.Top} 
+                    id="top-target"
+                    style={{ background: '#555' }} 
+                />
+                <Handle 
+                    type="source" 
+                    position={Position.Bottom} 
+                    id="bottom"
+                    style={{ background: '#555' }} 
                 />
                 <Handle 
                     type="target" 
                     position={Position.Bottom} 
-                    id="bottom"
-                    style={{ background: 'orange' }} 
+                    id="bottom-target"
+                    style={{ background: '#555' }} 
                 />
             
                     <div style={{ fontWeight: 'bold', marginBottom: '2px', fontSize: '11px' }}>
@@ -304,12 +316,13 @@
         ];
 
         const initialEdges = [
+            // Reinforcing loop - Population to Births (top handles)
             {
-                id: 'edge2-1', // Population to Births (top to top edge)
+                id: 'edge2-1-top',
                 source: '2',
                 target: '1',
                 sourceHandle: 'top',
-                targetHandle: 'top',
+                targetHandle: 'top-target',
                 animated: false,
                 style: { 
                     stroke: 'green', 
@@ -327,14 +340,16 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
+                type: 'smoothstep',
             },
+            // Reinforcing loop - Births to Population (bottom handles)
             {
-                id: 'edge1-2', // from Births to Population
+                id: 'edge1-2-bottom',
                 source: '1',
                 target: '2',
                 sourceHandle: 'bottom',
-                targetHandle: 'bottom',
-                animated: true,
+                targetHandle: 'bottom-target',
+                animated: false,
                 style: { 
                     stroke: 'green', 
                     strokeWidth: 3,
@@ -351,13 +366,15 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
+                type: 'smoothstep',
             },
+            // Balancing loop - Population to Deaths (bottom handles)
             {
-                id: 'edge2-3', // from Population to Deaths
+                id: 'edge2-3-top',
                 source: '2',
                 target: '3',
                 sourceHandle: 'top',
-                targetHandle: 'top',
+                targetHandle: 'top-target',
                 animated: false,
                 style: { 
                     stroke: 'green', 
@@ -365,7 +382,7 @@
                 },
                 markerEnd: {
                     type: 'arrowclosed',
-                    color: '#28a745',
+                    color: 'green',
                 },
                 label: '+',
                 labelStyle: { 
@@ -375,21 +392,23 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
+                type: 'smoothstep',
             },
+            // Balancing loop - Deaths to Population (bottom handles) 
             {
-                id: 'e3-1', // from Deaths to Population
+                id: 'edge3-2-bottom',
                 source: '3',
                 target: '2',
                 sourceHandle: 'bottom',
-                targetHandle: 'bottom',
-                animated: true,
+                targetHandle: 'bottom-target',
+                animated: false,
                 style: { 
                     stroke: 'red', 
                     strokeWidth: 3,
                 },
                 markerEnd: {
                     type: 'arrowclosed',
-                    color: '#dc3545',
+                    color: 'red',
                 },
                 label: '−',
                 labelStyle: { 
@@ -399,6 +418,7 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
+                type: 'smoothstep',
             },
         ];
 
