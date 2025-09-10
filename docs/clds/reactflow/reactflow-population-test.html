@@ -187,23 +187,42 @@
                     background: '#E8F4FD',
                     border: '2px solid #4A90E2',
                     borderRadius: '50%',
-                    padding: '20px',
+                    padding: '10px',
                     fontSize: '12px',
-                    fontWeight: '500',
+                    fontWeight: '300',
                     textAlign: 'center',
-                    width: '80px',
-                    height: '80px',
+                    width: '50px',
+                    height: '50px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}>
-                    <Handle type="target" position={Position.Top} style={{ background: '#4A90E2' }} />
-                    <Handle type="source" position={Position.Bottom} style={{ background: '#4A90E2' }} />
-                    <Handle type="target" position={Position.Left} style={{ background: '#4A90E2' }} />
-                    <Handle type="source" position={Position.Right} style={{ background: '#4A90E2' }} />
-                    
+                    <Handle 
+                type="source" 
+                position={Position.Top} 
+                id="top"
+                style={{ background: '#4A90E2' }} 
+            />
+            <Handle 
+                type="target" 
+                position={Position.Bottom} 
+                id="bottom"
+                style={{ background: '#4A90E2' }} 
+            />
+            <Handle 
+                type="target" 
+                position={Position.Left} 
+                id="left"
+                style={{ background: '#4A90E2' }} 
+            />
+            <Handle 
+                type="source" 
+                position={Position.Right} 
+                id="right"
+                style={{ background: '#4A90E2' }} 
+            />
                     <div style={{ fontWeight: 'bold', marginBottom: '2px', fontSize: '11px' }}>
                         {data.label}
                     </div>
@@ -223,18 +242,20 @@
                     background: isReinforcing ? '#dc3545' : '#28a745',
                     color: 'white',
                     borderRadius: '50%',
-                    width: '40px',
-                    height: '40px',
+                    width: '20px',
+                    height: '20px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '18px',
+                    fontSize: '14px',
                     fontWeight: 'bold',
                     border: '2px solid #000',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
                 }}>
+                
                     {isReinforcing ? 'R' : 'B'}
                 </div>
+                
             );
         };
 
@@ -247,7 +268,7 @@
             {
                 id: '1',
                 type: 'cldNode',
-                position: { x: 250, y: 100 },
+                position: { x: 250, y: 300 },
                 data: { 
                     label: 'Population',
                     type: 'stock'
@@ -275,7 +296,7 @@
             {
                 id: 'loop1',
                 type: 'loopIndicator',
-                position: { x: 155, y: 180 },
+                position: { x: 200, y: 325 },
                 data: { 
                     loopType: 'reinforcing'
                 },
@@ -284,7 +305,7 @@
             {
                 id: 'loop2',
                 type: 'loopIndicator',
-                position: { x: 345, y: 180 },
+                position: { x: 350, y: 325 },
                 data: { 
                     loopType: 'balancing'
                 },
@@ -294,9 +315,11 @@
 
         const initialEdges = [
             {
-                id: 'e1-2',
+                id: 'e1-2', // Population to Births (top arc)
                 source: '1',
                 target: '2',
+                sourceHandle: 'top',
+                targetHandle: 'bottom',
                 animated: false,
                 style: { 
                     stroke: '#28a745', 
@@ -304,6 +327,7 @@
                 },
                 markerEnd: {
                     type: 'arrowclosed',
+                    color: '#28a745',
                 },
                 label: '+',
                 labelStyle: { 
@@ -315,16 +339,19 @@
                 },
             },
             {
-                id: 'e2-1',
+                id: 'e2-1', // from Births to Population
                 source: '2',
                 target: '1',
-                animated: false,
+                sourceHandle: 'top',
+                targetHandle: 'bottom',
+                animated: true,
                 style: { 
                     stroke: '#28a745', 
                     strokeWidth: 3,
                 },
                 markerEnd: {
                     type: 'arrowclosed',
+                    color: '#28a745',
                 },
                 label: '+',
                 labelStyle: { 
@@ -336,9 +363,11 @@
                 },
             },
             {
-                id: 'e1-3',
+                id: 'e1-3', // from Population to Deaths
                 source: '1',
                 target: '3',
+                sourceHandle: 'top',
+                targetHandle: 'bottom',
                 animated: false,
                 style: { 
                     stroke: '#28a745', 
@@ -346,6 +375,7 @@
                 },
                 markerEnd: {
                     type: 'arrowclosed',
+                    color: '#28a745',
                 },
                 label: '+',
                 labelStyle: { 
@@ -357,16 +387,19 @@
                 },
             },
             {
-                id: 'e3-1',
+                id: 'e3-1', // from Deaths to Population
                 source: '3',
                 target: '1',
-                animated: false,
+                sourceHandle: 'top',
+                targetHandle: 'bottom',
+                animated: true,
                 style: { 
                     stroke: '#dc3545', 
                     strokeWidth: 3,
                 },
                 markerEnd: {
                     type: 'arrowclosed',
+                    color: '#dc3545',
                 },
                 label: '−',
                 labelStyle: { 
