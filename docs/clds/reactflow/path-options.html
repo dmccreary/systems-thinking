@@ -327,6 +327,8 @@
                 style: { 
                     stroke: 'green', 
                     strokeWidth: 3,
+                    strokeLinecap: 'round',
+                    strokeLinejoin: 'round',
                 },
                 markerEnd: {
                     type: 'arrowclosed',
@@ -340,7 +342,11 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
-                type: 'smoothstep',
+                type: 'bezier',
+                pathOptions: {
+                    offset: 5,
+                    borderRadius: 10,
+                },
             },
             // Reinforcing loop - Births to Population (bottom handles)
             {
@@ -353,6 +359,8 @@
                 style: { 
                     stroke: 'green', 
                     strokeWidth: 3,
+                    strokeLinecap: 'round',
+                    strokeLinejoin: 'round',
                 },
                 markerEnd: {
                     type: 'arrowclosed',
@@ -366,7 +374,11 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
-                type: 'smoothstep',
+                type: 'bezier',
+                pathOptions: {
+                    offset: 5,
+                    borderRadius: 10,
+                },
             },
             // Balancing loop - Population to Deaths (bottom handles)
             {
@@ -379,6 +391,8 @@
                 style: { 
                     stroke: 'green', 
                     strokeWidth: 3,
+                    strokeLinecap: 'round',
+                    strokeLinejoin: 'round',
                 },
                 markerEnd: {
                     type: 'arrowclosed',
@@ -392,7 +406,11 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
-                type: 'smoothstep',
+                type: 'bezier',
+                pathOptions: {
+                    offset: 5,
+                    borderRadius: 10,
+                },
             },
             // Balancing loop - Deaths to Population (bottom handles) 
             {
@@ -405,6 +423,8 @@
                 style: { 
                     stroke: 'red', 
                     strokeWidth: 3,
+                    strokeLinecap: 'round',
+                    strokeLinejoin: 'round',
                 },
                 markerEnd: {
                     type: 'arrowclosed',
@@ -418,7 +438,11 @@
                     borderRadius: '50%',
                     padding: '4px 8px'
                 },
-                type: 'smoothstep',
+                type: 'bezier',
+                pathOptions: {
+                    offset: 5,
+                    borderRadius: 10,
+                },
             },
         ];
 
