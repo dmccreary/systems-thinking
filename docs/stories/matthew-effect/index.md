@@ -1,4 +1,13 @@
-# The Matthew Effect - The Music Streaming War
+---
+title: The Matthew Effect - The Music Streaming Competition
+description: A graphic novel about how two talented students created applications with different outcomes due to different initial conditions.
+image: /stories/matthew-effect/cover.jpg
+og:image: /stories/matthew-effect/cover.jpg
+twitter:image: /stories/matthew-effect/cover.jpg
+social:
+   cards: false
+---
+# The Matthew Effect - The Music Streaming Competition
 
 ![](./cover.jpg)
 
