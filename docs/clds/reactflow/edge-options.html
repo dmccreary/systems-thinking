@@ -184,7 +184,7 @@
                 
                 <div class="control-group">
                     <label for="edgeCurvature">Edge Curvature</label>
-                    <input type="range" id="edgeCurvature" min="0" max="100" value="50" step="5">
+                    <input type="range" id="edgeCurvature" min="0" max="150" value="50" step="5">
                     <div class="value" id="edgeCurvatureValue">50</div>
                 </div>
                 
@@ -422,14 +422,14 @@
                         {
                             id: 'loop1',
                             type: 'loopIndicator',
-                            position: { x: centerX - nodeSpacing/2 + 50, y: centerY + 30 },
+                            position: { x: centerX - nodeSpacing/2 + 25, y: centerY + 30 },
                             data: { loopType: 'reinforcing', size: loopSize },
                             draggable: false,
                         },
                         {
                             id: 'loop2',
                             type: 'loopIndicator',
-                            position: { x: centerX + nodeSpacing/2 + 50, y: centerY + 30 },
+                            position: { x: centerX + nodeSpacing/2 + 25, y: centerY + 30 },
                             data: { loopType: 'balancing', size: loopSize },
                             draggable: false,
                         },
