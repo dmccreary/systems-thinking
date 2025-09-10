@@ -72,7 +72,7 @@ const initialNodes = [
   {
     id: '1',
     type: 'cldNode',
-    position: { x: 250, y: 100 },
+    position: { x: 250, y: 300 },
     data: { 
       label: 'Population',
       type: 'stock'
@@ -100,7 +100,7 @@ const initialNodes = [
   {
     id: 'loop1',
     type: 'loopIndicator',
-    position: { x: 155, y: 180 },
+    position: { x: 155, y: 300 },
     data: { 
       loopType: 'reinforcing'
     },
@@ -109,7 +109,7 @@ const initialNodes = [
   {
     id: 'loop2',
     type: 'loopIndicator',
-    position: { x: 345, y: 180 },
+    position: { x: 345, y: 300 },
     data: { 
       loopType: 'balancing'
     },
