@@ -68,3 +68,10 @@ Could a single decision by a short-term profit school administrator kill the ent
 Follow Maya and Alex, two equally talented teenage coders with the same dream of creating a music streaming app, as their different starting points lead to dramatically different outcomes. Maya, working with limited resources and an old laptop, builds her app through determination and late-night coding sessions, while Alex leverages his family's tech connections, professional tools, and startup competition access. Through their parallel journeys, this story illustrates how the "Matthew Effect" - named after the biblical principle "to everyone who has, more will be given" - creates reinforcing feedback loops where initial advantages compound over time, turning small differences in resources and opportunities into massive inequalities. Perfect for high school students, the story demonstrates key systems thinking concepts including cumulative advantage, network effects, and winner-take-all dynamics, while exploring how understanding these patterns can help us design more equitable systems and interventions.
 
 [Go to the The Matthew Effect Story](./matthew-effect/index.md)
+
+## The Measurement Trap
+![](./measurement-trap/index.md)
+
+A Tale of Numbers, Tests, and What Really Matters** - When Principal Maria Martinez discovers her school obsessively tracking test scores while ignoring critical skills like collaboration, creativity, and resilience, she embarks on a journey to understand Peter Drucker's famous warning: "what gets measured gets managed." Through innovative project-based learning and authentic assessment methods, Maria demonstrates how schools and businesses fall into the trap of measuring what's easy rather than what's important. This engaging story explores the disconnect between standardized testing and real-world skills, showing how systems thinking can help us break free from the measurement trap and focus on developing the capabilities students truly need for success in life and work.
+
+[Go to the The Measurement Trap Story](./measurement-trap/index.md)
