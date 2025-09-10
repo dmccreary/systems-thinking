@@ -222,6 +222,7 @@ nav:
     - Moore's Law: stories/moores-law/index.md
     - Death of Gopher: stories/death-of-gopher/index.md
     - Metcalfe's Law: stories/metcalfes-law/index.md
+    - The Measurement Trap: stories/measurement-trap/index.md
 
   - Sample Prompts:
     - Introduction: prompts/index.md
