@@ -399,6 +399,7 @@ The lessons were clear:
 
 ## Epilogue: The Measurement Revolution
 
+![](./image-16.jpg)
 <details>
 <summary>Image: A montage showing students, teachers, business leaders, and communities working together in various authentic learning environments</summary>
 Panel 16
