@@ -35,7 +35,7 @@ A 4-hour interactive workshop that teaches IT directors and engineering managers
 
 This intensive one-day executive training teaches business professionals from education, healthcare, and technology how to identify and address complex organizational challenges using systems thinking principles, including causal loop diagramming, leverage point analysis, and systems archetypes like "Success to the Successful" and "Fixes that Fail." Participants work through real-world case studies from their industries, then collaborate in teams to apply systems thinking tools to actual organizational challenges and present actionable intervention strategies to their peers.
 
-[Go to the Executive Overview Workshop Description](./executive-overview.md)
+[Go to the Executive Overview Workshop Description](./executives.md)
 
 ## Government Agency (Two Day)
 
