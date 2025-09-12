@@ -14,13 +14,20 @@ This 12-week systems thinking course develops 8th grade students' critical think
 
 ## High-School Course
 
+Learn to understand and navigate complex systems through real-world examples including social media algorithms, school policies, and community challenges. Develop critical thinking skills to identify feedback loops, unintended consequences, and leverage points for creating positive change in your personal life and community.
+
 [Go to the High School Course Description](./high-school.md)
 
 ## College Course
 
+This interdisciplinary course develops systems thinking as a critical framework for understanding complex, interconnected challenges like climate change, social inequality, and technological disruption that resist simple solutions. Through interactive simulations, case studies, and collaborative modeling, students learn to identify patterns, leverage points, and unintended consequences while applying these skills to real-world problems in a capstone project.
+
 [Go to the College Course Description](./college.md)
 
 ## Conference Workshop
+
+**Systems Thinking for IT Leadership: Breaking Silos and Building Resilient Digital Systems**
+A 4-hour interactive workshop that teaches IT directors and engineering managers to identify hidden feedback loops, recognize recurring organizational patterns, and design high-leverage interventions that address root causes rather than symptoms in complex technology environments.
 
 [Go to the Conference Workshop Description](./conference-workshop.md)
 

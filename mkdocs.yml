@@ -13,12 +13,13 @@ nav:
 
   - Course Descriptions:
     - Overview: course-descriptions/index.md
+    - Junior High: course-descriptions/junior-high.md
     - High School: course-descriptions/high-school.md
     - College: course-descriptions/college.md
-    - Conference Workshop: course-descriptions/conference-workshop.md
-    - Executive Overview: course-descriptions/executive-overview.md
-    - Corporate Training: course-descriptions/corporate-training.md
     - Graduate School: course-descriptions/grad-school.md
+    - Conference Workshop: course-descriptions/conference-workshop.md
+    - Executive Overview: course-descriptions/executives.md
+    - Government Agency: course-descriptions/government-agency.md
   
   - Chapters:
     - Foundations: chapters/ch-01-foundations/index.md

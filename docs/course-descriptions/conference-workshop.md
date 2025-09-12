@@ -1,6 +1,6 @@
 # Technology Conference Workshop on Systems Thinking
 
-# Systems Thinking for IT Leadership: Breaking Silos and Building Resilient Digital Systems
+**Title:** Systems Thinking for IT Leadership: Breaking Silos and Building Resilient Digital Systems
 
 ## Half-Day Workshop Description
 
