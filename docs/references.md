@@ -1,5 +1,11 @@
 # References
 
+## Papers on Creating Causal Loop Diagrams with AI
+
+[From Text to Map: A System Dynamics Bot for Constructing Causal Loop Diagrams](https://arxiv.org/pdf/2402.11400)
+
+[Systems Dynamics with AI GitHub Repo](https://github.com/UB-IAD/sd-ai)
+
 ## Books on Systems Thinking
 
 ![img/systems-thinking-books.png]
