@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "id": "microsim-growth-cld",
+    "title": "MicroSim Growth Network Effect",
+    "archetype": "network-effect",
+    "description": "A reinforcing feedback system showing how MicroSims, Intelligent Textbooks, and Teacher Awareness create a virtuous cycle of growth through network effects.",
+    "learning_objectives": [
+      "Understand how network effects drive adoption of educational technology",
+      "Identify the reinforcing loops in the MicroSim ecosystem",
+      "Recognize how teacher awareness amplifies demand for both textbooks and simulations",
+      "Predict system behavior based on reinforcing loop dynamics"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-01-27",
+    "updated_date": "2025-01-27",
+    "author": "Dan McCreary",
+    "tags": ["systems-thinking", "causal-loop-diagram", "feedback-loops", "network-effect", "education", "microsims"],
+    "notes": "Generated using the causal-loop-microsim-generator skill"
+  },
+  "nodes": [
+    {
+      "id": "global_microsims",
+      "label": "Global MicroSims",
+      "position": {"x": 300, "y": 100},
+      "type": "stock",
+      "description": "The total number of educational MicroSims available globally for use in intelligent textbooks",
+      "examples": ["p5.js simulations", "ChartJS visualizations", "vis-network diagrams", "Interactive maps"],
+      "measurement": "Total count of published MicroSims"
+    },
+    {
+      "id": "intelligent_textbooks",
+      "label": "Intelligent Textbooks",
+      "position": {"x": 470, "y": 300},
+      "type": "stock",
+      "description": "Digital textbooks that incorporate interactive MicroSims to enhance learning",
+      "examples": ["Systems Thinking for Technologists", "Graph Algorithms textbook", "Beginning Electronics"],
+      "measurement": "Number of published intelligent textbooks"
+    },
+    {
+      "id": "teachers_aware",
+      "label": "Teachers Aware\nof MicroSims",
+      "position": {"x": 300, "y": 500},
+      "type": "stock",
+      "description": "Educators who have discovered and experienced MicroSims through intelligent textbooks",
+      "examples": ["K-12 STEM teachers", "University professors", "Corporate trainers", "Curriculum designers"],
+      "measurement": "Number of educators aware of MicroSim technology"
+    },
+    {
+      "id": "demand_textbooks",
+      "label": "Demand for\nTextbooks",
+      "position": {"x": 130, "y": 400},
+      "type": "variable",
+      "description": "Market demand for intelligent textbooks driven by teacher awareness and adoption",
+      "examples": ["School district adoptions", "University course requirements", "Self-directed learners"],
+      "measurement": "Requests, purchases, and adoption rates"
+    },
+    {
+      "id": "demand_microsims",
+      "label": "Demand for\nMicroSims",
+      "position": {"x": 130, "y": 200},
+      "type": "variable",
+      "description": "Demand for new MicroSims to support additional topics and learning objectives",
+      "examples": ["Custom simulation requests", "Open source contributions", "Publisher commissions"],
+      "measurement": "New MicroSim requests and development orders"
+    }
+  ],
+  "edges": [
+    {
+      "id": "microsims_to_textbooks",
+      "source": "global_microsims",
+      "target": "intelligent_textbooks",
+      "polarity": "positive",
+      "description": "More available MicroSims enable the creation of more intelligent textbooks with interactive content",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "textbooks_to_awareness",
+      "source": "intelligent_textbooks",
+      "target": "teachers_aware",
+      "polarity": "positive",
+      "description": "As more intelligent textbooks are published and adopted, more teachers discover and experience MicroSims",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "awareness_to_textbook_demand",
+      "source": "teachers_aware",
+      "target": "demand_textbooks",
+      "polarity": "positive",
+      "description": "Teachers who experience MicroSims want more intelligent textbooks for their courses",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "textbook_demand_to_textbooks",
+      "source": "demand_textbooks",
+      "target": "intelligent_textbooks",
+      "polarity": "positive",
+      "description": "Increased demand leads publishers and authors to create more intelligent textbooks",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "awareness_to_microsim_demand",
+      "source": "teachers_aware",
+      "target": "demand_microsims",
+      "polarity": "positive",
+      "description": "Aware teachers request new MicroSims for topics not yet covered",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    },
+    {
+      "id": "microsim_demand_to_microsims",
+      "source": "demand_microsims",
+      "target": "global_microsims",
+      "polarity": "positive",
+      "description": "Demand drives developers to create and publish more MicroSims",
+      "strength": "strong",
+      "curve": {
+        "type": "curvedCW",
+        "roundness": 0.3
+      }
+    }
+  ],
+  "loops": [
+    {
+      "id": "textbook_growth_loop",
+      "type": "reinforcing",
+      "path": ["intelligent_textbooks", "teachers_aware", "demand_textbooks", "intelligent_textbooks"],
+      "label": "Textbook Growth Loop",
+      "description": "More textbooks create awareness, which drives demand for more textbooks - a virtuous cycle of textbook adoption",
+      "behavior_pattern": "Exponential growth in intelligent textbook adoption",
+      "position": {"x": 290, "y": 400},
+      "is_primary": true
+    },
+    {
+      "id": "microsim_growth_loop",
+      "type": "reinforcing",
+      "path": ["global_microsims", "intelligent_textbooks", "teachers_aware", "demand_microsims", "global_microsims"],
+      "label": "MicroSim Growth Loop",
+      "description": "More MicroSims enable more textbooks, which spread awareness, which creates demand for more MicroSims",
+      "behavior_pattern": "Exponential growth in MicroSim development and availability",
+      "position": {"x": 300, "y": 270},
+      "is_primary": true
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "What happens to the system if a major publisher releases an intelligent textbook with MicroSims?",
+      "How might barriers to MicroSim creation (technical skills, time) slow down the growth loops?",
+      "What role do open-source MicroSim libraries play in accelerating network effects?",
+      "How could this model apply to other educational technology innovations?",
+      "What leverage points could accelerate teacher awareness most effectively?"
+    ],
+    "key_insights": [
+      "Network effects create exponential growth - early momentum is critical",
+      "Teacher awareness is the key variable connecting both reinforcing loops",
+      "Lowering barriers to MicroSim creation accelerates the entire system",
+      "Quality of MicroSims affects the strength of the awareness-to-demand links",
+      "The system exhibits classic 'success breeds success' dynamics"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Linear growth: More microsims means proportionally more textbooks",
+        "correction": "The reinforcing loops create accelerating, exponential growth patterns"
+      },
+      {
+        "misconception": "Supply drives adoption: Just building more MicroSims will increase usage",
+        "correction": "Teacher awareness is the critical link - MicroSims must be discovered through textbooks"
+      }
+    ],
+    "extension_activities": [
+      "Identify potential balancing loops that could limit growth (e.g., teacher time constraints)",
+      "Add nodes for 'Student Learning Outcomes' and trace new feedback paths",
+      "Compare this model to other network effect systems like social media platforms",
+      "Design an intervention strategy to accelerate the growth loops"
+    ],
+    "related_concepts": [
+      "Network Effects",
+      "Reinforcing Loops",
+      "Technology Adoption",
+      "Diffusion of Innovations",
+      "Platform Economics"
+    ]
+  }
+}
