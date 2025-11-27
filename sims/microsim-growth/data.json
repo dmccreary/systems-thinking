@@ -30,7 +30,7 @@
     {
       "id": "intelligent_textbooks",
       "label": "Intelligent Textbooks",
-      "position": {"x": 470, "y": 300},
+      "position": {"x": 550, "y": 300},
       "type": "stock",
       "description": "Digital textbooks that incorporate interactive MicroSims to enhance learning",
       "examples": ["Systems Thinking for Technologists", "Graph Algorithms textbook", "Beginning Electronics"],
@@ -48,7 +48,7 @@
     {
       "id": "demand_textbooks",
       "label": "Demand for\nTextbooks",
-      "position": {"x": 130, "y": 400},
+      "position": {"x": 300, "y": 300},
       "type": "variable",
       "description": "Market demand for intelligent textbooks driven by teacher awareness and adoption",
       "examples": ["School district adoptions", "University course requirements", "Self-directed learners"],
@@ -57,7 +57,7 @@
     {
       "id": "demand_microsims",
       "label": "Demand for\nMicroSims",
-      "position": {"x": 130, "y": 200},
+      "position": {"x": 100, "y": 300},
       "type": "variable",
       "description": "Demand for new MicroSims to support additional topics and learning objectives",
       "examples": ["Custom simulation requests", "Open source contributions", "Publisher commissions"],
@@ -146,7 +146,7 @@
       "label": "Textbook Growth Loop",
       "description": "More textbooks create awareness, which drives demand for more textbooks - a virtuous cycle of textbook adoption",
       "behavior_pattern": "Exponential growth in intelligent textbook adoption",
-      "position": {"x": 290, "y": 400},
+      "position": {"x": 400, "y": 360},
       "is_primary": true
     },
     {
@@ -156,7 +156,7 @@
       "label": "MicroSim Growth Loop",
       "description": "More MicroSims enable more textbooks, which spread awareness, which creates demand for more MicroSims",
       "behavior_pattern": "Exponential growth in MicroSim development and availability",
-      "position": {"x": 300, "y": 270},
+      "position": {"x": 300, "y": 190},
       "is_primary": true
     }
   ],
