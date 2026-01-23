@@ -44,5 +44,11 @@
     "interactive-demo",
     "network",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of growth network effect",
+    "Apply growth network effect to solve problems",
+    "Visualize and interpret growth network effect relationships",
+    "Experiment with parameters to observe their effects on growth network effect"
   ]
 }

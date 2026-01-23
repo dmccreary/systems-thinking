@@ -42,5 +42,11 @@
     "network",
     "timeline",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of cld editor",
+    "Apply cld editor to solve problems",
+    "Visualize and interpret cld editor relationships",
+    "Experiment with parameters to observe their effects on cld editor"
   ]
 }

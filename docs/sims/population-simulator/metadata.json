@@ -43,5 +43,11 @@
     "network",
     "timeline",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of population simulator with causal loop diagram",
+    "Apply population simulator with causal loop diagram to solve problems",
+    "Visualize and interpret population simulator with causal loop diagram relationships",
+    "Experiment with parameters to observe their effects on population simulator with causal loop diagram"
   ]
 }

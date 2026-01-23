@@ -42,5 +42,11 @@
     "interactive-demo",
     "network",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of infographic workflow for creating a causal loop diagram",
+    "Apply infographic workflow for creating a causal loop diagram to solve problems",
+    "Visualize and interpret infographic workflow for creating a causal loop diagram relationships",
+    "Experiment with parameters to observe their effects on infographic workflow for creating a causal loop diagram"
   ]
 }

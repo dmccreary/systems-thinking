@@ -43,5 +43,11 @@
     "network",
     "timeline",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of capability maturity model for systems thinking",
+    "Apply capability maturity model for systems thinking to solve problems",
+    "Visualize and interpret capability maturity model for systems thinking relationships",
+    "Experiment with parameters to observe their effects on capability maturity model for systems thinking"
   ]
 }

@@ -36,5 +36,11 @@
     "graph",
     "interactive-demo",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of the tragedy of the commons",
+    "Apply the tragedy of the commons to solve problems",
+    "Visualize and interpret the tragedy of the commons relationships",
+    "Experiment with parameters to observe their effects on the tragedy of the commons"
   ]
 }

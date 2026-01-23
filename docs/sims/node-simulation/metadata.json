@@ -31,5 +31,11 @@
     "chart",
     "network",
     "map"
+  ],
+  "learningObjectives": [
+    "Visualize node simulator test at the molecular level",
+    "Understand the relationships in node simulator test",
+    "Explore how variables affect node simulator test",
+    "Test understanding of node simulator test through interactive exercises"
   ]
 }

@@ -24,7 +24,11 @@
       "Identify which leverage level is appropriate for different change strategies",
       "Navigate to detailed explanations of each leverage point"
     ],
-    "bloomsTaxonomy": ["Understand", "Apply", "Analyze"],
+    "bloomsTaxonomy": [
+      "Understand",
+      "Apply",
+      "Analyze"
+    ],
     "duration": "5-10 minutes",
     "prerequisites": "Basic understanding of systems thinking concepts"
   },
@@ -32,7 +36,9 @@
     "framework": "p5.js",
     "canvasDimensions": "800x630",
     "responsive": "Width-responsive (scales to container)",
-    "dependencies": ["p5.js 1.11.10 CDN"],
+    "dependencies": [
+      "p5.js 1.11.10 CDN"
+    ],
     "accessibility": {
       "screenReader": "Canvas description provided via describe() function",
       "colorContrast": "High contrast text, zone colors distinguishable"
@@ -87,5 +93,27 @@
     "Paradigm Shifts",
     "Policy Design",
     "Social Change"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of leverage points iceberg",
+    "Explore leverage points iceberg through interactive visualization",
+    "Apply knowledge of leverage points iceberg to solve problems",
+    "Experiment with parameters to observe their effects on leverage points iceberg"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
   ]
 }
