@@ -1,0 +1,91 @@
+{
+  "$schema": "https://github.com/dmccreary/microsims/blob/main/src/microsim-schema/microsim-schema.json",
+  "title": "Leverage Points Iceberg",
+  "description": "An interactive visualization of Donella Meadows' 12 Leverage Points using the iceberg metaphor. Surface interventions are visible but have low impact; deeper interventions are hidden but transformative.",
+  "creator": "Dan McCreary",
+  "date": "2025-12-03",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "subject": [
+    "Systems Thinking",
+    "Ethics",
+    "Policy Design",
+    "Leverage Points"
+  ],
+  "educationalMetadata": {
+    "gradeLevel": "High School to Undergraduate",
+    "subjectArea": "Social Sciences / Systems Thinking",
+    "topic": "Donella Meadows' 12 Leverage Points for System Intervention",
+    "learningObjectives": [
+      "Understand the hierarchy of intervention effectiveness in complex systems",
+      "Recognize why surface-level interventions often fail to create lasting change",
+      "Identify which leverage level is appropriate for different change strategies",
+      "Navigate to detailed explanations of each leverage point"
+    ],
+    "bloomsTaxonomy": ["Understand", "Apply", "Analyze"],
+    "duration": "5-10 minutes",
+    "prerequisites": "Basic understanding of systems thinking concepts"
+  },
+  "technicalMetadata": {
+    "framework": "p5.js",
+    "canvasDimensions": "800x630",
+    "responsive": "Width-responsive (scales to container)",
+    "dependencies": ["p5.js 1.11.10 CDN"],
+    "accessibility": {
+      "screenReader": "Canvas description provided via describe() function",
+      "colorContrast": "High contrast text, zone colors distinguishable"
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "hover",
+        "description": "Hover over iceberg layers to see detailed information in the right panel"
+      },
+      {
+        "type": "click",
+        "description": "Click any layer to navigate to its detailed explanation in Chapter 6"
+      }
+    ],
+    "visualElements": [
+      {
+        "name": "Iceberg",
+        "description": "Left side visualization showing 10 leverage point layers with animated waterline"
+      },
+      {
+        "name": "Info Panel",
+        "description": "Right side panel showing layer details on hover or introduction text by default"
+      },
+      {
+        "name": "Zone Legend",
+        "description": "Color-coded legend showing Shallow, Structural, Deep, and Transformative zones"
+      }
+    ]
+  },
+  "simulationModel": {
+    "modelType": "Conceptual hierarchy visualization",
+    "variables": [
+      "Layer hover state",
+      "Wave animation offset",
+      "Glow animation phase"
+    ],
+    "assumptions": [
+      "Leverage points are hierarchical with deeper points being more effective",
+      "The iceberg metaphor accurately represents visibility vs effectiveness tradeoff"
+    ],
+    "limitations": [
+      "Levels 2 and 3 are combined with Level 4 for simplicity",
+      "Actual effectiveness depends heavily on context and implementation"
+    ]
+  },
+  "relatedConcepts": [
+    "Systems Thinking",
+    "Donella Meadows",
+    "Feedback Loops",
+    "Paradigm Shifts",
+    "Policy Design",
+    "Social Change"
+  ]
+}

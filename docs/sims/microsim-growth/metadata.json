@@ -1,0 +1,48 @@
+{
+  "title": "MicroSim Growth Network Effect",
+  "description": "A reinforcing feedback system showing how MicroSims, Intelligent Textbooks, and Teacher Awareness create a virtuous cycle of growth through network effects.",
+  "subject": "Mathematics",
+  "topic": "MicroSim Growth Network Effect",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vis-network",
+  "url": "https://dmccreary.github.io/systems-thinking/sims/microsim-growth/",
+  "identifier": "https://dmccreary.github.io/systems-thinking/sims/microsim-growth/",
+  "_source": {
+    "repo": "systems-thinking",
+    "sim": "microsim-growth",
+    "github_url": "https://github.com/dmccreary/systems-thinking/tree/main/docs/sims/microsim-growth",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "map"
+  ]
+}

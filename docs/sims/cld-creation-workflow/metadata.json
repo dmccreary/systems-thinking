@@ -1,0 +1,46 @@
+{
+  "title": "Infographic Workflow for Creating a Causal Loop Diagram",
+  "description": "An interactive infographic-style workflow for the 12 steps in creating a causal loop diagram",
+  "subject": "Mathematics",
+  "topic": "Infographic Workflow for Creating a Causal Loop Diagram",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/systems-thinking/sims/cld-creation-workflow/",
+  "identifier": "https://dmccreary.github.io/systems-thinking/sims/cld-creation-workflow/",
+  "_source": {
+    "repo": "systems-thinking",
+    "sim": "cld-creation-workflow",
+    "github_url": "https://github.com/dmccreary/systems-thinking/tree/main/docs/sims/cld-creation-workflow",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "map"
+  ]
+}

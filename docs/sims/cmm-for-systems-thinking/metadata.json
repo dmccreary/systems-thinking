@@ -1,0 +1,47 @@
+{
+  "title": "Capability Maturity Model for Systems Thinking",
+  "description": "An interactive infographic microsim that shows the five-level of a capability-maturity model for enterprise systems thinking.",
+  "subject": "Mathematics",
+  "topic": "Capability Maturity Model for Systems Thinking",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/systems-thinking/sims/cmm-for-systems-thinking/",
+  "identifier": "https://dmccreary.github.io/systems-thinking/sims/cmm-for-systems-thinking/",
+  "_source": {
+    "repo": "systems-thinking",
+    "sim": "cmm-for-systems-thinking",
+    "github_url": "https://github.com/dmccreary/systems-thinking/tree/main/docs/sims/cmm-for-systems-thinking",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Biology",
+    "Statistics",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "timeline",
+    "map"
+  ]
+}

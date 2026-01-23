@@ -1,0 +1,47 @@
+{
+  "title": "Population Simulator with Causal Loop Diagram",
+  "description": "A graphic novel about Tragedy of the Commons.",
+  "subject": "Mathematics",
+  "topic": "Population Simulator with Causal Loop Diagram",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/systems-thinking/sims/population-simulator/",
+  "identifier": "https://dmccreary.github.io/systems-thinking/sims/population-simulator/",
+  "_source": {
+    "repo": "systems-thinking",
+    "sim": "population-simulator",
+    "github_url": "https://github.com/dmccreary/systems-thinking/tree/main/docs/sims/population-simulator",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Biology",
+    "Statistics",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "timeline",
+    "map"
+  ]
+}
