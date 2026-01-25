@@ -49,5 +49,29 @@
     "Apply population simulator with causal loop diagram to solve problems",
     "Visualize and interpret population simulator with causal loop diagram relationships",
     "Experiment with parameters to observe their effects on population simulator with causal loop diagram"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "summarize",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

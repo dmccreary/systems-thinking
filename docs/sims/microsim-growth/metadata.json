@@ -50,5 +50,28 @@
     "Apply growth network effect to solve problems",
     "Visualize and interpret growth network effect relationships",
     "Experiment with parameters to observe their effects on growth network effect"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "interpret",
+      "summarize",
+      "apply",
+      "illustrate",
+      "use"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }

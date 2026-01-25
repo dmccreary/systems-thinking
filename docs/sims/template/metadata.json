@@ -42,5 +42,24 @@
     "Apply the tragedy of the commons to solve problems",
     "Visualize and interpret the tragedy of the commons relationships",
     "Experiment with parameters to observe their effects on the tragedy of the commons"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "guided-discovery",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "use",
+      "experiment"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "corrective"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

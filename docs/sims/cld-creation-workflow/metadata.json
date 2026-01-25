@@ -48,5 +48,30 @@
     "Apply infographic workflow for creating a causal loop diagram to solve problems",
     "Visualize and interpret infographic workflow for creating a causal loop diagram relationships",
     "Experiment with parameters to observe their effects on infographic workflow for creating a causal loop diagram"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "describe",
+      "explain",
+      "summarize",
+      "apply"
+    ],
+    "pacing": "step-through",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

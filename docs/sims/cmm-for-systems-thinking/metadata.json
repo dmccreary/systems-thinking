@@ -49,5 +49,30 @@
     "Apply capability maturity model for systems thinking to solve problems",
     "Visualize and interpret capability maturity model for systems thinking relationships",
     "Experiment with parameters to observe their effects on capability maturity model for systems thinking"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "explain",
+      "interpret"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }

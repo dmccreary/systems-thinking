@@ -37,5 +37,23 @@
     "Understand the relationships in node simulator test",
     "Explore how variables affect node simulator test",
     "Test understanding of node simulator test through interactive exercises"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "none"
+    ],
+    "interactionStyle": "respond"
+  }
 }

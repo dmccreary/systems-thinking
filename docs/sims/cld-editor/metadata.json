@@ -48,5 +48,28 @@
     "Apply cld editor to solve problems",
     "Visualize and interpret cld editor relationships",
     "Experiment with parameters to observe their effects on cld editor"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "demonstrate",
+      "illustrate",
+      "implement",
+      "analyze"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "respond"
+  }
 }
