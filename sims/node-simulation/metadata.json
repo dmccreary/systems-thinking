@@ -1,0 +1,59 @@
+{
+  "title": "Node Simulator Test",
+  "description": "[Run the Node Simulation Library](main.html)",
+  "subject": "Chemistry",
+  "topic": "Node Simulator Test",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "chart.js",
+  "url": "https://dmccreary.github.io/systems-thinking/sims/node-simulation/",
+  "identifier": "https://dmccreary.github.io/systems-thinking/sims/node-simulation/",
+  "_source": {
+    "repo": "systems-thinking",
+    "sim": "node-simulation",
+    "github_url": "https://github.com/dmccreary/systems-thinking/tree/main/docs/sims/node-simulation",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "visualizationType": [
+    "simulation",
+    "chart",
+    "network",
+    "map"
+  ],
+  "learningObjectives": [
+    "Visualize node simulator test at the molecular level",
+    "Understand the relationships in node simulator test",
+    "Explore how variables affect node simulator test",
+    "Test understanding of node simulator test through interactive exercises"
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "none"
+    ],
+    "interactionStyle": "respond"
+  }
+}

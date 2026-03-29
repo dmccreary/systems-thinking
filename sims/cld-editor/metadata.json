@@ -1,0 +1,75 @@
+{
+  "title": "CLD Editor",
+  "description": "[Run the CLD Editor v1](./main.html)",
+  "subject": "Mathematics",
+  "topic": "CLD Editor",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vis-network",
+  "url": "https://dmccreary.github.io/systems-thinking/sims/cld-editor/",
+  "identifier": "https://dmccreary.github.io/systems-thinking/sims/cld-editor/",
+  "_source": {
+    "repo": "systems-thinking",
+    "sim": "cld-editor",
+    "github_url": "https://github.com/dmccreary/systems-thinking/tree/main/docs/sims/cld-editor",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "timeline",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of cld editor",
+    "Apply cld editor to solve problems",
+    "Visualize and interpret cld editor relationships",
+    "Experiment with parameters to observe their effects on cld editor"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "demonstrate",
+      "illustrate",
+      "implement",
+      "analyze"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "respond"
+  }
+}
