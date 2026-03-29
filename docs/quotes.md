@@ -222,6 +222,144 @@
 
 100. “To understand anything, you must understand its context.” — Gregory Bateson
 
+## Native American Systems Thinking Ideas
+
+- "All my relations (Mitákuye Oyás’iŋ)" — Lakota (Sioux)
+
+- "We are all connected; what we do to the Earth, we do to ourselves." — Chief Seattle (Duwamish)
+
+- "The circle represents the cycles of life and the interconnectedness of all things." — Plains Tribes (Medicine Wheel Teaching)
+
+- "Everything is in relationship; nothing exists in isolation." — Native American Concept
+
+- "Think seven generations ahead when making decisions." — Haudenosaunee (Iroquois Confederacy)
+
+- "In our every deliberation, we must consider the impact on the next seven generations." — Great Law of Peace (Haudenosaunee)
+
+- "The Earth does not belong to us; we belong to the Earth." — Often attributed to Chief Seattle (Duwamish)
+
+- "Take only what you need and leave the rest." — Native American Concept
+
+- "Give thanks for all things; gratitude maintains balance." — Haudenosaunee Thanksgiving Address
+
+- "Balance is the key to life; all things must exist in harmony." — Native American Concept
+
+- "The Medicine Wheel teaches balance of mind, body, spirit, and community." — Plains Tribes
+
+- "Time is cyclical; life moves in seasons, not straight lines." — Native American Concept
+
+- "Nature teaches us through cycles of renewal." — Native American Concept
+
+- "Every action has consequences that ripple through the web of life." — Native American Concept
+
+- "Animals, plants, and humans are equal participants in the web of life." — Native American Concept
+
+- "We learn by observing the land and listening to it." — Native American Concept
+
+- "The land is our teacher." — Native American Concept
+
+- "Knowledge comes from place." — Native American Concept
+
+- "Storytelling is how we remember and understand the world." — Native American Concept
+
+- "Stories carry the laws of life." — Native American Concept
+
+- "Coyote teaches through mistakes and unintended consequences." — Many Western Tribes (Trickster Tradition)
+
+- "Wisdom is passed through generations, not owned by individuals." — Native American Concept
+
+- "The community is more important than the individual." — Native American Concept
+
+- "We are defined by our relationships." — Native American Concept
+
+- "Decisions are made with the whole community in mind." — Native American Concept
+
+- "Leadership is service to the people." — Native American Concept
+
+- "A leader listens more than they speak." — Native American Concept
+
+- "Consensus builds stronger decisions than authority." — Haudenosaunee (Iroquois Confederacy)
+
+- "Harmony is more important than control." — Native American Concept
+
+- "You cannot separate people from nature." — Native American Concept
+
+- "Water is life (Mni Wiconi)." — Lakota (Sioux)
+
+- "Respect all living things." — Native American Concept
+
+- "The Earth is a living system." — Native American Concept
+
+- "Diversity in nature creates strength." — Native American Concept
+
+- "The Three Sisters grow stronger together." — Haudenosaunee (Corn, Beans, Squash)
+
+- "Cooperation ensures survival." — Native American Concept
+
+- "Interdependence is the law of life." — Native American Concept
+
+- "Everything has a spirit." — Animistic traditions (Many Tribes)
+
+- "Listen to the silence; it teaches." — Native American Concept
+
+- "Humility is necessary to understand the world." — Native American Concept
+
+- "Humans are not above nature." — Native American Concept
+
+- "We are caretakers, not owners." — Native American Concept
+
+- "The land cannot be owned; it can only be respected." — Native American Concept
+
+- "Leave the world better for those who come after." — Native American Concept
+
+- "Sustainability is a responsibility, not a choice." — Native American Concept
+
+- "Overuse leads to imbalance." — Native American Concept
+
+- "Healing requires restoring balance." — Native American Concept
+
+- "Spiritual, physical, and social systems are inseparable." — Native American Concept
+
+- "Learning never ends; it flows through life." — Native American Concept
+
+- "Observe patterns in nature to understand life." — Native American Concept
+
+- "The stars, animals, and seasons are guides." — Native American Concept
+
+- "Knowledge is embedded in relationships." — Native American Concept
+
+- "Respect the wisdom of elders." — Native American Concept
+
+- "Children are the future of the system." — Native American Concept
+
+- "The past, present, and future are connected." — Native American Concept
+
+- "Ceremony reinforces balance and connection." — Native American Concept
+
+- "Gratitude maintains system stability." — Haudenosaunee
+
+- "Everything must be used with respect and purpose." — Native American Concept
+
+- "Waste disrupts natural balance." — Native American Concept
+
+- "Adapt to change rather than resist it." — Native American Concept
+
+- "Resilience comes from flexibility and diversity." — Native American Concept
+
+- "Nature rewards cooperation, not domination." — Native American Concept
+
+- "The web of life cannot be broken without consequences." — Native American Concept
+
+- "We are part of a sacred circle." — Native American Concept
+
+- "Healing the land heals the people." — Native American Concept
+
+- "Well-being is collective, not individual." — Native American Concept
+
+- "Everything we do affects the whole." — Native American Concept
+
+- "Systems remain healthy through balance, respect, and reciprocity." — Native American Concept
+
 ## Longer Quotes
 
 #### Structure and Behavior
