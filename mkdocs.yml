@@ -297,7 +297,10 @@ extra_javascript:
 plugins:
   - search
   - social
-  - social_override
+
+hooks:
+  - plugins/social_override.py
+
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
