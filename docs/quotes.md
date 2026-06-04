@@ -379,6 +379,8 @@ If a factory is torn down but the rationality which produced it is left standing
 
 Systems are everywhere and they impact every aspect of our wellbeing. You are part of many systems and systems within systems – the company you work for, the industry you work in, the national economy, the global economy. You’ve participated in the education system and healthcare system of your country. And if you live in a democracy, you have the opportunity to vote for candidates to assume government positions and vote for or against local laws  that you most likely have limited and biased information about.
 
+From [Systems and Us: systemsandus.com](https://systemsandus.com/systems-thinking/)
+
 #### Feedback
 Simple causal reasoning about a feedback system is difficult because the first system influences the second and second system influences the first, leading to a circular argument. This makes reasoning based upon cause and effect tricky, and it is necessary to analyze the system as a whole.
 
