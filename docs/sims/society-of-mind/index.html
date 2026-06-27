@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Society of Mind – Concept Knowledge Graph</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #f4f6fa;
+      color: #222;
+    }
+    h1 { text-align: center; margin: 0 0 4px; font-size: 1.6em; color: #1a1a2e; }
+    .subtitle { text-align: center; color: #555; margin-bottom: 14px; font-size: 0.95em; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .filter-btn {
+      padding: 6px 14px;
+      border: 2px solid #aaa;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.82em;
+      font-weight: 600;
+      background: white;
+      transition: all 0.2s;
+    }
+    .filter-btn.active { color: white; }
+    .filter-btn:hover { opacity: 0.85; }
+    #graph-container {
+      width: 100%;
+      height: 680px;
+      border: 1px solid #ccd;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .action-btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    .action-btn {
+      padding: 8px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: white;
+    }
+    #btn-reset { background: #4CAF50; }
+    #btn-physics { background: #2196F3; }
+    #btn-fit { background: #FF9800; }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin: 12px 0 6px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8em;
+    }
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 2px solid rgba(0,0,0,0.3);
+    }
+    #info-panel {
+      max-width: 900px;
+      margin: 10px auto 0;
+      padding: 10px 16px;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      font-size: 0.88em;
+      min-height: 50px;
+      display: none;
+    }
+    #info-panel h3 { margin: 0 0 4px; font-size: 1em; }
+    #info-panel p { margin: 0; color: #444; }
+    .chapter-tag {
+      display: inline-block;
+      background: #e8eaf6;
+      color: #3949ab;
+      border-radius: 10px;
+      padding: 1px 8px;
+      font-size: 0.78em;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+    footer { text-align: center; margin-top: 12px; font-size: 0.8em; color: #888; }
+  </style>
+</head>
+<body>
+
+<h1>Society of Mind — Concept Knowledge Graph</h1>
+<p class="subtitle">Marvin Minsky (1986) · 30 chapters · 270 essays · Interactive concept map — click any node to learn more</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#D2E5FF;border-color:#2B7CE9"></div> Core Theory</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#C8F7C5;border-color:#27AE60"></div> Agents &amp; Agency</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#E8D5F5;border-color:#8E44AD"></div> Memory Structures</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#FFE0B2;border-color:#E65100"></div> Representation (Frames)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#FFF9C4;border-color:#F9A825"></div> Cognitive Processes</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#FFCDD2;border-color:#C62828"></div> Self &amp; Consciousness</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#B2EBF2;border-color:#00838F"></div> Language</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#F5F5F5;border-color:#757575"></div> Control &amp; Suppression</div>
+</div>
+
+<div class="controls">
+  <button class="filter-btn active" id="f-all" onclick="filterGroup('all')" style="border-color:#555;background:#555;color:white">All</button>
+  <button class="filter-btn" id="f-core" onclick="filterGroup('core')" style="border-color:#2B7CE9">Core Theory</button>
+  <button class="filter-btn" id="f-agent" onclick="filterGroup('agent')" style="border-color:#27AE60">Agents</button>
+  <button class="filter-btn" id="f-memory" onclick="filterGroup('memory')" style="border-color:#8E44AD">Memory</button>
+  <button class="filter-btn" id="f-frame" onclick="filterGroup('frame')" style="border-color:#E65100">Frames</button>
+  <button class="filter-btn" id="f-process" onclick="filterGroup('process')" style="border-color:#F9A825">Processes</button>
+  <button class="filter-btn" id="f-self" onclick="filterGroup('self')" style="border-color:#C62828">Self</button>
+  <button class="filter-btn" id="f-language" onclick="filterGroup('language')" style="border-color:#00838F">Language</button>
+  <button class="filter-btn" id="f-control" onclick="filterGroup('control')" style="border-color:#757575">Control</button>
+</div>
+
+<div id="graph-container"></div>
+
+<div class="action-btns">
+  <button class="action-btn" id="btn-reset" onclick="network.stabilize(200)">Re-Layout</button>
+  <button class="action-btn" id="btn-physics" onclick="togglePhysics()">Toggle Physics</button>
+  <button class="action-btn" id="btn-fit" onclick="network.fit()">Fit View</button>
+</div>
+
+<div id="info-panel">
+  <h3 id="info-title">Click a node to see details</h3>
+  <p id="info-desc"></p>
+</div>
+
+<footer>
+  Based on Marvin Minsky, <em>The Society of Mind</em> (1986) ·
+  <a href="https://www.aurellem.org/society-of-mind/index.html" target="_blank">aurellem.org archive</a>
+</footer>
+
+<script>
+// ── Node definitions ──────────────────────────────────────────────────────────
+// groups: core | agent | memory | frame | process | self | language | control
+
+var COLORS = {
+  core:     { background:'#D2E5FF', border:'#2B7CE9', highlight:{background:'#A9C9FF',border:'#1456BF'} },
+  agent:    { background:'#C8F7C5', border:'#27AE60', highlight:{background:'#A5EDA2',border:'#1E8449'} },
+  memory:   { background:'#E8D5F5', border:'#8E44AD', highlight:{background:'#D5B6F0',border:'#6C2F8A'} },
+  frame:    { background:'#FFE0B2', border:'#E65100', highlight:{background:'#FFCC80',border:'#BF360C'} },
+  process:  { background:'#FFF9C4', border:'#F9A825', highlight:{background:'#FFF176',border:'#C67C00'} },
+  self:     { background:'#FFCDD2', border:'#C62828', highlight:{background:'#EF9A9A',border:'#8E0000'} },
+  language: { background:'#B2EBF2', border:'#00838F', highlight:{background:'#80DEEA',border:'#005A66'} },
+  control:  { background:'#F5F5F5', border:'#757575', highlight:{background:'#E0E0E0',border:'#424242'} }
+};
+
+var nodeData = [
+  // ── CORE THEORY ──
+  { id:1,  label:'Society\nof Mind',   group:'core',    ch:'Ch 1',  desc:'The central thesis: mind is a society of many small, simple agents. Intelligence emerges from their interactions, not from any single master process.' },
+  { id:2,  label:'Emergence',          group:'core',    ch:'Ch 1',  desc:'Complex intelligent behavior arises from many simple, mindless agents working together. No single agent is intelligent on its own.' },
+  { id:3,  label:'Intelligence',       group:'core',    ch:'Ch 1',  desc:'Not a single thing but a collection of different abilities, each performed by specialized agents interacting in society.' },
+  { id:4,  label:'Mind',               group:'core',    ch:'Ch 1',  desc:'A network of interacting processes (agents). It has no single seat or controller — it is distributed across many agencies.' },
+
+  // ── AGENTS & AGENCY ──
+  { id:10, label:'Agent',              group:'agent',   ch:'Ch 1',  desc:'The fundamental building block. A simple process that does one narrow task — it has no knowledge of what other agents do or why.' },
+  { id:11, label:'Agency',             group:'agent',   ch:'Ch 2',  desc:'A collection of agents organized to accomplish a larger goal. Agencies nest inside larger agencies, forming hierarchies.' },
+  { id:12, label:'Sub-agent',          group:'agent',   ch:'Ch 2',  desc:'An agent that serves as a component within a larger agency. Recursively, an agency is just agents operating together.' },
+  { id:13, label:'Builder Agency',     group:'agent',   ch:'Ch 2',  desc:'Example agency for building a block tower: sub-agents include Begin, Add, End, Find, Get, Put, and Move.' },
+  { id:14, label:'Difference Engine',  group:'agent',   ch:'Ch 18', desc:'A hypothetical agency that detects differences between current state and goal state, then recruits sub-agents to eliminate those differences.' },
+  { id:15, label:'Distinction Agent',  group:'agent',   ch:'Ch 9',  desc:'An agent that detects a specific difference between two things — the primitive component of comparison and learning.' },
+
+  // ── MEMORY STRUCTURES ──
+  { id:20, label:'K-line',             group:'memory',  ch:'Ch 8',  desc:'Knowledge Line. A wire-like structure that links together all agents active when you learned or solved something, so you can re-activate that mental state later.' },
+  { id:21, label:'Memory',             group:'memory',  ch:'Ch 8',  desc:'Not a single store but a set of processes. Old experiences are reinstated by activating K-lines that re-trigger the agents that were active at the time.' },
+  { id:22, label:'Neme',               group:'memory',  ch:'Ch 19', desc:'A memory node that represents a specific concept. Each neme is connected to many agents across different modalities.' },
+  { id:23, label:'Polyneme',           group:'memory',  ch:'Ch 19', desc:'A node connected to many different agents at once, allowing a single activation to spread meaning across memory, vision, touch, etc.' },
+  { id:24, label:'Pronome',            group:'memory',  ch:'Ch 21', desc:'A mental "pointer" that references a particular role-slot in a frame — like a pronoun references a person in language.' },
+  { id:25, label:'Paranome',           group:'memory',  ch:'Ch 21', desc:'Coordinates the use of multiple representations simultaneously, allowing a pronome to mean different things in different frames at once.' },
+  { id:26, label:'Mental State',       group:'memory',  ch:'Ch 8',  desc:'The overall configuration of active agents at any moment. K-lines record and restore mental states.' },
+
+  // ── REPRESENTATION (FRAMES) ──
+  { id:30, label:'Frame',              group:'frame',   ch:'Ch 24', desc:'A data structure representing a stereotyped situation. Contains slots for expected properties, with defaults when slots are unfilled.' },
+  { id:31, label:'Slot',               group:'frame',   ch:'Ch 24', desc:'A variable position within a frame that holds a specific piece of information about the situation.' },
+  { id:32, label:'Default Assumption', group:'frame',   ch:'Ch 24', desc:'The value a slot takes when no specific information is given — the "most likely" value based on experience. Central to common-sense reasoning.' },
+  { id:33, label:'Frame-Array',        group:'frame',   ch:'Ch 25', desc:'A set of frames representing different views or transformations of the same situation (e.g., seeing an object from different angles).' },
+  { id:34, label:'Trans-Frame',        group:'frame',   ch:'Ch 21', desc:'A frame specialized for representing transitions — actions, motions, and changes between states. Has Origin, Trajectory, and Destination slots.' },
+  { id:35, label:'Language-Frame',     group:'frame',   ch:'Ch 26', desc:'Frames used to process and produce language. They map grammatical roles (subject, object) onto frame slots (actor, action, recipient).' },
+  { id:36, label:'Paranome',           group:'frame',   ch:'Ch 21', desc:'(see Memory) — also a frame-level structure that coordinates pronomes across multiple simultaneously active frames.' },
+
+  // ── COGNITIVE PROCESSES ──
+  { id:40, label:'Learning',           group:'process', ch:'Ch 11', desc:'Minsky models learning as the creation of new K-lines and new agents. Papert\'s Principle: new abilities come from new management of existing skills, not new primitives.' },
+  { id:41, label:"Papert's Principle", group:'process', ch:'Ch 11', desc:'New levels of ability come not from adding new low-level skills but from building new higher-level agencies to manage existing ones.' },
+  { id:42, label:'Problem Solving',    group:'process', ch:'Ch 7',  desc:'Using agencies that detect differences between the current state and a goal, then activating agents to reduce those differences.' },
+  { id:43, label:'Reasoning',          group:'process', ch:'Ch 18', desc:'Using chains of frames and analogy to draw inferences. Minsky argues formal logic is insufficient — reasoning relies on rich knowledge structures.' },
+  { id:44, label:'Analogy',            group:'process', ch:'Ch 14', desc:'Reformulating a problem by mapping it onto a familiar frame. The core of creative insight and flexible thinking.' },
+  { id:45, label:'Reformulation',      group:'process', ch:'Ch 14', desc:'Changing the way a problem is represented. When a plan fails, the mind finds a new frame (analogy) that makes the problem tractable.' },
+  { id:46, label:'Perception',         group:'process', ch:'Ch 13', desc:'Seeing is not passive recording — it is an active process of matching incoming data to frames, filling in missing details with defaults.' },
+  { id:47, label:'Common Sense',       group:'process', ch:'Ch 1',  desc:'The vast collection of default frames, K-lines, and heuristics that allow ordinary reasoning about the everyday world.' },
+  { id:48, label:'Goal',               group:'process', ch:'Ch 7',  desc:'A desired state that activates relevant agents. Goals create sub-goals recursively until primitive agents can act directly.' },
+  { id:49, label:'Sub-goal',           group:'process', ch:'Ch 7',  desc:'A smaller goal created to help achieve a larger one. Goal hierarchies are managed by agencies.' },
+  { id:50, label:'Conflict',           group:'process', ch:'Ch 3',  desc:'When multiple agents compete to become active or pursue incompatible goals, conflict arises and must be resolved.' },
+  { id:51, label:'Compromise',         group:'process', ch:'Ch 3',  desc:'The resolution of competing agents. Censors, priorities, and suppression negotiate between conflicting impulses.' },
+  { id:52, label:'Development',        group:'process', ch:'Ch 17', desc:'How the mind grows: initially simple agencies develop greater complexity through nativism (innate agencies) and learning.' },
+
+  // ── SELF & CONSCIOUSNESS ──
+  { id:60, label:'Self',               group:'self',    ch:'Ch 4',  desc:'Not a real central entity but a representation constructed by agencies. The self is a model the mind builds of itself.' },
+  { id:61, label:'Individuality',      group:'self',    ch:'Ch 5',  desc:'Individual differences arise because each mind builds its own unique arrangement of agents and K-lines through experience.' },
+  { id:62, label:'Consciousness',      group:'self',    ch:'Ch 15', desc:'Minsky resists a simple definition. Awareness is limited access to one\'s own agents — introspection does not reveal how the mind actually works.' },
+  { id:63, label:'Introspection',      group:'self',    ch:'Ch 6',  desc:'Our inner sense of our own thinking is unreliable — we observe our thoughts through agents that have very limited access to the underlying machinery.' },
+  { id:64, label:'Emotion',            group:'self',    ch:'Ch 16', desc:'Emotions are states of certain agencies that influence the activity of others. They are not separate from cognition but intertwined with it.' },
+  { id:65, label:'Insight',            group:'self',    ch:'Ch 6',  desc:'The sudden feeling of understanding. Occurs when a new frame or analogy snaps into place, reorganizing how a problem is represented.' },
+
+  // ── LANGUAGE ──
+  { id:70, label:'Word',               group:'language',ch:'Ch 19', desc:'Words activate polynemes — spreading activation across many memory agencies simultaneously. Meaning is distributed, not stored in one place.' },
+  { id:71, label:'Sentence',           group:'language',ch:'Ch 22', desc:'Processed by language-frames that map grammatical roles onto frame slots, building a structured representation of the described situation.' },
+  { id:72, label:'Context',            group:'language',ch:'Ch 20', desc:'Active frames determine the meaning of ambiguous words and sentences. Context is the currently dominant set of frames.' },
+  { id:73, label:'Ambiguity',          group:'language',ch:'Ch 20', desc:'Multiple frames compete to match an utterance. Context (the dominant active frame) resolves which interpretation wins.' },
+  { id:74, label:'Expression',         group:'language',ch:'Ch 22', desc:'Generating language by activating trans-frames and language-frames and then finding words that match the slots to be communicated.' },
+
+  // ── CONTROL & SUPPRESSION ──
+  { id:80, label:'Censor',             group:'control', ch:'Ch 27', desc:'An agent that suppresses another agent — it learns to prevent unproductive or harmful actions without knowing why they are wrong.' },
+  { id:81, label:'Suppressor',         group:'control', ch:'Ch 27', desc:'Like a censor but acts after an action is taken rather than before. Prevents repeating a mistake.' },
+  { id:82, label:'Joke / Humor',       group:'control', ch:'Ch 27', desc:'Occurs when a censor is unexpectedly triggered by a seemingly innocuous thought. The release of suppressed energy manifests as amusement.' },
+  { id:83, label:'Mental Model',       group:'control', ch:'Ch 30', desc:'An internal simulation of the world, built from frames. Used to predict outcomes before acting and to understand others\' behavior.' },
+  { id:84, label:'Realm of Thought',   group:'control', ch:'Ch 29', desc:'Different cognitive modes (visual, logical, narrative) are separate "realms" with their own agents and frames. Thinking requires crossing realms.' }
+];
+
+// ── Edge definitions ──────────────────────────────────────────────────────────
+var edgeData = [
+  // Core
+  { from:10, to:1,  label:'constitutes', arrows:'to' },
+  { from:11, to:1,  label:'part of',     arrows:'to' },
+  { from:1,  to:2,  label:'exhibits',    arrows:'to' },
+  { from:2,  to:3,  label:'produces',    arrows:'to' },
+  { from:3,  to:4,  label:'property of', arrows:'to' },
+  { from:1,  to:4,  label:'models',      arrows:'to' },
+
+  // Agent hierarchy
+  { from:10, to:11, label:'forms',         arrows:'to' },
+  { from:12, to:11, label:'component of',  arrows:'to' },
+  { from:13, to:11, label:'example of',    arrows:'to' },
+  { from:12, to:10, label:'is a',          arrows:'to' },
+
+  // Agents & processes
+  { from:10, to:20, label:'activates',     arrows:'to' },
+  { from:10, to:48, label:'pursues',       arrows:'to' },
+  { from:48, to:49, label:'creates',       arrows:'to' },
+  { from:49, to:42, label:'drives',        arrows:'to' },
+  { from:14, to:42, label:'enables',       arrows:'to' },
+  { from:15, to:14, label:'feeds',         arrows:'to' },
+  { from:15, to:40, label:'enables',       arrows:'to' },
+
+  // Memory
+  { from:20, to:21, label:'implements',    arrows:'to' },
+  { from:20, to:26, label:'reinstates',    arrows:'to' },
+  { from:21, to:26, label:'stores',        arrows:'to' },
+  { from:22, to:23, label:'part of',       arrows:'to' },
+  { from:23, to:70, label:'activated by',  arrows:'to' },
+  { from:24, to:31, label:'references',    arrows:'to' },
+  { from:25, to:24, label:'coordinates',   arrows:'to' },
+
+  // Frames
+  { from:30, to:31, label:'has',           arrows:'to' },
+  { from:31, to:32, label:'uses',          arrows:'to' },
+  { from:32, to:47, label:'enables',       arrows:'to' },
+  { from:33, to:30, label:'composed of',   arrows:'to' },
+  { from:34, to:30, label:'extends',       arrows:'to' },
+  { from:35, to:30, label:'extends',       arrows:'to' },
+  { from:30, to:21, label:'organizes',     arrows:'to' },
+  { from:30, to:43, label:'used in',       arrows:'to' },
+  { from:30, to:46, label:'used in',       arrows:'to' },
+  { from:34, to:71, label:'used for',      arrows:'to' },
+  { from:35, to:71, label:'parses',        arrows:'to' },
+
+  // Learning
+  { from:40, to:20, label:'creates',       arrows:'to' },
+  { from:41, to:40, label:'explains',      arrows:'to' },
+  { from:52, to:40, label:'enables',       arrows:'to' },
+
+  // Problem solving & reasoning
+  { from:43, to:44, label:'uses',          arrows:'to' },
+  { from:44, to:45, label:'is a type of',  arrows:'to' },
+  { from:45, to:30, label:'selects new',   arrows:'to' },
+  { from:42, to:43, label:'requires',      arrows:'to' },
+
+  // Conflict
+  { from:50, to:10, label:'among',         arrows:'to' },
+  { from:51, to:50, label:'resolves',      arrows:'to' },
+  { from:80, to:51, label:'enables',       arrows:'to' },
+  { from:80, to:10, label:'suppresses',    arrows:'to' },
+  { from:81, to:10, label:'suppresses',    arrows:'to' },
+  { from:80, to:82, label:'produces',      arrows:'to' },
+
+  // Self & consciousness
+  { from:60, to:4,  label:'model of',      arrows:'to' },
+  { from:61, to:60, label:'property of',   arrows:'to' },
+  { from:62, to:26, label:'limited access to', arrows:'to' },
+  { from:63, to:62, label:'mechanism of',  arrows:'to' },
+  { from:64, to:10, label:'influences',    arrows:'to' },
+  { from:65, to:45, label:'result of',     arrows:'to' },
+
+  // Language
+  { from:70, to:22, label:'activates',     arrows:'to' },
+  { from:72, to:73, label:'resolves',      arrows:'to' },
+  { from:72, to:30, label:'active frames', arrows:'to' },
+  { from:73, to:30, label:'selects',       arrows:'to' },
+  { from:74, to:34, label:'uses',          arrows:'to' },
+
+  // Mental models
+  { from:83, to:30, label:'built from',    arrows:'to' },
+  { from:84, to:83, label:'uses',          arrows:'to' },
+  { from:47, to:83, label:'stored in',     arrows:'to' }
+];
+
+// Remove duplicate paranome node (id 36 duplicates 25)
+nodeData = nodeData.filter(function(n){ return n.id !== 36; });
+
+// Build vis DataSets
+var nodes = new vis.DataSet(nodeData.map(function(n){
+  return {
+    id: n.id,
+    label: n.label,
+    color: COLORS[n.group],
+    group: n.group,
+    title: '<b>' + n.label.replace('\n',' ') + '</b> <span style="color:#3949ab;font-size:.85em">' + n.ch + '</span><br>' + n.desc,
+    font: { size: 13, face: 'Segoe UI' },
+    shape: 'box',
+    margin: 8,
+    borderWidth: 2,
+    shadow: true,
+    // store metadata for click panel
+    _ch: n.ch,
+    _desc: n.desc
+  };
+}));
+
+var edges = new vis.DataSet(edgeData.map(function(e, i){
+  return {
+    id: i,
+    from: e.from,
+    to: e.to,
+    label: e.label,
+    arrows: e.arrows,
+    font: { size: 10, align: 'middle', background: 'white', color: '#333' },
+    color: { color: '#888', highlight: '#2B7CE9', hover: '#2B7CE9' },
+    width: 1.5,
+    smooth: { type: 'dynamic' }
+  };
+}));
+
+var container = document.getElementById('graph-container');
+var data = { nodes: nodes, edges: edges };
+
+var options = {
+  nodes: {
+    shape: 'box',
+    font: { size: 13, face: 'Segoe UI' },
+    borderWidth: 2,
+    shadow: true,
+    margin: 8
+  },
+  edges: {
+    font: { size: 10, align: 'middle', background: 'white' },
+    width: 1.5,
+    shadow: false,
+    smooth: { type: 'dynamic' }
+  },
+  physics: {
+    enabled: true,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -120,
+      centralGravity: 0.005,
+      springLength: 180,
+      springConstant: 0.06,
+      damping: 0.4,
+      avoidOverlap: 0.8
+    },
+    stabilization: { enabled: true, iterations: 800, updateInterval: 30 }
+  },
+  layout: { improvedLayout: true },
+  interaction: {
+    hover: true,
+    tooltipDelay: 200,
+    navigationButtons: true,
+    keyboard: true
+  }
+};
+
+var network = new vis.Network(container, data, options);
+
+// Disable physics after stabilization
+network.on('stabilizationIterationsDone', function(){
+  setTimeout(function(){ network.setOptions({ physics: { enabled: false } }); }, 1500);
+});
+
+// Click handler — show info panel
+network.on('click', function(params){
+  if (params.nodes.length > 0) {
+    var node = nodes.get(params.nodes[0]);
+    var panel = document.getElementById('info-panel');
+    var title = document.getElementById('info-title');
+    var desc  = document.getElementById('info-desc');
+    panel.style.display = 'block';
+    title.innerHTML = node.label.replace('\n',' ') + '<span class="chapter-tag">' + node._ch + '</span>';
+    desc.textContent = node._desc;
+  }
+});
+
+// Toggle physics
+var physicsOn = false;
+function togglePhysics(){
+  physicsOn = !physicsOn;
+  network.setOptions({ physics: { enabled: physicsOn } });
+  document.getElementById('btn-physics').textContent = physicsOn ? 'Pause Physics' : 'Toggle Physics';
+}
+
+// Filter by group
+var allNodeIds = nodeData.map(function(n){ return n.id; });
+function filterGroup(group){
+  // Update button styles
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); b.style.background='white'; b.style.color=''; });
+  var btn = document.getElementById('f-' + group);
+  btn.classList.add('active');
+  if (group === 'all') { btn.style.background='#555'; btn.style.color='white'; }
+  else { btn.style.background = COLORS[group].border; btn.style.color='white'; }
+
+  if (group === 'all') {
+    nodes.update(allNodeIds.map(function(id){ return { id:id, hidden: false }; }));
+    edges.update(edgeData.map(function(e,i){ return { id:i, hidden: false }; }));
+  } else {
+    var groupIds = nodeData.filter(function(n){ return n.group===group; }).map(function(n){ return n.id; });
+    var groupSet = new Set(groupIds);
+    nodes.update(allNodeIds.map(function(id){ return { id:id, hidden: !groupSet.has(id) }; }));
+    edges.update(edgeData.map(function(e,i){
+      return { id:i, hidden: !(groupSet.has(e.from) && groupSet.has(e.to)) };
+    }));
+  }
+  network.fit({ animation: true });
+}
+</script>
+</body>
+</html>
