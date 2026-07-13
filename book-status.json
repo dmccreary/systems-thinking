@@ -1,0 +1,233 @@
+{
+  "project": {
+    "title": "Systems Thinking in the Age of AI",
+    "subtitle": "Auto-scanned intelligent textbook",
+    "author": "Dan McCreary",
+    "costPerMTokens": 15,
+    "sessionBudget": {
+      "pro": 900000,
+      "max": 3500000
+    }
+  },
+  "sections": {
+    "scaffold": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "course-description": {
+      "status": "not-started",
+      "tokensTarget": 4000,
+      "tokensDone": 0
+    },
+    "learning-graph": {
+      "status": "not-started",
+      "tokensTarget": 20000,
+      "tokensDone": 0
+    },
+    "chapter-structure": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 15000
+    },
+    "chapter-content": {
+      "countLabel": "14 chapters",
+      "children": [
+        {
+          "n": 1,
+          "title": "Part 1: Foundations of Systems Thinking",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 2,
+          "title": "Chapter 2: The AI Flywheel - Understanding Network Effects",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 3,
+          "title": "Chapter 3: Success to the Successful in Digital Systems",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 4,
+          "title": "Ch 04 Fixes That Fail",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 5,
+          "title": "Ch 05 Limits To Growth",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 6,
+          "title": "Ch 06 Tragedy Of The Commeons",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 7,
+          "title": "Ch 07 Shifting The Burden",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 8,
+          "title": "Chapter 8: Leverage Points and System Interventions",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 9,
+          "title": "Chapter 9: Designing Human-Centered AI Systems",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 10,
+          "title": "Ch 10 Future Systems",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 11,
+          "title": "Busting Silos",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 12,
+          "title": "Knowledge Systems",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 13,
+          "title": "Emergence",
+          "status": "not-started",
+          "tokens": 10000
+        },
+        {
+          "n": 14,
+          "title": "Complex Adaptive Systems",
+          "status": "not-started",
+          "tokens": 10000
+        }
+      ]
+    },
+    "chapter-images": {
+      "status": "not-started",
+      "tokensTarget": 8000,
+      "tokensDone": 0
+    },
+    "microsims": {
+      "countLabel": "10 simulations",
+      "children": [
+        {
+          "n": 1,
+          "title": "Infographic Workflow for Creating a Causal Loop Diagram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 2,
+          "title": "CLD Editor",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 3,
+          "title": "Cld Viewer",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 4,
+          "title": "Capability Maturity Model for Systems Thinking",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 5,
+          "title": "Leverage Points Iceberg",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 6,
+          "title": "MicroSim Growth Network Effect",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 7,
+          "title": "Moores Law",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 8,
+          "title": "Node Simulator Test",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 9,
+          "title": "Population Simulator with Causal Loop Diagram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 10,
+          "title": "The Tragedy of the Commons",
+          "status": "published",
+          "tokens": 5000
+        }
+      ]
+    },
+    "glossary": {
+      "status": "drafted",
+      "tokensTarget": 15000,
+      "tokensDone": 2092
+    },
+    "faq": {
+      "status": "not-started",
+      "tokensTarget": 12000,
+      "tokensDone": 0
+    },
+    "quiz": {
+      "status": "not-started",
+      "tokensTarget": 30000,
+      "tokensDone": 0
+    },
+    "reference": {
+      "status": "drafted",
+      "tokensTarget": 20000,
+      "tokensDone": 1434
+    },
+    "teachers-guide": {
+      "status": "not-started",
+      "tokensTarget": 15000,
+      "tokensDone": 0
+    },
+    "book-metrics": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "publish": {
+      "status": "published",
+      "tokensTarget": 10000,
+      "tokensDone": 10000
+    },
+    "stories": {
+      "status": "not-started",
+      "tokensTarget": 30000,
+      "tokensDone": 0
+    }
+  }
+}
