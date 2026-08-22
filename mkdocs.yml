@@ -4,7 +4,7 @@ site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/systems-thinking/'
 repo_url: 'https://github.com/dmccreary/systems-thinking'
-edit_uri: 'blob/master/docs'
+edit_uri: 'blob/main/docs'
 
 nav:
   - Home: index.md
