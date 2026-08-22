@@ -18,4 +18,4 @@ generate a new skill that generates CLD diagrams
 
     ## Result
 
-    [Causal Loop MicroSim Generator Skill in the Claude Skills GitHub](https://github.com/dmccreary/claude-skills/tree/main/skills/causal-loop-microsim-generator)
+    [Causal Loop MicroSim Generator Skill in the Claude Skills GitHub](https://github.com/dmccreary/ibook-skills/tree/main/skills/causal-loop-microsim-generator)
