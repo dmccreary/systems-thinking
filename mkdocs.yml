@@ -29,22 +29,36 @@ nav:
     - Government Agency: course-descriptions/government-agency.md
   
   - Chapters:
-    - 1. Foundations: chapters/ch-01-foundations/index.md
-    - 2. The AI Flywheel: chapters/ch-02-ai-flywheel/index.md
-    - 3. Success to the Successful: chapters/ch-03-success-to-the-successful/index.md
-    - 4. Fixes That Fail: chapters/ch-04-fixes-that-fail/index.md
-    - 5. Limits to Growth: chapters/ch-05-limits-to-growth/index.md
-    - 6. Tragedy of the Commons: chapters/ch-06-tragedy-of-the-commons/index.md
-    - 7. Shifting the Burden: chapters/ch-07-shifting-the-burden/index.md
-    - 8. Leverage Points: chapters/ch-08-leverage-points/index.md
-    - 9. Designing Systems: chapters/ch-09-designing-systems/index.md
-    - 10. Future Systems: chapters/ch-10-future-systems/index.md
-    - 11. Busting Silos: chapters/ch-11-busting-silos/index.md
-    - 12. Knowledge Systems: chapters/ch-12-knowledge-systems/index.md
-    - 13. Emergence: chapters/ch-13-emergence/index.md
-    - 14. Complex Adaptive Systems: chapters/ch-14-complex-adaptive-systems/index.md
- 
-  
+    - List of Chapters: chapters/index.md
+    - 1. Foundations of Systems Thinking: chapters/01-foundations-of-systems-thinking/index.md
+    - 2. Mental Models and Systems Analysis Tools: chapters/02-mental-models-and-systems-analysis-tools/index.md
+    - 3. Causal Loop Diagram Notation and Loop Identification: chapters/03-cld-notation-and-loop-identification/index.md
+    - 4. Feedback, Delay, and Loop Dynamics: chapters/04-feedback-delay-and-loop-dynamics/index.md
+    - 5. Stocks, Flows, and System Dynamics: chapters/05-stocks-flows-and-system-dynamics/index.md
+    - 6. Growth Patterns and Nonlinear Behavior: chapters/06-growth-patterns-and-nonlinear-behavior/index.md
+    - 7. Feedback Resilience and Robustness: chapters/07-feedback-resilience-and-robustness/index.md
+    - "8. Systems Archetypes: Cross-Cutting Vocabulary": chapters/08-systems-archetypes-cross-cutting-vocabulary/index.md
+    - 9. Named Archetypes and Limits to Growth: chapters/09-named-archetypes-and-limits-to-growth/index.md
+    - 10. Fixes That Fail and Shifting the Burden: chapters/10-fixes-that-fail-and-shifting-the-burden/index.md
+    - 11. Tragedy of the Commons and Success to the Successful: chapters/11-tragedy-of-commons-and-success-to-successful/index.md
+    - 12. Named Laws, Technology Archetypes, and Complexity Modeling: chapters/12-named-laws-technology-archetypes-and-complexity-modeling/index.md
+    - "13. Leverage Points: The Iceberg Model to Structural Change": chapters/13-leverage-points-iceberg-model-to-structural-change/index.md
+    - "14. Leverage Points: Rules, Paradigms, and Emergence": chapters/14-leverage-points-rules-paradigms-and-emergence/index.md
+    - 15. Graph Theory Fundamentals: chapters/15-graph-theory-fundamentals/index.md
+    - 16. Graph Database Architecture: chapters/16-graph-database-architecture/index.md
+    - 17. Knowledge Representation and Metadata: chapters/17-knowledge-representation-and-metadata/index.md
+    - 18. Data Management and Governance: chapters/18-data-management-and-governance/index.md
+    - 19. Enterprise Knowledge Graphs: chapters/19-enterprise-knowledge-graphs/index.md
+    - 20. Organizational Silos and Silo Busting: chapters/20-organizational-silos-and-silo-busting/index.md
+    - 21. Capability Maturity Model for Systems Thinking: chapters/21-capability-maturity-model-for-systems-thinking/index.md
+    - 22. Artificial Intelligence and Machine Learning Foundations: chapters/22-ai-and-machine-learning-foundations/index.md
+    - 23. AI Systems Dynamics: chapters/23-ai-systems-dynamics/index.md
+    - 24. Knowledge Systems and Economic Complexity: chapters/24-knowledge-systems-and-economic-complexity/index.md
+    - 25. Systems Design, Emerging Technology, and Practice: chapters/25-systems-design-emerging-technology-and-practice/index.md
+    - 26. Knowledge Graph Applications and Data Architecture: chapters/26-knowledge-graph-applications-and-data-architecture/index.md
+    - 27. Systems Thinking Across Disciplines: chapters/27-systems-thinking-across-disciplines/index.md
+
+
   - Appendix A - Causal Loop Diagrams:
     - Introduction: clds/index.md
     - Vis Tutorial: clds/vis-tutorial/index.md

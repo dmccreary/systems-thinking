@@ -1,0 +1,8 @@
+2026-09-17 17:12:24
+
+Chapter: 15-graph-theory-fundamentals
+Word count: ~3469 words of new prose (~3713 total including preserved Summary/Concepts Covered/Prerequisites)
+Mascot admonitions: 5 (mascot-welcome x1, mascot-thinking x1, mascot-tip x1, mascot-warning x1, mascot-celebration x1)
+Non-text elements: 4 total -- 1 reused local MicroSim (docs/sims/graph-viewer, this book's own learning graph rendered with vis-network, verified via its index.md/main.html/script.js before embedding -- satisfies the required diagram for all 3 Tier A concepts: Graph, Vertex, Edge), 1 reused cross-book catalog MicroSim (Breadth-First Search step-through, dmccreary/graph-algorithms, WHAT score 0.8154 -- "reuse" tier -- URL verified live: the catalog's listed fullscreen_url (.../main.html) 404'd, so the actual working file (.../bfs.html) was located and cited instead), plus 2 markdown reinforcement tables (directed/undirected/weighted graph variations; property-graph/Cypher/GQL cluster). docs/sims/node-simulation was checked and REJECTED as a false-name match -- despite being named "Node Simulator," its actual main.html is a Chart.js stock-and-flow population-growth chart with no graph/vertex/edge content at all, confirmed by reading the file rather than trusting the directory name.
+Concepts covered: 16 of 16 (3 Tier A: Graph/Vertex/Edge, each expanded with a numeric worked example -- degree, adjacency list -- beyond the initial draft to better match their Tier A budget; 6 Tier B; 7 Tier C)
+Validator: BK_HOME=/Users/dan/Documents/ws/ibook-skills python3 "$BK_HOME/skills/book-installer/scripts/validate-chapter-mascots.py" docs/chapters/15-graph-theory-fundamentals/index.md -- OK, no placement rule violations

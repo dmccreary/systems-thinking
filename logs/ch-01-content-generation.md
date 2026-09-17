@@ -8,3 +8,5 @@ Non-text elements: 3 links to existing interactive CLD pages (bank-balance, popu
 Validator: python3 "$BK_HOME/skills/book-installer/scripts/validate-chapter-mascots.py" docs/chapters/ch-01-foundations/index.md -- OK, no placement rule violations
 mkdocs build: clean, no new warnings for this chapter
 2026-09-17 09:18:40
+2026-09-17 11:35:55
+2026-09-17 11:43:43

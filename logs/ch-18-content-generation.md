@@ -1,0 +1,8 @@
+2026-09-17 17:27:00
+
+Chapter: 18-data-management-and-governance
+Word count: ~3505 words of new prose (~4300 total including spec-block text; preserved Summary/Concepts Covered/Prerequisites also retained)
+Mascot admonitions: 6 (mascot-welcome x1, mascot-thinking x2, mascot-warning x1, mascot-encourage x1, mascot-celebration x1)
+Non-text elements: 4 total -- 1 template-based newly specified diagram (Data Ingestion Pipeline -- From Lake to Warehouse to Mart, p5.js, Template: dmccreary/organizational-analytics/data-ingestion-pipeline, WHAT score 0.6582, URL verified live), 1 newly specified MicroSim (Point-to-Point vs. Hub Integration Cost, p5.js, slider-driven N-systems combinatorial comparison -- no catalog match scored above "generate" threshold), 1 newly specified graph-model diagram (Data Lineage and Stewardship Along a Pipeline, vis-network, click-to-trace lineage + steward accountability -- best catalog match was a mismatched "dementia"-tagged sim scoring only 0.5934, below reuse/template thresholds, so a fresh spec was written), plus 2 markdown reinforcement tables (normalization/denormalization/low-resolution cluster; entity-resolution worked example).
+Concepts covered: 24 of 24 (0 Tier A, 5 Tier B: Relational Database/Normalized Data Model/Data Integration/Data Quality/Data Governance each with a worked example, 19 Tier C with clear definitions)
+Validator: BK_HOME=/Users/dan/Documents/ws/ibook-skills python3 "$BK_HOME/skills/book-installer/scripts/validate-chapter-mascots.py" docs/chapters/18-data-management-and-governance/index.md -- OK, no placement rule violations

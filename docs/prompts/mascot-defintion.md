@@ -1,7 +1,7 @@
+# Mascot Generation
 
-
-› run the /book-installer skill and use the guide for generating a mascot for this course
-
+!!! prompt
+  run the /book-installer skill and use the guide for generating a mascot for this course
 
 • Explored
   └ List skills

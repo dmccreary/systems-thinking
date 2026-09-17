@@ -1,0 +1,8 @@
+2026-09-17 17:43:33
+
+Chapter: 21-capability-maturity-model-for-systems-thinking
+Word count: ~1965 words of new prose (Introduction through Key Takeaways; preserved Summary/Concepts Covered/Prerequisites also retained)
+Mascot admonitions: 4 (mascot-welcome x1, mascot-thinking x1, mascot-warning x1, mascot-celebration x1 -- no mascot-tip forced, since no genuine actionable heuristic distinct from the warning was available)
+Non-text elements: 4 total -- both reused local sims after comparing their index.md files as instructed: (1) docs/sims/cmm-template (a generic five-level software CMM: Initial Awareness/Repeatable/Defined/Managed/Optimizing, embedded via cmm.html) covering the "Capability Maturity Model," "Repeatable Maturity Level," and "Defined Maturity Level" concepts; (2) docs/sims/cmm-for-systems-thinking (this book's own Linear/Aware/Analytical/Integrated/Transformative five-level infographic, embedded via main.html) covering "Maturity Level" and the five book-specific level concepts -- confirmed as two genuinely different, non-duplicate maturity scales rather than reusing one sim for both jobs. Plus 1 markdown reinforcement table (the five book-specific levels by decision-making style and feedback awareness) and 1 bulleted Key Takeaways list.
+Concepts covered: 13 of 13 (0 Tier A, 1 Tier B: Capability Maturity Model with a worked example [repeatable-to-defined backup runbook], 12 Tier C with clear definitions)
+Validator: BK_HOME=/Users/dan/Documents/ws/ibook-skills python3 "$BK_HOME/skills/book-installer/scripts/validate-chapter-mascots.py" docs/chapters/21-capability-maturity-model-for-systems-thinking/index.md -- OK, no placement rule violations
