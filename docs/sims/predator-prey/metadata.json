@@ -1,0 +1,23 @@
+{
+  "title": "Predator-Prey Population Dynamics",
+  "description": "Predator-Prey Population Dynamics",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "predator-prey",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 27,
+  "chapter_title": "Systems Thinking Across Disciplines",
+  "chapter_dir": "27-systems-thinking-across-disciplines",
+  "chapter_rel_dir": "chapters/27-systems-thinking-across-disciplines"
+}

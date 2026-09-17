@@ -1,0 +1,23 @@
+{
+  "title": "The Generic Software Capability Maturity Model",
+  "description": "The Generic Software Capability Maturity Model",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "cmm-template",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 21,
+  "chapter_title": "Capability Maturity Model for Systems Thinking",
+  "chapter_dir": "21-capability-maturity-model-for-systems-thinking",
+  "chapter_rel_dir": "chapters/21-capability-maturity-model-for-systems-thinking"
+}

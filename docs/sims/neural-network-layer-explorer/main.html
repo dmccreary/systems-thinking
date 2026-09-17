@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- microsim-scaffold-stub -->
+    <title>Inside a Neural Network Layer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Inside a Neural Network Layer</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> neural-network-layer-explorer</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> TBD</p>
+            <p><strong>Learning Objective:</strong> given a small neural network layer with adjustable input values and weights, the learner will compute the weighted sum, apply an activation function, and explain how changing one weight changes the layer's output (Bloom: Applying).</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: diagram
+    **sim-id:** neural-network-layer-explorer<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified<br/>
+    **Template:** https://github.com/dmccreary/linear-algebra/tree/main/docs/sims/neural-network-layer
+    
+    Learning objective: given a small neural network layer with adjustable input values and weights, the learner will compute the weighted sum, apply an activation function, and explain how changing one weight changes the layer's output (Bloom: Applying).
+    
+    Canvas: 700x420 pixels, responsive -- recompute canvas width from the containing element on window resize.
+    
+    Visual design: three input nodes on the left labeled \( x_1, x_2, x_3 \), each connected by a labeled weighted edge (\( w_1, w_2, w_3 \)) to one output node on the right labeled \( y \). A small bias box feeds into the output node alongside the three weighted edges.
+    
+    Controls (p5.js built-in controls only, per this book's control conventions): three `createSlider()` controls for \( x_1, x_2, x_3 \) (range -5 to 5), three more for \( w_1, w_2, w_3 \) (range -2 to 2), and one for the bias \( b \) (range -5 to 5), all defaulting to values that produce a clearly positive output.
+    
+    Behavior: as any slider moves, the diagram recomputes the weighted sum live, displays it as text ("Weighted sum = 3.20"), passes it through a sigmoid activation function, and displays the final output \( y \) both as a number and as the output node's fill brightness (brighter for values closer to 1, dimmer for values closer to 0).
+    
+    Implementation: p5.js, canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions, weighted sum and sigmoid activation recomputed on every slider change.
+    -->
+</body>
+</html>

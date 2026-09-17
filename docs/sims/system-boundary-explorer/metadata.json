@@ -1,0 +1,23 @@
+{
+  "title": "System Boundary Explorer",
+  "description": "Given a depicted scenario, the learner will illustrate how moving a system boundary changes what counts as an input, output, or part of the environment (Bloom: Understanding).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "system-boundary-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Understand",
+  "bloomVerb": "Illustrate",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking"
+}

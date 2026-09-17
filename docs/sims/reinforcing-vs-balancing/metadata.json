@@ -1,0 +1,23 @@
+{
+  "title": "Reinforcing vs. Balancing Loop Simulator",
+  "description": "Reinforcing vs. Balancing Loop Simulator",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "reinforcing-vs-balancing",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 3,
+  "chapter_title": "Causal Loop Diagram Notation and Loop Identification",
+  "chapter_dir": "03-cld-notation-and-loop-identification",
+  "chapter_rel_dir": "chapters/03-cld-notation-and-loop-identification"
+}

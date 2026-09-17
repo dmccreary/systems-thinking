@@ -1,0 +1,23 @@
+{
+  "title": "Stakeholder Power-Interest Grid",
+  "description": "Stakeholder Power-Interest Grid",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "stakeholder-power-interest-grid",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 25,
+  "chapter_title": "Systems Design, Emerging Technology, and Practice",
+  "chapter_dir": "25-systems-design-emerging-technology-and-practice",
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice"
+}

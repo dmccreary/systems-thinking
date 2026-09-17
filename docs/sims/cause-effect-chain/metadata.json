@@ -1,0 +1,23 @@
+{
+  "title": "Cause-and-Effect Chain",
+  "description": "Given a chain of events, the learner will trace each cause to its effect and identify which link in the chain is the root cause versus a surface-level symptom (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "cause-effect-chain",
+  "library": "Mermaid",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking"
+}

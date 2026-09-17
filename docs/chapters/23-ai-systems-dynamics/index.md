@@ -110,6 +110,10 @@ The interactive diagram below lets you trace all three feedback loops side by si
 
 #### Diagram: Three Feedback Loops Behind Algorithmic Disparate Impact
 
+<iframe src="../../sims/algorithmic-disparity-loops/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Three Feedback Loops Behind Algorithmic Disparate Impact MicroSim fullscreen](../../sims/algorithmic-disparity-loops/main.html){ .md-button }
+
 <details markdown="1">
 <summary>Three Feedback Loops Behind Algorithmic Disparate Impact</summary>
 Type: graph-model

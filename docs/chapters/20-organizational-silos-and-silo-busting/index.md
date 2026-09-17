@@ -122,6 +122,10 @@ The diagram below traces the reinforcing loop that lets a silo, once formed, kee
 
 #### Diagram: The Organizational Silo Reinforcing Loop
 
+<iframe src="../../sims/silo-reinforcing-loop/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the The Organizational Silo Reinforcing Loop MicroSim fullscreen](../../sims/silo-reinforcing-loop/main.html){ .md-button }
+
 <details markdown="1">
 <summary>The Organizational Silo Reinforcing Loop</summary>
 Type: graph-model

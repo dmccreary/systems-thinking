@@ -1,0 +1,23 @@
+{
+  "title": "The Book's Concept Clusters, Connected",
+  "description": "given the book's ten major concept clusters, the learner will trace how each cluster builds on the ones before it and synthesize which cluster equipped them to understand each domain surveyed in this final chapter (Bloom: Create).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "book-concept-cluster-map",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 27,
+  "chapter_title": "Systems Thinking Across Disciplines",
+  "chapter_dir": "27-systems-thinking-across-disciplines",
+  "chapter_rel_dir": "chapters/27-systems-thinking-across-disciplines"
+}

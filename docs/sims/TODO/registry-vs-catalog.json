@@ -1,0 +1,15 @@
+{
+  "sim_id": "registry-vs-catalog",
+  "diagram_name": "Metadata Registry vs. Catalog",
+  "chapter_number": 17,
+  "chapter_title": "Knowledge Representation and Metadata",
+  "chapter_dir": "17-knowledge-representation-and-metadata",
+  "chapter_rel_dir": "chapters/17-knowledge-representation-and-metadata",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: graph-model\n**sim-id:** registry-vs-catalog<br/>\n**Library:** vis-network<br/>\n**Status:** Reused<br/>\n**Source:** https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html<br/>\n**Source Repo:** https://github.com/dmccreary/context-graph/tree/main/docs/sims/registry-vs-catalog\n\nReused from the MicroSim catalog (WHAT match score 0.7565; both catalog and live URL verified working, and the underlying script confirmed generic -- a Registration Authority, Data Element, Value Domain, and Version History on the registry side, a Crawler Bot, discovered table, and quality score on the catalog side, none of it specific to the source repository's own subject area). Clicking any node on the left \"Registry\" panel reveals what that piece of a governed data-element definition means; clicking any node on the right \"Catalog\" panel reveals what a discovery tool actually found in a live system; clicking the dashed orange cross-panel link explains how a catalog field's discovered name connects back to the registry's authoritative definition. Learning objective: given a metadata registry and a metadata catalog shown side by side, the learner will distinguish what each one is responsible for and explain how the dashed link between them keeps a discovered field's meaning traceable to its governed definition (Bloom: Analyzing)."
+}

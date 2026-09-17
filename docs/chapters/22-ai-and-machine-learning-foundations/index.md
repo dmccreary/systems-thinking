@@ -96,6 +96,10 @@ The chart below makes overfitting visible by tracking a model's error on trainin
 
 #### Diagram: Training vs. Validation Error -- Spotting the Overfitting Point
 
+<iframe src="../../sims/overfitting-error-curves/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Training vs. Validation Error -- Spotting the Overfitting Point MicroSim fullscreen](../../sims/overfitting-error-curves/main.html){ .md-button }
+
 <details markdown="1">
 <summary>Training vs. Validation Error -- Spotting the Overfitting Point</summary>
 Type: chart
@@ -127,6 +131,10 @@ where each \( x_i \) is an input value, each \( w_i \) is that input's learned w
 The diagram below lets you step through exactly how one layer of a neural network transforms a set of inputs into an output, using the same weighted-sum-plus-activation calculation described above.
 
 #### Diagram: Inside a Neural Network Layer
+
+<iframe src="../../sims/neural-network-layer-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Inside a Neural Network Layer diagram fullscreen](../../sims/neural-network-layer-explorer/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Inside a Neural Network Layer</summary>

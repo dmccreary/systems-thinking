@@ -1,0 +1,23 @@
+{
+  "title": "How Embodied Knowledge Moves, Fades, and Leaks",
+  "description": "given a central embodied-knowledge example, the learner will classify four ways that knowledge can move, fade, or transfer beyond its original holder, and distinguish cross-generational transfer (intentional) from knowledge spillover (unintentional) (Bloom: Analyze).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "knowledge-behavior-map",
+  "library": "Mermaid",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 24,
+  "chapter_title": "Knowledge Systems and Economic Complexity",
+  "chapter_dir": "24-knowledge-systems-and-economic-complexity",
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity"
+}

@@ -125,6 +125,10 @@ Every domain in this chapter — economies, ecosystems, cities, politics, school
 
 #### Diagram: The Book's Concept Clusters, Connected
 
+<iframe src="../../sims/book-concept-cluster-map/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the The Book's Concept Clusters, Connected MicroSim fullscreen](../../sims/book-concept-cluster-map/main.html){ .md-button }
+
 <details markdown="1">
 <summary>The Book's Concept Clusters, Connected</summary>
 Type: graph-model

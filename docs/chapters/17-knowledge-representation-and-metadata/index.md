@@ -68,6 +68,10 @@ Return to the Ana-and-Acme example Chapter 15 used to introduce property graphs,
 
 #### Diagram: Entity-Attribute-Relationship Explorer
 
+<iframe src="../../sims/entity-attribute-relationship-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Entity-Attribute-Relationship Explorer MicroSim fullscreen](../../sims/entity-attribute-relationship-explorer/main.html){ .md-button }
+
 <details markdown="1">
 <summary>Entity-Attribute-Relationship Explorer</summary>
 Type: graph-model
@@ -101,6 +105,10 @@ Getting from several local schemas to one canonical schema requires two distinct
 The diagram below works through exactly this two-step process using two small sample systems and a canonical target schema.
 
 #### Diagram: Mapping Two Schemas to a Canonical Schema
+
+<iframe src="../../sims/canonical-schema-mapping/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Mapping Two Schemas to a Canonical Schema MicroSim fullscreen](../../sims/canonical-schema-mapping/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Mapping Two Schemas to a Canonical Schema</summary>

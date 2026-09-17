@@ -1,0 +1,23 @@
+{
+  "title": "Interconnection Network Explorer",
+  "description": "Given a supply-chain network diagram, the learner will trace which nodes are affected, directly and indirectly, by a disruption at a chosen node (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "interconnection-network-explorer",
+  "library": "vis-network",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking"
+}

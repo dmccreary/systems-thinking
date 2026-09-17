@@ -1,0 +1,15 @@
+{
+  "sim_id": "toc",
+  "diagram_name": "Tragedy of the Commons Agent-Based Simulation",
+  "chapter_number": 11,
+  "chapter_title": "Tragedy of the Commons and Success to the Successful",
+  "chapter_dir": "11-tragedy-of-commons-and-success-to-successful",
+  "chapter_rel_dir": "chapters/11-tragedy-of-commons-and-success-to-successful",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: microsim\n**sim-id:** toc<br/>\n**Library:** p5.js<br/>\n**Status:** Reused<br/>\n**Source:** ../../sims/toc/toc.html<br/>\n**Source Repo:** local — docs/sims/toc\n\nReused from this book's own sims collection: a pasture of grass, grazed by a population of cow agents. A slider controls how many cows are added to the shared pasture, and Start/Stop and Reset buttons control the run. Watch how grass regrowth keeps pace with a small herd but collapses once the herd crosses a threshold, after which every cow — not just the extra ones — starts to starve. Learning objective: given control over the size of a shared herd, the learner will identify the herd size at which the pasture stops recovering between grazing cycles (Bloom: Analyzing)."
+}

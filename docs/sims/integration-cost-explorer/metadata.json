@@ -1,0 +1,23 @@
+{
+  "title": "Point-to-Point vs. Hub Integration Cost",
+  "description": "given a number of systems needing to exchange data, the learner will calculate the number of connections required under a point-to-point architecture versus a hub architecture, and explain why the hub scales better (Bloom: Applying).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "integration-cost-explorer",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 18,
+  "chapter_title": "Data Management and Governance",
+  "chapter_dir": "18-data-management-and-governance",
+  "chapter_rel_dir": "chapters/18-data-management-and-governance"
+}

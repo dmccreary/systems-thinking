@@ -1,0 +1,23 @@
+{
+  "title": "Emergence From Local Rules",
+  "description": "given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "emergence-local-rules",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "Leverage Points -- Rules, Paradigms, and Emergence",
+  "chapter_dir": "14-leverage-points-rules-paradigms-and-emergence",
+  "chapter_rel_dir": "chapters/14-leverage-points-rules-paradigms-and-emergence"
+}

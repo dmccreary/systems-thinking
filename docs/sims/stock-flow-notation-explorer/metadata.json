@@ -1,0 +1,23 @@
+{
+  "title": "Stock and Flow Notation Explorer",
+  "description": "Given a simple causal loop diagram, the learner will identify the corresponding stock, inflow, and outflow in an equivalent stock-and-flow diagram (Bloom: Understanding).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "stock-flow-notation-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Understand",
+  "bloomVerb": "Map / Translate",
+  "completion_status": "scaffold",
+  "chapter_number": 4,
+  "chapter_title": "Feedback, Delay, and Loop Dynamics",
+  "chapter_dir": "04-feedback-delay-and-loop-dynamics",
+  "chapter_rel_dir": "chapters/04-feedback-delay-and-loop-dynamics"
+}

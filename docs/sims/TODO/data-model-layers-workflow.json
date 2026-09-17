@@ -1,0 +1,15 @@
+{
+  "sim_id": "data-model-layers-workflow",
+  "diagram_name": "Conceptual, Logical, and Physical Data Models",
+  "chapter_number": 26,
+  "chapter_title": "Knowledge Graph Applications and Data Architecture",
+  "chapter_dir": "26-knowledge-graph-applications-and-data-architecture",
+  "chapter_rel_dir": "chapters/26-knowledge-graph-applications-and-data-architecture",
+  "library": "Mermaid",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a single business relationship, the learner will trace how it is represented differently at the conceptual, logical, and physical modeling layers, and explain what new detail each layer adds (Bloom: Analyze).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: workflow\n**sim-id:** data-model-layers-workflow<br/>\n**Library:** Mermaid<br/>\n**Status:** Specified\n\nLearning objective: given a single business relationship, the learner will trace how it is represented differently at the conceptual, logical, and physical modeling layers, and explain what new detail each layer adds (Bloom: Analyze).\n\nVisual style: Mermaid flowchart, `graph TD`, three stacked nodes labeled \"Conceptual Data Model,\" \"Logical Data Model,\" and \"Physical Data Model,\" connected top to bottom by arrows labeled \"adds attributes and relationships\" and \"adds technology-specific implementation.\"\n\nInteractivity requirement: every node MUST have a Mermaid `click` directive wired to a `showInfo(id)` callback that opens an infobox showing that layer's definition plus its version of the retailer \"Customer places Order\" example (e.g., clicking \"Physical Data Model\" shows the actual node/edge or table/foreign-key implementation from this chapter's prose).\n\nColor scheme: a gradient from light slate-blue (Conceptual, most abstract) to the book's accent orange (Physical, most concrete), visually reinforcing the increasing specificity at each layer.\n\nImplementation: Mermaid `graph TD` syntax embedded in the page's generated sim wrapper, sharing the `showInfo(id)` JavaScript helper already used by this book's other clickable Mermaid diagrams."
+}

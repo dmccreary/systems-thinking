@@ -1,0 +1,23 @@
+{
+  "title": "Breadth-First Search Step-by-Step",
+  "description": "Breadth-First Search Step-by-Step",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "bfs",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 15,
+  "chapter_title": "Graph Theory Fundamentals",
+  "chapter_dir": "15-graph-theory-fundamentals",
+  "chapter_rel_dir": "chapters/15-graph-theory-fundamentals"
+}

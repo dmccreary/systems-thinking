@@ -1,0 +1,23 @@
+{
+  "title": "Tragedy of the Commons Agent-Based Simulation",
+  "description": "Tragedy of the Commons Agent-Based Simulation",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "toc",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 11,
+  "chapter_title": "Tragedy of the Commons and Success to the Successful",
+  "chapter_dir": "11-tragedy-of-commons-and-success-to-successful",
+  "chapter_rel_dir": "chapters/11-tragedy-of-commons-and-success-to-successful"
+}

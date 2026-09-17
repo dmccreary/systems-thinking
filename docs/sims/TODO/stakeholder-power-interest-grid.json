@@ -1,0 +1,15 @@
+{
+  "sim_id": "stakeholder-power-interest-grid",
+  "diagram_name": "Stakeholder Power-Interest Grid",
+  "chapter_number": 25,
+  "chapter_title": "Systems Design, Emerging Technology, and Practice",
+  "chapter_dir": "25-systems-design-emerging-technology-and-practice",
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: matrix\n**sim-id:** stakeholder-power-interest-grid<br/>\n**Library:** p5.js<br/>\n**Status:** Reused<br/>\n**Source:** https://dmccreary.github.io/information-systems/sims/stakeholder-power-interest-grid/main.html<br/>\n**Source Repo:** https://github.com/dmccreary/information-systems/tree/main/docs/sims/stakeholder-power-interest-grid\n\nReused from the cross-book MicroSim catalog (WHAT match score 0.8463, verified live). An interactive 2x2 power-interest grid with draggable stakeholder dots, attitude coloring (supportive, neutral, opposed), and a what-if scenario control. Learning objective: given a set of stakeholders in a system-design scenario, the learner will classify each one by power and interest and justify a prioritized engagement strategy for each quadrant (Bloom: Analyzing)."
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Loop Polarity Counter",
+  "description": "Given a causal loop diagram, the learner will classify the loop as reinforcing or balancing by counting its opposite-direction links (Bloom: Applying).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "loop-polarity-counter",
+  "library": "p5.js",
+  "bloomLevel": "Apply",
+  "bloomVerb": "Classify",
+  "completion_status": "scaffold",
+  "chapter_number": 3,
+  "chapter_title": "Causal Loop Diagram Notation and Loop Identification",
+  "chapter_dir": "03-cld-notation-and-loop-identification",
+  "chapter_rel_dir": "chapters/03-cld-notation-and-loop-identification"
+}

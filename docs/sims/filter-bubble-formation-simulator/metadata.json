@@ -1,0 +1,23 @@
+{
+  "title": "Filter Bubble Formation Simulator",
+  "description": "given a simulated content feed, the learner will apply the social feed ranking loop by repeatedly selecting content, and observe the resulting decline in topic diversity that defines a filter bubble (Bloom: Apply).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "filter-bubble-formation-simulator",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 25,
+  "chapter_title": "Systems Design, Emerging Technology, and Practice",
+  "chapter_dir": "25-systems-design-emerging-technology-and-practice",
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice"
+}

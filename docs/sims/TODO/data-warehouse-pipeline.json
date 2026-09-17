@@ -1,0 +1,15 @@
+{
+  "sim_id": "data-warehouse-pipeline",
+  "diagram_name": "Data Ingestion Pipeline -- From Lake to Warehouse to Mart",
+  "chapter_number": 18,
+  "chapter_title": "Data Management and Governance",
+  "chapter_dir": "18-data-management-and-governance",
+  "chapter_rel_dir": "chapters/18-data-management-and-governance",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a data pipeline from raw source to analytical storage, the learner will sequence a data lake, an ETL process, a central data warehouse, a data mart, and a star schema in their correct order and explain what each stage adds (Bloom: Understanding).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: diagram\n**sim-id:** data-warehouse-pipeline<br/>\n**Library:** p5.js<br/>\n**Status:** Specified<br/>\n**Template:** https://github.com/dmccreary/organizational-analytics/tree/main/docs/sims/data-ingestion-pipeline\n\nLearning objective: given a data pipeline from raw source to analytical storage, the learner will sequence a data lake, an ETL process, a central data warehouse, a data mart, and a star schema in their correct order and explain what each stage adds (Bloom: Understanding).\n\nCanvas: 700x420 pixels, responsive -- recompute canvas width from the containing element on window resize.\n\nVisual design: five labeled boxes arranged left to right and connected by arrows: \"Source Systems,\" \"Data Lake (raw),\" \"ETL Process,\" \"Central Data Warehouse (star schema),\" and \"Data Marts (Marketing, Finance).\" The Central Data Warehouse box contains a small inset star-schema icon: one fact-table box surrounded by four smaller dimension-table boxes.\n\nInteraction: clicking any of the five main boxes opens an infobox defining that stage and naming the concept it represents. Clicking the inset star-schema icon opens a second-level infobox distinguishing the central fact table from its surrounding dimension tables. A \"Animate Flow\" button animates a small data-packet icon traveling left to right through all five stages in sequence, pausing briefly at each one.\n\nImplementation: p5.js, canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions, fixed layout (no physics simulation required)."
+}

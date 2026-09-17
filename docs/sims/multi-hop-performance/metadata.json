@@ -1,0 +1,23 @@
+{
+  "title": "Multi-Hop Query Performance, RDBMS vs Graph Database",
+  "description": "Multi-Hop Query Performance, RDBMS vs Graph Database",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "multi-hop-performance",
+  "library": "Chart.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 16,
+  "chapter_title": "Graph Database Architecture",
+  "chapter_dir": "16-graph-database-architecture",
+  "chapter_rel_dir": "chapters/16-graph-database-architecture"
+}

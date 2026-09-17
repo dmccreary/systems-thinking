@@ -1,0 +1,23 @@
+{
+  "title": "Logistic Growth S-Curve Explorer",
+  "description": "Given a carrying capacity and a feedback-delay setting, the learner will predict whether a growing quantity settles into a smooth S-curve, overshoots and recovers, or overshoots and collapses (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "logistic-growth-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Compare / Predict",
+  "completion_status": "scaffold",
+  "chapter_number": 6,
+  "chapter_title": "Growth Patterns and Nonlinear Behavior",
+  "chapter_dir": "06-growth-patterns-and-nonlinear-behavior",
+  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Inside a Neural Network Layer",
+  "description": "given a small neural network layer with adjustable input values and weights, the learner will compute the weighted sum, apply an activation function, and explain how changing one weight changes the layer's output (Bloom: Applying).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "neural-network-layer-explorer",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 22,
+  "chapter_title": "Artificial Intelligence and Machine Learning Foundations",
+  "chapter_dir": "22-ai-and-machine-learning-foundations",
+  "chapter_rel_dir": "chapters/22-ai-and-machine-learning-foundations"
+}

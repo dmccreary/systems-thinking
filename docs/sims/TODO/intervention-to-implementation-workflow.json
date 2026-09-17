@@ -1,0 +1,15 @@
+{
+  "sim_id": "intervention-to-implementation-workflow",
+  "diagram_name": "From Intervention Point to Implementation",
+  "chapter_number": 25,
+  "chapter_title": "Systems Design, Emerging Technology, and Practice",
+  "chapter_dir": "25-systems-design-emerging-technology-and-practice",
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice",
+  "library": "Mermaid",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a proposed system change, the learner will sequence the design steps from choosing an intervention point through closing the feedback loop, and explain what each step is meant to catch that the previous step could miss (Bloom: Analyze).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: workflow\n**sim-id:** intervention-to-implementation-workflow<br/>\n**Library:** Mermaid<br/>\n**Status:** Specified\n\nLearning objective: given a proposed system change, the learner will sequence the design steps from choosing an intervention point through closing the feedback loop, and explain what each step is meant to catch that the previous step could miss (Bloom: Analyze).\n\nVisual style: Mermaid flowchart, `graph LR`, five rectangular nodes in sequence: \"Choose Intervention Point\" -> \"Anticipate Side Effects\" -> \"Design Feedback Mechanism\" -> \"Select Implementation Strategy\" -> \"Human Flourishing Feedback,\" with a dashed arrow looping from the last node back to the first, labeled \"revise if the data surprises you.\"\n\nInteractivity requirement: every node MUST have a Mermaid `click` directive wired to a `showInfo(id)` callback opening an infobox with that node's one-sentence definition from this chapter, plus the hospital-scheduling example applied to that specific step (e.g., clicking \"Select Implementation Strategy\" shows: \"Pilot the new system at one clinic before a hospital-wide rollout\").\n\nColor scheme: neutral slate-blue for the four sequential steps, the book's accent orange for the \"Human Flourishing Feedback\" closing node, so the diagram visually emphasizes that the loop is meant to close rather than end.\n\nImplementation: Mermaid `graph LR` syntax embedded in the page's generated sim wrapper, sharing the `showInfo(id)` JavaScript helper already used by this book's other clickable Mermaid diagrams."
+}

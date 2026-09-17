@@ -1,0 +1,23 @@
+{
+  "title": "Subsystem Nesting Explorer",
+  "description": "Given a depicted car, the learner will differentiate the whole-car system from its nested subsystems and identify each subsystem's own inputs and outputs (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "subsystem-nesting-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Differentiate",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking"
+}

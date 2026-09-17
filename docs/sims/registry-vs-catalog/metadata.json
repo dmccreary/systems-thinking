@@ -1,0 +1,23 @@
+{
+  "title": "Metadata Registry vs. Catalog",
+  "description": "Metadata Registry vs. Catalog",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "registry-vs-catalog",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 17,
+  "chapter_title": "Knowledge Representation and Metadata",
+  "chapter_dir": "17-knowledge-representation-and-metadata",
+  "chapter_rel_dir": "chapters/17-knowledge-representation-and-metadata"
+}

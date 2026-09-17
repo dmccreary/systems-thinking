@@ -134,6 +134,10 @@ Watching this dynamic unfold is far more convincing than reading about it, since
 
 #### Diagram: Emergence From Local Rules
 
+<iframe src="../../sims/emergence-local-rules/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Emergence From Local Rules MicroSim fullscreen](../../sims/emergence-local-rules/main.html){ .md-button }
+
 <details markdown="1">
 <summary>Emergence From Local Rules (flocking simulation)</summary>
 Type: microsim

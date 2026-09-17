@@ -118,6 +118,10 @@ The workflow below lets you click through this design sequence in order, from ch
 
 #### Diagram: From Intervention Point to Implementation
 
+<iframe src="../../sims/intervention-to-implementation-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the From Intervention Point to Implementation MicroSim fullscreen](../../sims/intervention-to-implementation-workflow/main.html){ .md-button }
+
 <details markdown="1">
 <summary>From Intervention Point to Implementation</summary>
 Type: workflow
@@ -181,6 +185,10 @@ A **social feed ranking loop** is a reinforcing loop running on a much larger pl
 The MicroSim below lets you run a simplified social feed ranking loop yourself and watch a filter bubble actually form.
 
 #### Diagram: Filter Bubble Formation Simulator
+
+<iframe src="../../sims/filter-bubble-formation-simulator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Filter Bubble Formation Simulator MicroSim fullscreen](../../sims/filter-bubble-formation-simulator/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Filter Bubble Formation Simulator</summary>

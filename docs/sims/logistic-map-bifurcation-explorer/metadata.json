@@ -1,0 +1,23 @@
+{
+  "title": "Logistic Map Bifurcation Explorer",
+  "description": "Given a range of parameter values for the logistic map, the learner will classify the resulting long-term behavior as a fixed point, a periodic cycle, or chaos (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "logistic-map-bifurcation-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Classify / Compare",
+  "completion_status": "scaffold",
+  "chapter_number": 6,
+  "chapter_title": "Growth Patterns and Nonlinear Behavior",
+  "chapter_dir": "06-growth-patterns-and-nonlinear-behavior",
+  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior"
+}

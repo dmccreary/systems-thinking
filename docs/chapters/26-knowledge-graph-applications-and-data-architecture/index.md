@@ -92,6 +92,10 @@ The diagram below lets you click through this progression using the retailer exa
 
 #### Diagram: Conceptual, Logical, and Physical Data Models
 
+<iframe src="../../sims/data-model-layers-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Conceptual, Logical, and Physical Data Models MicroSim fullscreen](../../sims/data-model-layers-workflow/main.html){ .md-button }
+
 <details markdown="1">
 <summary>Conceptual, Logical, and Physical Data Models</summary>
 Type: workflow
@@ -146,6 +150,10 @@ A more recent development lets a graph directly power a machine-learning model r
 The MicroSim below lets you run community detection and link prediction yourself on a sample network.
 
 #### Diagram: Graph Algorithms Explorer
+
+<iframe src="../../sims/graph-algorithms-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Graph Algorithms Explorer MicroSim fullscreen](../../sims/graph-algorithms-explorer/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Graph Algorithms Explorer</summary>

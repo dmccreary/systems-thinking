@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- microsim-scaffold-stub -->
+    <title>Stock and Flow Notation Explorer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Stock and Flow Notation Explorer</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> stock-flow-notation-explorer</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> Understand</p>
+            <p><strong>Learning Objective:</strong> Given a simple causal loop diagram, the learner will identify the corresponding stock, inflow, and outflow in an equivalent stock-and-flow diagram (Bloom: Understanding).</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: microsim
+    **sim-id:** stock-flow-notation-explorer<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    Purpose: Let learners map the bank-balance causal loop diagram from Chapter 3 onto its stock-and-flow equivalent by clicking each labeled part of a bathtub-style diagram and reading how it corresponds to a CLD element.
+    
+    Bloom Taxonomy Level: Understand
+    Bloom Taxonomy Verb: Map / Translate
+    
+    Learning Objective: Given a simple causal loop diagram, the learner will identify the corresponding stock, inflow, and outflow in an equivalent stock-and-flow diagram (Bloom: Understanding).
+    
+    Canvas: 700x420 default, responsive — recompute the tub rectangle's position and pipe lengths as a proportion of `canvas.width` inside a `windowResized()` handler.
+    
+    Visual elements:
+    - A rectangular "tub" outline labeled "Bank Balance" on the left half of the canvas, filled to roughly 40% height with a light-blue rectangle representing the current stock level.
+    - An inflow pipe entering the top of the tub, labeled "Interest Earned," with a small valve icon and a cloud symbol at its far end.
+    - An outflow pipe exiting the bottom of the tub, labeled "Withdrawals," with a valve icon and a cloud symbol at its far end.
+    - A small side panel on the right showing the equivalent Chapter 3 causal loop diagram (two boxes, two labeled arrows) for side-by-side comparison, grayed out until the matching stock-and-flow part is clicked.
+    
+    Controls:
+    - Clicking the tub rectangle highlights "Bank Balance" in both diagrams and shows an info-panel sentence: "This rectangle is a stock — an accumulating quantity, the same role Chapter 3's 'Bank Balance' node played."
+    - Clicking the inflow pipe highlights "Interest Earned" in both diagrams with the sentence: "This pipe is an inflow — it adds to the stock, playing the same role as the CLD's positive edge into Bank Balance."
+    - Clicking the outflow pipe highlights "Withdrawals" with the sentence: "This pipe is an outflow — a flow this simple CLD never showed, because CLDs don't distinguish rate of change from accumulated amount."
+    - A "Reset" button, built with `createButton()`, that un-highlights all parts and clears the info panel.
+    
+    Interactivity requirement: every labeled part (tub, inflow pipe, outflow pipe) is clickable, highlights its CLD counterpart, and reveals an explanatory info-panel sentence — satisfying the interactivity bar with immediate, comparative feedback.
+    
+    Color scheme: stock rectangle in the book's neutral node blue; inflow pipe and valve in the positive-link green; outflow pipe and valve in a muted amber (introducing a third color, since an outflow is neither a positive nor a negative causal link — it's a different kind of notation entirely).
+    
+    Implementation: p5.js sketch with hit-testing rectangles over each drawn part, a shared highlight-state variable, and a text-wrapping info panel drawn below the canvas.
+    -->
+</body>
+</html>

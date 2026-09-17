@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- microsim-scaffold-stub -->
+    <title>Systems Map Example — Coffee Shop</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Systems Map Example — Coffee Shop</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> systems-map-coffee-shop</p>
+            <p><strong>Library:</strong> vis-network</p>
+            <p><strong>Bloom Level:</strong> Understand</p>
+            <p><strong>Learning Objective:</strong> Given a familiar small business, the learner will illustrate how people, resources, and information connect across a systems map (Bloom: Understanding).</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: graph-model
+    **sim-id:** systems-map-coffee-shop<br/>
+    **Library:** vis-network<br/>
+    **Template:** https://github.com/dmccreary/organizational-analytics/tree/main/docs/sims/capstone-component-map<br/>
+    **Status:** Specified
+    
+    Purpose: Show a systems map of a small coffee shop (Customers, Baristas, Cash Register, Inventory, Supplier, Espresso Machine) with labeled connections for money, goods, and information flow, so learners see a systems map is broader than a single-relationship diagram.
+    
+    Bloom Taxonomy Level: Understand
+    Bloom Taxonomy Verb: Illustrate
+    
+    Learning Objective: Given a familiar small business, the learner will illustrate how people, resources, and information connect across a systems map (Bloom: Understanding).
+    
+    Canvas: full-width responsive `vis-network` container, 500px tall, calling `network.fit()` on a window `resize` listener.
+    
+    Visual elements:
+    - Six nodes: Customers, Baristas, Cash Register, Inventory, Supplier, Espresso Machine, laid out with `vis-network`'s physics-based layout so the learner can also drag nodes freely.
+    - Edges labeled by flow type using different line styles: solid for money flow (Customers → Cash Register, Cash Register → Supplier), dashed for goods flow (Supplier → Inventory, Inventory → Espresso Machine), dotted for information flow (Baristas → Inventory, labeled "restock request").
+    - A small legend box in the corner of the canvas explaining the three line styles.
+    
+    Controls:
+    - Clicking any node opens an infobox describing that part's role in the coffee shop system.
+    - Clicking any edge opens an infobox naming the flow type (money, goods, or information) and explaining, in one sentence, why that flow matters to the shop staying open.
+    - A "Rearrange" button, implemented as an HTML button, that re-runs the `vis-network` physics layout (`network.stabilize()`) so nodes settle into a fresh, non-overlapping arrangement.
+    
+    Interactivity requirement: every node and every edge is clickable, satisfying the interactivity bar with an infobox on each click.
+    
+    Color scheme: warm brown tones for goods-related nodes (Inventory, Supplier, Espresso Machine) and cool blue tones for people/money nodes (Customers, Baristas, Cash Register), consistent with the book's existing palette conventions.
+    
+    Implementation: `vis-network` `DataSet` objects for nodes and edges with a `dashes` property set per edge to control line style, and a `network.on("click", ...)` handler that looks up the clicked node or edge ID in a small JavaScript object of infobox text.
+    -->
+</body>
+</html>

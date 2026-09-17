@@ -1,0 +1,23 @@
+{
+  "title": "The Organizational Silo Reinforcing Loop",
+  "description": "given a diagram of the causal chain that keeps a silo intact, the learner will trace the reinforcing loop from a bounded-rational local decision back to itself, and identify which single link a silo-busting intervention should target (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "silo-reinforcing-loop",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 20,
+  "chapter_title": "Organizational Silos and Silo Busting",
+  "chapter_dir": "20-organizational-silos-and-silo-busting",
+  "chapter_rel_dir": "chapters/20-organizational-silos-and-silo-busting"
+}

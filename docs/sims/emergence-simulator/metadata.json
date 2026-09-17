@@ -1,0 +1,23 @@
+{
+  "title": "Emergence Simulator (Flocking)",
+  "description": "Emergence Simulator (Flocking)",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "emergence-simulator",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Mental Models and Systems Analysis Tools",
+  "chapter_dir": "02-mental-models-and-systems-analysis-tools",
+  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools"
+}

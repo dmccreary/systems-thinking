@@ -1,0 +1,23 @@
+{
+  "title": "Product Space Explorer",
+  "description": "given a simplified product space network, the learner will analyze which unexported products are most reachable from a country's current export basket by tracing relatedness edges, and justify why one candidate product is a better diversification target than another (Bloom: Analyze).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "product-space-explorer",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 24,
+  "chapter_title": "Knowledge Systems and Economic Complexity",
+  "chapter_dir": "24-knowledge-systems-and-economic-complexity",
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Fishbone Diagram — Cart Abandonment",
+  "description": "Given a list of candidate causes for a problem, the learner will categorize each cause onto the correct bone of a fishbone diagram (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "fishbone-cart-abandonment",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Categorize",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Mental Models and Systems Analysis Tools",
+  "chapter_dir": "02-mental-models-and-systems-analysis-tools",
+  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools"
+}

@@ -96,6 +96,10 @@ The diagram below traces data's full journey from raw source through this analyt
 
 #### Diagram: Data Ingestion Pipeline -- From Lake to Warehouse to Mart
 
+<iframe src="../../sims/data-warehouse-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Data Ingestion Pipeline -- From Lake to Warehouse to Mart diagram fullscreen](../../sims/data-warehouse-pipeline/main.html){ .md-button }
+
 <details markdown="1">
 <summary>Data Ingestion Pipeline -- From Lake to Warehouse to Mart</summary>
 Type: diagram
@@ -126,6 +130,10 @@ Integration cost does not grow gently as more systems join the picture -- it gro
 That hub is only worth building if everyone agrees to treat it as authoritative once it exists. A **single source of truth** is the principle that for any given piece of data, one designated system or record is treated as the authoritative version, with every other copy understood to be derived from it rather than an independent, equally valid alternative -- without this agreement, a hub just becomes one more copy to reconcile rather than the copy everyone defers to.
 
 #### Diagram: Point-to-Point vs. Hub Integration Cost
+
+<iframe src="../../sims/integration-cost-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Point-to-Point vs. Hub Integration Cost MicroSim fullscreen](../../sims/integration-cost-explorer/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Point-to-Point vs. Hub Integration Cost</summary>
@@ -162,6 +170,10 @@ Trusting a number in a report also means being able to answer where it came from
 The diagram below traces one field's lineage from its source system through governance touchpoints to a final report.
 
 #### Diagram: Data Lineage and Stewardship Along a Pipeline
+
+<iframe src="../../sims/lineage-stewardship-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Data Lineage and Stewardship Along a Pipeline MicroSim fullscreen](../../sims/lineage-stewardship-explorer/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Data Lineage and Stewardship Along a Pipeline</summary>

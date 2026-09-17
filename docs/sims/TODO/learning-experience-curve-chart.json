@@ -1,0 +1,15 @@
+{
+  "sim_id": "learning-experience-curve-chart",
+  "diagram_name": "Learning Curve vs. Experience Curve",
+  "chapter_number": 24,
+  "chapter_title": "Knowledge Systems and Economic Complexity",
+  "chapter_dir": "24-knowledge-systems-and-economic-complexity",
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given live cost-versus-cumulative-production curves, the learner will compare the learning curve (labor time only) and the experience curve (total unit cost) and explain why the experience curve typically declines faster (Bloom: Analyze).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: chart\n**sim-id:** learning-experience-curve-chart<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nLearning objective: given live cost-versus-cumulative-production curves, the learner will compare the learning curve (labor time only) and the experience curve (total unit cost) and explain why the experience curve typically declines faster (Bloom: Analyze).\n\nCanvas: responsive Chart.js line chart, full container width, fixed 400px height, log-scaled x-axis, redrawn on window resize.\n\nVisual design: x-axis labeled \"Cumulative Units Produced\" (log scale, 1 to 100,000), y-axis labeled \"Relative Unit Cost (%, starting at 100).\" Two lines: \"Learning Curve (labor time only)\" declining to about 65% of its starting value by 100,000 units, and \"Experience Curve (total unit cost)\" declining more steeply, to about 35% of its starting value over the same range, reflecting the added contribution of process, supply-chain, and equipment improvements.\n\nControls: a slider labeled \"Cumulative Units Produced\" that moves a vertical playhead across the log-scaled x-axis; a text readout beside the slider reports both curves' current relative-cost value at the selected production volume.\n\nInteraction: hovering either line at any point on the x-axis shows a tooltip with that curve's precise relative-cost value and the underlying cumulative-unit count.\n\nImplementation: Chart.js line chart with a logarithmic x-axis scale, two pre-computed data series following a standard power-law decay formula \\( C(n) = C_0 \\cdot n^{\\log_2(r)} \\), where \\( C_0 \\) is the starting unit cost, \\( n \\) is cumulative units produced, and \\( r \\) is the retention fraction per doubling (0.80 for the learning curve, 0.65 for the experience curve), canvas resized via Chart.js's built-in `responsive: true` option."
+}

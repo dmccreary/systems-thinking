@@ -1,0 +1,23 @@
+{
+  "title": "Data Lineage and Stewardship Along a Pipeline",
+  "description": "given a field's path from source system to report, the learner will trace its data lineage and identify which stage a named data steward is accountable for (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "lineage-stewardship-explorer",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 18,
+  "chapter_title": "Data Management and Governance",
+  "chapter_dir": "18-data-management-and-governance",
+  "chapter_rel_dir": "chapters/18-data-management-and-governance"
+}

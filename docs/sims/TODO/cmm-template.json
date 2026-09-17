@@ -1,0 +1,15 @@
+{
+  "sim_id": "cmm-template",
+  "diagram_name": "The Generic Software Capability Maturity Model",
+  "chapter_number": 21,
+  "chapter_title": "Capability Maturity Model for Systems Thinking",
+  "chapter_dir": "21-capability-maturity-model-for-systems-thinking",
+  "chapter_rel_dir": "chapters/21-capability-maturity-model-for-systems-thinking",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: diagram\n**sim-id:** cmm-template<br/>\n**Library:** p5.js<br/>\n**Status:** Reused<br/>\n**Source:** local docs/sims/cmm-template<br/>\n**Source Repo:** local — docs/sims/cmm-template\n\nReused from this book's own MicroSim library: five ascending steps -- Initial Awareness, Repeatable, Defined, Managed, and Optimizing -- drawn as rising colored bars. Hovering over any step reveals that level's name. Learning objective: given the five generic maturity-level names, the learner will place a described organizational behavior at the correct step in the ascending sequence (Bloom: Understanding)."
+}

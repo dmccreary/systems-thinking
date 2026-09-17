@@ -62,6 +62,10 @@ The diagram below lets you rebuild Euler's proof yourself on the actual Konigsbe
 
 #### Diagram: The Seven Bridges of Konigsberg
 
+<iframe src="../../sims/konigsberg-bridges/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the The Seven Bridges of Konigsberg MicroSim fullscreen](../../sims/konigsberg-bridges/main.html){ .md-button }
+
 <details markdown="1">
 <summary>The Seven Bridges of Konigsberg (Euler's graph)</summary>
 Type: graph-model
@@ -146,6 +150,10 @@ A single, powerful machine holding an entire graph in memory can pointer-hop acr
 Applied specifically to graphs, scale out takes on its own architecture. A **distributed graph database** is a graph database whose vertices and edges are partitioned across multiple servers rather than held entirely on one machine, so that the overall graph's size is no longer limited by any single machine's memory. The specific engineering discipline of deciding how to split a graph across those servers -- which vertices go together, and how to minimize traffic between servers -- is called **scale-out graph architecture**: the architectural approach of partitioning a graph's vertices and edges across a cluster of machines while trying to keep frequently-traversed edges on the same machine, since a pointer hop that has to cross the network to a different server is dramatically slower than one that stays in local memory.
 
 #### Diagram: Vertical vs Scale-Out Graph Architecture
+
+<iframe src="../../sims/graph-scale-out-architecture/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Run the Vertical vs Scale-Out Graph Architecture diagram fullscreen](../../sims/graph-scale-out-architecture/main.html){ .md-button }
 
 <details markdown="1">
 <summary>Vertical vs Scale-Out Graph Architecture</summary>

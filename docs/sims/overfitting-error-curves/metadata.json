@@ -1,0 +1,23 @@
+{
+  "title": "Training vs. Validation Error -- Spotting the Overfitting Point",
+  "description": "given a live chart of training error and validation error over training time, the learner will identify the specific point where continued training begins to overfit the model, and explain why the two curves diverge after that point (Bloom: Analyzing).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "overfitting-error-curves",
+  "library": "Chart.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 22,
+  "chapter_title": "Artificial Intelligence and Machine Learning Foundations",
+  "chapter_dir": "22-ai-and-machine-learning-foundations",
+  "chapter_rel_dir": "chapters/22-ai-and-machine-learning-foundations"
+}

@@ -1,0 +1,15 @@
+{
+  "sim_id": "graph-algorithms-explorer",
+  "diagram_name": "Graph Algorithms Explorer",
+  "chapter_number": 26,
+  "chapter_title": "Knowledge Graph Applications and Data Architecture",
+  "chapter_dir": "26-knowledge-graph-applications-and-data-architecture",
+  "chapter_rel_dir": "chapters/26-knowledge-graph-applications-and-data-architecture",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a sample network, the learner will apply community detection to identify densely connected clusters and apply link prediction to identify a plausible missing edge, then interpret both results (Bloom: Apply).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: graph-model\n**sim-id:** graph-algorithms-explorer<br/>\n**Library:** vis-network<br/>\n**Template:** https://github.com/dmccreary/modeling-healthcare-data/tree/main/docs/sims/network-community-detection-graph-model<br/>\n**Status:** Specified\n\nLearning objective: given a sample network, the learner will apply community detection to identify densely connected clusters and apply link prediction to identify a plausible missing edge, then interpret both results (Bloom: Apply).\n\nCanvas: responsive vis-network container, minimum 520px height, full container width, with a window `resize` listener calling `network.redraw()` and `network.fit()`.\n\nVisual elements: an 18-node sample network with two visually separable but lightly interconnected clusters (representing, for example, two overlapping social or organizational groups), rendered with vis-network's default force-directed physics.\n\nControls: a \"Detect Communities\" button that runs a simple modularity-based clustering over the current node/edge dataset and recolors each detected cluster in a distinct color; a \"Predict Missing Link\" button that computes a common-neighbors score for every non-adjacent node pair and highlights the single highest-scoring pair with a dashed, pulsing edge, labeled with its predicted-likelihood score.\n\nInteractivity requirement: every node is clickable, opening an infobox listing that node's community assignment (once detected) and its degree (number of connections); the predicted dashed edge is hoverable, showing a tooltip explaining the shared neighbors driving that prediction.\n\nColor scheme: each detected community rendered in a distinct pastel color; the predicted link rendered in the book's accent orange to stand out from confirmed edges, which remain neutral gray.\n\nImplementation: vis-network `DataSet` objects for nodes and edges, a simple in-browser modularity or connected-components-based clustering function for the community-detection button, and a common-neighbors scoring function for the link-prediction button, both computed client-side over the fixed sample dataset."
+}

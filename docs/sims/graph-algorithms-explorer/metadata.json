@@ -1,0 +1,23 @@
+{
+  "title": "Graph Algorithms Explorer",
+  "description": "given a sample network, the learner will apply community detection to identify densely connected clusters and apply link prediction to identify a plausible missing edge, then interpret both results (Bloom: Apply).",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "graph-algorithms-explorer",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 26,
+  "chapter_title": "Knowledge Graph Applications and Data Architecture",
+  "chapter_dir": "26-knowledge-graph-applications-and-data-architecture",
+  "chapter_rel_dir": "chapters/26-knowledge-graph-applications-and-data-architecture"
+}
