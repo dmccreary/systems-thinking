@@ -33,10 +33,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Visualize node simulator test at the molecular level",
-    "Understand the relationships in node simulator test",
-    "Explore how variables affect node simulator test",
-    "Test understanding of node simulator test through interactive exercises"
+    "Identify the stock (People, initial value 10,000) and the net growth flow that together define this system dynamics model",
+    "Explain how a flow rate written as [People] * 0.10 makes growth proportional to the current size of the stock",
+    "Predict the shape of the population curve over the 20-step run before reading the Chart.js line plot",
+    "Trace how the simulation model produces a time series that is rendered as population versus time",
+    "Distinguish exponential growth driven by a percentage rate from linear growth driven by a fixed increment"
   ],
   "pedagogical": {
     "pattern": "reference",

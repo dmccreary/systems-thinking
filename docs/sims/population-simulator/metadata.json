@@ -45,10 +45,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of population simulator with causal loop diagram",
-    "Apply population simulator with causal loop diagram to solve problems",
-    "Visualize and interpret population simulator with causal loop diagram relationships",
-    "Experiment with parameters to observe their effects on population simulator with causal loop diagram"
+    "Identify the variables, arrows, and polarity markers that form the reinforcing loop in the causal loop diagram",
+    "Explain why a positive link from population back to births produces exponential rather than linear growth",
+    "Predict the population at t=30 for birth rates of 0.01, 0.02, 0.05, and 0.10 before running the simulation",
+    "Analyze how moving the birth rate slider changes the steepness and doubling time of the growth curve",
+    "Distinguish reinforcing loops from balancing loops using loop structure and R or B notation"
   ],
   "pedagogical": {
     "pattern": "reference",

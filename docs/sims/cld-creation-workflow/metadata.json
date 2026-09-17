@@ -44,10 +44,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of infographic workflow for creating a causal loop diagram",
-    "Apply infographic workflow for creating a causal loop diagram to solve problems",
-    "Visualize and interpret infographic workflow for creating a causal loop diagram relationships",
-    "Experiment with parameters to observe their effects on infographic workflow for creating a causal loop diagram"
+    "Sequence the 12 steps of building a causal loop diagram from problem definition through intervention design",
+    "Explain why the boundary set in Step 1 determines which variables belong inside the system under study",
+    "Distinguish the foundation, system mapping, and validation-and-leverage phases of the workflow",
+    "Apply the workflow to map a recurring organizational problem into variables and causal links",
+    "Identify leverage points as an output of the validation stage rather than of the initial mapping stage"
   ],
   "pedagogical": {
     "pattern": "worked-example",

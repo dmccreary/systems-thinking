@@ -44,10 +44,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of cld editor",
-    "Apply cld editor to solve problems",
-    "Visualize and interpret cld editor relationships",
-    "Experiment with parameters to observe their effects on cld editor"
+    "Distinguish the node types variable, stock, flow, condition, and constant when modeling a system",
+    "Explain how edge polarity, strength, and delay together characterize a single causal relationship",
+    "Identify a reinforcing loop versus a balancing loop from its loop type and path definition",
+    "Design a causal loop diagram by adding nodes, assigning edge polarities, and defining feedback loops",
+    "Trace how node positions are captured on dragEnd and persisted when the diagram is saved to JSON"
   ],
   "pedagogical": {
     "pattern": "demonstration",
