@@ -1,0 +1,10 @@
+{
+  "title": "Systems Thinking in the Age of AI",
+  "description": "This is an intelligent textbook has many interactive resources for teaching systems thinking to a wide audience from high school students to business executives.",
+  "creator": "Dan McCreary",
+  "date": "2026-09-17",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}

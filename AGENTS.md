@@ -56,6 +56,20 @@ The site includes several JavaScript-based simulations using libraries like vis.
 ## Content Focus
 The site addresses enterprise knowledge graph adoption, organizational silo breaking, and systems thinking applications in technology contexts. Interactive elements help illustrate complex systems concepts through visual simulations and causal loop diagrams.
 
+## Audience Structure
+
+This book was originally written as a 4-hour executive workshop ("Systems Thinking for IT Leadership") and was later adapted into a general-purpose resource. It now serves **7 distinct audiences**, each with its own course description in `docs/course-descriptions/` (and its own entry under "Course Descriptions" in `mkdocs.yml`):
+
+- Junior High (`junior-high.md`)
+- High School (`high-school.md`)
+- College (`college.md`)
+- Graduate School (`grad-school.md`)
+- Conference Workshop (`conference-workshop.md`)
+- Executive Overview (`executives.md`)
+- Government Agency (`government-agency.md`)
+
+The chapter content in `docs/chapters/` is shared across all 7 audiences — it is not forked per audience. `docs/course-descriptions/` holds the audience-specific framing/pitch (duration, prerequisites, case studies emphasized), not separate copies of the book. Keep new chapter content broadly accessible across this full range (from 8th grade through executives) rather than tuned narrowly to one audience.
+
 ## Content Generation Guide
 
 Before generating content for the chapters, lesson plans, quizzes, FAQ or other student-facing

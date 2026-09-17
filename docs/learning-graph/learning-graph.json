@@ -1,0 +1,7183 @@
+{
+  "metadata": {
+    "title": "Systems Thinking in the Age of AI",
+    "description": "This is an intelligent textbook has many interactive resources for teaching systems thinking to a wide audience from high school students to business executives.",
+    "creator": "Dan McCreary",
+    "date": "2026-09-17",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Systems Thinking Foundations",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DYNM": {
+      "classifierName": "System Dynamics & Feedback",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ARCH": {
+      "classifierName": "Systems Archetypes",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CASE": {
+      "classifierName": "Archetype Case Studies & Named Laws",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "LEVR": {
+      "classifierName": "Leverage Points & Emergence",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "GRPH": {
+      "classifierName": "Graph Theory & Graph Databases",
+      "color": "Khaki",
+      "font": {
+        "color": "black"
+      }
+    },
+    "KREP": {
+      "classifierName": "Knowledge Representation & Data Management",
+      "color": "Peru",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ENTK": {
+      "classifierName": "Enterprise Knowledge Graphs & Silos",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ARTI": {
+      "classifierName": "Artificial Intelligence Systems",
+      "color": "LightSkyBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "KSEC": {
+      "classifierName": "Knowledge Systems & Economic Complexity",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DSGN": {
+      "classifierName": "Systems Design & Future Practice",
+      "color": "DarkRed",
+      "font": {
+        "color": "white"
+      }
+    },
+    "KGAP": {
+      "classifierName": "Knowledge Graph Applications",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DISC": {
+      "classifierName": "Systems Thinking Across Disciplines",
+      "color": "DimGray",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "System",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 367106
+    },
+    {
+      "id": 2,
+      "label": "Subsystem",
+      "group": "FOUND",
+      "cis": 182466
+    },
+    {
+      "id": 3,
+      "label": "System Boundary",
+      "group": "FOUND",
+      "cis": 120
+    },
+    {
+      "id": 4,
+      "label": "Environment (System)",
+      "group": "FOUND",
+      "cis": 60
+    },
+    {
+      "id": 5,
+      "label": "Input",
+      "group": "FOUND",
+      "cis": 23
+    },
+    {
+      "id": 6,
+      "label": "Output",
+      "group": "FOUND",
+      "cis": 23
+    },
+    {
+      "id": 7,
+      "label": "Throughput",
+      "group": "FOUND",
+      "cis": 22
+    },
+    {
+      "id": 8,
+      "label": "Open System",
+      "group": "FOUND",
+      "cis": 54
+    },
+    {
+      "id": 9,
+      "label": "Closed System",
+      "group": "FOUND",
+      "cis": 5
+    },
+    {
+      "id": 10,
+      "label": "Systems Thinking",
+      "group": "FOUND",
+      "cis": 60900
+    },
+    {
+      "id": 11,
+      "label": "Linear Thinking",
+      "group": "FOUND",
+      "cis": 11
+    },
+    {
+      "id": 12,
+      "label": "Reductionism",
+      "group": "FOUND",
+      "cis": 10
+    },
+    {
+      "id": 13,
+      "label": "Holism",
+      "group": "FOUND",
+      "cis": 9
+    },
+    {
+      "id": 14,
+      "label": "Complexity",
+      "group": "FOUND",
+      "cis": 68
+    },
+    {
+      "id": 15,
+      "label": "Complicated Vs Complex",
+      "group": "FOUND",
+      "cis": 15
+    },
+    {
+      "id": 16,
+      "label": "Interconnection",
+      "group": "FOUND",
+      "cis": 121497
+    },
+    {
+      "id": 17,
+      "label": "Interdependence",
+      "group": "FOUND",
+      "cis": 63
+    },
+    {
+      "id": 18,
+      "label": "Cause And Effect",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 87600
+    },
+    {
+      "id": 19,
+      "label": "Correlation Vs Causation",
+      "group": "FOUND",
+      "cis": 7
+    },
+    {
+      "id": 20,
+      "label": "Root Cause",
+      "group": "FOUND",
+      "cis": 116
+    },
+    {
+      "id": 21,
+      "label": "Root Cause Analysis",
+      "group": "FOUND",
+      "cis": 5
+    },
+    {
+      "id": 22,
+      "label": "Symptom",
+      "group": "FOUND",
+      "cis": 62
+    },
+    {
+      "id": 23,
+      "label": "Mental Model",
+      "group": "FOUND",
+      "cis": 55
+    },
+    {
+      "id": 24,
+      "label": "Systems Map",
+      "group": "FOUND",
+      "cis": 60510
+    },
+    {
+      "id": 25,
+      "label": "System Mapping",
+      "group": "FOUND",
+      "cis": 2
+    },
+    {
+      "id": 26,
+      "label": "Rich Picture",
+      "group": "FOUND",
+      "cis": 2
+    },
+    {
+      "id": 27,
+      "label": "Structure Drives Behavior",
+      "group": "FOUND",
+      "cis": 169
+    },
+    {
+      "id": 28,
+      "label": "Dynamics",
+      "group": "FOUND",
+      "cis": 21
+    },
+    {
+      "id": 29,
+      "label": "System Theory",
+      "group": "FOUND",
+      "cis": 15
+    },
+    {
+      "id": 30,
+      "label": "Wicked Problem",
+      "group": "FOUND",
+      "cis": 9
+    },
+    {
+      "id": 31,
+      "label": "Five Whys",
+      "group": "FOUND",
+      "cis": 2
+    },
+    {
+      "id": 32,
+      "label": "Fishbone Diagram",
+      "group": "FOUND",
+      "cis": 2
+    },
+    {
+      "id": 33,
+      "label": "Second-Order Effect",
+      "group": "FOUND",
+      "cis": 143
+    },
+    {
+      "id": 34,
+      "label": "Ripple Effect",
+      "group": "FOUND",
+      "cis": 3
+    },
+    {
+      "id": 35,
+      "label": "Cascading Failure",
+      "group": "FOUND",
+      "cis": 2
+    },
+    {
+      "id": 36,
+      "label": "Emergent Property",
+      "group": "FOUND",
+      "cis": 43
+    },
+    {
+      "id": 37,
+      "label": "Emergence",
+      "group": "FOUND",
+      "cis": 41
+    },
+    {
+      "id": 38,
+      "label": "Self-Organization",
+      "group": "FOUND",
+      "cis": 24
+    },
+    {
+      "id": 39,
+      "label": "Sensitivity Analysis",
+      "group": "FOUND",
+      "cis": 8
+    },
+    {
+      "id": 40,
+      "label": "Model Assumptions",
+      "group": "FOUND",
+      "cis": 20
+    },
+    {
+      "id": 41,
+      "label": "Model Limitations",
+      "group": "FOUND",
+      "cis": 10
+    },
+    {
+      "id": 42,
+      "label": "Model Validation",
+      "group": "FOUND",
+      "cis": 9
+    },
+    {
+      "id": 43,
+      "label": "Scenario Testing",
+      "group": "FOUND",
+      "cis": 8
+    },
+    {
+      "id": 44,
+      "label": "Causal Loop Diagram",
+      "group": "DYNM",
+      "cis": 60505
+    },
+    {
+      "id": 45,
+      "label": "Node",
+      "group": "DYNM",
+      "cis": 25569
+    },
+    {
+      "id": 46,
+      "label": "Edge (CLD)",
+      "group": "DYNM",
+      "cis": 25568
+    },
+    {
+      "id": 47,
+      "label": "Causal Link",
+      "group": "DYNM",
+      "cis": 25567
+    },
+    {
+      "id": 48,
+      "label": "Positive Causal Link",
+      "group": "DYNM",
+      "cis": 12783
+    },
+    {
+      "id": 49,
+      "label": "Negative Causal Link",
+      "group": "DYNM",
+      "cis": 12783
+    },
+    {
+      "id": 50,
+      "label": "Loop Polarity",
+      "group": "DYNM",
+      "cis": 6391
+    },
+    {
+      "id": 51,
+      "label": "Same-Direction Link",
+      "group": "DYNM",
+      "cis": 6391
+    },
+    {
+      "id": 52,
+      "label": "Opposite-Direction Link",
+      "group": "DYNM",
+      "cis": 6391
+    },
+    {
+      "id": 53,
+      "label": "Negative-Link Counting Rule",
+      "group": "DYNM",
+      "cis": 6390
+    },
+    {
+      "id": 54,
+      "label": "Loop Identification",
+      "group": "DYNM",
+      "cis": 6389
+    },
+    {
+      "id": 55,
+      "label": "Loop Marker",
+      "group": "DYNM",
+      "cis": 3402
+    },
+    {
+      "id": 56,
+      "label": "Reinforcing Loop",
+      "group": "DYNM",
+      "cis": 1313
+    },
+    {
+      "id": 57,
+      "label": "Balancing Loop",
+      "group": "DYNM",
+      "cis": 1673
+    },
+    {
+      "id": 58,
+      "label": "Reinforcing Loop Label",
+      "group": "DYNM",
+      "cis": 5
+    },
+    {
+      "id": 59,
+      "label": "Balancing Loop Label",
+      "group": "DYNM",
+      "cis": 410
+    },
+    {
+      "id": 60,
+      "label": "Feedback",
+      "group": "DYNM",
+      "cis": 1065
+    },
+    {
+      "id": 61,
+      "label": "Feedback Loop",
+      "group": "DYNM",
+      "cis": 394
+    },
+    {
+      "id": 62,
+      "label": "Positive Feedback",
+      "group": "DYNM",
+      "cis": 261
+    },
+    {
+      "id": 63,
+      "label": "Negative Feedback",
+      "group": "DYNM",
+      "cis": 409
+    },
+    {
+      "id": 64,
+      "label": "Vicious Cycle",
+      "group": "DYNM",
+      "cis": 4
+    },
+    {
+      "id": 65,
+      "label": "Virtuous Cycle",
+      "group": "DYNM",
+      "cis": 4
+    },
+    {
+      "id": 66,
+      "label": "Loop Dominance",
+      "group": "DYNM",
+      "cis": 7
+    },
+    {
+      "id": 67,
+      "label": "Shifting Dominance",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 68,
+      "label": "Influence Diagram",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 69,
+      "label": "Stock And Flow Diagram",
+      "group": "DYNM",
+      "cis": 1721
+    },
+    {
+      "id": 70,
+      "label": "Delay",
+      "group": "DYNM",
+      "cis": 20
+    },
+    {
+      "id": 71,
+      "label": "Feedback Delay",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 72,
+      "label": "Time Delay",
+      "group": "DYNM",
+      "cis": 6
+    },
+    {
+      "id": 73,
+      "label": "System Delay",
+      "group": "DYNM",
+      "cis": 6
+    },
+    {
+      "id": 74,
+      "label": "Variable (CLD)",
+      "group": "DYNM",
+      "cis": 12
+    },
+    {
+      "id": 75,
+      "label": "Condition",
+      "group": "DYNM",
+      "cis": 6
+    },
+    {
+      "id": 76,
+      "label": "Outcome",
+      "group": "DYNM",
+      "cis": 5
+    },
+    {
+      "id": 77,
+      "label": "Stock",
+      "group": "DYNM",
+      "cis": 729
+    },
+    {
+      "id": 78,
+      "label": "Flow",
+      "group": "DYNM",
+      "cis": 991
+    },
+    {
+      "id": 79,
+      "label": "Inflow",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 80,
+      "label": "Outflow",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 81,
+      "label": "Buffer",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 82,
+      "label": "Bottleneck",
+      "group": "DYNM",
+      "cis": 95
+    },
+    {
+      "id": 83,
+      "label": "Constraint",
+      "group": "DYNM",
+      "cis": 98
+    },
+    {
+      "id": 84,
+      "label": "Limiting Factor",
+      "group": "DYNM",
+      "cis": 94
+    },
+    {
+      "id": 85,
+      "label": "Stock And Flow Model",
+      "group": "DYNM",
+      "cis": 216
+    },
+    {
+      "id": 86,
+      "label": "Aging Chain",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 87,
+      "label": "Co-Flow",
+      "group": "DYNM",
+      "cis": 206
+    },
+    {
+      "id": 88,
+      "label": "Conveyor Model",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 89,
+      "label": "Accumulation",
+      "group": "DYNM",
+      "cis": 1
+    },
+    {
+      "id": 90,
+      "label": "Rate Of Change",
+      "group": "DYNM",
+      "cis": 565
+    },
+    {
+      "id": 91,
+      "label": "Systems Dynamics",
+      "group": "DYNM",
+      "cis": 205
+    },
+    {
+      "id": 92,
+      "label": "Dynamic Equilibrium",
+      "group": "DYNM",
+      "cis": 204
+    },
+    {
+      "id": 93,
+      "label": "Steady State",
+      "group": "DYNM",
+      "cis": 101
+    },
+    {
+      "id": 94,
+      "label": "Equilibrium",
+      "group": "DYNM",
+      "cis": 100
+    },
+    {
+      "id": 95,
+      "label": "Homeostasis",
+      "group": "DYNM",
+      "cis": 91
+    },
+    {
+      "id": 96,
+      "label": "Set Point",
+      "group": "DYNM",
+      "cis": 90
+    },
+    {
+      "id": 97,
+      "label": "Goal-Seeking Behavior",
+      "group": "DYNM",
+      "cis": 36
+    },
+    {
+      "id": 98,
+      "label": "Self-Correcting System",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 99,
+      "label": "Sensor (Control)",
+      "group": "DYNM",
+      "cis": 26
+    },
+    {
+      "id": 100,
+      "label": "Actuator (Control)",
+      "group": "DYNM",
+      "cis": 26
+    },
+    {
+      "id": 101,
+      "label": "Control System",
+      "group": "DYNM",
+      "cis": 25
+    },
+    {
+      "id": 102,
+      "label": "Linear Growth",
+      "group": "DYNM",
+      "cis": 202
+    },
+    {
+      "id": 103,
+      "label": "Linear Relationship",
+      "group": "DYNM",
+      "cis": 201
+    },
+    {
+      "id": 104,
+      "label": "Exponential Growth",
+      "group": "DYNM",
+      "cis": 162
+    },
+    {
+      "id": 105,
+      "label": "Exponential Blind Spot",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 106,
+      "label": "Compound Interest",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 107,
+      "label": "Compounding Effect",
+      "group": "DYNM",
+      "cis": 88
+    },
+    {
+      "id": 108,
+      "label": "Nonlinear",
+      "group": "DYNM",
+      "cis": 198
+    },
+    {
+      "id": 109,
+      "label": "Nonlinear Behavior",
+      "group": "DYNM",
+      "cis": 182
+    },
+    {
+      "id": 110,
+      "label": "Nonlinear Feedback",
+      "group": "DYNM",
+      "cis": 15
+    },
+    {
+      "id": 111,
+      "label": "Threshold Effect",
+      "group": "DYNM",
+      "cis": 90
+    },
+    {
+      "id": 112,
+      "label": "Tipping Point",
+      "group": "DYNM",
+      "cis": 4
+    },
+    {
+      "id": 113,
+      "label": "Bifurcation",
+      "group": "DYNM",
+      "cis": 54
+    },
+    {
+      "id": 114,
+      "label": "Chaos Theory",
+      "group": "DYNM",
+      "cis": 22
+    },
+    {
+      "id": 115,
+      "label": "Butterfly Effect",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 116,
+      "label": "Attractor",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 117,
+      "label": "Phase Transition",
+      "group": "DYNM",
+      "cis": 31
+    },
+    {
+      "id": 118,
+      "label": "Edge Of Chaos",
+      "group": "DYNM",
+      "cis": 15
+    },
+    {
+      "id": 119,
+      "label": "Sharpness Of Transition",
+      "group": "DYNM",
+      "cis": 15
+    },
+    {
+      "id": 120,
+      "label": "Unpredictability Of Emergence",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 121,
+      "label": "Oscillation",
+      "group": "DYNM",
+      "cis": 1
+    },
+    {
+      "id": 122,
+      "label": "Overshoot",
+      "group": "DYNM",
+      "cis": 5
+    },
+    {
+      "id": 123,
+      "label": "Overshoot And Collapse",
+      "group": "DYNM",
+      "cis": 4
+    },
+    {
+      "id": 124,
+      "label": "S-Curve",
+      "group": "DYNM",
+      "cis": 38
+    },
+    {
+      "id": 125,
+      "label": "Carrying Capacity",
+      "group": "DYNM",
+      "cis": 37
+    },
+    {
+      "id": 126,
+      "label": "Diminishing Returns",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 127,
+      "label": "Resilience",
+      "group": "DYNM",
+      "cis": 22
+    },
+    {
+      "id": 128,
+      "label": "Robustness",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 129,
+      "label": "Fragility",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 130,
+      "label": "Antifragility",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 131,
+      "label": "Adaptation",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 132,
+      "label": "Self-Regulation",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 133,
+      "label": "Amplification",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 134,
+      "label": "Dampening",
+      "group": "DYNM",
+      "cis": 3
+    },
+    {
+      "id": 135,
+      "label": "Sustainability",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 136,
+      "label": "Suboptimization",
+      "group": "DYNM",
+      "cis": 2
+    },
+    {
+      "id": 137,
+      "label": "Policy Resistance",
+      "group": "DYNM",
+      "cis": 6
+    },
+    {
+      "id": 138,
+      "label": "System Pushback",
+      "group": "DYNM",
+      "cis": 5
+    },
+    {
+      "id": 139,
+      "label": "Delayed Consequence",
+      "group": "DYNM",
+      "cis": 5
+    },
+    {
+      "id": 140,
+      "label": "Unintended Consequence",
+      "group": "DYNM",
+      "cis": 119
+    },
+    {
+      "id": 141,
+      "label": "Systems Archetype",
+      "group": "ARCH",
+      "cis": 845
+    },
+    {
+      "id": 142,
+      "label": "Quick Fix",
+      "group": "ARCH",
+      "cis": 152
+    },
+    {
+      "id": 143,
+      "label": "Symptomatic Solution",
+      "group": "ARCH",
+      "cis": 60
+    },
+    {
+      "id": 144,
+      "label": "Root Cause Solution",
+      "group": "ARCH",
+      "cis": 44
+    },
+    {
+      "id": 145,
+      "label": "Fundamental Solution",
+      "group": "ARCH",
+      "cis": 43
+    },
+    {
+      "id": 146,
+      "label": "Initial Success",
+      "group": "ARCH",
+      "cis": 2
+    },
+    {
+      "id": 147,
+      "label": "Side Effect",
+      "group": "ARCH",
+      "cis": 2
+    },
+    {
+      "id": 148,
+      "label": "Negative Externality",
+      "group": "ARCH",
+      "cis": 73
+    },
+    {
+      "id": 149,
+      "label": "Positive Externality",
+      "group": "ARCH",
+      "cis": 4
+    },
+    {
+      "id": 150,
+      "label": "Free Rider Problem",
+      "group": "ARCH",
+      "cis": 69
+    },
+    {
+      "id": 151,
+      "label": "Common Pool Resource",
+      "group": "ARCH",
+      "cis": 66
+    },
+    {
+      "id": 152,
+      "label": "Collective Action Problem",
+      "group": "ARCH",
+      "cis": 3
+    },
+    {
+      "id": 153,
+      "label": "Misaligned Incentive",
+      "group": "ARCH",
+      "cis": 14
+    },
+    {
+      "id": 154,
+      "label": "Winner-Take-All Dynamics",
+      "group": "ARCH",
+      "cis": 2
+    },
+    {
+      "id": 155,
+      "label": "Compounding Advantage",
+      "group": "ARCH",
+      "cis": 84
+    },
+    {
+      "id": 156,
+      "label": "Self-Fulfilling Prophecy",
+      "group": "ARCH",
+      "cis": 61
+    },
+    {
+      "id": 157,
+      "label": "Resource Allocation",
+      "group": "ARCH",
+      "cis": 10
+    },
+    {
+      "id": 158,
+      "label": "Resource Concentration",
+      "group": "ARCH",
+      "cis": 9
+    },
+    {
+      "id": 159,
+      "label": "Goal Erosion",
+      "group": "ARCH",
+      "cis": 12
+    },
+    {
+      "id": 160,
+      "label": "Eroding Goals",
+      "group": "ARCH",
+      "cis": 4
+    },
+    {
+      "id": 161,
+      "label": "Corrective Action",
+      "group": "ARCH",
+      "cis": 2
+    },
+    {
+      "id": 162,
+      "label": "Goal-Performance Gap",
+      "group": "ARCH",
+      "cis": 4
+    },
+    {
+      "id": 163,
+      "label": "Crisis Point",
+      "group": "ARCH",
+      "cis": 4
+    },
+    {
+      "id": 164,
+      "label": "Learned Helplessness",
+      "group": "ARCH",
+      "cis": 3
+    },
+    {
+      "id": 165,
+      "label": "Capability Erosion",
+      "group": "ARCH",
+      "cis": 12
+    },
+    {
+      "id": 166,
+      "label": "Addiction Cycle",
+      "group": "ARCH",
+      "cis": 2
+    },
+    {
+      "id": 167,
+      "label": "Limits To Growth Archetype",
+      "group": "ARCH",
+      "cis": 28
+    },
+    {
+      "id": 168,
+      "label": "Fixes That Fail Archetype",
+      "group": "ARCH",
+      "cis": 42
+    },
+    {
+      "id": 169,
+      "label": "Shifting The Burden Archetype",
+      "group": "ARCH",
+      "cis": 7
+    },
+    {
+      "id": 170,
+      "label": "Tragedy Of The Commons Archetype",
+      "group": "ARCH",
+      "cis": 51
+    },
+    {
+      "id": 171,
+      "label": "Success To Successful Archetype",
+      "group": "ARCH",
+      "cis": 58
+    },
+    {
+      "id": 172,
+      "label": "Drifting Goals Archetype",
+      "group": "ARCH",
+      "cis": 3
+    },
+    {
+      "id": 173,
+      "label": "Escalation Archetype",
+      "group": "ARCH",
+      "cis": 3
+    },
+    {
+      "id": 174,
+      "label": "Accidental Adversaries Archetype",
+      "group": "ARCH",
+      "cis": 2
+    },
+    {
+      "id": 175,
+      "label": "Underinvestment Archetype",
+      "group": "ARCH",
+      "cis": 3
+    },
+    {
+      "id": 176,
+      "label": "Seeking The Wrong Goal Archetype",
+      "group": "ARCH",
+      "cis": 3
+    },
+    {
+      "id": 177,
+      "label": "Moore's Law",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 178,
+      "label": "Scaling Laws",
+      "group": "CASE",
+      "cis": 13
+    },
+    {
+      "id": 179,
+      "label": "Dunbar's Number",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 180,
+      "label": "Attention Economy",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 181,
+      "label": "Computational Resource Limit",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 182,
+      "label": "Unsustainable Growth",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 183,
+      "label": "Sustainable Growth",
+      "group": "CASE",
+      "cis": 1
+    },
+    {
+      "id": 184,
+      "label": "Physical Limits",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 185,
+      "label": "Economic Limits",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 186,
+      "label": "Campbell's Law",
+      "group": "CASE",
+      "cis": 18
+    },
+    {
+      "id": 187,
+      "label": "Goodhart's Law",
+      "group": "CASE",
+      "cis": 9
+    },
+    {
+      "id": 188,
+      "label": "Induced Demand",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 189,
+      "label": "Brain Drain",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 190,
+      "label": "Proxy Metric",
+      "group": "CASE",
+      "cis": 8
+    },
+    {
+      "id": 191,
+      "label": "Measurement Trap",
+      "group": "CASE",
+      "cis": 6
+    },
+    {
+      "id": 192,
+      "label": "Streetlight Effect",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 193,
+      "label": "Authentic Assessment",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 194,
+      "label": "Portfolio Assessment",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 195,
+      "label": "Human-AI Collaboration",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 196,
+      "label": "AI Dependence",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 197,
+      "label": "Symptom Relief",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 198,
+      "label": "Resource Depletion",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 199,
+      "label": "Digital Commons",
+      "group": "CASE",
+      "cis": 9
+    },
+    {
+      "id": 200,
+      "label": "Commons Governance Solution",
+      "group": "CASE",
+      "cis": 25
+    },
+    {
+      "id": 201,
+      "label": "Collective Governance",
+      "group": "CASE",
+      "cis": 17
+    },
+    {
+      "id": 202,
+      "label": "Rational Self-Interest",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 203,
+      "label": "Reverse Tragedy Of The Commons",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 204,
+      "label": "Information Pollution",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 205,
+      "label": "Misinformation",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 206,
+      "label": "Collective Intelligence",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 207,
+      "label": "Mob Behavior",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 208,
+      "label": "Ecosystem Balance",
+      "group": "CASE",
+      "cis": 4
+    },
+    {
+      "id": 209,
+      "label": "Digital Divide",
+      "group": "CASE",
+      "cis": 4
+    },
+    {
+      "id": 210,
+      "label": "Algorithmic Bias",
+      "group": "CASE",
+      "cis": 6
+    },
+    {
+      "id": 211,
+      "label": "Systemic Inequality",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 212,
+      "label": "Equitable Intervention Point",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 213,
+      "label": "Influence Concentration",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 214,
+      "label": "Cumulative Advantage",
+      "group": "CASE",
+      "cis": 8
+    },
+    {
+      "id": 215,
+      "label": "Initial Advantage",
+      "group": "CASE",
+      "cis": 1
+    },
+    {
+      "id": 216,
+      "label": "Network Trust",
+      "group": "CASE",
+      "cis": 5
+    },
+    {
+      "id": 217,
+      "label": "Network Topology",
+      "group": "CASE",
+      "cis": 46
+    },
+    {
+      "id": 218,
+      "label": "Scale-Free Network",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 219,
+      "label": "Small-World Network",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 220,
+      "label": "Network Externality",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 221,
+      "label": "Network Effect",
+      "group": "CASE",
+      "cis": 24
+    },
+    {
+      "id": 222,
+      "label": "Metcalfe's Law",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 223,
+      "label": "Matthew Effect",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 224,
+      "label": "Thurstone's Law",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 225,
+      "label": "Path Dependence",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 226,
+      "label": "Knowledge Path Dependence",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 227,
+      "label": "Open Standard",
+      "group": "CASE",
+      "cis": 8
+    },
+    {
+      "id": 228,
+      "label": "Protocol Governance",
+      "group": "CASE",
+      "cis": 4
+    },
+    {
+      "id": 229,
+      "label": "AI Flywheel",
+      "group": "CASE",
+      "cis": 5
+    },
+    {
+      "id": 230,
+      "label": "Search And Reuse",
+      "group": "CASE",
+      "cis": 4
+    },
+    {
+      "id": 231,
+      "label": "Communication Standards",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 232,
+      "label": "Hub-And-Spoke Architecture",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 233,
+      "label": "Point-To-Point Integration",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 234,
+      "label": "Quadratic Scaling",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 235,
+      "label": "Faceted Search",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 236,
+      "label": "Diffusion Process",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 237,
+      "label": "Epidemic Model",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 238,
+      "label": "Agent-Based Modeling",
+      "group": "CASE",
+      "cis": 4
+    },
+    {
+      "id": 239,
+      "label": "Cellular Automata",
+      "group": "CASE",
+      "cis": 1
+    },
+    {
+      "id": 240,
+      "label": "Multi-Agent System",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 241,
+      "label": "Adaptive Management",
+      "group": "CASE",
+      "cis": 7
+    },
+    {
+      "id": 242,
+      "label": "Learning Organization",
+      "group": "CASE",
+      "cis": 6
+    },
+    {
+      "id": 243,
+      "label": "Systems Leadership",
+      "group": "CASE",
+      "cis": 3
+    },
+    {
+      "id": 244,
+      "label": "Collective Impact",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 245,
+      "label": "Theory Of Change",
+      "group": "CASE",
+      "cis": 2
+    },
+    {
+      "id": 246,
+      "label": "Leverage Point",
+      "group": "LEVR",
+      "cis": 168
+    },
+    {
+      "id": 247,
+      "label": "Leverage Points Hierarchy",
+      "group": "LEVR",
+      "cis": 165
+    },
+    {
+      "id": 248,
+      "label": "Leverage Points Iceberg",
+      "group": "LEVR",
+      "cis": 12
+    },
+    {
+      "id": 249,
+      "label": "Iceberg Model",
+      "group": "LEVR",
+      "cis": 11
+    },
+    {
+      "id": 250,
+      "label": "Events Layer",
+      "group": "LEVR",
+      "cis": 4
+    },
+    {
+      "id": 251,
+      "label": "Patterns Layer",
+      "group": "LEVR",
+      "cis": 3
+    },
+    {
+      "id": 252,
+      "label": "Structures Layer",
+      "group": "LEVR",
+      "cis": 2
+    },
+    {
+      "id": 253,
+      "label": "Mental Models Layer",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 254,
+      "label": "Shallow Leverage Point",
+      "group": "LEVR",
+      "cis": 49
+    },
+    {
+      "id": 255,
+      "label": "Structural Leverage Point",
+      "group": "LEVR",
+      "cis": 43
+    },
+    {
+      "id": 256,
+      "label": "Deep Leverage Point",
+      "group": "LEVR",
+      "cis": 36
+    },
+    {
+      "id": 257,
+      "label": "Transformative Leverage Point",
+      "group": "LEVR",
+      "cis": 21
+    },
+    {
+      "id": 258,
+      "label": "Constants And Parameters",
+      "group": "LEVR",
+      "cis": 3
+    },
+    {
+      "id": 259,
+      "label": "Material Stocks And Flows",
+      "group": "LEVR",
+      "cis": 2
+    },
+    {
+      "id": 260,
+      "label": "Negative Feedback Strength",
+      "group": "LEVR",
+      "cis": 2
+    },
+    {
+      "id": 261,
+      "label": "Positive Feedback Strength",
+      "group": "LEVR",
+      "cis": 2
+    },
+    {
+      "id": 262,
+      "label": "Information Flow Structure",
+      "group": "LEVR",
+      "cis": 2
+    },
+    {
+      "id": 263,
+      "label": "Rules Of The System",
+      "group": "LEVR",
+      "cis": 8
+    },
+    {
+      "id": 264,
+      "label": "Self-Organizing System Structure",
+      "group": "LEVR",
+      "cis": 6
+    },
+    {
+      "id": 265,
+      "label": "Goals Of The System",
+      "group": "LEVR",
+      "cis": 6
+    },
+    {
+      "id": 266,
+      "label": "Mindset Or Paradigm",
+      "group": "LEVR",
+      "cis": 11
+    },
+    {
+      "id": 267,
+      "label": "Power To Transcend Paradigms",
+      "group": "LEVR",
+      "cis": 3
+    },
+    {
+      "id": 268,
+      "label": "Constitution-Level Rule",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 269,
+      "label": "Paradigm Shift",
+      "group": "LEVR",
+      "cis": 2
+    },
+    {
+      "id": 270,
+      "label": "Parameter Change",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 271,
+      "label": "Low-Leverage Intervention",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 272,
+      "label": "Medium-Leverage Intervention",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 273,
+      "label": "High-Leverage Intervention",
+      "group": "LEVR",
+      "cis": 5
+    },
+    {
+      "id": 274,
+      "label": "Resistance To Leverage Change",
+      "group": "LEVR",
+      "cis": 4
+    },
+    {
+      "id": 275,
+      "label": "Level Confusion Mistake",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 276,
+      "label": "Skipping Levels Mistake",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 277,
+      "label": "Underestimating Resistance",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 278,
+      "label": "Measurement Obsession Mistake",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 279,
+      "label": "Complex Adaptive System",
+      "group": "LEVR",
+      "cis": 14
+    },
+    {
+      "id": 280,
+      "label": "Emergent Risk Management",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 281,
+      "label": "Adaptive Capacity",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 282,
+      "label": "Coevolution",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 283,
+      "label": "Distributed Control",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 284,
+      "label": "Local Interaction",
+      "group": "LEVR",
+      "cis": 3
+    },
+    {
+      "id": 285,
+      "label": "Global Pattern",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 286,
+      "label": "Bottom-Up Behavior",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 287,
+      "label": "Top-Down Constraint",
+      "group": "LEVR",
+      "cis": 1
+    },
+    {
+      "id": 288,
+      "label": "Graph (Data Structure)",
+      "group": "GRPH",
+      "shape": "box",
+      "cis": 2391
+    },
+    {
+      "id": 289,
+      "label": "Vertex",
+      "group": "GRPH",
+      "cis": 1452
+    },
+    {
+      "id": 290,
+      "label": "Edge (Graph)",
+      "group": "GRPH",
+      "cis": 728
+    },
+    {
+      "id": 291,
+      "label": "Directed Graph",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 292,
+      "label": "Undirected Graph",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 293,
+      "label": "Weighted Graph",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 294,
+      "label": "Property Graph",
+      "group": "GRPH",
+      "cis": 176
+    },
+    {
+      "id": 295,
+      "label": "Labeled Property Graph",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 296,
+      "label": "RDF",
+      "group": "GRPH",
+      "cis": 209
+    },
+    {
+      "id": 297,
+      "label": "Reification Challenges",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 298,
+      "label": "Cypher",
+      "group": "GRPH",
+      "cis": 170
+    },
+    {
+      "id": 299,
+      "label": "GQL",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 300,
+      "label": "Semantic Web",
+      "group": "GRPH",
+      "cis": 103
+    },
+    {
+      "id": 301,
+      "label": "Ontology",
+      "group": "GRPH",
+      "cis": 102
+    },
+    {
+      "id": 302,
+      "label": "Taxonomy",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 303,
+      "label": "Graph Traversal",
+      "group": "GRPH",
+      "cis": 373
+    },
+    {
+      "id": 304,
+      "label": "Pointer Hopping",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 305,
+      "label": "Shortest Path",
+      "group": "GRPH",
+      "cis": 10
+    },
+    {
+      "id": 306,
+      "label": "Centrality",
+      "group": "GRPH",
+      "cis": 10
+    },
+    {
+      "id": 307,
+      "label": "Adjacency",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 308,
+      "label": "Native Graph Database",
+      "group": "GRPH",
+      "cis": 173
+    },
+    {
+      "id": 309,
+      "label": "Distributed Graph Database",
+      "group": "GRPH",
+      "cis": 4
+    },
+    {
+      "id": 310,
+      "label": "Scale-Out Graph Architecture",
+      "group": "GRPH",
+      "cis": 2
+    },
+    {
+      "id": 311,
+      "label": "Scale Out",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 312,
+      "label": "Graph-Optimized Hardware",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 313,
+      "label": "Edge Traversal Performance",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 314,
+      "label": "Highly Connected Data",
+      "group": "GRPH",
+      "cis": 4
+    },
+    {
+      "id": 315,
+      "label": "RDBMS JOIN",
+      "group": "GRPH",
+      "cis": 3
+    },
+    {
+      "id": 316,
+      "label": "JOIN Fear Modeling",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 317,
+      "label": "Seven Bridges Of Konigsberg",
+      "group": "GRPH",
+      "cis": 1
+    },
+    {
+      "id": 318,
+      "label": "Graph Query Language",
+      "group": "GRPH",
+      "cis": 168
+    },
+    {
+      "id": 319,
+      "label": "Graph Database",
+      "group": "GRPH",
+      "cis": 167
+    },
+    {
+      "id": 320,
+      "label": "Knowledge Representation",
+      "group": "KREP",
+      "cis": 98
+    },
+    {
+      "id": 321,
+      "label": "Knowledge Base",
+      "group": "KREP",
+      "cis": 3
+    },
+    {
+      "id": 322,
+      "label": "Entity",
+      "group": "KREP",
+      "shape": "box",
+      "cis": 585
+    },
+    {
+      "id": 323,
+      "label": "Attribute",
+      "group": "KREP",
+      "cis": 175
+    },
+    {
+      "id": 324,
+      "label": "Relationship (Data Modeling)",
+      "group": "KREP",
+      "cis": 199
+    },
+    {
+      "id": 325,
+      "label": "Schema",
+      "group": "KREP",
+      "cis": 174
+    },
+    {
+      "id": 326,
+      "label": "Canonical Schema",
+      "group": "KREP",
+      "cis": 58
+    },
+    {
+      "id": 327,
+      "label": "Schema Matching",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 328,
+      "label": "Schema Mapping",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 329,
+      "label": "Metadata",
+      "group": "KREP",
+      "cis": 67
+    },
+    {
+      "id": 330,
+      "label": "Metadata Registry",
+      "group": "KREP",
+      "cis": 61
+    },
+    {
+      "id": 331,
+      "label": "ISO Definition",
+      "group": "KREP",
+      "cis": 5
+    },
+    {
+      "id": 332,
+      "label": "Data Dictionary",
+      "group": "KREP",
+      "cis": 3
+    },
+    {
+      "id": 333,
+      "label": "Data Standards",
+      "group": "KREP",
+      "cis": 57
+    },
+    {
+      "id": 334,
+      "label": "Business Glossary",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 335,
+      "label": "Relational Database",
+      "group": "KREP",
+      "cis": 23
+    },
+    {
+      "id": 336,
+      "label": "Primary Key",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 337,
+      "label": "Foreign Key",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 338,
+      "label": "Normalized Data Model",
+      "group": "KREP",
+      "cis": 18
+    },
+    {
+      "id": 339,
+      "label": "Denormalized Data Model",
+      "group": "KREP",
+      "cis": 8
+    },
+    {
+      "id": 340,
+      "label": "Star Schema",
+      "group": "KREP",
+      "cis": 6
+    },
+    {
+      "id": 341,
+      "label": "Data Mart",
+      "group": "KREP",
+      "cis": 3
+    },
+    {
+      "id": 342,
+      "label": "Central Data Warehouse",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 343,
+      "label": "Data Lake",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 344,
+      "label": "Data Integration",
+      "group": "KREP",
+      "cis": 24
+    },
+    {
+      "id": 345,
+      "label": "Data Integration Cost",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 346,
+      "label": "ETL Process",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 347,
+      "label": "API",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 348,
+      "label": "Interoperability",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 349,
+      "label": "Single Source Of Truth",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 350,
+      "label": "Data Quality",
+      "group": "KREP",
+      "cis": 15
+    },
+    {
+      "id": 351,
+      "label": "Data Governance",
+      "group": "KREP",
+      "cis": 13
+    },
+    {
+      "id": 352,
+      "label": "Data Stewardship",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 353,
+      "label": "Data Steward",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 354,
+      "label": "Data Lineage",
+      "group": "KREP",
+      "cis": 2
+    },
+    {
+      "id": 355,
+      "label": "Entity Resolution",
+      "group": "KREP",
+      "cis": 10
+    },
+    {
+      "id": 356,
+      "label": "Master Data Management",
+      "group": "KREP",
+      "cis": 7
+    },
+    {
+      "id": 357,
+      "label": "Low-Resolution Data Model",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 358,
+      "label": "Data Denormalization",
+      "group": "KREP",
+      "cis": 1
+    },
+    {
+      "id": 359,
+      "label": "Enterprise Knowledge Graph",
+      "group": "ENTK",
+      "cis": 65
+    },
+    {
+      "id": 360,
+      "label": "Digital Twin",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 361,
+      "label": "Knowledge Graph Adaptability",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 362,
+      "label": "The God Graph",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 363,
+      "label": "Systems Thinker Role",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 364,
+      "label": "Graph Systems Thinking",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 365,
+      "label": "Predictive Feedback Cycle",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 366,
+      "label": "CIO Influence Diagram",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 367,
+      "label": "Employee Career Path Loop",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 368,
+      "label": "Data Standardization Cycle",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 369,
+      "label": "Organizational Silo",
+      "group": "ENTK",
+      "cis": 53
+    },
+    {
+      "id": 370,
+      "label": "Silo Busting",
+      "group": "ENTK",
+      "cis": 8
+    },
+    {
+      "id": 371,
+      "label": "Accidental Competitor",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 372,
+      "label": "Bounded Rationality",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 373,
+      "label": "Growth By Acquisition",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 374,
+      "label": "Cross-Functional Team",
+      "group": "ENTK",
+      "cis": 3
+    },
+    {
+      "id": 375,
+      "label": "Organizational Culture",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 376,
+      "label": "Change Management",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 377,
+      "label": "Incentive Structure",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 378,
+      "label": "Organizational Structure",
+      "group": "ENTK",
+      "cis": 9
+    },
+    {
+      "id": 379,
+      "label": "Matrix Organization",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 380,
+      "label": "Centralization",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 381,
+      "label": "Decentralization",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 382,
+      "label": "Governance Model",
+      "group": "ENTK",
+      "cis": 4
+    },
+    {
+      "id": 383,
+      "label": "Chief Data Officer",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 384,
+      "label": "Data Literacy",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 385,
+      "label": "Digital Transformation",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 386,
+      "label": "Legacy System",
+      "group": "ENTK",
+      "cis": 4
+    },
+    {
+      "id": 387,
+      "label": "Technical Debt",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 388,
+      "label": "Shadow IT",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 389,
+      "label": "Vendor Lock-In",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 390,
+      "label": "Cross-Team Collaboration",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 391,
+      "label": "Shared Metrics",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 392,
+      "label": "Common Vocabulary",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 393,
+      "label": "Hierarchy (Systems)",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 394,
+      "label": "Capability Maturity Model",
+      "group": "ENTK",
+      "cis": 13
+    },
+    {
+      "id": 395,
+      "label": "Maturity Level",
+      "group": "ENTK",
+      "cis": 10
+    },
+    {
+      "id": 396,
+      "label": "Maturity Assessment",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 397,
+      "label": "Organizational Maturity",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 398,
+      "label": "Repeatable Maturity Level",
+      "group": "ENTK",
+      "cis": 2
+    },
+    {
+      "id": 399,
+      "label": "Defined Maturity Level",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 400,
+      "label": "Linear Maturity Level",
+      "group": "ENTK",
+      "cis": 5
+    },
+    {
+      "id": 401,
+      "label": "Aware Maturity Level",
+      "group": "ENTK",
+      "cis": 4
+    },
+    {
+      "id": 402,
+      "label": "Analytical Maturity Level",
+      "group": "ENTK",
+      "cis": 3
+    },
+    {
+      "id": 403,
+      "label": "Integrated Maturity Level",
+      "group": "ENTK",
+      "cis": 2
+    },
+    {
+      "id": 404,
+      "label": "Transformative Maturity Level",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 405,
+      "label": "Microstrategy",
+      "group": "ENTK",
+      "cis": 2
+    },
+    {
+      "id": 406,
+      "label": "Code Reuse",
+      "group": "ENTK",
+      "cis": 1
+    },
+    {
+      "id": 407,
+      "label": "Artificial Intelligence",
+      "group": "ARTI",
+      "shape": "box",
+      "cis": 65
+    },
+    {
+      "id": 408,
+      "label": "Machine Learning",
+      "group": "ARTI",
+      "cis": 56
+    },
+    {
+      "id": 409,
+      "label": "Algorithm",
+      "group": "ARTI",
+      "shape": "box",
+      "cis": 32
+    },
+    {
+      "id": 410,
+      "label": "Large Language Model",
+      "group": "ARTI",
+      "cis": 12
+    },
+    {
+      "id": 411,
+      "label": "Neural Network",
+      "group": "ARTI",
+      "cis": 16
+    },
+    {
+      "id": 412,
+      "label": "Training Data",
+      "group": "ARTI",
+      "cis": 5
+    },
+    {
+      "id": 413,
+      "label": "Model Training",
+      "group": "ARTI",
+      "cis": 4
+    },
+    {
+      "id": 414,
+      "label": "Prediction Model",
+      "group": "ARTI",
+      "cis": 2
+    },
+    {
+      "id": 415,
+      "label": "Data Set",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 416,
+      "label": "Model Drift",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 417,
+      "label": "Overfitting",
+      "group": "ARTI",
+      "cis": 2
+    },
+    {
+      "id": 418,
+      "label": "Generative AI",
+      "group": "ARTI",
+      "cis": 8
+    },
+    {
+      "id": 419,
+      "label": "Reinforcement Learning",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 420,
+      "label": "Prompt Engineering",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 421,
+      "label": "AI Hallucination",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 422,
+      "label": "Human-In-The-Loop",
+      "group": "ARTI",
+      "cis": 2
+    },
+    {
+      "id": 423,
+      "label": "AI Alignment",
+      "group": "ARTI",
+      "cis": 7
+    },
+    {
+      "id": 424,
+      "label": "AI Governance",
+      "group": "ARTI",
+      "cis": 3
+    },
+    {
+      "id": 425,
+      "label": "Global AI Governance",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 426,
+      "label": "Explainability",
+      "group": "ARTI",
+      "cis": 3
+    },
+    {
+      "id": 427,
+      "label": "Transparency (AI)",
+      "group": "ARTI",
+      "cis": 2
+    },
+    {
+      "id": 428,
+      "label": "Accountability (AI)",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 429,
+      "label": "Automation",
+      "group": "ARTI",
+      "cis": 3
+    },
+    {
+      "id": 430,
+      "label": "Autonomy",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 431,
+      "label": "Human Oversight",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 432,
+      "label": "Data Advantage",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 433,
+      "label": "Algorithmic Improvement",
+      "group": "ARTI",
+      "cis": 4
+    },
+    {
+      "id": 434,
+      "label": "Platform Dynamics",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 435,
+      "label": "Technology Adoption",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 436,
+      "label": "Search Engine Improvement Cycle",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 437,
+      "label": "Recommendation System Refinement",
+      "group": "ARTI",
+      "cis": 2
+    },
+    {
+      "id": 438,
+      "label": "College Admissions Algorithm",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 439,
+      "label": "Credit Scoring System",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 440,
+      "label": "Job Recommendation Platform",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 441,
+      "label": "Content Moderation Policy",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 442,
+      "label": "EdTech Funding Gap",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 443,
+      "label": "Healthcare AI Access Disparity",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 444,
+      "label": "Venture Capital Funding Cycle",
+      "group": "ARTI",
+      "cis": 1
+    },
+    {
+      "id": 445,
+      "label": "Knowledge Vs Information",
+      "group": "KSEC",
+      "cis": 28
+    },
+    {
+      "id": 446,
+      "label": "Law Of Time",
+      "group": "KSEC",
+      "cis": 3
+    },
+    {
+      "id": 447,
+      "label": "Law Of Space",
+      "group": "KSEC",
+      "cis": 2
+    },
+    {
+      "id": 448,
+      "label": "Law Of Value",
+      "group": "KSEC",
+      "cis": 12
+    },
+    {
+      "id": 449,
+      "label": "Market Renewal",
+      "group": "KSEC",
+      "cis": 3
+    },
+    {
+      "id": 450,
+      "label": "Creative Destruction",
+      "group": "KSEC",
+      "cis": 2
+    },
+    {
+      "id": 451,
+      "label": "Knowledge Embodiment",
+      "group": "KSEC",
+      "cis": 7
+    },
+    {
+      "id": 452,
+      "label": "Cross-Generational Knowledge",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 453,
+      "label": "Geographic Knowledge Stickiness",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 454,
+      "label": "Tacit Knowledge",
+      "group": "KSEC",
+      "cis": 2
+    },
+    {
+      "id": 455,
+      "label": "Explicit Knowledge",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 456,
+      "label": "Economic Complexity Index",
+      "group": "KSEC",
+      "cis": 8
+    },
+    {
+      "id": 457,
+      "label": "Principle Of Relatedness",
+      "group": "KSEC",
+      "cis": 4
+    },
+    {
+      "id": 458,
+      "label": "Product Space",
+      "group": "KSEC",
+      "cis": 3
+    },
+    {
+      "id": 459,
+      "label": "Knowledge Decay",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 460,
+      "label": "Learning Curve",
+      "group": "KSEC",
+      "cis": 2
+    },
+    {
+      "id": 461,
+      "label": "Experience Curve",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 462,
+      "label": "Architectural Innovation",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 463,
+      "label": "Knowledge Spillover",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 464,
+      "label": "Infinite Alphabet Metaphor",
+      "group": "KSEC",
+      "cis": 1
+    },
+    {
+      "id": 465,
+      "label": "Human-Centered Design",
+      "group": "DSGN",
+      "cis": 8
+    },
+    {
+      "id": 466,
+      "label": "Multi-Stakeholder System Design",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 467,
+      "label": "Stakeholder Analysis",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 468,
+      "label": "Stakeholder",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 469,
+      "label": "Human Flourishing Feedback",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 470,
+      "label": "Anticipating Side Effects",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 471,
+      "label": "Implementation Strategy",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 472,
+      "label": "Feedback Mechanism Design",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 473,
+      "label": "Intervention Point",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 474,
+      "label": "Emerging Technology System",
+      "group": "DSGN",
+      "cis": 3
+    },
+    {
+      "id": 475,
+      "label": "Quantum Computing Claims",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 476,
+      "label": "Brain-Computer Interface",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 477,
+      "label": "Vector Database",
+      "group": "DSGN",
+      "cis": 3
+    },
+    {
+      "id": 478,
+      "label": "Embedding (AI)",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 479,
+      "label": "Systems Thinking Life Skill",
+      "group": "DSGN",
+      "cis": 3
+    },
+    {
+      "id": 480,
+      "label": "Personal Resilience",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 481,
+      "label": "Personal Thinking Toolkit",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 482,
+      "label": "Filter Bubble",
+      "group": "DSGN",
+      "cis": 2
+    },
+    {
+      "id": 483,
+      "label": "Echo Chamber",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 484,
+      "label": "Social Determinants Of Health",
+      "group": "DSGN",
+      "cis": 2
+    },
+    {
+      "id": 485,
+      "label": "Health Disparities",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 486,
+      "label": "Market Equilibrium",
+      "group": "DSGN",
+      "cis": 2
+    },
+    {
+      "id": 487,
+      "label": "Speculative Bubble",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 488,
+      "label": "Habit Formation Loop",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 489,
+      "label": "Social Feed Ranking Loop",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 490,
+      "label": "Thermostat Balancing Loop",
+      "group": "DSGN",
+      "cis": 1
+    },
+    {
+      "id": 491,
+      "label": "Data Silo",
+      "group": "KGAP",
+      "cis": 4
+    },
+    {
+      "id": 492,
+      "label": "Single View Of Customer",
+      "group": "KGAP",
+      "cis": 3
+    },
+    {
+      "id": 493,
+      "label": "Customer 360",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 494,
+      "label": "Golden Record",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 495,
+      "label": "Master Data",
+      "group": "KGAP",
+      "cis": 3
+    },
+    {
+      "id": 496,
+      "label": "Reference Data",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 497,
+      "label": "Data Domain",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 498,
+      "label": "Conceptual Data Model",
+      "group": "KGAP",
+      "cis": 3
+    },
+    {
+      "id": 499,
+      "label": "Logical Data Model",
+      "group": "KGAP",
+      "cis": 2
+    },
+    {
+      "id": 500,
+      "label": "Physical Data Model",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 501,
+      "label": "Semantic Layer",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 502,
+      "label": "Linked Data",
+      "group": "KGAP",
+      "cis": 2
+    },
+    {
+      "id": 503,
+      "label": "FAIR Data Principles",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 504,
+      "label": "Data Provenance",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 505,
+      "label": "Graph Algorithms",
+      "group": "KGAP",
+      "cis": 9
+    },
+    {
+      "id": 506,
+      "label": "Graph Neural Networks",
+      "group": "KGAP",
+      "cis": 2
+    },
+    {
+      "id": 507,
+      "label": "Graph Analytics",
+      "group": "KGAP",
+      "cis": 6
+    },
+    {
+      "id": 508,
+      "label": "Community Detection",
+      "group": "KGAP",
+      "cis": 2
+    },
+    {
+      "id": 509,
+      "label": "Link Prediction",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 510,
+      "label": "Recommendation Engine",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 511,
+      "label": "Fraud Detection Graph",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 512,
+      "label": "Supply Chain Graph",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 513,
+      "label": "Knowledge Base Reasoning",
+      "group": "KGAP",
+      "cis": 2
+    },
+    {
+      "id": 514,
+      "label": "Inference Engine",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 515,
+      "label": "Context Graph",
+      "group": "KGAP",
+      "cis": 1
+    },
+    {
+      "id": 516,
+      "label": "Economic System",
+      "group": "DISC",
+      "cis": 2
+    },
+    {
+      "id": 517,
+      "label": "Ecological System",
+      "group": "DISC",
+      "cis": 2
+    },
+    {
+      "id": 518,
+      "label": "Social System",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 519,
+      "label": "Urban System",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 520,
+      "label": "Biological System",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 521,
+      "label": "Political System",
+      "group": "DISC",
+      "cis": 2
+    },
+    {
+      "id": 522,
+      "label": "Education System",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 523,
+      "label": "Market System",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 524,
+      "label": "Supply Chain",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 525,
+      "label": "Ecosystem",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 526,
+      "label": "Population Dynamics",
+      "group": "DISC",
+      "cis": 2
+    },
+    {
+      "id": 527,
+      "label": "Predator-Prey Dynamics",
+      "group": "DISC",
+      "cis": 1
+    },
+    {
+      "id": 528,
+      "label": "Public Policy Feedback",
+      "group": "DISC",
+      "cis": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 1
+    },
+    {
+      "from": 4,
+      "to": 1
+    },
+    {
+      "from": 4,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 1
+    },
+    {
+      "from": 6,
+      "to": 1
+    },
+    {
+      "from": 7,
+      "to": 5
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 3
+    },
+    {
+      "from": 8,
+      "to": 4
+    },
+    {
+      "from": 9,
+      "to": 3
+    },
+    {
+      "from": 9,
+      "to": 4
+    },
+    {
+      "from": 10,
+      "to": 1
+    },
+    {
+      "from": 10,
+      "to": 2
+    },
+    {
+      "from": 11,
+      "to": 10
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 10
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 1
+    },
+    {
+      "from": 14,
+      "to": 2
+    },
+    {
+      "from": 15,
+      "to": 14
+    },
+    {
+      "from": 16,
+      "to": 1
+    },
+    {
+      "from": 16,
+      "to": 2
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 19,
+      "to": 18
+    },
+    {
+      "from": 20,
+      "to": 18
+    },
+    {
+      "from": 21,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 20
+    },
+    {
+      "from": 23,
+      "to": 10
+    },
+    {
+      "from": 24,
+      "to": 10
+    },
+    {
+      "from": 24,
+      "to": 16
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 26,
+      "to": 24
+    },
+    {
+      "from": 27,
+      "to": 10
+    },
+    {
+      "from": 27,
+      "to": 16
+    },
+    {
+      "from": 28,
+      "to": 1
+    },
+    {
+      "from": 28,
+      "to": 7
+    },
+    {
+      "from": 29,
+      "to": 1
+    },
+    {
+      "from": 29,
+      "to": 10
+    },
+    {
+      "from": 30,
+      "to": 14
+    },
+    {
+      "from": 30,
+      "to": 17
+    },
+    {
+      "from": 31,
+      "to": 20
+    },
+    {
+      "from": 31,
+      "to": 21
+    },
+    {
+      "from": 32,
+      "to": 20
+    },
+    {
+      "from": 32,
+      "to": 21
+    },
+    {
+      "from": 33,
+      "to": 18
+    },
+    {
+      "from": 34,
+      "to": 33
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 14
+    },
+    {
+      "from": 36,
+      "to": 16
+    },
+    {
+      "from": 37,
+      "to": 36
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 10
+    },
+    {
+      "from": 40,
+      "to": 23
+    },
+    {
+      "from": 41,
+      "to": 23
+    },
+    {
+      "from": 41,
+      "to": 40
+    },
+    {
+      "from": 42,
+      "to": 40
+    },
+    {
+      "from": 42,
+      "to": 41
+    },
+    {
+      "from": 43,
+      "to": 42
+    },
+    {
+      "from": 44,
+      "to": 16
+    },
+    {
+      "from": 44,
+      "to": 18
+    },
+    {
+      "from": 44,
+      "to": 24
+    },
+    {
+      "from": 45,
+      "to": 44
+    },
+    {
+      "from": 46,
+      "to": 44
+    },
+    {
+      "from": 46,
+      "to": 45
+    },
+    {
+      "from": 47,
+      "to": 18
+    },
+    {
+      "from": 47,
+      "to": 46
+    },
+    {
+      "from": 48,
+      "to": 47
+    },
+    {
+      "from": 49,
+      "to": 47
+    },
+    {
+      "from": 50,
+      "to": 48
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 48
+    },
+    {
+      "from": 52,
+      "to": 49
+    },
+    {
+      "from": 53,
+      "to": 50
+    },
+    {
+      "from": 53,
+      "to": 51
+    },
+    {
+      "from": 53,
+      "to": 52
+    },
+    {
+      "from": 54,
+      "to": 44
+    },
+    {
+      "from": 54,
+      "to": 53
+    },
+    {
+      "from": 55,
+      "to": 54
+    },
+    {
+      "from": 56,
+      "to": 54
+    },
+    {
+      "from": 56,
+      "to": 55
+    },
+    {
+      "from": 57,
+      "to": 54
+    },
+    {
+      "from": 57,
+      "to": 55
+    },
+    {
+      "from": 58,
+      "to": 55
+    },
+    {
+      "from": 58,
+      "to": 56
+    },
+    {
+      "from": 59,
+      "to": 55
+    },
+    {
+      "from": 59,
+      "to": 57
+    },
+    {
+      "from": 60,
+      "to": 18
+    },
+    {
+      "from": 61,
+      "to": 44
+    },
+    {
+      "from": 61,
+      "to": 60
+    },
+    {
+      "from": 62,
+      "to": 56
+    },
+    {
+      "from": 62,
+      "to": 60
+    },
+    {
+      "from": 63,
+      "to": 57
+    },
+    {
+      "from": 63,
+      "to": 59
+    },
+    {
+      "from": 63,
+      "to": 60
+    },
+    {
+      "from": 64,
+      "to": 56
+    },
+    {
+      "from": 64,
+      "to": 58
+    },
+    {
+      "from": 65,
+      "to": 56
+    },
+    {
+      "from": 66,
+      "to": 56
+    },
+    {
+      "from": 66,
+      "to": 57
+    },
+    {
+      "from": 67,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 44
+    },
+    {
+      "from": 69,
+      "to": 44
+    },
+    {
+      "from": 70,
+      "to": 28
+    },
+    {
+      "from": 70,
+      "to": 33
+    },
+    {
+      "from": 71,
+      "to": 61
+    },
+    {
+      "from": 71,
+      "to": 70
+    },
+    {
+      "from": 72,
+      "to": 70
+    },
+    {
+      "from": 73,
+      "to": 1
+    },
+    {
+      "from": 73,
+      "to": 70
+    },
+    {
+      "from": 74,
+      "to": 44
+    },
+    {
+      "from": 75,
+      "to": 74
+    },
+    {
+      "from": 76,
+      "to": 74
+    },
+    {
+      "from": 76,
+      "to": 75
+    },
+    {
+      "from": 77,
+      "to": 1
+    },
+    {
+      "from": 77,
+      "to": 69
+    },
+    {
+      "from": 78,
+      "to": 1
+    },
+    {
+      "from": 78,
+      "to": 69
+    },
+    {
+      "from": 79,
+      "to": 77
+    },
+    {
+      "from": 79,
+      "to": 78
+    },
+    {
+      "from": 80,
+      "to": 77
+    },
+    {
+      "from": 80,
+      "to": 78
+    },
+    {
+      "from": 81,
+      "to": 77
+    },
+    {
+      "from": 82,
+      "to": 77
+    },
+    {
+      "from": 83,
+      "to": 1
+    },
+    {
+      "from": 84,
+      "to": 82
+    },
+    {
+      "from": 84,
+      "to": 83
+    },
+    {
+      "from": 85,
+      "to": 77
+    },
+    {
+      "from": 85,
+      "to": 78
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 85
+    },
+    {
+      "from": 88,
+      "to": 85
+    },
+    {
+      "from": 89,
+      "to": 77
+    },
+    {
+      "from": 89,
+      "to": 79
+    },
+    {
+      "from": 89,
+      "to": 80
+    },
+    {
+      "from": 89,
+      "to": 88
+    },
+    {
+      "from": 90,
+      "to": 78
+    },
+    {
+      "from": 91,
+      "to": 61
+    },
+    {
+      "from": 91,
+      "to": 77
+    },
+    {
+      "from": 91,
+      "to": 78
+    },
+    {
+      "from": 91,
+      "to": 87
+    },
+    {
+      "from": 92,
+      "to": 77
+    },
+    {
+      "from": 92,
+      "to": 91
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 93
+    },
+    {
+      "from": 95,
+      "to": 63
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 63
+    },
+    {
+      "from": 96,
+      "to": 95
+    },
+    {
+      "from": 97,
+      "to": 63
+    },
+    {
+      "from": 97,
+      "to": 96
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 99,
+      "to": 96
+    },
+    {
+      "from": 100,
+      "to": 96
+    },
+    {
+      "from": 101,
+      "to": 63
+    },
+    {
+      "from": 101,
+      "to": 99
+    },
+    {
+      "from": 101,
+      "to": 100
+    },
+    {
+      "from": 102,
+      "to": 90
+    },
+    {
+      "from": 103,
+      "to": 102
+    },
+    {
+      "from": 104,
+      "to": 62
+    },
+    {
+      "from": 104,
+      "to": 90
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 107,
+      "to": 62
+    },
+    {
+      "from": 107,
+      "to": 104
+    },
+    {
+      "from": 108,
+      "to": 90
+    },
+    {
+      "from": 108,
+      "to": 103
+    },
+    {
+      "from": 109,
+      "to": 108
+    },
+    {
+      "from": 110,
+      "to": 61
+    },
+    {
+      "from": 110,
+      "to": 108
+    },
+    {
+      "from": 111,
+      "to": 109
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 109
+    },
+    {
+      "from": 113,
+      "to": 111
+    },
+    {
+      "from": 114,
+      "to": 109
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 114
+    },
+    {
+      "from": 116,
+      "to": 114
+    },
+    {
+      "from": 117,
+      "to": 111
+    },
+    {
+      "from": 117,
+      "to": 113
+    },
+    {
+      "from": 118,
+      "to": 114
+    },
+    {
+      "from": 118,
+      "to": 117
+    },
+    {
+      "from": 119,
+      "to": 117
+    },
+    {
+      "from": 120,
+      "to": 37
+    },
+    {
+      "from": 120,
+      "to": 114
+    },
+    {
+      "from": 121,
+      "to": 66
+    },
+    {
+      "from": 121,
+      "to": 67
+    },
+    {
+      "from": 121,
+      "to": 109
+    },
+    {
+      "from": 122,
+      "to": 84
+    },
+    {
+      "from": 122,
+      "to": 104
+    },
+    {
+      "from": 123,
+      "to": 122
+    },
+    {
+      "from": 124,
+      "to": 84
+    },
+    {
+      "from": 124,
+      "to": 104
+    },
+    {
+      "from": 125,
+      "to": 84
+    },
+    {
+      "from": 125,
+      "to": 124
+    },
+    {
+      "from": 126,
+      "to": 84
+    },
+    {
+      "from": 126,
+      "to": 103
+    },
+    {
+      "from": 127,
+      "to": 1
+    },
+    {
+      "from": 127,
+      "to": 101
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 127
+    },
+    {
+      "from": 130,
+      "to": 129
+    },
+    {
+      "from": 131,
+      "to": 127
+    },
+    {
+      "from": 132,
+      "to": 98
+    },
+    {
+      "from": 132,
+      "to": 101
+    },
+    {
+      "from": 133,
+      "to": 62
+    },
+    {
+      "from": 134,
+      "to": 63
+    },
+    {
+      "from": 135,
+      "to": 125
+    },
+    {
+      "from": 135,
+      "to": 127
+    },
+    {
+      "from": 136,
+      "to": 17
+    },
+    {
+      "from": 137,
+      "to": 63
+    },
+    {
+      "from": 137,
+      "to": 97
+    },
+    {
+      "from": 138,
+      "to": 73
+    },
+    {
+      "from": 138,
+      "to": 137
+    },
+    {
+      "from": 139,
+      "to": 70
+    },
+    {
+      "from": 139,
+      "to": 72
+    },
+    {
+      "from": 140,
+      "to": 18
+    },
+    {
+      "from": 140,
+      "to": 33
+    },
+    {
+      "from": 141,
+      "to": 44
+    },
+    {
+      "from": 141,
+      "to": 56
+    },
+    {
+      "from": 141,
+      "to": 57
+    },
+    {
+      "from": 142,
+      "to": 63
+    },
+    {
+      "from": 142,
+      "to": 141
+    },
+    {
+      "from": 143,
+      "to": 22
+    },
+    {
+      "from": 143,
+      "to": 142
+    },
+    {
+      "from": 144,
+      "to": 20
+    },
+    {
+      "from": 144,
+      "to": 142
+    },
+    {
+      "from": 145,
+      "to": 144
+    },
+    {
+      "from": 146,
+      "to": 142
+    },
+    {
+      "from": 147,
+      "to": 140
+    },
+    {
+      "from": 148,
+      "to": 18
+    },
+    {
+      "from": 148,
+      "to": 140
+    },
+    {
+      "from": 149,
+      "to": 18
+    },
+    {
+      "from": 149,
+      "to": 140
+    },
+    {
+      "from": 150,
+      "to": 141
+    },
+    {
+      "from": 150,
+      "to": 148
+    },
+    {
+      "from": 151,
+      "to": 141
+    },
+    {
+      "from": 152,
+      "to": 150
+    },
+    {
+      "from": 152,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 141
+    },
+    {
+      "from": 153,
+      "to": 150
+    },
+    {
+      "from": 154,
+      "to": 56
+    },
+    {
+      "from": 154,
+      "to": 141
+    },
+    {
+      "from": 155,
+      "to": 56
+    },
+    {
+      "from": 155,
+      "to": 107
+    },
+    {
+      "from": 156,
+      "to": 56
+    },
+    {
+      "from": 156,
+      "to": 141
+    },
+    {
+      "from": 157,
+      "to": 141
+    },
+    {
+      "from": 158,
+      "to": 155
+    },
+    {
+      "from": 158,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 97
+    },
+    {
+      "from": 159,
+      "to": 141
+    },
+    {
+      "from": 160,
+      "to": 159
+    },
+    {
+      "from": 161,
+      "to": 63
+    },
+    {
+      "from": 161,
+      "to": 97
+    },
+    {
+      "from": 162,
+      "to": 76
+    },
+    {
+      "from": 162,
+      "to": 97
+    },
+    {
+      "from": 162,
+      "to": 159
+    },
+    {
+      "from": 163,
+      "to": 139
+    },
+    {
+      "from": 163,
+      "to": 141
+    },
+    {
+      "from": 164,
+      "to": 143
+    },
+    {
+      "from": 164,
+      "to": 163
+    },
+    {
+      "from": 165,
+      "to": 143
+    },
+    {
+      "from": 166,
+      "to": 64
+    },
+    {
+      "from": 166,
+      "to": 142
+    },
+    {
+      "from": 166,
+      "to": 165
+    },
+    {
+      "from": 167,
+      "to": 56
+    },
+    {
+      "from": 167,
+      "to": 125
+    },
+    {
+      "from": 167,
+      "to": 141
+    },
+    {
+      "from": 168,
+      "to": 141
+    },
+    {
+      "from": 168,
+      "to": 142
+    },
+    {
+      "from": 168,
+      "to": 143
+    },
+    {
+      "from": 169,
+      "to": 141
+    },
+    {
+      "from": 169,
+      "to": 145
+    },
+    {
+      "from": 169,
+      "to": 165
+    },
+    {
+      "from": 170,
+      "to": 141
+    },
+    {
+      "from": 170,
+      "to": 150
+    },
+    {
+      "from": 170,
+      "to": 151
+    },
+    {
+      "from": 171,
+      "to": 141
+    },
+    {
+      "from": 171,
+      "to": 155
+    },
+    {
+      "from": 171,
+      "to": 156
+    },
+    {
+      "from": 172,
+      "to": 141
+    },
+    {
+      "from": 172,
+      "to": 159
+    },
+    {
+      "from": 172,
+      "to": 160
+    },
+    {
+      "from": 173,
+      "to": 56
+    },
+    {
+      "from": 173,
+      "to": 66
+    },
+    {
+      "from": 173,
+      "to": 141
+    },
+    {
+      "from": 174,
+      "to": 140
+    },
+    {
+      "from": 174,
+      "to": 141
+    },
+    {
+      "from": 174,
+      "to": 153
+    },
+    {
+      "from": 175,
+      "to": 84
+    },
+    {
+      "from": 175,
+      "to": 107
+    },
+    {
+      "from": 175,
+      "to": 123
+    },
+    {
+      "from": 175,
+      "to": 141
+    },
+    {
+      "from": 176,
+      "to": 141
+    },
+    {
+      "from": 176,
+      "to": 162
+    },
+    {
+      "from": 177,
+      "to": 104
+    },
+    {
+      "from": 177,
+      "to": 167
+    },
+    {
+      "from": 178,
+      "to": 104
+    },
+    {
+      "from": 178,
+      "to": 167
+    },
+    {
+      "from": 179,
+      "to": 125
+    },
+    {
+      "from": 179,
+      "to": 167
+    },
+    {
+      "from": 180,
+      "to": 125
+    },
+    {
+      "from": 180,
+      "to": 167
+    },
+    {
+      "from": 181,
+      "to": 84
+    },
+    {
+      "from": 181,
+      "to": 167
+    },
+    {
+      "from": 182,
+      "to": 84
+    },
+    {
+      "from": 182,
+      "to": 104
+    },
+    {
+      "from": 183,
+      "to": 104
+    },
+    {
+      "from": 183,
+      "to": 135
+    },
+    {
+      "from": 184,
+      "to": 84
+    },
+    {
+      "from": 184,
+      "to": 167
+    },
+    {
+      "from": 185,
+      "to": 84
+    },
+    {
+      "from": 185,
+      "to": 167
+    },
+    {
+      "from": 186,
+      "to": 140
+    },
+    {
+      "from": 186,
+      "to": 168
+    },
+    {
+      "from": 187,
+      "to": 168
+    },
+    {
+      "from": 187,
+      "to": 186
+    },
+    {
+      "from": 188,
+      "to": 104
+    },
+    {
+      "from": 188,
+      "to": 168
+    },
+    {
+      "from": 189,
+      "to": 140
+    },
+    {
+      "from": 189,
+      "to": 168
+    },
+    {
+      "from": 190,
+      "to": 186
+    },
+    {
+      "from": 190,
+      "to": 187
+    },
+    {
+      "from": 191,
+      "to": 168
+    },
+    {
+      "from": 191,
+      "to": 190
+    },
+    {
+      "from": 192,
+      "to": 191
+    },
+    {
+      "from": 193,
+      "to": 191
+    },
+    {
+      "from": 194,
+      "to": 193
+    },
+    {
+      "from": 195,
+      "to": 169
+    },
+    {
+      "from": 196,
+      "to": 164
+    },
+    {
+      "from": 196,
+      "to": 165
+    },
+    {
+      "from": 196,
+      "to": 169
+    },
+    {
+      "from": 197,
+      "to": 143
+    },
+    {
+      "from": 197,
+      "to": 169
+    },
+    {
+      "from": 198,
+      "to": 151
+    },
+    {
+      "from": 198,
+      "to": 170
+    },
+    {
+      "from": 199,
+      "to": 151
+    },
+    {
+      "from": 199,
+      "to": 170
+    },
+    {
+      "from": 200,
+      "to": 145
+    },
+    {
+      "from": 200,
+      "to": 170
+    },
+    {
+      "from": 201,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 153
+    },
+    {
+      "from": 202,
+      "to": 170
+    },
+    {
+      "from": 203,
+      "to": 170
+    },
+    {
+      "from": 203,
+      "to": 200
+    },
+    {
+      "from": 204,
+      "to": 140
+    },
+    {
+      "from": 204,
+      "to": 170
+    },
+    {
+      "from": 205,
+      "to": 204
+    },
+    {
+      "from": 206,
+      "to": 152
+    },
+    {
+      "from": 206,
+      "to": 201
+    },
+    {
+      "from": 207,
+      "to": 156
+    },
+    {
+      "from": 207,
+      "to": 170
+    },
+    {
+      "from": 208,
+      "to": 94
+    },
+    {
+      "from": 208,
+      "to": 170
+    },
+    {
+      "from": 209,
+      "to": 158
+    },
+    {
+      "from": 209,
+      "to": 171
+    },
+    {
+      "from": 210,
+      "to": 19
+    },
+    {
+      "from": 210,
+      "to": 140
+    },
+    {
+      "from": 210,
+      "to": 171
+    },
+    {
+      "from": 211,
+      "to": 158
+    },
+    {
+      "from": 211,
+      "to": 171
+    },
+    {
+      "from": 212,
+      "to": 145
+    },
+    {
+      "from": 212,
+      "to": 171
+    },
+    {
+      "from": 213,
+      "to": 158
+    },
+    {
+      "from": 213,
+      "to": 171
+    },
+    {
+      "from": 214,
+      "to": 155
+    },
+    {
+      "from": 214,
+      "to": 171
+    },
+    {
+      "from": 215,
+      "to": 146
+    },
+    {
+      "from": 215,
+      "to": 214
+    },
+    {
+      "from": 216,
+      "to": 17
+    },
+    {
+      "from": 216,
+      "to": 171
+    },
+    {
+      "from": 217,
+      "to": 17
+    },
+    {
+      "from": 218,
+      "to": 155
+    },
+    {
+      "from": 218,
+      "to": 217
+    },
+    {
+      "from": 219,
+      "to": 217
+    },
+    {
+      "from": 220,
+      "to": 148
+    },
+    {
+      "from": 220,
+      "to": 149
+    },
+    {
+      "from": 220,
+      "to": 217
+    },
+    {
+      "from": 221,
+      "to": 171
+    },
+    {
+      "from": 221,
+      "to": 217
+    },
+    {
+      "from": 222,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 171
+    },
+    {
+      "from": 223,
+      "to": 214
+    },
+    {
+      "from": 224,
+      "to": 171
+    },
+    {
+      "from": 225,
+      "to": 155
+    },
+    {
+      "from": 225,
+      "to": 214
+    },
+    {
+      "from": 226,
+      "to": 225
+    },
+    {
+      "from": 227,
+      "to": 153
+    },
+    {
+      "from": 227,
+      "to": 199
+    },
+    {
+      "from": 227,
+      "to": 201
+    },
+    {
+      "from": 228,
+      "to": 201
+    },
+    {
+      "from": 228,
+      "to": 216
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 229,
+      "to": 56
+    },
+    {
+      "from": 229,
+      "to": 221
+    },
+    {
+      "from": 230,
+      "to": 141
+    },
+    {
+      "from": 230,
+      "to": 168
+    },
+    {
+      "from": 231,
+      "to": 227
+    },
+    {
+      "from": 231,
+      "to": 228
+    },
+    {
+      "from": 232,
+      "to": 217
+    },
+    {
+      "from": 232,
+      "to": 218
+    },
+    {
+      "from": 232,
+      "to": 231
+    },
+    {
+      "from": 233,
+      "to": 217
+    },
+    {
+      "from": 234,
+      "to": 220
+    },
+    {
+      "from": 234,
+      "to": 221
+    },
+    {
+      "from": 234,
+      "to": 222
+    },
+    {
+      "from": 234,
+      "to": 233
+    },
+    {
+      "from": 235,
+      "to": 230
+    },
+    {
+      "from": 236,
+      "to": 112
+    },
+    {
+      "from": 236,
+      "to": 217
+    },
+    {
+      "from": 236,
+      "to": 221
+    },
+    {
+      "from": 237,
+      "to": 92
+    },
+    {
+      "from": 237,
+      "to": 236
+    },
+    {
+      "from": 238,
+      "to": 141
+    },
+    {
+      "from": 238,
+      "to": 217
+    },
+    {
+      "from": 239,
+      "to": 38
+    },
+    {
+      "from": 239,
+      "to": 238
+    },
+    {
+      "from": 240,
+      "to": 179
+    },
+    {
+      "from": 240,
+      "to": 219
+    },
+    {
+      "from": 240,
+      "to": 238
+    },
+    {
+      "from": 241,
+      "to": 39
+    },
+    {
+      "from": 241,
+      "to": 43
+    },
+    {
+      "from": 241,
+      "to": 127
+    },
+    {
+      "from": 242,
+      "to": 10
+    },
+    {
+      "from": 242,
+      "to": 241
+    },
+    {
+      "from": 243,
+      "to": 242
+    },
+    {
+      "from": 244,
+      "to": 201
+    },
+    {
+      "from": 244,
+      "to": 203
+    },
+    {
+      "from": 244,
+      "to": 242
+    },
+    {
+      "from": 244,
+      "to": 243
+    },
+    {
+      "from": 245,
+      "to": 44
+    },
+    {
+      "from": 245,
+      "to": 141
+    },
+    {
+      "from": 245,
+      "to": 172
+    },
+    {
+      "from": 245,
+      "to": 173
+    },
+    {
+      "from": 245,
+      "to": 175
+    },
+    {
+      "from": 245,
+      "to": 176
+    },
+    {
+      "from": 246,
+      "to": 27
+    },
+    {
+      "from": 246,
+      "to": 61
+    },
+    {
+      "from": 246,
+      "to": 141
+    },
+    {
+      "from": 247,
+      "to": 246
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 249,
+      "to": 23
+    },
+    {
+      "from": 249,
+      "to": 248
+    },
+    {
+      "from": 250,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 250
+    },
+    {
+      "from": 252,
+      "to": 249
+    },
+    {
+      "from": 252,
+      "to": 251
+    },
+    {
+      "from": 253,
+      "to": 23
+    },
+    {
+      "from": 253,
+      "to": 249
+    },
+    {
+      "from": 253,
+      "to": 252
+    },
+    {
+      "from": 254,
+      "to": 247
+    },
+    {
+      "from": 255,
+      "to": 247
+    },
+    {
+      "from": 255,
+      "to": 254
+    },
+    {
+      "from": 256,
+      "to": 247
+    },
+    {
+      "from": 256,
+      "to": 255
+    },
+    {
+      "from": 257,
+      "to": 247
+    },
+    {
+      "from": 257,
+      "to": 256
+    },
+    {
+      "from": 258,
+      "to": 83
+    },
+    {
+      "from": 258,
+      "to": 254
+    },
+    {
+      "from": 259,
+      "to": 81
+    },
+    {
+      "from": 259,
+      "to": 85
+    },
+    {
+      "from": 259,
+      "to": 254
+    },
+    {
+      "from": 260,
+      "to": 63
+    },
+    {
+      "from": 260,
+      "to": 134
+    },
+    {
+      "from": 260,
+      "to": 255
+    },
+    {
+      "from": 261,
+      "to": 62
+    },
+    {
+      "from": 261,
+      "to": 133
+    },
+    {
+      "from": 261,
+      "to": 255
+    },
+    {
+      "from": 262,
+      "to": 44
+    },
+    {
+      "from": 262,
+      "to": 255
+    },
+    {
+      "from": 263,
+      "to": 256
+    },
+    {
+      "from": 264,
+      "to": 38
+    },
+    {
+      "from": 264,
+      "to": 256
+    },
+    {
+      "from": 265,
+      "to": 97
+    },
+    {
+      "from": 265,
+      "to": 257
+    },
+    {
+      "from": 266,
+      "to": 23
+    },
+    {
+      "from": 266,
+      "to": 257
+    },
+    {
+      "from": 267,
+      "to": 257
+    },
+    {
+      "from": 267,
+      "to": 266
+    },
+    {
+      "from": 268,
+      "to": 263
+    },
+    {
+      "from": 269,
+      "to": 266
+    },
+    {
+      "from": 269,
+      "to": 267
+    },
+    {
+      "from": 270,
+      "to": 258
+    },
+    {
+      "from": 271,
+      "to": 258
+    },
+    {
+      "from": 271,
+      "to": 259
+    },
+    {
+      "from": 272,
+      "to": 260
+    },
+    {
+      "from": 272,
+      "to": 261
+    },
+    {
+      "from": 272,
+      "to": 262
+    },
+    {
+      "from": 273,
+      "to": 263
+    },
+    {
+      "from": 273,
+      "to": 264
+    },
+    {
+      "from": 273,
+      "to": 265
+    },
+    {
+      "from": 273,
+      "to": 266
+    },
+    {
+      "from": 274,
+      "to": 138
+    },
+    {
+      "from": 274,
+      "to": 273
+    },
+    {
+      "from": 275,
+      "to": 247
+    },
+    {
+      "from": 275,
+      "to": 274
+    },
+    {
+      "from": 276,
+      "to": 247
+    },
+    {
+      "from": 276,
+      "to": 274
+    },
+    {
+      "from": 277,
+      "to": 274
+    },
+    {
+      "from": 278,
+      "to": 190
+    },
+    {
+      "from": 278,
+      "to": 247
+    },
+    {
+      "from": 279,
+      "to": 15
+    },
+    {
+      "from": 279,
+      "to": 29
+    },
+    {
+      "from": 279,
+      "to": 37
+    },
+    {
+      "from": 279,
+      "to": 38
+    },
+    {
+      "from": 279,
+      "to": 109
+    },
+    {
+      "from": 279,
+      "to": 110
+    },
+    {
+      "from": 279,
+      "to": 118
+    },
+    {
+      "from": 279,
+      "to": 119
+    },
+    {
+      "from": 280,
+      "to": 35
+    },
+    {
+      "from": 280,
+      "to": 115
+    },
+    {
+      "from": 280,
+      "to": 120
+    },
+    {
+      "from": 280,
+      "to": 140
+    },
+    {
+      "from": 280,
+      "to": 279
+    },
+    {
+      "from": 281,
+      "to": 127
+    },
+    {
+      "from": 281,
+      "to": 128
+    },
+    {
+      "from": 281,
+      "to": 130
+    },
+    {
+      "from": 281,
+      "to": 279
+    },
+    {
+      "from": 282,
+      "to": 131
+    },
+    {
+      "from": 282,
+      "to": 279
+    },
+    {
+      "from": 283,
+      "to": 38
+    },
+    {
+      "from": 283,
+      "to": 116
+    },
+    {
+      "from": 283,
+      "to": 132
+    },
+    {
+      "from": 283,
+      "to": 240
+    },
+    {
+      "from": 283,
+      "to": 279
+    },
+    {
+      "from": 284,
+      "to": 16
+    },
+    {
+      "from": 284,
+      "to": 279
+    },
+    {
+      "from": 285,
+      "to": 36
+    },
+    {
+      "from": 285,
+      "to": 284
+    },
+    {
+      "from": 286,
+      "to": 38
+    },
+    {
+      "from": 286,
+      "to": 284
+    },
+    {
+      "from": 287,
+      "to": 263
+    },
+    {
+      "from": 287,
+      "to": 279
+    },
+    {
+      "from": 289,
+      "to": 288
+    },
+    {
+      "from": 290,
+      "to": 288
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 290
+    },
+    {
+      "from": 292,
+      "to": 290
+    },
+    {
+      "from": 293,
+      "to": 290
+    },
+    {
+      "from": 294,
+      "to": 289
+    },
+    {
+      "from": 294,
+      "to": 290
+    },
+    {
+      "from": 295,
+      "to": 294
+    },
+    {
+      "from": 296,
+      "to": 288
+    },
+    {
+      "from": 297,
+      "to": 296
+    },
+    {
+      "from": 298,
+      "to": 294
+    },
+    {
+      "from": 299,
+      "to": 298
+    },
+    {
+      "from": 300,
+      "to": 296
+    },
+    {
+      "from": 301,
+      "to": 296
+    },
+    {
+      "from": 301,
+      "to": 300
+    },
+    {
+      "from": 302,
+      "to": 301
+    },
+    {
+      "from": 303,
+      "to": 289
+    },
+    {
+      "from": 303,
+      "to": 290
+    },
+    {
+      "from": 304,
+      "to": 303
+    },
+    {
+      "from": 305,
+      "to": 303
+    },
+    {
+      "from": 306,
+      "to": 303
+    },
+    {
+      "from": 307,
+      "to": 289
+    },
+    {
+      "from": 307,
+      "to": 290
+    },
+    {
+      "from": 308,
+      "to": 289
+    },
+    {
+      "from": 308,
+      "to": 290
+    },
+    {
+      "from": 308,
+      "to": 303
+    },
+    {
+      "from": 309,
+      "to": 308
+    },
+    {
+      "from": 310,
+      "to": 309
+    },
+    {
+      "from": 311,
+      "to": 309
+    },
+    {
+      "from": 311,
+      "to": 310
+    },
+    {
+      "from": 312,
+      "to": 308
+    },
+    {
+      "from": 313,
+      "to": 290
+    },
+    {
+      "from": 313,
+      "to": 303
+    },
+    {
+      "from": 314,
+      "to": 16
+    },
+    {
+      "from": 314,
+      "to": 294
+    },
+    {
+      "from": 315,
+      "to": 314
+    },
+    {
+      "from": 316,
+      "to": 315
+    },
+    {
+      "from": 317,
+      "to": 288
+    },
+    {
+      "from": 318,
+      "to": 298
+    },
+    {
+      "from": 318,
+      "to": 303
+    },
+    {
+      "from": 319,
+      "to": 308
+    },
+    {
+      "from": 319,
+      "to": 318
+    },
+    {
+      "from": 320,
+      "to": 301
+    },
+    {
+      "from": 320,
+      "to": 319
+    },
+    {
+      "from": 321,
+      "to": 320
+    },
+    {
+      "from": 323,
+      "to": 322
+    },
+    {
+      "from": 324,
+      "to": 16
+    },
+    {
+      "from": 324,
+      "to": 322
+    },
+    {
+      "from": 325,
+      "to": 322
+    },
+    {
+      "from": 325,
+      "to": 323
+    },
+    {
+      "from": 325,
+      "to": 324
+    },
+    {
+      "from": 326,
+      "to": 325
+    },
+    {
+      "from": 327,
+      "to": 325
+    },
+    {
+      "from": 328,
+      "to": 327
+    },
+    {
+      "from": 329,
+      "to": 325
+    },
+    {
+      "from": 330,
+      "to": 329
+    },
+    {
+      "from": 331,
+      "to": 329
+    },
+    {
+      "from": 332,
+      "to": 330
+    },
+    {
+      "from": 332,
+      "to": 331
+    },
+    {
+      "from": 333,
+      "to": 326
+    },
+    {
+      "from": 333,
+      "to": 330
+    },
+    {
+      "from": 334,
+      "to": 332
+    },
+    {
+      "from": 335,
+      "to": 322
+    },
+    {
+      "from": 335,
+      "to": 325
+    },
+    {
+      "from": 336,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 336
+    },
+    {
+      "from": 338,
+      "to": 325
+    },
+    {
+      "from": 338,
+      "to": 335
+    },
+    {
+      "from": 339,
+      "to": 338
+    },
+    {
+      "from": 340,
+      "to": 338
+    },
+    {
+      "from": 340,
+      "to": 339
+    },
+    {
+      "from": 341,
+      "to": 340
+    },
+    {
+      "from": 342,
+      "to": 340
+    },
+    {
+      "from": 342,
+      "to": 341
+    },
+    {
+      "from": 343,
+      "to": 342
+    },
+    {
+      "from": 344,
+      "to": 324
+    },
+    {
+      "from": 344,
+      "to": 333
+    },
+    {
+      "from": 345,
+      "to": 315
+    },
+    {
+      "from": 345,
+      "to": 344
+    },
+    {
+      "from": 346,
+      "to": 344
+    },
+    {
+      "from": 347,
+      "to": 344
+    },
+    {
+      "from": 348,
+      "to": 333
+    },
+    {
+      "from": 348,
+      "to": 347
+    },
+    {
+      "from": 349,
+      "to": 333
+    },
+    {
+      "from": 349,
+      "to": 344
+    },
+    {
+      "from": 350,
+      "to": 333
+    },
+    {
+      "from": 351,
+      "to": 333
+    },
+    {
+      "from": 351,
+      "to": 350
+    },
+    {
+      "from": 352,
+      "to": 351
+    },
+    {
+      "from": 353,
+      "to": 352
+    },
+    {
+      "from": 354,
+      "to": 351
+    },
+    {
+      "from": 355,
+      "to": 322
+    },
+    {
+      "from": 355,
+      "to": 344
+    },
+    {
+      "from": 356,
+      "to": 351
+    },
+    {
+      "from": 356,
+      "to": 355
+    },
+    {
+      "from": 357,
+      "to": 338
+    },
+    {
+      "from": 358,
+      "to": 339
+    },
+    {
+      "from": 359,
+      "to": 10
+    },
+    {
+      "from": 359,
+      "to": 319
+    },
+    {
+      "from": 359,
+      "to": 320
+    },
+    {
+      "from": 360,
+      "to": 279
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 279
+    },
+    {
+      "from": 361,
+      "to": 359
+    },
+    {
+      "from": 362,
+      "to": 359
+    },
+    {
+      "from": 363,
+      "to": 10
+    },
+    {
+      "from": 363,
+      "to": 359
+    },
+    {
+      "from": 364,
+      "to": 10
+    },
+    {
+      "from": 364,
+      "to": 359
+    },
+    {
+      "from": 365,
+      "to": 61
+    },
+    {
+      "from": 365,
+      "to": 359
+    },
+    {
+      "from": 366,
+      "to": 68
+    },
+    {
+      "from": 366,
+      "to": 359
+    },
+    {
+      "from": 367,
+      "to": 56
+    },
+    {
+      "from": 367,
+      "to": 359
+    },
+    {
+      "from": 368,
+      "to": 333
+    },
+    {
+      "from": 368,
+      "to": 359
+    },
+    {
+      "from": 369,
+      "to": 1
+    },
+    {
+      "from": 369,
+      "to": 8
+    },
+    {
+      "from": 369,
+      "to": 141
+    },
+    {
+      "from": 369,
+      "to": 359
+    },
+    {
+      "from": 370,
+      "to": 145
+    },
+    {
+      "from": 370,
+      "to": 369
+    },
+    {
+      "from": 371,
+      "to": 174
+    },
+    {
+      "from": 371,
+      "to": 369
+    },
+    {
+      "from": 372,
+      "to": 22
+    },
+    {
+      "from": 372,
+      "to": 136
+    },
+    {
+      "from": 372,
+      "to": 202
+    },
+    {
+      "from": 372,
+      "to": 369
+    },
+    {
+      "from": 373,
+      "to": 104
+    },
+    {
+      "from": 373,
+      "to": 106
+    },
+    {
+      "from": 373,
+      "to": 182
+    },
+    {
+      "from": 373,
+      "to": 188
+    },
+    {
+      "from": 373,
+      "to": 369
+    },
+    {
+      "from": 374,
+      "to": 369
+    },
+    {
+      "from": 374,
+      "to": 370
+    },
+    {
+      "from": 375,
+      "to": 369
+    },
+    {
+      "from": 376,
+      "to": 161
+    },
+    {
+      "from": 376,
+      "to": 269
+    },
+    {
+      "from": 376,
+      "to": 369
+    },
+    {
+      "from": 377,
+      "to": 153
+    },
+    {
+      "from": 377,
+      "to": 369
+    },
+    {
+      "from": 378,
+      "to": 369
+    },
+    {
+      "from": 379,
+      "to": 378
+    },
+    {
+      "from": 380,
+      "to": 378
+    },
+    {
+      "from": 381,
+      "to": 378
+    },
+    {
+      "from": 382,
+      "to": 200
+    },
+    {
+      "from": 382,
+      "to": 378
+    },
+    {
+      "from": 383,
+      "to": 351
+    },
+    {
+      "from": 383,
+      "to": 369
+    },
+    {
+      "from": 384,
+      "to": 333
+    },
+    {
+      "from": 384,
+      "to": 369
+    },
+    {
+      "from": 385,
+      "to": 359
+    },
+    {
+      "from": 385,
+      "to": 369
+    },
+    {
+      "from": 386,
+      "to": 9
+    },
+    {
+      "from": 386,
+      "to": 369
+    },
+    {
+      "from": 387,
+      "to": 386
+    },
+    {
+      "from": 388,
+      "to": 369
+    },
+    {
+      "from": 388,
+      "to": 386
+    },
+    {
+      "from": 389,
+      "to": 386
+    },
+    {
+      "from": 390,
+      "to": 374
+    },
+    {
+      "from": 391,
+      "to": 370
+    },
+    {
+      "from": 391,
+      "to": 374
+    },
+    {
+      "from": 392,
+      "to": 334
+    },
+    {
+      "from": 392,
+      "to": 370
+    },
+    {
+      "from": 393,
+      "to": 1
+    },
+    {
+      "from": 393,
+      "to": 378
+    },
+    {
+      "from": 394,
+      "to": 141
+    },
+    {
+      "from": 394,
+      "to": 369
+    },
+    {
+      "from": 395,
+      "to": 394
+    },
+    {
+      "from": 396,
+      "to": 395
+    },
+    {
+      "from": 397,
+      "to": 369
+    },
+    {
+      "from": 397,
+      "to": 395
+    },
+    {
+      "from": 398,
+      "to": 395
+    },
+    {
+      "from": 399,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 395
+    },
+    {
+      "from": 401,
+      "to": 400
+    },
+    {
+      "from": 402,
+      "to": 401
+    },
+    {
+      "from": 403,
+      "to": 402
+    },
+    {
+      "from": 404,
+      "to": 403
+    },
+    {
+      "from": 405,
+      "to": 370
+    },
+    {
+      "from": 405,
+      "to": 394
+    },
+    {
+      "from": 406,
+      "to": 230
+    },
+    {
+      "from": 406,
+      "to": 405
+    },
+    {
+      "from": 408,
+      "to": 407
+    },
+    {
+      "from": 410,
+      "to": 178
+    },
+    {
+      "from": 410,
+      "to": 408
+    },
+    {
+      "from": 410,
+      "to": 409
+    },
+    {
+      "from": 411,
+      "to": 408
+    },
+    {
+      "from": 411,
+      "to": 409
+    },
+    {
+      "from": 412,
+      "to": 408
+    },
+    {
+      "from": 413,
+      "to": 411
+    },
+    {
+      "from": 413,
+      "to": 412
+    },
+    {
+      "from": 414,
+      "to": 408
+    },
+    {
+      "from": 414,
+      "to": 409
+    },
+    {
+      "from": 415,
+      "to": 409
+    },
+    {
+      "from": 416,
+      "to": 413
+    },
+    {
+      "from": 416,
+      "to": 414
+    },
+    {
+      "from": 417,
+      "to": 413
+    },
+    {
+      "from": 418,
+      "to": 410
+    },
+    {
+      "from": 418,
+      "to": 411
+    },
+    {
+      "from": 419,
+      "to": 408
+    },
+    {
+      "from": 420,
+      "to": 410
+    },
+    {
+      "from": 421,
+      "to": 410
+    },
+    {
+      "from": 421,
+      "to": 417
+    },
+    {
+      "from": 422,
+      "to": 97
+    },
+    {
+      "from": 422,
+      "to": 408
+    },
+    {
+      "from": 423,
+      "to": 140
+    },
+    {
+      "from": 423,
+      "to": 418
+    },
+    {
+      "from": 424,
+      "to": 382
+    },
+    {
+      "from": 424,
+      "to": 423
+    },
+    {
+      "from": 425,
+      "to": 424
+    },
+    {
+      "from": 426,
+      "to": 408
+    },
+    {
+      "from": 426,
+      "to": 423
+    },
+    {
+      "from": 427,
+      "to": 426
+    },
+    {
+      "from": 428,
+      "to": 424
+    },
+    {
+      "from": 428,
+      "to": 427
+    },
+    {
+      "from": 429,
+      "to": 407
+    },
+    {
+      "from": 430,
+      "to": 429
+    },
+    {
+      "from": 431,
+      "to": 195
+    },
+    {
+      "from": 431,
+      "to": 196
+    },
+    {
+      "from": 431,
+      "to": 422
+    },
+    {
+      "from": 431,
+      "to": 429
+    },
+    {
+      "from": 432,
+      "to": 155
+    },
+    {
+      "from": 432,
+      "to": 408
+    },
+    {
+      "from": 433,
+      "to": 62
+    },
+    {
+      "from": 433,
+      "to": 408
+    },
+    {
+      "from": 434,
+      "to": 154
+    },
+    {
+      "from": 434,
+      "to": 213
+    },
+    {
+      "from": 434,
+      "to": 221
+    },
+    {
+      "from": 434,
+      "to": 229
+    },
+    {
+      "from": 435,
+      "to": 104
+    },
+    {
+      "from": 435,
+      "to": 221
+    },
+    {
+      "from": 436,
+      "to": 229
+    },
+    {
+      "from": 436,
+      "to": 433
+    },
+    {
+      "from": 437,
+      "to": 229
+    },
+    {
+      "from": 437,
+      "to": 433
+    },
+    {
+      "from": 438,
+      "to": 210
+    },
+    {
+      "from": 438,
+      "to": 408
+    },
+    {
+      "from": 439,
+      "to": 210
+    },
+    {
+      "from": 439,
+      "to": 408
+    },
+    {
+      "from": 440,
+      "to": 192
+    },
+    {
+      "from": 440,
+      "to": 210
+    },
+    {
+      "from": 440,
+      "to": 437
+    },
+    {
+      "from": 441,
+      "to": 142
+    },
+    {
+      "from": 441,
+      "to": 197
+    },
+    {
+      "from": 441,
+      "to": 408
+    },
+    {
+      "from": 442,
+      "to": 209
+    },
+    {
+      "from": 442,
+      "to": 212
+    },
+    {
+      "from": 443,
+      "to": 189
+    },
+    {
+      "from": 443,
+      "to": 209
+    },
+    {
+      "from": 443,
+      "to": 408
+    },
+    {
+      "from": 444,
+      "to": 126
+    },
+    {
+      "from": 444,
+      "to": 155
+    },
+    {
+      "from": 444,
+      "to": 185
+    },
+    {
+      "from": 444,
+      "to": 214
+    },
+    {
+      "from": 444,
+      "to": 223
+    },
+    {
+      "from": 445,
+      "to": 10
+    },
+    {
+      "from": 445,
+      "to": 320
+    },
+    {
+      "from": 446,
+      "to": 445
+    },
+    {
+      "from": 447,
+      "to": 445
+    },
+    {
+      "from": 448,
+      "to": 445
+    },
+    {
+      "from": 449,
+      "to": 221
+    },
+    {
+      "from": 449,
+      "to": 448
+    },
+    {
+      "from": 450,
+      "to": 104
+    },
+    {
+      "from": 450,
+      "to": 449
+    },
+    {
+      "from": 451,
+      "to": 445
+    },
+    {
+      "from": 452,
+      "to": 446
+    },
+    {
+      "from": 452,
+      "to": 451
+    },
+    {
+      "from": 453,
+      "to": 447
+    },
+    {
+      "from": 453,
+      "to": 451
+    },
+    {
+      "from": 454,
+      "to": 445
+    },
+    {
+      "from": 455,
+      "to": 445
+    },
+    {
+      "from": 455,
+      "to": 454
+    },
+    {
+      "from": 456,
+      "to": 448
+    },
+    {
+      "from": 457,
+      "to": 456
+    },
+    {
+      "from": 458,
+      "to": 456
+    },
+    {
+      "from": 458,
+      "to": 457
+    },
+    {
+      "from": 459,
+      "to": 224
+    },
+    {
+      "from": 459,
+      "to": 446
+    },
+    {
+      "from": 459,
+      "to": 451
+    },
+    {
+      "from": 460,
+      "to": 90
+    },
+    {
+      "from": 460,
+      "to": 451
+    },
+    {
+      "from": 461,
+      "to": 460
+    },
+    {
+      "from": 462,
+      "to": 226
+    },
+    {
+      "from": 462,
+      "to": 450
+    },
+    {
+      "from": 462,
+      "to": 458
+    },
+    {
+      "from": 463,
+      "to": 221
+    },
+    {
+      "from": 463,
+      "to": 451
+    },
+    {
+      "from": 464,
+      "to": 458
+    },
+    {
+      "from": 465,
+      "to": 10
+    },
+    {
+      "from": 465,
+      "to": 13
+    },
+    {
+      "from": 465,
+      "to": 30
+    },
+    {
+      "from": 465,
+      "to": 141
+    },
+    {
+      "from": 466,
+      "to": 465
+    },
+    {
+      "from": 467,
+      "to": 25
+    },
+    {
+      "from": 467,
+      "to": 26
+    },
+    {
+      "from": 467,
+      "to": 194
+    },
+    {
+      "from": 467,
+      "to": 465
+    },
+    {
+      "from": 468,
+      "to": 1
+    },
+    {
+      "from": 469,
+      "to": 62
+    },
+    {
+      "from": 469,
+      "to": 465
+    },
+    {
+      "from": 470,
+      "to": 31
+    },
+    {
+      "from": 470,
+      "to": 32
+    },
+    {
+      "from": 470,
+      "to": 147
+    },
+    {
+      "from": 470,
+      "to": 465
+    },
+    {
+      "from": 471,
+      "to": 245
+    },
+    {
+      "from": 471,
+      "to": 246
+    },
+    {
+      "from": 471,
+      "to": 465
+    },
+    {
+      "from": 472,
+      "to": 61
+    },
+    {
+      "from": 472,
+      "to": 71
+    },
+    {
+      "from": 472,
+      "to": 465
+    },
+    {
+      "from": 473,
+      "to": 246
+    },
+    {
+      "from": 473,
+      "to": 465
+    },
+    {
+      "from": 474,
+      "to": 279
+    },
+    {
+      "from": 474,
+      "to": 407
+    },
+    {
+      "from": 475,
+      "to": 105
+    },
+    {
+      "from": 475,
+      "to": 177
+    },
+    {
+      "from": 475,
+      "to": 181
+    },
+    {
+      "from": 475,
+      "to": 407
+    },
+    {
+      "from": 475,
+      "to": 474
+    },
+    {
+      "from": 476,
+      "to": 184
+    },
+    {
+      "from": 476,
+      "to": 407
+    },
+    {
+      "from": 476,
+      "to": 474
+    },
+    {
+      "from": 477,
+      "to": 319
+    },
+    {
+      "from": 477,
+      "to": 408
+    },
+    {
+      "from": 478,
+      "to": 411
+    },
+    {
+      "from": 478,
+      "to": 477
+    },
+    {
+      "from": 479,
+      "to": 10
+    },
+    {
+      "from": 479,
+      "to": 65
+    },
+    {
+      "from": 479,
+      "to": 127
+    },
+    {
+      "from": 480,
+      "to": 127
+    },
+    {
+      "from": 480,
+      "to": 479
+    },
+    {
+      "from": 481,
+      "to": 23
+    },
+    {
+      "from": 481,
+      "to": 479
+    },
+    {
+      "from": 482,
+      "to": 180
+    },
+    {
+      "from": 482,
+      "to": 210
+    },
+    {
+      "from": 482,
+      "to": 221
+    },
+    {
+      "from": 483,
+      "to": 205
+    },
+    {
+      "from": 483,
+      "to": 206
+    },
+    {
+      "from": 483,
+      "to": 207
+    },
+    {
+      "from": 483,
+      "to": 482
+    },
+    {
+      "from": 484,
+      "to": 141
+    },
+    {
+      "from": 484,
+      "to": 208
+    },
+    {
+      "from": 485,
+      "to": 209
+    },
+    {
+      "from": 485,
+      "to": 211
+    },
+    {
+      "from": 485,
+      "to": 484
+    },
+    {
+      "from": 486,
+      "to": 94
+    },
+    {
+      "from": 486,
+      "to": 221
+    },
+    {
+      "from": 487,
+      "to": 104
+    },
+    {
+      "from": 487,
+      "to": 105
+    },
+    {
+      "from": 487,
+      "to": 486
+    },
+    {
+      "from": 488,
+      "to": 56
+    },
+    {
+      "from": 488,
+      "to": 64
+    },
+    {
+      "from": 488,
+      "to": 166
+    },
+    {
+      "from": 489,
+      "to": 56
+    },
+    {
+      "from": 489,
+      "to": 408
+    },
+    {
+      "from": 490,
+      "to": 57
+    },
+    {
+      "from": 490,
+      "to": 96
+    },
+    {
+      "from": 491,
+      "to": 344
+    },
+    {
+      "from": 491,
+      "to": 369
+    },
+    {
+      "from": 492,
+      "to": 356
+    },
+    {
+      "from": 492,
+      "to": 491
+    },
+    {
+      "from": 493,
+      "to": 492
+    },
+    {
+      "from": 494,
+      "to": 355
+    },
+    {
+      "from": 494,
+      "to": 492
+    },
+    {
+      "from": 495,
+      "to": 356
+    },
+    {
+      "from": 496,
+      "to": 495
+    },
+    {
+      "from": 497,
+      "to": 325
+    },
+    {
+      "from": 497,
+      "to": 495
+    },
+    {
+      "from": 498,
+      "to": 322
+    },
+    {
+      "from": 498,
+      "to": 325
+    },
+    {
+      "from": 499,
+      "to": 338
+    },
+    {
+      "from": 499,
+      "to": 498
+    },
+    {
+      "from": 500,
+      "to": 335
+    },
+    {
+      "from": 500,
+      "to": 499
+    },
+    {
+      "from": 501,
+      "to": 320
+    },
+    {
+      "from": 501,
+      "to": 325
+    },
+    {
+      "from": 502,
+      "to": 296
+    },
+    {
+      "from": 502,
+      "to": 344
+    },
+    {
+      "from": 503,
+      "to": 350
+    },
+    {
+      "from": 503,
+      "to": 502
+    },
+    {
+      "from": 504,
+      "to": 331
+    },
+    {
+      "from": 504,
+      "to": 354
+    },
+    {
+      "from": 505,
+      "to": 303
+    },
+    {
+      "from": 505,
+      "to": 305
+    },
+    {
+      "from": 505,
+      "to": 306
+    },
+    {
+      "from": 506,
+      "to": 411
+    },
+    {
+      "from": 506,
+      "to": 505
+    },
+    {
+      "from": 507,
+      "to": 505
+    },
+    {
+      "from": 508,
+      "to": 507
+    },
+    {
+      "from": 509,
+      "to": 507
+    },
+    {
+      "from": 510,
+      "to": 234
+    },
+    {
+      "from": 510,
+      "to": 235
+    },
+    {
+      "from": 510,
+      "to": 408
+    },
+    {
+      "from": 510,
+      "to": 506
+    },
+    {
+      "from": 510,
+      "to": 508
+    },
+    {
+      "from": 511,
+      "to": 355
+    },
+    {
+      "from": 511,
+      "to": 507
+    },
+    {
+      "from": 512,
+      "to": 232
+    },
+    {
+      "from": 512,
+      "to": 344
+    },
+    {
+      "from": 512,
+      "to": 507
+    },
+    {
+      "from": 513,
+      "to": 301
+    },
+    {
+      "from": 513,
+      "to": 321
+    },
+    {
+      "from": 514,
+      "to": 513
+    },
+    {
+      "from": 515,
+      "to": 359
+    },
+    {
+      "from": 515,
+      "to": 410
+    },
+    {
+      "from": 515,
+      "to": 477
+    },
+    {
+      "from": 516,
+      "to": 1
+    },
+    {
+      "from": 516,
+      "to": 10
+    },
+    {
+      "from": 517,
+      "to": 1
+    },
+    {
+      "from": 517,
+      "to": 10
+    },
+    {
+      "from": 518,
+      "to": 1
+    },
+    {
+      "from": 518,
+      "to": 10
+    },
+    {
+      "from": 519,
+      "to": 1
+    },
+    {
+      "from": 519,
+      "to": 10
+    },
+    {
+      "from": 520,
+      "to": 1
+    },
+    {
+      "from": 520,
+      "to": 10
+    },
+    {
+      "from": 521,
+      "to": 1
+    },
+    {
+      "from": 521,
+      "to": 10
+    },
+    {
+      "from": 522,
+      "to": 1
+    },
+    {
+      "from": 522,
+      "to": 10
+    },
+    {
+      "from": 523,
+      "to": 516
+    },
+    {
+      "from": 524,
+      "to": 1
+    },
+    {
+      "from": 524,
+      "to": 344
+    },
+    {
+      "from": 525,
+      "to": 198
+    },
+    {
+      "from": 525,
+      "to": 208
+    },
+    {
+      "from": 525,
+      "to": 237
+    },
+    {
+      "from": 525,
+      "to": 244
+    },
+    {
+      "from": 525,
+      "to": 517
+    },
+    {
+      "from": 526,
+      "to": 85
+    },
+    {
+      "from": 526,
+      "to": 86
+    },
+    {
+      "from": 526,
+      "to": 94
+    },
+    {
+      "from": 527,
+      "to": 63
+    },
+    {
+      "from": 527,
+      "to": 526
+    },
+    {
+      "from": 528,
+      "to": 61
+    },
+    {
+      "from": 528,
+      "to": 521
+    }
+  ]
+}

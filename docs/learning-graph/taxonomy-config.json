@@ -1,0 +1,15 @@
+{
+  "FOUND": { "range": [1, 43], "keywords": [], "exclude": [] },
+  "DYNM": { "range": [44, 140], "keywords": [], "exclude": [] },
+  "ARCH": { "range": [141, 176], "keywords": [], "exclude": [] },
+  "CASE": { "range": [177, 245], "keywords": [], "exclude": [] },
+  "LEVR": { "range": [246, 287], "keywords": [], "exclude": [] },
+  "GRPH": { "range": [288, 319], "keywords": [], "exclude": [] },
+  "KREP": { "range": [320, 358], "keywords": [], "exclude": [] },
+  "ENTK": { "range": [359, 406], "keywords": [], "exclude": [] },
+  "ARTI": { "range": [407, 444], "keywords": [], "exclude": [] },
+  "KSEC": { "range": [445, 464], "keywords": [], "exclude": [] },
+  "DSGN": { "range": [465, 490], "keywords": [], "exclude": [] },
+  "KGAP": { "range": [491, 515], "keywords": [], "exclude": [] },
+  "DISC": { "range": [516, 528], "keywords": [], "exclude": [] }
+}
