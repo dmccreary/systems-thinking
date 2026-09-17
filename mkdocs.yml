@@ -290,6 +290,7 @@ markdown_extensions:
 #      generic: true
 extra_css:
    - css/extra.css
+   - css/mascot.css
 extra_javascript:
     - js/extra.js
     # needed for mathjax to work
@@ -297,6 +298,9 @@ extra_javascript:
 plugins:
   - search
   - social
+
+exclude_docs: |
+  docs/learning-graph/mascot-test.md
 
 hooks:
   - plugins/social_override.py
