@@ -1,11 +1,12 @@
 {
   "title": "Logistic Map Bifurcation Explorer",
-  "description": "Given a range of parameter values for the logistic map, the learner will classify the resulting long-term behavior as a fixed point, a periodic cycle, or chaos (Bloom: Analyzing).",
+  "description": "Drag one parameter through the logistic map's route to chaos and watch two near-identical trajectories separate.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Growth Patterns and Nonlinear Behavior"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "logistic-map-bifurcation-explorer",
   "library": "p5.js",
-  "bloomLevel": "Analyze",
-  "bloomVerb": "Classify / Compare",
-  "completion_status": "scaffold",
+  "canvasHeight": 536,
+  "completion_status": "implemented",
   "chapter_number": 6,
   "chapter_title": "Growth Patterns and Nonlinear Behavior",
   "chapter_dir": "06-growth-patterns-and-nonlinear-behavior",
-  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior"
+  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior",
+  "educational": {
+    "learningObjective": "Given a range of parameter values for the logistic map, the learner will classify the resulting long-term behavior as a fixed point, a periodic cycle, or chaos.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Classify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Can read a line graph",
+      "Knows that a simple rule can be applied repeatedly"
+    ],
+    "learningOutcomes": [
+      "Classify long-term behavior as fixed point, periodic, or chaotic",
+      "Explain sensitivity to initial conditions from the two trajectory panels",
+      "Recognize that deterministic does not mean predictable"
+    ],
+    "assessmentOpportunity": "Give learners three r values and ask for the classification of each. Then ask what the two trajectory panels would look like at each value."
+  },
+  "pedagogical": {
+    "interactionPattern": "Single-parameter exploration with live classification and a divergence demonstration",
+    "instructionalStrategy": "Progressive parameter sweep revealing qualitative transitions",
+    "feedbackType": "Live classification label, a marker on the bifurcation diagram, and a numeric divergence readout",
+    "misconceptionsAddressed": [
+      "That chaotic means random",
+      "That better measurement makes chaotic systems predictable"
+    ],
+    "discussionQuestions": [
+      "If the equation is fully deterministic, in what sense is the result unpredictable?",
+      "What is the practical difference between random and chaotic?",
+      "Why does more precise measurement not solve the forecasting problem?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Classify"
 }

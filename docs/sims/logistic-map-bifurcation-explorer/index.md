@@ -1,22 +1,88 @@
 ---
-title: Logistic Map Bifurcation Explorer
-description: Given a range of parameter values for the logistic map, the learner will classify the resulting long-term behavior as a fixed point, a periodic cycle, or chaos (Bloom: Analyzing).
-status: scaffold
+title: "Logistic Map Bifurcation Explorer"
+description: "Drag one parameter through the logistic map's route to chaos and watch two near-identical trajectories separate."
+image: /sims/logistic-map-bifurcation-explorer/logistic-map-bifurcation-explorer.png
+og:image: /sims/logistic-map-bifurcation-explorer/logistic-map-bifurcation-explorer.png
+twitter:image: /sims/logistic-map-bifurcation-explorer/logistic-map-bifurcation-explorer.png
+social:
+  cards: false
+status: implemented
 library: p5.js
 bloom_level: Analyze
+bloom_verb: Classify
+chapter: 6
 ---
 
 # Logistic Map Bifurcation Explorer
 
+<iframe src="main.html" width="100%" height="538" scrolling="no"></iframe>
 
+[Run the Logistic Map Bifurcation Explorer MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+One parameter, one line of arithmetic, and the long-term behavior changes qualitatively as you turn the dial: a single settling value, then an alternation between two, then four, then no pattern at all. The right panel runs two trajectories seeded one ten-thousandth apart, which stay together in the periodic regime and become unrelated in the chaotic one.
+
+**Learning objective:** Given a range of parameter values for the logistic map, the learner will classify the resulting long-term behavior as a fixed point, a periodic cycle, or chaos.
+
+**Bloom's Taxonomy level:** Analyze (Classify)
+
+## How To Use
+
+- Drag the r slider slowly from 2.4 upward and watch the classification label change.
+- Click anywhere in the bifurcation diagram to jump r to that value.
+- Watch the two trajectory panels on the right. In the chaotic range they separate within a few dozen steps.
+- Press "Reset Trajectories" to reseed them at the same r.
+
+## Embedding This MicroSim
+
+Copy this iframe into any page to embed the MicroSim:
+
+```html
+<iframe src="https://dmccreary.github.io/systems-thinking/sims/logistic-map-bifurcation-explorer/main.html"
+        width="100%" height="538" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+### Audience
+
+This MicroSim is written to work across the book's full audience range, from junior high through executive workshops. Adjust the depth of the discussion questions rather than the activity itself.
+
+### Prerequisites
+
+- Can read a line graph
+- Knows that a simple rule can be applied repeatedly
+
+### Learning Objectives
+
+After working with this MicroSim, learners will be able to:
+
+- Classify long-term behavior as fixed point, periodic, or chaotic
+- Explain sensitivity to initial conditions from the two trajectory panels
+- Recognize that deterministic does not mean predictable
+
+### Suggested Activity (15 minutes)
+
+1. Set r to 2.6 and ask what the long-term behavior is.
+2. Raise r slowly and have learners call out each bifurcation as it happens.
+3. Set r to 3.9 and ask learners to compare the two trajectory panels.
+4. Ask: both panels run the exact same equation. Why do they differ?
+5. Discuss what this means for weather forecasting.
+
+### Assessment
+
+Give learners three r values and ask for the classification of each. Then ask what the two trajectory panels would look like at each value.
+
+### Discussion Questions
+
+- If the equation is fully deterministic, in what sense is the result unpredictable?
+- What is the practical difference between random and chaotic?
+- Why does more precise measurement not solve the forecasting problem?
 
 ## Specification
 
-The full specification below is extracted from
+The specification below was extracted from
 [Chapter 6: Growth Patterns and Nonlinear Behavior](../../chapters/06-growth-patterns-and-nonlinear-behavior/index.md).
 
 ```text
@@ -51,6 +117,13 @@ Color scheme: bifurcation diagram points in the book's neutral node blue, the tw
 Implementation: p5.js sketch iterating \( x_{n+1} = r x_n(1-x_n) \) each frame for both the bifurcation diagram (discarding an initial transient before plotting) and the two trajectory panels; classification logic checks how many distinct values the last 60 iterations cluster into, within a small tolerance, to label fixed/periodic/chaotic.
 ```
 
+## References
+
+- [Logistic map - Wikipedia](https://en.wikipedia.org/wiki/Logistic_map) - The equation and its period-doubling route to chaos.
+- [Butterfly effect](https://en.wikipedia.org/wiki/Butterfly_effect) - Sensitivity to initial conditions, demonstrated in the right panel.
+- [Robert May](https://en.wikipedia.org/wiki/Robert_May,_Baron_May_of_Oxford) - The ecologist whose 1976 paper made the logistic map famous.
+
 ## Related Resources
 
 - [Chapter 6: Growth Patterns and Nonlinear Behavior](../../chapters/06-growth-patterns-and-nonlinear-behavior/index.md)
+- [All MicroSims in this book](../index.md)

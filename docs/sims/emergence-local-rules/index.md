@@ -1,22 +1,88 @@
 ---
-title: Emergence From Local Rules
-description: given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation (Bloom: Analyzing).
-status: scaffold
+title: "Emergence From Local Rules"
+description: "Weight three local steering rules and predict the flock-level pattern that no individual agent computes."
+image: /sims/emergence-local-rules/emergence-local-rules.png
+og:image: /sims/emergence-local-rules/emergence-local-rules.png
+twitter:image: /sims/emergence-local-rules/emergence-local-rules.png
+social:
+  cards: false
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Analyze
+bloom_verb: Predict
+chapter: 14
 ---
 
 # Emergence From Local Rules
 
+<iframe src="main.html" width="100%" height="620" scrolling="no"></iframe>
 
+[Run the Emergence From Local Rules MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+Rules are a high-leverage place to intervene precisely because small rule changes produce large behavioral changes. Here you control the weight of three local rules - separation, alignment and cohesion - and the flock-level pattern that results. The infobox describes what the flock is doing, computed from global information that no individual agent has access to.
+
+**Learning objective:** Given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation.
+
+**Bloom's Taxonomy level:** Analyze (Predict)
+
+## How To Use
+
+- Press Start, then adjust the three rule-weight sliders and watch the group pattern respond.
+- Check "Show One Agent's Local Radius" to see exactly how little any single agent can see.
+- Read the infobox below the canvas: it names the current flock-level pattern.
+- Press "Scatter Agents" to randomize everything and watch the pattern re-form from scratch.
+
+## Embedding This MicroSim
+
+Copy this iframe into any page to embed the MicroSim:
+
+```html
+<iframe src="https://dmccreary.github.io/systems-thinking/sims/emergence-local-rules/main.html"
+        width="100%" height="620" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+### Audience
+
+This MicroSim is written to work across the book's full audience range, from junior high through executive workshops. Adjust the depth of the discussion questions rather than the activity itself.
+
+### Prerequisites
+
+- Has seen an agent-based simulation
+- Knows what emergence means
+
+### Learning Objectives
+
+After working with this MicroSim, learners will be able to:
+
+- Predict a global pattern from a set of local rule weights
+- Explain why changing a rule is a stronger intervention than changing a parameter
+- Distinguish information available to an agent from information available to an observer
+
+### Suggested Activity (15 minutes)
+
+1. Set alignment high and cohesion low. Ask learners to predict the pattern, then run.
+2. Reverse the two and predict again.
+3. Set separation to zero and ask what will go wrong.
+4. Turn on the local radius circle and ask: how does this agent know where the flock is going? It does not.
+5. Ask learners which single slider, changed by one step, most changes the outcome.
+
+### Assessment
+
+Give learners a set of three slider values and ask them to describe the resulting flock pattern in one sentence before running it.
+
+### Discussion Questions
+
+- Meadows ranks rules above parameters as leverage points. Does this simulation support that?
+- What are the three local rules in a busy hallway or a checkout queue?
+- If you wanted to change the flock's shape, would you rather change a rule or add a leader?
 
 ## Specification
 
-The full specification below is extracted from
+The specification below was extracted from
 [Chapter 14: Leverage Points -- Rules, Paradigms, and Emergence](../../chapters/14-leverage-points-rules-paradigms-and-emergence/index.md).
 
 ```text
@@ -46,6 +112,13 @@ Infobox: a text panel below the canvas updates every few seconds with a plain-la
 Implementation: p5.js boids algorithm (Craig Reynolds' 1986 formulation), canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions.
 ```
 
+## References
+
+- [Boids - Wikipedia](https://en.wikipedia.org/wiki/Boids) - Craig Reynolds' three local rules, implemented here.
+- [Leverage point](https://en.wikipedia.org/wiki/Twelve_leverage_points) - Meadows' ranking, which places rules above parameters.
+- [Self-organization](https://en.wikipedia.org/wiki/Self-organization) - Order arising without external direction.
+
 ## Related Resources
 
 - [Chapter 14: Leverage Points -- Rules, Paradigms, and Emergence](../../chapters/14-leverage-points-rules-paradigms-and-emergence/index.md)
+- [All MicroSims in this book](../index.md)

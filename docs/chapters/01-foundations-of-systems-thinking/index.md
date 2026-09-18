@@ -94,7 +94,7 @@ The following MicroSim lets you practice drawing a boundary around a system and 
 
 #### Diagram: System Boundary Explorer
 
-<iframe src="../../sims/system-boundary-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/system-boundary-explorer/main.html" width="100%" height="547px" scrolling="no"></iframe>
 
 [Run the System Boundary Explorer MicroSim fullscreen](../../sims/system-boundary-explorer/main.html){ .md-button }
 
@@ -143,7 +143,7 @@ Recognizing subsystems is useful because it lets you zoom your attention in and 
 
 #### Diagram: Subsystem Nesting Explorer
 
-<iframe src="../../sims/subsystem-nesting-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/subsystem-nesting-explorer/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 [Run the Subsystem Nesting Explorer MicroSim fullscreen](../../sims/subsystem-nesting-explorer/main.html){ .md-button }
 
@@ -226,7 +226,7 @@ The MicroSim below lets you click a node in a small supply network and watch whi
 
 #### Diagram: Interconnection Network Explorer
 
-<iframe src="../../sims/interconnection-network-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/interconnection-network-explorer/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 [Run the Interconnection Network Explorer MicroSim fullscreen](../../sims/interconnection-network-explorer/main.html){ .md-button }
 
@@ -277,7 +277,7 @@ Cause-and-effect relationships rarely stop at a single link. One effect commonly
 
 #### Diagram: Cause-and-Effect Chain
 
-<iframe src="../../sims/cause-effect-chain/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/cause-effect-chain/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 [Run the Cause-and-Effect Chain diagram fullscreen](../../sims/cause-effect-chain/main.html){ .md-button }
 

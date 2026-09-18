@@ -1,6 +1,6 @@
 ---
-title: Capability Maturity Model for Systems Thinking
-description: An interactive infographic microsim that shows the five-level of a capability-maturity model for enterprise systems thinking.
+title: "Capability Maturity Model for Systems Thinking"
+description: "An interactive infographic microsim that shows the five-level of a capability-maturity model for enterprise systems thinking."
 image: /sims/cmm-for-systems-thinking/cmm-for-systems-thinking.png
 og:image: /sims/cmm-for-systems-thinking/cmm-for-systems-thinking.png
 twitter:image: /sims/cmm-for-systems-thinking/cmm-for-systems-thinking.png

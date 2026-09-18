@@ -1,3 +1,10 @@
+---
+title: "Causal Loop Diagram Viewer"
+description: "A reusable viewer that renders causal loop diagrams from JSON files, with optional menus for loading example CLDs such as the bank balance loop."
+image: /sims/cld-viewer/cld-viewer.png
+og:image: /sims/cld-viewer/cld-viewer.png
+---
+
 # Causal Loop Diagram Viewer
 
 There are two versions of the CLD viewer.  The main full version shows all of the menus

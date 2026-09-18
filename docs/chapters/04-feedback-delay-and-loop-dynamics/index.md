@@ -165,7 +165,7 @@ The MicroSim below lets you click through exactly that conversion, one labeled p
 
 #### Diagram: Stock and Flow Notation Explorer
 
-<iframe src="../../sims/stock-flow-notation-explorer/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/stock-flow-notation-explorer/main.html" width="100%" height="512px" scrolling="no"></iframe>
 
 [Run the Stock and Flow Notation Explorer fullscreen](../../sims/stock-flow-notation-explorer/main.html){ .md-button }
 

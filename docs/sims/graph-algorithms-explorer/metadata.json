@@ -1,11 +1,12 @@
 {
   "title": "Graph Algorithms Explorer",
-  "description": "given a sample network, the learner will apply community detection to identify densely connected clusters and apply link prediction to identify a plausible missing edge, then interpret both results (Bloom: Apply).",
+  "description": "Run community detection and link prediction on an 18-node network and interpret both results.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Knowledge Graph Applications and Data Architecture"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "graph-algorithms-explorer",
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 560,
+  "completion_status": "implemented",
   "chapter_number": 26,
   "chapter_title": "Knowledge Graph Applications and Data Architecture",
   "chapter_dir": "26-knowledge-graph-applications-and-data-architecture",
-  "chapter_rel_dir": "chapters/26-knowledge-graph-applications-and-data-architecture"
+  "chapter_rel_dir": "chapters/26-knowledge-graph-applications-and-data-architecture",
+  "educational": {
+    "learningObjective": "Given a sample network, the learner will apply community detection to identify densely connected clusters and apply link prediction to identify a plausible missing edge, then interpret both results.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Apply",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Knows what a node, an edge and a degree are",
+      "Has seen a network diagram"
+    ],
+    "learningOutcomes": [
+      "Apply community detection and interpret the resulting clusters",
+      "Apply link prediction and interpret the score",
+      "Explain why a predicted link is a hypothesis rather than a fact"
+    ],
+    "assessmentOpportunity": "Ask learners to name the bridging nodes and to explain what removing one of them would do to the network's structure."
+  },
+  "pedagogical": {
+    "interactionPattern": "Algorithm-on-demand over a fixed network with per-node inspection",
+    "instructionalStrategy": "Guess-then-compute for each algorithm",
+    "feedbackType": "Recoloring, a dashed predicted edge with its score, and a generated interpretation",
+    "misconceptionsAddressed": [
+      "That community detection needs the groups to be labeled in advance",
+      "That a high-scoring predicted link is a discovered fact"
+    ],
+    "discussionQuestions": [
+      "Why does label propagation find the same communities a human would?",
+      "What is the difference between a prediction being likely and being true?",
+      "Where would acting on link prediction be helpful, and where would it be intrusive?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Apply"
 }

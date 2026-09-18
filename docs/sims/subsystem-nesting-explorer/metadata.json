@@ -1,11 +1,12 @@
 {
   "title": "Subsystem Nesting Explorer",
-  "description": "Given a depicted car, the learner will differentiate the whole-car system from its nested subsystems and identify each subsystem's own inputs and outputs (Bloom: Analyzing).",
+  "description": "Open each of a car's four subsystems to see that every subsystem is a complete system in its own right.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Foundations of Systems Thinking"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "subsystem-nesting-explorer",
   "library": "p5.js",
-  "bloomLevel": "Analyze",
-  "bloomVerb": "Differentiate",
-  "completion_status": "scaffold",
+  "canvasHeight": 560,
+  "completion_status": "implemented",
   "chapter_number": 1,
   "chapter_title": "Foundations of Systems Thinking",
   "chapter_dir": "01-foundations-of-systems-thinking",
-  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking"
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking",
+  "educational": {
+    "learningObjective": "Given a depicted car, the learner will differentiate the whole-car system from its nested subsystems and identify each subsystem's own inputs and outputs.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Differentiate",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows the input / throughput / output vocabulary",
+      "Has seen at least one system boundary drawn"
+    ],
+    "learningOutcomes": [
+      "Differentiate a whole system from its nested subsystems",
+      "State the input, throughput and output of a given subsystem",
+      "Explain why one subsystem's output being another's input is what makes a system more than a pile of parts"
+    ],
+    "assessmentOpportunity": "Ask each learner to pick any subsystem and write its input, throughput and output, then to name one other subsystem it depends on. The dependency is the part that shows real understanding."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-expand progressive disclosure with animated transitions",
+    "instructionalStrategy": "Structural analogy - the same three-part structure is shown at two levels of nesting",
+    "feedbackType": "In-place expansion plus a definition panel on every click",
+    "misconceptionsAddressed": [
+      "That a subsystem is somehow simpler or less complete than a system",
+      "That subsystems can be understood independently of each other"
+    ],
+    "discussionQuestions": [
+      "At what point does it stop being useful to keep decomposing a system into subsystems?",
+      "A dead battery stops a car with a perfectly good engine. What does that say about analyzing subsystems in isolation?",
+      "Is a department a subsystem of a company, or a system in its own right? Does the answer matter?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Differentiate"
 }

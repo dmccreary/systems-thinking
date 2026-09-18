@@ -1,11 +1,12 @@
 {
   "title": "Mapping Two Schemas to a Canonical Schema",
-  "description": "given two source schemas with differently-named fields, the learner will identify which fields correspond to the same canonical concept and state the transformation rule that maps one to the other (Bloom: Applying).",
+  "description": "Match differently-named fields from two source systems to a canonical schema and read each transformation rule.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Knowledge Representation and Metadata"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "canonical-schema-mapping",
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 500,
+  "completion_status": "implemented",
   "chapter_number": 17,
   "chapter_title": "Knowledge Representation and Metadata",
   "chapter_dir": "17-knowledge-representation-and-metadata",
-  "chapter_rel_dir": "chapters/17-knowledge-representation-and-metadata"
+  "chapter_rel_dir": "chapters/17-knowledge-representation-and-metadata",
+  "educational": {
+    "learningObjective": "Given two source schemas with differently-named fields, the learner will identify which fields correspond to the same canonical concept and state the transformation rule that maps one to the other.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Identify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a database field is",
+      "Has seen two systems that store overlapping data"
+    ],
+    "learningOutcomes": [
+      "Identify which source fields correspond to the same canonical concept",
+      "State the transformation rule for a given mapping",
+      "Explain why matching is a judgment about meaning rather than about spelling"
+    ],
+    "assessmentOpportunity": "Give learners a third source system with fields like customer_full_name and contact_email, and ask for the two mapping rules including any needed transformation."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-node-or-edge inspection with a summary mode",
+    "instructionalStrategy": "Separating two easily-conflated concepts by giving each its own clickable element",
+    "feedbackType": "Distinct explanations for matching (nodes) and mapping (edges)",
+    "misconceptionsAddressed": [
+      "That schema matching and schema mapping are the same step",
+      "That matched fields always need a direct copy"
+    ],
+    "discussionQuestions": [
+      "Who decides what the canonical definition of 'customer' is?",
+      "What is lost when two fields are declared equivalent and they are not quite?",
+      "Why does the hub pattern from Chapter 18 reappear here?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Identify"
 }

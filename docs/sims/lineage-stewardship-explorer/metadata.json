@@ -1,11 +1,12 @@
 {
   "title": "Data Lineage and Stewardship Along a Pipeline",
-  "description": "given a field's path from source system to report, the learner will trace its data lineage and identify which stage a named data steward is accountable for (Bloom: Analyzing).",
+  "description": "Trace a field from CRM to executive report and see which two stages a named data steward is accountable for.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Data Management and Governance"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "lineage-stewardship-explorer",
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 500,
+  "completion_status": "implemented",
   "chapter_number": 18,
   "chapter_title": "Data Management and Governance",
   "chapter_dir": "18-data-management-and-governance",
-  "chapter_rel_dir": "chapters/18-data-management-and-governance"
+  "chapter_rel_dir": "chapters/18-data-management-and-governance",
+  "educational": {
+    "learningObjective": "Given a field's path from source system to report, the learner will trace its data lineage and identify which stage a named data steward is accountable for.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a data pipeline is",
+      "Has seen a report whose numbers were disputed"
+    ],
+    "learningOutcomes": [
+      "Trace a field's lineage from source to report",
+      "Identify which stages a named steward is accountable for",
+      "Explain why unstewarded stages are where governance fails"
+    ],
+    "assessmentOpportunity": "Give learners a disputed figure and ask which stage they would investigate first, and who they would ask."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-inspect chain with a full-path trace button",
+    "instructionalStrategy": "Two overlaid concepts (lineage and stewardship) on one diagram",
+    "feedbackType": "A per-stage explanation plus a generated full-path statement",
+    "misconceptionsAddressed": [
+      "That lineage and stewardship are the same thing",
+      "That a data steward owns the data rather than its meaning"
+    ],
+    "discussionQuestions": [
+      "Why is stewardship about meaning rather than about servers?",
+      "What makes the source system so hard to steward?",
+      "Should the person who reads a number be accountable for it?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
 }

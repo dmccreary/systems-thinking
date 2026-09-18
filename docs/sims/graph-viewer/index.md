@@ -1,3 +1,10 @@
+---
+title: "Learning Graph Viewer"
+description: "Explore this book's learning graph of concepts and prerequisites with search, category filters, zoom, and live node and edge counts."
+image: /sims/graph-viewer/graph-viewer.png
+og:image: /sims/graph-viewer/graph-viewer.png
+---
+
 # Learning Graph Viewer
 
 This interactive viewer allows you to explore the learning graph for this course.

@@ -68,7 +68,7 @@ Return to the Ana-and-Acme example Chapter 15 used to introduce property graphs,
 
 #### Diagram: Entity-Attribute-Relationship Explorer
 
-<iframe src="../../sims/entity-attribute-relationship-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/entity-attribute-relationship-explorer/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 [Run the Entity-Attribute-Relationship Explorer MicroSim fullscreen](../../sims/entity-attribute-relationship-explorer/main.html){ .md-button }
 
@@ -106,7 +106,7 @@ The diagram below works through exactly this two-step process using two small sa
 
 #### Diagram: Mapping Two Schemas to a Canonical Schema
 
-<iframe src="../../sims/canonical-schema-mapping/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/canonical-schema-mapping/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 [Run the Mapping Two Schemas to a Canonical Schema MicroSim fullscreen](../../sims/canonical-schema-mapping/main.html){ .md-button }
 
@@ -155,7 +155,7 @@ The diagram below lets you explore how a registry's authoritative definitions an
 
 #### Diagram: Metadata Registry vs. Catalog
 
-<iframe src="https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html" width="100%" height="580px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html" width="100%" height="582px" scrolling="no"></iframe>
 
 [Run the Registry vs. Catalog MicroSim fullscreen](https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html){ .md-button }
 

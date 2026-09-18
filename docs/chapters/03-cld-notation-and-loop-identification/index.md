@@ -193,7 +193,7 @@ The MicroSim below lets you practice the counting rule directly: click each edge
 
 #### Diagram: Loop Polarity Counter
 
-<iframe src="../../sims/loop-polarity-counter/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/loop-polarity-counter/main.html" width="100%" height="547px" scrolling="no"></iframe>
 
 [Run the Loop Polarity Counter MicroSim fullscreen](../../sims/loop-polarity-counter/main.html){ .md-button }
 
@@ -288,7 +288,7 @@ The MicroSim below places a reinforcing loop and a balancing loop side by side, 
 
 #### Diagram: Reinforcing vs. Balancing Loop Simulator
 
-<iframe src="https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/main.html" width="100%" height="582px" scrolling="no"></iframe>
 
 [Run the Reinforcing vs. Balancing Loop Simulator fullscreen](https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/main.html){ .md-button }
 

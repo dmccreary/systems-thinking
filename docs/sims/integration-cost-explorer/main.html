@@ -3,106 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Point-to-Point vs. Hub Integration Cost</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="integration-cost-explorer.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Point-to-Point vs. Hub Integration Cost</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> integration-cost-explorer</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> given a number of systems needing to exchange data, the learner will calculate the number of connections required under a point-to-point architecture versus a hub architecture, and explain why the hub scales better (Bloom: Applying).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** integration-cost-explorer<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning objective: given a number of systems needing to exchange data, the learner will calculate the number of connections required under a point-to-point architecture versus a hub architecture, and explain why the hub scales better (Bloom: Applying).
-    
-    Canvas: 700x500 pixels, responsive -- recompute canvas width from the containing element on window resize.
-    
-    Visual design: two side-by-side panels. The left "Point-to-Point" panel draws N small system icons arranged in a circle with a direct line connecting every pair. The right "Hub" panel draws the same N system icons arranged in a circle around one central hub icon, each connected only to the hub.
-    
-    Controls (p5.js built-in controls only, per this book's control conventions): a `createSlider()` labeled "Number of Systems (N)" ranging from 3 to 20, defaulting to 6, redrawing both panels live as it moves.
-    
-    Behavior: a text readout below each panel updates with the live connection count -- the point-to-point panel shows \( \binom{N}{2} \) and the hub panel shows \( N \) -- so moving the slider from a small N to a large one visibly shows point-to-point connections growing far faster than the hub's straight-line growth.
-    
-    Implementation: p5.js, canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions, connection lines and counts recomputed every time the slider changes.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Point-to-Point vs. Hub Integration Cost Lesson Plan</a>
 </body>
 </html>

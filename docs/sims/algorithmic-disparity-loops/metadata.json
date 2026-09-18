@@ -1,11 +1,12 @@
 {
   "title": "Three Feedback Loops Behind Algorithmic Disparate Impact",
-  "description": "given three named high-stakes algorithmic systems, the learner will trace each one's feedback loop from historical training data back to a new decision, and explain why each loop is reinforcing rather than self-correcting without a deliberate intervention (Bloom: Analyzing).",
+  "description": "Trace three high-stakes algorithmic systems and discover all three are the same reinforcing loop.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "AI Systems Dynamics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "algorithmic-disparity-loops",
   "library": "vis-network",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 625,
+  "completion_status": "implemented",
   "chapter_number": 23,
   "chapter_title": "AI Systems Dynamics",
   "chapter_dir": "23-ai-systems-dynamics",
-  "chapter_rel_dir": "chapters/23-ai-systems-dynamics"
+  "chapter_rel_dir": "chapters/23-ai-systems-dynamics",
+  "educational": {
+    "learningObjective": "Given three named high-stakes algorithmic systems, the learner will trace each one's feedback loop from historical training data back to a new decision, and explain why each loop is reinforcing rather than self-correcting without a deliberate intervention.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Knows that models are trained on historical data",
+      "Can classify a loop as reinforcing or balancing"
+    ],
+    "learningOutcomes": [
+      "Trace an algorithmic feedback loop from training data back to a new decision",
+      "Explain why these loops are reinforcing rather than self-correcting",
+      "Recognize one structure across three unrelated domains"
+    ],
+    "assessmentOpportunity": "Give learners a fourth system (say, predictive policing) and ask them to draw its three-stage loop and name what it risks reinforcing."
+  },
+  "pedagogical": {
+    "interactionPattern": "Three-cluster loop diagram with click-to-explain and a compare mode",
+    "instructionalStrategy": "Structural pattern recognition across three high-stakes domains",
+    "feedbackType": "Per-stage and per-loop explanations plus a synchronized comparison view",
+    "misconceptionsAddressed": [
+      "That algorithmic bias requires biased intent or biased inputs",
+      "That improving model accuracy addresses the loop"
+    ],
+    "discussionQuestions": [
+      "Why can a model with no protected attributes still produce disparate outcomes?",
+      "What would a balancing link in one of these loops look like?",
+      "Who is responsible when no individual in the loop intended the outcome?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
 }

@@ -68,7 +68,7 @@ The map below lets you build a small systems map of a coffee shop by connecting 
 
 #### Diagram: Systems Map Example — Coffee Shop
 
-<iframe src="../../sims/systems-map-coffee-shop/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/systems-map-coffee-shop/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 [Run the Systems Map Example fullscreen](../../sims/systems-map-coffee-shop/main.html){ .md-button }
 
@@ -140,7 +140,7 @@ The fishbone diagram below lets you explore how a real team might organize cause
 
 #### Diagram: Fishbone Diagram — Cart Abandonment
 
-<iframe src="../../sims/fishbone-cart-abandonment/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/fishbone-cart-abandonment/main.html" width="100%" height="561px" scrolling="no"></iframe>
 
 [Run the Fishbone Diagram fullscreen](../../sims/fishbone-cart-abandonment/main.html){ .md-button }
 
@@ -195,7 +195,7 @@ A flock of starlings demonstrates all three ideas at once. No single bird knows 
 
 #### Diagram: Emergence Simulator (Flocking)
 
-<iframe src="https://dmccreary.github.io/ecology/sims/emergence-simulator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/ecology/sims/emergence-simulator/main.html" width="100%" height="517px" scrolling="no"></iframe>
 
 [Run the Emergence Simulator MicroSim fullscreen](https://dmccreary.github.io/ecology/sims/emergence-simulator/main.html){ .md-button }
 

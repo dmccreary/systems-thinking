@@ -1,11 +1,12 @@
 {
   "title": "Tragedy of the Commons Agent-Based Simulation",
-  "description": "Tragedy of the Commons Agent-Based Simulation",
+  "description": "Add cows to a shared pasture and find the herd size at which the grass stops recovering between grazing cycles.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Tragedy of the Commons and Success to the Successful"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "toc",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 460,
+  "completion_status": "implemented",
   "chapter_number": 11,
   "chapter_title": "Tragedy of the Commons and Success to the Successful",
   "chapter_dir": "11-tragedy-of-commons-and-success-to-successful",
-  "chapter_rel_dir": "chapters/11-tragedy-of-commons-and-success-to-successful"
+  "chapter_rel_dir": "chapters/11-tragedy-of-commons-and-success-to-successful",
+  "educational": {
+    "learningObjective": "Given control over the size of a shared herd, the learner will identify the herd size at which the pasture stops recovering between grazing cycles.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Identify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Knows what a shared resource is",
+      "Has seen a reinforcing loop"
+    ],
+    "learningOutcomes": [
+      "Identify the threshold herd size at which a commons stops recovering",
+      "Explain why individually rational choices produce a collectively irrational outcome",
+      "Recognize that past the threshold the cost falls on everyone, not just the last entrant"
+    ],
+    "assessmentOpportunity": "Ask learners to state the threshold they found and to explain why no individual herder has a reason to stop below it."
+  },
+  "pedagogical": {
+    "interactionPattern": "Parameter-sweep agent simulation with a threshold to discover",
+    "instructionalStrategy": "Guided discovery of a critical threshold",
+    "feedbackType": "Live grass regrowth and cow health as the herd grazes",
+    "misconceptionsAddressed": [
+      "That only the extra animals suffer once capacity is exceeded",
+      "That the collapse requires someone to behave badly"
+    ],
+    "discussionQuestions": [
+      "Why does dividing the pasture into private plots change the outcome?",
+      "What are the commons in your organization - meeting time, shared databases, on-call capacity?",
+      "Elinor Ostrom found real communities that avoid this collapse. What do they have that this simulation does not?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Identify"
 }

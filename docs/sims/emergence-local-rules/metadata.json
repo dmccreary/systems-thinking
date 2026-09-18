@@ -1,11 +1,12 @@
 {
   "title": "Emergence From Local Rules",
-  "description": "given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation (Bloom: Analyzing).",
+  "description": "Weight three local steering rules and predict the flock-level pattern that no individual agent computes.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Leverage Points -- Rules, Paradigms, and Emergence"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "emergence-local-rules",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 618,
+  "completion_status": "implemented",
   "chapter_number": 14,
   "chapter_title": "Leverage Points -- Rules, Paradigms, and Emergence",
   "chapter_dir": "14-leverage-points-rules-paradigms-and-emergence",
-  "chapter_rel_dir": "chapters/14-leverage-points-rules-paradigms-and-emergence"
+  "chapter_rel_dir": "chapters/14-leverage-points-rules-paradigms-and-emergence",
+  "educational": {
+    "learningObjective": "Given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Predict",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Has seen an agent-based simulation",
+      "Knows what emergence means"
+    ],
+    "learningOutcomes": [
+      "Predict a global pattern from a set of local rule weights",
+      "Explain why changing a rule is a stronger intervention than changing a parameter",
+      "Distinguish information available to an agent from information available to an observer"
+    ],
+    "assessmentOpportunity": "Give learners a set of three slider values and ask them to describe the resulting flock pattern in one sentence before running it."
+  },
+  "pedagogical": {
+    "interactionPattern": "Three-parameter agent simulation with observer-level pattern description",
+    "instructionalStrategy": "Predict-observe-explain across multiple rule configurations",
+    "feedbackType": "Continuous visual pattern formation plus a periodic plain-language description",
+    "misconceptionsAddressed": [
+      "That some agent must know the group's plan",
+      "That the observer's description of the pattern is available to the agents"
+    ],
+    "discussionQuestions": [
+      "Meadows ranks rules above parameters as leverage points. Does this simulation support that?",
+      "What are the three local rules in a busy hallway or a checkout queue?",
+      "If you wanted to change the flock's shape, would you rather change a rule or add a leader?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Predict"
 }

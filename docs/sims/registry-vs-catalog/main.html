@@ -1,100 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
-    <title>Metadata Registry vs. Catalog</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Registry vs. Catalog Architecture</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 580px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>Metadata Registry vs. Catalog</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
+    <main class="container">
+        <div id="network"></div>
+        <div class="title">Registry (should mean) vs. Catalog (does mean)</div>
+        <div class="right-panel">
+            <div class="detail-panel" id="dp">
+                <div class="dt">Role details</div>
+                <div class="db" id="db">Click any node or the orange dashed link to see how registry and catalog work together.</div>
+            </div>
+            <button class="btn" id="reset-btn">Reset View</button>
         </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> registry-vs-catalog</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: graph-model
-    **sim-id:** registry-vs-catalog<br/>
-    **Library:** vis-network<br/>
-    **Status:** Reused<br/>
-    **Source:** https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html<br/>
-    **Source Repo:** https://github.com/dmccreary/context-graph/tree/main/docs/sims/registry-vs-catalog
-    
-    Reused from the MicroSim catalog (WHAT match score 0.7565; both catalog and live URL verified working, and the underlying script confirmed generic -- a Registration Authority, Data Element, Value Domain, and Version History on the registry side, a Crawler Bot, discovered table, and quality score on the catalog side, none of it specific to the source repository's own subject area). Clicking any node on the left "Registry" panel reveals what that piece of a governed data-element definition means; clicking any node on the right "Catalog" panel reveals what a discovery tool actually found in a live system; clicking the dashed orange cross-panel link explains how a catalog field's discovered name connects back to the registry's authoritative definition. Learning objective: given a metadata registry and a metadata catalog shown side by side, the learner will distinguish what each one is responsible for and explain how the dashed link between them keeps a discovered field's meaning traceable to its governed definition (Bloom: Analyzing).
-    -->
+    </main>
+    <script src="registry-vs-catalog.js"></script>
 </body>
 </html>

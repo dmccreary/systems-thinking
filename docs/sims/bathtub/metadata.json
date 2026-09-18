@@ -1,11 +1,12 @@
 {
   "title": "Bathtub Stock and Flow Simulator",
-  "description": "Bathtub Stock and Flow Simulator",
+  "description": "Set inflow and outflow rates independently and predict whether the stock rises, falls, or holds steady.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Stocks, Flows, and System Dynamics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "bathtub",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 566,
+  "completion_status": "implemented",
   "chapter_number": 5,
   "chapter_title": "Stocks, Flows, and System Dynamics",
   "chapter_dir": "05-stocks-flows-and-system-dynamics",
-  "chapter_rel_dir": "chapters/05-stocks-flows-and-system-dynamics"
+  "chapter_rel_dir": "chapters/05-stocks-flows-and-system-dynamics",
+  "educational": {
+    "learningObjective": "Given independently adjustable inflow and outflow rates, the learner will predict whether a stock rises, falls, or holds steady.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Predict",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a stock and a flow are",
+      "Can compare two numbers"
+    ],
+    "learningOutcomes": [
+      "Predict the direction of change in a stock from its inflow and outflow rates",
+      "Explain dynamic equilibrium as equal flows rather than as no flow",
+      "Recognize that stock level and flow rate are different quantities"
+    ],
+    "assessmentOpportunity": "Give learners three inflow/outflow pairs on paper and ask for the direction of change in each. The equal-and-large pair is the one that discriminates."
+  },
+  "pedagogical": {
+    "interactionPattern": "Two-parameter simulation with predict-then-run",
+    "instructionalStrategy": "Confronting a robust misconception directly with a counterexample",
+    "feedbackType": "Live water level, a running chart, and a plain-language verdict line",
+    "misconceptionsAddressed": [
+      "That a large inflow means a rising stock",
+      "That equilibrium means nothing is flowing"
+    ],
+    "discussionQuestions": [
+      "Why is \"we cut emissions\" not the same as \"the amount in the atmosphere went down\"?",
+      "Can a stock fall while its inflow is increasing?",
+      "What is the drain in your organization's hiring pipeline?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Predict"
 }

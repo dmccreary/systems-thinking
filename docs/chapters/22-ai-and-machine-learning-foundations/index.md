@@ -96,7 +96,7 @@ The chart below makes overfitting visible by tracking a model's error on trainin
 
 #### Diagram: Training vs. Validation Error -- Spotting the Overfitting Point
 
-<iframe src="../../sims/overfitting-error-curves/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/overfitting-error-curves/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 [Run the Training vs. Validation Error -- Spotting the Overfitting Point MicroSim fullscreen](../../sims/overfitting-error-curves/main.html){ .md-button }
 
@@ -132,7 +132,7 @@ The diagram below lets you step through exactly how one layer of a neural networ
 
 #### Diagram: Inside a Neural Network Layer
 
-<iframe src="../../sims/neural-network-layer-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/neural-network-layer-explorer/main.html" width="100%" height="540px" scrolling="no"></iframe>
 
 [Run the Inside a Neural Network Layer diagram fullscreen](../../sims/neural-network-layer-explorer/main.html){ .md-button }
 

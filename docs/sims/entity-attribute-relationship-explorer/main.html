@@ -3,104 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Entity-Attribute-Relationship Explorer</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 500px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>Entity-Attribute-Relationship Explorer</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
+    <main class="container">
+        <div class="title">Entity-Attribute-Relationship Explorer</div>
+        <div class="layout">
+            <div id="network"></div>
+            <div class="side-panel">
+                <div class="controls" id="controls"></div>
+                <div class="info-panel">
+                    <div class="info-title" id="info-title">Details</div>
+                    <div class="info-body" id="info-body">
+                        <p class="info-placeholder">Click any node or edge to see details.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> entity-attribute-relationship-explorer</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> given a small worked example, the learner will classify each labeled piece of a knowledge representation as an entity, an attribute, or a relationship, and identify which attributes belong to an entity versus to a relationship (Bloom: Analyzing).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: graph-model
-    **sim-id:** entity-attribute-relationship-explorer<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    Learning objective: given a small worked example, the learner will classify each labeled piece of a knowledge representation as an entity, an attribute, or a relationship, and identify which attributes belong to an entity versus to a relationship (Bloom: Analyzing).
-    
-    Canvas: responsive vis-network container, minimum 480px height, full container width, recomputed on window resize.
-    
-    Visual design: two large rounded-rectangle vertices labeled "Ana : Person" and "Acme Corp : Company," connected by one labeled directed edge reading "WORKS_AT." Each entity vertex has two small satellite circles drawn near it representing its attributes ("name: Ana," "age: 34" near the Ana vertex; "name: Acme Corp," "industry: Manufacturing" near the Acme Corp vertex). The WORKS_AT edge has one small satellite circle of its own, colored differently from the entity attributes, labeled "since: 2020" -- visually distinguishing an entity's attribute from a relationship's attribute.
-    
-    Interaction: clicking either large entity vertex opens an infobox reading "Entity: a distinct, identifiable thing being represented" and lists its attributes. Clicking any small attribute circle opens an infobox reading "Attribute: a named property describing a characteristic" and states which entity or relationship it belongs to. Clicking the WORKS_AT edge opens an infobox reading "Relationship: a named, meaningful association between entities" and notes that this relationship itself carries the `since` attribute, not either entity.
-    
-    Implementation: vis-network with a fixed node/edge dataset (no physics simulation needed), a click event handler bound to every node and edge that populates a shared infobox panel below the canvas.
-    -->
+    </main>
+    <script src="entity-attribute-relationship-explorer.js"></script>
 </body>
 </html>

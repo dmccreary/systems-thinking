@@ -1,11 +1,12 @@
 {
-  "title": "Systems Map Example — Coffee Shop",
-  "description": "Given a familiar small business, the learner will illustrate how people, resources, and information connect across a systems map (Bloom: Understanding).",
+  "title": "Systems Map Example \u2014 Coffee Shop",
+  "description": "Explore a coffee shop as a systems map, with money, goods and information flows drawn in three distinct line styles.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Mental Models and Systems Analysis Tools"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "systems-map-coffee-shop",
   "library": "vis-network",
-  "bloomLevel": "Understand",
-  "bloomVerb": "Illustrate",
-  "completion_status": "scaffold",
+  "canvasHeight": 520,
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "Mental Models and Systems Analysis Tools",
   "chapter_dir": "02-mental-models-and-systems-analysis-tools",
-  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools"
+  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools",
+  "educational": {
+    "learningObjective": "Given a familiar small business, the learner will illustrate how people, resources and information connect across a systems map.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Illustrate",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a node and an edge represent",
+      "Has been inside a small business"
+    ],
+    "learningOutcomes": [
+      "Distinguish money, goods and information flows in one diagram",
+      "Explain why information flows matter even though they carry nothing physical",
+      "Identify a single point of failure from a systems map"
+    ],
+    "assessmentOpportunity": "Ask learners to add one node and two arrows to this map (for example, a landlord or a delivery app) and to label each new arrow's flow type. Correct flow typing is the thing to check."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-any-element exploration on a physics-laid-out network",
+    "instructionalStrategy": "Familiar-context anchoring before abstract application",
+    "feedbackType": "An explanation panel for every node and every edge",
+    "misconceptionsAddressed": [
+      "That a systems map only shows physical or financial flows",
+      "That the position of nodes in the drawing carries meaning"
+    ],
+    "discussionQuestions": [
+      "The supplier is outside the shop but inside the system. What else is like that in your organization?",
+      "Why are information flows the easiest to cut and the most damaging to lose?",
+      "What does this map leave out, and does leaving it out matter?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Illustrate"
 }

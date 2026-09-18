@@ -1,6 +1,6 @@
 ---
-title: Population Simulator with Causal Loop Diagram
-description: A graphic novel about Tragedy of the Commons.
+title: "Population Simulator with Causal Loop Diagram"
+description: "A graphic novel about Tragedy of the Commons."
 image: /sims/population-simulator/population-simulator.png
 og:image: /sims/population-simulator/population-simulator.png
 twitter:image: /sims/population-simulator/population-simulator.png

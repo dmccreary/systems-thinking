@@ -1,11 +1,12 @@
 {
   "title": "Predator-Prey Population Dynamics",
-  "description": "Predator-Prey Population Dynamics",
+  "description": "Watch predator and prey populations oscillate out of phase in an animated Lotka-Volterra meadow.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Systems Thinking Across Disciplines"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "predator-prey",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 695,
+  "completion_status": "implemented",
   "chapter_number": 27,
   "chapter_title": "Systems Thinking Across Disciplines",
   "chapter_dir": "27-systems-thinking-across-disciplines",
-  "chapter_rel_dir": "chapters/27-systems-thinking-across-disciplines"
+  "chapter_rel_dir": "chapters/27-systems-thinking-across-disciplines",
+  "educational": {
+    "learningObjective": "Given the animated predator and prey populations, the learner will explain why the two populations oscillate out of phase over time in a balancing feedback system.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Explain",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a balancing loop is",
+      "Has seen a time-series graph"
+    ],
+    "learningOutcomes": [
+      "Explain why the two populations oscillate out of phase",
+      "Identify the feedback delay that produces the phase lag",
+      "Recognize the same delay-driven oscillation in non-ecological systems"
+    ],
+    "assessmentOpportunity": "Show a phase-lagged pair of curves and ask learners to identify which is the predator and to justify the answer from the lag."
+  },
+  "pedagogical": {
+    "interactionPattern": "Animated agent simulation with paired population time-series",
+    "instructionalStrategy": "Structural analogy back to the delay concept from Chapter 6",
+    "feedbackType": "Live meadow animation plus two synchronized population graphs",
+    "misconceptionsAddressed": [
+      "That a balancing loop always settles at a steady value",
+      "That the two populations peak together"
+    ],
+    "discussionQuestions": [
+      "Why does this balancing loop oscillate rather than settle?",
+      "What is the predator-prey equivalent in a hiring market, or in inventory management?",
+      "What would damp the oscillation?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Explain"
 }

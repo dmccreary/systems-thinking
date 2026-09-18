@@ -1,6 +1,6 @@
 ---
-title: Infographic Workflow for Creating a Causal Loop Diagram
-description: An interactive infographic-style workflow for the 12 steps in creating a causal loop diagram
+title: "Infographic Workflow for Creating a Causal Loop Diagram"
+description: "An interactive infographic-style workflow for the 12 steps in creating a causal loop diagram"
 image: /sims/cld-creation-workflow/cover.png
 og:image: /sims/cld-creation-workflow/cover.png
 twitter:image: /sims/cld-creation-workflow/cover.png

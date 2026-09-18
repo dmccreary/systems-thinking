@@ -209,28 +209,70 @@ nav:
       - Search and Reuse: archetypes/tech/search-and-reuse.md
 
   - Building Systems Thinking Capabilities:
-    - Introduction: cmm-strategies/index.md
-    - Systems Thinking Capability Maturity Model: cmm-strategies/capability-maturity-model.md
-    - Microstrategies: cmm-strategies/microstrategies.md
-    - Silo Busting Microstrategies: cmm-strategies/silo-busting-microstrategies.md
+    - Introduction: appendicies/cmm-strategies/index.md
+    - Systems Thinking Capability Maturity Model: appendicies/cmm-strategies/capability-maturity-model.md
+    - Microstrategies: appendicies/cmm-strategies/microstrategies.md
+    - Silo Busting Microstrategies: appendicies/cmm-strategies/silo-busting-microstrategies.md
   
   - MicroSims:
-    - Introduction: sims/index.md
-    - Learning Graph Viewer: sims/graph-viewer/index.md
-    - CLD Creation Workflow: sims/cld-creation-workflow/index.md
-    - CLD Viewer: sims/cld-viewer/index.md
+    - List of MicroSims: sims/index.md
+    - Bathtub Stock and Flow Simulator: sims/bathtub/index.md
+    - Breadth-First Search Step-by-Step: sims/bfs/index.md
+    - Capability Maturity Model for Systems Thinking: sims/cmm-for-systems-thinking/index.md
+    - Causal Loop Diagram Viewer: sims/cld-viewer/index.md
+    - Cause-and-Effect Chain: sims/cause-effect-chain/index.md
     - CLD Editor: sims/cld-editor/index.md
-    - High School Simulations: sims/high-school.md
-    - Tragedy of the Commons: sims/toc/index.md
-    - MicroSim Growth: sims/microsim-growth/index.md
-    - Moore's Law: sims/moores-law/index.md
-    - Agent CLD: sims/agent-cld/index.md
-    - CMM Template: sims/cmm-template/index.md
-    - CMM for Systems Thinking: sims/cmm-for-systems-thinking/index.md
-    - Node Simulation Test: sims/node-simulation/index.md
-    
-    - Population Simulator: sims/population-simulator/index.md
-    - Template: sims/template/index.md
+    - Conceptual, Logical, and Physical Data Models: sims/data-model-layers-workflow/index.md
+    - Data Ingestion Pipeline -- From Lake to Warehouse to Mart: sims/data-warehouse-pipeline/index.md
+    - Data Lineage and Stewardship Along a Pipeline: sims/lineage-stewardship-explorer/index.md
+    - Emergence From Local Rules: sims/emergence-local-rules/index.md
+    - Emergence Simulator (Flocking): sims/emergence-simulator/index.md
+    - Entity-Attribute-Relationship Explorer: sims/entity-attribute-relationship-explorer/index.md
+    - Filter Bubble Formation Simulator: sims/filter-bubble-formation-simulator/index.md
+    - Fishbone Diagram — Cart Abandonment: sims/fishbone-cart-abandonment/index.md
+    - From Intervention Point to Implementation: sims/intervention-to-implementation-workflow/index.md
+    - Graph Algorithms Explorer: sims/graph-algorithms-explorer/index.md
+    - Growth Rate Comparison: sims/growth-rates/index.md
+    - How Embodied Knowledge Moves, Fades, and Leaks: sims/knowledge-behavior-map/index.md
+    - Infographic Workflow for Creating a Causal Loop Diagram: sims/cld-creation-workflow/index.md
+    - Inside a Neural Network Layer: sims/neural-network-layer-explorer/index.md
+    - Intelligent Agent Causal Loop Diagrams: sims/agent-cld/index.md
+    - Interconnection Network Explorer: sims/interconnection-network-explorer/index.md
+    - Learning Curve vs. Experience Curve: sims/learning-experience-curve-chart/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Leverage Points Iceberg: sims/leverage-iceberg/index.md
+    - Logistic Growth S-Curve Explorer: sims/logistic-growth-explorer/index.md
+    - Logistic Map Bifurcation Explorer: sims/logistic-map-bifurcation-explorer/index.md
+    - Loop Polarity Counter: sims/loop-polarity-counter/index.md
+    - Mapping Two Schemas to a Canonical Schema: sims/canonical-schema-mapping/index.md
+    - Metadata Registry vs. Catalog: sims/registry-vs-catalog/index.md
+    - MicroSim Growth Network Effect: sims/microsim-growth/index.md
+    - Moore's Law Timeline: sims/moores-law/index.md
+    - Multi-Hop Query Performance, RDBMS vs Graph Database: sims/multi-hop-performance/index.md
+    - Node Simulator Test: sims/node-simulation/index.md
+    - Point-to-Point vs. Hub Integration Cost: sims/integration-cost-explorer/index.md
+    - Population Simulator with Causal Loop Diagram: sims/population-simulator/index.md
+    - Predator-Prey Population Dynamics: sims/predator-prey/index.md
+    - Product Space Explorer: sims/product-space-explorer/index.md
+    - Reinforcing vs. Balancing Loop Simulator: sims/reinforcing-vs-balancing/index.md
+    - Stakeholder Power-Interest Grid: sims/stakeholder-power-interest-grid/index.md
+    - Stock and Flow Notation Explorer: sims/stock-flow-notation-explorer/index.md
+    - Subsystem Nesting Explorer: sims/subsystem-nesting-explorer/index.md
+    - System Boundary Explorer: sims/system-boundary-explorer/index.md
+    - Systems Map Example — Coffee Shop: sims/systems-map-coffee-shop/index.md
+    - The Book's Concept Clusters, Connected: sims/book-concept-cluster-map/index.md
+    - The Generic Software Capability Maturity Model: sims/cmm-template/index.md
+    - The Organizational Silo Reinforcing Loop: sims/silo-reinforcing-loop/index.md
+    - The Seven Bridges of Konigsberg: sims/konigsberg-bridges/index.md
+    - The Technical Debt Feedback Loop: sims/tech-debt-feedback-loop/index.md
+    - The Tragedy of the Commons: sims/template/index.md
+    - Three Feedback Loops Behind Algorithmic Disparate Impact: sims/algorithmic-disparity-loops/index.md
+    - Three Reinforcing Loops Behind Knowledge Graph Adoption: sims/ekg-adoption-loops/index.md
+    - Tragedy of the Commons Agent-Based Simulation: sims/toc/index.md
+    - Training vs. Validation Error -- Spotting the Overfitting Point: sims/overfitting-error-curves/index.md
+    - Vertical vs Scale-Out Graph Architecture: sims/graph-scale-out-architecture/index.md
+
+
   
   - Stories:
     - List of Stories: stories/index.md
@@ -243,26 +285,26 @@ nav:
     - The Measurement Trap: stories/measurement-trap/index.md
 
   - Sample Prompts:
-    - Introduction: prompts/index.md
+    - Introduction: appendicies/prompts/index.md
     - Learning Graph:
-      - Concept Enumeration: prompts/knowledge-graphs/concept-enumeration.md
-      - Concept Dependency: prompts/knowledge-graphs/concept-dependency.md
-      - Concept Taxonomy: prompts/knowledge-graphs/concept-taxonomy.md
-      - Graph Demo: prompts/knowledge-graphs/graph/index.md
-    - Enumerating Archetypes: prompts/enumerating-archetypes.md
-    - Causal Loop Diagram: prompts/cld/index.md
+      - Concept Enumeration: appendicies/prompts/knowledge-graphs/concept-enumeration.md
+      - Concept Dependency: appendicies/prompts/knowledge-graphs/concept-dependency.md
+      - Concept Taxonomy: appendicies/prompts/knowledge-graphs/concept-taxonomy.md
+      - Graph Demo: appendicies/prompts/knowledge-graphs/graph/index.md
+    - Enumerating Archetypes: appendicies/prompts/enumerating-archetypes.md
+    - Causal Loop Diagram: appendicies/prompts/cld/index.md
     - Archetype Examples:
-      - Introduction: prompts/archetype-examples/index.md
-      - Fixes that Fail: prompts/archetype-examples/fixes-that-fail.md
+      - Introduction: appendicies/prompts/archetype-examples/index.md
+      - Fixes that Fail: appendicies/prompts/archetype-examples/fixes-that-fail.md
     
     ## Add these
-    - prompts/archetype-examples/tragedy-of-the-commons-cld.md
-    - prompts/cld/vis-tutorial.md
-    - prompts/cld/cld-viewer/index.md
-    - prompts/cld/cld-viewer-v1/index.md
-    - prompts/microsims/population.md
-    - prompts/stories/moores-law.md
-    - prompts/stories/tragedy-of-the-commons.md  
+    - appendicies/prompts/archetype-examples/tragedy-of-the-commons-cld.md
+    - appendicies/prompts/cld/vis-tutorial.md
+    - appendicies/prompts/cld/cld-viewer/index.md
+    - appendicies/prompts/cld/cld-viewer-v1/index.md
+    - appendicies/prompts/microsims/population.md
+    - appendicies/prompts/stories/moores-law.md
+    - appendicies/prompts/stories/tragedy-of-the-commons.md  
 
   - Presentations: slides.md
   - Glossary: glossary.md

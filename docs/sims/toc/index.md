@@ -1,66 +1,108 @@
-# Tragedy of The Commons MicroSim
+---
+title: "Tragedy of the Commons Agent-Based Simulation"
+description: "Add cows to a shared pasture and find the herd size at which the grass stops recovering between grazing cycles."
+image: /sims/toc/toc.png
+og:image: /sims/toc/toc.png
+twitter:image: /sims/toc/toc.png
+social:
+  cards: false
+status: implemented
+library: p5.js
+bloom_level: Analyze
+bloom_verb: Identify
+chapter: 11
+---
 
-![Tragedy of the Commons MicroSim](toc.jpg){ width="500" }
+# Tragedy of the Commons Agent-Based Simulation
 
-[Run the Tragedy of the Commons MicroSim](toc.html){ .md-button .md-button--primary }
-[Edit the MicroSim](https://editor.p5js.org/dmccreary/sketches/2NYEIUklI)
+<iframe src="main.html" width="100%" height="462" scrolling="no"></iframe>
 
-[](./toc-v2.html)
+[Run the Tragedy of the Commons Agent-Based Simulation MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
 
-## About this MicroSim
+## About This MicroSim
 
-This MicroSim teaches us the story of the Tragedy of
-the Commons.  As you add more cows to the pasture, the
-grass gets over-grazed.  How many cows can a pasture
-support before it becomes overgrazed?
+Reused from this book's own sims collection. Each individual herder gains fully from adding one more cow and bears only a share of the cost to the pasture. Every herder reasoning that way is acting rationally, and the pasture still collapses. This simulation lets you find the threshold where regrowth stops keeping up - and notice that past it, every cow starves, not just the extra ones.
 
-Creating a simulation of the "Tragedy of the Commons" is a great way to help students understand the consequences of individual actions on shared resources. The "Tragedy of the Commons" refers to a situation in a shared-resource system where individual users, acting independently according to their own self-interest, behave contrary to the common good of all users by depleting or spoiling the shared resource.
+**Learning objective:** Given control over the size of a shared herd, the learner will identify the herd size at which the pasture stops recovering between grazing cycles.
 
-The Tragedy of the Commons is a key [Archetype](https://dmccreary.github.io/systems-thinking/archetypes/commons/) that I use when I teach my systems thinking classes.  It is a compelling metaphor whenever there are shared resources in an organization.
+**Bloom's Taxonomy level:** Analyze (Identify)
 
-We also use the Tragedy of the Commons metaphor to help organizations break down data silos and share data, information and knowledge.
+## How To Use
 
-## Sample Prompt
+- Use the slider to set how many cows share the pasture.
+- Press Start and watch the grass regrow between grazing passes.
+- Raise the herd size gradually and find the point where the grass no longer recovers.
+- Press Reset and try approaching the threshold from above instead of below.
 
-```linenums="0"
-Create a simulation of the Tragedy of the Commons.
+## Embedding This MicroSim
+
+Copy this iframe into any page to embed the MicroSim:
+
+```html
+<iframe src="https://dmccreary.github.io/systems-thinking/sims/toc/main.html"
+        width="100%" height="462" scrolling="no"></iframe>
 ```
-[Sample ChatGPT Dialog](https://chat.openai.com/g/g-yLEKOCjXP-p5-js-visual-art-composer/c/d5ab1350-7196-49b3-9b38-e68bdad67dda)
 
-## Refinements
+## Lesson Plan
 
-1. Make the cows go towards the most grass
-2. Make the grass permanently die if it reaches a level of 0
-3. Make the cows die if they don't eat enough grass
-4. Use the cow emoji:
+### Audience
 
-```py
-show() {
-    text("🐮", this.pos.x, this.pos.y);
-}
+This MicroSim is written to work across the book's full audience range, from junior high through executive workshops. Adjust the depth of the discussion questions rather than the activity itself.
+
+### Prerequisites
+
+- Knows what a shared resource is
+- Has seen a reinforcing loop
+
+### Learning Objectives
+
+After working with this MicroSim, learners will be able to:
+
+- Identify the threshold herd size at which a commons stops recovering
+- Explain why individually rational choices produce a collectively irrational outcome
+- Recognize that past the threshold the cost falls on everyone, not just the last entrant
+
+### Suggested Activity (15 minutes)
+
+1. Run with a small herd and confirm the grass keeps up.
+2. Raise the herd by a few cows at a time, running each setting to a steady state.
+3. Have learners record the threshold they find.
+4. Ask: at the threshold, what would each individual herder gain by adding one more cow? What would they lose?
+5. Discuss what institution would have to exist to stop the collapse.
+
+### Assessment
+
+Ask learners to state the threshold they found and to explain why no individual herder has a reason to stop below it.
+
+### Discussion Questions
+
+- Why does dividing the pasture into private plots change the outcome?
+- What are the commons in your organization - meeting time, shared databases, on-call capacity?
+- Elinor Ostrom found real communities that avoid this collapse. What do they have that this simulation does not?
+
+## Specification
+
+The specification below was extracted from
+[Chapter 11: Tragedy of the Commons and Success to the Successful](../../chapters/11-tragedy-of-commons-and-success-to-successful/index.md).
+
+```text
+Type: microsim
+**sim-id:** toc<br/>
+**Library:** p5.js<br/>
+**Status:** Reused<br/>
+**Source:** ../../sims/toc/toc.html<br/>
+**Source Repo:** local — docs/sims/toc
+
+Reused from this book's own sims collection: a pasture of grass, grazed by a population of cow agents. A slider controls how many cows are added to the shared pasture, and Start/Stop and Reset buttons control the run. Watch how grass regrowth keeps pace with a small herd but collapses once the herd crosses a threshold, after which every cow — not just the extra ones — starts to starve. Learning objective: given control over the size of a shared herd, the learner will identify the herd size at which the pasture stops recovering between grazing cycles (Bloom: Analyzing).
 ```
-## Other Extensions
 
-Here's a step-by-step guide on how you could set up such a simulation:
+## References
 
-1.  **Define the Shared Resource**: Start with a shared resource that is easily understandable, such as a fishing lake, a grazing field, or a forest for timber. The resource should have a limit to how much it can be used sustainably.
+- [Tragedy of the commons - Wikipedia](https://en.wikipedia.org/wiki/Tragedy_of_the_commons) - Hardin's 1968 formulation of the archetype.
+- [Elinor Ostrom](https://en.wikipedia.org/wiki/Elinor_Ostrom) - Nobel-winning work on communities that successfully govern commons.
+- [Common-pool resource](https://en.wikipedia.org/wiki/Common-pool_resource) - The economic category this pasture belongs to.
 
-2.  **Create User Profiles**: Develop profiles for different users of the resource. These users should have the ability to extract or use the resource at varying rates. For instance, in a fishing lake simulation, each user could decide how many fish to catch per turn.
+## Related Resources
 
-3.  **Set Resource Regeneration Rules**: Establish rules for how the resource regenerates over time. For a fish population, you could have a growth rate that depends on the remaining population size.
-
-4.  **Develop a User Interface**: Create an interface where students can make decisions for their user profile. Include sliders or input fields where they can decide how much of the resource to use each turn.
-
-5.  **Implement Feedback Mechanisms**: The simulation should provide feedback on the state of the common resource after each round of usage, showing how the resource level changes based on the collective actions of all users.
-
-6.  **Introduce Scenarios or Challenges**: You could introduce external factors that affect the resource, like environmental changes, to add complexity.
-
-7.  **Incorporate Visualizations**: Graphs or other visual aids can help students see the long-term trends of the resource level and the impacts of their decisions.
-
-8.  **Facilitate Discussion and Debriefing**: After the simulation, hold a discussion. Ask students to reflect on how their actions affected the resource and what strategies could have led to more sustainable outcomes.
-
-9.  **Draw Connections to Real-world Issues**: Relate the simulation to real-world examples of the Tragedy of the Commons, like overfishing, deforestation, and pollution. This helps students understand the practical implications of the concept.
-
-10.  **Highlight the Role of Regulations and Agreements**: Discuss how regulations, agreements, or cooperative strategies could prevent the tragedy of the commons. This could lead to a deeper understanding of environmental policies and community management strategies.
-
-Through this interactive experience, students can grasp the challenges of managing shared resources and the importance of sustainable practices and cooperation.
+- [Chapter 11: Tragedy of the Commons and Success to the Successful](../../chapters/11-tragedy-of-commons-and-success-to-successful/index.md)
+- [All MicroSims in this book](../index.md)

@@ -1,3 +1,10 @@
+---
+title: "MicroSim Growth Network Effect"
+description: "A reinforcing feedback system showing how MicroSims, Intelligent Textbooks, and Teacher Awareness create a virtuous cycle of growth through network effects."
+image: /sims/microsim-growth/microsim-growth.png
+og:image: /sims/microsim-growth/microsim-growth.png
+---
+
 # MicroSim Growth Network Effect
 
 A reinforcing feedback system showing how MicroSims, Intelligent Textbooks, and Teacher Awareness create a virtuous cycle of growth through network effects.

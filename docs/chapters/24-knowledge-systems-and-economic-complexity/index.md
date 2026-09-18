@@ -100,7 +100,7 @@ The interactive diagram below lets you click through each of these five knowledg
 
 #### Diagram: How Embodied Knowledge Moves, Fades, and Leaks
 
-<iframe src="../../sims/knowledge-behavior-map/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/knowledge-behavior-map/main.html" width="100%" height="482px" scrolling="no"></iframe>
 
 [Run the How Embodied Knowledge Moves, Fades, and Leaks diagram fullscreen](../../sims/knowledge-behavior-map/main.html){ .md-button }
 
@@ -156,7 +156,7 @@ Before you explore the network below, it helps to have seen a worked instance of
 
 #### Diagram: Product Space Explorer
 
-<iframe src="../../sims/product-space-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/product-space-explorer/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 [Run the Product Space Explorer MicroSim fullscreen](../../sims/product-space-explorer/main.html){ .md-button }
 
@@ -201,7 +201,7 @@ The chart below makes this cost decline visible and lets you compare the shape o
 
 #### Diagram: Learning Curve vs. Experience Curve
 
-<iframe src="../../sims/learning-experience-curve-chart/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/learning-experience-curve-chart/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 [Run the Learning Curve vs. Experience Curve MicroSim fullscreen](../../sims/learning-experience-curve-chart/main.html){ .md-button }
 

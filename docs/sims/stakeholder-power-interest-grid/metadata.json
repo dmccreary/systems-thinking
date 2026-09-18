@@ -1,11 +1,12 @@
 {
   "title": "Stakeholder Power-Interest Grid",
-  "description": "Stakeholder Power-Interest Grid",
+  "description": "Place stakeholders on a power-interest grid and justify a different engagement strategy for each quadrant.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Systems Design, Emerging Technology, and Practice"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "stakeholder-power-interest-grid",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 600,
+  "completion_status": "implemented",
   "chapter_number": 25,
   "chapter_title": "Systems Design, Emerging Technology, and Practice",
   "chapter_dir": "25-systems-design-emerging-technology-and-practice",
-  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice"
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice",
+  "educational": {
+    "learningObjective": "Given a set of stakeholders in a system-design scenario, the learner will classify each one by power and interest and justify a prioritized engagement strategy for each quadrant.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Classify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Has worked on a project with more than one interested party",
+      "Can read a 2x2 matrix"
+    ],
+    "learningOutcomes": [
+      "Classify stakeholders by power and interest",
+      "Name an appropriate engagement strategy for each quadrant",
+      "Explain why a high-power low-interest stakeholder is the dangerous one"
+    ],
+    "assessmentOpportunity": "Ask learners to justify one stakeholder's placement and to state the engagement strategy that follows from it."
+  },
+  "pedagogical": {
+    "interactionPattern": "Draggable 2x2 matrix with attitude coding and scenario variation",
+    "instructionalStrategy": "Classification with peer disagreement as the teaching mechanism",
+    "feedbackType": "Live quadrant assignment as dots are dragged",
+    "misconceptionsAddressed": [
+      "That the most vocal stakeholder is the most powerful one",
+      "That a stakeholder's position is fixed"
+    ],
+    "discussionQuestions": [
+      "Why is a high-power, low-interest stakeholder the one most likely to derail a project late?",
+      "Does attitude change the strategy, or only the effort required?",
+      "How often should a grid like this be redrawn?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Classify"
 }

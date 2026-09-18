@@ -92,7 +92,7 @@ The diagram below lets you click through this progression using the retailer exa
 
 #### Diagram: Conceptual, Logical, and Physical Data Models
 
-<iframe src="../../sims/data-model-layers-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/data-model-layers-workflow/main.html" width="100%" height="442px" scrolling="no"></iframe>
 
 [Run the Conceptual, Logical, and Physical Data Models MicroSim fullscreen](../../sims/data-model-layers-workflow/main.html){ .md-button }
 
@@ -151,7 +151,7 @@ The MicroSim below lets you run community detection and link prediction yourself
 
 #### Diagram: Graph Algorithms Explorer
 
-<iframe src="../../sims/graph-algorithms-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/graph-algorithms-explorer/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 [Run the Graph Algorithms Explorer MicroSim fullscreen](../../sims/graph-algorithms-explorer/main.html){ .md-button }
 

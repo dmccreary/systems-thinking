@@ -3,104 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>The Seven Bridges of Konigsberg</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 580px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>The Seven Bridges of Konigsberg</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
+    <main class="container">
+        <div class="title">The Seven Bridges of Konigsberg</div>
+        <div class="layout">
+            <div id="network"></div>
+            <div class="side-panel">
+                <div class="controls" id="controls"></div>
+                <div class="info-panel">
+                    <div class="info-title" id="info-title">Details</div>
+                    <div class="info-body" id="info-body">
+                        <p class="info-placeholder">Click any node or edge to see details.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> konigsberg-bridges</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> given the Konigsberg bridge layout redrawn as a graph, the learner will compute each landmass's degree and apply Euler's odd-degree rule to explain why no solution exists (Bloom: Analyzing).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: graph-model
-    **sim-id:** konigsberg-bridges<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    Learning objective: given the Konigsberg bridge layout redrawn as a graph, the learner will compute each landmass's degree and apply Euler's odd-degree rule to explain why no solution exists (Bloom: Analyzing).
-    
-    Canvas: responsive vis-network container, minimum 500px height, full container width, recomputed on window resize.
-    
-    Visual design: four circular vertices labeled "Kneiphof Island," "North Bank," "South Bank," and "East Bank," positioned to loosely mirror the real 1736 map. Seven curved edges connect them: two edges between Kneiphof Island and North Bank, two between Kneiphof Island and South Bank, one between Kneiphof Island and East Bank, one between North Bank and East Bank, and one between South Bank and East Bank -- reproducing the real bridge layout, where curved parallel edges represent the two separate bridges between the same pair of landmasses.
-    
-    Interaction: clicking any vertex opens an infobox showing its label and its degree (the count of edges touching it: Kneiphof Island = 5, North Bank = 3, South Bank = 3, East Bank = 3). A "Check for a Solution" button recolors every odd-degree vertex red and every even-degree vertex green, then displays Euler's rule in a text panel below the canvas: "A walk crossing every edge exactly once exists only if the graph has zero or two odd-degree vertices. This graph has four -- so no such walk is possible." A "Reset Colors" button restores the default vertex coloring.
-    
-    Implementation: vis-network with a fixed node/edge dataset (no physics simulation needed since the layout is historically fixed), click event handler bound to each node for the infobox, a separate DOM button wired to a function that recolors nodes by parity of their computed degree.
-    -->
+    </main>
+    <script src="konigsberg-bridges.js"></script>
 </body>
 </html>

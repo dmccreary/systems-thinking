@@ -3,114 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Emergence From Local Rules</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="emergence-local-rules.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Emergence From Local Rules</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> emergence-local-rules</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation (Bloom: Analyzing).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** emergence-local-rules<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified<br/>
-    **Template:** https://github.com/dmccreary/ecology/tree/main/docs/sims/emergence-simulator
-    
-    Learning objective: given a small set of local interaction rules, the learner will predict the emergent global pattern the agents will produce as a group, then compare that prediction against the running simulation (Bloom: Analyzing).
-    
-    Canvas: 700x500 pixels, responsive -- recompute canvas width from the containing element's width on window resize and redraw at the new size, exactly as this book's other p5.js MicroSims do.
-    
-    Visual design: 80-120 small triangular agents ("boids") move across the canvas, each colored a neutral slate-blue. Each agent's own heading is drawn as its triangle's point direction so its current local decision is visible at a glance.
-    
-    Behavior: each agent updates its heading every frame using only the positions and headings of agents within a small local radius (drawn as a faint, togglable circle around one selected agent for illustration) -- never using any global information about the whole flock. Three local rules combine to set each agent's next heading: separation (steer away from local neighbors that are too close), alignment (steer toward the average heading of local neighbors), and cohesion (steer toward the average position of local neighbors). No agent knows or computes the group's overall shape.
-    
-    Controls (p5.js built-in controls only, per this book's control conventions):
-    
-    - Three `createSlider()` sliders labeled "Separation," "Alignment," and "Cohesion," each ranging 0-100, defaulting to 50, controlling the relative weight of each of the three local rules.
-    - A `createButton()` labeled "Scatter Agents" that randomizes every agent's position and heading, useful for watching the global pattern re-emerge from scratch.
-    - A `createButton()` labeled "Pause / Resume" that freezes and unfreezes the simulation.
-    - A `createCheckbox()` labeled "Show One Agent's Local Radius" that toggles the faint local-interaction circle described above.
-    
-    Infobox: a text panel below the canvas updates every few seconds with a plain-language description of the current emergent global pattern (e.g., "The flock has split into two loosely connected clusters" or "The flock is moving as one tight, aligned group"), so the reader can compare the system-level description against what any single agent could have known.
-    
-    Implementation: p5.js boids algorithm (Craig Reynolds' 1986 formulation), canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Emergence From Local Rules Lesson Plan</a>
 </body>
 </html>

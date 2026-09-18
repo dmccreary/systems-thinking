@@ -1,0 +1,134 @@
+/* Mermaid MicroSim stylesheet - Systems Thinking in the Age of AI
+   Layout: 2/3 clickable diagram + 1/3 info panel.
+   Designed for iframe embedding: zero body margin, no page scrolling.
+*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+
+/* 100vh rather than height:100%, which does not resolve reliably inside the
+   preview and iframe wrappers this book embeds sims in. */
+
+/* The page is sometimes rendered in a viewport TALLER than the iframe it is
+   designed for -- the screenshot tool renders 200px tall and crops from the
+   top, for example. Bounding the container to the sim's declared canvas height
+   keeps the content where it belongs instead of letting a 100vh layout center
+   it somewhere below the visible area. main.html sets --microsim-height. */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-height: var(--microsim-height, 100vh);
+}
+
+/* ---- left: diagram ---- */
+.diagram-panel {
+    width: 66.67%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Let the rendered SVG scale to fit BOTH dimensions of the panel. Mermaid
+   emits a viewBox, so the default preserveAspectRatio centers and scales it
+   without clipping — which a width-only rule does not. */
+.mermaid {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mermaid svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    display: block;
+}
+
+/* ---- legend under the diagram ---- */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    flex: 0 0 auto;
+}
+.legend-item { display: flex; align-items: center; }
+.legend-swatch {
+    width: 14px; height: 14px; border-radius: 3px;
+    margin-right: 5px; border: 1px solid #495057;
+}
+
+/* ---- right: info panel ---- */
+.info-panel {
+    width: 33.33%;
+    height: 100%;
+    background-color: #fafbfc;
+    border-left: 1px solid #dee2e6;
+    padding: 14px;
+    overflow-y: auto;
+}
+
+.info-panel h3 {
+    font-size: 15px;
+    color: #1a3a6c;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #d0d7e2;
+    line-height: 1.3;
+}
+
+.info-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a3a6c;
+    margin-bottom: 7px;
+}
+
+.info-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+    color: white;
+    background-color: #1a3a6c;
+}
+
+.info-content { font-size: 13px; line-height: 1.55; color: #343a40; }
+.info-content p { margin: 6px 0; }
+.info-content .example {
+    margin-top: 8px;
+    padding: 7px 9px;
+    background: white;
+    border-left: 3px solid #E8871A;
+    font-size: 12.5px;
+}
+
+.info-placeholder { color: #868e96; font-style: italic; font-size: 13px; }
+
+/* ---- node hover affordance ---- */
+.mermaid .node { cursor: pointer; }
+.mermaid .node:hover rect,
+.mermaid .node:hover circle,
+.mermaid .node:hover polygon { filter: brightness(1.08); }
+
+@media (max-width: 700px) {
+    .info-panel { width: 40%; padding: 10px; }
+    .diagram-panel { width: 60%; }
+}

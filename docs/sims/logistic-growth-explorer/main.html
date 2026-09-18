@@ -3,122 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Logistic Growth S-Curve Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="logistic-growth-explorer.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Logistic Growth S-Curve Explorer</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> logistic-growth-explorer</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Analyze</p>
-            <p><strong>Learning Objective:</strong> Given a carrying capacity and a feedback-delay setting, the learner will predict whether a growing quantity settles into a smooth S-curve, overshoots and recovers, or overshoots and collapses (Bloom: Analyzing).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** logistic-growth-explorer<br/>
-    **Library:** p5.js<br/>
-    **Template:** https://github.com/dmccreary/ecology/tree/main/docs/sims/population-growth<br/>
-    **Status:** Specified
-    
-    Purpose: Let learners compare pure exponential growth against logistic (S-curve) growth, and see how response delay turns a smooth S-curve into overshoot or overshoot-and-collapse.
-    
-    Bloom Taxonomy Level: Analyze
-    Bloom Taxonomy Verb: Compare / Predict
-    
-    Learning Objective: Given a carrying capacity and a feedback-delay setting, the learner will predict whether a growing quantity settles into a smooth S-curve, overshoots and recovers, or overshoots and collapses (Bloom: Analyzing).
-    
-    Canvas: 700x460 default, responsive — recompute plot axes as a proportion of `canvas.width` inside a `windowResized()` handler.
-    
-    Visual elements:
-    - A single time-series chart plotting quantity (y-axis) against time (x-axis), with a dashed horizontal line marking the current carrying capacity K.
-    - Three selectable trace colors: pure exponential (light gray, for reference, uncapped), logistic S-curve (green), and the current delay-affected run (blue), all drawn on the same axes for direct comparison.
-    - A live readout showing current value, percent of carrying capacity, and elapsed time steps.
-    
-    Controls:
-    - A growth-rate slider (`createSlider()`, range 0.05-0.5) setting \( r \).
-    - A carrying-capacity slider (range 50-500) setting \( K \).
-    - A response-delay slider (range 0-15 time steps) determining how many steps elapse between the stock exceeding K and the balancing term fully engaging; at delay 0 the curve is a textbook smooth S-curve, at moderate delay it overshoots and settles back near K, and at high delay combined with a "fragile limit" checkbox it overshoots and collapses to well below K (simulating capacity damage).
-    - A "fragile limit" checkbox (`createCheckbox()`) that, when checked and combined with a high delay, permanently lowers K after an overshoot, producing the overshoot-and-collapse pattern rather than mere overshoot.
-    - A "Run" button and a "Reset" button built with `createButton()`.
-    
-    Interactivity requirement: every slider and checkbox immediately changes the plotted curve and live readout on the next simulation step, giving direct, visible feedback tying delay and limit fragility to the resulting growth shape.
-    
-    Color scheme: exponential reference trace in neutral gray, logistic S-curve in the book's balancing-loop green, delay-affected run in the reinforcing-loop red once it exceeds K (to visually flag overshoot), carrying-capacity line as a dashed dark gray.
-    
-    Implementation: p5.js sketch computing the logistic difference equation \( N_{t+1} = N_t + rN_t(1 - N_t/K)\,\Delta t \) each frame, with a delay buffer storing past \((1-N/K)\) terms so the currently applied balancing strength lags behind the current stock by the slider's delay amount; a "fragile limit" flag reduces K once N exceeds it by more than a set margin.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Logistic Growth S-Curve Explorer Lesson Plan</a>
 </body>
 </html>

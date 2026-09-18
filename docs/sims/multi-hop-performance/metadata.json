@@ -1,11 +1,12 @@
 {
   "title": "Multi-Hop Query Performance, RDBMS vs Graph Database",
-  "description": "Multi-Hop Query Performance, RDBMS vs Graph Database",
+  "description": "Compare RDBMS join time against graph traversal time from one to five hops, on a log or a linear axis.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Graph Database Architecture"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "multi-hop-performance",
   "library": "Chart.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 480,
+  "completion_status": "implemented",
   "chapter_number": 16,
   "chapter_title": "Graph Database Architecture",
   "chapter_dir": "16-graph-database-architecture",
-  "chapter_rel_dir": "chapters/16-graph-database-architecture"
+  "chapter_rel_dir": "chapters/16-graph-database-architecture",
+  "educational": {
+    "learningObjective": "Given response-time data at increasing traversal depth, the learner will explain why RDBMS JOIN cost grows so much faster than graph-database traversal cost as connection depth increases.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Explain",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Knows what a database join is",
+      "Has seen a bar chart"
+    ],
+    "learningOutcomes": [
+      "Explain why join cost compounds with depth while traversal cost does not",
+      "Read the same data correctly on both a log and a linear axis",
+      "Recognize when a log scale is the honest choice"
+    ],
+    "assessmentOpportunity": "Ask learners to predict the six-hop values for both systems and to say which axis they would use to present the result, and why."
+  },
+  "pedagogical": {
+    "interactionPattern": "Grouped bar chart with an axis-scale toggle",
+    "instructionalStrategy": "Representation contrast - identical data under two scalings",
+    "feedbackType": "Immediate chart redraw on toggle",
+    "misconceptionsAddressed": [
+      "That relational and graph databases differ at every query depth",
+      "That a log axis is a way of exaggerating a difference"
+    ],
+    "discussionQuestions": [
+      "When is a logarithmic axis clarifying, and when is it hiding the story?",
+      "At what query depth does switching database technology become worth the migration cost?",
+      "Why does index-free adjacency make depth nearly free?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Explain"
 }

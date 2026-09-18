@@ -1,11 +1,12 @@
 {
   "title": "Stock and Flow Notation Explorer",
-  "description": "Given a simple causal loop diagram, the learner will identify the corresponding stock, inflow, and outflow in an equivalent stock-and-flow diagram (Bloom: Understanding).",
+  "description": "Click parts of a bathtub-style stock-and-flow diagram to see how each maps onto the causal loop diagram from Chapter 3.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Feedback, Delay, and Loop Dynamics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "stock-flow-notation-explorer",
   "library": "p5.js",
-  "bloomLevel": "Understand",
-  "bloomVerb": "Map / Translate",
-  "completion_status": "scaffold",
+  "canvasHeight": 510,
+  "completion_status": "implemented",
   "chapter_number": 4,
   "chapter_title": "Feedback, Delay, and Loop Dynamics",
   "chapter_dir": "04-feedback-delay-and-loop-dynamics",
-  "chapter_rel_dir": "chapters/04-feedback-delay-and-loop-dynamics"
+  "chapter_rel_dir": "chapters/04-feedback-delay-and-loop-dynamics",
+  "educational": {
+    "learningObjective": "Given a simple causal loop diagram, the learner will identify the corresponding stock, inflow and outflow in an equivalent stock-and-flow diagram.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Map",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Has read a causal loop diagram",
+      "Knows that some quantities accumulate over time"
+    ],
+    "learningOutcomes": [
+      "Map a CLD node onto its stock-and-flow counterpart",
+      "Identify the stock, the inflow and the outflow in a stock-and-flow diagram",
+      "Explain what a stock-and-flow diagram shows that a CLD cannot"
+    ],
+    "assessmentOpportunity": "Give learners a two-node CLD and ask them to name the stock, the inflow, and any outflow the CLD failed to show."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-highlight with paired-diagram correspondence",
+    "instructionalStrategy": "Dual coding - the same system shown in two notations simultaneously",
+    "feedbackType": "Synchronized highlighting across both diagrams plus an explanation sentence",
+    "misconceptionsAddressed": [
+      "That a CLD and a stock-and-flow diagram carry the same information",
+      "That a flow and a stock are interchangeable ways of describing a quantity"
+    ],
+    "discussionQuestions": [
+      "Why would you ever use a CLD if a stock-and-flow diagram carries more information?",
+      "What real quantities in your work are stocks, and which are flows?",
+      "Why is confusing a stock with a flow such a common and costly error?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Map"
 }

@@ -86,7 +86,7 @@ The MicroSim below makes the exponential blind spot visible rather than just des
 
 #### Diagram: Growth Rate Comparison
 
-<iframe src="https://dmccreary.github.io/calculus/sims/growth-rates/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/calculus/sims/growth-rates/main.html" width="100%" height="522px" scrolling="no"></iframe>
 
 [Run the Growth Rate Comparison MicroSim fullscreen](https://dmccreary.github.io/calculus/sims/growth-rates/main.html){ .md-button }
 
@@ -106,7 +106,7 @@ The MicroSim below shows the same idea from the other side — not comparing exp
 
 #### Diagram: Population Growth Simulator
 
-<iframe src="../../sims/population-simulator/main.html" height="505px" scrolling="no"></iframe>
+<iframe src="../../sims/population-simulator/main.html" height="502px" scrolling="no"></iframe>
 
 [Run the Population Simulator fullscreen](../../sims/population-simulator/main.html){ .md-button }
 
@@ -180,7 +180,7 @@ The MicroSim below lets you set a growth rate and a carrying capacity and watch 
 
 #### Diagram: Logistic Growth S-Curve Explorer
 
-<iframe src="../../sims/logistic-growth-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/logistic-growth-explorer/main.html" width="100%" height="548px" scrolling="no"></iframe>
 
 [Run the Logistic Growth S-Curve Explorer fullscreen](../../sims/logistic-growth-explorer/main.html){ .md-button }
 
@@ -261,7 +261,7 @@ The MicroSim below lets you drag the \( r \) slider through exactly this progres
 
 #### Diagram: Logistic Map Bifurcation Explorer
 
-<iframe src="../../sims/logistic-map-bifurcation-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/logistic-map-bifurcation-explorer/main.html" width="100%" height="538px" scrolling="no"></iframe>
 
 [Run the Logistic Map Bifurcation Explorer fullscreen](../../sims/logistic-map-bifurcation-explorer/main.html){ .md-button }
 

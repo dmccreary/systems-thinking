@@ -1,11 +1,12 @@
 {
   "title": "Data Ingestion Pipeline -- From Lake to Warehouse to Mart",
-  "description": "given a data pipeline from raw source to analytical storage, the learner will sequence a data lake, an ETL process, a central data warehouse, a data mart, and a star schema in their correct order and explain what each stage adds (Bloom: Understanding).",
+  "description": "Sequence a data lake, ETL, warehouse and marts, and look inside the warehouse's star schema.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Data Management and Governance"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "data-warehouse-pipeline",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 500,
+  "completion_status": "implemented",
   "chapter_number": 18,
   "chapter_title": "Data Management and Governance",
   "chapter_dir": "18-data-management-and-governance",
-  "chapter_rel_dir": "chapters/18-data-management-and-governance"
+  "chapter_rel_dir": "chapters/18-data-management-and-governance",
+  "educational": {
+    "learningObjective": "Given a data pipeline from raw source to analytical storage, the learner will sequence a data lake, an ETL process, a central data warehouse, a data mart and a star schema in their correct order and explain what each stage adds.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Sequence",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a database is",
+      "Has heard the terms ETL or data warehouse"
+    ],
+    "learningOutcomes": [
+      "Sequence the five pipeline stages correctly",
+      "State what each stage adds that the previous one could not",
+      "Distinguish a fact table from a dimension table in a star schema"
+    ],
+    "assessmentOpportunity": "Ask learners to name the stage where two departments' definitions of 'customer' get reconciled, and to explain what happens if that stage is skipped."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-explain pipeline with a nested detail level and an animation",
+    "instructionalStrategy": "Sequencing with a justification for each position",
+    "feedbackType": "An explanation panel per stage plus a second-level panel for the star schema",
+    "misconceptionsAddressed": [
+      "That a data lake and a data warehouse are alternatives rather than stages",
+      "That a data mart is an independent database"
+    ],
+    "discussionQuestions": [
+      "Why is a mart loaded independently of the warehouse a silo in disguise?",
+      "What is the real cost of a data lake with no governance?",
+      "Where in this pipeline would you put a data steward?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Sequence"
 }

@@ -88,7 +88,7 @@ The MicroSim below lets you practice exactly this kind of stakeholder analysis o
 
 #### Diagram: Stakeholder Power-Interest Grid
 
-<iframe src="https://dmccreary.github.io/information-systems/sims/stakeholder-power-interest-grid/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/information-systems/sims/stakeholder-power-interest-grid/main.html" width="100%" height="602px" scrolling="no"></iframe>
 
 [Run the Stakeholder Power-Interest Grid MicroSim fullscreen](https://dmccreary.github.io/information-systems/sims/stakeholder-power-interest-grid/main.html){ .md-button }
 
@@ -118,7 +118,7 @@ The workflow below lets you click through this design sequence in order, from ch
 
 #### Diagram: From Intervention Point to Implementation
 
-<iframe src="../../sims/intervention-to-implementation-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/intervention-to-implementation-workflow/main.html" width="100%" height="442px" scrolling="no"></iframe>
 
 [Run the From Intervention Point to Implementation MicroSim fullscreen](../../sims/intervention-to-implementation-workflow/main.html){ .md-button }
 
@@ -186,7 +186,7 @@ The MicroSim below lets you run a simplified social feed ranking loop yourself a
 
 #### Diagram: Filter Bubble Formation Simulator
 
-<iframe src="../../sims/filter-bubble-formation-simulator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/filter-bubble-formation-simulator/main.html" width="100%" height="474px" scrolling="no"></iframe>
 
 [Run the Filter Bubble Formation Simulator MicroSim fullscreen](../../sims/filter-bubble-formation-simulator/main.html){ .md-button }
 

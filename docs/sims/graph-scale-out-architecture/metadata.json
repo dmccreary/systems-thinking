@@ -1,11 +1,12 @@
 {
   "title": "Vertical vs Scale-Out Graph Architecture",
-  "description": "given a growing graph dataset, the learner will compare a single graph-optimized-hardware server against a distributed, scale-out cluster and identify why a cross-server edge traversal costs more than a local one (Bloom: Analyzing).",
+  "description": "Toggle between one large graph server and a three-shard cluster, and see why a cross-shard edge costs so much more.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Graph Database Architecture"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "graph-scale-out-architecture",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 505,
+  "completion_status": "implemented",
   "chapter_number": 16,
   "chapter_title": "Graph Database Architecture",
   "chapter_dir": "16-graph-database-architecture",
-  "chapter_rel_dir": "chapters/16-graph-database-architecture"
+  "chapter_rel_dir": "chapters/16-graph-database-architecture",
+  "educational": {
+    "learningObjective": "Given a growing graph dataset, the learner will compare a single graph-optimized-hardware server against a distributed scale-out cluster and identify why a cross-server edge traversal costs more than a local one.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Compare",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a graph traversal is",
+      "Has a rough sense that network calls are slower than memory access"
+    ],
+    "learningOutcomes": [
+      "Compare vertical scaling against scale-out for graph workloads",
+      "Explain why a cross-shard traversal costs orders of magnitude more than a local one",
+      "Recognize that shard placement is a design decision with performance consequences"
+    ],
+    "assessmentOpportunity": "Give learners a small graph and three shards and ask them to assign vertices so as to minimize cross-shard edges, then to justify the assignment."
+  },
+  "pedagogical": {
+    "interactionPattern": "View toggle with hover inspection and a highlight mode",
+    "instructionalStrategy": "Contrasting representations of one identical dataset",
+    "feedbackType": "Hover explanations naming the cost of each specific hop",
+    "misconceptionsAddressed": [
+      "That distributing a database always improves performance",
+      "That all edges in a sharded graph cost the same to traverse"
+    ],
+    "discussionQuestions": [
+      "Why is sharding a graph harder than sharding a table of independent rows?",
+      "What kinds of queries would make the cluster's extra memory worth the cross-shard cost?",
+      "Is there a workload where the single server simply cannot win?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Compare"
 }

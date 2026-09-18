@@ -122,7 +122,7 @@ The diagram below traces the reinforcing loop that lets a silo, once formed, kee
 
 #### Diagram: The Organizational Silo Reinforcing Loop
 
-<iframe src="../../sims/silo-reinforcing-loop/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/silo-reinforcing-loop/main.html" width="100%" height="502px" scrolling="no"></iframe>
 
 [Run the The Organizational Silo Reinforcing Loop MicroSim fullscreen](../../sims/silo-reinforcing-loop/main.html){ .md-button }
 
@@ -177,7 +177,7 @@ The interactive diagram below lets you explore how legacy systems and technical 
 
 #### Diagram: The Technical Debt Feedback Loop
 
-<iframe src="https://dmccreary.github.io/information-systems/sims/tech-debt-feedback-loop/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/information-systems/sims/tech-debt-feedback-loop/main.html" width="100%" height="632px" scrolling="no"></iframe>
 
 [Run the Technical Debt Feedback Loop MicroSim fullscreen](https://dmccreary.github.io/information-systems/sims/tech-debt-feedback-loop/main.html){ .md-button }
 

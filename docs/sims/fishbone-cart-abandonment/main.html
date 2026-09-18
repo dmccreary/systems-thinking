@@ -3,119 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
-    <title>Fishbone Diagram — Cart Abandonment</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Fishbone Diagram - Cart Abandonment</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="fishbone-cart-abandonment.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Fishbone Diagram — Cart Abandonment</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> fishbone-cart-abandonment</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Analyze</p>
-            <p><strong>Learning Objective:</strong> Given a list of candidate causes for a problem, the learner will categorize each cause onto the correct bone of a fishbone diagram (Bloom: Analyzing).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: diagram
-    **sim-id:** fishbone-cart-abandonment<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Purpose: Draw a fishbone (Ishikawa) diagram for the problem "Customers abandon their shopping cart before checkout," with four category bones (People, Process, Technology, Cost) each holding two or three candidate causes, so learners see how the diagram organizes brainstormed causes rather than just listing them.
-    
-    Bloom Taxonomy Level: Analyze
-    Bloom Taxonomy Verb: Categorize
-    
-    Learning Objective: Given a list of candidate causes for a problem, the learner will categorize each cause onto the correct bone of a fishbone diagram (Bloom: Analyzing).
-    
-    Canvas: 750x420 default, responsive — all bone and label positions computed as fractions of `canvas.width` inside `windowResized()`.
-    
-    Visual elements:
-    - A horizontal center "spine" arrow pointing right to a box labeled "Customers Abandon Cart" (the problem/effect).
-    - Four diagonal "bones" branching off the spine, two above and two below, labeled People, Process, Technology, and Cost.
-    - Small labeled circles along each bone representing candidate causes, for example under Technology: "Slow page load," "Payment error"; under Cost: "Surprise shipping fee," "No guest checkout option."
-    
-    Controls:
-    - A pool of 8-10 draggable cause labels below the canvas that the learner drags onto the bone they believe is the correct category, using p5.js `mouseDragged`/`mouseReleased` events with simple rectangle hit-testing against each bone's drop zone.
-    - On drop, the label snaps into place if correct (a small green checkmark appears) or bounces back with a gentle shake animation if placed on the wrong bone, prompting the learner to try again.
-    - A "Reveal All" button, built with `createButton()`, that snaps every remaining label into its correct position for learners who want to see the finished diagram.
-    
-    Interactivity requirement: every placed cause label is clickable after being placed, opening an infobox with one sentence explaining why that cause fits its category; the drag-and-categorize interaction itself is the primary interactivity, satisfying the minimum bar.
-    
-    Color scheme: each of the four bones and its category label share a distinct color (matching the book's palette), and cause labels take on their bone's color once correctly placed, staying neutral gray while still in the unsorted pool.
-    
-    Implementation: p5.js sketch with an array of bone-rectangle hit zones, an array of draggable label objects tracking correct-category assignment, and simple animation via `lerp()` for the snap-into-place and shake-back behaviors.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Fishbone Diagram - Cart Abandonment Lesson Plan</a>
 </body>
 </html>

@@ -1,22 +1,88 @@
 ---
-title: Filter Bubble Formation Simulator
-description: given a simulated content feed, the learner will apply the social feed ranking loop by repeatedly selecting content, and observe the resulting decline in topic diversity that defines a filter bubble (Bloom: Apply).
-status: scaffold
+title: "Filter Bubble Formation Simulator"
+description: "Click the content you would actually open and watch topic diversity collapse over a handful of rounds."
+image: /sims/filter-bubble-formation-simulator/filter-bubble-formation-simulator.png
+og:image: /sims/filter-bubble-formation-simulator/filter-bubble-formation-simulator.png
+twitter:image: /sims/filter-bubble-formation-simulator/filter-bubble-formation-simulator.png
+social:
+  cards: false
+status: implemented
 library: p5.js
-bloom_level: TBD
+bloom_level: Apply
+bloom_verb: Apply
+chapter: 25
 ---
 
 # Filter Bubble Formation Simulator
 
+<iframe src="main.html" width="100%" height="474" scrolling="no"></iframe>
 
+[Run the Filter Bubble Formation Simulator MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+The ranking rule in this simulation contains no bias of any kind: it shows more of what you engaged with, which is exactly what a reasonable engineer would build. Run it for five rounds while clicking honestly and watch categories disappear from your feed that you never chose to stop seeing. The narrowing comes from the loop, not the rule.
+
+**Learning objective:** Given a simulated content feed, the learner will apply the social feed ranking loop by repeatedly selecting content, and observe the resulting decline in topic diversity that defines a filter bubble.
+
+**Bloom's Taxonomy level:** Apply (Apply)
+
+## How To Use
+
+- Click the cards you would actually open - answer honestly, the effect depends on it.
+- Press "Next Round" to get a fresh row of eight cards, sampled from the updated weights.
+- Watch the bar chart below narrow round by round, and the diversity percentage fall.
+- Press "Reset Feed" to return to a uniform mix across all five categories.
+
+## Embedding This MicroSim
+
+Copy this iframe into any page to embed the MicroSim:
+
+```html
+<iframe src="https://dmccreary.github.io/systems-thinking/sims/filter-bubble-formation-simulator/main.html"
+        width="100%" height="474" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+### Audience
+
+This MicroSim is written to work across the book's full audience range, from junior high through executive workshops. Adjust the depth of the discussion questions rather than the activity itself.
+
+### Prerequisites
+
+- Has used a social media or recommendation feed
+- Knows what a reinforcing loop is
+
+### Learning Objectives
+
+After working with this MicroSim, learners will be able to:
+
+- Apply a feed ranking loop by making repeated selections
+- Observe and describe the resulting loss of topic diversity
+- Explain how a filter bubble forms without deliberate bias in the ranking rule
+
+### Suggested Activity (15 minutes)
+
+1. Have each learner run five rounds independently, clicking honestly.
+2. Compare final diversity percentages across the group.
+3. Ask who deliberately chose to stop seeing a category. Nobody did.
+4. Ask what a single rule change would slow the narrowing.
+5. Discuss the difference between what you clicked and what you would have wanted to see.
+
+### Assessment
+
+Ask learners to explain, in three sentences, how an unbiased ranking rule produced a narrowed feed. The explanation must reference the loop rather than the rule.
+
+### Discussion Questions
+
+- Whose responsibility is the filter bubble - the engineer's, the user's, or nobody's?
+- Would you want a feed that deliberately showed you things you would not click?
+- What is the equivalent loop in how you choose what to read professionally?
 
 ## Specification
 
-The full specification below is extracted from
+The specification below was extracted from
 [Chapter 25: Systems Design, Emerging Technology, and Practice](../../chapters/25-systems-design-emerging-technology-and-practice/index.md).
 
 ```text
@@ -38,6 +104,13 @@ Behavior: after each round, the algorithm recomputes each category's selection p
 Implementation: p5.js, an array of category weights updated each round using a simple reinforcement formula (`weight += clicks * learningRate`), card colors and the diversity bar chart redrawn every round, `windowResized()` recalculating card layout from current container width.
 ```
 
+## References
+
+- [Filter bubble - Wikipedia](https://en.wikipedia.org/wiki/Filter_bubble) - Eli Pariser's term and the mechanism behind it.
+- [Recommender system](https://en.wikipedia.org/wiki/Recommender_system) - How engagement-based ranking actually works.
+- [Echo chamber](https://en.wikipedia.org/wiki/Echo_chamber_(media)) - The related social phenomenon.
+
 ## Related Resources
 
 - [Chapter 25: Systems Design, Emerging Technology, and Practice](../../chapters/25-systems-design-emerging-technology-and-practice/index.md)
+- [All MicroSims in this book](../index.md)

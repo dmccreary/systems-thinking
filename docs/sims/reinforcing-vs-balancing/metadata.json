@@ -1,11 +1,12 @@
 {
   "title": "Reinforcing vs. Balancing Loop Simulator",
-  "description": "Reinforcing vs. Balancing Loop Simulator",
+  "description": "Compare a reinforcing loop's runaway growth curve against a balancing loop's goal-seeking convergence, side by side.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Causal Loop Diagram Notation and Loop Identification"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "reinforcing-vs-balancing",
   "library": "p5.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 580,
+  "completion_status": "implemented",
   "chapter_number": 3,
   "chapter_title": "Causal Loop Diagram Notation and Loop Identification",
   "chapter_dir": "03-cld-notation-and-loop-identification",
-  "chapter_rel_dir": "chapters/03-cld-notation-and-loop-identification"
+  "chapter_rel_dir": "chapters/03-cld-notation-and-loop-identification",
+  "educational": {
+    "learningObjective": "Given animated behavior-over-time graphs, the learner will compare the characteristic signature of a reinforcing loop against that of a balancing loop.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Compare",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Can classify a loop as reinforcing or balancing",
+      "Has seen a behavior-over-time graph"
+    ],
+    "learningOutcomes": [
+      "Recognize a reinforcing loop from its behavior-over-time signature",
+      "Recognize a balancing loop from its convergence toward a goal",
+      "Predict loop type from a behavior graph alone"
+    ],
+    "assessmentOpportunity": "Show learners an unlabeled behavior-over-time curve and ask them to name the loop type and justify it from the shape."
+  },
+  "pedagogical": {
+    "interactionPattern": "Parameterized side-by-side simulation with time-series output",
+    "instructionalStrategy": "Contrasting cases - two structures run under identical conditions",
+    "feedbackType": "Animated curves that redraw on every parameter change",
+    "misconceptionsAddressed": [
+      "That reinforcing loops always grow rather than also collapsing",
+      "That a balancing loop stops the system rather than steering it"
+    ],
+    "discussionQuestions": [
+      "Why does a balancing loop settle at a value rather than at zero?",
+      "What real systems show an accelerating curve, and how long can that last?",
+      "If you only had the behavior graph and not the diagram, what could you still infer?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Compare"
 }

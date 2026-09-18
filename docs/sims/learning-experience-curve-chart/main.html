@@ -3,106 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Learning Curve vs. Experience Curve</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 520px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>Learning Curve vs. Experience Curve</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
+    <main class="container">
+        <h2>Learning Curve vs. Experience Curve</h2>
+        <div class="chart-wrapper">
+            <canvas id="chart"></canvas>
         </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> learning-experience-curve-chart</p>
-            <p><strong>Library:</strong> Chart.js</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> given live cost-versus-cumulative-production curves, the learner will compare the learning curve (labor time only) and the experience curve (total unit cost) and explain why the experience curve typically declines faster (Bloom: Analyze).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: chart
-    **sim-id:** learning-experience-curve-chart<br/>
-    **Library:** Chart.js<br/>
-    **Status:** Specified
-    
-    Learning objective: given live cost-versus-cumulative-production curves, the learner will compare the learning curve (labor time only) and the experience curve (total unit cost) and explain why the experience curve typically declines faster (Bloom: Analyze).
-    
-    Canvas: responsive Chart.js line chart, full container width, fixed 400px height, log-scaled x-axis, redrawn on window resize.
-    
-    Visual design: x-axis labeled "Cumulative Units Produced" (log scale, 1 to 100,000), y-axis labeled "Relative Unit Cost (%, starting at 100)." Two lines: "Learning Curve (labor time only)" declining to about 65% of its starting value by 100,000 units, and "Experience Curve (total unit cost)" declining more steeply, to about 35% of its starting value over the same range, reflecting the added contribution of process, supply-chain, and equipment improvements.
-    
-    Controls: a slider labeled "Cumulative Units Produced" that moves a vertical playhead across the log-scaled x-axis; a text readout beside the slider reports both curves' current relative-cost value at the selected production volume.
-    
-    Interaction: hovering either line at any point on the x-axis shows a tooltip with that curve's precise relative-cost value and the underlying cumulative-unit count.
-    
-    Implementation: Chart.js line chart with a logarithmic x-axis scale, two pre-computed data series following a standard power-law decay formula \( C(n) = C_0 \cdot n^{\log_2(r)} \), where \( C_0 \) is the starting unit cost, \( n \) is cumulative units produced, and \( r \) is the retention fraction per doubling (0.80 for the learning curve, 0.65 for the experience curve), canvas resized via Chart.js's built-in `responsive: true` option.
-    -->
+        <div class="controls" id="controls"></div>
+        <div class="readout" id="readout"></div>
+    </main>
+    <script src="learning-experience-curve-chart.js"></script>
 </body>
 </html>

@@ -3,119 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Interconnection Network Explorer</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 520px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>Interconnection Network Explorer</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
+    <main class="container">
+        <div class="title">Interconnection Network Explorer</div>
+        <div class="layout">
+            <div id="network"></div>
+            <div class="side-panel">
+                <div class="controls" id="controls"></div>
+                <div class="info-panel">
+                    <div class="info-title" id="info-title">Details</div>
+                    <div class="info-body" id="info-body">
+                        <p class="info-placeholder">Click any node or edge to see details.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> interconnection-network-explorer</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> Analyze</p>
-            <p><strong>Learning Objective:</strong> Given a supply-chain network diagram, the learner will trace which nodes are affected, directly and indirectly, by a disruption at a chosen node (Bloom: Analyzing).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: graph-model
-    **sim-id:** interconnection-network-explorer<br/>
-    **Library:** vis-network<br/>
-    **Status:** Specified
-    
-    Purpose: Depict a small six-node supply-chain network (Semiconductor Factory, Parts Supplier, Car Manufacturer, Shipping Company, Dealership, Customer) so learners can click any node and see it highlighted along with every node it is directly and indirectly connected to, distinguishing mere interconnection from true interdependence.
-    
-    Bloom Taxonomy Level: Analyze
-    Bloom Taxonomy Verb: Trace
-    
-    Learning Objective: Given a supply-chain network diagram, the learner will trace which nodes are affected, directly and indirectly, by a disruption at a chosen node (Bloom: Analyzing).
-    
-    Canvas: full-width responsive vis-network container, 500px tall, with `network.on("resize")` and a window `resize` listener calling `network.redraw()` and `network.fit()` so the graph re-centers on any viewport width.
-    
-    Visual elements:
-    - Six nodes labeled Semiconductor Factory, Parts Supplier, Car Manufacturer, Shipping Company, Dealership, and Customer, laid out left to right in that supply-flow order using `vis-network`'s hierarchical layout option.
-    - Directed edges showing the flow of goods: Semiconductor Factory → Parts Supplier → Car Manufacturer → Shipping Company → Dealership → Customer.
-    - One additional edge, styled with a dashed line and a distinct warning color, from Semiconductor Factory directly to Dealership, labeled "also ships specialty parts directly," to show that real networks are rarely a single clean chain.
-    
-    Controls:
-    - Clicking any node fires a `click` event handler that highlights that node in a bright accent color and highlights every node reachable from it (using a breadth-first traversal of the `vis-network` `DataSet` edges) in a lighter shade of the same color, while dimming unrelated nodes to low opacity.
-    - A "Reset Highlighting" button, implemented as an HTML button outside the network `div`, that calls a function to restore all nodes and edges to their default colors.
-    - A text panel beneath the network that updates on each click to read: "If [Node] stops working, it directly affects: [list]. Because of interdependence, the disruption can also reach: [extended list]."
-    
-    Interactivity requirement: every node is clickable per the behavior above, satisfying the minimum interactivity bar with visible, teaching feedback (the highlight plus the explanatory text panel).
-    
-    Color scheme: `vis-network` default node color for unaffected nodes, the book's accent orange for the clicked node, and a lighter orange for downstream-affected nodes, keeping consistent contrast in both light and dark MkDocs Material themes.
-    
-    Implementation: `vis-network` `DataSet`/`DataView` objects for nodes and edges, a `network.on("click", ...)` handler performing a breadth-first search over the edge list from the clicked node, and `network.setOptions()` calls to restyle node colors on each interaction.
-    -->
+    </main>
+    <script src="interconnection-network-explorer.js"></script>
 </body>
 </html>

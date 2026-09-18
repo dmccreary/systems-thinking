@@ -84,7 +84,7 @@ Notice the shape of what was just described: something visible and easy near the
 
 #### Diagram: The Leverage Points Iceberg
 
-<iframe src="../../sims/leverage-iceberg/main.html" width="100%" height="560" scrolling="no"></iframe>
+<iframe src="../../sims/leverage-iceberg/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 [Run the Leverage Iceberg MicroSim fullscreen](../../sims/leverage-iceberg/main.html){ .md-button }
 

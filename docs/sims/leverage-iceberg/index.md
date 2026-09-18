@@ -1,6 +1,6 @@
 ---
-title: Leverage Points Iceberg
-description: An interactive visualization of Donella Meadows' 12 Leverage Points using the iceberg metaphor, showing that deep interventions are hidden but transformative.
+title: "Leverage Points Iceberg"
+description: "An interactive visualization of Donella Meadows' 12 Leverage Points using the iceberg metaphor, showing that deep interventions are hidden but transformative."
 ---
 
 # Leverage Points Iceberg

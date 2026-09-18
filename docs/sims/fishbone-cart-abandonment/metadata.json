@@ -1,11 +1,12 @@
 {
-  "title": "Fishbone Diagram — Cart Abandonment",
-  "description": "Given a list of candidate causes for a problem, the learner will categorize each cause onto the correct bone of a fishbone diagram (Bloom: Analyzing).",
+  "title": "Fishbone Diagram \u2014 Cart Abandonment",
+  "description": "Drag ten candidate causes of cart abandonment onto the People, Process, Technology or Cost bone they belong to.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Mental Models and Systems Analysis Tools"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "fishbone-cart-abandonment",
   "library": "p5.js",
-  "bloomLevel": "Analyze",
-  "bloomVerb": "Categorize",
-  "completion_status": "scaffold",
+  "canvasHeight": 559,
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "Mental Models and Systems Analysis Tools",
   "chapter_dir": "02-mental-models-and-systems-analysis-tools",
-  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools"
+  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools",
+  "educational": {
+    "learningObjective": "Given a list of candidate causes for a problem, the learner will categorize each cause onto the correct bone of a fishbone diagram.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Categorize",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Has seen a problem with more than one plausible cause",
+      "Knows that causes can be grouped by type"
+    ],
+    "learningOutcomes": [
+      "Categorize causes by type rather than by how obvious they are",
+      "Explain why some causes legitimately straddle two categories",
+      "Read a crowded bone as a finding about where to investigate"
+    ],
+    "assessmentOpportunity": "Give learners three new candidate causes and ask which bone each belongs on, with a one-sentence justification. The justification matters more than the placement."
+  },
+  "pedagogical": {
+    "interactionPattern": "Drag-and-drop categorization with corrective feedback",
+    "instructionalStrategy": "Retrieval practice with immediate right/wrong feedback and delayed explanation",
+    "feedbackType": "Snap-and-checkmark on correct, shake-and-return on incorrect, plus an explanation on every placement",
+    "misconceptionsAddressed": [
+      "That every cause belongs cleanly to exactly one category",
+      "That a fishbone is a list rather than an analysis"
+    ],
+    "discussionQuestions": [
+      "Which bone tends to get blamed first in your organization, and is that where the causes actually are?",
+      "What is lost when a cause could reasonably go on two bones and you have to pick one?",
+      "Why does the diagram deliberately include a cause the business cannot control?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Categorize"
 }

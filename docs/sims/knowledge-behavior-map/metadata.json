@@ -1,11 +1,12 @@
 {
   "title": "How Embodied Knowledge Moves, Fades, and Leaks",
-  "description": "given a central embodied-knowledge example, the learner will classify four ways that knowledge can move, fade, or transfer beyond its original holder, and distinguish cross-generational transfer (intentional) from knowledge spillover (unintentional) (Bloom: Analyze).",
+  "description": "Classify four ways knowledge moves, fades or leaks, and separate intentional transfer from unintentional spillover.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Knowledge Systems and Economic Complexity"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "knowledge-behavior-map",
   "library": "Mermaid",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 480,
+  "completion_status": "implemented",
   "chapter_number": 24,
   "chapter_title": "Knowledge Systems and Economic Complexity",
   "chapter_dir": "24-knowledge-systems-and-economic-complexity",
-  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity"
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity",
+  "educational": {
+    "learningObjective": "Given a central embodied-knowledge example, the learner will classify four ways that knowledge can move, fade, or transfer beyond its original holder, and distinguish cross-generational transfer (intentional) from knowledge spillover (unintentional).",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Classify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows the difference between explicit and tacit knowledge",
+      "Has seen an organization lose capability when someone left"
+    ],
+    "learningOutcomes": [
+      "Classify four knowledge behaviors correctly",
+      "Distinguish intentional transfer from unintentional spillover",
+      "Explain why embodied knowledge does not transfer through documentation alone"
+    ],
+    "assessmentOpportunity": "Give learners four short scenarios and ask which node each belongs to, with the intentional-versus-unintentional judgment stated explicitly."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-explain hub-and-spoke diagram with color-coded categories",
+    "instructionalStrategy": "Categorization with the distinction previewed by color before it is argued",
+    "feedbackType": "A definition plus a distinct concrete example per node",
+    "misconceptionsAddressed": [
+      "That knowledge can be fully captured in documentation",
+      "That all knowledge transfer is intentional"
+    ],
+    "discussionQuestions": [
+      "Why can a competitor copy a documented process and still fail to match the results?",
+      "Is knowledge spillover a cost to the firm or a benefit to the economy?",
+      "What would it cost to prevent decay in a capability you rarely use?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Classify"
 }

@@ -1,11 +1,12 @@
 {
   "title": "Logistic Growth S-Curve Explorer",
-  "description": "Given a carrying capacity and a feedback-delay setting, the learner will predict whether a growing quantity settles into a smooth S-curve, overshoots and recovers, or overshoots and collapses (Bloom: Analyzing).",
+  "description": "Add response delay to logistic growth and watch a smooth S-curve turn into overshoot, then into collapse.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Growth Patterns and Nonlinear Behavior"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "logistic-growth-explorer",
   "library": "p5.js",
-  "bloomLevel": "Analyze",
-  "bloomVerb": "Compare / Predict",
-  "completion_status": "scaffold",
+  "canvasHeight": 546,
+  "completion_status": "implemented",
   "chapter_number": 6,
   "chapter_title": "Growth Patterns and Nonlinear Behavior",
   "chapter_dir": "06-growth-patterns-and-nonlinear-behavior",
-  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior"
+  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior",
+  "educational": {
+    "learningObjective": "Given a carrying capacity and a feedback-delay setting, the learner will predict whether a growing quantity settles into a smooth S-curve, overshoots and recovers, or overshoots and collapses.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Predict",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Has seen exponential growth",
+      "Knows what a carrying capacity is"
+    ],
+    "learningOutcomes": [
+      "Predict growth shape from the delay setting",
+      "Explain why delay causes overshoot even when the limit is known",
+      "Distinguish overshoot-and-recover from overshoot-and-collapse"
+    ],
+    "assessmentOpportunity": "Give learners a delay setting and a fragile-limit state and ask them to sketch the resulting curve before running it."
+  },
+  "pedagogical": {
+    "interactionPattern": "Multi-parameter simulation with three comparison traces",
+    "instructionalStrategy": "Systematic variation of one variable (delay) against a fixed reference",
+    "feedbackType": "Live traces with color-flagged overshoot and a plain-language shape verdict",
+    "misconceptionsAddressed": [
+      "That growth stops neatly at a limit",
+      "That overshoot is always temporary"
+    ],
+    "discussionQuestions": [
+      "Why does knowing the limit not prevent overshooting it?",
+      "Which real limits are fragile, and which recover?",
+      "What would shorten the feedback delay in a system you work with?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Predict"
 }

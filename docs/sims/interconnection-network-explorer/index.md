@@ -1,22 +1,88 @@
 ---
-title: Interconnection Network Explorer
-description: Given a supply-chain network diagram, the learner will trace which nodes are affected, directly and indirectly, by a disruption at a chosen node (Bloom: Analyzing).
-status: scaffold
+title: "Interconnection Network Explorer"
+description: "Click any node in a six-stage supply chain to trace which parts a disruption there would reach, directly and indirectly."
+image: /sims/interconnection-network-explorer/interconnection-network-explorer.png
+og:image: /sims/interconnection-network-explorer/interconnection-network-explorer.png
+twitter:image: /sims/interconnection-network-explorer/interconnection-network-explorer.png
+social:
+  cards: false
+status: implemented
 library: vis-network
 bloom_level: Analyze
+bloom_verb: Trace
+chapter: 1
 ---
 
 # Interconnection Network Explorer
 
+<iframe src="main.html" width="100%" height="522" scrolling="no"></iframe>
 
+[Run the Interconnection Network Explorer MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+Interconnection means two things are linked. Interdependence means a change in one actually reaches the other, sometimes several steps away. This MicroSim separates the two: clicking a node runs a breadth-first search over the edges and distinguishes what that node touches directly from what the disruption can still reach by traveling further down the chain.
+
+**Learning objective:** Given a supply-chain network diagram, the learner will trace which nodes are affected, directly and indirectly, by a disruption at a chosen node.
+
+**Bloom's Taxonomy level:** Analyze (Trace)
+
+## How To Use
+
+- Click any node to highlight it and everything downstream of it.
+- Read the panel on the right: it separates directly affected nodes from ones reached only through interdependence.
+- Notice the dashed red edge from the semiconductor factory straight to the dealership - real networks are rarely a single clean chain.
+- Press "Reset Highlighting" and try a different starting node.
+
+## Embedding This MicroSim
+
+Copy this iframe into any page to embed the MicroSim:
+
+```html
+<iframe src="https://dmccreary.github.io/systems-thinking/sims/interconnection-network-explorer/main.html"
+        width="100%" height="522" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+### Audience
+
+This MicroSim is written to work across the book's full audience range, from junior high through executive workshops. Adjust the depth of the discussion questions rather than the activity itself.
+
+### Prerequisites
+
+- Knows what a node and an edge are
+- Has seen a system drawn as a diagram of connected parts
+
+### Learning Objectives
+
+After working with this MicroSim, learners will be able to:
+
+- Trace the downstream reach of a disruption through a network
+- Distinguish direct effects from indirect effects
+- Explain why a node with few direct connections can still have wide reach
+
+### Suggested Activity (12 minutes)
+
+1. Ask learners to predict which single node's failure would affect the most others.
+2. Click the Semiconductor Factory and compare the result to the prediction.
+3. Click the Shipping Company and ask why its reach is smaller despite sitting in the middle of the chain.
+4. Ask what the dashed direct route changes about the dealership's exposure.
+5. Have learners redraw the chain with one extra supplier and predict how reach changes.
+
+### Assessment
+
+Give learners a node and ask them to list the directly affected nodes and then the indirectly affected ones, without clicking. Check whether they follow the dashed edge as well as the main chain.
+
+### Discussion Questions
+
+- Why did the 2021 chip shortage surprise car manufacturers who had no direct relationship with chip factories?
+- If you could add one connection to make this network more resilient, where would you add it?
+- Does being upstream always mean having more influence?
 
 ## Specification
 
-The full specification below is extracted from
+The specification below was extracted from
 [Chapter 1: Foundations of Systems Thinking](../../chapters/01-foundations-of-systems-thinking/index.md).
 
 ```text
@@ -51,6 +117,13 @@ Color scheme: `vis-network` default node color for unaffected nodes, the book's 
 Implementation: `vis-network` `DataSet`/`DataView` objects for nodes and edges, a `network.on("click", ...)` handler performing a breadth-first search over the edge list from the clicked node, and `network.setOptions()` calls to restyle node colors on each interaction.
 ```
 
+## References
+
+- [Supply chain - Wikipedia](https://en.wikipedia.org/wiki/Supply_chain) - How multi-stage supply networks are structured.
+- [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) - The traversal algorithm this MicroSim runs when you click a node.
+- [2020-2023 global chip shortage](https://en.wikipedia.org/wiki/2020%E2%80%932023_global_chip_shortage) - A real disruption that propagated exactly along these paths.
+
 ## Related Resources
 
 - [Chapter 1: Foundations of Systems Thinking](../../chapters/01-foundations-of-systems-thinking/index.md)
+- [All MicroSims in this book](../index.md)

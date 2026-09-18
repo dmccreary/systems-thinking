@@ -1,3 +1,10 @@
+---
+title: "CLD Editor"
+description: "An interactive editor for building causal loop diagrams: add and edit variables, polarized links, delays, and reinforcing or balancing loops, then save the diagram as JSON."
+image: /sims/cld-editor/cld-editor.png
+og:image: /sims/cld-editor/cld-editor.png
+---
+
 # CLD Editor
 
 [Run the CLD Editor v1](./main.html)

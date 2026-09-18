@@ -1,3 +1,10 @@
+---
+title: "Intelligent Agent Causal Loop Diagrams"
+description: "Several versions of a vis.js causal loop diagram showing how AI, software developers, software agents, agentic IDEs, and MCP reinforce each other to accelerate AI capabilities."
+image: /sims/agent-cld/agent-cld.png
+og:image: /sims/agent-cld/agent-cld.png
+---
+
 # Intelligent Agent Causal Loop Diagrams
 
 Here are several versions of causal loop diagrams that illustrate the role that intelligent agents are having in the growth in the acceleration of AI capabilities.

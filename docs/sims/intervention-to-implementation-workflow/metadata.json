@@ -1,11 +1,12 @@
 {
   "title": "From Intervention Point to Implementation",
-  "description": "given a proposed system change, the learner will sequence the design steps from choosing an intervention point through closing the feedback loop, and explain what each step is meant to catch that the previous step could miss (Bloom: Analyze).",
+  "description": "Sequence five design steps from choosing an intervention point to closing the feedback loop, with a hospital-scheduling example at each step.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Systems Design, Emerging Technology, and Practice"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "intervention-to-implementation-workflow",
   "library": "Mermaid",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 440,
+  "completion_status": "implemented",
   "chapter_number": 25,
   "chapter_title": "Systems Design, Emerging Technology, and Practice",
   "chapter_dir": "25-systems-design-emerging-technology-and-practice",
-  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice"
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice",
+  "educational": {
+    "learningObjective": "Given a proposed system change, the learner will sequence the design steps from choosing an intervention point through closing the feedback loop, and explain what each step is meant to catch that the previous step could miss.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Sequence",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a leverage point is",
+      "Has proposed or observed an organizational change"
+    ],
+    "learningOutcomes": [
+      "Sequence the five design steps correctly",
+      "Explain what each step catches that the previous one misses",
+      "Describe why the workflow loops rather than terminates"
+    ],
+    "assessmentOpportunity": "Give learners a proposed change and ask them to write one sentence per step, ending with what the flourishing check would look for."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-explain linear workflow with a closing loop",
+    "instructionalStrategy": "Each step justified by what the previous step fails to catch",
+    "feedbackType": "A definition plus a worked example applied to the same running scenario",
+    "misconceptionsAddressed": [
+      "That implementation is the last step of a design process",
+      "That improving the target metric means the intervention worked"
+    ],
+    "discussionQuestions": [
+      "Why is the last step separate from the feedback mechanism in step 3?",
+      "What would it take for an organization to actually revise after the data surprised them?",
+      "Which of the five steps gets skipped most often, and what does skipping it cost?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Sequence"
 }

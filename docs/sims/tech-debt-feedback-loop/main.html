@@ -3,98 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
-    <title>The Technical Debt Feedback Loop</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Technical Debt Feedback Loop</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 12px; font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #212529; }
+        h2 { margin: 0 0 6px 0; color: #1a3a6c; font-size: 16px; }
+        .controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0; align-items: center; font-size: 12px; }
+        button { background: #1a3a6c; color: white; border: none; padding: 7px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; }
+        button:hover { background: #2e5285; }
+        button.active { background: #00897B; }
+        /* grid-template-rows and min-height:0 are load-bearing: without an
+           explicitly sized row, #network's height:100% resolves against an
+           auto row, the canvas drives the row's height, and the two grow each
+           other until the diagram is thousands of pixels off screen. */
+        .layout { display: grid; grid-template-columns: 1fr 280px;
+                  grid-template-rows: minmax(0, 1fr); gap: 10px; height: 540px; }
+        @media (max-width: 700px) { .layout { grid-template-columns: 1fr; height: auto; } #network { height: 380px !important; } }
+        #network { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; height: 100%; min-height: 0; }
+        #side-panel { border: 1px solid #ced4da; border-radius: 4px; background: #fafbfc; padding: 10px; overflow-y: auto; height: 100%; font-size: 12px; }
+        #panel-title { font-size: 13px; font-weight: bold; color: #1a3a6c; margin-bottom: 6px; }
+        #panel-body p { margin: 4px 0; }
     </style>
+    <style>:root { --microsim-height: 630px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>The Technical Debt Feedback Loop</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> tech-debt-feedback-loop</p>
-            <p><strong>Library:</strong> vis-network</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
+<main>
+    <h2>The Technical Debt Feedback Loop</h2>
+    <div class="controls">
+        <button id="toggle-leverage">Add Leverage Points</button>
+        <span style="color:#666;">Coral arrows = reinforcing, green arrows = balancing.</span>
+    </div>
+    <div class="layout">
+        <div id="network"></div>
+        <div id="side-panel">
+            <div id="panel-title"></div>
+            <div id="panel-body"></div>
         </div>
     </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: graph-model
-    **sim-id:** tech-debt-feedback-loop<br/>
-    **Library:** vis-network<br/>
-    **Status:** Reused<br/>
-    **Source:** https://dmccreary.github.io/information-systems/sims/tech-debt-feedback-loop/main.html<br/>
-    **Source Repo:** https://github.com/dmccreary/information-systems/tree/main/docs/sims/tech-debt-feedback-loop
-    
-    Reused from the MicroSim catalog (WHAT match score 0.905). This interactive causal-loop diagram shows the technical-debt "doom loop" -- shortcuts accumulate, the legacy codebase grows harder to change, harder-to-change code invites more shortcuts -- along with three clickable leverage-point interventions that break the loop. Learning objective: given the technical-debt reinforcing loop, the learner will identify which leverage-point intervention would most effectively break the cycle for a system already showing signs of being a legacy system (Bloom: Analyzing).
-    -->
+</main>
+    <script src="tech-debt-feedback-loop.js"></script>
 </body>
 </html>

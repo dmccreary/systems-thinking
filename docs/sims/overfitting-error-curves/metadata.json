@@ -1,11 +1,12 @@
 {
   "title": "Training vs. Validation Error -- Spotting the Overfitting Point",
-  "description": "given a live chart of training error and validation error over training time, the learner will identify the specific point where continued training begins to overfit the model, and explain why the two curves diverge after that point (Bloom: Analyzing).",
+  "description": "Slide through 50 training epochs and find the exact point where validation error turns upward.",
   "creator": "Systems Thinking in the Age of AI",
   "author": "Dan McCreary",
   "date": "2026-09-17",
   "subject": [
-    "Systems Thinking in the Age of AI"
+    "Systems Thinking in the Age of AI",
+    "Artificial Intelligence and Machine Learning Foundations"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -13,11 +14,43 @@
   "rights": "CC BY-NC-SA 4.0",
   "identifier": "overfitting-error-curves",
   "library": "Chart.js",
-  "bloomLevel": "TBD",
-  "bloomVerb": "TBD",
-  "completion_status": "scaffold",
+  "canvasHeight": 520,
+  "completion_status": "implemented",
   "chapter_number": 22,
   "chapter_title": "Artificial Intelligence and Machine Learning Foundations",
   "chapter_dir": "22-ai-and-machine-learning-foundations",
-  "chapter_rel_dir": "chapters/22-ai-and-machine-learning-foundations"
+  "chapter_rel_dir": "chapters/22-ai-and-machine-learning-foundations",
+  "educational": {
+    "learningObjective": "Given a live chart of training error and validation error over training time, the learner will identify the specific point where continued training begins to overfit the model, and explain why the two curves diverge after that point.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Identify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows that a model is trained on data",
+      "Can read a two-series line chart"
+    ],
+    "learningOutcomes": [
+      "Identify the overfitting point from two error curves",
+      "Explain why training error keeps falling after that point",
+      "Describe what early stopping does and why it works"
+    ],
+    "assessmentOpportunity": "Give learners a pair of error curves and ask for the stopping epoch plus a one-sentence reason."
+  },
+  "pedagogical": {
+    "interactionPattern": "Slider playhead across two curves with a phase readout",
+    "instructionalStrategy": "Confronting the intuition that more training is always better",
+    "feedbackType": "Numeric values at the playhead plus a named phase and a computed marker",
+    "misconceptionsAddressed": [
+      "That lower training error always means a better model",
+      "That overfitting shows up in the training error"
+    ],
+    "discussionQuestions": [
+      "Why does a model that fits the training data perfectly generalize badly?",
+      "What is the human equivalent of overfitting?",
+      "Why is holding out data an inconvenience worth paying for?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Identify"
 }

@@ -62,7 +62,7 @@ The diagram below lets you rebuild Euler's proof yourself on the actual Konigsbe
 
 #### Diagram: The Seven Bridges of Konigsberg
 
-<iframe src="../../sims/konigsberg-bridges/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/konigsberg-bridges/main.html" width="100%" height="582px" scrolling="no"></iframe>
 
 [Run the The Seven Bridges of Konigsberg MicroSim fullscreen](../../sims/konigsberg-bridges/main.html){ .md-button }
 
@@ -100,7 +100,7 @@ The chart below makes that degradation concrete, comparing how response time gro
 
 #### Diagram: Multi-Hop Query Performance, RDBMS vs Graph Database
 
-<iframe src="https://dmccreary.github.io/organizational-analytics/sims/multi-hop-performance/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/organizational-analytics/sims/multi-hop-performance/main.html" width="100%" height="482px" scrolling="no"></iframe>
 
 [Run the Multi-Hop Query Performance MicroSim fullscreen](https://dmccreary.github.io/organizational-analytics/sims/multi-hop-performance/main.html){ .md-button }
 
@@ -151,7 +151,7 @@ Applied specifically to graphs, scale out takes on its own architecture. A **dis
 
 #### Diagram: Vertical vs Scale-Out Graph Architecture
 
-<iframe src="../../sims/graph-scale-out-architecture/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/graph-scale-out-architecture/main.html" width="100%" height="507px" scrolling="no"></iframe>
 
 [Run the Vertical vs Scale-Out Graph Architecture diagram fullscreen](../../sims/graph-scale-out-architecture/main.html){ .md-button }
 

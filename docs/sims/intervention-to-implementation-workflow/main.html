@@ -3,104 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- microsim-scaffold-stub -->
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>From Intervention Point to Implementation</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 440px; }</style>
 </head>
 <body>
-    <div id="container">
-        <h1>From Intervention Point to Implementation</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> intervention-to-implementation-workflow</p>
-            <p><strong>Library:</strong> Mermaid</p>
-            <p><strong>Bloom Level:</strong> TBD</p>
-            <p><strong>Learning Objective:</strong> given a proposed system change, the learner will sequence the design steps from choosing an intervention point through closing the feedback loop, and explain what each step is meant to catch that the previous step could miss (Bloom: Analyze).</p>
-        </div>
-    </div>
+    <main class="container">
+        <div class="diagram-panel">
+            <div class="mermaid" id="diagram">
+graph LR
+    s1["Choose<br/>Intervention Point"]
+    s2["Anticipate<br/>Side Effects"]
+    s3["Design Feedback<br/>Mechanism"]
+    s4["Select Implementation<br/>Strategy"]
+    s5["Human Flourishing<br/>Feedback"]
 
-    <!--
-    SPECIFICATION (from chapter index.md):
+    s1 --> s2 --> s3 --> s4 --> s5
+    s5 -. "revise if the data surprises you" .-> s1
 
-    Type: workflow
-    **sim-id:** intervention-to-implementation-workflow<br/>
-    **Library:** Mermaid<br/>
-    **Status:** Specified
-    
-    Learning objective: given a proposed system change, the learner will sequence the design steps from choosing an intervention point through closing the feedback loop, and explain what each step is meant to catch that the previous step could miss (Bloom: Analyze).
-    
-    Visual style: Mermaid flowchart, `graph LR`, five rectangular nodes in sequence: "Choose Intervention Point" -> "Anticipate Side Effects" -> "Design Feedback Mechanism" -> "Select Implementation Strategy" -> "Human Flourishing Feedback," with a dashed arrow looping from the last node back to the first, labeled "revise if the data surprises you."
-    
-    Interactivity requirement: every node MUST have a Mermaid `click` directive wired to a `showInfo(id)` callback opening an infobox with that node's one-sentence definition from this chapter, plus the hospital-scheduling example applied to that specific step (e.g., clicking "Select Implementation Strategy" shows: "Pilot the new system at one clinic before a hospital-wide rollout").
-    
-    Color scheme: neutral slate-blue for the four sequential steps, the book's accent orange for the "Human Flourishing Feedback" closing node, so the diagram visually emphasizes that the loop is meant to close rather than end.
-    
-    Implementation: Mermaid `graph LR` syntax embedded in the page's generated sim wrapper, sharing the `showInfo(id)` JavaScript helper already used by this book's other clickable Mermaid diagrams.
-    -->
+    classDef step fill:#DCE6F1,stroke:#2E5A87,stroke-width:3px,color:#212529,font-size:15px
+    classDef close fill:#F8E3CE,stroke:#E8871A,stroke-width:3px,color:#212529,font-size:15px
+
+    class s1,s2,s3,s4 step
+    class s5 close
+
+    click s1 call showInfo("s1") "Step 1"
+    click s2 call showInfo("s2") "Step 2"
+    click s3 call showInfo("s3") "Step 3"
+    click s4 call showInfo("s4") "Step 4"
+    click s5 call showInfo("s5") "The loop closes"
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-swatch" style="background:#DCE6F1;border-color:#2E5A87"></span>Design step</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#F8E3CE;border-color:#E8871A"></span>The loop closes, it does not end</div>
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>From Intervention Point to Implementation</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Click any box in the diagram to see what it means.</p>
+            </div>
+        </div>
+    </main>
+    <script src="nodeinfo.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            theme: 'default',
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+        });
+    </script>
 </body>
 </html>

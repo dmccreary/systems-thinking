@@ -69,7 +69,7 @@ The MicroSim below lets you run this exact oscillation yourself and watch both p
 
 #### Diagram: Predator-Prey Population Dynamics
 
-<iframe src="https://dmccreary.github.io/ecology/sims/predator-prey/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/ecology/sims/predator-prey/main.html" width="100%" height="697px" scrolling="no"></iframe>
 
 [Run the Predator-Prey Population Dynamics MicroSim fullscreen](https://dmccreary.github.io/ecology/sims/predator-prey/main.html){ .md-button }
 
@@ -125,7 +125,7 @@ Every domain in this chapter — economies, ecosystems, cities, politics, school
 
 #### Diagram: The Book's Concept Clusters, Connected
 
-<iframe src="../../sims/book-concept-cluster-map/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/book-concept-cluster-map/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 [Run the The Book's Concept Clusters, Connected MicroSim fullscreen](../../sims/book-concept-cluster-map/main.html){ .md-button }
 

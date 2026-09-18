@@ -82,7 +82,7 @@ The diagram below lets you explore all three loops and see exactly where each on
 
 #### Diagram: Three Reinforcing Loops Behind Knowledge Graph Adoption
 
-<iframe src="../../sims/ekg-adoption-loops/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/ekg-adoption-loops/main.html" width="100%" height="627px" scrolling="no"></iframe>
 
 [Run the Three Reinforcing Loops Behind Knowledge Graph Adoption MicroSim fullscreen](../../sims/ekg-adoption-loops/main.html){ .md-button }
 

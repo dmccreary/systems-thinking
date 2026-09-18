@@ -1,9 +1,9 @@
 ---
-title: Moore's Law Timeline
-description: A infographic with hovers showing the progess of Moore's law in both linear and log scales.
-image: /tracking-ai-course/sims/moores-law/moores-law.png
-og:image: /tracking-ai-course/sims/moores-law/moores-law.png
-twitter:image: /tracking-ai-course/sims/moores-law/moores-law.png
+title: "Moore's Law Timeline"
+description: "An infographic with hovers showing the progress of Moore's Law in both linear and log scales."
+image: /sims/moores-law/moores-law.png
+og:image: /sims/moores-law/moores-law.png
+twitter:image: /sims/moores-law/moores-law.png
 social:
    cards: false
 hide:
