@@ -17,6 +17,7 @@ nav:
     - Graph Quality Metrics: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Glossary Quality Report: learning-graph/glossary-quality-report.md
 
   - Course Descriptions:
     - Overview: course-descriptions/index.md
@@ -59,23 +60,7 @@ nav:
     - 27. Systems Thinking Across Disciplines: chapters/27-systems-thinking-across-disciplines/index.md
 
 
-  - Appendix A - Causal Loop Diagrams:
-    - Introduction: clds/index.md
-    - Vis Tutorial: clds/vis-tutorial/index.md
-    - Bank Balance: clds/bank-balance/index.md
-    - Population: clds/population/index.md
-    - Thermostat: clds/thermostat/index.md
-    - CLD Layout Rules for Vis: clds/cld-layout-rules-vis.md
-    - Center Test: clds/center-test/index.md
-    - Image Test: clds/image-test/index.md
-    - Curve Direction Test: clds/curve-direction-test/index.md
-    - Misinformation: clds/misinformation/index.md
-    - ReactFlow: clds/reactflow/index.md
-
-  - Appendix B - Archetypes:
-    - Introduction: archetypes/index.md
-    - Archetypes Overview: archetypes/archetypes-overview.md
-
+  
     - Tragedy of the Commons: 
       - Introduction: archetypes/tragedy-of-the-commons/index.md
       - Classic Story: archetypes/tragedy-of-the-commons/classic-toc.md
@@ -207,12 +192,6 @@ nav:
       - The AI Flywheel: archetypes/tech/ai-flywheel/index.md
       - Communication Standards: archetypes/tech/communication-standards.md
       - Search and Reuse: archetypes/tech/search-and-reuse.md
-
-  - Building Systems Thinking Capabilities:
-    - Introduction: appendicies/cmm-strategies/index.md
-    - Systems Thinking Capability Maturity Model: appendicies/cmm-strategies/capability-maturity-model.md
-    - Microstrategies: appendicies/cmm-strategies/microstrategies.md
-    - Silo Busting Microstrategies: appendicies/cmm-strategies/silo-busting-microstrategies.md
   
   - MicroSims:
     - List of MicroSims: sims/index.md
@@ -284,27 +263,52 @@ nav:
     - Metcalfe's Law: stories/metcalfes-law/index.md
     - The Measurement Trap: stories/measurement-trap/index.md
 
-  - Sample Prompts:
-    - Introduction: appendicies/prompts/index.md
-    - Learning Graph:
-      - Concept Enumeration: appendicies/prompts/knowledge-graphs/concept-enumeration.md
-      - Concept Dependency: appendicies/prompts/knowledge-graphs/concept-dependency.md
-      - Concept Taxonomy: appendicies/prompts/knowledge-graphs/concept-taxonomy.md
-      - Graph Demo: appendicies/prompts/knowledge-graphs/graph/index.md
-    - Enumerating Archetypes: appendicies/prompts/enumerating-archetypes.md
-    - Causal Loop Diagram: appendicies/prompts/cld/index.md
-    - Archetype Examples:
-      - Introduction: appendicies/prompts/archetype-examples/index.md
-      - Fixes that Fail: appendicies/prompts/archetype-examples/fixes-that-fail.md
-    
+  - Appendices:
+    - List of Appendices: appendices/index.md
+    - Appendix A - List of Causal Loop Diagrams:
+        - Introduction: clds/index.md
+        - Vis Tutorial: clds/vis-tutorial/index.md
+        - Bank Balance: clds/bank-balance/index.md
+        - Population: clds/population/index.md
+        - Thermostat: clds/thermostat/index.md
+        - CLD Layout Rules for Vis: clds/cld-layout-rules-vis.md
+        - Center Test: clds/center-test/index.md
+        - Image Test: clds/image-test/index.md
+        - Curve Direction Test: clds/curve-direction-test/index.md
+        - Misinformation: clds/misinformation/index.md
+        - ReactFlow: clds/reactflow/index.md
+
+    - Appendix B - Archetypes:
+        - Introduction: archetypes/index.md
+        - Archetypes Overview: archetypes/archetypes-overview.md
+
+    - Sample Prompts:
+      - Introduction: appendices/prompts/index.md
+      - Learning Graph:
+        - Concept Enumeration: appendices/prompts/knowledge-graphs/concept-enumeration.md
+        - Concept Dependency: appendices/prompts/knowledge-graphs/concept-dependency.md
+        - Concept Taxonomy: appendices/prompts/knowledge-graphs/concept-taxonomy.md
+        - Graph Demo: appendices/prompts/knowledge-graphs/graph/index.md
+      - Enumerating Archetypes: appendices/prompts/enumerating-archetypes.md
+      - Causal Loop Diagram: appendices/prompts/cld/index.md
+      - Archetype Examples:
+        - Introduction: appendices/prompts/archetype-examples/index.md
+        - Fixes that Fail: appendices/prompts/archetype-examples/fixes-that-fail.md
+      
     ## Add these
-    - appendicies/prompts/archetype-examples/tragedy-of-the-commons-cld.md
-    - appendicies/prompts/cld/vis-tutorial.md
-    - appendicies/prompts/cld/cld-viewer/index.md
-    - appendicies/prompts/cld/cld-viewer-v1/index.md
-    - appendicies/prompts/microsims/population.md
-    - appendicies/prompts/stories/moores-law.md
-    - appendicies/prompts/stories/tragedy-of-the-commons.md  
+      - appendices/prompts/archetype-examples/tragedy-of-the-commons-cld.md
+      - appendices/prompts/cld/vis-tutorial.md
+      - appendices/prompts/cld/cld-viewer/index.md
+      - appendices/prompts/cld/cld-viewer-v1/index.md
+      - appendices/prompts/microsims/population.md
+      - appendices/prompts/stories/moores-law.md
+      - appendices/prompts/stories/tragedy-of-the-commons.md  
+
+    - Building Systems Thinking Capabilities:
+        - Introduction: appendices/cmm-strategies/index.md
+        - Systems Thinking Capability Maturity Model: appendices/cmm-strategies/capability-maturity-model.md
+        - Microstrategies: appendices/cmm-strategies/microstrategies.md
+        - Silo Busting Microstrategies: appendices/cmm-strategies/silo-busting-microstrategies.md
 
   - Presentations: slides.md
   - Glossary: glossary.md
@@ -318,7 +322,7 @@ nav:
 
 theme:
   name: material
-  logo: img/new-logo.png
+  logo: img/mascot/welcome.png
   favicon: img/favicon.ico
   palette:
     primary: 'blue'

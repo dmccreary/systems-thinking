@@ -36,7 +36,7 @@ rational individual decisions can lead to outcomes that nobody wants—not even 
 
 ## What Is the Tragedy of the Commons?
 
-The Tragedy of the Commons is a system [archetype](../../glossary.md#archetype) that occurs when 
+The Tragedy of the Commons is a system [archetype](../../glossary.md#systems-archetype) that occurs when 
 multiple people or organizations share a limited resource, and each actor acts in their own 
 self-interest without considering the collective impact. The "tragedy" isn't that 
 people are being selfish or evil—it's that even when everyone acts rationally, 

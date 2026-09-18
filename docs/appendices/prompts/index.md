@@ -5,7 +5,7 @@ Every [seven months](https://dmccreary.github.io/tracking-ai-course/sims/ai-doub
 
 But how can we harness LLMs to enhance our systems thinking skills?  The answer lies in
 using a series of carefully crafted prompts that help you extract exactly what
-you need from these LLMs.  Although it is easy to have an LLM explain what "The Tragedy of the Commons" is, it is more difficult to figure out how to generate a high-quality [causal loop diagram](../glossary.md#causal-loop-diagrams) or have it generate a [graphic-novel style short story](../stories/tragedy-of-the-commons/index.md).  You can even generate a [simulation](../sims/toc/index.md) of the archetype.
+you need from these LLMs.  Although it is easy to have an LLM explain what "The Tragedy of the Commons" is, it is more difficult to figure out how to generate a high-quality [causal loop diagram](../../glossary.md#causal-loop-diagram) or have it generate a [graphic-novel style short story](../stories/tragedy-of-the-commons/index.md).  You can even generate a [simulation](../sims/toc/index.md) of the archetype.
 
 The Prompts section of this book is here to suggest prompts that you can use to
 both learn systems thinking as well as to use it as a teaching aid.
