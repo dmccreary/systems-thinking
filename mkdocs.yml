@@ -18,6 +18,8 @@ nav:
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - Glossary Quality Report: learning-graph/glossary-quality-report.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - FAQ Coverage Gaps: learning-graph/faq-coverage-gaps.md
 
   - Course Descriptions:
     - Overview: course-descriptions/index.md
@@ -312,6 +314,7 @@ nav:
 
   - Presentations: slides.md
   - Glossary: glossary.md
+  - FAQ: faq.md
   - Quotes: quotes.md
   - What They Are Saying: what-they-are-saying.md
   - Colophon: colophon.md
