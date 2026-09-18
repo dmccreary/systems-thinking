@@ -1,0 +1,56 @@
+{
+  "title": "System Boundary Explorer",
+  "description": "Drag a boundary around a household heating system and watch what counts as input, output, or environment change.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Foundations of Systems Thinking"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "system-boundary-explorer",
+  "library": "p5.js",
+  "canvasHeight": 545,
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking",
+  "educational": {
+    "learningObjective": "Given a depicted scenario, the learner will illustrate how moving a system boundary changes what counts as an input, an output, or part of the environment.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Illustrate",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows that a system is a set of interconnected parts",
+      "Can distinguish a part from the whole it belongs to"
+    ],
+    "learningOutcomes": [
+      "Explain why a system boundary is a modeling choice rather than a fact about the world",
+      "Identify which elements are inputs, outputs, and environment for a given boundary",
+      "Predict how relabeling occurs when a boundary is widened or narrowed"
+    ],
+    "assessmentOpportunity": "Ask learners to write one sentence naming an element that was an input under one boundary and part of the system under another, and to explain why nothing about the element itself changed. A correct answer names the boundary, not the element, as the thing that moved."
+  },
+  "pedagogical": {
+    "interactionPattern": "Direct manipulation of a boundary with live relabeling",
+    "instructionalStrategy": "Variation theory - the learner holds the scene constant and varies only the boundary",
+    "feedbackType": "Immediate visual relabeling plus a running inside/environment list",
+    "misconceptionsAddressed": [
+      "That a system has one objectively correct boundary",
+      "That an element is inherently an input rather than being an input relative to a chosen boundary"
+    ],
+    "discussionQuestions": [
+      "Who decides where an organization's system boundary sits, and what does that decision hide?",
+      "If the outdoor temperature is always in the environment, what does that tell us about the limits of any heating system?",
+      "What goes wrong when two people analyzing the same problem draw different boundaries without saying so?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Illustrate"
+}

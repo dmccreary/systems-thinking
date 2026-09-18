@@ -1,0 +1,56 @@
+{
+  "title": "Emergence Simulator (Flocking)",
+  "description": "Watch coordinated flock-level movement appear from agents that each follow only local rules, with no central controller.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Mental Models and Systems Analysis Tools"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "emergence-simulator",
+  "library": "p5.js",
+  "canvasHeight": 515,
+  "completion_status": "implemented",
+  "chapter_number": 2,
+  "chapter_title": "Mental Models and Systems Analysis Tools",
+  "chapter_dir": "02-mental-models-and-systems-analysis-tools",
+  "chapter_rel_dir": "chapters/02-mental-models-and-systems-analysis-tools",
+  "educational": {
+    "learningObjective": "Given a flock of simple agents each following local rules, the learner will explain how coordinated, flock-level movement emerges with no central controller.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Explain",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Knows what an agent is in a simulation",
+      "Has seen at least one system whose behavior comes from interactions rather than parts"
+    ],
+    "learningOutcomes": [
+      "Explain emergence as behavior of the whole that is not present in any part",
+      "Describe how local rules can produce a global pattern",
+      "Recognize that the absence of a controller is not the absence of organization"
+    ],
+    "assessmentOpportunity": "Ask learners to explain, in two sentences, how the flock moves as a unit when no agent knows what the flock is doing. A correct answer references local interaction rather than shared information."
+  },
+  "pedagogical": {
+    "interactionPattern": "Run-and-observe agent-based simulation",
+    "instructionalStrategy": "Predict-observe-explain",
+    "feedbackType": "Continuous visual feedback as the global pattern forms",
+    "misconceptionsAddressed": [
+      "That coordinated behavior requires a leader",
+      "That the whole's behavior can be read off from a single agent's rules"
+    ],
+    "discussionQuestions": [
+      "Traffic jams form with no one organizing them. What are the local rules?",
+      "If emergence needs no controller, what does a manager actually add to an organization?",
+      "Can emergent behavior be designed, or only encouraged?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Explain"
+}

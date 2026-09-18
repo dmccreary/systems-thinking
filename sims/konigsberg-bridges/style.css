@@ -1,0 +1,199 @@
+/* vis-network MicroSim stylesheet - Systems Thinking in the Age of AI
+   Layout: title bar on top, network on the left, side panel on the right.
+   Designed for iframe embedding: zero body margin, no page scrolling.
+*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #212529;
+}
+
+
+/* The page is sometimes rendered in a viewport TALLER than the iframe it is
+   designed for -- the screenshot tool renders 200px tall and crops from the
+   top, for example. Bounding the container to the sim's declared canvas height
+   keeps the content where it belongs instead of letting a 100vh layout center
+   it somewhere below the visible area. main.html sets --microsim-height. */
+.container {
+    width: 100%;
+    height: 100vh;
+    max-height: var(--microsim-height, 100vh);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px 10px;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1a3a6c;
+    text-align: center;
+    margin-bottom: 6px;
+    flex: 0 0 auto;
+}
+
+.layout {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 265px;
+    gap: 10px;
+    min-height: 0;
+}
+
+#network {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: aliceblue;
+    min-height: 0;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+}
+
+/* ---- controls ---- */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 0 0 auto;
+}
+
+.controls button,
+button.btn {
+    background-color: #1a3a6c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    width: 100%;
+}
+
+.controls button:hover,
+button.btn:hover { background-color: #2e5285; }
+
+.controls button.secondary { background-color: #6c757d; }
+.controls button.secondary:hover { background-color: #565e64; }
+
+.controls select {
+    padding: 7px 8px;
+    font-size: 13px;
+    font-family: inherit;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+    background: white;
+}
+
+.controls label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* ---- info panel ---- */
+.info-panel {
+    flex: 1 1 auto;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fafbfc;
+    padding: 10px;
+    overflow-y: auto;
+    min-height: 120px;
+}
+
+.info-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a3a6c;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d0d7e2;
+}
+
+.info-body { font-size: 13px; line-height: 1.5; color: #343a40; }
+.info-body p { margin: 5px 0; }
+.info-body ul { margin: 5px 0 5px 18px; }
+.info-body li { margin-bottom: 3px; }
+.info-body .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: white;
+    background-color: #1a3a6c;
+}
+.info-placeholder { color: #868e96; font-style: italic; }
+
+/* ---- legend ---- */
+.legend {
+    font-size: 12px;
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 7px 9px;
+    flex: 0 0 auto;
+}
+.legend-item { display: flex; align-items: center; margin: 3px 0; }
+.legend-swatch {
+    width: 14px; height: 14px; border-radius: 50%;
+    margin-right: 6px; border: 1px solid #495057; flex: 0 0 auto;
+}
+.legend-line {
+    width: 20px; height: 0; margin-right: 6px; flex: 0 0 auto;
+    border-top: 3px solid #495057;
+}
+
+@media (max-width: 700px) {
+    .layout { grid-template-columns: 1fr 200px; }
+    .title { font-size: 15px; }
+}
+
+/* ---- stacked variant ----
+   Used when a diagram is wider than it is tall (three loops side by side, for
+   example). The network takes the full width and the controls and info panel
+   sit underneath it, because squeezing a 900px-wide diagram into the 500px
+   left column makes its labels unreadable. */
+.layout.stacked {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+.layout.stacked .side-panel {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.layout.stacked .controls {
+    flex: 0 0 210px;
+    justify-content: flex-start;
+}
+
+.layout.stacked .info-panel {
+    flex: 1 1 auto;
+    min-height: 96px;
+    max-height: 128px;
+}
+
+.layout.stacked .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+}
+
+@media (max-width: 700px) {
+    .layout.stacked .side-panel { flex-direction: column; }
+    .layout.stacked .controls { flex: 0 0 auto; }
+}

@@ -1,0 +1,15 @@
+{
+  "sim_id": "neural-network-layer-explorer",
+  "diagram_name": "Inside a Neural Network Layer",
+  "chapter_number": 22,
+  "chapter_title": "Artificial Intelligence and Machine Learning Foundations",
+  "chapter_dir": "22-ai-and-machine-learning-foundations",
+  "chapter_rel_dir": "chapters/22-ai-and-machine-learning-foundations",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a small neural network layer with adjustable input values and weights, the learner will compute the weighted sum, apply an activation function, and explain how changing one weight changes the layer's output (Bloom: Applying).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: diagram\n**sim-id:** neural-network-layer-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified<br/>\n**Template:** https://github.com/dmccreary/linear-algebra/tree/main/docs/sims/neural-network-layer\n\nLearning objective: given a small neural network layer with adjustable input values and weights, the learner will compute the weighted sum, apply an activation function, and explain how changing one weight changes the layer's output (Bloom: Applying).\n\nCanvas: 700x420 pixels, responsive -- recompute canvas width from the containing element on window resize.\n\nVisual design: three input nodes on the left labeled \\( x_1, x_2, x_3 \\), each connected by a labeled weighted edge (\\( w_1, w_2, w_3 \\)) to one output node on the right labeled \\( y \\). A small bias box feeds into the output node alongside the three weighted edges.\n\nControls (p5.js built-in controls only, per this book's control conventions): three `createSlider()` controls for \\( x_1, x_2, x_3 \\) (range -5 to 5), three more for \\( w_1, w_2, w_3 \\) (range -2 to 2), and one for the bias \\( b \\) (range -5 to 5), all defaulting to values that produce a clearly positive output.\n\nBehavior: as any slider moves, the diagram recomputes the weighted sum live, displays it as text (\"Weighted sum = 3.20\"), passes it through a sigmoid activation function, and displays the final output \\( y \\) both as a number and as the output node's fill brightness (brighter for values closer to 1, dimmer for values closer to 0).\n\nImplementation: p5.js, canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions, weighted sum and sigmoid activation recomputed on every slider change."
+}

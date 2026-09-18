@@ -1,0 +1,56 @@
+{
+  "title": "Metadata Registry vs. Catalog",
+  "description": "Compare a governed metadata registry against a discovery catalog, and follow the dashed link that keeps a found field traceable to its definition.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Knowledge Representation and Metadata"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "registry-vs-catalog",
+  "library": "vis-network",
+  "canvasHeight": 580,
+  "completion_status": "implemented",
+  "chapter_number": 17,
+  "chapter_title": "Knowledge Representation and Metadata",
+  "chapter_dir": "17-knowledge-representation-and-metadata",
+  "chapter_rel_dir": "chapters/17-knowledge-representation-and-metadata",
+  "educational": {
+    "learningObjective": "Given a metadata registry and a metadata catalog shown side by side, the learner will distinguish what each one is responsible for and explain how the dashed link between them keeps a discovered field's meaning traceable to its governed definition.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Distinguish",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what metadata is",
+      "Has seen a data dictionary or a data catalog tool"
+    ],
+    "learningOutcomes": [
+      "Distinguish a registry's responsibility from a catalog's",
+      "Explain the role of the link between a discovered field and its governed definition",
+      "Recognize the failure mode of having one without the other"
+    ],
+    "assessmentOpportunity": "Ask learners to name one question only a registry can answer and one only a catalog can answer."
+  },
+  "pedagogical": {
+    "interactionPattern": "Two-panel click exploration with a cross-panel link",
+    "instructionalStrategy": "Contrasting cases presented simultaneously",
+    "feedbackType": "A definition panel for each node and for the cross-panel link",
+    "misconceptionsAddressed": [
+      "That a data catalog provides governance",
+      "That discovered metadata is the same as authoritative metadata"
+    ],
+    "discussionQuestions": [
+      "Why do organizations so often buy a catalog and call the governance problem solved?",
+      "Who has the authority to change a registry definition, and what breaks if anyone can?",
+      "Can a crawler ever discover what a field is supposed to mean?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Distinguish"
+}

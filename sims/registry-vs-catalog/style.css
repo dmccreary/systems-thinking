@@ -1,0 +1,29 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,Helvetica,sans-serif;background:white;overflow:hidden;}
+.container{position:relative;width:100%;height:100vh;min-height:500px;}
+#network{width:100%;height:100%;background:white;}
+.title{position:absolute;top:8px;left:50%;transform:translateX(-50%);
+    font-size:13px;font-weight:bold;color:#1a237e;
+    background:rgba(255,255,255,0.92);padding:4px 12px;border-radius:4px;z-index:10;}
+.right-panel{position:absolute;top:44px;right:8px;width:200px;
+    display:flex;flex-direction:column;gap:6px;z-index:10;}
+.detail-panel{background:rgba(255,255,255,0.97);border:1px solid #cfd8dc;border-radius:6px;
+    padding:10px 12px;max-height:340px;overflow-y:auto;box-shadow:0 2px 4px rgba(0,0,0,0.08);}
+.dt{font-weight:bold;color:#1a237e;font-size:13px;margin-bottom:6px;
+    border-bottom:1px solid #e0e0e0;padding-bottom:4px;}
+.db{font-size:12px;color:#37474f;line-height:1.55;}
+.db strong{color:#1a237e;}
+.btn{background:#3949ab;color:white;border:none;border-radius:4px;
+    padding:8px;font-size:13px;font-weight:bold;cursor:pointer;}
+.btn:hover{background:#283593;}
+
+/* Bound the page to the sim's declared canvas height so a taller render
+   (the screenshot tool renders 200px tall and crops from the top) does not
+   push a 100vh layout's content below the visible area. */
+.container { max-height: var(--microsim-height, 100vh); }
+
+/* The info panel is absolutely positioned over the graph. At this book's
+   width the graph is wide enough that the panel covers the Catalog column,
+   so reserve the panel's strip instead of overlaying it. */
+#network { width: calc(100% - 216px); }
+.title { left: calc(50% - 108px); }

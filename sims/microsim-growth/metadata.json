@@ -46,10 +46,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of growth network effect",
-    "Apply growth network effect to solve problems",
-    "Visualize and interpret growth network effect relationships",
-    "Experiment with parameters to observe their effects on growth network effect"
+    "Trace the R1 textbook growth loop from Intelligent Textbooks through Teachers Aware to Demand for Textbooks",
+    "Distinguish the stock variables from the demand variables in the MicroSim growth diagram",
+    "Explain why every edge carrying positive polarity makes both loops reinforcing rather than balancing",
+    "Predict how a barrier to MicroSim creation would slow the R1 and R2 loops",
+    "Identify Teachers Aware as the shared variable that couples the two reinforcing loops"
   ],
   "pedagogical": {
     "pattern": "demonstration",

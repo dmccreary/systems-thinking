@@ -1,0 +1,56 @@
+{
+  "title": "Three Reinforcing Loops Behind Knowledge Graph Adoption",
+  "description": "Trace three reinforcing loops behind knowledge graph adoption and see that all three share one structure.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Enterprise Knowledge Graphs"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "ekg-adoption-loops",
+  "library": "vis-network",
+  "canvasHeight": 625,
+  "completion_status": "implemented",
+  "chapter_number": 19,
+  "chapter_title": "Enterprise Knowledge Graphs",
+  "chapter_dir": "19-enterprise-knowledge-graphs",
+  "chapter_rel_dir": "chapters/19-enterprise-knowledge-graphs",
+  "educational": {
+    "learningObjective": "Given three named organizational feedback loops behind knowledge graph adoption, the learner will trace each loop's causal chain back to its starting point and explain why each is reinforcing rather than balancing.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Can classify a loop as reinforcing or balancing",
+      "Knows what an enterprise knowledge graph is meant to do"
+    ],
+    "learningOutcomes": [
+      "Trace a three-stage reinforcing loop back to its start",
+      "Explain why each loop lacks a balancing link",
+      "Recognize one structure appearing across three unrelated contexts"
+    ],
+    "assessmentOpportunity": "Ask learners to draw a fourth reinforcing loop from their own organization using the same three-stage template."
+  },
+  "pedagogical": {
+    "interactionPattern": "Three-cluster loop diagram with click-to-explain and a compare mode",
+    "instructionalStrategy": "Structural pattern recognition across three unrelated domains",
+    "feedbackType": "Per-stage and per-loop explanations plus a synchronized color comparison",
+    "misconceptionsAddressed": [
+      "That organizational dynamics are too messy to have a shared structure",
+      "That a reinforcing loop only ever produces growth"
+    ],
+    "discussionQuestions": [
+      "Reinforcing loops run just as fast in reverse. Which of these three is most fragile?",
+      "Why does the career-path loop pay its own maintenance cost?",
+      "What would a balancing loop on knowledge graph adoption look like?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
+}

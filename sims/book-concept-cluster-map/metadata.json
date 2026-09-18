@@ -1,0 +1,55 @@
+{
+  "title": "The Book's Concept Clusters, Connected",
+  "description": "Walk the book's ten concept clusters around a circle and see how each one builds on the last.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Systems Thinking Across Disciplines"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "book-concept-cluster-map",
+  "library": "vis-network",
+  "canvasHeight": 560,
+  "completion_status": "implemented",
+  "chapter_number": 27,
+  "chapter_title": "Systems Thinking Across Disciplines",
+  "chapter_dir": "27-systems-thinking-across-disciplines",
+  "chapter_rel_dir": "chapters/27-systems-thinking-across-disciplines",
+  "educational": {
+    "learningObjective": "Given the book's ten major concept clusters, the learner will trace how each cluster builds on the ones before it and synthesize which cluster equipped them to understand each domain surveyed in this final chapter.",
+    "bloomLevel": "Create",
+    "bloomVerb": "Synthesize",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Has read or surveyed most of the book"
+    ],
+    "learningOutcomes": [
+      "Trace how each cluster depends on the ones before it",
+      "Name which cluster supplied the tools for a given application",
+      "Synthesize the book's structure into a single argument"
+    ],
+    "assessmentOpportunity": "Ask learners to pick any two non-adjacent clusters and explain the path of dependencies that connects them."
+  },
+  "pedagogical": {
+    "interactionPattern": "Circular concept map with click-to-explain and hover dependencies",
+    "instructionalStrategy": "Retrospective synthesis - the learner reconstructs the book's own argument",
+    "feedbackType": "Per-cluster detail with a named dependency on every connecting arrow",
+    "misconceptionsAddressed": [
+      "That the book's chapters are independent topics",
+      "That the final chapter introduces new machinery rather than reapplying the existing lens"
+    ],
+    "discussionQuestions": [
+      "Could the book have been ordered differently? What would break?",
+      "Which cluster did the most work for you personally?",
+      "What would an eleventh cluster be?"
+    ]
+  },
+  "bloomLevel": "Create",
+  "bloomVerb": "Synthesize"
+}

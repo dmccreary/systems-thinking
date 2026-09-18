@@ -1,0 +1,56 @@
+{
+  "title": "Conceptual, Logical, and Physical Data Models",
+  "description": "Trace one retailer relationship through conceptual, logical and physical models and see what each layer adds.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Knowledge Graph Applications and Data Architecture"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "data-model-layers-workflow",
+  "library": "Mermaid",
+  "canvasHeight": 440,
+  "completion_status": "implemented",
+  "chapter_number": 26,
+  "chapter_title": "Knowledge Graph Applications and Data Architecture",
+  "chapter_dir": "26-knowledge-graph-applications-and-data-architecture",
+  "chapter_rel_dir": "chapters/26-knowledge-graph-applications-and-data-architecture",
+  "educational": {
+    "learningObjective": "Given a single business relationship, the learner will trace how it is represented differently at the conceptual, logical, and physical modeling layers, and explain what new detail each layer adds.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Has seen a database table or a graph node",
+      "Knows what a business relationship is"
+    ],
+    "learningOutcomes": [
+      "Trace one relationship across all three modeling layers",
+      "State what each layer adds",
+      "Explain why keeping the layers separate is worth the effort"
+    ],
+    "assessmentOpportunity": "Give learners a business relationship and ask for all three representations, checking that no technology appears above the physical layer."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-explain layered diagram with one running example",
+    "instructionalStrategy": "Progressive specification of a single fixed example",
+    "feedbackType": "A definition plus the same example re-expressed at each layer",
+    "misconceptionsAddressed": [
+      "That the conceptual model is a rough draft of the physical one",
+      "That choosing a database is a modeling decision rather than an implementation one"
+    ],
+    "discussionQuestions": [
+      "Why do so many projects start at the physical layer and skip the other two?",
+      "What is lost when the conceptual model exists only in someone's head?",
+      "Does the graph implementation change the logical model, or only the physical one?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
+}

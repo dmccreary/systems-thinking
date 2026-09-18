@@ -1,0 +1,7005 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The formal notation of causal loop diagrams — nodes, edges, causal links, and link polarity — plus the negative-link counting rule for identifying reinforcing and balancing loops.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/systems-thinking/chapters/03-cld-notation-and-loop-identification/">
+      
+      
+        <link rel="prev" href="../02-mental-models-and-systems-analysis-tools/">
+      
+      
+        <link rel="next" href="../04-feedback-delay-and-loop-dynamics/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Causal Loop Diagram Notation and Loop Identification - Systems Thinking in the Age of AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Causal Loop Diagram Notation and Loop Identification - Systems Thinking in the Age of AI" >
+      
+        <meta  property="og:description"  content="The formal notation of causal loop diagrams — nodes, edges, causal links, and link polarity — plus the negative-link counting rule for identifying reinforcing and balancing loops." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/systems-thinking/assets/images/social/chapters/03-cld-notation-and-loop-identification/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/systems-thinking/chapters/03-cld-notation-and-loop-identification/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Causal Loop Diagram Notation and Loop Identification - Systems Thinking in the Age of AI" >
+      
+        <meta  name="twitter:description"  content="The formal notation of causal loop diagrams — nodes, edges, causal links, and link polarity — plus the negative-link counting rule for identifying reinforcing and balancing loops." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/systems-thinking/assets/images/social/chapters/03-cld-notation-and-loop-identification/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#causal-loop-diagram-notation-and-loop-identification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Systems Thinking in the Age of AI" class="md-header__button md-logo" aria-label="Systems Thinking in the Age of AI" data-md-component="logo">
+      
+  <img src="../../img/new-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Systems Thinking in the Age of AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Causal Loop Diagram Notation and Loop Identification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/systems-thinking" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Systems Thinking in the Age of AI" class="md-nav__button md-logo" aria-label="Systems Thinking in the Age of AI" data-md-component="logo">
+      
+  <img src="../../img/new-logo.png" alt="logo">
+
+    </a>
+    Systems Thinking in the Age of AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/systems-thinking" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About this Website
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/concept-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Quality Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/taxonomy-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Course Descriptions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Course Descriptions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/junior-high/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Junior High
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/high-school/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High School
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/college/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    College
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/grad-school/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graduate School
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/conference-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/executives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Executive Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/government-agency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Government Agency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Chapters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations-of-systems-thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations of Systems Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-mental-models-and-systems-analysis-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Mental Models and Systems Analysis Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Causal Loop Diagram Notation and Loop Identification
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3. Causal Loop Diagram Notation and Loop Identification
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Causal Loop Diagram?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is a Causal Loop Diagram?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bank-balance-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bank Balance Causal Loop Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-the-variables-in-a-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes: The Variables in a Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edges-and-causal-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edges and Causal Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#positive-and-negative-causal-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive and Negative Causal Links
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Positive and Negative Causal Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-population-growth-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Population Growth Causal Loop Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#same-direction-and-opposite-direction-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same-Direction and Opposite-Direction Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-negative-link-counting-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Negative-Link Counting Rule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Negative-Link Counting Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-thermostat-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Thermostat Causal Loop Diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-loop-polarity-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Loop Polarity Counter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Identification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-marker-recording-what-you-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Marker: Recording What You Found
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcing-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinforcing Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balancing-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balancing Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reinforcing-vs-balancing-loop-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Reinforcing vs. Balancing Loop Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcing-loop-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinforcing Loop Label
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balancing-loop-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Loop Label
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-feedback-delay-and-loop-dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Feedback, Delay, and Loop Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-stocks-flows-and-system-dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Stocks, Flows, and System Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-growth-patterns-and-nonlinear-behavior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Growth Patterns and Nonlinear Behavior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-feedback-resilience-and-robustness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Feedback Resilience and Robustness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-systems-archetypes-cross-cutting-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Systems Archetypes: Cross-Cutting Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-named-archetypes-and-limits-to-growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Named Archetypes and Limits to Growth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fixes-that-fail-and-shifting-the-burden/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Fixes That Fail and Shifting the Burden
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-tragedy-of-commons-and-success-to-successful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Tragedy of the Commons and Success to the Successful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-named-laws-technology-archetypes-and-complexity-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Named Laws, Technology Archetypes, and Complexity Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-leverage-points-iceberg-model-to-structural-change/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Leverage Points: The Iceberg Model to Structural Change
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-leverage-points-rules-paradigms-and-emergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Leverage Points: Rules, Paradigms, and Emergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-graph-theory-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Graph Theory Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-graph-database-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Graph Database Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-knowledge-representation-and-metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Knowledge Representation and Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-data-management-and-governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Data Management and Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-enterprise-knowledge-graphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Enterprise Knowledge Graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-organizational-silos-and-silo-busting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Organizational Silos and Silo Busting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-capability-maturity-model-for-systems-thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Capability Maturity Model for Systems Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-ai-and-machine-learning-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Artificial Intelligence and Machine Learning Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-ai-systems-dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. AI Systems Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-knowledge-systems-and-economic-complexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Knowledge Systems and Economic Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-systems-design-emerging-technology-and-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Systems Design, Emerging Technology, and Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-knowledge-graph-applications-and-data-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Knowledge Graph Applications and Data Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-systems-thinking-across-disciplines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Systems Thinking Across Disciplines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix A - Causal Loop Diagrams
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix A - Causal Loop Diagrams
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/vis-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vis Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/bank-balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bank Balance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/population/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Population
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/thermostat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thermostat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/cld-layout-rules-vis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLD Layout Rules for Vis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/center-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Center Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/image-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/curve-direction-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curve Direction Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Misinformation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/reactflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReactFlow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix B - Archetypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix B - Archetypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/archetypes-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archetypes Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tragedy of the Commons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tragedy-of-the-commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tragedy-of-the-commons/classic-toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classic Story
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tragedy-of-the-commons/commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fixes that Fail
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fixes that Fail
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/banning-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Banning AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4_3" id="__nav_8_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Banning Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Banning Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/banning-books/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/banning-books/cld-generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/ban-the-box/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ban the Box
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cutting Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-stem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cutting STEM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4_7" id="__nav_8_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cutting AI Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Cutting AI Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-ai-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-ai-training/cld-generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/grade-inflation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grade Inflation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/layoffs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layoffs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/ngo-limited-effectiveness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NGO Limited Effectiveness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/open-offices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Offices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/painkillers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Painkillers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/return-to-office/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Return to Office
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/security-theater/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Theater
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/standardized-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardized Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/teach-to-the-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teach to Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/traffic-congestion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traffic Congestion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/zero-tolerance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Tolerance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Escalation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Escalation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/escalation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Limits to Growth
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Limits to Growth
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/antibiotic-effectiveness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Antibiotic Effectiveness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/bacteria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bacteria Growth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/business-expansion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business Expansion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/gaming-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaming Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/humans-on-earth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Humans on Earth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/intensive-agriculture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intensive Agriculture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moore's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/social-media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Social Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/steam-engines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Steam Engines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/student-activity-overcommittment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Student Activity Overcommitment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shifting the Burden
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Shifting the Burden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/college-cramming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    College Cramming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/emergency-response/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emergency Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/er-overuse.md/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ER Overuse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/homework-help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homework Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/it-helpdesk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT Helpdesk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/pain-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pain Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/ai-homework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Homework Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Success to the Successful
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Success to the Successful
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/ai-flywheel/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Flywheel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8_3" id="__nav_8_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Educational Funding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Educational Funding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/educational-funding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/educational-funding/cld-test-results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLD Test Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/healthcare-access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Healthcare Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/research-funding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Funding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/social-media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Social Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/sports-development/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sports Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/technology-platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/venture-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Venture Capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/wealth-inequality/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wealth Inequality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/open-source-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8_12" id="__nav_8_8_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Drifting Goals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8_12">
+            <span class="md-nav__icon md-icon"></span>
+            Drifting Goals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/drifting-goals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Accidental Adversaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9">
+            <span class="md-nav__icon md-icon"></span>
+            Accidental Adversaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/accidental-adversaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Growth and Investment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_10">
+            <span class="md-nav__icon md-icon"></span>
+            Growth and Investment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/growth-and-investment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/growth-and-investment/bank-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bank Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_11" id="__nav_8_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technology Archetypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_11">
+            <span class="md-nav__icon md-icon"></span>
+            Technology Archetypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/ai-flywheel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The AI Flywheel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/communication-standards.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Standards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/search-and-reuse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search and Reuse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Building Systems Thinking Capabilities
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Building Systems Thinking Capabilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/capability-maturity-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems Thinking Capability Maturity Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/microstrategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microstrategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/silo-busting-microstrategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Silo Busting Microstrategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of MicroSims
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/bathtub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bathtub Stock and Flow Simulator
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/bfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Breadth-First Search Step-by-Step
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cmm-for-systems-thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Capability Maturity Model for Systems Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cld-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Loop Diagram Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cause-effect-chain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cause-and-Effect Chain
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cld-editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLD Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/data-model-layers-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptual, Logical, and Physical Data Models
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/data-warehouse-pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Ingestion Pipeline -- From Lake to Warehouse to Mart
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/lineage-stewardship-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lineage and Stewardship Along a Pipeline
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/emergence-local-rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emergence From Local Rules
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/emergence-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emergence Simulator (Flocking)
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/entity-attribute-relationship-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entity-Attribute-Relationship Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/filter-bubble-formation-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter Bubble Formation Simulator
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/fishbone-cart-abandonment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fishbone Diagram — Cart Abandonment
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/intervention-to-implementation-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Intervention Point to Implementation
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-algorithms-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Algorithms Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/growth-rates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Growth Rate Comparison
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/knowledge-behavior-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Embodied Knowledge Moves, Fades, and Leaks
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cld-creation-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infographic Workflow for Creating a Causal Loop Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/neural-network-layer-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inside a Neural Network Layer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/agent-cld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intelligent Agent Causal Loop Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/interconnection-network-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interconnection Network Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/learning-experience-curve-chart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Curve vs. Experience Curve
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/leverage-iceberg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leverage Points Iceberg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/logistic-growth-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logistic Growth S-Curve Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/logistic-map-bifurcation-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logistic Map Bifurcation Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/loop-polarity-counter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loop Polarity Counter
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/canonical-schema-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping Two Schemas to a Canonical Schema
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/registry-vs-catalog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Registry vs. Catalog
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/microsim-growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MicroSim Growth Network Effect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moore's Law Timeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/multi-hop-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Hop Query Performance, RDBMS vs Graph Database
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/node-simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node Simulator Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/integration-cost-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Point-to-Point vs. Hub Integration Cost
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/population-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Population Simulator with Causal Loop Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/predator-prey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Predator-Prey Population Dynamics
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/product-space-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Space Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/reinforcing-vs-balancing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcing vs. Balancing Loop Simulator
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/stakeholder-power-interest-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stakeholder Power-Interest Grid
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/stock-flow-notation-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stock and Flow Notation Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/subsystem-nesting-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subsystem Nesting Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/system-boundary-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Boundary Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/systems-map-coffee-shop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems Map Example — Coffee Shop
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/book-concept-cluster-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Book's Concept Clusters, Connected
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cmm-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Generic Software Capability Maturity Model
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/silo-reinforcing-loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Organizational Silo Reinforcing Loop
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/konigsberg-bridges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Seven Bridges of Konigsberg
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/tech-debt-feedback-loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Technical Debt Feedback Loop
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/algorithmic-disparity-loops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Feedback Loops Behind Algorithmic Disparate Impact
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ekg-adoption-loops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Reinforcing Loops Behind Knowledge Graph Adoption
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons Agent-Based Simulation
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/overfitting-error-curves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training vs. Validation Error -- Spotting the Overfitting Point
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-scale-out-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vertical vs Scale-Out Graph Architecture
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Stories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Stories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/tragedy-of-the-commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/fish-tank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fish Tank Adventure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/matthew-effect/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Matthew Effect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moore's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/death-of-gopher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Death of Gopher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/metcalfes-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metcalfe's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/measurement-trap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Measurement Trap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Sample Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/concept-enumeration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Enumeration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/concept-dependency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Dependency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/enumerating-archetypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enumerating Archetypes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Loop Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archetype Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            Archetype Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/archetype-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/archetype-examples/fixes-that-fail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixes that Fail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/archetype-examples/tragedy-of-the-commons-cld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons CLD Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/vis-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vis Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/cld-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Causal Loop Viewer Using Vis.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/cld-viewer-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Causal Loop Viewer Using Vis.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/microsims/population/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a Population Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/stories/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/stories/tragedy-of-the-commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-they-are-saying/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What They Are Saying
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colophon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colophon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Causal Loop Diagram?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is a Causal Loop Diagram?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bank-balance-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bank Balance Causal Loop Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-the-variables-in-a-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes: The Variables in a Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edges-and-causal-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edges and Causal Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#positive-and-negative-causal-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive and Negative Causal Links
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Positive and Negative Causal Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-population-growth-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Population Growth Causal Loop Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#same-direction-and-opposite-direction-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same-Direction and Opposite-Direction Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-negative-link-counting-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Negative-Link Counting Rule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Negative-Link Counting Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-thermostat-causal-loop-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Thermostat Causal Loop Diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-loop-polarity-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Loop Polarity Counter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Identification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-marker-recording-what-you-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Marker: Recording What You Found
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcing-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinforcing Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balancing-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balancing Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reinforcing-vs-balancing-loop-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Reinforcing vs. Balancing Loop Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcing-loop-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinforcing Loop Label
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balancing-loop-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Loop Label
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="causal-loop-diagram-notation-and-loop-identification">Causal Loop Diagram Notation and Loop Identification</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter teaches the formal notation of causal loop diagrams (CLDs): nodes, edges, causal links, and link polarity. It presents the negative-link counting rule for identifying whether a loop is reinforcing or balancing, and how to mark loops on a diagram. Students completing this chapter will be able to read and label a causal loop diagram correctly.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 16 concepts from the learning graph:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Concept Impact Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Causal Loop Diagram</td>
+<td>60505</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>25569</td>
+</tr>
+<tr>
+<td>Edge (CLD)</td>
+<td>25568</td>
+</tr>
+<tr>
+<td>Causal Link</td>
+<td>25567</td>
+</tr>
+<tr>
+<td>Positive Causal Link</td>
+<td>12783</td>
+</tr>
+<tr>
+<td>Negative Causal Link</td>
+<td>12783</td>
+</tr>
+<tr>
+<td>Loop Polarity</td>
+<td>6391</td>
+</tr>
+<tr>
+<td>Same-Direction Link</td>
+<td>6391</td>
+</tr>
+<tr>
+<td>Opposite-Direction Link</td>
+<td>6391</td>
+</tr>
+<tr>
+<td>Negative-Link Counting Rule</td>
+<td>6390</td>
+</tr>
+<tr>
+<td>Loop Identification</td>
+<td>6389</td>
+</tr>
+<tr>
+<td>Loop Marker</td>
+<td>3402</td>
+</tr>
+<tr>
+<td>Reinforcing Loop</td>
+<td>1313</td>
+</tr>
+<tr>
+<td>Balancing Loop</td>
+<td>1673</td>
+</tr>
+<tr>
+<td>Reinforcing Loop Label</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Balancing Loop Label</td>
+<td>410</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations-of-systems-thinking/">1. Foundations of Systems Thinking</a></li>
+<li><a href="../02-mental-models-and-systems-analysis-tools/">2. Mental Models and Systems Analysis Tools</a></li>
+</ul>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Chapter 2 gave you general-purpose tools for studying a system: mental models, systems maps, rich pictures. A systems map can show almost anything moving between parts — money, people, goods, information — which makes it flexible but also a little loose. This chapter narrows the focus to one specific kind of map, built entirely out of cause-and-effect arrows and nothing else. That narrowing is deliberate: restricting a diagram to a single relationship — causality — is exactly what makes it possible to write down a precise notation and a simple counting rule that lets you look at any drawn loop and correctly predict, every time, which of exactly two behaviors it produces.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Loose Maps to Precise Notation</p>
+<p><img alt="Sage waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Welcome back, fellow systems thinker! You've sketched rich pictures and systems maps — now it's time for a notation precise enough that two people who've never met can look at the same loop and agree, every time, on exactly what it does. Let's zoom out and see the whole system!</p>
+</div>
+<h2 id="what-is-a-causal-loop-diagram">What Is a Causal Loop Diagram?</h2>
+<p>A <strong>causal loop diagram</strong> (CLD) is a diagram that represents a system as a set of variables connected by arrows showing cause-and-effect relationships, drawn so that at least one chain of arrows loops back around to its own starting point. That closing-the-loop property is what separates a CLD from an ordinary flowchart: a flowchart typically runs from a start to an end, while a CLD is built specifically to show a story that feeds back into itself.</p>
+<p>Consider a plain-language feedback story you've probably heard before: "The more money sitting in a savings account, the more interest it earns each month — and the more interest it earns, the more money ends up back in the account." Told out loud, that story is a single sentence. Drawn as a causal loop diagram, it becomes two labeled boxes and two arrows: one arrow from "Bank Balance" to "Interest Earned," and a second arrow from "Interest Earned" back to "Bank Balance," closing the loop. Nothing in the diagram is new information — it's the exact same story — but the diagram makes the <em>shape</em> of the story visible in a way the sentence alone does not.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">A Line Becomes a Circle</p>
+<p><img alt="Sage thinking with a raised wing" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice the shift: Chapter 1's cause-and-effect chains ran in a straight line, from a first cause to a final symptom. A causal loop diagram bends that line back on itself. Once effect can become cause again, "what happens next?" stops being a question with one final answer.</p>
+</div>
+<p>Not every diagram of causes and effects qualifies as a CLD, and it's worth being precise about why. Chapter 1's printer-jam chain — sunny window causes a warm room, a warm room causes damp paper, damp paper causes jams — is a perfectly good cause-and-effect diagram, but it is not a causal loop diagram, because the arrows never circle back to "sunny window." It stays a straight line from a root cause to a symptom. The bank-balance story above earns the name "causal loop diagram" specifically because tracing its arrows eventually brings you right back to the node you started at. When you're deciding whether something you've drawn counts as a CLD, that's the one test that matters: pick any node, follow the arrows forward, and see whether you can walk your way back to it.</p>
+<p>The MicroSim below shows exactly this savings-account loop. Hover over either box to see its description, and notice how the two arrows are labeled — that labeling is the subject of the next several sections.</p>
+<h4 id="diagram-bank-balance-causal-loop-diagram">Diagram: Bank Balance Causal Loop Diagram</h4>
+<iframe src="../../sims/cld-viewer/main.html?file=bank-balance-cld.json" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/cld-viewer/main.html?file=bank-balance-cld.json">Run the CLD Viewer fullscreen</a></p>
+<details>
+<summary>Bank Balance Causal Loop Diagram (reused MicroSim)</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> cld-viewer<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> ../../sims/cld-viewer/main.html?file=bank-balance-cld.json<br/>
+<strong>Source Repo:</strong> local — docs/sims/cld-viewer (examples/bank-balance-cld.json)</p>
+<p>Reused from this book's own CLD Viewer tool, loaded with its two-node "Interest-Earning Bank Account" example. Hovering over the "Bank Balance" or "Interest Earned" node shows a tooltip with that variable's description; hovering over either arrow shows the causal claim it represents. Learning objective: given a simple feedback story in prose, the learner will identify the two variables and two causal arrows that form its causal loop diagram (Bloom: Understanding).</p>
+</details>
+<h2 id="nodes-the-variables-in-a-loop">Nodes: The Variables in a Loop</h2>
+<p>A <strong>node</strong> is a labeled box in a causal loop diagram representing a single variable — a quantity that can meaningfully increase or decrease over time. In the diagram above, "Bank Balance" and "Interest Earned" are both nodes: each names a quantity, and each can plainly go up or go down.</p>
+<p>Node labels have a specific job, so they follow a specific pattern: a good node name is a noun or noun phrase naming something measurable, never a verb describing a one-time action. "Bank Balance" is a valid node because it names a quantity; "Deposit money" is not, because it names an action rather than something that rises and falls. This distinction matters more than it looks: a diagram built out of actions instead of quantities has nothing for an arrow to meaningfully increase or decrease, and the whole notation this chapter teaches depends on every node being a quantity. The same test works outside of finance: in a customer-service system, "Customer Satisfaction" is a valid node because it can rise or fall, while "Send a satisfaction survey" is an action that belongs <em>between</em> nodes, not inside one — it's the sort of thing an edge's description explains, not something that itself goes up or down.</p>
+<p>Diagram-building tools often go one step further and sort nodes into a few reusable types, and the examples in this chapter already use three of them. A <strong>stock</strong> node holds an accumulated quantity that persists over time, like "Bank Balance" or "Population" — the kind of thing you could, in principle, freeze and measure at a single instant. A plain <strong>variable</strong> node is a quantity that is recalculated each period rather than accumulated, like "Interest Earned," which resets and is earned fresh each cycle. A <strong>condition</strong> node represents an externally set target or state, like a thermostat's "Desired Temperature Setpoint," which a person sets rather than the system computing on its own. None of this changes the counting rule you'll learn later in this chapter — it applies to every node the same way — but recognizing a node's type helps you read an unfamiliar diagram faster, since stocks are usually where a system's real "memory" lives.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">The One Test for a Good Node Name</p>
+<p><img alt="Sage pointing helpfully" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Unsure whether something belongs in a box? Ask: "Can this quantity go up or go down?" If yes, it's a node. If the answer is no — if it's a one-time event or an action instead — rename it as the quantity that event changes, and put that in the box instead.</p>
+</div>
+<h2 id="edges-and-causal-links">Edges and Causal Links</h2>
+<p>An <strong>edge (CLD)</strong> — an edge, in the specific sense this book uses inside a causal loop diagram — is the arrow drawn between two nodes, pointing from a cause to the effect it produces. A <strong>causal link</strong> is the underlying claim that edge represents: that a change in the variable at the arrow's tail actually causes a change in the variable at the arrow's head, not merely that the two happen to move together.</p>
+<p>The distinction is worth keeping straight even though the two terms are often used interchangeably once it's understood. Drawing an edge is easy — it's a single line on a page. Defending the causal link behind it is where the real analytical work happens, and it's exactly the same work Chapter 1 asked of you when it warned against mistaking correlation for causation. In the bank-balance diagram, the edge from "Bank Balance" to "Interest Earned" is not just decoration; it stands in for the causal link "a higher balance causes more interest to be earned," a claim you could actually check against the account's stated interest rate. Before drawing any edge in a diagram of your own, it's worth pausing to ask whether you could defend the causal link it represents to a skeptic — an edge that fails that test usually signals a correlation being mistaken for causation, or two variables that are both driven by some third factor you haven't drawn yet. Chapter 1's ice-cream-and-drowning example makes the failure mode concrete: an edge drawn straight from "Ice Cream Sales" to "Drowning Deaths" would be a real edge on a real diagram, but it would misrepresent a spurious correlation as a causal link, since both are actually driven by a third node — hot weather — that the diagram would need to include instead.</p>
+<p>Because the bare claim "A causes B" is often too thin on its own, most CLD tools let you attach a short label to the edge summarizing the mechanism in a few words — "generates," "triggers," "reduces" — so a reader can get a rough sense of <em>how</em> the causal link works without needing to click into a full description. The bank-balance diagram's two edges are labeled "generates" and "increases" for exactly this reason: a one-word hint, sitting right on the arrow, that turns a bare line into a small piece of the causal story.</p>
+<h2 id="positive-and-negative-causal-links">Positive and Negative Causal Links</h2>
+<p>A <strong>positive causal link</strong> is a causal link in which the two variables move in the same direction: when the cause increases, the effect increases above what it otherwise would have been, and when the cause decreases, the effect decreases. A <strong>negative causal link</strong> is a causal link in which the two variables move in opposite directions: when the cause increases, the effect decreases, and when the cause decreases, the effect increases. On a diagram, this is marked with a small "+" or "−" near the arrowhead.</p>
+<p>Before you look at an example with both, one warning is worth stating plainly: positive and negative describe <em>direction of change</em>, not "good" and "bad." A negative link is not a flaw in the diagram — it can just as easily represent something desirable, like a safety mechanism that reduces risk as spending on it increases. A classroom example makes the same point from the opposite side: "Study Time" causing "Test Anxiety" to fall is a negative link, and a welcome one, while "Test Anxiety" causing "Test Score" to fall is also negative, and unwelcome. Same symbol, same rule for reading it, opposite feelings about the outcome — the diagram itself stays neutral.</p>
+<p>Both edges in the bank-balance diagram are positive: more balance causes more interest, and more interest causes more balance. The diagram below, showing population dynamics, contains one of each. Two edges connect "Population" to "Births" — both positive, since a larger population enables more births, and more births directly increase the population. But the edge from "Deaths" to "Population" is negative: more deaths <em>decrease</em> the population, not increase it.</p>
+<p>Before we look at the diagram, one more term deserves a plain-language definition first: <strong>loop polarity</strong>, which is the overall tendency of a complete loop — whether the loop as a whole amplifies an initial change or opposes it — determined by combining the polarities of every link around the loop, not by looking at any single link alone. This is a genuinely different property from a single link's polarity: an individual edge is positive or negative on its own, but a <em>loop's</em> polarity only comes into view once you've traced every edge in the loop and combined their effects, which is exactly why the next few sections build up a formal counting procedure rather than asking you to eyeball it. The population diagram below contains two separate loops with two different polarities, and spotting the difference by eye is exactly the skill the rest of this chapter builds toward.</p>
+<h4 id="diagram-population-growth-causal-loop-diagram">Diagram: Population Growth Causal Loop Diagram</h4>
+<iframe src="../../sims/cld-viewer/main.html?file=population-cld.json" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/cld-viewer/main.html?file=population-cld.json">Run the CLD Viewer fullscreen</a></p>
+<details>
+<summary>Population Growth Causal Loop Diagram (reused MicroSim)</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> cld-viewer<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> ../../sims/cld-viewer/main.html?file=population-cld.json<br/>
+<strong>Source Repo:</strong> local — docs/sims/cld-viewer (examples/population-cld.json)</p>
+<p>Reused from this book's own CLD Viewer tool, loaded with its three-node "Population Growth Dynamics" example, which contains both a reinforcing loop (Population-Births) and a balancing loop (Population-Deaths) sharing the "Population" node. Hovering over any node or edge shows a tooltip with its description and polarity; hovering over either small colored "R" or "B" circle at each loop's center shows that loop's full description. Learning objective: given a diagram with two loops sharing a node, the learner will identify which edges are positive and which are negative (Bloom: Understanding).</p>
+</details>
+<p>The following table reinforces the distinction you've just read about between the two link types:</p>
+<table>
+<thead>
+<tr>
+<th>Link type</th>
+<th>Symbol</th>
+<th>If the cause increases</th>
+<th>If the cause decreases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Positive causal link</td>
+<td>+</td>
+<td>Effect increases</td>
+<td>Effect decreases</td>
+</tr>
+<tr>
+<td>Negative causal link</td>
+<td>−</td>
+<td>Effect decreases</td>
+<td>Effect increases</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">One Question Settles Every Polarity Call</p>
+<p><img alt="Sage pointing helpfully" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Stuck deciding + or −? Hold everything else in the diagram fixed and ask: "If I nudged the cause up a little, would the effect go up or down?" Up means positive. Down means negative. That single question resolves almost every polarity call you'll ever face.</p>
+</div>
+<h2 id="same-direction-and-opposite-direction-links">Same-Direction and Opposite-Direction Links</h2>
+<p>A <strong>same-direction link</strong> is another name for a positive causal link, chosen because it describes directly what matters for the rule coming up next: the two variables move in the same direction. An <strong>opposite-direction link</strong> is another name for a negative causal link, chosen for the identical reason: the two variables move in opposite directions.</p>
+<p>These aren't new ideas — they're the exact same positive and negative links you just learned, relabeled. Some CLD tools and instructors mark edges with a small "s" or "o" instead of "+" or "−" for precisely this reason: it sidesteps the "positive equals good" misreading warned about above, since "same direction" and "opposite direction" carry no value judgment at all. This book uses both notations interchangeably, and you should expect to see either one in diagrams drawn by other people.</p>
+<p>To see the two notations describe identical facts, relabel the bank-balance and thermostat loops from earlier using "s" and "o" instead of "+" and "−." The bank-balance loop's two edges — "Bank Balance" causing "Interest Earned" to rise, and "Interest Earned" causing "Bank Balance" to rise — are both same-direction links: s, s. The thermostat loop's five edges become s, o, s, s, s, with the single opposite-direction link sitting exactly where the negative causal link sat before. Nothing about the diagrams changed; only the letters written next to the arrows did.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Two Names, One Underlying Fact</p>
+<p><img alt="Sage thinking with a raised wing" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Here's why this relabeling earns its own name rather than being a footnote: "opposite-direction" doesn't just describe a link — it's the exact thing you're about to start <em>counting</em>. Renaming negative to "opposite-direction" turns an abstract polarity rule into a concrete counting task.</p>
+</div>
+<h2 id="the-negative-link-counting-rule">The Negative-Link Counting Rule</h2>
+<p>The <strong>negative-link counting rule</strong> states that a loop's polarity can be determined by counting the number of negative — that is, opposite-direction — links it contains as you travel once all the way around it: if that count is even, including zero, the loop is reinforcing; if the count is odd, the loop is balancing. This is the single most useful fact in this chapter, because it means you never have to simulate a loop's behavior over time to know what kind of loop it is — you only have to count.</p>
+<p>For readers who enjoy a compact restatement: if ( n ) is the number of negative links encountered going once around a loop, the loop is reinforcing when ( (-1)^n = +1 ) and balancing when ( (-1)^n = -1 ). In plain language, that's just a mathematician's way of saying "even flips you back to where you started; odd flips you to the opposite side" — the same rule stated in words above.</p>
+<p>Walk through it on the thermostat loop below, which has five edges rather than two, making the counting itself meaningful instead of obvious at a glance:</p>
+<ol>
+<li>Desired Temperature → Temperature Gap: positive (a higher setpoint raises the gap).</li>
+<li>Room Temperature → Temperature Gap: <strong>negative</strong> (a warmer room shrinks the gap).</li>
+<li>Temperature Gap → Thermostat Signal: positive (a bigger gap triggers a stronger signal).</li>
+<li>Thermostat Signal → Heater Output: positive (a stronger signal drives more heat).</li>
+<li>Heater Output → Room Temperature: positive (more heat raises the room's temperature, closing the loop).</li>
+</ol>
+<p>Only one of these five links is negative. One is an odd number, so the negative-link counting rule predicts this loop is balancing — which matches its real-world job of holding the room at a steady setpoint rather than letting the temperature run away in one direction.</p>
+<h4 id="diagram-thermostat-causal-loop-diagram">Diagram: Thermostat Causal Loop Diagram</h4>
+<iframe src="../../sims/cld-viewer/main.html?file=thermostat-cld.json" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/cld-viewer/main.html?file=thermostat-cld.json">Run the CLD Viewer fullscreen</a></p>
+<details>
+<summary>Thermostat Causal Loop Diagram (reused MicroSim)</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> cld-viewer<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> ../../sims/cld-viewer/main.html?file=thermostat-cld.json<br/>
+<strong>Source Repo:</strong> local — docs/sims/cld-viewer (examples/thermostat-cld.json)</p>
+<p>Reused from this book's own CLD Viewer tool, loaded with its five-node "Thermostat Temperature Control System" example — a single balancing loop with exactly one negative link among its five edges. Hovering over any edge shows a tooltip naming its polarity and the reasoning behind it. Learning objective: given a five-link loop, the learner will apply the negative-link counting rule to correctly classify the loop as balancing (Bloom: Applying).</p>
+</details>
+<p>The MicroSim below lets you practice the counting rule directly: click each edge around a loop, in order, and watch a running tally of same-direction versus opposite-direction links build up until the correct loop marker appears automatically.</p>
+<h4 id="diagram-loop-polarity-counter">Diagram: Loop Polarity Counter</h4>
+<iframe src="../../sims/loop-polarity-counter/main.html" width="100%" height="547px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/loop-polarity-counter/main.html">Run the Loop Polarity Counter MicroSim fullscreen</a></p>
+<details>
+<summary>Loop Polarity Counter</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> loop-polarity-counter<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Template:</strong> <a href="https://github.com/dmccreary/infographics/tree/main/docs/sims/cld-builder">https://github.com/dmccreary/infographics/tree/main/docs/sims/cld-builder</a><br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let learners apply the negative-link counting rule step by step on a four-node causal loop by clicking each edge in sequence around the loop and watching a running tally of same-direction (S) and opposite-direction (O) links, culminating in the automatically revealed loop marker.</p>
+<p>Bloom Taxonomy Level: Apply
+Bloom Taxonomy Verb: Classify</p>
+<p>Learning Objective: Given a causal loop diagram, the learner will classify the loop as reinforcing or balancing by counting its opposite-direction links (Bloom: Applying).</p>
+<p>Canvas: 700x480 default, responsive — recompute node positions around a circle of radius proportional to <code>canvas.width</code> inside a <code>windowResized()</code> handler so the loop stays centered and legible at any container width.</p>
+<p>Visual elements:
+- Four nodes arranged in a circle (default scenario: "Advertising Spend," "New Customers," "Word of Mouth," "Revenue"), connected by four curved directed edges forming one closed loop, each edge labeled with a "+"/S or "−"/O badge once revealed.
+- A running tally panel beside the canvas reading "Opposite-direction links found: N" that increments only when the learner clicks an unrevealed edge whose polarity is negative.
+- A large loop-marker circle at the loop's center, initially blank/gray, that fills in with a red "R" or green "B" (matching this chapter's color convention) only after all four edges have been clicked/revealed.</p>
+<p>Controls:
+- Clicking an unrevealed edge reveals its polarity badge (S or O) with a short one-sentence justification appearing in an info panel below the canvas (e.g., "More advertising spend causes more new customers — same direction").
+- A "New Scenario" button, built with <code>createButton()</code>, that swaps in one of three preloaded four-edge loops (a mix of reinforcing and balancing examples) with freshly randomized node positions.
+- A "Reset This Loop" button that re-hides all edge badges and empties the tally without changing the current scenario.</p>
+<p>Interactivity requirement: every edge is clickable and reveals a labeled badge plus an explanatory info-panel sentence; the loop-marker circle updates live based on the tally, satisfying the interactivity bar with immediate, teaching feedback on every click.</p>
+<p>Color scheme: same-direction (S) badges in the book's positive-link green, opposite-direction (O) badges in the negative-link red, and the final loop marker filled in the matching reinforcing-red or balancing-green used throughout this chapter's other diagrams for visual consistency.</p>
+<p>Implementation: p5.js sketch with an array of edge objects (endpoints, true polarity, revealed state) drawn as curved Bezier arrows, <code>mousePressed()</code> hit-testing against each edge's curve midpoint, and a small state machine tracking revealed count and running negative-link tally to trigger the final marker reveal.</p>
+</details>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Count the Right Thing</p>
+<p><img alt="Sage holding up a wing in caution" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A common slip is counting <em>all</em> the links in a loop instead of only the negative ones — or stopping halfway around instead of completing the full circuit. The rule only works if you count exactly the opposite-direction links, and only after tracing the loop all the way back to your starting node.</p>
+</div>
+<h2 id="loop-identification">Loop Identification</h2>
+<p><strong>Loop identification</strong> is the practice of locating every closed loop within a causal loop diagram — tracing arrows starting and ending at the same node — and then applying the negative-link counting rule to classify each one separately, since a single diagram commonly contains more than one loop sharing nodes. The population diagram you saw earlier is a compact example: it contains two loops that both touch the "Population" node, yet each one is traced and counted on its own.</p>
+<p>The birth loop runs Population → Births → Population, with two positive links and zero negative links — an even count, so it's reinforcing. The death loop runs Population → Deaths → Population, with one positive link and one negative link — an odd count, so it's balancing. Sharing a node doesn't merge the two loops into one; it just means that node participates in two separate feedback stories at once, each with its own independently determined polarity. Real diagrams later in this book, describing archetypes like the tragedy of the commons, will contain three or four overlapping loops at once — loop identification is the discipline of tracing and classifying them one at a time rather than trying to reason about the whole tangle simultaneously.</p>
+<p>It's worth practicing the "does this even form a loop" test from earlier in a slightly harder case. Suppose someone proposed adding a new edge directly from "Births" to "Deaths," reasoning that a baby boom eventually means more deaths decades later. Does that create a third loop? Trace it: Births → Deaths → Population → Births. Yes — it closes, so it is a loop, and a genuinely new one, distinct from the two you already found even though it reuses two of the same nodes. Loop identification means checking every such candidate path, not just the two most obvious ones.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Untangling Loops Takes Practice</p>
+<p><img alt="Sage giving an encouraging nod" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If tracing overlapping loops by eye feels slow at first, that's completely normal — experienced analysts do this one loop at a time too, often tracing each path with a finger or a pen. There's no shortcut around doing it loop by loop the first several times; the speed comes later, with repetition.</p>
+</div>
+<h2 id="loop-marker-recording-what-you-found">Loop Marker: Recording What You Found</h2>
+<p>A <strong>loop marker</strong> is a small symbol placed at the center of an identified loop directly on the diagram, recording the loop's polarity so that a reader never has to re-run the counting rule themselves just to understand what the diagram is claiming. In the population and thermostat diagrams above, this marker appears as a small colored circle at each loop's center, labeled "R" or "B" — clicking it reveals the same loop description you'd get from working through the counting rule by hand.</p>
+<p>The marker's placement is deliberate, not decorative: it sits at the loop's visual center specifically so it stays roughly equidistant from every node the loop passes through, which keeps it unambiguous even when a diagram has several loops drawn close together — a marker floating near one specific node instead of the loop's center could easily be misread as belonging to a neighboring loop.</p>
+<p>The convention pairs a capital letter with a small circular-arrow icon whose curve visually echoes the loop's own drawn direction, so the marker doesn't just label the loop — it points along it:</p>
+<p><img alt="Reinforcing loop marker, clockwise convention" class="mascot-admonition-img" src="../../sims/cld-viewer/reinforcing-loop-cw.png" /></p>
+<p>That marker — a capital "R" inside a clockwise circular arrow — is what you'd place at the center of any loop the counting rule classifies as reinforcing, matching the red "R" circles you clicked on in the population diagram above. Older systems-dynamics texts sometimes used a small balance-scale icon in place of a circled "B" for a balancing loop, leaning on the everyday image of a scale settling back to level — the circled-letter convention used throughout this book has simply become the more common choice in modern diagramming software.</p>
+<h2 id="reinforcing-loop">Reinforcing Loop</h2>
+<p>A <strong>reinforcing loop</strong> (marked R) is a loop whose net effect, traced all the way around, pushes an initial change further in the same direction it started: an increase leads, through the chain of links, back to a further increase, and a decrease leads back to a further decrease. This is also called a positive feedback loop, and its everyday names — a <em>vicious cycle</em> when the direction is unwanted, a <em>virtuous circle</em> when it's welcome — describe the same underlying structure with opposite value judgments attached.</p>
+<p>The bank-balance loop from earlier in this chapter is a clean example: more balance produces more interest, and more interest produces more balance, each pass around the loop compounding on the last. Left alone, a reinforcing loop has no built-in stopping point — it will keep amplifying in whichever direction it's already moving until something outside the loop intervenes, a limitation a later chapter on limits to growth returns to directly.</p>
+<p>The same structure drives a viral video: more views cause the platform's recommendation algorithm to show the video to more people, and being shown to more people causes more views — an entirely different domain producing the identical loop shape as compounding interest. That resemblance is exactly why systems thinkers bother learning loop notation in the first place: once you can recognize a reinforcing loop's shape, you start seeing the same underlying structure behind a bank balance, a viral video, and — run in reverse, as a downward spiral — a team that skips code review to hit a deadline, ships more defects as a result, and then has even less spare time to bring code review back once the extra defects start demanding emergency fixes.</p>
+<h2 id="balancing-loop">Balancing Loop</h2>
+<p>A <strong>balancing loop</strong> (marked B) is a loop whose net effect counteracts an initial change, pushing the system back toward a goal or equilibrium rather than amplifying the original direction of change. This is also called a negative feedback loop, and unlike a reinforcing loop, it is inherently goal-seeking: it has a target built into its structure, even if that target is never written down anywhere on the diagram itself.</p>
+<p>The thermostat loop is the clearest possible example: however far the room's temperature drifts from the setpoint, the loop pushes back toward it, not away from it. Balancing loops aren't always smooth, though — Chapter 1 mentioned that the heater-to-room link carries a real-world delay, and a balancing loop with enough delay in it can overshoot its goal and oscillate back and forth around the target before settling, rather than approaching it in a straight line.</p>
+<p>A hiring pipeline shows the same goal-seeking shape outside of physical systems: a company sets a staffing target, an open-positions gap causes recruiters to make more offers, and each hire made shrinks that gap back toward zero. Notice that in both examples the "goal" — a temperature setpoint, a staffing target — is a condition node feeding into the loop rather than a stock circulating inside it, which is a useful pattern to watch for: a balancing loop's driving goal is often set from outside the loop itself, even though the loop's job is to chase it.</p>
+<p>The table below reinforces the contrast between the two loop types you've now seen defined and worked through:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Reinforcing loop (R)</th>
+<th>Balancing loop (B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Negative links around the loop</td>
+<td>Even (including zero)</td>
+<td>Odd</td>
+</tr>
+<tr>
+<td>Typical behavior</td>
+<td>Amplifies change, no built-in limit</td>
+<td>Counteracts change, seeks a goal</td>
+</tr>
+<tr>
+<td>Everyday name</td>
+<td>Vicious cycle / virtuous circle</td>
+<td>Negative feedback</td>
+</tr>
+<tr>
+<td>Worked example above</td>
+<td>Bank balance compounding</td>
+<td>Thermostat holding a setpoint</td>
+</tr>
+</tbody>
+</table>
+<p>The MicroSim below places a reinforcing loop and a balancing loop side by side, animating both their causal loop diagrams and their resulting behavior-over-time graphs together, so the two signatures — runaway growth versus goal-seeking convergence — are visible in direct contrast.</p>
+<h4 id="diagram-reinforcing-vs-balancing-loop-simulator">Diagram: Reinforcing vs. Balancing Loop Simulator</h4>
+<iframe src="https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/main.html" width="100%" height="582px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/main.html">Run the Reinforcing vs. Balancing Loop Simulator fullscreen</a></p>
+<details>
+<summary>Reinforcing vs. Balancing Loop Simulator (reused MicroSim)</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> reinforcing-vs-balancing<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> <a href="https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/">https://dmccreary.github.io/infographics/sims/reinforcing-vs-balancing/</a><br/>
+<strong>Source Repo:</strong> <a href="https://github.com/dmccreary/infographics/tree/main/docs/sims/reinforcing-vs-balancing">https://github.com/dmccreary/infographics/tree/main/docs/sims/reinforcing-vs-balancing</a></p>
+<p>Reused from the MicroSim catalog (WHAT match score 0.81). Side-by-side causal loop diagrams paired with animated time-series graphs, contrasting a reinforcing loop's unconstrained growth curve with a balancing loop's goal-seeking convergence curve. Learning objective: given animated behavior-over-time graphs, the learner will compare the characteristic signature of a reinforcing loop against that of a balancing loop (Bloom: Analyzing).</p>
+</details>
+<h2 id="reinforcing-loop-label">Reinforcing Loop Label</h2>
+<p>The <strong>reinforcing loop label</strong> is the specific "R" symbol convention marking a loop the counting rule classifies as reinforcing — a capital letter R, typically drawn inside a small circular-arrow icon whose curve direction matches the loop's own drawn direction on the page. This chapter has used exactly this label throughout: the red "R" circles you saw and clicked on in the population diagram are reinforcing loop labels in action.</p>
+<p>Because a loop can be drawn curving either clockwise or counterclockwise without changing anything about its actual polarity, the label comes in two visually mirrored versions:</p>
+<p><img alt="Reinforcing loop label, clockwise" class="mascot-admonition-img" src="../../sims/cld-viewer/reinforcing-loop-cw.png" /> <img alt="Reinforcing loop label, counterclockwise" class="mascot-admonition-img" src="../../sims/cld-viewer/reinforcing-loop-ccw.png" /></p>
+<p>Both icons mean precisely the same thing — reinforcing loop — and the choice between them is purely cosmetic, made to match whichever way the diagram's own arrows happen to curve.</p>
+<h2 id="balancing-loop-label">Balancing Loop Label</h2>
+<p>The <strong>balancing loop label</strong> is the "B" counterpart to the reinforcing loop label: a capital letter B, drawn inside the same style of circular-arrow icon, marking a loop the counting rule classifies as balancing. Like its reinforcing counterpart, it comes in clockwise and counterclockwise versions, chosen to match the diagram's drawn direction rather than to signal any difference in meaning:</p>
+<p><img alt="Balancing loop label, clockwise" class="mascot-admonition-img" src="../../sims/cld-viewer/balancing-loop-cw.png" /> <img alt="Balancing loop label, counterclockwise" class="mascot-admonition-img" src="../../sims/cld-viewer/balancing-loop-ccw.png" /></p>
+<p>Consider the thermostat loop worked through earlier in this chapter. Suppose one diagram artist draws its five arrows sweeping clockwise around the loop, while a colleague redraws the identical loop with the arrows sweeping counterclockwise instead — perhaps just to fit a different page layout. Nothing about the underlying causal links or the negative-link count has changed, so both artists correctly label their loop "balancing." The only difference is which of the two balancing-loop icons above matches their drawing: the first artist reaches for the clockwise B, the second for the counterclockwise B. A reader flipping between the two diagrams should recognize both loops as the exact same balancing structure, just mirrored on the page.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You can now read the formal notation of a causal loop diagram and correctly classify any loop it contains:</p>
+<ul>
+<li>A <strong>causal loop diagram</strong> represents a system as <strong>nodes</strong> (quantities that vary) connected by <strong>edges</strong>, each representing a <strong>causal link</strong> — a defensible claim that one variable's change causes another's.</li>
+<li>Every causal link is either a <strong>positive causal link</strong> (also called a <strong>same-direction link</strong>), where cause and effect move together, or a <strong>negative causal link</strong> (also called an <strong>opposite-direction link</strong>), where they move apart.</li>
+<li><strong>Loop polarity</strong> — whether a loop as a whole is reinforcing or balancing — is found using the <strong>negative-link counting rule</strong>: an even number of negative links around the loop means reinforcing; an odd number means balancing.</li>
+<li><strong>Loop identification</strong> is the skill of tracing and classifying each closed loop in a diagram separately, even when several loops share the same node.</li>
+<li>A <strong>loop marker</strong> — the <strong>reinforcing loop label</strong> (R) or <strong>balancing loop label</strong> (B), each available in clockwise and counterclockwise versions — records a loop's polarity directly on the diagram.</li>
+<li>A <strong>reinforcing loop</strong> amplifies change with no built-in stopping point; a <strong>balancing loop</strong> pushes a system back toward a goal, sometimes overshooting it when delays are involved.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Now Read Any Loop</p>
+<p><img alt="Sage celebrating with wings raised" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Whoo-hoo! You just went from sketching loose systems maps to reading precise causal loop notation — naming nodes, signing edges as positive or negative, and applying the negative-link counting rule to correctly label any loop as reinforcing or balancing. That's the exact skill every archetype in the chapters ahead will ask you to use.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+  <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../02-mental-models-and-systems-analysis-tools/" title="2. Mental Models and Systems Analysis Tools" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  2. Mental Models and Systems Analysis Tools
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="../04-feedback-delay-and-loop-dynamics/" title="4. Feedback, Delay, and Loop Dynamics" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  4. Feedback, Delay, and Loop Dynamics
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          
+            <div class="md-footer-copyright__highlight">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons License BY-NC-SA</a>
+            </div>
+          
+        </div>
+        <div class="md-social">
+  
+</div>
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

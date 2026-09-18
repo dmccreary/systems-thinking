@@ -1,0 +1,56 @@
+{
+  "title": "Breadth-First Search Step-by-Step",
+  "description": "Advance breadth-first search one ring at a time and predict which vertices it must visit next.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Graph Theory Fundamentals"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "bfs",
+  "library": "p5.js",
+  "canvasHeight": 523,
+  "completion_status": "implemented",
+  "chapter_number": 15,
+  "chapter_title": "Graph Theory Fundamentals",
+  "chapter_dir": "15-graph-theory-fundamentals",
+  "chapter_rel_dir": "chapters/15-graph-theory-fundamentals",
+  "educational": {
+    "learningObjective": "Given a starting vertex, the learner will predict which vertex breadth-first search visits next at each step, based on hop distance from the start.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Predict",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a vertex and an edge are",
+      "Can follow a path through a graph"
+    ],
+    "learningOutcomes": [
+      "Predict the next vertices BFS will visit",
+      "Explain the distance-d-before-distance-d+1 invariant",
+      "Recognize that BFS computes shortest hop distances as a side effect"
+    ],
+    "assessmentOpportunity": "Point at a vertex mid-traversal and ask the learner whether BFS visits it on the next step, with a justification in terms of hop distance."
+  },
+  "pedagogical": {
+    "interactionPattern": "Stepwise algorithm walkthrough with prediction prompts",
+    "instructionalStrategy": "Predict-then-reveal at every step",
+    "feedbackType": "Ring-by-ring coloring, distance labels, and a named prediction for the next step",
+    "misconceptionsAddressed": [
+      "That BFS follows one path to its end before backtracking",
+      "That the drawn length of an edge affects traversal order"
+    ],
+    "discussionQuestions": [
+      "Why does BFS find shortest paths while depth-first search does not?",
+      "What does hop distance mean in a social network? In a supply chain?",
+      "Where have you seen 'degrees of separation' used as a real measure?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Predict"
+}

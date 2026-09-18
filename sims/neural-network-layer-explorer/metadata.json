@@ -1,0 +1,56 @@
+{
+  "title": "Inside a Neural Network Layer",
+  "description": "Move seven sliders and watch a neural network layer's weighted sum and sigmoid activation recompute live.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Artificial Intelligence and Machine Learning Foundations"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "neural-network-layer-explorer",
+  "library": "p5.js",
+  "canvasHeight": 538,
+  "completion_status": "implemented",
+  "chapter_number": 22,
+  "chapter_title": "Artificial Intelligence and Machine Learning Foundations",
+  "chapter_dir": "22-ai-and-machine-learning-foundations",
+  "chapter_rel_dir": "chapters/22-ai-and-machine-learning-foundations",
+  "educational": {
+    "learningObjective": "Given a small neural network layer with adjustable input values and weights, the learner will compute the weighted sum, apply an activation function, and explain how changing one weight changes the layer's output.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Compute",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Can multiply and add decimals",
+      "Has heard the term neural network"
+    ],
+    "learningOutcomes": [
+      "Compute a weighted sum from inputs, weights and a bias",
+      "Describe what a sigmoid activation does to that sum",
+      "Explain how one weight controls how much one input matters"
+    ],
+    "assessmentOpportunity": "Give learners three inputs, three weights and a bias on paper and ask for the weighted sum and roughly what the sigmoid output will be."
+  },
+  "pedagogical": {
+    "interactionPattern": "Multi-slider live computation with visible arithmetic",
+    "instructionalStrategy": "Making a black box transparent by printing every intermediate value",
+    "feedbackType": "The full weighted-sum expression, the activation value, and output-node brightness",
+    "misconceptionsAddressed": [
+      "That a neuron does something more exotic than multiply, add and squash",
+      "That the bias is a minor detail rather than a shiftable threshold"
+    ],
+    "discussionQuestions": [
+      "What does a negative weight mean about an input's role?",
+      "Why squash the output into a range at all?",
+      "If training adjusts weights, what is the network actually learning?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Compute"
+}

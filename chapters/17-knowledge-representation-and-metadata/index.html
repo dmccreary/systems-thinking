@@ -1,0 +1,6743 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Entities, attributes, and relationships as the building blocks of knowledge representation, and how schemas, metadata registries, and business glossaries make that representation shareable across an organization.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/systems-thinking/chapters/17-knowledge-representation-and-metadata/">
+      
+      
+        <link rel="prev" href="../16-graph-database-architecture/">
+      
+      
+        <link rel="next" href="../18-data-management-and-governance/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Knowledge Representation and Metadata - Systems Thinking in the Age of AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Knowledge Representation and Metadata - Systems Thinking in the Age of AI" >
+      
+        <meta  property="og:description"  content="Entities, attributes, and relationships as the building blocks of knowledge representation, and how schemas, metadata registries, and business glossaries make that representation shareable across an organization." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/systems-thinking/assets/images/social/chapters/17-knowledge-representation-and-metadata/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/systems-thinking/chapters/17-knowledge-representation-and-metadata/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Knowledge Representation and Metadata - Systems Thinking in the Age of AI" >
+      
+        <meta  name="twitter:description"  content="Entities, attributes, and relationships as the building blocks of knowledge representation, and how schemas, metadata registries, and business glossaries make that representation shareable across an organization." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/systems-thinking/assets/images/social/chapters/17-knowledge-representation-and-metadata/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#knowledge-representation-and-metadata" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Systems Thinking in the Age of AI" class="md-header__button md-logo" aria-label="Systems Thinking in the Age of AI" data-md-component="logo">
+      
+  <img src="../../img/new-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Systems Thinking in the Age of AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Knowledge Representation and Metadata
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/systems-thinking" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Systems Thinking in the Age of AI" class="md-nav__button md-logo" aria-label="Systems Thinking in the Age of AI" data-md-component="logo">
+      
+  <img src="../../img/new-logo.png" alt="logo">
+
+    </a>
+    Systems Thinking in the Age of AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/systems-thinking" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About this Website
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/concept-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Quality Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/taxonomy-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Course Descriptions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Course Descriptions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/junior-high/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Junior High
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/high-school/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High School
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/college/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    College
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/grad-school/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graduate School
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/conference-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference Workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/executives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Executive Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-descriptions/government-agency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Government Agency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Chapters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations-of-systems-thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations of Systems Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-mental-models-and-systems-analysis-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Mental Models and Systems Analysis Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-cld-notation-and-loop-identification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Causal Loop Diagram Notation and Loop Identification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-feedback-delay-and-loop-dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Feedback, Delay, and Loop Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-stocks-flows-and-system-dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Stocks, Flows, and System Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-growth-patterns-and-nonlinear-behavior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Growth Patterns and Nonlinear Behavior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-feedback-resilience-and-robustness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Feedback Resilience and Robustness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-systems-archetypes-cross-cutting-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Systems Archetypes: Cross-Cutting Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-named-archetypes-and-limits-to-growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Named Archetypes and Limits to Growth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fixes-that-fail-and-shifting-the-burden/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Fixes That Fail and Shifting the Burden
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-tragedy-of-commons-and-success-to-successful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Tragedy of the Commons and Success to the Successful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-named-laws-technology-archetypes-and-complexity-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Named Laws, Technology Archetypes, and Complexity Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-leverage-points-iceberg-model-to-structural-change/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Leverage Points: The Iceberg Model to Structural Change
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-leverage-points-rules-paradigms-and-emergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Leverage Points: Rules, Paradigms, and Emergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-graph-theory-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Graph Theory Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-graph-database-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Graph Database Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    17. Knowledge Representation and Metadata
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    17. Knowledge Representation and Metadata
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-representation-and-knowledge-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Representation and Knowledge Bases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entities-attributes-and-relationships-the-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entities, Attributes, and Relationships: The Building Blocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entities, Attributes, and Relationships: The Building Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-entity-attribute-relationship-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Entity-Attribute-Relationship Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemas-the-blueprint-entities-follow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schemas: The Blueprint Entities Follow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schemas: The Blueprint Entities Follow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-mapping-two-schemas-to-a-canonical-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Mapping Two Schemas to a Canonical Schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-data-about-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata: Data About Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata: Data About Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-metadata-registry-vs-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Metadata Registry vs. Catalog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-meaning-across-the-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing Meaning Across the Organization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-data-management-and-governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Data Management and Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-enterprise-knowledge-graphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Enterprise Knowledge Graphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-organizational-silos-and-silo-busting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Organizational Silos and Silo Busting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-capability-maturity-model-for-systems-thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Capability Maturity Model for Systems Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-ai-and-machine-learning-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Artificial Intelligence and Machine Learning Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-ai-systems-dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. AI Systems Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-knowledge-systems-and-economic-complexity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Knowledge Systems and Economic Complexity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-systems-design-emerging-technology-and-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Systems Design, Emerging Technology, and Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-knowledge-graph-applications-and-data-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Knowledge Graph Applications and Data Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-systems-thinking-across-disciplines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Systems Thinking Across Disciplines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix A - Causal Loop Diagrams
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix A - Causal Loop Diagrams
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/vis-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vis Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/bank-balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bank Balance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/population/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Population
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/thermostat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Thermostat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/cld-layout-rules-vis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLD Layout Rules for Vis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/center-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Center Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/image-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/curve-direction-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curve Direction Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Misinformation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clds/reactflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReactFlow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix B - Archetypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix B - Archetypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/archetypes-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archetypes Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tragedy of the Commons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tragedy-of-the-commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tragedy-of-the-commons/classic-toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classic Story
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tragedy-of-the-commons/commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fixes that Fail
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fixes that Fail
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/banning-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Banning AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4_3" id="__nav_8_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Banning Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Banning Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/banning-books/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/banning-books/cld-generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/ban-the-box/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ban the Box
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cutting Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-stem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cutting STEM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4_7" id="__nav_8_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cutting AI Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Cutting AI Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-ai-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/cutting-ai-training/cld-generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/grade-inflation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grade Inflation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/layoffs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layoffs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/ngo-limited-effectiveness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NGO Limited Effectiveness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/open-offices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Offices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/painkillers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Painkillers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/return-to-office/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Return to Office
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/security-theater/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Theater
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/standardized-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardized Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/teach-to-the-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teach to Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/traffic-congestion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traffic Congestion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/fixes-that-fail/zero-tolerance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Tolerance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Escalation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Escalation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/escalation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Limits to Growth
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Limits to Growth
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/antibiotic-effectiveness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Antibiotic Effectiveness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/bacteria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bacteria Growth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/business-expansion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business Expansion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/gaming-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaming Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/humans-on-earth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Humans on Earth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/intensive-agriculture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intensive Agriculture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moore's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/social-media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Social Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/steam-engines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Steam Engines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/limits-to-growth/student-activity-overcommittment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Student Activity Overcommitment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shifting the Burden
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Shifting the Burden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/college-cramming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    College Cramming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/emergency-response/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emergency Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/er-overuse.md/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ER Overuse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/homework-help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homework Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/it-helpdesk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT Helpdesk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/pain-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pain Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/shifting-the-burden/ai-homework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Homework Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Success to the Successful
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Success to the Successful
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/ai-flywheel/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Flywheel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8_3" id="__nav_8_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Educational Funding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Educational Funding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/educational-funding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/educational-funding/cld-test-results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLD Test Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/healthcare-access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Healthcare Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/research-funding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Funding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/social-media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Social Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/sports-development/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sports Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/technology-platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/venture-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Venture Capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/wealth-inequality/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wealth Inequality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/success-to-the-successful/open-source-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8_12" id="__nav_8_8_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Drifting Goals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_8_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8_12">
+            <span class="md-nav__icon md-icon"></span>
+            Drifting Goals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/drifting-goals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Accidental Adversaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9">
+            <span class="md-nav__icon md-icon"></span>
+            Accidental Adversaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/accidental-adversaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Growth and Investment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_10">
+            <span class="md-nav__icon md-icon"></span>
+            Growth and Investment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/growth-and-investment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/growth-and-investment/bank-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bank Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_11" id="__nav_8_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technology Archetypes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_11">
+            <span class="md-nav__icon md-icon"></span>
+            Technology Archetypes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/ai-flywheel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The AI Flywheel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/communication-standards.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Standards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archetypes/tech/search-and-reuse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search and Reuse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Building Systems Thinking Capabilities
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Building Systems Thinking Capabilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/capability-maturity-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems Thinking Capability Maturity Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/microstrategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microstrategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/cmm-strategies/silo-busting-microstrategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Silo Busting Microstrategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of MicroSims
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/bathtub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bathtub Stock and Flow Simulator
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/bfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Breadth-First Search Step-by-Step
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cmm-for-systems-thinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Capability Maturity Model for Systems Thinking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cld-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Loop Diagram Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cause-effect-chain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cause-and-Effect Chain
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cld-editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLD Editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/data-model-layers-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptual, Logical, and Physical Data Models
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/data-warehouse-pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Ingestion Pipeline -- From Lake to Warehouse to Mart
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/lineage-stewardship-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Lineage and Stewardship Along a Pipeline
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/emergence-local-rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emergence From Local Rules
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/emergence-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emergence Simulator (Flocking)
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/entity-attribute-relationship-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entity-Attribute-Relationship Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/filter-bubble-formation-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter Bubble Formation Simulator
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/fishbone-cart-abandonment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fishbone Diagram — Cart Abandonment
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/intervention-to-implementation-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Intervention Point to Implementation
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-algorithms-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Algorithms Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/growth-rates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Growth Rate Comparison
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/knowledge-behavior-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Embodied Knowledge Moves, Fades, and Leaks
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cld-creation-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infographic Workflow for Creating a Causal Loop Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/neural-network-layer-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inside a Neural Network Layer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/agent-cld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intelligent Agent Causal Loop Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/interconnection-network-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interconnection Network Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/learning-experience-curve-chart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Curve vs. Experience Curve
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/leverage-iceberg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leverage Points Iceberg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/logistic-growth-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logistic Growth S-Curve Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/logistic-map-bifurcation-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logistic Map Bifurcation Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/loop-polarity-counter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loop Polarity Counter
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/canonical-schema-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping Two Schemas to a Canonical Schema
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/registry-vs-catalog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Registry vs. Catalog
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/microsim-growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MicroSim Growth Network Effect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moore's Law Timeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/multi-hop-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Hop Query Performance, RDBMS vs Graph Database
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/node-simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node Simulator Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/integration-cost-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Point-to-Point vs. Hub Integration Cost
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/population-simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Population Simulator with Causal Loop Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/predator-prey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Predator-Prey Population Dynamics
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/product-space-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Space Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/reinforcing-vs-balancing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reinforcing vs. Balancing Loop Simulator
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/stakeholder-power-interest-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stakeholder Power-Interest Grid
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/stock-flow-notation-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stock and Flow Notation Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/subsystem-nesting-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subsystem Nesting Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/system-boundary-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Boundary Explorer
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/systems-map-coffee-shop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems Map Example — Coffee Shop
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/book-concept-cluster-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Book's Concept Clusters, Connected
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/cmm-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Generic Software Capability Maturity Model
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/silo-reinforcing-loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Organizational Silo Reinforcing Loop
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/konigsberg-bridges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Seven Bridges of Konigsberg
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/tech-debt-feedback-loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Technical Debt Feedback Loop
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/algorithmic-disparity-loops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Feedback Loops Behind Algorithmic Disparate Impact
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ekg-adoption-loops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Reinforcing Loops Behind Knowledge Graph Adoption
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons Agent-Based Simulation
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/overfitting-error-curves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training vs. Validation Error -- Spotting the Overfitting Point
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-scale-out-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vertical vs Scale-Out Graph Architecture
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--implemented"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Stories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Stories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/tragedy-of-the-commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/fish-tank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fish Tank Adventure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/matthew-effect/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Matthew Effect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moore's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/death-of-gopher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Death of Gopher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/metcalfes-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metcalfe's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stories/measurement-trap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Measurement Trap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Sample Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/concept-enumeration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Enumeration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/concept-dependency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Dependency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/knowledge-graphs/graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Demo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/enumerating-archetypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enumerating Archetypes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Causal Loop Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archetype Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            Archetype Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/archetype-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/archetype-examples/fixes-that-fail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixes that Fail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/archetype-examples/tragedy-of-the-commons-cld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons CLD Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/vis-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vis Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/cld-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Causal Loop Viewer Using Vis.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/cld/cld-viewer-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Causal Loop Viewer Using Vis.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/microsims/population/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a Population Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/stories/moores-law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendicies/prompts/stories/tragedy-of-the-commons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tragedy of the Commons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-they-are-saying/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What They Are Saying
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colophon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colophon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-representation-and-knowledge-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Representation and Knowledge Bases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entities-attributes-and-relationships-the-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entities, Attributes, and Relationships: The Building Blocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entities, Attributes, and Relationships: The Building Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-entity-attribute-relationship-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Entity-Attribute-Relationship Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemas-the-blueprint-entities-follow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schemas: The Blueprint Entities Follow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schemas: The Blueprint Entities Follow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-mapping-two-schemas-to-a-canonical-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Mapping Two Schemas to a Canonical Schema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-data-about-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata: Data About Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata: Data About Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-metadata-registry-vs-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Metadata Registry vs. Catalog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-meaning-across-the-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing Meaning Across the Organization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="knowledge-representation-and-metadata">Knowledge Representation and Metadata</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter introduces entities, attributes, and relationships as the building blocks of knowledge representation, and shows how schemas, metadata registries, and business glossaries make that representation shareable across an organization. It bridges the mathematical graph theory of the previous chapters to enterprise data practice. Students completing this chapter will be able to model a simple domain as entities and relationships with a supporting schema.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Concept Impact Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knowledge Representation</td>
+<td>98</td>
+</tr>
+<tr>
+<td>Knowledge Base</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>585</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>175</td>
+</tr>
+<tr>
+<td>Relationship (Data Modeling)</td>
+<td>199</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>174</td>
+</tr>
+<tr>
+<td>Canonical Schema</td>
+<td>58</td>
+</tr>
+<tr>
+<td>Schema Matching</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Schema Mapping</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>67</td>
+</tr>
+<tr>
+<td>Metadata Registry</td>
+<td>61</td>
+</tr>
+<tr>
+<td>ISO Definition</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Data Dictionary</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Data Standards</td>
+<td>57</td>
+</tr>
+<tr>
+<td>Business Glossary</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations-of-systems-thinking/">1. Foundations of Systems Thinking</a></li>
+<li><a href="../15-graph-theory-fundamentals/">15. Graph Theory Fundamentals</a></li>
+<li><a href="../16-graph-database-architecture/">16. Graph Database Architecture</a></li>
+</ul>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Chapters 15 and 16 gave you the mathematics and the machinery of graphs: vertices, edges, and the databases built to traverse them at speed. This chapter turns to a more human question -- once an organization decides to represent what it knows as a graph, what exactly goes inside each vertex, and how does everyone agree on what those contents mean? That question turns out to have a well-developed answer, borrowed from decades of enterprise data-modeling practice.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Graph Math to Real Knowledge</p>
+<p><img alt="Sage waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+You know how to store a graph -- now let's fill it with something worth knowing. This chapter hands you the building blocks and the shared-meaning tools an entire organization needs before its graph becomes trustworthy. Let's zoom out and see the whole system!</p>
+</div>
+<h2 id="knowledge-representation-and-knowledge-bases">Knowledge Representation and Knowledge Bases</h2>
+<p>Before an organization can put anything useful into a graph, it needs a general answer to a foundational question: how should facts about the world be encoded so that a computer can store, retrieve, and reason over them? <strong>Knowledge representation</strong> is the field concerned with encoding facts, concepts, and their relationships in a form that a computer system can store and process -- everything Chapter 15 covered, from RDF triples to ontologies, is one particular technique for doing exactly this. Knowledge representation is the umbrella discipline; RDF, property graphs, and ontologies are specific tools underneath it.</p>
+<p>Once facts have actually been encoded this way and collected together, the resulting collection has its own name. A <strong>knowledge base</strong> is a structured collection of facts and relationships, represented so that software can query and reason over it, rather than a loose pile of documents a human must read to extract meaning. A company's product catalog stored as connected, machine-readable facts -- this product <em>hasComponent</em> that part, this part <em>suppliedBy</em> that vendor -- is a knowledge base; the same information as a stack of PDF spec sheets is not, even though a human reader could extract identical facts from either one.</p>
+<h2 id="entities-attributes-and-relationships-the-building-blocks">Entities, Attributes, and Relationships: The Building Blocks</h2>
+<p>Every knowledge base, no matter how it is technically stored, is built from the same three ingredients, and getting comfortable with this vocabulary is the single most useful skill this chapter offers. An <strong>entity</strong> is a distinct, identifiable thing that an organization wants to represent and reason about -- a customer, a product, an employee, a supplier, a piece of equipment. An entity is the data-modeling world's name for exactly what Chapter 15 called a vertex: one member of the set of things being represented, just described in the vocabulary a business analyst rather than a mathematician would use.</p>
+<p>An entity on its own is nearly empty -- useful modeling requires describing what is actually true about it. An <strong>attribute</strong> is a named property that describes a characteristic of an entity, holding a specific value for that entity -- a Customer entity's <code>name</code>, <code>email</code>, and <code>signup date</code> are each attributes, and for any one specific customer those attributes hold specific values like "Ana Reyes," "<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#110;&#97;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#97;&#110;&#97;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>," and "2020-03-14." And entities rarely stand alone: a <strong>relationship (data modeling)</strong> is a named, meaningful association between two or more entities, capturing how they relate to each other in the domain being modeled -- a Customer <em>placedOrder</em> an Order, an Employee <em>worksAt</em> a Department, exactly the kind of connection an edge represents in the underlying graph.</p>
+<p>Return to the Ana-and-Acme example Chapter 15 used to introduce property graphs, and every one of these three terms is already visible in it: Ana is an entity, her <code>age</code> and <code>name</code> are attributes, Acme Corp is a second entity, and <code>worksAt</code> is the relationship connecting them -- with its own <code>since</code> attribute describing the relationship itself. The diagram below lets you click through this exact example and see each piece labeled.</p>
+<h4 id="diagram-entity-attribute-relationship-explorer">Diagram: Entity-Attribute-Relationship Explorer</h4>
+<iframe src="../../sims/entity-attribute-relationship-explorer/main.html" width="100%" height="502px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/entity-attribute-relationship-explorer/main.html">Run the Entity-Attribute-Relationship Explorer MicroSim fullscreen</a></p>
+<details>
+<summary>Entity-Attribute-Relationship Explorer</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> entity-attribute-relationship-explorer<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: given a small worked example, the learner will classify each labeled piece of a knowledge representation as an entity, an attribute, or a relationship, and identify which attributes belong to an entity versus to a relationship (Bloom: Analyzing).</p>
+<p>Canvas: responsive vis-network container, minimum 480px height, full container width, recomputed on window resize.</p>
+<p>Visual design: two large rounded-rectangle vertices labeled "Ana : Person" and "Acme Corp : Company," connected by one labeled directed edge reading "WORKS_AT." Each entity vertex has two small satellite circles drawn near it representing its attributes ("name: Ana," "age: 34" near the Ana vertex; "name: Acme Corp," "industry: Manufacturing" near the Acme Corp vertex). The WORKS_AT edge has one small satellite circle of its own, colored differently from the entity attributes, labeled "since: 2020" -- visually distinguishing an entity's attribute from a relationship's attribute.</p>
+<p>Interaction: clicking either large entity vertex opens an infobox reading "Entity: a distinct, identifiable thing being represented" and lists its attributes. Clicking any small attribute circle opens an infobox reading "Attribute: a named property describing a characteristic" and states which entity or relationship it belongs to. Clicking the WORKS_AT edge opens an infobox reading "Relationship: a named, meaningful association between entities" and notes that this relationship itself carries the <code>since</code> attribute, not either entity.</p>
+<p>Implementation: vis-network with a fixed node/edge dataset (no physics simulation needed), a click event handler bound to every node and edge that populates a shared infobox panel below the canvas.</p>
+</details>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Entity-Attribute-Relationship Is Graph Vocabulary in Business Clothes</p>
+<p><img alt="Sage thinking with a raised wing" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Notice that nothing here is actually new math: an entity is a vertex, a relationship is an edge, and an attribute is exactly the key-value property Chapter 15's property graph already gave both of them. Data modelers and graph theorists arrived at the identical structure from two different directions and gave it two different vocabularies -- once you can translate between them, you can read either community's documentation.</p>
+</div>
+<h2 id="schemas-the-blueprint-entities-follow">Schemas: The Blueprint Entities Follow</h2>
+<p>Knowing that "Customer" is an entity with certain attributes is only useful if that definition is written down somewhere and applied consistently every time a Customer entity is created. A <strong>schema</strong> is the formal structure that defines which entity types, attributes, and relationships are permitted in a knowledge representation, and what data type or constraint each attribute must satisfy -- a schema might state that every Customer entity must have a <code>name</code> attribute of type text and may optionally have an <code>age</code> attribute of type integer, ruling out a Customer entity with no name at all.</p>
+<p>Large organizations rarely have just one schema, and that turns out to be a real problem. Two different departments almost always model the same real-world concept slightly differently -- a sales system's "Client" and a support system's "Customer" may describe the identical person with different field names, different formats, and different optional attributes. A <strong>canonical schema</strong> is a single, organization-wide schema that every department's local schema is expected to map onto, serving as the shared, authoritative structure that lets data from different systems be combined without ambiguity about what each field means.</p>
+<p>Getting from several local schemas to one canonical schema requires two distinct steps, each with its own name. <strong>Schema matching</strong> is the process of identifying which fields or entity types in two different schemas correspond to the same real-world concept, even when they are named differently -- recognizing that "Client" in one system and "Customer" in another both refer to the same underlying entity type. <strong>Schema mapping</strong> is the resulting set of explicit transformation rules that convert data from one schema's structure into another's, once schema matching has identified which fields correspond -- the concrete rule "copy <code>client_full_name</code> into <code>customer.name</code>" is a schema mapping, while the act of figuring out that those two fields <em>should</em> be connected in the first place was schema matching.</p>
+<p>The diagram below works through exactly this two-step process using two small sample systems and a canonical target schema.</p>
+<h4 id="diagram-mapping-two-schemas-to-a-canonical-schema">Diagram: Mapping Two Schemas to a Canonical Schema</h4>
+<iframe src="../../sims/canonical-schema-mapping/main.html" width="100%" height="502px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/canonical-schema-mapping/main.html">Run the Mapping Two Schemas to a Canonical Schema MicroSim fullscreen</a></p>
+<details>
+<summary>Mapping Two Schemas to a Canonical Schema</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> canonical-schema-mapping<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: given two source schemas with differently-named fields, the learner will identify which fields correspond to the same canonical concept and state the transformation rule that maps one to the other (Bloom: Applying).</p>
+<p>Canvas: responsive vis-network container, minimum 480px height, full container width, recomputed on window resize.</p>
+<p>Visual design: three columns of boxes. Left column labeled "System A: Sales" contains fields <code>cust_name</code> and <code>cust_email</code>. Middle column labeled "System B: Support" contains fields <code>full_name</code> and <code>email_address</code>. Right column labeled "Canonical Schema: Person" contains fields <code>name</code> and <code>email</code>. Dashed arrows connect <code>cust_name</code> and <code>full_name</code> to <code>name</code>, and <code>cust_email</code> and <code>email_address</code> to <code>email</code>.</p>
+<p>Interaction: clicking any field box in System A or System B opens an infobox describing schema matching: "This field was matched to the canonical <code>name</code>/<code>email</code> field because both represent the same real-world concept despite different naming." Clicking any dashed arrow opens an infobox describing schema mapping: the exact transformation rule the arrow represents (for example, "Rule: canonical <code>name</code> = System A's <code>cust_name</code>" ). A "Show All Mappings" button highlights every arrow simultaneously and displays a summary count of how many source fields map into each canonical field.</p>
+<p>Implementation: vis-network with a fixed three-column node layout (no physics simulation needed), click handlers bound to both nodes and edges populating a shared infobox panel.</p>
+</details>
+<p>The table below reinforces this four-concept cluster now that each has been defined and demonstrated.</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>What it is</th>
+<th>Sales/Support example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schema</td>
+<td>The formal structure entities must follow</td>
+<td>System A's own definition of a Client record</td>
+</tr>
+<tr>
+<td>Canonical schema</td>
+<td>The single shared, organization-wide schema</td>
+<td>The target "Person" schema both systems map onto</td>
+</tr>
+<tr>
+<td>Schema matching</td>
+<td>Identifying which fields correspond</td>
+<td>Recognizing <code>cust_name</code> and <code>full_name</code> mean the same thing</td>
+</tr>
+<tr>
+<td>Schema mapping</td>
+<td>The resulting transformation rule</td>
+<td>"Copy <code>cust_name</code> into canonical <code>name</code>"</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Matching and Mapping Are Easy to Mix Up -- That's Normal</p>
+<p><img alt="Sage giving an encouraging nod" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+If schema matching and schema mapping keep blurring together in your mind, you are in good company -- even experienced data architects use the two terms loosely in conversation. One memory anchor that helps: matching answers "do these correspond?", while mapping answers "how exactly do I convert one into the other?" Matching comes first; mapping is what you build once matching gives you an answer.</p>
+</div>
+<h2 id="metadata-data-about-data">Metadata: Data About Data</h2>
+<p>A schema tells software what shape an entity must take, but it does not by itself tell a human reader what a field actually <em>means</em> in plain language, who owns it, or where its permitted values came from. That broader layer of description has its own long-established name. <strong>Metadata</strong> is data that describes other data -- a field's name, its definition, its data type, its permitted values, its owner, and its origin, none of which is the data itself, all of which is necessary to use that data correctly.</p>
+<p>Metadata is only useful at scale if it is collected somewhere consistent rather than scattered across individual developers' memories and outdated wiki pages. A <strong>metadata registry</strong> is a governed, authoritative system of record that stores the approved definitions, formats, and permitted values for an organization's data elements, along with a version history of who approved each definition and when -- the single place a data element's <em>intended</em> meaning lives, independent of any one system that happens to store it. This differs sharply from a data catalog, a related but distinct tool that instead records what data actually exists across an organization's systems by scanning and documenting it as it is found -- a metadata registry describes what a field <em>should</em> mean; a catalog describes what a field, as actually implemented somewhere, <em>does</em> contain.</p>
+<p>Writing a good definition for a metadata registry entry is harder than it sounds, and an international standard exists specifically to guide it. An <strong>ISO definition</strong> is a definition written according to ISO/IEC 11179's rules for metadata: precise, concise, and non-circular, meaning it must not use the term being defined, or an obvious variant of it, anywhere in its own text. A poorly written definition of "Customer" as "a person or organization that is a customer of the company" is circular and useless; an ISO-style definition instead reads "a person or organization that has purchased, or is authorized to purchase, a product or service from the organization" -- precise enough to settle a real dispute about who counts.</p>
+<p>A simpler, less formally governed cousin of the metadata registry is worth distinguishing too. A <strong>data dictionary</strong> is a document or lightweight tool listing an organization's data elements along with brief definitions and basic format information, without the registry's full versioning, approval workflow, or authority structure -- useful as a quick reference, but not the kind of governed source of truth a metadata registry is built to be.</p>
+<p>The diagram below lets you explore how a registry's authoritative definitions and a catalog's discovered, real-world data connect to each other.</p>
+<h4 id="diagram-metadata-registry-vs-catalog">Diagram: Metadata Registry vs. Catalog</h4>
+<iframe src="https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html" width="100%" height="582px" scrolling="no"></iframe>
+
+<p><a class="md-button" href="https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html">Run the Registry vs. Catalog MicroSim fullscreen</a></p>
+<details>
+<summary>Metadata Registry vs. Catalog (reused MicroSim)</summary>
+<p>Type: graph-model
+<strong>sim-id:</strong> registry-vs-catalog<br/>
+<strong>Library:</strong> vis-network<br/>
+<strong>Status:</strong> Reused<br/>
+<strong>Source:</strong> <a href="https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html">https://dmccreary.github.io/context-graph/sims/registry-vs-catalog/main.html</a><br/>
+<strong>Source Repo:</strong> <a href="https://github.com/dmccreary/context-graph/tree/main/docs/sims/registry-vs-catalog">https://github.com/dmccreary/context-graph/tree/main/docs/sims/registry-vs-catalog</a></p>
+<p>Reused from the MicroSim catalog (WHAT match score 0.7565; both catalog and live URL verified working, and the underlying script confirmed generic -- a Registration Authority, Data Element, Value Domain, and Version History on the registry side, a Crawler Bot, discovered table, and quality score on the catalog side, none of it specific to the source repository's own subject area). Clicking any node on the left "Registry" panel reveals what that piece of a governed data-element definition means; clicking any node on the right "Catalog" panel reveals what a discovery tool actually found in a live system; clicking the dashed orange cross-panel link explains how a catalog field's discovered name connects back to the registry's authoritative definition. Learning objective: given a metadata registry and a metadata catalog shown side by side, the learner will distinguish what each one is responsible for and explain how the dashed link between them keeps a discovered field's meaning traceable to its governed definition (Bloom: Analyzing).</p>
+</details>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Write Definitions the ISO Way: Cover the Term's Hand</p>
+<p><img alt="Sage pointing helpfully" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+A quick self-check for writing an ISO definition: after drafting it, literally cover up the term you just defined and read only the definition back. If the definition still needs that hidden term, or an obvious variant of it, to make sense, it is circular -- rewrite it using only other, already-understood words.</p>
+</div>
+<h2 id="sharing-meaning-across-the-organization">Sharing Meaning Across the Organization</h2>
+<p>Individually governed definitions only deliver their full value once they are applied consistently across every system and every team, which is exactly what the final two concepts in this chapter accomplish. <strong>Data standards</strong> are agreed-upon, often industry-wide conventions for how data should be formatted, coded, or structured -- an ISO 8601 date written as <code>2026-09-17</code> rather than "9/17/26" or "17 Sept '26" is a data standard in action, and Chapter 12's discussion of shared, open protocols enabling self-organizing structure applies just as directly to data formats as it did to network protocols.</p>
+<p>A <strong>business glossary</strong> is an organization-wide, plain-language reference of business terms and their agreed meanings, written for business staff rather than for database engineers -- where a metadata registry's ISO definition of "Customer" is precise enough to resolve a technical dispute, a business glossary entry for the same term is written so that a sales representative, a finance analyst, and a customer-support agent can all read it and agree they mean the same thing by the word.</p>
+<p>The table below reinforces this closing cluster of concepts, tying the whole chapter's building blocks together.</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Scope</th>
+<th>Written for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metadata</td>
+<td>A single field's descriptive facts</td>
+<td>Whoever needs that one field's details</td>
+</tr>
+<tr>
+<td>Metadata registry</td>
+<td>An organization's governed, versioned field definitions</td>
+<td>Data architects and stewards</td>
+</tr>
+<tr>
+<td>Data dictionary</td>
+<td>A lightweight, informal field reference</td>
+<td>Developers needing a quick lookup</td>
+</tr>
+<tr>
+<td>Data standards</td>
+<td>Shared formatting and coding conventions</td>
+<td>Every system exchanging data</td>
+</tr>
+<tr>
+<td>Business glossary</td>
+<td>Plain-language term definitions</td>
+<td>Business staff across departments</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You can now model a simple domain with the standard building blocks of knowledge representation, and describe the shared-meaning infrastructure that keeps that model consistent across an organization:</p>
+<ul>
+<li><strong>Knowledge representation</strong> encodes facts so software can reason over them, producing a <strong>knowledge base</strong> built from three ingredients: <strong>entities</strong>, their <strong>attributes</strong>, and the <strong>relationships (data modeling)</strong> connecting them -- the same structure Chapter 15 called vertices, properties, and edges.</li>
+<li>A <strong>schema</strong> defines what shape those entities must take; a <strong>canonical schema</strong> gives an entire organization one shared shape to map onto, reached through <strong>schema matching</strong> (finding correspondences) followed by <strong>schema mapping</strong> (writing the transformation rules).</li>
+<li><strong>Metadata</strong> describes data about data, governed authoritatively in a <strong>metadata registry</strong> and written precisely using <strong>ISO definition</strong> style, or kept more informally in a <strong>data dictionary</strong>.</li>
+<li><strong>Data standards</strong> and a <strong>business glossary</strong> extend consistent meaning beyond any one system, to every team and every format an organization uses.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Can Now Model a Domain and Govern Its Meaning</p>
+<p><img alt="Sage celebrating with wings raised" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Whoo-hoo! From a single entity's attributes all the way to an organization-wide business glossary, you now have the full knowledge-representation toolkit -- and you can explain not just how to model a domain, but how to keep everyone's understanding of it aligned. Next up: the relational-database habits and governance practices most organizations already have in place before they ever add a knowledge graph.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+  <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../16-graph-database-architecture/" title="16. Graph Database Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  16. Graph Database Architecture
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="../18-data-management-and-governance/" title="18. Data Management and Governance" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  18. Data Management and Governance
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          
+            <div class="md-footer-copyright__highlight">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons License BY-NC-SA</a>
+            </div>
+          
+        </div>
+        <div class="md-social">
+  
+</div>
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

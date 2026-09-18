@@ -1,0 +1,56 @@
+{
+  "title": "Learning Curve vs. Experience Curve",
+  "description": "Compare the learning curve against the experience curve on a log-scaled production axis and see why one falls faster.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Knowledge Systems and Economic Complexity"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "learning-experience-curve-chart",
+  "library": "Chart.js",
+  "canvasHeight": 520,
+  "completion_status": "implemented",
+  "chapter_number": 24,
+  "chapter_title": "Knowledge Systems and Economic Complexity",
+  "chapter_dir": "24-knowledge-systems-and-economic-complexity",
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity",
+  "educational": {
+    "learningObjective": "Given live cost-versus-cumulative-production curves, the learner will compare the learning curve (labor time only) and the experience curve (total unit cost) and explain why the experience curve typically declines faster.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Compare",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Can read a line chart",
+      "Knows what unit cost means"
+    ],
+    "learningOutcomes": [
+      "Compare the two curves at a given cumulative volume",
+      "Explain why the experience curve declines faster",
+      "Interpret a logarithmic production axis correctly"
+    ],
+    "assessmentOpportunity": "Ask learners to predict both curves' values at a volume not shown, using the doubling rule, then check with the slider."
+  },
+  "pedagogical": {
+    "interactionPattern": "Slider playhead across two power-law curves on a log axis",
+    "instructionalStrategy": "Controlled comparison - same formula, two retention rates",
+    "feedbackType": "Both values plus the computed gap at every slider position",
+    "misconceptionsAddressed": [
+      "That the learning curve and the experience curve are the same thing",
+      "That cost falls with time rather than with cumulative volume"
+    ],
+    "discussionQuestions": [
+      "Why does cost fall per doubling rather than per unit?",
+      "What happens to the curve when a product is redesigned?",
+      "Can an organization buy its way down the experience curve?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Compare"
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Interconnection Network Explorer",
+  "description": "Click any node in a six-stage supply chain to trace which parts a disruption there would reach, directly and indirectly.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Foundations of Systems Thinking"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "interconnection-network-explorer",
+  "library": "vis-network",
+  "canvasHeight": 520,
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking",
+  "educational": {
+    "learningObjective": "Given a supply-chain network diagram, the learner will trace which nodes are affected, directly and indirectly, by a disruption at a chosen node.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a node and an edge are",
+      "Has seen a system drawn as a diagram of connected parts"
+    ],
+    "learningOutcomes": [
+      "Trace the downstream reach of a disruption through a network",
+      "Distinguish direct effects from indirect effects",
+      "Explain why a node with few direct connections can still have wide reach"
+    ],
+    "assessmentOpportunity": "Give learners a node and ask them to list the directly affected nodes and then the indirectly affected ones, without clicking. Check whether they follow the dashed edge as well as the main chain."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-highlight with breadth-first traversal",
+    "instructionalStrategy": "Prediction before observation, then explanation of the gap",
+    "feedbackType": "Color highlighting plus a generated sentence naming affected nodes",
+    "misconceptionsAddressed": [
+      "That only directly connected parts are affected by a disruption",
+      "That a supply chain is a single linear sequence"
+    ],
+    "discussionQuestions": [
+      "Why did the 2021 chip shortage surprise car manufacturers who had no direct relationship with chip factories?",
+      "If you could add one connection to make this network more resilient, where would you add it?",
+      "Does being upstream always mean having more influence?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
+}

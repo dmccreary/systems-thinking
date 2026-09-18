@@ -1,0 +1,56 @@
+{
+  "title": "Filter Bubble Formation Simulator",
+  "description": "Click the content you would actually open and watch topic diversity collapse over a handful of rounds.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Systems Design, Emerging Technology, and Practice"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "filter-bubble-formation-simulator",
+  "library": "p5.js",
+  "canvasHeight": 472,
+  "completion_status": "implemented",
+  "chapter_number": 25,
+  "chapter_title": "Systems Design, Emerging Technology, and Practice",
+  "chapter_dir": "25-systems-design-emerging-technology-and-practice",
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice",
+  "educational": {
+    "learningObjective": "Given a simulated content feed, the learner will apply the social feed ranking loop by repeatedly selecting content, and observe the resulting decline in topic diversity that defines a filter bubble.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Apply",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Has used a social media or recommendation feed",
+      "Knows what a reinforcing loop is"
+    ],
+    "learningOutcomes": [
+      "Apply a feed ranking loop by making repeated selections",
+      "Observe and describe the resulting loss of topic diversity",
+      "Explain how a filter bubble forms without deliberate bias in the ranking rule"
+    ],
+    "assessmentOpportunity": "Ask learners to explain, in three sentences, how an unbiased ranking rule produced a narrowed feed. The explanation must reference the loop rather than the rule."
+  },
+  "pedagogical": {
+    "interactionPattern": "Repeated-choice simulation with a cumulative reinforcement rule",
+    "instructionalStrategy": "Experiential - the learner produces the phenomenon with their own choices",
+    "feedbackType": "A diversity bar chart and percentage recalculated after every round",
+    "misconceptionsAddressed": [
+      "That filter bubbles require deliberately biased algorithms",
+      "That the user chose to narrow their own feed"
+    ],
+    "discussionQuestions": [
+      "Whose responsibility is the filter bubble - the engineer's, the user's, or nobody's?",
+      "Would you want a feed that deliberately showed you things you would not click?",
+      "What is the equivalent loop in how you choose what to read professionally?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Apply"
+}

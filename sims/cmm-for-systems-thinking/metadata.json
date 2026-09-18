@@ -45,10 +45,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of capability maturity model for systems thinking",
-    "Apply capability maturity model for systems thinking to solve problems",
-    "Visualize and interpret capability maturity model for systems thinking relationships",
-    "Experiment with parameters to observe their effects on capability maturity model for systems thinking"
+    "Identify the five maturity levels of the systems thinking capability model and the behaviors defining each",
+    "Distinguish an organization that optimizes for immediate outcomes from one that maps system relationships systematically",
+    "Evaluate an organization's current maturity level against the framework's level descriptors",
+    "Design a development roadmap that advances an organization from its current level to the next",
+    "Explain why higher maturity levels reduce unintended consequences of strategic decisions"
   ],
   "pedagogical": {
     "pattern": "assessment",

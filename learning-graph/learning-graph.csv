@@ -1,0 +1,529 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,System,,FOUND
+2,Subsystem,1,FOUND
+3,System Boundary,1,FOUND
+4,Environment (System),1|3,FOUND
+5,Input,1,FOUND
+6,Output,1,FOUND
+7,Throughput,5|6,FOUND
+8,Open System,3|4,FOUND
+9,Closed System,3|4,FOUND
+10,Systems Thinking,1|2,FOUND
+11,Linear Thinking,10,FOUND
+12,Reductionism,11,FOUND
+13,Holism,10|12,FOUND
+14,Complexity,1|2,FOUND
+15,Complicated Vs Complex,14,FOUND
+16,Interconnection,1|2,FOUND
+17,Interdependence,16,FOUND
+18,Cause And Effect,,FOUND
+19,Correlation Vs Causation,18,FOUND
+20,Root Cause,18,FOUND
+21,Root Cause Analysis,20,FOUND
+22,Symptom,20,FOUND
+23,Mental Model,10,FOUND
+24,Systems Map,10|16,FOUND
+25,System Mapping,24,FOUND
+26,Rich Picture,24,FOUND
+27,Structure Drives Behavior,10|16,FOUND
+28,Dynamics,1|7,FOUND
+29,System Theory,1|10,FOUND
+30,Wicked Problem,14|17,FOUND
+31,Five Whys,20|21,FOUND
+32,Fishbone Diagram,20|21,FOUND
+33,Second-Order Effect,18,FOUND
+34,Ripple Effect,33,FOUND
+35,Cascading Failure,34,FOUND
+36,Emergent Property,14|16,FOUND
+37,Emergence,36,FOUND
+38,Self-Organization,37,FOUND
+39,Sensitivity Analysis,10,FOUND
+40,Model Assumptions,23,FOUND
+41,Model Limitations,23|40,FOUND
+42,Model Validation,40|41,FOUND
+43,Scenario Testing,42,FOUND
+44,Causal Loop Diagram,16|18|24,DYNM
+45,Node,44,DYNM
+46,Edge (CLD),44|45,DYNM
+47,Causal Link,18|46,DYNM
+48,Positive Causal Link,47,DYNM
+49,Negative Causal Link,47,DYNM
+50,Loop Polarity,48|49,DYNM
+51,Same-Direction Link,48,DYNM
+52,Opposite-Direction Link,49,DYNM
+53,Negative-Link Counting Rule,50|51|52,DYNM
+54,Loop Identification,44|53,DYNM
+55,Loop Marker,54,DYNM
+56,Reinforcing Loop,54|55,DYNM
+57,Balancing Loop,54|55,DYNM
+58,Reinforcing Loop Label,55|56,DYNM
+59,Balancing Loop Label,55|57,DYNM
+60,Feedback,18,DYNM
+61,Feedback Loop,44|60,DYNM
+62,Positive Feedback,56|60,DYNM
+63,Negative Feedback,57|59|60,DYNM
+64,Vicious Cycle,56|58,DYNM
+65,Virtuous Cycle,56,DYNM
+66,Loop Dominance,56|57,DYNM
+67,Shifting Dominance,66,DYNM
+68,Influence Diagram,44,DYNM
+69,Stock And Flow Diagram,44,DYNM
+70,Delay,28|33,DYNM
+71,Feedback Delay,61|70,DYNM
+72,Time Delay,70,DYNM
+73,System Delay,1|70,DYNM
+74,Variable (CLD),44,DYNM
+75,Condition,74,DYNM
+76,Outcome,74|75,DYNM
+77,Stock,1|69,DYNM
+78,Flow,1|69,DYNM
+79,Inflow,77|78,DYNM
+80,Outflow,77|78,DYNM
+81,Buffer,77,DYNM
+82,Bottleneck,77,DYNM
+83,Constraint,1,DYNM
+84,Limiting Factor,82|83,DYNM
+85,Stock And Flow Model,77|78,DYNM
+86,Aging Chain,85,DYNM
+87,Co-Flow,85,DYNM
+88,Conveyor Model,85,DYNM
+89,Accumulation,77|79|80|88,DYNM
+90,Rate Of Change,78,DYNM
+91,Systems Dynamics,61|77|78|87,DYNM
+92,Dynamic Equilibrium,77|91,DYNM
+93,Steady State,92,DYNM
+94,Equilibrium,92|93,DYNM
+95,Homeostasis,63|94,DYNM
+96,Set Point,63|95,DYNM
+97,Goal-Seeking Behavior,63|96,DYNM
+98,Self-Correcting System,97,DYNM
+99,Sensor (Control),96,DYNM
+100,Actuator (Control),96,DYNM
+101,Control System,63|99|100,DYNM
+102,Linear Growth,90,DYNM
+103,Linear Relationship,102,DYNM
+104,Exponential Growth,62|90,DYNM
+105,Exponential Blind Spot,104,DYNM
+106,Compound Interest,104,DYNM
+107,Compounding Effect,62|104,DYNM
+108,Nonlinear,90|103,DYNM
+109,Nonlinear Behavior,108,DYNM
+110,Nonlinear Feedback,61|108,DYNM
+111,Threshold Effect,109,DYNM
+112,Tipping Point,111,DYNM
+113,Bifurcation,109|111,DYNM
+114,Chaos Theory,109|113,DYNM
+115,Butterfly Effect,114,DYNM
+116,Attractor,114,DYNM
+117,Phase Transition,111|113,DYNM
+118,Edge Of Chaos,114|117,DYNM
+119,Sharpness Of Transition,117,DYNM
+120,Unpredictability Of Emergence,37|114,DYNM
+121,Oscillation,66|67|109,DYNM
+122,Overshoot,84|104,DYNM
+123,Overshoot And Collapse,122,DYNM
+124,S-Curve,84|104,DYNM
+125,Carrying Capacity,84|124,DYNM
+126,Diminishing Returns,84|103,DYNM
+127,Resilience,1|101,DYNM
+128,Robustness,127,DYNM
+129,Fragility,127,DYNM
+130,Antifragility,129,DYNM
+131,Adaptation,127,DYNM
+132,Self-Regulation,98|101,DYNM
+133,Amplification,62,DYNM
+134,Dampening,63,DYNM
+135,Sustainability,125|127,DYNM
+136,Suboptimization,17,DYNM
+137,Policy Resistance,63|97,DYNM
+138,System Pushback,73|137,DYNM
+139,Delayed Consequence,70|72,DYNM
+140,Unintended Consequence,18|33,DYNM
+141,Systems Archetype,44|56|57,ARCH
+142,Quick Fix,63|141,ARCH
+143,Symptomatic Solution,22|142,ARCH
+144,Root Cause Solution,20|142,ARCH
+145,Fundamental Solution,144,ARCH
+146,Initial Success,142,ARCH
+147,Side Effect,140,ARCH
+148,Negative Externality,18|140,ARCH
+149,Positive Externality,18|140,ARCH
+150,Free Rider Problem,141|148,ARCH
+151,Common Pool Resource,141,ARCH
+152,Collective Action Problem,150|151,ARCH
+153,Misaligned Incentive,141|150,ARCH
+154,Winner-Take-All Dynamics,56|141,ARCH
+155,Compounding Advantage,56|107,ARCH
+156,Self-Fulfilling Prophecy,56|141,ARCH
+157,Resource Allocation,141,ARCH
+158,Resource Concentration,155|157,ARCH
+159,Goal Erosion,97|141,ARCH
+160,Eroding Goals,159,ARCH
+161,Corrective Action,63|97,ARCH
+162,Goal-Performance Gap,76|97|159,ARCH
+163,Crisis Point,139|141,ARCH
+164,Learned Helplessness,143|163,ARCH
+165,Capability Erosion,143,ARCH
+166,Addiction Cycle,64|142|165,ARCH
+167,Limits To Growth Archetype,56|125|141,ARCH
+168,Fixes That Fail Archetype,141|142|143,ARCH
+169,Shifting The Burden Archetype,141|145|165,ARCH
+170,Tragedy Of The Commons Archetype,141|150|151,ARCH
+171,Success To Successful Archetype,141|155|156,ARCH
+172,Drifting Goals Archetype,141|159|160,ARCH
+173,Escalation Archetype,56|66|141,ARCH
+174,Accidental Adversaries Archetype,140|141|153,ARCH
+175,Underinvestment Archetype,84|107|123|141,ARCH
+176,Seeking The Wrong Goal Archetype,141|162,ARCH
+177,Moore's Law,104|167,CASE
+178,Scaling Laws,104|167,CASE
+179,Dunbar's Number,125|167,CASE
+180,Attention Economy,125|167,CASE
+181,Computational Resource Limit,84|167,CASE
+182,Unsustainable Growth,84|104,CASE
+183,Sustainable Growth,104|135,CASE
+184,Physical Limits,84|167,CASE
+185,Economic Limits,84|167,CASE
+186,Campbell's Law,140|168,CASE
+187,Goodhart's Law,168|186,CASE
+188,Induced Demand,104|168,CASE
+189,Brain Drain,140|168,CASE
+190,Proxy Metric,186|187,CASE
+191,Measurement Trap,168|190,CASE
+192,Streetlight Effect,191,CASE
+193,Authentic Assessment,191,CASE
+194,Portfolio Assessment,193,CASE
+195,Human-AI Collaboration,169,CASE
+196,AI Dependence,164|165|169,CASE
+197,Symptom Relief,143|169,CASE
+198,Resource Depletion,151|170,CASE
+199,Digital Commons,151|170,CASE
+200,Commons Governance Solution,145|170,CASE
+201,Collective Governance,200,CASE
+202,Rational Self-Interest,153|170,CASE
+203,Reverse Tragedy Of The Commons,170|200,CASE
+204,Information Pollution,140|170,CASE
+205,Misinformation,204,CASE
+206,Collective Intelligence,152|201,CASE
+207,Mob Behavior,156|170,CASE
+208,Ecosystem Balance,94|170,CASE
+209,Digital Divide,158|171,CASE
+210,Algorithmic Bias,19|140|171,CASE
+211,Systemic Inequality,158|171,CASE
+212,Equitable Intervention Point,145|171,CASE
+213,Influence Concentration,158|171,CASE
+214,Cumulative Advantage,155|171,CASE
+215,Initial Advantage,146|214,CASE
+216,Network Trust,17|171,CASE
+217,Network Topology,17,CASE
+218,Scale-Free Network,155|217,CASE
+219,Small-World Network,217,CASE
+220,Network Externality,148|149|217,CASE
+221,Network Effect,171|217,CASE
+222,Metcalfe's Law,221,CASE
+223,Matthew Effect,171|214,CASE
+224,Thurstone's Law,171,CASE
+225,Path Dependence,155|214,CASE
+226,Knowledge Path Dependence,225,CASE
+227,Open Standard,153|199|201,CASE
+228,Protocol Governance,201|216|227,CASE
+229,AI Flywheel,56|221,CASE
+230,Search And Reuse,141|168,CASE
+231,Communication Standards,227|228,CASE
+232,Hub-And-Spoke Architecture,217|218|231,CASE
+233,Point-To-Point Integration,217,CASE
+234,Quadratic Scaling,220|221|222|233,CASE
+235,Faceted Search,230,CASE
+236,Diffusion Process,112|217|221,CASE
+237,Epidemic Model,92|236,CASE
+238,Agent-Based Modeling,141|217,CASE
+239,Cellular Automata,38|238,CASE
+240,Multi-Agent System,179|219|238,CASE
+241,Adaptive Management,39|43|127,CASE
+242,Learning Organization,10|241,CASE
+243,Systems Leadership,242,CASE
+244,Collective Impact,201|203|242|243,CASE
+245,Theory Of Change,44|141|172|173|175|176,CASE
+246,Leverage Point,27|61|141,LEVR
+247,Leverage Points Hierarchy,246,LEVR
+248,Leverage Points Iceberg,247,LEVR
+249,Iceberg Model,23|248,LEVR
+250,Events Layer,249,LEVR
+251,Patterns Layer,249|250,LEVR
+252,Structures Layer,249|251,LEVR
+253,Mental Models Layer,23|249|252,LEVR
+254,Shallow Leverage Point,247,LEVR
+255,Structural Leverage Point,247|254,LEVR
+256,Deep Leverage Point,247|255,LEVR
+257,Transformative Leverage Point,247|256,LEVR
+258,Constants And Parameters,83|254,LEVR
+259,Material Stocks And Flows,81|85|254,LEVR
+260,Negative Feedback Strength,63|134|255,LEVR
+261,Positive Feedback Strength,62|133|255,LEVR
+262,Information Flow Structure,44|255,LEVR
+263,Rules Of The System,256,LEVR
+264,Self-Organizing System Structure,38|256,LEVR
+265,Goals Of The System,97|257,LEVR
+266,Mindset Or Paradigm,23|257,LEVR
+267,Power To Transcend Paradigms,257|266,LEVR
+268,Constitution-Level Rule,263,LEVR
+269,Paradigm Shift,266|267,LEVR
+270,Parameter Change,258,LEVR
+271,Low-Leverage Intervention,258|259,LEVR
+272,Medium-Leverage Intervention,260|261|262,LEVR
+273,High-Leverage Intervention,263|264|265|266,LEVR
+274,Resistance To Leverage Change,138|273,LEVR
+275,Level Confusion Mistake,247|274,LEVR
+276,Skipping Levels Mistake,247|274,LEVR
+277,Underestimating Resistance,274,LEVR
+278,Measurement Obsession Mistake,190|247,LEVR
+279,Complex Adaptive System,15|29|37|38|109|110|118|119,LEVR
+280,Emergent Risk Management,35|115|120|140|279,LEVR
+281,Adaptive Capacity,127|128|130|279,LEVR
+282,Coevolution,131|279,LEVR
+283,Distributed Control,38|116|132|240|279,LEVR
+284,Local Interaction,16|279,LEVR
+285,Global Pattern,36|284,LEVR
+286,Bottom-Up Behavior,38|284,LEVR
+287,Top-Down Constraint,263|279,LEVR
+288,Graph (Data Structure),,GRPH
+289,Vertex,288,GRPH
+290,Edge (Graph),288|289,GRPH
+291,Directed Graph,290,GRPH
+292,Undirected Graph,290,GRPH
+293,Weighted Graph,290,GRPH
+294,Property Graph,289|290,GRPH
+295,Labeled Property Graph,294,GRPH
+296,RDF,288,GRPH
+297,Reification Challenges,296,GRPH
+298,Cypher,294,GRPH
+299,GQL,298,GRPH
+300,Semantic Web,296,GRPH
+301,Ontology,296|300,GRPH
+302,Taxonomy,301,GRPH
+303,Graph Traversal,289|290,GRPH
+304,Pointer Hopping,303,GRPH
+305,Shortest Path,303,GRPH
+306,Centrality,303,GRPH
+307,Adjacency,289|290,GRPH
+308,Native Graph Database,289|290|303,GRPH
+309,Distributed Graph Database,308,GRPH
+310,Scale-Out Graph Architecture,309,GRPH
+311,Scale Out,309|310,GRPH
+312,Graph-Optimized Hardware,308,GRPH
+313,Edge Traversal Performance,290|303,GRPH
+314,Highly Connected Data,16|294,GRPH
+315,RDBMS JOIN,314,GRPH
+316,JOIN Fear Modeling,315,GRPH
+317,Seven Bridges Of Konigsberg,288,GRPH
+318,Graph Query Language,298|303,GRPH
+319,Graph Database,308|318,GRPH
+320,Knowledge Representation,301|319,KREP
+321,Knowledge Base,320,KREP
+322,Entity,,KREP
+323,Attribute,322,KREP
+324,Relationship (Data Modeling),16|322,KREP
+325,Schema,322|323|324,KREP
+326,Canonical Schema,325,KREP
+327,Schema Matching,325,KREP
+328,Schema Mapping,327,KREP
+329,Metadata,325,KREP
+330,Metadata Registry,329,KREP
+331,ISO Definition,329,KREP
+332,Data Dictionary,330|331,KREP
+333,Data Standards,326|330,KREP
+334,Business Glossary,332,KREP
+335,Relational Database,322|325,KREP
+336,Primary Key,335,KREP
+337,Foreign Key,335|336,KREP
+338,Normalized Data Model,325|335,KREP
+339,Denormalized Data Model,338,KREP
+340,Star Schema,338|339,KREP
+341,Data Mart,340,KREP
+342,Central Data Warehouse,340|341,KREP
+343,Data Lake,342,KREP
+344,Data Integration,324|333,KREP
+345,Data Integration Cost,315|344,KREP
+346,ETL Process,344,KREP
+347,API,344,KREP
+348,Interoperability,333|347,KREP
+349,Single Source Of Truth,333|344,KREP
+350,Data Quality,333,KREP
+351,Data Governance,333|350,KREP
+352,Data Stewardship,351,KREP
+353,Data Steward,352,KREP
+354,Data Lineage,351,KREP
+355,Entity Resolution,322|344,KREP
+356,Master Data Management,351|355,KREP
+357,Low-Resolution Data Model,338,KREP
+358,Data Denormalization,339,KREP
+359,Enterprise Knowledge Graph,10|319|320,ENTK
+360,Digital Twin,279|359,ENTK
+361,Knowledge Graph Adaptability,279|359,ENTK
+362,The God Graph,359,ENTK
+363,Systems Thinker Role,10|359,ENTK
+364,Graph Systems Thinking,10|359,ENTK
+365,Predictive Feedback Cycle,61|359,ENTK
+366,CIO Influence Diagram,68|359,ENTK
+367,Employee Career Path Loop,56|359,ENTK
+368,Data Standardization Cycle,333|359,ENTK
+369,Organizational Silo,1|8|141|359,ENTK
+370,Silo Busting,145|369,ENTK
+371,Accidental Competitor,174|369,ENTK
+372,Bounded Rationality,22|136|202|369,ENTK
+373,Growth By Acquisition,104|106|182|188|369,ENTK
+374,Cross-Functional Team,369|370,ENTK
+375,Organizational Culture,369,ENTK
+376,Change Management,161|269|369,ENTK
+377,Incentive Structure,153|369,ENTK
+378,Organizational Structure,369,ENTK
+379,Matrix Organization,378,ENTK
+380,Centralization,378,ENTK
+381,Decentralization,378,ENTK
+382,Governance Model,200|378,ENTK
+383,Chief Data Officer,351|369,ENTK
+384,Data Literacy,333|369,ENTK
+385,Digital Transformation,359|369,ENTK
+386,Legacy System,9|369,ENTK
+387,Technical Debt,386,ENTK
+388,Shadow IT,369|386,ENTK
+389,Vendor Lock-In,386,ENTK
+390,Cross-Team Collaboration,374,ENTK
+391,Shared Metrics,370|374,ENTK
+392,Common Vocabulary,334|370,ENTK
+393,Hierarchy (Systems),1|378,ENTK
+394,Capability Maturity Model,141|369,ENTK
+395,Maturity Level,394,ENTK
+396,Maturity Assessment,395,ENTK
+397,Organizational Maturity,369|395,ENTK
+398,Repeatable Maturity Level,395,ENTK
+399,Defined Maturity Level,398,ENTK
+400,Linear Maturity Level,395,ENTK
+401,Aware Maturity Level,400,ENTK
+402,Analytical Maturity Level,401,ENTK
+403,Integrated Maturity Level,402,ENTK
+404,Transformative Maturity Level,403,ENTK
+405,Microstrategy,370|394,ENTK
+406,Code Reuse,230|405,ENTK
+407,Artificial Intelligence,,ARTI
+408,Machine Learning,407,ARTI
+409,Algorithm,,ARTI
+410,Large Language Model,178|408|409,ARTI
+411,Neural Network,408|409,ARTI
+412,Training Data,408,ARTI
+413,Model Training,411|412,ARTI
+414,Prediction Model,408|409,ARTI
+415,Data Set,409,ARTI
+416,Model Drift,413|414,ARTI
+417,Overfitting,413,ARTI
+418,Generative AI,410|411,ARTI
+419,Reinforcement Learning,408,ARTI
+420,Prompt Engineering,410,ARTI
+421,AI Hallucination,410|417,ARTI
+422,Human-In-The-Loop,97|408,ARTI
+423,AI Alignment,140|418,ARTI
+424,AI Governance,382|423,ARTI
+425,Global AI Governance,424,ARTI
+426,Explainability,408|423,ARTI
+427,Transparency (AI),426,ARTI
+428,Accountability (AI),424|427,ARTI
+429,Automation,407,ARTI
+430,Autonomy,429,ARTI
+431,Human Oversight,195|196|422|429,ARTI
+432,Data Advantage,155|408,ARTI
+433,Algorithmic Improvement,62|408,ARTI
+434,Platform Dynamics,154|213|221|229,ARTI
+435,Technology Adoption,104|221,ARTI
+436,Search Engine Improvement Cycle,229|433,ARTI
+437,Recommendation System Refinement,229|433,ARTI
+438,College Admissions Algorithm,210|408,ARTI
+439,Credit Scoring System,210|408,ARTI
+440,Job Recommendation Platform,192|210|437,ARTI
+441,Content Moderation Policy,142|197|408,ARTI
+442,EdTech Funding Gap,209|212,ARTI
+443,Healthcare AI Access Disparity,189|209|408,ARTI
+444,Venture Capital Funding Cycle,126|155|185|214|223,ARTI
+445,Knowledge Vs Information,10|320,KSEC
+446,Law Of Time,445,KSEC
+447,Law Of Space,445,KSEC
+448,Law Of Value,445,KSEC
+449,Market Renewal,221|448,KSEC
+450,Creative Destruction,104|449,KSEC
+451,Knowledge Embodiment,445,KSEC
+452,Cross-Generational Knowledge,446|451,KSEC
+453,Geographic Knowledge Stickiness,447|451,KSEC
+454,Tacit Knowledge,445,KSEC
+455,Explicit Knowledge,445|454,KSEC
+456,Economic Complexity Index,448,KSEC
+457,Principle Of Relatedness,456,KSEC
+458,Product Space,456|457,KSEC
+459,Knowledge Decay,224|446|451,KSEC
+460,Learning Curve,90|451,KSEC
+461,Experience Curve,460,KSEC
+462,Architectural Innovation,226|450|458,KSEC
+463,Knowledge Spillover,221|451,KSEC
+464,Infinite Alphabet Metaphor,458,KSEC
+465,Human-Centered Design,10|13|30|141,DSGN
+466,Multi-Stakeholder System Design,465,DSGN
+467,Stakeholder Analysis,25|26|194|465,DSGN
+468,Stakeholder,1,DSGN
+469,Human Flourishing Feedback,62|465,DSGN
+470,Anticipating Side Effects,31|32|147|465,DSGN
+471,Implementation Strategy,245|246|465,DSGN
+472,Feedback Mechanism Design,61|71|465,DSGN
+473,Intervention Point,246|465,DSGN
+474,Emerging Technology System,279|407,DSGN
+475,Quantum Computing Claims,105|177|181|407|474,DSGN
+476,Brain-Computer Interface,184|407|474,DSGN
+477,Vector Database,319|408,DSGN
+478,Embedding (AI),411|477,DSGN
+479,Systems Thinking Life Skill,10|65|127,DSGN
+480,Personal Resilience,127|479,DSGN
+481,Personal Thinking Toolkit,23|479,DSGN
+482,Filter Bubble,180|210|221,DSGN
+483,Echo Chamber,205|206|207|482,DSGN
+484,Social Determinants Of Health,141|208,DSGN
+485,Health Disparities,209|211|484,DSGN
+486,Market Equilibrium,94|221,DSGN
+487,Speculative Bubble,104|105|486,DSGN
+488,Habit Formation Loop,56|64|166,DSGN
+489,Social Feed Ranking Loop,56|408,DSGN
+490,Thermostat Balancing Loop,57|96,DSGN
+491,Data Silo,344|369,KGAP
+492,Single View Of Customer,356|491,KGAP
+493,Customer 360,492,KGAP
+494,Golden Record,355|492,KGAP
+495,Master Data,356,KGAP
+496,Reference Data,495,KGAP
+497,Data Domain,325|495,KGAP
+498,Conceptual Data Model,322|325,KGAP
+499,Logical Data Model,338|498,KGAP
+500,Physical Data Model,335|499,KGAP
+501,Semantic Layer,320|325,KGAP
+502,Linked Data,296|344,KGAP
+503,FAIR Data Principles,350|502,KGAP
+504,Data Provenance,331|354,KGAP
+505,Graph Algorithms,303|305|306,KGAP
+506,Graph Neural Networks,411|505,KGAP
+507,Graph Analytics,505,KGAP
+508,Community Detection,507,KGAP
+509,Link Prediction,507,KGAP
+510,Recommendation Engine,234|235|408|506|508,KGAP
+511,Fraud Detection Graph,355|507,KGAP
+512,Supply Chain Graph,232|344|507,KGAP
+513,Knowledge Base Reasoning,301|321,KGAP
+514,Inference Engine,513,KGAP
+515,Context Graph,359|410|477,KGAP
+516,Economic System,1|10,DISC
+517,Ecological System,1|10,DISC
+518,Social System,1|10,DISC
+519,Urban System,1|10,DISC
+520,Biological System,1|10,DISC
+521,Political System,1|10,DISC
+522,Education System,1|10,DISC
+523,Market System,516,DISC
+524,Supply Chain,1|344,DISC
+525,Ecosystem,198|208|237|244|517,DISC
+526,Population Dynamics,85|86|94,DISC
+527,Predator-Prey Dynamics,63|526,DISC
+528,Public Policy Feedback,61|521,DISC

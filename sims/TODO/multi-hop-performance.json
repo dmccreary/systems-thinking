@@ -1,0 +1,15 @@
+{
+  "sim_id": "multi-hop-performance",
+  "diagram_name": "Multi-Hop Query Performance, RDBMS vs Graph Database",
+  "chapter_number": 16,
+  "chapter_title": "Graph Database Architecture",
+  "chapter_dir": "16-graph-database-architecture",
+  "chapter_rel_dir": "chapters/16-graph-database-architecture",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: chart\n**sim-id:** multi-hop-performance<br/>\n**Library:** Chart.js<br/>\n**Status:** Reused<br/>\n**Source:** https://dmccreary.github.io/organizational-analytics/sims/multi-hop-performance/main.html<br/>\n**Source Repo:** https://github.com/dmccreary/organizational-analytics/tree/main/docs/sims/multi-hop-performance\n\nReused from the MicroSim catalog (WHAT match score 0.8371; both catalog and live URL verified working). A grouped bar chart plots RDBMS join response time against graph-database traversal time for query depths of 1 through 5 hops -- the RDBMS bars grow from 10 milliseconds at one hop to over 13 minutes at five hops, while the graph-database bars stay near flat, from 5 to 18 milliseconds. A \"Y-Axis Scale\" toggle button switches between a logarithmic and a linear view, changing what the same data visually communicates. Learning objective: given response-time data at increasing traversal depth, the learner will explain why RDBMS JOIN cost grows so much faster than graph-database traversal cost as connection depth increases (Bloom: Analyzing)."
+}

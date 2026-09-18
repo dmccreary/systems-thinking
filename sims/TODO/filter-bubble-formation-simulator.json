@@ -1,0 +1,15 @@
+{
+  "sim_id": "filter-bubble-formation-simulator",
+  "diagram_name": "Filter Bubble Formation Simulator",
+  "chapter_number": 25,
+  "chapter_title": "Systems Design, Emerging Technology, and Practice",
+  "chapter_dir": "25-systems-design-emerging-technology-and-practice",
+  "chapter_rel_dir": "chapters/25-systems-design-emerging-technology-and-practice",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a simulated content feed, the learner will apply the social feed ranking loop by repeatedly selecting content, and observe the resulting decline in topic diversity that defines a filter bubble (Bloom: Apply).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: microsim\n**sim-id:** filter-bubble-formation-simulator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning objective: given a simulated content feed, the learner will apply the social feed ranking loop by repeatedly selecting content, and observe the resulting decline in topic diversity that defines a filter bubble (Bloom: Apply).\n\nCanvas: 700x450 default, responsive -- recompute layout from container width inside `updateCanvasSize()`, called first in `setup()` per this book's MicroSim conventions; canvas parented to `document.querySelector('main')`.\n\nVisual elements: a row of 8 content cards per \"round,\" each labeled with one of five topic categories (Sports, Politics, Cooking, Technology, Travel) and a distinct color per category; a horizontal bar chart below the cards showing the current topic-diversity distribution of what the feed is now showing, recalculated after every round.\n\nControls: built with p5.js's own controls per this book's control conventions -- clicking a content card counts as \"engaging\" with it; a `createButton()` labeled \"Next Round\" regenerates the next row of 8 cards, biased increasingly toward whichever categories were clicked most in previous rounds (implementing the reinforcing ranking loop); a `createButton()` labeled \"Reset Feed\" returns the distribution to a uniform mix across all five categories.\n\nBehavior: after each round, the algorithm recomputes each category's selection probability as a weighted function of its cumulative click count, so categories that were never clicked become increasingly rare and eventually disappear from the feed entirely after several rounds, visibly narrowing the bar chart -- concretely demonstrating a filter bubble forming from ordinary engagement-following behavior, with no deliberate bias in the ranking rule itself.\n\nImplementation: p5.js, an array of category weights updated each round using a simple reinforcement formula (`weight += clicks * learningRate`), card colors and the diversity bar chart redrawn every round, `windowResized()` recalculating card layout from current container width."
+}

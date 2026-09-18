@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Conceptual, Logical, and Physical Data Models</title>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 440px; }</style>
+</head>
+<body>
+    <main class="container">
+        <div class="diagram-panel">
+            <div class="mermaid" id="diagram">
+graph TD
+    conceptual["Conceptual<br/>Data Model"]
+    logical["Logical<br/>Data Model"]
+    physical["Physical<br/>Data Model"]
+
+    conceptual -- "adds attributes and relationships" --> logical
+    logical -- "adds technology-specific implementation" --> physical
+
+    classDef concept fill:#DCE6F1,stroke:#2E5A87,stroke-width:3px,color:#212529,font-size:16px
+    classDef logic fill:#EBDFDC,stroke:#8E6E63,stroke-width:3px,color:#212529,font-size:16px
+    classDef phys fill:#F8E3CE,stroke:#E8871A,stroke-width:3px,color:#212529,font-size:16px
+
+    class conceptual concept
+    class logical logic
+    class physical phys
+
+    click conceptual call showInfo("conceptual") "Most abstract layer"
+    click logical call showInfo("logical") "Middle layer"
+    click physical call showInfo("physical") "Most concrete layer"
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-swatch" style="background:#DCE6F1;border-color:#2E5A87"></span>Most abstract</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#F8E3CE;border-color:#E8871A"></span>Most concrete</div>
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>Conceptual, Logical, and Physical Data Models</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Click any box in the diagram to see what it means.</p>
+            </div>
+        </div>
+    </main>
+    <script src="nodeinfo.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            theme: 'default',
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+        });
+    </script>
+</body>
+</html>

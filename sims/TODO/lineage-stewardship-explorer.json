@@ -1,0 +1,15 @@
+{
+  "sim_id": "lineage-stewardship-explorer",
+  "diagram_name": "Data Lineage and Stewardship Along a Pipeline",
+  "chapter_number": 18,
+  "chapter_title": "Data Management and Governance",
+  "chapter_dir": "18-data-management-and-governance",
+  "chapter_rel_dir": "chapters/18-data-management-and-governance",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a field's path from source system to report, the learner will trace its data lineage and identify which stage a named data steward is accountable for (Bloom: Analyzing).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: graph-model\n**sim-id:** lineage-stewardship-explorer<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nLearning objective: given a field's path from source system to report, the learner will trace its data lineage and identify which stage a named data steward is accountable for (Bloom: Analyzing).\n\nCanvas: responsive vis-network container, minimum 480px height, full container width, recomputed on window resize.\n\nVisual design: five vertices in a left-to-right chain: \"CRM System (source),\" \"ETL Transform,\" \"Central Data Warehouse,\" \"Sales Data Mart,\" \"Executive Report.\" Each vertex is connected to the next by a directed edge. A sixth vertex, \"Data Steward: Sales Ops,\" sits below the chain with dashed edges connecting it to the Central Data Warehouse and Sales Data Mart vertices, showing which stages that steward is accountable for.\n\nInteraction: clicking any vertex in the main chain opens an infobox stating what data lineage tracks at that stage (for example, clicking \"ETL Transform\" explains what transformation was applied). Clicking the Data Steward vertex opens an infobox explaining data stewardship and listing the two stages this steward owns. A \"Trace Full Lineage\" button highlights every edge in the main chain simultaneously and displays the full path as text: \"CRM System -> ETL Transform -> Central Data Warehouse -> Sales Data Mart -> Executive Report.\"\n\nImplementation: vis-network with a fixed node/edge dataset (no physics simulation needed), click handlers bound to every node populating a shared infobox panel, a separate button handler for the full-trace highlight."
+}

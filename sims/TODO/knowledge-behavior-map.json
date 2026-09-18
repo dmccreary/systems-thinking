@@ -1,0 +1,15 @@
+{
+  "sim_id": "knowledge-behavior-map",
+  "diagram_name": "How Embodied Knowledge Moves, Fades, and Leaks",
+  "chapter_number": 24,
+  "chapter_title": "Knowledge Systems and Economic Complexity",
+  "chapter_dir": "24-knowledge-systems-and-economic-complexity",
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity",
+  "library": "Mermaid",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a central embodied-knowledge example, the learner will classify four ways that knowledge can move, fade, or transfer beyond its original holder, and distinguish cross-generational transfer (intentional) from knowledge spillover (unintentional) (Bloom: Analyze).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: diagram\n**sim-id:** knowledge-behavior-map<br/>\n**Library:** Mermaid<br/>\n**Status:** Specified\n\nLearning objective: given a central embodied-knowledge example, the learner will classify four ways that knowledge can move, fade, or transfer beyond its original holder, and distinguish cross-generational transfer (intentional) from knowledge spillover (unintentional) (Bloom: Analyze).\n\nVisual style: Mermaid flowchart, `graph TD`, with one central node \"Knowledge Embodiment (e.g., a company's manufacturing process)\" connected outward to four surrounding nodes: \"Cross-Generational Knowledge,\" \"Geographic Knowledge Stickiness,\" \"Knowledge Decay,\" and \"Knowledge Spillover.\"\n\nInteractivity requirement: every node, including the central one, MUST have a Mermaid `click` directive wired to a JavaScript `showInfo(id)` callback that opens an infobox with that concept's one-sentence definition, drawn from this chapter's own wording, plus one concrete example distinct from the ones already used in the surrounding prose (e.g., clicking \"Knowledge Decay\" shows a radiologist's diagnostic skill growing rusty after years away from reading scans).\n\nColor scheme: the central node in the book's accent orange; the two \"intentional/controlled\" outward nodes (Cross-Generational Knowledge, Geographic Knowledge Stickiness) in a cool slate-blue; the two \"unintentional/lossy\" outward nodes (Knowledge Decay, Knowledge Spillover) in a warning amber, so the color coding itself previews the analytical distinction the learner is meant to draw.\n\nImplementation: Mermaid `graph TD` syntax embedded in the page's generated sim wrapper, sharing the `showInfo(id)` JavaScript helper already used by this book's other clickable Mermaid diagrams, populating a shared infobox `<div>` below the diagram."
+}

@@ -1,0 +1,15 @@
+{
+  "sim_id": "konigsberg-bridges",
+  "diagram_name": "The Seven Bridges of Konigsberg",
+  "chapter_number": 16,
+  "chapter_title": "Graph Database Architecture",
+  "chapter_dir": "16-graph-database-architecture",
+  "chapter_rel_dir": "chapters/16-graph-database-architecture",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given the Konigsberg bridge layout redrawn as a graph, the learner will compute each landmass's degree and apply Euler's odd-degree rule to explain why no solution exists (Bloom: Analyzing).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: graph-model\n**sim-id:** konigsberg-bridges<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nLearning objective: given the Konigsberg bridge layout redrawn as a graph, the learner will compute each landmass's degree and apply Euler's odd-degree rule to explain why no solution exists (Bloom: Analyzing).\n\nCanvas: responsive vis-network container, minimum 500px height, full container width, recomputed on window resize.\n\nVisual design: four circular vertices labeled \"Kneiphof Island,\" \"North Bank,\" \"South Bank,\" and \"East Bank,\" positioned to loosely mirror the real 1736 map. Seven curved edges connect them: two edges between Kneiphof Island and North Bank, two between Kneiphof Island and South Bank, one between Kneiphof Island and East Bank, one between North Bank and East Bank, and one between South Bank and East Bank -- reproducing the real bridge layout, where curved parallel edges represent the two separate bridges between the same pair of landmasses.\n\nInteraction: clicking any vertex opens an infobox showing its label and its degree (the count of edges touching it: Kneiphof Island = 5, North Bank = 3, South Bank = 3, East Bank = 3). A \"Check for a Solution\" button recolors every odd-degree vertex red and every even-degree vertex green, then displays Euler's rule in a text panel below the canvas: \"A walk crossing every edge exactly once exists only if the graph has zero or two odd-degree vertices. This graph has four -- so no such walk is possible.\" A \"Reset Colors\" button restores the default vertex coloring.\n\nImplementation: vis-network with a fixed node/edge dataset (no physics simulation needed since the layout is historically fixed), click event handler bound to each node for the infobox, a separate DOM button wired to a function that recolors nodes by parity of their computed degree."
+}

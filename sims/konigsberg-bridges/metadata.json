@@ -1,0 +1,56 @@
+{
+  "title": "The Seven Bridges of Konigsberg",
+  "description": "Compute each landmass's degree and apply Euler's odd-degree rule to see why the famous walk is impossible.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Graph Database Architecture"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "konigsberg-bridges",
+  "library": "vis-network",
+  "canvasHeight": 580,
+  "completion_status": "implemented",
+  "chapter_number": 16,
+  "chapter_title": "Graph Database Architecture",
+  "chapter_dir": "16-graph-database-architecture",
+  "chapter_rel_dir": "chapters/16-graph-database-architecture",
+  "educational": {
+    "learningObjective": "Given the Konigsberg bridge layout redrawn as a graph, the learner will compute each landmass's degree and apply Euler's odd-degree rule to explain why no solution exists.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Apply",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Knows what a vertex and an edge are",
+      "Can count connections at a point"
+    ],
+    "learningOutcomes": [
+      "Compute the degree of a vertex",
+      "Apply Euler's rule to decide whether an Eulerian path exists",
+      "Explain why geometry is irrelevant to the answer"
+    ],
+    "assessmentOpportunity": "Give learners a different small graph and ask whether an Eulerian path exists, with the degree counts as justification."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-inspect with a rule-checking button",
+    "instructionalStrategy": "Productive failure - learners attempt the impossible task before the rule is given",
+    "feedbackType": "Degree readout per vertex plus a parity-based recoloring and rule statement",
+    "misconceptionsAddressed": [
+      "That a clever enough route exists if you look hard enough",
+      "That the physical layout of the city affects the answer"
+    ],
+    "discussionQuestions": [
+      "Why is 'you must leave every place you enter' the whole proof?",
+      "What made Euler's abstraction away from geography so powerful?",
+      "Where else does only-the-connections-matter reasoning apply?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Apply"
+}

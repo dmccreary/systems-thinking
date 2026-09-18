@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>The Seven Bridges of Konigsberg</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 580px; }</style>
+</head>
+<body>
+    <main class="container">
+        <div class="title">The Seven Bridges of Konigsberg</div>
+        <div class="layout">
+            <div id="network"></div>
+            <div class="side-panel">
+                <div class="controls" id="controls"></div>
+                <div class="info-panel">
+                    <div class="info-title" id="info-title">Details</div>
+                    <div class="info-body" id="info-body">
+                        <p class="info-placeholder">Click any node or edge to see details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="konigsberg-bridges.js"></script>
+</body>
+</html>

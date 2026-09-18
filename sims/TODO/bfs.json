@@ -1,0 +1,15 @@
+{
+  "sim_id": "bfs",
+  "diagram_name": "Breadth-First Search Step-by-Step",
+  "chapter_number": 15,
+  "chapter_title": "Graph Theory Fundamentals",
+  "chapter_dir": "15-graph-theory-fundamentals",
+  "chapter_rel_dir": "chapters/15-graph-theory-fundamentals",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: microsim\n**sim-id:** bfs<br/>\n**Library:** p5.js<br/>\n**Status:** Reused<br/>\n**Source:** https://dmccreary.github.io/graph-algorithms/sims/bfs/bfs.html<br/>\n**Source Repo:** https://github.com/dmccreary/graph-algorithms/tree/main/docs/sims/bfs\n\nReused from the MicroSim catalog (WHAT match score 0.8154; note the catalog's listed fullscreen URL pointed at a stale `main.html` path that returns a 404 -- the correct, verified live file is `bfs.html`, used above). A central starting vertex and its surrounding neighbor vertices are drawn on canvas; \"Next Step\" advances the search one ring at a time, coloring each newly visited vertex and labeling it with its hop distance from the start, \"Finish\" completes the traversal instantly, and \"Restart\" resets every vertex to unvisited. Learning objective: given a starting vertex, the learner will predict which vertex breadth-first search visits next at each step, based on hop distance from the start (Bloom: Applying)."
+}

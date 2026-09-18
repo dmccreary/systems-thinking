@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>From Intervention Point to Implementation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 440px; }</style>
+</head>
+<body>
+    <main class="container">
+        <div class="diagram-panel">
+            <div class="mermaid" id="diagram">
+graph LR
+    s1["Choose<br/>Intervention Point"]
+    s2["Anticipate<br/>Side Effects"]
+    s3["Design Feedback<br/>Mechanism"]
+    s4["Select Implementation<br/>Strategy"]
+    s5["Human Flourishing<br/>Feedback"]
+
+    s1 --> s2 --> s3 --> s4 --> s5
+    s5 -. "revise if the data surprises you" .-> s1
+
+    classDef step fill:#DCE6F1,stroke:#2E5A87,stroke-width:3px,color:#212529,font-size:15px
+    classDef close fill:#F8E3CE,stroke:#E8871A,stroke-width:3px,color:#212529,font-size:15px
+
+    class s1,s2,s3,s4 step
+    class s5 close
+
+    click s1 call showInfo("s1") "Step 1"
+    click s2 call showInfo("s2") "Step 2"
+    click s3 call showInfo("s3") "Step 3"
+    click s4 call showInfo("s4") "Step 4"
+    click s5 call showInfo("s5") "The loop closes"
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-swatch" style="background:#DCE6F1;border-color:#2E5A87"></span>Design step</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#F8E3CE;border-color:#E8871A"></span>The loop closes, it does not end</div>
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>From Intervention Point to Implementation</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Click any box in the diagram to see what it means.</p>
+            </div>
+        </div>
+    </main>
+    <script src="nodeinfo.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            theme: 'default',
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+        });
+    </script>
+</body>
+</html>

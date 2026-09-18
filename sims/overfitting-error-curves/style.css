@@ -1,0 +1,97 @@
+/* Chart.js MicroSim stylesheet - Systems Thinking in the Age of AI
+   Designed for iframe embedding: zero body margin, no page scrolling.
+*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #212529;
+}
+
+
+/* The page is sometimes rendered in a viewport TALLER than the iframe it is
+   designed for -- the screenshot tool renders 200px tall and crops from the
+   top, for example. Bounding the container to the sim's declared canvas height
+   keeps the content where it belongs instead of letting a 100vh layout center
+   it somewhere below the visible area. main.html sets --microsim-height. */
+.container {
+    width: 100%;
+    height: 100vh;
+    max-height: var(--microsim-height, 100vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px 10px;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1a3a6c;
+    text-align: center;
+    margin-bottom: 6px;
+    flex: 0 0 auto;
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 820px;
+    flex: 1 1 auto;
+    position: relative;
+    min-height: 0;
+}
+
+.controls {
+    width: 100%;
+    max-width: 820px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    flex: 0 0 auto;
+}
+
+.controls label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.controls input[type="range"] { width: 240px; vertical-align: middle; }
+
+.controls button {
+    background-color: #1a3a6c;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+}
+.controls button:hover { background-color: #2e5285; }
+.controls button.active { background-color: #E8871A; }
+
+.readout {
+    width: 100%;
+    max-width: 820px;
+    margin-top: 6px;
+    padding: 7px 10px;
+    background-color: #fafbfc;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    flex: 0 0 auto;
+}
+.readout .val { font-weight: bold; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 600px) {
+    h2 { font-size: 15px; }
+    .controls input[type="range"] { width: 160px; }
+}

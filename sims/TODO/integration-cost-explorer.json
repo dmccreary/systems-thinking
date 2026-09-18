@@ -1,0 +1,15 @@
+{
+  "sim_id": "integration-cost-explorer",
+  "diagram_name": "Point-to-Point vs. Hub Integration Cost",
+  "chapter_number": 18,
+  "chapter_title": "Data Management and Governance",
+  "chapter_dir": "18-data-management-and-governance",
+  "chapter_rel_dir": "chapters/18-data-management-and-governance",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "given a number of systems needing to exchange data, the learner will calculate the number of connections required under a point-to-point architecture versus a hub architecture, and explain why the hub scales better (Bloom: Applying).",
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: microsim\n**sim-id:** integration-cost-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning objective: given a number of systems needing to exchange data, the learner will calculate the number of connections required under a point-to-point architecture versus a hub architecture, and explain why the hub scales better (Bloom: Applying).\n\nCanvas: 700x500 pixels, responsive -- recompute canvas width from the containing element on window resize.\n\nVisual design: two side-by-side panels. The left \"Point-to-Point\" panel draws N small system icons arranged in a circle with a direct line connecting every pair. The right \"Hub\" panel draws the same N system icons arranged in a circle around one central hub icon, each connected only to the hub.\n\nControls (p5.js built-in controls only, per this book's control conventions): a `createSlider()` labeled \"Number of Systems (N)\" ranging from 3 to 20, defaulting to 6, redrawing both panels live as it moves.\n\nBehavior: a text readout below each panel updates with the live connection count -- the point-to-point panel shows \\( \\binom{N}{2} \\) and the hub panel shows \\( N \\) -- so moving the slider from a small N to a large one visibly shows point-to-point connections growing far faster than the hub's straight-line growth.\n\nImplementation: p5.js, canvas parented to `document.querySelector('main')`, `updateCanvasSize()` called first in `setup()` per this book's MicroSim conventions, connection lines and counts recomputed every time the slider changes."
+}

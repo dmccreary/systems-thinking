@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>How Embodied Knowledge Moves, Fades, and Leaks</title>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 480px; }</style>
+</head>
+<body>
+    <main class="container">
+        <div class="diagram-panel">
+            <div class="mermaid" id="diagram">
+graph TD
+    core["Knowledge Embodiment<br/>(a company's manufacturing process)"]
+
+    core --> cross["Cross-Generational<br/>Knowledge"]
+    core --> sticky["Geographic Knowledge<br/>Stickiness"]
+    core --> decay["Knowledge<br/>Decay"]
+    core --> spill["Knowledge<br/>Spillover"]
+
+    classDef center fill:#F8E3CE,stroke:#E8871A,stroke-width:4px,color:#212529,font-size:16px
+    classDef intentional fill:#DCE6F1,stroke:#2E5A87,stroke-width:3px,color:#212529,font-size:15px
+    classDef lossy fill:#FBEFD0,stroke:#B8860B,stroke-width:3px,color:#212529,font-size:15px
+
+    class core center
+    class cross,sticky intentional
+    class decay,spill lossy
+
+    click core call showInfo("core") "The knowledge itself"
+    click cross call showInfo("cross") "Intentional transfer"
+    click sticky call showInfo("sticky") "Stays put"
+    click decay call showInfo("decay") "Fades"
+    click spill call showInfo("spill") "Leaks"
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-swatch" style="background:#F8E3CE;border-color:#E8871A"></span>The embodied knowledge</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#DCE6F1;border-color:#2E5A87"></span>Intentional / controlled</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#FBEFD0;border-color:#B8860B"></span>Unintentional / lossy</div>
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>How Embodied Knowledge Moves, Fades, and Leaks</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Click any box in the diagram to see what it means.</p>
+            </div>
+        </div>
+    </main>
+    <script src="nodeinfo.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            theme: 'default',
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+        });
+    </script>
+</body>
+</html>

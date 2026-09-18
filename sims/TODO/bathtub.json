@@ -1,0 +1,15 @@
+{
+  "sim_id": "bathtub",
+  "diagram_name": "Bathtub Stock and Flow Simulator",
+  "chapter_number": 5,
+  "chapter_title": "Stocks, Flows, and System Dynamics",
+  "chapter_dir": "05-stocks-flows-and-system-dynamics",
+  "chapter_rel_dir": "chapters/05-stocks-flows-and-system-dynamics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: microsim\n**sim-id:** bathtub<br/>\n**Library:** p5.js<br/>\n**Status:** Reused<br/>\n**Source:** https://dmccreary.github.io/microsims/sims/bathtub/bathtub.html<br/>\n**Source Repo:** https://github.com/dmccreary/microsims/tree/main/docs/sims/bathtub\n\nReused from the MicroSim catalog (WHAT match score 0.78). A source-flow-rate slider and a drain-flow-rate slider each control a pipe into and out of a drawn bathtub; the water height (the stock) updates live and a running chart plots height over time, making accumulation directly visible rather than merely described. Learning objective: given independently adjustable inflow and outflow rates, the learner will predict whether a stock rises, falls, or holds steady (Bloom: Applying)."
+}

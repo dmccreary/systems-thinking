@@ -1,0 +1,15 @@
+{
+  "sim_id": "growth-rates",
+  "diagram_name": "Growth Rate Comparison",
+  "chapter_number": 6,
+  "chapter_title": "Growth Patterns and Nonlinear Behavior",
+  "chapter_dir": "06-growth-patterns-and-nonlinear-behavior",
+  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-09-17",
+  "specification": "Type: chart\n**sim-id:** growth-rates<br/>\n**Library:** p5.js<br/>\n**Status:** Reused<br/>\n**Source:** https://dmccreary.github.io/calculus/sims/growth-rates/<br/>\n**Source Repo:** https://github.com/dmccreary/calculus/tree/main/docs/sims/growth-rates\n\nReused from the MicroSim catalog (WHAT match score 0.76). Plots logarithmic, linear/polynomial, and exponential quantities on the same axes and lets the viewer zoom the x-axis from x=1-10 out to x=100-1000, showing that functions which look comparably sized up close separate dramatically at scale. Learning objective: given several growth patterns that appear similar over a short interval, the learner will predict which one dominates over a much longer interval (Bloom: Analyzing)."
+}

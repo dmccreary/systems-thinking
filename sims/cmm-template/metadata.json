@@ -1,0 +1,55 @@
+{
+  "title": "The Generic Software Capability Maturity Model",
+  "description": "Hover the five ascending maturity levels to place an organizational behavior at the right step.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Capability Maturity Model for Systems Thinking"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "cmm-template",
+  "library": "p5.js",
+  "canvasHeight": 550,
+  "completion_status": "implemented",
+  "chapter_number": 21,
+  "chapter_title": "Capability Maturity Model for Systems Thinking",
+  "chapter_dir": "21-capability-maturity-model-for-systems-thinking",
+  "chapter_rel_dir": "chapters/21-capability-maturity-model-for-systems-thinking",
+  "educational": {
+    "learningObjective": "Given the five generic maturity-level names, the learner will place a described organizational behavior at the correct step in the ascending sequence.",
+    "bloomLevel": "Understand",
+    "bloomVerb": "Place",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 8,
+    "prerequisites": [
+      "Has worked in or observed an organization with repeated processes"
+    ],
+    "learningOutcomes": [
+      "Name the five generic maturity levels in order",
+      "Place a described behavior at the correct level",
+      "Explain why maturity levels cannot be skipped"
+    ],
+    "assessmentOpportunity": "Describe an organizational behavior and ask learners to name its level and justify it against the level below."
+  },
+  "pedagogical": {
+    "interactionPattern": "Hover-to-reveal on an ordered staircase",
+    "instructionalStrategy": "Ordered recall with a spatial mnemonic",
+    "feedbackType": "Level name and description on hover",
+    "misconceptionsAddressed": [
+      "That maturity levels can be achieved out of order",
+      "That the highest level is a destination rather than an ongoing practice"
+    ],
+    "discussionQuestions": [
+      "What does it take to move from Repeatable to Defined?",
+      "Is Optimizing an end state or a permanent activity?",
+      "Can one part of an organization be at a different level than another?"
+    ]
+  },
+  "bloomLevel": "Understand",
+  "bloomVerb": "Place"
+}

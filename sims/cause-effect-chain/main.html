@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Cause-and-Effect Chain</title>
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 520px; }</style>
+</head>
+<body>
+    <main class="container">
+        <div class="diagram-panel">
+            <div class="mermaid" id="diagram">
+graph TD
+    n1["Printer positioned near<br/>a sunny window"] --> n2["Afternoon sun<br/>warms the room"]
+    n2 --> n3["Paper stored nearby<br/>absorbs humidity"]
+    n3 --> n4["Damp paper sheets<br/>stick together"]
+    n4 --> n5["Printer jams<br/>(the symptom users report)"]
+
+    classDef root fill:#F8E3CE,stroke:#E8871A,stroke-width:3px,color:#212529,font-size:15px
+    classDef mid fill:#E9ECEF,stroke:#868E96,stroke-width:2px,color:#212529,font-size:15px
+    classDef symptom fill:#F7D6D6,stroke:#C62828,stroke-width:3px,color:#212529,font-size:15px
+
+    class n1 root
+    class n2,n3,n4 mid
+    class n5 symptom
+
+    click n1 call showInfo("n1") "Root cause"
+    click n2 call showInfo("n2") "Intermediate cause"
+    click n3 call showInfo("n3") "Intermediate cause"
+    click n4 call showInfo("n4") "Intermediate cause"
+    click n5 call showInfo("n5") "Symptom"
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-swatch" style="background:#F8E3CE;border-color:#E8871A"></span>Root cause</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#E9ECEF;border-color:#868E96"></span>Intermediate cause</div>
+                <div class="legend-item"><span class="legend-swatch" style="background:#F7D6D6;border-color:#C62828"></span>Symptom</div>
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>Cause-and-Effect Chain</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Click any box to see why it leads to the next one.</p>
+            </div>
+        </div>
+    </main>
+    <script src="nodeinfo.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            theme: 'default',
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+        });
+    </script>
+</body>
+</html>

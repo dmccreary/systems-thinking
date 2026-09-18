@@ -1,0 +1,56 @@
+{
+  "title": "The Organizational Silo Reinforcing Loop",
+  "description": "Trace the five-stage loop that keeps an organizational silo intact, and find the one link an intervention can actually cut.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Organizational Silos and Silo Busting"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "silo-reinforcing-loop",
+  "library": "vis-network",
+  "canvasHeight": 500,
+  "completion_status": "implemented",
+  "chapter_number": 20,
+  "chapter_title": "Organizational Silos and Silo Busting",
+  "chapter_dir": "20-organizational-silos-and-silo-busting",
+  "chapter_rel_dir": "chapters/20-organizational-silos-and-silo-busting",
+  "educational": {
+    "learningObjective": "Given a diagram of the causal chain that keeps a silo intact, the learner will trace the reinforcing loop from a bounded-rational local decision back to itself, and identify which single link a silo-busting intervention should target.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Knows what a reinforcing loop is",
+      "Has worked in or observed an organization with departments"
+    ],
+    "learningOutcomes": [
+      "Trace the silo loop back to its starting point",
+      "Explain why the loop is reinforcing rather than balancing",
+      "Justify why the incentive link is the only workable intervention point"
+    ],
+    "assessmentOpportunity": "Give learners a described silo and ask which link they would target and why the other links are poor choices."
+  },
+  "pedagogical": {
+    "interactionPattern": "Closed-loop diagram with click-to-explain and a leverage-point highlight",
+    "instructionalStrategy": "Systematic elimination - the learner rules out four links to find the fifth",
+    "feedbackType": "Per-stage explanations plus a dedicated argument for the chosen intervention point",
+    "misconceptionsAddressed": [
+      "That silos are caused by uncooperative individuals",
+      "That any link in a loop is as good a place to intervene as any other"
+    ],
+    "discussionQuestions": [
+      "If nobody in the loop is behaving badly, who is responsible for the silo?",
+      "Why does 'we should communicate more' fail as an intervention here?",
+      "What makes an incentive the designable link rather than an emergent one?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
+}

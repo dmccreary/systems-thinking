@@ -38,10 +38,10 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of the tragedy of the commons",
-    "Apply the tragedy of the commons to solve problems",
-    "Visualize and interpret the tragedy of the commons relationships",
-    "Experiment with parameters to observe their effects on the tragedy of the commons"
+    "Identify the roles of the p5.js setup() and draw() functions in creating a canvas and rendering each frame",
+    "Explain how a value read from createSlider() inside draw() updates the on-screen display in real time",
+    "Trace how drawHeight and canvasHeight separate the gray drawing region from the white control region",
+    "Modify the sketch's fill color, stroke weight, radius, and position to change the rendered circle"
   ],
   "pedagogical": {
     "pattern": "guided-discovery",

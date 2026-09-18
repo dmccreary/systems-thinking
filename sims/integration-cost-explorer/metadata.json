@@ -1,0 +1,56 @@
+{
+  "title": "Point-to-Point vs. Hub Integration Cost",
+  "description": "Move one slider and watch point-to-point connections grow as N(N-1)/2 while hub connections grow as N.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Data Management and Governance"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "integration-cost-explorer",
+  "library": "p5.js",
+  "canvasHeight": 505,
+  "completion_status": "implemented",
+  "chapter_number": 18,
+  "chapter_title": "Data Management and Governance",
+  "chapter_dir": "18-data-management-and-governance",
+  "chapter_rel_dir": "chapters/18-data-management-and-governance",
+  "educational": {
+    "learningObjective": "Given a number of systems needing to exchange data, the learner will calculate the number of connections required under a point-to-point architecture versus a hub architecture, and explain why the hub scales better.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Calculate",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Can read a simple formula",
+      "Knows what a system integration is"
+    ],
+    "learningOutcomes": [
+      "Calculate the connection count for both architectures at a given N",
+      "Explain why quadratic growth makes point-to-point unmanageable",
+      "Recognize the hub pattern when it appears in other contexts"
+    ],
+    "assessmentOpportunity": "Ask learners to compute both counts for N = 12 without the slider, then check."
+  },
+  "pedagogical": {
+    "interactionPattern": "Single-slider side-by-side comparison with live formula readouts",
+    "instructionalStrategy": "Scale variation to make an arithmetic difference undeniable",
+    "feedbackType": "Both diagrams and both counts redraw continuously as the slider moves",
+    "misconceptionsAddressed": [
+      "That point-to-point integration scales acceptably with careful engineering",
+      "That the hub's advantage is about technology rather than about counting"
+    ],
+    "discussionQuestions": [
+      "What does the hub cost that point-to-point does not?",
+      "Why do organizations end up with point-to-point integration even when they know the arithmetic?",
+      "Where else does this same N-versus-N-squared pattern show up?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Calculate"
+}

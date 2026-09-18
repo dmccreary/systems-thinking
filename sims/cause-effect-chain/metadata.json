@@ -1,0 +1,56 @@
+{
+  "title": "Cause-and-Effect Chain",
+  "description": "Trace a printer that jams every afternoon back through four intermediate causes to its root cause.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Foundations of Systems Thinking"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "cause-effect-chain",
+  "library": "Mermaid",
+  "canvasHeight": 520,
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Systems Thinking",
+  "chapter_dir": "01-foundations-of-systems-thinking",
+  "chapter_rel_dir": "chapters/01-foundations-of-systems-thinking",
+  "educational": {
+    "learningObjective": "Given a chain of events, the learner will trace each cause to its effect and identify which link in the chain is the root cause versus a surface-level symptom.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Trace",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Can distinguish a cause from an effect",
+      "Has encountered a recurring problem that was \"fixed\" more than once"
+    ],
+    "learningOutcomes": [
+      "Trace a multi-step causal chain from symptom back to root cause",
+      "Distinguish a root cause from an intermediate cause and from a symptom",
+      "Explain why treating a symptom lets the problem recur"
+    ],
+    "assessmentOpportunity": "Give learners a different symptom and ask them to propose a three-link chain ending in a root cause. Check that the proposed root cause is something that could actually be changed."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-explain on a linear chain",
+    "instructionalStrategy": "Five Whys reasoning made visible one link at a time",
+    "feedbackType": "An explanation panel naming the causal mechanism for each link",
+    "misconceptionsAddressed": [
+      "That the most visible cause is the root cause",
+      "That fixing the last link in a chain prevents recurrence"
+    ],
+    "discussionQuestions": [
+      "Why do organizations keep fixing symptoms even when the root cause is known?",
+      "How many \"whys\" is enough before you have reached a root cause?",
+      "Can a chain have more than one root cause? What would that look like?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Trace"
+}

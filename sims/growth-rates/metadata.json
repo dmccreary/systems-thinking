@@ -1,0 +1,56 @@
+{
+  "title": "Growth Rate Comparison",
+  "description": "Zoom the x-axis out and watch logarithmic, linear and exponential curves that looked similar separate dramatically.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Growth Patterns and Nonlinear Behavior"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "growth-rates",
+  "library": "p5.js",
+  "canvasHeight": 520,
+  "completion_status": "implemented",
+  "chapter_number": 6,
+  "chapter_title": "Growth Patterns and Nonlinear Behavior",
+  "chapter_dir": "06-growth-patterns-and-nonlinear-behavior",
+  "chapter_rel_dir": "chapters/06-growth-patterns-and-nonlinear-behavior",
+  "educational": {
+    "learningObjective": "Given several growth patterns that appear similar over a short interval, the learner will predict which one dominates over a much longer interval.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Predict",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 10,
+    "prerequisites": [
+      "Has seen a line graph with two or more series",
+      "Knows roughly what exponential means"
+    ],
+    "learningOutcomes": [
+      "Predict which growth pattern dominates at scale",
+      "Explain why a short observation window hides growth-rate differences",
+      "Recognize the risk of extrapolating from a narrow range"
+    ],
+    "assessmentOpportunity": "Show learners a short segment of two curves and ask which will dominate at scale, with a justification based on growth type rather than current value."
+  },
+  "pedagogical": {
+    "interactionPattern": "Zoomable multi-series plot",
+    "instructionalStrategy": "Scale variation - the same functions viewed across four orders of magnitude",
+    "feedbackType": "Immediate redraw at each zoom level",
+    "misconceptionsAddressed": [
+      "That current values predict future ordering",
+      "That a curve looking flat means it is not growing"
+    ],
+    "discussionQuestions": [
+      "Why do exponential processes feel slow right up until they feel sudden?",
+      "What in your work is growing logarithmically, and what is growing exponentially?",
+      "How would you tell the difference from six months of data?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Predict"
+}

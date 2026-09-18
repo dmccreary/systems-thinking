@@ -1,0 +1,56 @@
+{
+  "title": "Product Space Explorer",
+  "description": "Pick a starting export basket and see how many products relatedness puts within one step's reach.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Knowledge Systems and Economic Complexity"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "product-space-explorer",
+  "library": "vis-network",
+  "canvasHeight": 560,
+  "completion_status": "implemented",
+  "chapter_number": 24,
+  "chapter_title": "Knowledge Systems and Economic Complexity",
+  "chapter_dir": "24-knowledge-systems-and-economic-complexity",
+  "chapter_rel_dir": "chapters/24-knowledge-systems-and-economic-complexity",
+  "educational": {
+    "learningObjective": "Given a simplified product space network, the learner will analyze which unexported products are most reachable from a country's current export basket by tracing relatedness edges, and justify why one candidate product is a better diversification target than another.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Analyze",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Knows what an export is",
+      "Has seen a network diagram with clusters"
+    ],
+    "learningOutcomes": [
+      "Identify which products are reachable from a given export basket",
+      "Justify one diversification target over another using relatedness",
+      "Explain why a sparse neighborhood limits future options regardless of current revenue"
+    ],
+    "assessmentOpportunity": "Give learners a basket and ask for a ranked list of the two best diversification targets, with the shared capability named for each."
+  },
+  "pedagogical": {
+    "interactionPattern": "Preset selection plus one-step adjacency highlighting",
+    "instructionalStrategy": "Contrasting starting conditions with an identical rule applied to both",
+    "feedbackType": "Color-coded reachability plus a generated comparison between the two baskets",
+    "misconceptionsAddressed": [
+      "That a country's next industry can be chosen freely",
+      "That current export value predicts future diversification options"
+    ],
+    "discussionQuestions": [
+      "Why does an oil-rich country stay undiversified despite enormous revenue?",
+      "Should industrial policy target the nearest product or the most valuable one?",
+      "Does the same logic apply to a company's product line, or to a person's career?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Analyze"
+}

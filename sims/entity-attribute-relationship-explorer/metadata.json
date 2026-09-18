@@ -1,0 +1,56 @@
+{
+  "title": "Entity-Attribute-Relationship Explorer",
+  "description": "Classify every piece of a small knowledge representation as an entity, an attribute, or a relationship - including the attribute that belongs to the edge.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Knowledge Representation and Metadata"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "entity-attribute-relationship-explorer",
+  "library": "vis-network",
+  "canvasHeight": 500,
+  "completion_status": "implemented",
+  "chapter_number": 17,
+  "chapter_title": "Knowledge Representation and Metadata",
+  "chapter_dir": "17-knowledge-representation-and-metadata",
+  "chapter_rel_dir": "chapters/17-knowledge-representation-and-metadata",
+  "educational": {
+    "learningObjective": "Given a small worked example, the learner will classify each labeled piece of a knowledge representation as an entity, an attribute, or a relationship, and identify which attributes belong to an entity versus to a relationship.",
+    "bloomLevel": "Analyze",
+    "bloomVerb": "Classify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 12,
+    "prerequisites": [
+      "Has seen a data model with tables or nodes",
+      "Knows what a field or property is"
+    ],
+    "learningOutcomes": [
+      "Classify an element as an entity, an attribute, or a relationship",
+      "Identify which thing a given attribute belongs to",
+      "Explain why relationship attributes are awkward in models that only allow entity attributes"
+    ],
+    "assessmentOpportunity": "Give learners a sentence such as 'Sam has been borrowing this book since March' and ask them to name the entities, the relationship, and which attribute belongs where."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-classify on a labeled worked example",
+    "instructionalStrategy": "Concept classification with a deliberately included edge case",
+    "feedbackType": "A definition plus an ownership statement for every element",
+    "misconceptionsAddressed": [
+      "That every attribute must belong to an entity",
+      "That a relationship is just a pointer with no properties of its own"
+    ],
+    "discussionQuestions": [
+      "Why do relationship attributes force relational models to invent extra tables?",
+      "What other real facts belong to a relationship rather than to either party?",
+      "When is it worth promoting a relationship to an entity of its own?"
+    ]
+  },
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Classify"
+}

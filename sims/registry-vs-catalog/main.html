@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Registry vs. Catalog Architecture</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>:root { --microsim-height: 580px; }</style>
+</head>
+<body>
+    <main class="container">
+        <div id="network"></div>
+        <div class="title">Registry (should mean) vs. Catalog (does mean)</div>
+        <div class="right-panel">
+            <div class="detail-panel" id="dp">
+                <div class="dt">Role details</div>
+                <div class="db" id="db">Click any node or the orange dashed link to see how registry and catalog work together.</div>
+            </div>
+            <button class="btn" id="reset-btn">Reset View</button>
+        </div>
+    </main>
+    <script src="registry-vs-catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "title": "Loop Polarity Counter",
+  "description": "Click each link of a four-node causal loop to reveal its polarity, then let the running tally decide whether the loop is reinforcing or balancing.",
+  "creator": "Systems Thinking in the Age of AI",
+  "author": "Dan McCreary",
+  "date": "2026-09-17",
+  "subject": [
+    "Systems Thinking in the Age of AI",
+    "Causal Loop Diagram Notation and Loop Identification"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "loop-polarity-counter",
+  "library": "p5.js",
+  "canvasHeight": 545,
+  "completion_status": "implemented",
+  "chapter_number": 3,
+  "chapter_title": "Causal Loop Diagram Notation and Loop Identification",
+  "chapter_dir": "03-cld-notation-and-loop-identification",
+  "chapter_rel_dir": "chapters/03-cld-notation-and-loop-identification",
+  "educational": {
+    "learningObjective": "Given a causal loop diagram, the learner will classify the loop as reinforcing or balancing by counting its opposite-direction links.",
+    "bloomLevel": "Apply",
+    "bloomVerb": "Classify",
+    "gradeLevel": "Grade 8 through professional",
+    "estimatedMinutes": 15,
+    "prerequisites": [
+      "Knows what a causal loop diagram is",
+      "Can read a + or - polarity on a single link"
+    ],
+    "learningOutcomes": [
+      "Classify a loop as reinforcing or balancing by counting negative links",
+      "Justify each link's polarity in terms of direction of change",
+      "Explain why the count, not the number of links, determines loop type"
+    ],
+    "assessmentOpportunity": "Give learners a written four-link loop and ask for the type plus the count. Check whether they count negative links rather than counting arrows or guessing from the topic."
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-reveal with a running tally and a gated conclusion",
+    "instructionalStrategy": "Worked-example fading - the rule is applied by the learner, not demonstrated",
+    "feedbackType": "Polarity badge, justification sentence, live tally, and a gated R/B reveal",
+    "misconceptionsAddressed": [
+      "That a loop about a positive topic is a reinforcing loop",
+      "That more negative links make a loop more balancing"
+    ],
+    "discussionQuestions": [
+      "Why does an even number of negative links produce reinforcement rather than cancellation?",
+      "Can a loop with no negative links ever be balancing?",
+      "What happens to the classification if you reverse the direction of one arrow?"
+    ]
+  },
+  "bloomLevel": "Apply",
+  "bloomVerb": "Classify"
+}

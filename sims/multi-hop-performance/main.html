@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Multi-Hop Query Performance: RDBMS vs Graph Database</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 12px 12px;
+            height: 100vh;
+            /* See --microsim-height above: keeps the chart correctly placed
+               when the page is rendered taller than its iframe. */
+            max-height: var(--microsim-height, 100vh);
+        }
+        .chart-wrapper {
+            width: 100%;
+            max-width: 760px;
+            flex: 1 1 auto;
+            position: relative;
+            /* A concrete minimum: with only flex:1 the wrapper can measure as
+               near-zero when Chart.js first sizes the canvas, and the chart
+               never grows back to fill the space. */
+            min-height: 360px;
+        }
+        .controls {
+            margin-top: 6px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .toggle-btn {
+            background-color: #303F9F;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 7px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .toggle-btn:hover {
+            background-color: #1A237E;
+        }
+        .toggle-btn.active {
+            background-color: #D4880F;
+        }
+        .toggle-btn.active:hover {
+            background-color: #B06D0B;
+        }
+        .scale-label {
+            font-size: 12px;
+            color: #555;
+            font-weight: 500;
+        }
+    </style>
+    <style>:root { --microsim-height: 480px; }</style>
+</head>
+<body>
+<main>
+    <div class="chart-wrapper">
+        <canvas id="perfChart"></canvas>
+    </div>
+    <div class="controls">
+        <span class="scale-label">Y-Axis Scale:</span>
+        <button id="scaleToggle" class="toggle-btn active">Logarithmic</button>
+    </div>
+
+    </main>
+    <script>
+    (function() {
+        const hops = ['1', '2', '3', '4', '5'];
+
+        const rdbmsData   = [10, 150, 3000, 45000, 780000];
+        const graphData   = [5, 8, 12, 15, 18];
+
+        function formatTime(ms) {
+            if (ms < 1000) return ms + ' ms';
+            if (ms < 60000) return (ms / 1000).toFixed(1) + ' seconds';
+            if (ms < 3600000) return (ms / 60000).toFixed(1) + ' minutes';
+            return (ms / 3600000).toFixed(1) + ' hours';
+        }
+
+        let isLog = true;
+
+        const ctx = document.getElementById('perfChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: hops,
+                datasets: [
+                    {
+                        label: 'RDBMS (SQL Joins)',
+                        data: rdbmsData,
+                        backgroundColor: 'rgba(48, 63, 159, 0.85)',
+                        borderColor: '#303F9F',
+                        borderWidth: 1,
+                        borderRadius: 3
+                    },
+                    {
+                        label: 'Graph Database',
+                        data: graphData,
+                        backgroundColor: 'rgba(212, 136, 15, 0.85)',
+                        borderColor: '#D4880F',
+                        borderWidth: 1,
+                        borderRadius: 3
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Multi-Hop Query Performance: RDBMS vs Graph Database',
+                        font: { size: 15, weight: 'bold' },
+                        color: '#1A237E',
+                        padding: { bottom: 2 }
+                    },
+                    subtitle: {
+                        display: true,
+                        text: '1 million employees, 10 million communication records',
+                        font: { size: 12, style: 'italic' },
+                        color: '#666',
+                        padding: { bottom: 10 }
+                    },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: { size: 12, weight: '600' },
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                            padding: 16
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(26, 35, 126, 0.92)',
+                        titleFont: { size: 13, weight: 'bold' },
+                        bodyFont: { size: 12 },
+                        cornerRadius: 6,
+                        padding: 10,
+                        callbacks: {
+                            title: function(items) {
+                                return items[0].label + (items[0].label === '1' ? ' Hop' : ' Hops');
+                            },
+                            label: function(context) {
+                                const ms = context.parsed.y;
+                                const readable = formatTime(ms);
+                                return ' ' + context.dataset.label + ': ' + ms.toLocaleString() + ' ms (' + readable + ')';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Number of Hops (Traversal Depth)',
+                            font: { size: 13, weight: '600' },
+                            color: '#333'
+                        },
+                        grid: { display: false },
+                        ticks: { font: { size: 12 } }
+                    },
+                    y: {
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: 'Query Response Time (milliseconds)',
+                            font: { size: 13, weight: '600' },
+                            color: '#333'
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.06)'
+                        },
+                        ticks: {
+                            font: { size: 11 },
+                            callback: function(value) {
+                                if (value >= 1000) return (value / 1000) + 'k';
+                                return value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Toggle button
+        const btn = document.getElementById('scaleToggle');
+        btn.addEventListener('click', function() {
+            isLog = !isLog;
+            chart.options.scales.y.type = isLog ? 'logarithmic' : 'linear';
+            btn.textContent = isLog ? 'Logarithmic' : 'Linear';
+            btn.classList.toggle('active', isLog);
+            chart.update();
+        });
+    })();
+    </script>
+</body>
+</html>
